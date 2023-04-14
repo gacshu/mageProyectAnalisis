@@ -263,13 +263,13 @@ public abstract class PermanentImpl extends CardImpl implements Permanent {
     @Override
     public List<String> getRules(Game game) {
         try {
-            List<String> rules = super.getRules(game);
-
-            // add additional data for GUI
+            List<String> rules = getRules();
 
             // info
             if (info != null) {
-                rules.addAll(info.values());
+                for (String data : info.values()) {
+                    rules.add(data);
+                }
             }
 
             // ability hints

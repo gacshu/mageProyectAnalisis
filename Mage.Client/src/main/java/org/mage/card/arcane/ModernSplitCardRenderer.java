@@ -2,7 +2,6 @@ package org.mage.card.arcane;
 
 import mage.ObjectColor;
 import mage.cards.ArtRect;
-import mage.cards.SplitCard;
 import mage.constants.CardType;
 import mage.view.CardView;
 
@@ -17,9 +16,6 @@ import java.util.List;
  * @author StravantUser
  */
 public class ModernSplitCardRenderer extends ModernCardRenderer {
-
-    static String RULES_MARK_FUSE = "Fuse";
-    static String RULES_MARK_AFTERMATH = "Aftermath";
 
     private static class HalfCardProps {
 
@@ -65,8 +61,8 @@ public class ModernSplitCardRenderer extends ModernCardRenderer {
         rightHalf.name = cardView.getRightSplitName();
         leftHalf.name = cardView.getLeftSplitName();
 
-        isFuse = view.getRules().stream().anyMatch(rule -> rule.contains(RULES_MARK_FUSE));
-        isAftermath = view.getRightSplitRules().stream().anyMatch(rule -> rule.contains(RULES_MARK_AFTERMATH));
+        isFuse = view.getRules().stream().anyMatch(rule -> rule.contains("Fuse"));
+        isAftermath = view.getRightSplitRules().stream().anyMatch(rule -> rule.contains("Aftermath"));
 
         // It's easier for rendering to swap the card halves here because for aftermath cards
         // they "rotate" in opposite directions making consquence and normal split cards
@@ -302,7 +298,7 @@ public class ModernSplitCardRenderer extends ModernCardRenderer {
                         totalFuseBoxWidth, boxHeight,
                         contentInset,
                         borderPaint, boxColor);
-                drawNameLine(g2, attribs, SplitCard.FUSE_RULE, "",
+                drawNameLine(g2, attribs, "Fuse (You may cast both halves from your hand)", "",
                         0, rightHalf.ch,
                         totalFuseBoxWidth - 2 * borderWidth, boxHeight);
             }

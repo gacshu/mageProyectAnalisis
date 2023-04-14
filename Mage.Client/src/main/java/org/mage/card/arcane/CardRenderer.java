@@ -118,7 +118,13 @@ public abstract class CardRenderer {
     public CardRenderer(CardView card) {
         // Set base parameters
         this.cardView = card;
-        parseRules(card.getRules(), textboxKeywords, textboxRules);
+
+        if (card.getArtRect() == ArtRect.SPLIT_FUSED) {
+            parseRules(card.getLeftSplitRules(), textboxKeywords, textboxRules);
+            parseRules(card.getRightSplitRules(), textboxKeywords, textboxRules);
+        } else {
+            parseRules(card.getRules(), textboxKeywords, textboxRules);
+        }
     }
 
     protected void parseRules(List<String> stringRules, List<TextboxRule> keywords, List<TextboxRule> rules) {

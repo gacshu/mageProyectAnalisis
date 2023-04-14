@@ -64,7 +64,7 @@ class SunfallEffect extends OneShotEffect {
                 StaticFilters.FILTER_PERMANENT_CREATURE, source.getControllerId(), source, game
         ));
         player.moveCards(cards, Zone.EXILED, source, game);
-        IncubateEffect.doIncubate(cards.size(), game, source);
+        new IncubateEffect(cards.size()).apply(game, source);
         return true;
     }
 }

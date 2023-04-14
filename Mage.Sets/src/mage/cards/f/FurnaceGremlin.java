@@ -57,7 +57,7 @@ class FurnaceGremlinEffect extends OneShotEffect {
 
     FurnaceGremlinEffect() {
         super(Outcome.Benefit);
-        staticText = "incubate X, where X is its power";
+        staticText = "incubate X, where X is {this}'s power";
     }
 
     private FurnaceGremlinEffect(final FurnaceGremlinEffect effect) {
@@ -77,6 +77,6 @@ class FurnaceGremlinEffect extends OneShotEffect {
                 .map(MageObject::getPower)
                 .map(MageInt::getValue)
                 .orElse(0);
-        return IncubateEffect.doIncubate(power, game, source);
+        return new IncubateEffect(power).apply(game, source);
     }
 }

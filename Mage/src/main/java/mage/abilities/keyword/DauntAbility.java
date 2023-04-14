@@ -18,10 +18,6 @@ public class DauntAbility extends SimpleEvasionAbility {
         filter.add(new PowerPredicate(ComparisonType.FEWER_THAN, 3));
     }
 
-    public static FilterCreaturePermanent getFilter() {
-        return filter;
-    }
-
     public DauntAbility() {
         super(new CantBeBlockedByCreaturesSourceEffect(filter, Duration.WhileOnBattlefield));
     }

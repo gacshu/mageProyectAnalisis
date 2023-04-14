@@ -13,7 +13,9 @@ import mage.cards.CardSetInfo;
 import mage.constants.CardType;
 import mage.constants.SubType;
 import mage.constants.SuperType;
-import mage.filter.StaticFilters;
+import mage.filter.common.FilterControlledPermanent;
+import mage.filter.predicate.Predicates;
+import mage.target.common.TargetControlledPermanent;
 import mage.target.common.TargetCreaturePermanent;
 
 import java.util.UUID;
@@ -22,6 +24,15 @@ import java.util.UUID;
  * @author TheElk801
  */
 public final class LaurineTheDiversion extends CardImpl {
+
+    private static final FilterControlledPermanent filter = new FilterControlledPermanent("artifact or creature");
+
+    static {
+        filter.add(Predicates.or(
+                CardType.ARTIFACT.getPredicate(),
+                CardType.CREATURE.getPredicate()
+        ));
+    }
 
     public LaurineTheDiversion(UUID ownerId, CardSetInfo setInfo) {
         super(ownerId, setInfo, new CardType[]{CardType.CREATURE}, "{2}{R}");
@@ -40,7 +51,7 @@ public final class LaurineTheDiversion extends CardImpl {
 
         // {2}, Sacrifice an artifact or creature: Goad target creature.
         Ability ability = new SimpleActivatedAbility(new GoadTargetEffect(), new GenericManaCost(2));
-        ability.addCost(new SacrificeTargetCost(StaticFilters.FILTER_CONTROLLED_ARTIFACT_OR_CREATURE_SHORT_TEXT));
+        ability.addCost(new SacrificeTargetCost(new TargetControlledPermanent(filter)));
         ability.addTarget(new TargetCreaturePermanent());
         this.addAbility(ability);
     }

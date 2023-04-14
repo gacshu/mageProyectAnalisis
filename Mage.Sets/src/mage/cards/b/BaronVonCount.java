@@ -141,7 +141,7 @@ class BaronVonCountTriggeredAbility extends TriggeredAbilityImpl {
                         || String.valueOf(spell.getToughness().getBaseValue()).contains(doomString)) {
                     return true;
                 } else {
-                    for (String string : spell.getCard().getRules(game)) {
+                    for (String string : spell.getCard().getRules()) {
                         if (string.contains(doomString)) {
                             return true;
                         }

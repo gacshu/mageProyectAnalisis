@@ -86,7 +86,7 @@ class ProgenitorExarchEffect extends OneShotEffect {
             return false;
         }
         for (int i = 0; i < xValue; i++) {
-            IncubateEffect.doIncubate(3, game, source);
+            new IncubateEffect(3).apply(game, source);
         }
         return true;
     }

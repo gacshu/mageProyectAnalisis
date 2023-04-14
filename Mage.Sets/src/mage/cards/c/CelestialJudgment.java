@@ -74,12 +74,10 @@ class CelestialJudgmentEffect extends OneShotEffect {
                 .stream()
                 .collect(Collectors.toMap(
                         permanent -> permanent.getPower().getValue(),
-                        Arrays::asList,
+                        permanent -> Arrays.asList(permanent),
                         (a1, a2) -> {
-                            List<Permanent> res = new ArrayList<>();
-                            res.addAll(a1);
-                            res.addAll(a2);
-                            return res;
+                            a1.addAll(a2);
+                            return a1;
                         }));
         Set<UUID> toKeep = new HashSet<>();
         for (Map.Entry<Integer, List<Permanent>> entry : powerMap.entrySet()) {
