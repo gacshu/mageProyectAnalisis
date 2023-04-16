@@ -1,0 +1,433 @@
+
+Rmage.player.ai.ComputerPlayerMCTS#createMCTSGame(Lmage/game/Game;)Lmage/game/Game;~
+rD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AIMCTS/src/mage/player/ai/ComputerPlayerMCTS.javaî î(!"11*ì
+2
+ó ó([
+Y
+
+ó ó(!
+
+copyPlayermage.players.Player"__id*"
+
+__unknown_file (
+""ú
+ô
+
+ó ó(!
+
+copyPlayermage.players.Player"
+__arrayGet*8
+
+__unknown_file (
+
+%3java.util.Collection*"
+
+__unknown_file (
+""*
+9
+1*Î
+3
+® ®(ùö
+
+® ®(
+%33mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+mctsmage.game.Game2
+getState()¨©
+
+® ®((
+%34mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*8
+
+__unknown_file (
+
+%33mage.game.GameState2getPlayers()óî
+
+®- ®(?
+%35java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+copyPlayermage.players.Player2getId()Î
+Ë
+
+® ®(K
+%36mage.players.Player"__mapSet*9
+
+__unknown_file (
+
+%34mage.players.Players*3
+
+__unknown_file (
+
+%35java.util.UUID*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer*
+2*Ÿ
+4
+¶ ¶(ºπ
+
+¶ ¶(&
+%31mage.players.Library":mage.players.PlayerImpl#getLibrary()Lmage/players/Library;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2getLibrary()ÉÄ
+
+¶ ¶(0
+%32void"mage.players.Library#shuffle()V*9
+
+__unknown_file (
+
+%31mage.players.Library2	shuffle()*
+3*À
+
+6
+°  °()ºπ
+
+°  °(6
+%25mage.players.Library":mage.players.PlayerImpl#getLibrary()Lmage/players/Library;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2getLibrary()Ä˝
+
+°  °(J
+%26mage.cards.Card"Emage.players.Library#removeFromTop(Lmage/game/Game;)Lmage/cards/Card;*9
+
+__unknown_file (
+
+%25mage.players.Library*4
+
+__unknown_file (
+
+mctsmage.game.Game2removeFromTop(Lmage/game/Game;)c
+a
+
+° °(K
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%26mage.cards.CardT
+R
+
+¢! ¢(*
+%27mage.constants.Zone"__id*"
+
+__unknown_file (
+""¥±
+
+¢ ¢(1
+%28void"?mage.cards.Card#setZone(Lmage/constants/Zone;Lmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%27mage.constants.Zone*4
+
+__unknown_file (
+
+mctsmage.game.Game2.setZone(Lmage/constants/Zone;Lmage/game/Game;)Æ´
+
+£ £('
+%29mage.cards.Cards"3mage.players.PlayerImpl#getHand()Lmage/cards/Cards;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2	getHand()Ã…
+
+£ £(1
+%30void"(mage.cards.Cards#add(Lmage/cards/Card;)V*5
+
+__unknown_file (
+
+%29mage.cards.Cards*5
+
+__unknown_file (
+
+cardmage.cards.Card2add(Lmage/cards/Card;)*
+3
+6*õ
+8
+ú ú((Æ´
+
+ú ú(2
+%15mage.cards.Cards"3mage.players.PlayerImpl#getHand()Lmage/cards/Cards;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2	getHand()pn
+
+ú ú(9
+
+%16int"java.util.Set#size()I*5
+
+__unknown_file (
+
+%15mage.cards.Cards2size()ºπ
+
+ù ù(&
+%17mage.players.Library":mage.players.PlayerImpl#getLibrary()Lmage/players/Library;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2getLibrary()Æ´
+
+ù. ù(A
+%18mage.cards.Cards"3mage.players.PlayerImpl#getHand()Lmage/cards/Cards;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2	getHand()ÍÁ
+
+ù. ù(P
+%19java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*5
+
+__unknown_file (
+
+%18mage.cards.Cards*4
+
+__unknown_file (
+
+mctsmage.game.Game2getCards(Lmage/game/Game;)©¶
+
+ù ù(W
+%20void"=mage.players.Library#addAll(Ljava/util/Set;Lmage/game/Game;)V*9
+
+__unknown_file (
+
+%17mage.players.Library*2
+
+__unknown_file (
+
+%19java.util.Set*4
+
+__unknown_file (
+
+mctsmage.game.Game2'addAll(Ljava/util/Set;Lmage/game/Game;)Æ´
+
+û û(#
+%21mage.cards.Cards"3mage.players.PlayerImpl#getHand()Lmage/cards/Cards;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2	getHand()`
+^
+
+û û(+
+%22void"__arrayClear*5
+
+__unknown_file (
+
+%21mage.cards.Cardsºπ
+
+ü ü(&
+%23mage.players.Library":mage.players.PlayerImpl#getLibrary()Lmage/players/Library;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2getLibrary()ÉÄ
+
+ü ü(0
+%24void"mage.players.Library#shuffle()V*9
+
+__unknown_file (
+
+%23mage.players.Library2	shuffle()*
+3
+6*∂
+9
+ò  ò($úô
+
+ò  ò(/
+%4mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()™ß
+
+ò  ò(<
+%5mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%4mage.game.GameState2getPlayers()ñì
+
+òA ò(S
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+copyPlayermage.players.Player2getId()¢
+ü
+
+ò  ò(T
+%7mage.players.Player"__mapGet*8
+
+__unknown_file (
+
+%5mage.players.Players*2
+
+__unknown_file (
+
+%6java.util.UUIDp
+n
+
+ò ò(U!
+
+origPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Playerñì
+
+ô2 ô(D
+%8java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+copyPlayermage.players.Player2getId()JH
+
+ô' ô(1
+%9mage.player.ai.MCTSPlayer"mage.player.ai.MCTSPlayeræ
+ª
+
+ô# ô(E
+%10"3mage.player.ai.MCTSPlayer#<init>(Ljava/util/UUID;)V*=
+
+__unknown_file (!
+
+%9mage.player.ai.MCTSPlayer*2
+
+__unknown_file (
+
+%8java.util.UUID{
+y
+
+ô ô(F&
+	newPlayermage.player.ai.MCTSPlayer"__id*=
+
+__unknown_file (!
+
+%9mage.player.ai.MCTSPlayerÇˇ
+
+ö ö()
+%11void"=mage.player.ai.ComputerPlayer#restore(Lmage/players/Player;)V*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer*?
+
+__unknown_file (#
+!
+
+origPlayermage.players.Player2restore(Lmage/players/Player;)¶£
+
+õ õ("
+%12java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+	newPlayermage.player.ai.MCTSPlayer2getId()|
+z
+
+õ* õ(2
+%13java.util.UUID"__id*O
+
+__unknown_file (3*1#
+!mage.player.ai.ComputerPlayerMCTS"
+
+playerId—Œ
+
+õ õ(3
+%14boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%12java.util.UUID*3
+
+__unknown_file (
+
+%13java.util.UUID2equals(Ljava/lang/Object;)*
+4
+8*ã
+10
+ó! ó(%úô
+
+ó! ó(0
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+mctsmage.game.Game2
+getState()™ß
+
+ó! ó(=
+%2mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%1mage.game.GameState2getPlayers()ß§
+
+ó! ó(F
+%3java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*8
+
+__unknown_file (
+
+%2mage.players.Players2values()*
+2*ã
+11
+ï ï(êç
+
+ï ï(
+%0mage.game.Game"+mage.util.Copyable#copy()Ljava/lang/Object;*4
+
+__unknown_file (
+
+gamemage.game.Game2copy()`
+^
+
+ï ï( 
+mctsmage.game.Game"__id*2
+
+__unknown_file (
+
+%0mage.game.Game*
+10*Ÿ
+1
+™ ™(®•
+
+™ ™( 
+%37void" mage.game.Game#setSimulation(Z)V*4
+
+__unknown_file (
+
+mctsmage.game.Game* 
+
+__unknown_file (22setSimulation(Z)us
+
+´ ´(
+%38void"mage.game.Game#resume()V*4
+
+__unknown_file (
+
+mctsmage.game.Game2resume()"&
+
+¨ ¨(
+
+mctsmage.game.Game:$
+
+î" î(+
+gamemage.game.GameB%#
+!mage.player.ai.ComputerPlayerMCTS

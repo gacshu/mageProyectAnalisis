@@ -1,0 +1,1172 @@
+
+!mage.remote.SessionImpl$5#work()Zc
+WD:/eclipse-workspace/mage-master/Mage.Common/src/main/java/mage/remote/SessionImpl.java± ±("13*µ
+13
+≤ ≤(W
+U
+
+≤ ≤(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""äá
+
+≤? ≤(S
+%1java.lang.String"2mage.remote.Connection#getHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2	getHost()ã
+à
+
+≤ ≤(S
+%2java.lang.String"__concat*0
+
+≤ ≤(<" 
+Connect: connecting to server *&
+
+≤? ≤(S
+
+%1java.lang.Stringm
+k
+
+≤ ≤(Y
+%3java.lang.String"__concat*&
+
+≤ ≤(S
+
+%2java.lang.String*
+
+≤V ≤(Y
+:ki
+
+≤\ ≤(p	
+%4int"!mage.remote.Connection#getPort()I*"
+
+__unknown_file (
+""2	getPort()s
+q
+
+≤ ≤(p
+%5java.lang.String"__concat*&
+
+≤ ≤(Y
+
+%3java.lang.String*
+
+≤\ ≤(p
+	
+%4int›⁄
+
+≤ ≤(q
+
+%6void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%5java.lang.String2info(Ljava/lang/Object;)î
+ë
+
+¥ ¥(K
+%7java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*2
+
+__unknown_file (
+http.nonProxyHosts*/
+
+__unknown_file (
+code.google.comî
+ë
+
+µ µ(K
+%8java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*2
+
+__unknown_file (
+socksNonProxyHosts*/
+
+__unknown_file (
+code.google.comœ
+Ã
+
+∏ ∏(6
+%9java.lang.String"Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+socksProxyHost–
+Õ
+
+π π(6
+%10java.lang.String"Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+socksProxyPort–
+Õ
+
+∫ ∫(6
+%11java.lang.String"Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+http.proxyHost–
+Õ
+
+ª ª(6
+%12java.lang.String"Djava.lang.System#clearProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+http.proxyPortµ≤
+
+Ω Ω(-'
+%13 mage.remote.Connection$ProxyType"Gmage.remote.Connection#getProxyType()Lmage/remote/Connection$ProxyType;*"
+
+__unknown_file (
+""2getProxyType()a
+_
+
+Ω1 Ω(E'
+%14 mage.remote.Connection$ProxyType"__id*"
+
+__unknown_file (
+""a
+_
+
+Ω1 Ω(J'
+%15 mage.remote.Connection$ProxyType"__id*"
+
+__unknown_file (
+""*
+9
+12*¸
+1
+ª ª(á
+Ñ
+
+ª ª(!
+%102org.jboss.remoting.Client"__id*M
+
+__unknown_file (1*/
+mage.remote.SessionImpl$5"
+callbackClientÚÔ
+
+ª ª(+
+%103java.lang.Object"Forg.jboss.remoting.Client#invoke(Ljava/lang/Object;)Ljava/lang/Object;*?
+
+__unknown_file (#
+!
+%102org.jboss.remoting.Client*"
+
+__unknown_file (
+""2invoke(Ljava/lang/Object;)á
+Ñ
+
+Ω Ω(*!
+%104org.jboss.remoting.Client"__id*M
+
+__unknown_file (1*/
+mage.remote.SessionImpl$5"
+callbackClient∂≥
+
+Ω Ω(9
+%105java.lang.String":org.jboss.remoting.Client#getSessionId()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%104org.jboss.remoting.Client2getSessionId()x
+v
+
+Ω Ω(9*
+mage.remote.SessionImpl$5"
+	sessionId"__id*6
+
+__unknown_file (
+
+%105java.lang.Stringf
+d
+
+æ æ(+,
+%106$mage.remote.SessionImpl$SessionState"__id*"
+
+__unknown_file (
+""f
+d
+
+æ æ(5,
+%107$mage.remote.SessionImpl$SessionState"__id*"
+
+__unknown_file (
+""ê
+ç
+
+æ æ(5-
+mage.remote.SessionImpl$5"
+sessionState"__id*J
+
+__unknown_file (.
+,
+%107$mage.remote.SessionImpl$SessionStateY
+W
+
+ø ø(
+%108org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""⁄◊
+
+ø ø(,
+%109void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%108org.apache.log4j.Logger*-
+
+__unknown_file (
+Connect: DONE2info(Ljava/lang/Object;)"
+
+¿ ¿(
+""*‚
+2
+∏ ∏(X
+V
+
+∏ ∏(
+%97org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""|z
+
+∏_ ∏(x
+
+%98int"java.util.Set#size()I*A
+
+__unknown_file (%
+#
+callbackConnectorsjava.util.Set2size()ú
+ô
+
+∏  ∏(x
+%99java.lang.String"__concat*L
+
+∏  ∏(\><
+:There should be one callback Connector (number existing = *
+
+∏_ ∏(x
+
+
+%98intp
+n
+
+∏  ∏(~
+%100java.lang.String"__concat*'
+
+∏  ∏(x
+
+%99java.lang.String*
+
+∏{ ∏(~
+)‚ﬂ
+
+∏ ∏(
+%101void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%97org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%100java.lang.String2warn(Ljava/lang/Object;)*
+1*Ï
+3
+¥ ¥(Ü
+É
+
+¥ ¥( 
+%90org.jboss.remoting.Client"__id*M
+
+__unknown_file (1*/
+mage.remote.SessionImpl$5"
+callbackClientï
+í
+
+¥+ ¥(:.
+%91'mage.remote.SessionImpl$CallbackHandler"__id*N
+
+__unknown_file (2*0
+mage.remote.SessionImpl$5"
+callbackHandler™ß
+
+¥ ¥(M
+%92void"korg.jboss.remoting.Client#addListener(Lorg/jboss/remoting/callback/InvokerCallbackHandler;Ljava/util/Map;)V*>
+
+__unknown_file ("
+ 
+%90org.jboss.remoting.Client*L
+
+__unknown_file (0
+.
+%91'mage.remote.SessionImpl$CallbackHandler*?
+
+__unknown_file (#
+!
+callbackMetadatajava.util.Map2PaddListener(Lorg/jboss/remoting/callback/InvokerCallbackHandler;Ljava/util/Map;)Ü
+É
+
+∂) ∂(7 
+%93org.jboss.remoting.Client"__id*M
+
+__unknown_file (1*/
+mage.remote.SessionImpl$5"
+callbackClientï
+í
+
+∂N ∂(].
+%94'mage.remote.SessionImpl$CallbackHandler"__id*N
+
+__unknown_file (2*0
+mage.remote.SessionImpl$5"
+callbackHandlerˆÛ
+
+∂) ∂(^
+%95java.util.Set"torg.jboss.remoting.Client#getCallbackConnectors(Lorg/jboss/remoting/callback/InvokerCallbackHandler;)Ljava/util/Set;*>
+
+__unknown_file ("
+ 
+%93org.jboss.remoting.Client*L
+
+__unknown_file (0
+.
+%94'mage.remote.SessionImpl$CallbackHandler2KgetCallbackConnectors(Lorg/jboss/remoting/callback/InvokerCallbackHandler;)m
+k
+
+∂ ∂(_#
+callbackConnectorsjava.util.Set"__id*2
+
+__unknown_file (
+
+%95java.util.Set|z
+
+∑ ∑(-
+
+%96int"java.util.Set#size()I*A
+
+__unknown_file (%
+#
+callbackConnectorsjava.util.Set2size()*
+2
+1*»
+4
+≤& ≤(;ge
+
+≤* ≤(9.
+%88'mage.remote.SessionImpl$CallbackHandler"'mage.remote.SessionImpl$CallbackHandler∞
+≠
+
+≤& ≤(;
+%89"Jmage.remote.SessionImpl$CallbackHandler#<init>(Lmage/remote/SessionImpl;)V*L
+
+__unknown_file (0
+.
+%88'mage.remote.SessionImpl$CallbackHandlerï
+í
+
+≤ ≤(;0
+mage.remote.SessionImpl$5"
+callbackHandler"__id*L
+
+__unknown_file (0
+.
+%88'mage.remote.SessionImpl$CallbackHandler*
+3*⁄
+5
+≠ ≠(Ü
+É
+
+≠ ≠( 
+%79org.jboss.remoting.Client"__id*M
+
+__unknown_file (1*/
+mage.remote.SessionImpl$5"
+callbackClientyw
+
+≠+ ≠(C7
+%800mage.remote.SessionImpl$ClientConnectionListener"0mage.remote.SessionImpl$ClientConnectionListener¬
+ø
+
+≠' ≠(E
+%81"Smage.remote.SessionImpl$ClientConnectionListener#<init>(Lmage/remote/SessionImpl;)V*U
+
+__unknown_file (9
+7
+%800mage.remote.SessionImpl$ClientConnectionListenerëé
+
+≠ ≠(X
+%82void"Zorg.jboss.remoting.Client#connect(Lorg/jboss/remoting/ConnectionListener;Ljava/util/Map;)V*>
+
+__unknown_file ("
+ 
+%79org.jboss.remoting.Client*U
+
+__unknown_file (9
+7
+%800mage.remote.SessionImpl$ClientConnectionListener*?
+
+__unknown_file (#
+!
+listenerMetadatajava.util.Map2?connect(Lorg/jboss/remoting/ConnectionListener;Ljava/util/Map;);9
+
+Ø; Ø(D
+%83java.util.HashMap"java.util.HashMapj
+h
+
+Ø7 Ø(F
+%84"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%83java.util.HashMapo
+m
+
+Ø Ø(G!
+callbackMetadatajava.util.Map"__id*6
+
+__unknown_file (
+
+%83java.util.HashMap_
+]
+
+∞% ∞(@
+%85java.lang.String"__id*0
+
+__unknown_file (
+isCallbackServer–
+Õ
+
+∞ ∞(I
+%86java.lang.String"__mapSet*?
+
+__unknown_file (#
+!
+callbackMetadatajava.util.Map*5
+
+__unknown_file (
+
+%85java.lang.String*$
+
+__unknown_file (
+trueï
+í
+
+± ±(#.
+%87'mage.remote.SessionImpl$CallbackHandler"__id*N
+
+__unknown_file (2*0
+mage.remote.SessionImpl$5"
+callbackHandler*
+3
+4*Ö
+6
+™ ™($b
+`
+
+™) ™(R
+%75java.lang.String"__id*3
+
+__unknown_file (
+validatorPingPeriod—
+Œ
+
+™ ™(\
+%76java.lang.String"__mapSet*?
+
+__unknown_file (#
+!
+listenerMetadatajava.util.Map*5
+
+__unknown_file (
+
+%75java.lang.String*%
+
+__unknown_file (	
+15000c
+a
+
+´) ´(S
+%77java.lang.String"__id*4
+
+__unknown_file (
+validatorPingTimeout—
+Œ
+
+´ ´(]
+%78java.lang.String"__mapSet*?
+
+__unknown_file (#
+!
+listenerMetadatajava.util.Map*5
+
+__unknown_file (
+
+%77java.lang.String*%
+
+__unknown_file (	
+13000*
+5*à
+7
+ß ß($b
+`
+
+ß) ß(R
+%71java.lang.String"__id*3
+
+__unknown_file (
+validatorPingPeriod”
+–
+
+ß ß(^
+%72java.lang.String"__mapSet*?
+
+__unknown_file (#
+!
+listenerMetadatajava.util.Map*5
+
+__unknown_file (
+
+%71java.lang.String*'
+
+__unknown_file (	
+1000000c
+a
+
+®) ®(S
+%73java.lang.String"__id*4
+
+__unknown_file (
+validatorPingTimeout“
+œ
+
+® ®(^
+%74java.lang.String"__mapSet*?
+
+__unknown_file (#
+!
+listenerMetadatajava.util.Map*5
+
+__unknown_file (
+
+%73java.lang.String*&
+
+__unknown_file (
+
+900000*
+5*¯+
+8
+ÀB À(LâÜ
+
+ÀB À(U
+%41java.lang.String"1mage.remote.Connection#getURI()Ljava/lang/String;*"
+
+__unknown_file (
+""2getURI()[Y
+
+À3 À(A(
+%42!org.jboss.remoting.InvokerLocator"!org.jboss.remoting.InvokerLocator‘
+—
+
+À/ À(V
+%43"=org.jboss.remoting.InvokerLocator#<init>(Ljava/lang/String;)V*F
+
+__unknown_file (*
+(
+%42!org.jboss.remoting.InvokerLocator*5
+
+__unknown_file (
+
+%41java.lang.Stringë
+é
+
+À À(W2
+clientLocator!org.jboss.remoting.InvokerLocator"__id*F
+
+__unknown_file (*
+(
+%42!org.jboss.remoting.InvokerLocator;9
+
+Õ3 Õ(<
+%44java.util.HashMap"java.util.HashMapj
+h
+
+Õ/ Õ(>
+%45"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%44java.util.HashMapg
+e
+
+Õ Õ(?
+metadatajava.util.Map"__id*6
+
+__unknown_file (
+
+%44java.util.HashMap[
+Y
+
+⁄ ⁄(8
+%46java.lang.String"__id*,
+
+__unknown_file (
+writeTimeoutâÜ
+
+⁄I ⁄(k
+
+%47int"/mage.remote.Connection#getSocketWriteTimeout()I*"
+
+__unknown_file (
+""2getSocketWriteTimeout()≥
+∞
+
+⁄: ⁄(l
+%48java.lang.String"-java.lang.String#valueOf(I)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*(
+
+__unknown_file (
+
+
+%47intŸ
+÷
+
+⁄ ⁄(m
+%49java.lang.String"__mapSet*7
+
+__unknown_file (
+
+metadatajava.util.Map*5
+
+__unknown_file (
+
+%46java.lang.String*5
+
+__unknown_file (
+
+%48java.lang.StringÃ
+…
+
+€ €(A
+%50java.lang.String"__mapSet*7
+
+__unknown_file (
+
+metadatajava.util.Map*9
+
+__unknown_file (
+generalizeSocketException*$
+
+__unknown_file (
+true–Õ
+
+‹P ‹(m
+%51java.lang.String"Corg.jboss.remoting.InvokerLocator#getLocatorURI()Ljava/lang/String;*P
+
+__unknown_file (4
+2
+clientLocator!org.jboss.remoting.InvokerLocator2getLocatorURI()†
+ù
+‹& ‹(ä
+%52java.lang.Object"éorg.jboss.remoting.transporter.TransporterClient#createTransporterClient(Ljava/lang/String;Ljava/lang/Class;Ljava/util/Map;)Ljava/lang/Object;*P
+
+__unknown_file (4"2
+0org.jboss.remoting.transporter.TransporterClient*5
+
+__unknown_file (
+
+%51java.lang.String*"
+
+__unknown_file (
+""*7
+
+__unknown_file (
+
+metadatajava.util.Mapu
+s
+‹ ‹(ä'
+mage.remote.SessionImpl$5"
+server"__id*5
+
+__unknown_file (
+
+%52java.lang.Object;9
+
+ﬂ9 ﬂ(B
+%53java.util.HashMap"java.util.HashMapj
+h
+
+ﬂ5 ﬂ(D
+%54"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%53java.util.HashMapm
+k
+
+ﬂ ﬂ(E
+clientMetadatajava.util.Map"__id*6
+
+__unknown_file (
+
+%53java.util.HashMap[
+Y
+
+·# ·(>
+%55java.lang.String"__id*,
+
+__unknown_file (
+writeTimeoutâÜ
+
+·O ·(q
+
+%56int"/mage.remote.Connection#getSocketWriteTimeout()I*"
+
+__unknown_file (
+""2getSocketWriteTimeout()≥
+∞
+
+·@ ·(r
+%57java.lang.String"-java.lang.String#valueOf(I)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*(
+
+__unknown_file (
+
+
+%56intﬂ
+‹
+
+· ·(s
+%58java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*5
+
+__unknown_file (
+
+%55java.lang.String*5
+
+__unknown_file (
+
+%57java.lang.String“
+œ
+
+È È(G
+%59java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*9
+
+__unknown_file (
+generalizeSocketException*$
+
+__unknown_file (
+trueZ
+X
+
+# (6
+%60java.lang.String"__id*+
+
+__unknown_file (
+enableLeaseŒ
+À
+
+ (?
+%61java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*5
+
+__unknown_file (
+
+%60java.lang.String*$
+
+__unknown_file (
+true…
+∆
+
+Ñ Ñ(>
+%62java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*3
+
+__unknown_file (
+numberOfCallRetries*!
+
+__unknown_file (
+1b
+`
+
+†# †(@
+%63java.lang.String"__id*3
+
+__unknown_file (
+maxNumThreadsOnewayÃ
+…
+
+† †(G
+%64java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*5
+
+__unknown_file (
+
+%63java.lang.String*"
+
+__unknown_file (
+10j
+h
+
+°# °(J
+%65java.lang.String"__id*;
+
+__unknown_file (
+useClientConnectionIdentityŒ
+À
+
+° °(S
+%66java.lang.String"__mapSet*=
+
+__unknown_file (!
+
+clientMetadatajava.util.Map*5
+
+__unknown_file (
+
+%65java.lang.String*$
+
+__unknown_file (
+trueKI
+
+¢% ¢(+ 
+%67org.jboss.remoting.Client"org.jboss.remoting.Client˙
+˜
+
+¢! ¢(V
+%68"gorg.jboss.remoting.Client#<init>(Lorg/jboss/remoting/InvokerLocator;Ljava/lang/String;Ljava/util/Map;)V*>
+
+__unknown_file ("
+ 
+%67org.jboss.remoting.Client*P
+
+__unknown_file (4
+2
+clientLocator!org.jboss.remoting.InvokerLocator*(
+
+__unknown_file (
+
+callback*=
+
+__unknown_file (!
+
+clientMetadatajava.util.MapÜ
+É
+
+¢ ¢(V/
+mage.remote.SessionImpl$5"
+callbackClient"__id*>
+
+__unknown_file ("
+ 
+%67org.jboss.remoting.Client;9
+
+§; §(D
+%69java.util.HashMap"java.util.HashMapj
+h
+
+§7 §(F
+%70"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%69java.util.HashMapo
+m
+
+§ §(G!
+listenerMetadatajava.util.Map"__id*6
+
+__unknown_file (
+
+%69java.util.HashMap*
+6
+7*ö
+9
+¿ ¿("µ≤
+
+¿ ¿(1'
+%38 mage.remote.Connection$ProxyType"Gmage.remote.Connection#getProxyType()Lmage/remote/Connection$ProxyType;*"
+
+__unknown_file (
+""2getProxyType()a
+_
+
+¡ ¡('
+%39 mage.remote.Connection$ProxyType"__id*"
+
+__unknown_file (
+""a
+_
+
+≈ ≈('
+%40 mage.remote.Connection$ProxyType"__id*"
+
+__unknown_file (
+""*
+8
+10
+11*õ
+10
+≈ …(ïí
+
+∆= ∆(V
+%28java.lang.String"7mage.remote.Connection#getProxyHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2getProxyHost()ó
+î
+
+∆ ∆(W
+%29java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+http.proxyHost*5
+
+__unknown_file (
+
+%28java.lang.Stringvt
+
+«N «(g
+
+%30int"&mage.remote.Connection#getProxyPort()I*"
+
+__unknown_file (
+""2getProxyPort()∂
+≥
+
+«= «(h
+%31java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%30intó
+î
+
+« «(i
+%32java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+http.proxyPort*5
+
+__unknown_file (
+
+%31java.lang.Stringùö
+
+»G »(d
+%33java.lang.String";mage.remote.Connection#getProxyUsername()Ljava/lang/String;*"
+
+__unknown_file (
+""2getProxyUsername()ûõ
+»f »(É
+%34java.lang.String";mage.remote.Connection#getProxyPassword()Ljava/lang/String;*"
+
+__unknown_file (
+""2getProxyPassword()SQ
+
+»5 »(F$
+%35mage.remote.MageAuthenticator"mage.remote.MageAuthenticatorñ
+ì
+»1 »(Ñ
+%36"Kmage.remote.MageAuthenticator#<init>(Ljava/lang/String;Ljava/lang/String;)V*B
+
+__unknown_file (&
+$
+%35mage.remote.MageAuthenticator*5
+
+__unknown_file (
+
+%33java.lang.String*5
+
+__unknown_file (
+
+%34java.lang.String◊
+‘
+» »(Ö
+%37void"<java.net.Authenticator#setDefault(Ljava/net/Authenticator;)V*6
+
+__unknown_file ("
+java.net.Authenticator*B
+
+__unknown_file (&
+$
+%35mage.remote.MageAuthenticator*
+8*í
+11
+¡ ƒ(ïí
+
+¬= ¬(V
+%23java.lang.String"7mage.remote.Connection#getProxyHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2getProxyHost()ó
+î
+
+¬ ¬(W
+%24java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+socksProxyHost*5
+
+__unknown_file (
+
+%23java.lang.Stringvt
+
+√N √(g
+
+%25int"&mage.remote.Connection#getProxyPort()I*"
+
+__unknown_file (
+""2getProxyPort()∂
+≥
+
+√= √(h
+%26java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%25intó
+î
+
+√ √(i
+%27java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*.
+
+__unknown_file (
+socksProxyPort*5
+
+__unknown_file (
+
+%26java.lang.String*
+8*“
+12
+æ æ(X
+V
+
+æ æ(
+%16org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ïí
+
+æ: æ(S
+%17java.lang.String"7mage.remote.Connection#getProxyHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2getProxyHost()Ñ
+Å
+
+æ  æ(S
+%18java.lang.String"__concat*'
+
+æ  æ(7
+Connect: using proxy *'
+
+æ: æ(S
+
+%17java.lang.Stringo
+m
+
+æ  æ(Y
+%19java.lang.String"__concat*'
+
+æ  æ(S
+
+%18java.lang.String*
+
+æV æ(Y
+:vt
+
+æ\ æ(u
+
+%20int"&mage.remote.Connection#getProxyPort()I*"
+
+__unknown_file (
+""2getProxyPort()v
+t
+
+æ  æ(u
+%21java.lang.String"__concat*'
+
+æ  æ(Y
+
+%19java.lang.String*
+
+æ\ æ(u
+
+
+%20int‡›
+
+æ æ(v
+%22void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%16org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%21java.lang.String2info(Ljava/lang/Object;)*
+9B
+mage.remote.SessionImpl$5HP

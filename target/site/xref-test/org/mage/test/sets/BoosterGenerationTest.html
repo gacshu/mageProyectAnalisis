@@ -1,0 +1,598 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>BoosterGenerationTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../testapidocs/org/mage/test/sets/BoosterGenerationTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.MageObject;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.Ability;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.keyword.PartnerWithAbility;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.cards.Card;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.cards.ModalDoubleFacesCard;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.cards.repository.CardInfo;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.cards.repository.CardScanner;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.constants.CardType;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.constants.SubType;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.sets.*;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.util.CardUtil;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> org.junit.Before;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> org.junit.Ignore;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.MageTestBase;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> java.util.stream.Collectors;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.junit.Assert.*;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <em class="jxr_javadoccomment"> * @author nigelzor, JayDi85</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="BoosterGenerationTest" href="../../../../org/mage/test/sets/BoosterGenerationTest.html#BoosterGenerationTest">BoosterGenerationTest</a> <strong class="jxr_keyword">extends</strong> <a name="MageTestBase" href="../../../../org/mage/test/serverside/base/MageTestBase.html#MageTestBase">MageTestBase</a> {
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> List&lt;String&gt; basics = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(Arrays.asList(<span class="jxr_string">"Plains"</span>, <span class="jxr_string">"Island"</span>, <span class="jxr_string">"Swamp"</span>, <span class="jxr_string">"Mountain"</span>, <span class="jxr_string">"Forest"</span>));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> String str(List&lt;Card&gt; cards) {
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          StringBuilder sb = <strong class="jxr_keyword">new</strong> StringBuilder(<span class="jxr_string">"["</span>);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          Iterator&lt;Card&gt; iterator = cards.iterator();
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">while</strong> (iterator.hasNext()) {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              Card next = iterator.next();
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>              sb.append(next.getName());
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>              <strong class="jxr_keyword">if</strong> (iterator.hasNext()) {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                  sb.append(<span class="jxr_string">", "</span>);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>              }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          sb.append(<span class="jxr_string">"] ("</span>).append(cards.size()).append(')');
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">return</strong> sb.toString();
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      }
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> contains(List&lt;Card&gt; cards, List&lt;String&gt; names, String code) {
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          <strong class="jxr_keyword">return</strong> names.stream().anyMatch((name) -&gt; (contains(cards, name, code)));
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      }
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> contains(List&lt;Card&gt; cards, String name, String code) {
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <strong class="jxr_keyword">return</strong> cards.stream().anyMatch((card)
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>                  -&gt; (card.getName().equals(name)
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>                  &amp;&amp; (code == <strong class="jxr_keyword">null</strong> || card.getExpansionSetCode().equals(code)))
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          );
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      }
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      @Before
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUp() {
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          CardScanner.scan();
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      }
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> checkOnePartnerBoost() {
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          List&lt;Card&gt; booster = Battlebond.getInstance().createBooster();
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <strong class="jxr_keyword">boolean</strong> foundPartner = false;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          String Partner = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <strong class="jxr_keyword">for</strong> (Card card : booster) {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>              <strong class="jxr_keyword">for</strong> (Ability ability : card.getAbilities()) {
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>                  <strong class="jxr_keyword">if</strong> (ability instanceof PartnerWithAbility) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>                      <strong class="jxr_keyword">if</strong> (foundPartner) {
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>                          Assert.assertEquals(Partner, card.getName());
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>                      } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>                          foundPartner = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>                          Partner = ((PartnerWithAbility) ability).getPartnerName();
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>                      }
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>                  }
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>              }
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          }
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      }
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      @Test
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testBattlebondPartnerBoosters() {
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>              checkOnePartnerBoost();
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          }
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      }
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      @Test
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFateReforged() {
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          List&lt;String&gt; tapland = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(Arrays.asList(
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>                  <span class="jxr_string">"Bloodfell Caves"</span>, <span class="jxr_string">"Blossoming Sands"</span>, <span class="jxr_string">"Dismal Backwater"</span>, <span class="jxr_string">"Jungle Hollow"</span>, <span class="jxr_string">"Rugged Highlands"</span>,
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>                  <span class="jxr_string">"Scoured Barrens"</span>, <span class="jxr_string">"Swiftwater Cliffs"</span>, <span class="jxr_string">"Thornwood Falls"</span>, <span class="jxr_string">"Tranquil Cove"</span>, <span class="jxr_string">"Wind-Scarred Crag"</span>));
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          List&lt;String&gt; fetchland = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(Arrays.asList(
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>                  <span class="jxr_string">"Bloodstained Mire"</span>, <span class="jxr_string">"Flooded Strand"</span>, <span class="jxr_string">"Polluted Delta"</span>, <span class="jxr_string">"Windswept Heath"</span>, <span class="jxr_string">"Wooded Foothills"</span>));
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>  
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          List&lt;Card&gt; booster = FateReforged.getInstance().createBooster();
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          assertTrue(str(booster), contains(booster, tapland, <span class="jxr_string">"FRF"</span>)
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>                 || contains(booster, fetchland, <span class="jxr_string">"KTK"</span>)
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>                 || contains(booster, basics, <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         );
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     }
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> 
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     @Test
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMysteryBooster1() {
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         <em class="jxr_comment">// https://magic.wizards.com/en/articles/archive/feature/unraveling-mystery-booster-2019-11-14</em>
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         List&lt;Card&gt; booster = MysteryBooster.getInstance().createBooster();
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         Assert.assertNotNull(booster);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         Assert.assertEquals(<span class="jxr_string">"Pack contains 15 cards"</span>, 15, booster.size());
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> 
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         Assert.assertTrue(<span class="jxr_string">"Slot 1 is white"</span>, booster.get(0).getColor(<strong class="jxr_keyword">null</strong>).isWhite());
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         Assert.assertTrue(<span class="jxr_string">"Slot 2 is white"</span>, booster.get(1).getColor(<strong class="jxr_keyword">null</strong>).isWhite());
+<a class="jxr_linenumber" name="L114" href="#L114">114</a> 
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         <em class="jxr_comment">// Wretched Gryff is colorless, but stores in blue slots</em>
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         Assert.assertTrue(<span class="jxr_string">"Slot 3 is blue"</span>, booster.get(2).getName().equals(<span class="jxr_string">"Wretched Gryff"</span>) || booster.get(2).getColor(<strong class="jxr_keyword">null</strong>).isBlue());
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         Assert.assertTrue(<span class="jxr_string">"Slot 4 is blue"</span>, booster.get(3).getName().equals(<span class="jxr_string">"Wretched Gryff"</span>) || booster.get(3).getColor(<strong class="jxr_keyword">null</strong>).isBlue());
+<a class="jxr_linenumber" name="L118" href="#L118">118</a> 
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         Assert.assertTrue(<span class="jxr_string">"Slot 5 is black"</span>, booster.get(4).getColor(<strong class="jxr_keyword">null</strong>).isBlack());
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         Assert.assertTrue(<span class="jxr_string">"Slot 6 is black"</span>, booster.get(5).getColor(<strong class="jxr_keyword">null</strong>).isBlack());
+<a class="jxr_linenumber" name="L121" href="#L121">121</a> 
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         Assert.assertTrue(<span class="jxr_string">"Slot 7 is red"</span>, booster.get(6).getColor(<strong class="jxr_keyword">null</strong>).isRed());
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         Assert.assertTrue(<span class="jxr_string">"Slot 8 is red"</span>, booster.get(7).getColor(<strong class="jxr_keyword">null</strong>).isRed());
+<a class="jxr_linenumber" name="L124" href="#L124">124</a> 
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         Assert.assertTrue(<span class="jxr_string">"Slot 9 is green"</span>, booster.get(8).getColor(<strong class="jxr_keyword">null</strong>).isGreen());
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         Assert.assertTrue(<span class="jxr_string">"Slot 10 is green"</span>, booster.get(9).getColor(<strong class="jxr_keyword">null</strong>).isGreen());
+<a class="jxr_linenumber" name="L127" href="#L127">127</a> 
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         Assert.assertTrue(<span class="jxr_string">"Slot 11 is multicolored"</span>, booster.get(10).getColor(<strong class="jxr_keyword">null</strong>).isMulticolored());
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         Assert.assertTrue(<span class="jxr_string">"Slot 12 is colorless"</span>, booster.get(11).getColor(<strong class="jxr_keyword">null</strong>).isColorless());
+<a class="jxr_linenumber" name="L130" href="#L130">130</a> 
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>         Assert.assertEquals(<span class="jxr_string">"Slot 15 is from FMB1 set"</span>, <span class="jxr_string">"FMB1"</span>, booster.get(14).getExpansionSetCode());
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>     }
+<a class="jxr_linenumber" name="L133" href="#L133">133</a> 
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>     @Test
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMysteryBooster1Create15CardBooster() {
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         <em class="jxr_comment">// https://magic.wizards.com/en/articles/archive/feature/unraveling-mystery-booster-2019-11-14</em>
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         List&lt;Card&gt; booster = MysteryBooster.getInstance().create15CardBooster();
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         Assert.assertNotNull(booster);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         Assert.assertEquals(<span class="jxr_string">"Pack contains 15 cards"</span>, 15, booster.size());
+<a class="jxr_linenumber" name="L140" href="#L140">140</a> 
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         Assert.assertTrue(<span class="jxr_string">"Slot 1 is white ("</span> + booster.get(0).getName() + ')', booster.get(0).getColorIdentity().isWhite());
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         Assert.assertTrue(<span class="jxr_string">"Slot 2 is white ("</span> + booster.get(1).getName() + ')', booster.get(1).getColorIdentity().isWhite());
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> 
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         Assert.assertTrue(<span class="jxr_string">"Slot 3 is blue ("</span> + booster.get(2).getName() + ')', booster.get(2).getColorIdentity().isBlue());
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         Assert.assertTrue(<span class="jxr_string">"Slot 4 is blue ("</span> + booster.get(3).getName() + ')', booster.get(3).getColorIdentity().isBlue());
+<a class="jxr_linenumber" name="L146" href="#L146">146</a> 
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         Assert.assertTrue(<span class="jxr_string">"Slot 5 is black ("</span> + booster.get(4).getName() + ')', booster.get(4).getColorIdentity().isBlack());
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         Assert.assertTrue(<span class="jxr_string">"Slot 6 is black ("</span> + booster.get(5).getName() + ')', booster.get(5).getColorIdentity().isBlack());
+<a class="jxr_linenumber" name="L149" href="#L149">149</a> 
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         Assert.assertTrue(<span class="jxr_string">"Slot 7 is red ("</span> + booster.get(6).getName() + ')', booster.get(6).getColorIdentity().isRed());
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         Assert.assertTrue(<span class="jxr_string">"Slot 8 is red ("</span> + booster.get(7).getName() + ')', booster.get(7).getColorIdentity().isRed());
+<a class="jxr_linenumber" name="L152" href="#L152">152</a> 
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         Assert.assertTrue(<span class="jxr_string">"Slot 9 is green ("</span> + booster.get(8).getName() + ')', booster.get(8).getColorIdentity().isGreen());
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         Assert.assertTrue(<span class="jxr_string">"Slot 10 is green ("</span> + booster.get(9).getName() + ')', booster.get(9).getColorIdentity().isGreen());
+<a class="jxr_linenumber" name="L155" href="#L155">155</a> 
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         Assert.assertTrue(<span class="jxr_string">"Slot 11 is multicolored ("</span> + booster.get(10).getName() + ')', booster.get(10).getColorIdentity().isMulticolored());
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         Assert.assertTrue(
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>                 <span class="jxr_string">"Slot 12 is colorless ("</span> + booster.get(11).getName() + ')',
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>                 booster.get(11).getColor(<strong class="jxr_keyword">null</strong>).isColorless()
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>                         || booster.get(11).isLand(currentGame)
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>                         || booster.get(11).isArtifact(currentGame)
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         );
+<a class="jxr_linenumber" name="L163" href="#L163">163</a> 
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         Assert.assertEquals(<span class="jxr_string">"Slot 15 is from FMB1 set"</span>, <span class="jxr_string">"FMB1"</span>, booster.get(14).getExpansionSetCode());
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     }
+<a class="jxr_linenumber" name="L166" href="#L166">166</a> 
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     @Test
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMastersEditionII() {
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         List&lt;String&gt; snowCoveredLand = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(Arrays.asList(
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>                 <span class="jxr_string">"Snow-Covered Plains"</span>,
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>                 <span class="jxr_string">"Snow-Covered Island"</span>,
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>                 <span class="jxr_string">"Snow-Covered Swamp"</span>,
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>                 <span class="jxr_string">"Snow-Covered Mountain"</span>,
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>                 <span class="jxr_string">"Snow-Covered Forest"</span>
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         ));
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         List&lt;Card&gt; booster = MastersEditionII.getInstance().createBooster();
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         assertTrue(str(booster), contains(booster, snowCoveredLand, <span class="jxr_string">"ME2"</span>));
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         assertFalse(str(booster), contains(booster, basics, <strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     }
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     @Test
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMastersEditionIV_UrzaSpecialLandInBoosters() {
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <em class="jxr_comment">// ME4 replace all basic lands with special (1 per booster)</em>
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <em class="jxr_comment">// https://mtg.gamepedia.com/Masters_Edition_IV</em>
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         List&lt;String&gt; urzaLand = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(Arrays.asList(
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>                 <span class="jxr_string">"Urza's Mine"</span>,
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>                 <span class="jxr_string">"Urza's Power Plant"</span>,
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>                 <span class="jxr_string">"Urza's Tower"</span>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         ));
+<a class="jxr_linenumber" name="L190" href="#L190">190</a> 
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt;= 5; i++) {
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>             List&lt;Card&gt; booster = MastersEditionIV.getInstance().createBooster();
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>             assertTrue(str(booster), contains(booster, urzaLand, <span class="jxr_string">"ME4"</span>));
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>             assertFalse(str(booster), contains(booster, basics, <strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         }
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>     }
+<a class="jxr_linenumber" name="L197" href="#L197">197</a> 
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>     @Test
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCoreSet2019_DualLandsAreGenerated() {
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         List&lt;Card&gt; allCards = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 50; i++) {
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>             List&lt;Card&gt; booster = CoreSet2019.getInstance().createBooster();
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>             <em class="jxr_comment">// check that booster contains a land card</em>
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>             assertTrue(booster.stream().anyMatch(card -&gt; card.getCardType(currentGame).contains(CardType.LAND)));
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>             allCards.addAll(booster);
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         }
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <em class="jxr_comment">// check that some dual lands were generated</em>
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         assertTrue(allCards.stream().anyMatch(card -&gt; card.getCardType(currentGame).contains(CardType.LAND) &amp;&amp; Objects.equals(card.getRarity(), Rarity.COMMON)));
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>     }
+<a class="jxr_linenumber" name="L210" href="#L210">210</a> 
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>     @Test
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testWarOfTheSpark_EveryBoosterContainsPlaneswalker() {
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>             List&lt;Card&gt; booster = WarOfTheSpark.getInstance().createBooster();
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>             <em class="jxr_comment">// check that booster contains a planeswalker</em>
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>             assertTrue(booster.stream().anyMatch(card -&gt; card.isPlaneswalker(currentGame)));
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         }
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>     }
+<a class="jxr_linenumber" name="L219" href="#L219">219</a> 
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>     @Test
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDominaria_EveryBoosterContainsLegendaryCreature() {
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>             List&lt;Card&gt; booster = Dominaria.getInstance().createBooster();
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>             <em class="jxr_comment">// check that booster contains legendary creature</em>
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>             assertTrue(booster.stream().anyMatch(card -&gt; card.isCreature(currentGame) &amp;&amp; card.isLegendary()));
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         }
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>     }
+<a class="jxr_linenumber" name="L228" href="#L228">228</a> 
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>     @Test
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testModernHorizons_BoosterMustHaveOneSnowLand() {
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>             List&lt;Card&gt; booster = ModernHorizons.getInstance().createBooster();
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>             assertTrue(<span class="jxr_string">"Modern Horizon's booster must contain 1 snow covered land"</span>, booster.stream().anyMatch(card -&gt; card.isBasic() &amp;&amp; card.getName().startsWith(<span class="jxr_string">"Snow-Covered "</span>)));
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         }
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>     }
+<a class="jxr_linenumber" name="L236" href="#L236">236</a> 
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>     @Test
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testMastersEditionII_BoosterMustHaveOneSnowLand() {
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>             List&lt;Card&gt; booster = MastersEditionII.getInstance().createBooster();
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>             assertTrue(<span class="jxr_string">"Master Editions II's booster must contain 1 snow covered land"</span>, booster.stream().anyMatch(card -&gt; card.isBasic() &amp;&amp; card.getName().startsWith(<span class="jxr_string">"Snow-Covered "</span>)));
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         }
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>     }
+<a class="jxr_linenumber" name="L244" href="#L244">244</a> 
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>     @Test
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testBattlebond_BoosterMustHaveOneLand() {
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>             List&lt;Card&gt; booster = Battlebond.getInstance().createBooster();
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>             assertTrue(<span class="jxr_string">"battlebond's booster must contain 1 land"</span>, booster.stream().anyMatch(card -&gt; card.isBasic() &amp;&amp; card.isLand(currentGame)));
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         }
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>     }
+<a class="jxr_linenumber" name="L252" href="#L252">252</a> 
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>     @Test
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFallenEmpires_BoosterMustUseVariousArtsButUnique() {
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         <em class="jxr_comment">// Related issue: https://github.com/magefree/mage/issues/7333</em>
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         <em class="jxr_comment">// Actual for default boosters without collation</em>
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         Set&lt;String&gt; cardNumberPostfixes = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 10; i++) {
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>             List&lt;Card&gt; booster = FallenEmpires.getInstance().createBooster();
+<a class="jxr_linenumber" name="L260" href="#L260">260</a> 
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>             <em class="jxr_comment">// must have single version of the card for booster generation</em>
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>             Map&lt;String, Long&gt; stats = FallenEmpires.getInstance().getCardsByRarity(Rarity.COMMON)
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>                     .stream()
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>                     .collect(Collectors.groupingBy(CardInfo::getName, Collectors.counting()));
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>             String multipleCopies = stats.entrySet()
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>                     .stream()
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>                     .filter(data -&gt; data.getValue() &gt; 1)
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>                     .map(Map.Entry::getKey)
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>                     .collect(Collectors.joining(<span class="jxr_string">", "</span>));
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>             assertTrue(<span class="jxr_string">"booster generation must use cards with various arts as one card: "</span> + multipleCopies, multipleCopies.isEmpty());
+<a class="jxr_linenumber" name="L271" href="#L271">271</a> 
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>             <em class="jxr_comment">// must have all reprints</em>
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>             booster.forEach(card -&gt; {
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>                 <em class="jxr_comment">// 123c -&gt; c</em>
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>                 String postfix = card.getCardNumber().replace(String.valueOf(CardUtil.parseCardNumberAsInt(card.getCardNumber())), <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>                 <strong class="jxr_keyword">if</strong> (!postfix.isEmpty()) {
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>                     cardNumberPostfixes.add(postfix);
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>                 }
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>             });
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         }
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         assertTrue(<span class="jxr_string">"booster must use cards with various arts"</span>,
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>                 cardNumberPostfixes.contains(<span class="jxr_string">"a"</span>)
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>                         &amp;&amp; cardNumberPostfixes.contains(<span class="jxr_string">"b"</span>)
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>                         &amp;&amp; cardNumberPostfixes.contains(<span class="jxr_string">"c"</span>)
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>                         &amp;&amp; cardNumberPostfixes.contains(<span class="jxr_string">"d"</span>)
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         );
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>     }
+<a class="jxr_linenumber" name="L288" href="#L288">288</a> 
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>     @Test
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testZendikarRising_MDFC() {
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 20; i++) {
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>             List&lt;Card&gt; booster = ZendikarRising.getInstance().createBooster();
+<a class="jxr_linenumber" name="L293" href="#L293">293</a> 
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>             assertEquals(<span class="jxr_string">"Booster does not have 15 cards"</span>, 15, booster.size());
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>             assertTrue(
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>                     <span class="jxr_string">"Booster contains cards from another set"</span>,
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>                     booster.stream().map(Card::getExpansionSetCode).allMatch(<span class="jxr_string">"ZNR"</span>::equals)
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>             );
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>             assertEquals(
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>                     <span class="jxr_string">"Booster must contain exactly 1 basic land"</span>, 1,
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>                     booster.stream().filter(MageObject::isBasic).count()
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>             );
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>             assertEquals(
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>                     <span class="jxr_string">"Booster must contain exactly 1 rare or mythic"</span>, 1,
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>                     booster.stream().map(Card::getRarity).filter(rarity -&gt; rarity == Rarity.RARE || rarity == Rarity.MYTHIC).count()
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>             );
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>             assertEquals(
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>                     <span class="jxr_string">"Booster must contain exactly 3 uncommons"</span>, 3,
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>                     booster.stream().map(Card::getRarity).filter(Rarity.UNCOMMON::equals).count()
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>             );
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>             assertEquals(
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>                     <span class="jxr_string">"Booster must contain exactly 10 uncommons"</span>, 10,
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>                     booster.stream().map(Card::getRarity).filter(Rarity.COMMON::equals).count()
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>             );
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>             assertEquals(
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>                     <span class="jxr_string">"Booster must contain exactly 1 MDFC"</span>, 1,
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>                     booster.stream().filter(ModalDoubleFacesCard.<strong class="jxr_keyword">class</strong>::isInstance).count()
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>             );
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         }
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>     }
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>     @Test
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testKaldheim_SnowLandAndMDFC() {
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         <strong class="jxr_keyword">boolean</strong> foundVale = false;
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         <strong class="jxr_keyword">boolean</strong> foundMDFC = false;
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         <strong class="jxr_keyword">boolean</strong> foundNoMDFC = false;
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt;= 100; i++) {
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>             List&lt;Card&gt; booster = Kaldheim.getInstance().createBooster();
+<a class="jxr_linenumber" name="L330" href="#L330">330</a> 
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>             assertEquals(<span class="jxr_string">"Booster does not have 15 cards"</span>, 15, booster.size());
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>             assertTrue(
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>                     <span class="jxr_string">"Booster contains cards from another set"</span>,
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>                     booster.stream().map(Card::getExpansionSetCode).allMatch(<span class="jxr_string">"KHM"</span>::equals)
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>             );
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>             assertFalse(
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>                     <span class="jxr_string">"Booster cannot contain non-snow basic lands"</span>,
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>                     booster.stream().anyMatch(card -&gt; card.isBasic() &amp;&amp; !card.isSnow())
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>             );
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>             assertEquals(
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>                     <span class="jxr_string">"Booster must contain exactly 1 rare or mythic"</span>, 1,
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>                     booster.stream().map(Card::getRarity).filter(rarity -&gt; rarity == Rarity.RARE || rarity == Rarity.MYTHIC).count()
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>             );
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>             assertEquals(
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>                     <span class="jxr_string">"Booster must contain exactly 3 uncommons"</span>, 3,
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>                     booster.stream().map(Card::getRarity).filter(Rarity.UNCOMMON::equals).count()
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>             );
+<a class="jxr_linenumber" name="L348" href="#L348">348</a> 
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>             List&lt;Card&gt; snowLands = booster.stream().filter(card -&gt; card.isSnow() &amp;&amp; card.isLand(currentGame)).collect(Collectors.toList());
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>             <strong class="jxr_keyword">switch</strong> (snowLands.size()) {
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>                 <strong class="jxr_keyword">case</strong> 0:
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>                     fail(<span class="jxr_string">"Booster must have snow lands"</span>);
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>                 <strong class="jxr_keyword">case</strong> 1:
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>                     Card snowLand = snowLands.get(0);
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>                     assertTrue(
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>                             <span class="jxr_string">"Only one snow land, must be basic or common"</span>,
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>                             snowLand.isBasic() || snowLand.getRarity() == Rarity.COMMON
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>                     );
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>                     assertNotEquals(
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>                             <span class="jxr_string">"Only one snow land, can't be Shimmerdrift Vale"</span>,
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>                             <span class="jxr_string">"Shimmerdrift Vale"</span>, snowLand.getName()
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>                     );
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>                     assertNotEquals(
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>                             <span class="jxr_string">"Only one snow land, can't be Faceless Haven"</span>,
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>                             <span class="jxr_string">"Faceless Haven"</span>, snowLand.getName()
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>                     );
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>                 <strong class="jxr_keyword">case</strong> 2:
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>                     assertEquals(
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>                             <span class="jxr_string">"Booster can't have two snow lands unless one is Shimmerdrift Vale or Faceless Haven"</span>, 1,
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>                             snowLands.stream().filter(card -&gt; card.getName().equals(<span class="jxr_string">"Shimmerdrift Vale"</span>) || card.getName().equals(<span class="jxr_string">"Faceless Haven"</span>)).count()
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>                     );
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>                     assertEquals(
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>                             <span class="jxr_string">"Booster can't have two snow lands unless one is not Shimmerdrift Vale or Faceless Haven"</span>, 1,
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>                             snowLands.stream().filter(card -&gt; !card.getName().equals(<span class="jxr_string">"Shimmerdrift Vale"</span>) &amp;&amp; !card.getName().equals(<span class="jxr_string">"Faceless Haven"</span>)).count()
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>                     );
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>                 <strong class="jxr_keyword">case</strong> 3:
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>                     assertEquals(<span class="jxr_string">"Booster can't have three snow lands unless one is Shimmerdrift Vale"</span>, 1,
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>                             snowLands.stream().filter(card -&gt; card.getName().equals(<span class="jxr_string">"Shimmerdrift Vale"</span>)).count()
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>                     );
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>                     assertEquals(<span class="jxr_string">"Booster can't have three snow lands unless one is Faceless Haven"</span>, 1,
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>                             snowLands.stream().filter(card -&gt; card.getName().equals(<span class="jxr_string">"Faceless Haven"</span>)).count()
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>                     );
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>                     assertEquals(<span class="jxr_string">"Booster can't have three snow lands unless one is not Shimmerdrift Vale or Faceless Haven"</span>, 1,
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>                             snowLands.stream().filter(card -&gt; !card.getName().equals(<span class="jxr_string">"Shimmerdrift Vale"</span>) &amp;&amp; !card.getName().equals(<span class="jxr_string">"Faceless Haven"</span>)).count()
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>                     );
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>                 <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>                     fail(<span class="jxr_string">"Booster can't have more than three snow lands"</span>);
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>             }
+<a class="jxr_linenumber" name="L392" href="#L392">392</a> 
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>             <strong class="jxr_keyword">long</strong> mdfcCount = booster.stream().filter(ModalDoubleFacesCard.<strong class="jxr_keyword">class</strong>::isInstance).count();
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>             assertTrue(<span class="jxr_string">"Booster can't have more than one MDFC"</span>, mdfcCount &lt; 2);
+<a class="jxr_linenumber" name="L395" href="#L395">395</a> 
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>             foundMDFC |= mdfcCount &gt; 0;
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>             foundNoMDFC |= mdfcCount == 0;
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>             foundVale |= booster.stream().map(MageObject::getName).anyMatch(<span class="jxr_string">"Shimmerdrift Vale"</span>::equals);
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>             <strong class="jxr_keyword">if</strong> (foundVale &amp;&amp; foundMDFC &amp;&amp; foundNoMDFC &amp;&amp; i &gt; 20) {
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>             }
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>         }
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         assertTrue(<span class="jxr_string">"No booster contained Shimmerdrift Vale"</span>, foundVale);
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         assertTrue(<span class="jxr_string">"No booster contained an MDFC"</span>, foundMDFC);
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         assertTrue(<span class="jxr_string">"Every booster contained an MDFC"</span>, foundNoMDFC);
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>     }
+<a class="jxr_linenumber" name="L407" href="#L407">407</a> 
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>     @Test
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTimeSpiralRemastered_BonusSheet() {
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt;= 5; i++) {
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>             List&lt;Card&gt; booster = TimeSpiralRemastered.getInstance().createBooster();
+<a class="jxr_linenumber" name="L412" href="#L412">412</a> 
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>             assertFalse(
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>                     <span class="jxr_string">"Booster should have no basic lands:"</span> + str(booster),
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>                     contains(booster, basics, <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>             );
+<a class="jxr_linenumber" name="L417" href="#L417">417</a> 
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>             assertEquals(
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>                     <span class="jxr_string">"Booster should have 10 commons"</span>, 10,
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>                     booster.stream().map(Card::getRarity).filter(Rarity.COMMON::equals).count()
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>             );
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>             assertEquals(
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>                     <span class="jxr_string">"Booster should have 3 uncommons"</span>, 3,
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>                     booster.stream().map(Card::getRarity).filter(Rarity.UNCOMMON::equals).count()
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>             );
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>             assertEquals(
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>                     <span class="jxr_string">"Booster should have 1 rare/mythic"</span>, 1,
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>                     booster.stream().map(Card::getRarity).filter(r -&gt; r == Rarity.RARE || r == Rarity.MYTHIC).count()
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>             );
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>             assertEquals(
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>                     <span class="jxr_string">"Booster should have 1 bonus card"</span>, 1,
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>                     booster.stream().map(Card::getRarity).filter(Rarity.SPECIAL::equals).count()
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>             );
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>         }
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>     }
+<a class="jxr_linenumber" name="L436" href="#L436">436</a> 
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>     @Test
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testStrixhavenSchoolOfMages_LessonsAndArchive() {
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         <strong class="jxr_keyword">boolean</strong> foundUncommonLesson = false;
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>         <strong class="jxr_keyword">boolean</strong> foundNoUncommonLesson = false;
+<a class="jxr_linenumber" name="L441" href="#L441">441</a> 
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt;= 100; i++) {
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>             List&lt;Card&gt; booster = StrixhavenSchoolOfMages.getInstance().createBooster();
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>             List&lt;Card&gt; nonLessons = booster
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>                     .stream()
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>                     .filter(c -&gt; <span class="jxr_string">"STX"</span>.equals(c.getExpansionSetCode()))
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>                     .filter(c -&gt; !c.hasSubtype(SubType.LESSON, <strong class="jxr_keyword">null</strong>))
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>                     .collect(Collectors.toList());
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>             List&lt;Card&gt; lessons = booster
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>                     .stream()
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>                     .filter(c -&gt; <span class="jxr_string">"STX"</span>.equals(c.getExpansionSetCode()))
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>                     .filter(c -&gt; c.hasSubtype(SubType.LESSON, <strong class="jxr_keyword">null</strong>))
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>                     .collect(Collectors.toList());
+<a class="jxr_linenumber" name="L454" href="#L454">454</a> 
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>             assertEquals(<span class="jxr_string">"Booster should have 15 cards"</span>, 15, booster.size());
+<a class="jxr_linenumber" name="L456" href="#L456">456</a> 
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>             assertFalse(
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>                     <span class="jxr_string">"Booster should have no basic lands:"</span> + str(booster),
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>                     contains(booster, basics, <strong class="jxr_keyword">null</strong>)
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>             );
+<a class="jxr_linenumber" name="L461" href="#L461">461</a> 
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>             assertEquals(
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>                     <span class="jxr_string">"Booster should have 9 non-Lesson commons"</span>, 9,
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>                     nonLessons.stream().map(Card::getRarity).filter(Rarity.COMMON::equals).count()
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>             );
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>             assertEquals(
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>                     <span class="jxr_string">"Booster should have 3 uncommons"</span>, 3,
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>                     booster.stream().filter(c -&gt; <span class="jxr_string">"STX"</span>.equals(c.getExpansionSetCode())).map(Card::getRarity).filter(Rarity.UNCOMMON::equals).count()
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>             );
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>             assertEquals(
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>                     <span class="jxr_string">"Booster should have 1 non-Lesson rare/mythic"</span>, 1,
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>                     nonLessons.stream().map(Card::getRarity).filter(r -&gt; r == Rarity.RARE || r == Rarity.MYTHIC).count()
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>             );
+<a class="jxr_linenumber" name="L474" href="#L474">474</a> 
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>             assertEquals(
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>                     <span class="jxr_string">"Booster should have 1 Mystical Archive card"</span>, 1,
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>                     booster.stream().map(Card::getExpansionSetCode).filter(<span class="jxr_string">"STA"</span>::equals).count()
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>             );
+<a class="jxr_linenumber" name="L479" href="#L479">479</a> 
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>             assertTrue(<span class="jxr_string">"Booster should have no more than 2 total Lessons"</span>, lessons.size() &lt;= 2);
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>             assertEquals(
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>                     <span class="jxr_string">"Booster should have 1 non-uncommon Lesson"</span>, 1,
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>                     lessons.stream().filter(c -&gt; c.getRarity() != Rarity.UNCOMMON).count()
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>             );
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>             <strong class="jxr_keyword">long</strong> uncommonLessonCount = lessons.stream().filter(c -&gt; c.getRarity() == Rarity.UNCOMMON).count();
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>             assertTrue(<span class="jxr_string">"Booster should have no more than 1 uncommon Lesson"</span>, uncommonLessonCount &lt;= 1);
+<a class="jxr_linenumber" name="L487" href="#L487">487</a> 
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>             foundUncommonLesson |= uncommonLessonCount &gt; 0;
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>             foundNoUncommonLesson |= uncommonLessonCount == 0;
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>             <strong class="jxr_keyword">if</strong> (foundUncommonLesson &amp;&amp; foundNoUncommonLesson &amp;&amp; i &gt; 20) {
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>             }
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>         }
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>         assertTrue(<span class="jxr_string">"No booster contained an uncommon Lesson"</span>, foundUncommonLesson);
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>         assertTrue(<span class="jxr_string">"Every booster contained an uncommon Lesson"</span>, foundNoUncommonLesson);
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>     }
+<a class="jxr_linenumber" name="L497" href="#L497">497</a> 
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> List&lt;String&gt; mh2Reprints = Collections.unmodifiableList(Arrays.asList(
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>             <span class="jxr_string">"262"</span>, <span class="jxr_string">"263"</span>, <span class="jxr_string">"264"</span>, <span class="jxr_string">"265"</span>, <span class="jxr_string">"266"</span>, <span class="jxr_string">"267"</span>, <span class="jxr_string">"268"</span>, <span class="jxr_string">"269"</span>, <span class="jxr_string">"270"</span>, <span class="jxr_string">"271"</span>, <span class="jxr_string">"272"</span>, <span class="jxr_string">"273"</span>, <span class="jxr_string">"274"</span>, <span class="jxr_string">"275"</span>,
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>             <span class="jxr_string">"276"</span>, <span class="jxr_string">"277"</span>, <span class="jxr_string">"278"</span>, <span class="jxr_string">"279"</span>, <span class="jxr_string">"280"</span>, <span class="jxr_string">"281"</span>, <span class="jxr_string">"282"</span>, <span class="jxr_string">"283"</span>, <span class="jxr_string">"284"</span>, <span class="jxr_string">"285"</span>, <span class="jxr_string">"286"</span>, <span class="jxr_string">"287"</span>, <span class="jxr_string">"288"</span>, <span class="jxr_string">"289"</span>,
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>             <span class="jxr_string">"290"</span>, <span class="jxr_string">"291"</span>, <span class="jxr_string">"292"</span>, <span class="jxr_string">"293"</span>, <span class="jxr_string">"294"</span>, <span class="jxr_string">"295"</span>, <span class="jxr_string">"296"</span>, <span class="jxr_string">"297"</span>, <span class="jxr_string">"298"</span>, <span class="jxr_string">"299"</span>, <span class="jxr_string">"300"</span>, <span class="jxr_string">"301"</span>, <span class="jxr_string">"302"</span>, <span class="jxr_string">"303"</span>,
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>             <span class="jxr_string">"308"</span>, <span class="jxr_string">"314"</span>, <span class="jxr_string">"319"</span>, <span class="jxr_string">"320"</span>, <span class="jxr_string">"321"</span>, <span class="jxr_string">"322"</span>, <span class="jxr_string">"325"</span>, <span class="jxr_string">"326"</span>, <span class="jxr_string">"387"</span>, <span class="jxr_string">"416"</span>, <span class="jxr_string">"419"</span>, <span class="jxr_string">"423"</span>, <span class="jxr_string">"491"</span>
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>     ));
+<a class="jxr_linenumber" name="L504" href="#L504">504</a> 
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>     @Test
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testModernHorizons2ReprintSlot() {
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; 20; i++) {
+<a class="jxr_linenumber" name="L508" href="#L508">508</a>             List&lt;Card&gt; booster = ModernHorizons2.getInstance().createBooster();
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>             List&lt;Card&gt; notReprint = booster
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>                     .stream()
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>                     .filter(card -&gt; !mh2Reprints.contains(card.getCardNumber()))
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>                     .collect(Collectors.toList());
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>             List&lt;Card&gt; reprint = booster
+<a class="jxr_linenumber" name="L514" href="#L514">514</a>                     .stream()
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>                     .filter(card -&gt; mh2Reprints.contains(card.getCardNumber()))
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>                     .collect(Collectors.toList());
+<a class="jxr_linenumber" name="L517" href="#L517">517</a> 
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>             assertEquals(
+<a class="jxr_linenumber" name="L519" href="#L519">519</a>                     <span class="jxr_string">"Booster must contain exactly one reprint (other than fetches)"</span>, 1, reprint.size()
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>             );
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>             assertEquals(
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>                     <span class="jxr_string">"Booster must contain exactly 14 other cards"</span>, 14, notReprint.size()
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>             );
+<a class="jxr_linenumber" name="L524" href="#L524">524</a>             assertEquals(
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>                     <span class="jxr_string">"Booster must contain one non-reprint rare/mythic"</span>, 1,
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>                     notReprint
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>                             .stream()
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>                             .map(Card::getRarity)
+<a class="jxr_linenumber" name="L529" href="#L529">529</a>                             .filter(rarity -&gt; rarity == Rarity.RARE || rarity == Rarity.MYTHIC)
+<a class="jxr_linenumber" name="L530" href="#L530">530</a>                             .count()
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>             );
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>             assertEquals(
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>                     <span class="jxr_string">"Booster must contain three non-reprint uncommons"</span>, 3,
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>                     notReprint
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>                             .stream()
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>                             .map(Card::getRarity)
+<a class="jxr_linenumber" name="L537" href="#L537">537</a>                             .filter(Rarity.UNCOMMON::equals)
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>                             .count()
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>             );
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>             assertEquals(
+<a class="jxr_linenumber" name="L541" href="#L541">541</a>                     <span class="jxr_string">"Booster must contain ten non-reprint uncommons"</span>, 10,
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>                     notReprint
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>                             .stream()
+<a class="jxr_linenumber" name="L544" href="#L544">544</a>                             .map(Card::getRarity)
+<a class="jxr_linenumber" name="L545" href="#L545">545</a>                             .filter(Rarity.COMMON::equals)
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>                             .count()
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>             );
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>         }
+<a class="jxr_linenumber" name="L549" href="#L549">549</a>     }
+<a class="jxr_linenumber" name="L550" href="#L550">550</a> 
+<a class="jxr_linenumber" name="L551" href="#L551">551</a>     @Ignore <em class="jxr_comment">// debug only: collect info about cards in boosters, see https://github.com/magefree/mage/issues/8081</em>
+<a class="jxr_linenumber" name="L552" href="#L552">552</a>     @Test
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_CollectBoosterStats() {
+<a class="jxr_linenumber" name="L554" href="#L554">554</a>         ExpansionSet setToAnalyse = FallenEmpires.getInstance();
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>         <strong class="jxr_keyword">int</strong> openBoosters = 1000;
+<a class="jxr_linenumber" name="L556" href="#L556">556</a> 
+<a class="jxr_linenumber" name="L557" href="#L557">557</a>         Map&lt;String, Integer&gt; resRatio = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>         <strong class="jxr_keyword">int</strong> totalCards = 0;
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 1; i &lt;= openBoosters; i++) {
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>             List&lt;Card&gt; booster = setToAnalyse.createBooster();
+<a class="jxr_linenumber" name="L561" href="#L561">561</a>             totalCards += booster.size();
+<a class="jxr_linenumber" name="L562" href="#L562">562</a>             booster.forEach(card -&gt; {
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>                 String code = String.format(<span class="jxr_string">"%s %s"</span>, card.getRarity().getCode(), card.getName());
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>                 resRatio.putIfAbsent(code, 0);
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>                 resRatio.computeIfPresent(code, (u, count) -&gt; count + 1);
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>             });
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>         }
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>         <strong class="jxr_keyword">final</strong> Integer totalCardsFinal = totalCards;
+<a class="jxr_linenumber" name="L569" href="#L569">569</a>         List&lt;String&gt; info = resRatio.entrySet().stream()
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>                 .sorted(<strong class="jxr_keyword">new</strong> Comparator&lt;Map.Entry&lt;String, Integer&gt;&gt;() {
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>                     @Override
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>                     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compare(Map.Entry&lt;String, Integer&gt; o1, Map.Entry&lt;String, Integer&gt; o2) {
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>                         <strong class="jxr_keyword">return</strong> Integer.compare(o2.getValue(), o1.getValue());
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>                     }
+<a class="jxr_linenumber" name="L575" href="#L575">575</a>                 })
+<a class="jxr_linenumber" name="L576" href="#L576">576</a>                 .map(e -&gt; String.format(<span class="jxr_string">"%s: %d"</span>,
+<a class="jxr_linenumber" name="L577" href="#L577">577</a>                         e.getKey(),
+<a class="jxr_linenumber" name="L578" href="#L578">578</a>                         e.getValue()
+<a class="jxr_linenumber" name="L579" href="#L579">579</a>                         <em class="jxr_comment">//(double) e.getValue() / totalCardsFinal * 100.0</em>
+<a class="jxr_linenumber" name="L580" href="#L580">580</a>                 ))
+<a class="jxr_linenumber" name="L581" href="#L581">581</a>                 .collect(Collectors.toList());
+<a class="jxr_linenumber" name="L582" href="#L582">582</a>         System.out.println(setToAnalyse.getName() + <span class="jxr_string">" - boosters opened: "</span> + openBoosters + <span class="jxr_string">". Found cards: "</span> + totalCardsFinal + <span class="jxr_string">"\n"</span>
+<a class="jxr_linenumber" name="L583" href="#L583">583</a>                 + info.stream().collect(Collectors.joining(<span class="jxr_string">"\n"</span>)));
+<a class="jxr_linenumber" name="L584" href="#L584">584</a>     }
+<a class="jxr_linenumber" name="L585" href="#L585">585</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

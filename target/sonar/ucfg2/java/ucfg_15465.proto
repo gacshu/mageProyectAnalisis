@@ -1,0 +1,303 @@
+
+›mage.game.combat.CombatGroup#assignsDefendingPlayerAndOrDefendingCreaturesDividedDamage(Lmage/game/permanent/Permanent;Ljava/util/UUID;ZLmage/game/Game;Z)Za
+UD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/combat/CombatGroup.java¹ ¹(M"19*€
+13¼Â ¼(Êf
+d
+¼Â ¼(Ê
+%5java.util.UUID"__id*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*
+12*æ
+14¼˜ ¼(œ©¦
+¼˜ ¼(¨
+%10mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()½º
+¼˜ ¼(¿
+%9java.util.UUID">mage.game.combat.Combat#getAttackingPlayerId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+%10mage.game.combat.Combat2getAttackingPlayerId()`
+^
+¼˜ ¼(¿
+%5java.util.UUID"__id*2
+
+__unknown_file (
+
+%9java.util.UUID*
+12*­
+15¼t ¼(Œ
+¼t ¼(•
+%8boolean"Kmage.game.combat.CombatGroup#attackerAssignsCombatDamage(Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+mage.game.combat.CombatGroup*4
+
+__unknown_file (
+
+gamemage.game.Game2-attackerAssignsCombatDamage(Lmage/game/Game;)*
+13
+14*÷
+17
+¼O ¼(`
+}
+
+¼O ¼(`
+%6java.util.UUID"__id*S
+
+__unknown_file (7*5
+mage.game.combat.CombatGroup"
+defendingPlayerId^
+\
+
+¼O ¼(`
+%5java.util.UUID"__id*2
+
+__unknown_file (
+
+%6java.util.UUID*
+12*¯
+18
+¼ ¼( Ž‹
+
+¼+ ¼(L
+%4boolean"Kmage.game.combat.CombatGroup#defenderAssignsCombatDamage(Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+mage.game.combat.CombatGroup*4
+
+__unknown_file (
+
+gamemage.game.Game2-defenderAssignsCombatDamage(Lmage/game/Game;)*
+13
+15
+17*À
+19
+» »(Â¿
+
+» »(#
+%0mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2getAbilities()°
+­
+
+»0 »(a?
+%19mage.abilities.common.ControllerDivideCombatDamageAbility"‚mage.abilities.common.ControllerDivideCombatDamageAbility#getInstance()Lmage/abilities/common/ControllerDivideCombatDamageAbility;*Y
+
+__unknown_file (=";
+9mage.abilities.common.ControllerDivideCombatDamageAbilityÁ¾
+
+»0 »(i
+%2java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*]
+
+__unknown_file (A
+?
+%19mage.abilities.common.ControllerDivideCombatDamageAbility2getId()èå
+
+» »(j
+%3boolean"7mage.abilities.Abilities#containsKey(Ljava/util/UUID;)Z*<
+
+__unknown_file ( 
+
+%0mage.abilities.Abilities*2
+
+__unknown_file (
+
+%2java.util.UUID2containsKey(Ljava/util/UUID;)*
+18
+1*%
+1
+Æ Æ("
+
+Æ Æ(
+""*¢
+2
+Á Á(Gú
+÷
+
+Á Á(s
+%22void"™mage.game.combat.CombatGroup#defendingPlayerAndOrDefendingCreaturesDividedDamage(Lmage/game/permanent/Permanent;Lmage/players/Player;ZLmage/game/Game;Z)V*<
+
+__unknown_file ( 
+mage.game.combat.CombatGroup*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*;
+
+__unknown_file (
+
+playermage.players.Player*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+"""
+
+Â Â( 
+""*î
+3
+À À(W
+U
+
+À% À(3
+%17mage.constants.Outcome"__id*"
+
+__unknown_file (
+""¯¬
+
+À? À(T
+%18java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2getLogName()s
+q
+
+À5 À(T
+%19java.lang.String"__concat*
+
+À5 À(<	
+Have *'
+
+À? À(T
+
+%18java.lang.StringÓ
+Ð
+À5 À(»
+%20java.lang.String"__concat*'
+
+À5 À(T
+
+%19java.lang.String*u
+ÀW À(»fd
+b assign its combat damage divided among defending player and/or any number of defending creatures?þû
+À À(È
+%21boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%17mage.constants.Outcome*5
+
+__unknown_file (
+
+%20java.lang.String*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*°
+4
+¿n ¿(w–
+“
+¿n ¿(ˆ
+%16boolean"Image.game.combat.CombatGroup#canDamage(Lmage/game/permanent/Permanent;Z)Z*<
+
+__unknown_file ( 
+mage.game.combat.CombatGroup*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*"
+
+__unknown_file (
+""*
+3
+1*Œ
+7
+¿E ¿(Nx
+v
+
+¿E ¿(N
+%14java.util.List"__id*K
+
+__unknown_file (/*-
+mage.game.combat.CombatGroup"
+	attackersyw
+
+¿E ¿(X
+%15boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%14java.util.List2	isEmpty()*
+4
+1*
+11
+¿ ¿(&w
+u
+
+¿ ¿(&
+%12java.util.List"__id*J
+
+__unknown_file (.*,
+mage.game.combat.CombatGroup"
+
+blockersyw
+
+¿ ¿(0
+%13boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%12java.util.List2	isEmpty()*	
+4
+7
+1*‡
+12¼ ¼(Ìôñ
+¼ ¼(Ì
+%11mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+¼ ¼(Í
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%11mage.players.Player*
+4
+7
+11
+1:7
+
+¹N ¹(a)
+creaturemage.game.permanent.Permanent:(
+
+¹b ¹(p
+playerIdjava.util.UUID: 
+
+__unknown_file (
+"":&
+¹€ ¹(Š
+gamemage.game.Game: 
+
+__unknown_file (
+""B 
+mage.game.combat.CombatGroupHP

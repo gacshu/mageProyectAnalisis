@@ -1,0 +1,248 @@
+
+Xmage.abilities.keyword.GravestormEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zk
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/GravestormAbility.javaH H("startingBlock*!
+1Z Z("
+Z Z(
+""*!
+2W W("
+W W(
+""*—
+3T T(±Æ
+T> T(V
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()àÖ
+T T(n
+%17void"nmage.game.stack.StackObjectImpl#createCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZI)V*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%16java.util.UUID* 
+
+__unknown_file (2*"
+
+__unknown_file (
+""2McreateCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZI)*
+2*ˇ
+startingBlockH H(3ä
+á
+G G(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+H H("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18î
+ë
+G G(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+H, H(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%19*
+12*¯
+4	R/ R(£Å
+
+	R/ R(£
+%14java.lang.String"__concat*&
+	R/ R(Ä
+
+%10java.lang.String*'
+
+RÉ R(£
+
+%11java.lang.Stringﬁ€
+	R R(§
+%15void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%14java.lang.String2!informPlayers(Ljava/lang/String;)*
+3*z
+5
+R† R(¢d
+b
+
+R† R(¢
+%11java.lang.String"__id*5
+
+__unknown_file (
+
+%13java.lang.String*
+4*z
+6
+Rö R(ùd
+b
+
+Rö R(ù
+%11java.lang.String"__id*5
+
+__unknown_file (
+
+%12java.lang.String*
+4*ˇ
+7R R( °û
+R@ R(O
+%6java.lang.String"1mage.game.stack.Spell#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2	getName()r
+p
+R/ R(O
+%7java.lang.String"__concat*
+R/ R(=
+Gravestorm: *$
+R@ R(O
+
+%6java.lang.Stringv
+t
+R/ R(d
+%8java.lang.String"__concat*$
+R/ R(O
+
+%7java.lang.String* 
+RR R(d
+ will be copied h
+f
+R/ R(v
+%9java.lang.String"__concat*$
+R/ R(d
+
+%8java.lang.String*
+Rg R(v
+""n
+l
+	R/ R(Ä
+%10java.lang.String"__concat*$
+R/ R(v
+
+%9java.lang.String*
+	Ry R(Ä	
+ time*
+5
+6*ô
+8Q Q(!Å
+Q Q(0
+%5boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+3
+7*ë
+9O* O(.èå
+O* O(J
+%4java.lang.Object"Pmage.abilities.effects.EffectImpl#getValue(Ljava/lang/String;)Ljava/lang/Object;*G
+
+__unknown_file (+)
+'mage.abilities.keyword.GravestormEffect*/
+
+__unknown_file (
+GravestormSpell2getValue(Ljava/lang/String;)h
+f
+O O(K
+spellmage.game.stack.Spell"__id*4
+
+__unknown_file (
+
+%4java.lang.Object*
+2
+8*÷
+10M& M(-Ω∫
+M& M(B	
+%3int"<mage.watchers.common.GravestormWatcher#getGravestormCount()I*O
+
+__unknown_file (3
+1
+watcher&mage.watchers.common.GravestormWatcher2getGravestormCount()*
+2
+9*Õ
+11K( K(,öó
+K( K(7
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Å˛
+K( K([,
+%2&mage.watchers.common.GravestormWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%1mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)í
+è
+K K(\1
+watcher&mage.watchers.common.GravestormWatcher"__id*J
+
+__unknown_file (.
+,
+%2&mage.watchers.common.GravestormWatcher*
+10
+1*ú
+12I= I(Aíè
+I= I(`
+%0java.lang.Object"Pmage.abilities.effects.EffectImpl#getValue(Ljava/lang/String;)Ljava/lang/Object;*G
+
+__unknown_file (+)
+'mage.abilities.keyword.GravestormEffect*2
+
+__unknown_file (
+GravestormSpellRef2getValue(Ljava/lang/String;)n
+l
+I I(a$
+spellRefmage.MageObjectReference"__id*4
+
+__unknown_file (
+
+%0java.lang.Object*
+11
+1:"
+H H(#
+gamemage.game.Game:,
+H$ H(2 
+sourcemage.abilities.AbilityB+)
+'mage.abilities.keyword.GravestormEffectHP

@@ -1,0 +1,20 @@
+mage.game.GameImpl#play(Ljava/util/UUID;)V
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#<init>(Ljava/lang/String;)V
+mage.game.GameImpl#playTurn(Lmage/players/Player;)Z
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+mage.game.events.GameEvent#<init>(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)V
+mage.game.GameImpl#playExtraTurns()Z
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+mage.game.events.GameEvent#instance-init#
+java.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
+java.lang.StringBuilder#toString()Ljava/lang/String;
+==
+isSimulation mage.game.GameImpl#isSimulation()Z
+findWinnersAndLosers mage.game.GameImpl#findWinnersAndLosers()Ljava/util/UUID;
+getId mage.game.GameImpl#getId()Ljava/util/UUID;
+isPaused mage.game.GameImpl#isPaused()Z
+getPlayer mage.game.GameImpl#getPlayer(Ljava/util/UUID;)Lmage/players/Player;
+checkIfGameIsOver mage.game.GameImpl#checkIfGameIsOver()Z
+getState mage.game.GameImpl#getState()Lmage/game/GameState;
+replaceEvent mage.game.GameImpl#replaceEvent(Lmage/game/events/GameEvent;)Z

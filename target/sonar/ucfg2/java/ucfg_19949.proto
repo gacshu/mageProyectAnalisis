@@ -1,0 +1,144 @@
+
+zmage.abilities.condition.common.SourceOnBattlefieldOrCommandZoneCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+‚D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/SourceOnBattlefieldOrCommandZoneCondition.java ("startingBlock*!
+2 ("
+ (
+""*Ä
+3 ($ª§
+ (+%
+%4mage.game.command.CommandObject"+java.util.Iterator#next()Ljava/lang/Object;*?
+
+__unknown_file (#
+!
+commandZonejava.util.Iterator2next()¡ž
+ (3
+%5java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+%4mage.game.command.CommandObject2getId()_
+]
+ (4
+thingjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID¨¥
+ (1
+%6java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÏÌ
+ (2
+%7boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+thingjava.util.UUID*2
+
+__unknown_file (
+
+%6java.util.UUID2equals(Ljava/lang/Object;)*
+2
+4*þ
+startingBlock (3Š
+‡
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10”
+‘
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11*
+5*Ÿ
+4 (‡„
+ ($
+%3boolean"java.util.Iterator#hasNext()Z*?
+
+__unknown_file (#
+!
+commandZonejava.util.Iterator2	hasNext()*
+3
+1*ü
+5. (2š—
+. (=
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()²¯
+. (J
+%1mage.game.command.Command";mage.game.GameState#getCommand()Lmage/game/command/Command;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getCommand()¦£
+. (U
+%2java.util.Iterator"2java.util.ArrayList#iterator()Ljava/util/Iterator;*=
+
+__unknown_file (!
+
+%1mage.game.command.Command2
+iterator()m
+k
+ (V!
+commandZonejava.util.Iterator"__id*6
+
+__unknown_file (
+
+%2java.util.Iterator*
+4*Ù
+1 (¨¥
+" (6
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+ (7#
+%9mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID2getPermanent(Ljava/util/UUID;)"
+ (A
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityBMK
+Image.abilities.condition.common.SourceOnBattlefieldOrCommandZoneConditionHP

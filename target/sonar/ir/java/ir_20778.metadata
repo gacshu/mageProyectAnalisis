@@ -1,0 +1,15 @@
+mage.game.draft.DraftCube#createBooster()Ljava/util/List;
+java.util.ArrayList#<init>()V
+java.lang.StringBuilder#instance-init#
+java.lang.StringBuilder#<init>(Ljava/lang/String;)V
+mage.util.RandomUtil#nextInt(I)I
+java.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+java.util.ArrayList#instance-init#
+mage.cards.repository.CardRepository#findPreferredCoreExpansionCard(Ljava/lang/String;)Lmage/cards/repository/CardInfo;
+java.lang.String#isEmpty()Z
+mage.cards.repository.CardRepository#findCardWithPreferredSetAndNumber(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Lmage/cards/repository/CardInfo;
+java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;
+==
+getExtension mage.game.draft.DraftCube$CardIdentity#getExtension()Ljava/lang/String;
+getName mage.game.draft.DraftCube$CardIdentity#getName()Ljava/lang/String;
+getName mage.game.draft.DraftCube#getName()Ljava/lang/String;

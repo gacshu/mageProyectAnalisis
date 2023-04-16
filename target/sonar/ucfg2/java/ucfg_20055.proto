@@ -1,0 +1,192 @@
+
+’mage.abilities.effects.common.PreventAllDamageByAllPermanentsEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z†
+|D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/PreventAllDamageByAllPermanentsEffect.java. .("startingBlock*!
+27 7("
+7 7( 
+""*î
+35& 5(*·´
+58 5(Q
+%4java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+damageEventmage.game.events.DamageEvent2getSourceId()Š‡
+5& 5(R#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+5 5(S*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent§
+¤
+6 6(!
+%6mage.filter.FilterPermanent"__id*o
+
+__unknown_file (S*QE
+Cmage.abilities.effects.common.PreventAllDamageByAllPermanentsEffect"
+filter°­
+6, 6(D
+%7java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()®«
+6 6(S
+%8boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%6mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%7java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*ý
+startingBlock. .(F–
+“
+- -(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+.% .(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+- -(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+.4 .(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+- -(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+.A .(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+10*!
+43 3("
+3 3( 
+""*¿
+52 2(§
+¤
+2 2(!
+%3mage.filter.FilterPermanent"__id*o
+
+__unknown_file (S*QE
+Cmage.abilities.effects.common.PreventAllDamageByAllPermanentsEffect"
+filter*
+3
+4*Ç
+704 0(9ƒ
+€
+0 0(:+
+damageEventmage.game.events.DamageEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent©¦
+1 1(,
+%2boolean".mage.game.events.DamageEvent#isCombatDamage()Z*I
+
+__unknown_file (-
++
+damageEventmage.game.events.DamageEvent2isCombatDamage()*
+5
+1*©
+8/R /(W‘Ž
+/R /(c	
+%1int"'mage.game.events.GameEvent#getAmount()I*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getAmount()*
+7
+1*Ž
+10/ /(õ
+ò
+/ /(.
+%0boolean"zmage.abilities.effects.PreventionEffectImpl#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+8
+1*!
+1; ;("
+; ;(
+"":/
+. .(+#
+eventmage.game.events.GameEvent:,
+., .(; 
+sourcemage.abilities.Ability:"
+.< .(E
+gamemage.game.GameBGE
+Cmage.abilities.effects.common.PreventAllDamageByAllPermanentsEffectHP

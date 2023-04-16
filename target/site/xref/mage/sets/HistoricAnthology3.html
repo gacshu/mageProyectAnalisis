@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>HistoricAnthology3 xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/HistoricAnthology3.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * @author mikalinn777</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="HistoricAnthology3" href="../../mage/sets/HistoricAnthology3.html#HistoricAnthology3">HistoricAnthology3</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="HistoricAnthology3" href="../../mage/sets/HistoricAnthology3.html#HistoricAnthology3">HistoricAnthology3</a> instance = <strong class="jxr_keyword">new</strong> <a name="HistoricAnthology3" href="../../mage/sets/HistoricAnthology3.html#HistoricAnthology3">HistoricAnthology3</a>();
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="HistoricAnthology3" href="../../mage/sets/HistoricAnthology3.html#HistoricAnthology3">HistoricAnthology3</a> getInstance() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      }
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <a name="HistoricAnthology3" href="../../mage/sets/HistoricAnthology3.html#HistoricAnthology3">HistoricAnthology3</a>() {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Historic Anthology 3"</span>, <span class="jxr_string">"HA3"</span>, ExpansionSet.buildDate(2020, 5, 21), SetType.MAGIC_ARENA);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">this</strong>.blockName = <span class="jxr_string">"Reprint"</span>;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = false;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ancient Ziggurat"</span>, 26, Rarity.UNCOMMON, mage.cards.a.AncientZiggurat.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Akroma's Memorial"</span>, 24, Rarity.MYTHIC, mage.cards.a.AkromasMemorial.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Body Double"</span>, 6, Rarity.RARE, mage.cards.b.BodyDouble.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Chainer's Edict"</span>, 10, Rarity.UNCOMMON, mage.cards.c.ChainersEdict.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Devil's Play"</span>, 15, Rarity.RARE, mage.cards.d.DevilsPlay.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Enchantress's Presence"</span>, 19, Rarity.RARE, mage.cards.e.EnchantresssPresence.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Gempalm Incinerator"</span>, 16, Rarity.UNCOMMON, mage.cards.g.GempalmIncinerator.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Gempalm Polluter"</span>, 11, Rarity.COMMON, mage.cards.g.GempalmPolluter.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Honden of Cleansing Fire"</span>, 2, Rarity.UNCOMMON, mage.cards.h.HondenOfCleansingFire.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Honden of Infinite Rage"</span>, 17, Rarity.UNCOMMON, mage.cards.h.HondenOfInfiniteRage.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Honden of Life's Web"</span>, 20, Rarity.UNCOMMON, mage.cards.h.HondenOfLifesWeb.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Honden of Night's Reach"</span>, 12, Rarity.UNCOMMON, mage.cards.h.HondenOfNightsReach.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Honden of Seeing Winds"</span>, 7, Rarity.UNCOMMON, mage.cards.h.HondenOfSeeingWinds.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Krosan Tusker"</span>, 21, Rarity.COMMON, mage.cards.k.KrosanTusker.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Maze's End"</span>, 27, Rarity.MYTHIC, mage.cards.m.MazesEnd.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mirari's Wake"</span>, 23, Rarity.RARE, mage.cards.m.MirarisWake.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Momentary Blink"</span>, 3, Rarity.COMMON, mage.cards.m.MomentaryBlink.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Phyrexian Obliterator"</span>, 13, Rarity.MYTHIC, mage.cards.p.PhyrexianObliterator.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ratchet Bomb"</span>, 25, Rarity.RARE, mage.cards.r.RatchetBomb.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Roar of the Wurm"</span>, 22, Rarity.UNCOMMON, mage.cards.r.RoarOfTheWurm.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Silent Departure"</span>, 8, Rarity.COMMON, mage.cards.s.SilentDeparture.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Swan Song"</span>, 9, Rarity.RARE, mage.cards.s.SwanSong.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Tectonic Reformation"</span>, 18, Rarity.RARE, mage.cards.t.TectonicReformation.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Tempered Steel"</span>, 4, Rarity.RARE, mage.cards.t.TemperedSteel.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Timely Reinforcements"</span>, 5, Rarity.UNCOMMON, mage.cards.t.TimelyReinforcements.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ulamog, the Ceaseless Hunger"</span>, 1, Rarity.MYTHIC, mage.cards.u.UlamogTheCeaselessHunger.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Unburial Rites"</span>, 14, Rarity.UNCOMMON, mage.cards.u.UnburialRites.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      }
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

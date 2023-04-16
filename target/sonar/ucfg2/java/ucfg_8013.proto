@@ -1,0 +1,538 @@
+
+zmage.abilities.effects.common.continuous.BecomesColorOrColorsTargetEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+‚D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BecomesColorOrColorsTargetEffect.java+ +("startingBlock*È
+13> >(°­
+> >(*
+%21mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2
+getColor(){y
+> >(4
+%22boolean"mage.ObjectColor#isBlack()Z*5
+
+__unknown_file (
+
+%21mage.ObjectColor2	isBlack()*
+11
+12*œ
+24, ,( °­
+,+ ,(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+, ,(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+, ,(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player®«
+-- -(D
+%2java.util.UUID"7mage.abilities.Ability#getFirstTarget()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getFirstTarget()Š‡
+- -(E#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)~
+|
+- -(F'
+targetmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.PermanentDB
+. .(,
+%4java.lang.StringBuilder"java.lang.StringBuilderr
+p
+. .(.
+%5"!java.lang.StringBuilder#<init>()V*;
+
+__unknown_file (
+
+%4java.lang.StringBuildern
+l
+. .(/
+sbjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%4java.lang.StringBuilder*
+2
+17
+19
+1*à	
+14< <(¥¢
+<' <(7
+%13java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent2	getName()j
+h
+<' <(>
+%14java.lang.String"__concat*%
+<' <(7
+
+%13java.lang.String*
+<: <(>
+: ©¦
+<A <(X
+%15java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()}
+{
+<' <(X
+%16java.lang.String"__concat*%
+<' <(>
+
+%14java.lang.String*%
+<A <(X
+
+%15java.lang.Stringt
+r
+<' <(i
+%17java.lang.String"__concat*%
+<' <(X
+
+%16java.lang.String*
+<[ <(i
+ has chosen ²¯
+	<l <(ƒ
+%18java.lang.String"5mage.choices.ChoiceImpl#getChoice()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2getChoice()
+}
+	<' <(ƒ
+%19java.lang.String"__concat*%
+<' <(i
+
+%17java.lang.String*&
+	<l <(ƒ
+
+%18java.lang.StringÞÛ
+	< <(„
+%20void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%19java.lang.String2!informPlayers(Ljava/lang/String;)*
+13*ž
+15; ;(ƒ€
+; ;((
+%12boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+13
+14*"
+169 9( "
+9 9(!
+""*æ
+177* 7(;FD
+7. 7(9
+%8mage.choices.ChoiceColor"mage.choices.ChoiceColort
+r
+7* 7(;
+%9""mage.choices.ChoiceColor#<init>()V*<
+
+__unknown_file ( 
+
+%8mage.choices.ChoiceColory
+w
+7 7(<'
+choiceColormage.choices.ChoiceColor"__id*<
+
+__unknown_file ( 
+
+%8mage.choices.ChoiceColorU
+S
+8' 8(6
+%10mage.constants.Outcome"__id*"
+
+__unknown_file (
+""»¸
+8 8(J
+%11boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%10mage.constants.Outcome*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+15
+16*‰
+193 3(#T
+R
+3. 3(=
+%6mage.constants.Outcome"__id*"
+
+__unknown_file (
+""™–
+3 3(e
+%7boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%6mage.constants.Outcome*5
+
+__unknown_file (
+Choose another color?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+17*!
+1R R("
+R R(
+""*¼
+2J' J()75
+J  J(&
+%36java.lang.String"java.lang.String½
+º
+J J(*
+%37"3java.lang.String#<init>(Ljava/lang/StringBuilder;)V*5
+
+__unknown_file (
+
+%36java.lang.String*;
+
+__unknown_file (
+
+sbjava.lang.StringBuildere
+c
+J J(+
+colorsjava.lang.String"__id*5
+
+__unknown_file (
+
+%36java.lang.String75
+K+ K(6
+%38mage.ObjectColor"mage.ObjectColor³
+°
+K' K(>
+%39",mage.ObjectColor#<init>(Ljava/lang/String;)V*5
+
+__unknown_file (
+
+%38mage.ObjectColor*8
+
+__unknown_file (
+
+colorsjava.lang.Stringk
+i
+K K(? 
+chosenColorsmage.ObjectColor"__id*5
+
+__unknown_file (
+
+%38mage.ObjectColor¬
+©
+LQ L(Y
+%40mage.constants.Duration"__id*w
+
+__unknown_file ([*YK
+Image.abilities.effects.common.continuous.BecomesColorOrColorsTargetEffect"
+
+durationš—
+L* L(BH
+%41Amage.abilities.effects.common.continuous.BecomesColorTargetEffect"Amage.abilities.effects.common.continuous.BecomesColorTargetEffectò
+ï
+L& L(Z
+%42"vmage.abilities.effects.common.continuous.BecomesColorTargetEffect#<init>(Lmage/ObjectColor;Lmage/constants/Duration;)V*f
+
+__unknown_file (J
+H
+%41Amage.abilities.effects.common.continuous.BecomesColorTargetEffect*>
+
+__unknown_file ("
+ 
+chosenColorsmage.ObjectColor*<
+
+__unknown_file ( 
+
+%40mage.constants.Duration®
+«
+L L([1
+effect'mage.abilities.effects.ContinuousEffect"__id*f
+
+__unknown_file (J
+H
+%41Amage.abilities.effects.common.continuous.BecomesColorTargetEffect¯¬
+M4 M(K
+%43java.util.UUID"7mage.abilities.Ability#getFirstTarget()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getFirstTarget()a_
+M( M(3,
+%44%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetœ
+™
+M$ M(R
+%45"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%44%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%43java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game¦£
+M M(S.
+%46'mage.abilities.effects.ContinuousEffect"Œmage.abilities.effects.ContinuousEffect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*J
+
+__unknown_file (.
+,
+%44%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Š
+N N(*
+%47void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)"
+P P(
+""*ÿ
+startingBlock+ +(3Š
+‡
+* *(
+%48"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
++ +("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%48”
+‘
+* *(
+%49"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
++, +(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%49*
+24*ñ
+4G G(ÔÑ
+G G("
+%35java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+W2	append(C)*
+2
+17
+19*Í
+5F F(&°­
+F F(1
+%33mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2
+getColor(){y
+F F(;
+%34boolean"mage.ObjectColor#isWhite()Z*5
+
+__unknown_file (
+
+%33mage.ObjectColor2	isWhite()*
+2
+4
+17
+19*ñ
+6E E(ÔÑ
+E E("
+%32java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+G2	append(C)*
+2
+17
+19*Å
+7D D(&°­
+D D(1
+%30mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2
+getColor(){y
+D D(;
+%31boolean"mage.ObjectColor#isGreen()Z*5
+
+__unknown_file (
+
+%30mage.ObjectColor2	isGreen()*
+5
+6*ñ
+8C C(ÔÑ
+C C("
+%29java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+R2	append(C)*
+2
+17
+19*Á
+9B B(&°­
+B B(1
+%27mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2
+getColor()wu
+B B(9
+%28boolean"mage.ObjectColor#isRed()Z*5
+
+__unknown_file (
+
+%27mage.ObjectColor2isRed()*
+7
+8*ò
+10A A(ÔÑ
+A A("
+%26java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+U2	append(C)*
+2
+17
+19*Å
+11@ @(&°­
+@ @(1
+%24mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*E
+
+__unknown_file ()
+'
+choiceColormage.choices.ChoiceColor2
+getColor()yw
+@ @(:
+%25boolean"mage.ObjectColor#isBlue()Z*5
+
+__unknown_file (
+
+%24mage.ObjectColor2isBlue()*
+9
+10*ò
+12? ?(ÔÑ
+? ?("
+%23java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+B2	append(C)*
+2
+17
+19:"
++ +(#
+gamemage.game.Game:,
++$ +(2 
+sourcemage.abilities.AbilityBMK
+Image.abilities.effects.common.continuous.BecomesColorOrColorsTargetEffectHP

@@ -1,0 +1,202 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>CardLayoutStrategyImpl xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../apidocs/mage/client/util/layout/impl/CardLayoutStrategyImpl.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.client.util.layout.impl;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.awt.Dimension;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> java.awt.Point;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> java.awt.Rectangle;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.util.UUID;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> javax.swing.JLayeredPane;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.cards.MageCard;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.client.game.BattlefieldPanel;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.client.plugins.impl.Plugins;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.client.util.layout.CardLayoutStrategy;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.view.PermanentView;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * Card layouts code</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment"> * @author noxx, JayDi85</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="CardLayoutStrategyImpl" href="../../../../../mage/client/util/layout/impl/CardLayoutStrategyImpl.html#CardLayoutStrategyImpl">CardLayoutStrategyImpl</a> <strong class="jxr_keyword">implements</strong> <a name="CardLayoutStrategy" href="../../../../../mage/client/util/layout/CardLayoutStrategy.html#CardLayoutStrategy">CardLayoutStrategy</a> {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> ATTACHMENTS_OFFSET_ALL_X = 12; <em class="jxr_comment">// offset to shift all attachments</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> ATTACHMENTS_OFFSET_SINGLE_Y = 12;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> ATTACHMENTS_MAX_COLUMNS = 10; <em class="jxr_comment">// after 10 attachments no more offsets (will be "hide")</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> AttachmentLayoutInfos {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> columns;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> attachments;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">public</strong> AttachmentLayoutInfos(<strong class="jxr_keyword">int</strong> columns, <strong class="jxr_keyword">int</strong> attachments) {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              <strong class="jxr_keyword">this</strong>.columns = columns;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              <strong class="jxr_keyword">this</strong>.attachments = attachments;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          }
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getColumns() {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              <strong class="jxr_keyword">return</strong> columns;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          }
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getAttachments() {
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>              <strong class="jxr_keyword">return</strong> attachments;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> increaseAttachments() {
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              attachments++;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          }
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> increaseColumns() {
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              columns++;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          }
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      @Override
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doLayout(<a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> battlefieldPanel, <strong class="jxr_keyword">int</strong> battlefieldWidth) {
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          Map&lt;UUID, MageCard&gt; cards = battlefieldPanel.getPermanentPanels();
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          JLayeredPane mainPanel = battlefieldPanel.getMainPanel();
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <em class="jxr_comment">// does the basic layout of rows and colums</em>
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <strong class="jxr_keyword">int</strong> height = Plugins.instance.sortPermanents(battlefieldPanel.getUiComponentsList(), cards, battlefieldPanel.isTopPanelBattlefield());
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          mainPanel.setPreferredSize(<strong class="jxr_keyword">new</strong> Dimension(battlefieldWidth - 30, height));
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <strong class="jxr_keyword">for</strong> (PermanentView permanent : battlefieldPanel.getBattlefield().values()) {
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>              <strong class="jxr_keyword">if</strong> (permanent.getAttachments() != <strong class="jxr_keyword">null</strong> &amp;&amp; !permanent.isAttachedTo()) { <em class="jxr_comment">// Layout only permanents that are not attached to other permanents itself</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>                  groupAttachments(battlefieldPanel, mainPanel, cards, permanent);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>              }
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          }
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      }
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> groupAttachments(<a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> battlefieldPanel, JLayeredPane mainPanel, Map&lt;UUID, MageCard&gt; cards, PermanentView permanentWithAttachmentsView) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          MageCard cardWithAttachments = cards.get(permanentWithAttachmentsView.getId());
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">if</strong> (cardWithAttachments == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          }
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <em class="jxr_comment">// calculate how many vertical columns are needed and number of attachements</em>
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          AttachmentLayoutInfos attachmentLayoutInfos = calculateNeededNumberOfVerticalColumns(0, battlefieldPanel, cards, permanentWithAttachmentsView);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <em class="jxr_comment">// group by columns</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          layoutAttachements(
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>                  cardWithAttachments.getCardLocation().getCardX(),
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>                  attachmentLayoutInfos.getColumns(),
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>                  attachmentLayoutInfos.getAttachments(),
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>                  permanentWithAttachmentsView,
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>                  cards,
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>                  battlefieldPanel,
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>                  mainPanel,
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>                  cardWithAttachments.getCardLocation().getCardBounds()
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          );
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          mainPanel.setComponentZOrder(cardWithAttachments, 0);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>  
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      }
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>  
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> layoutAttachements(<strong class="jxr_keyword">int</strong> startingCardX,
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>              <strong class="jxr_keyword">int</strong> maxColumnLevels,
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>              <strong class="jxr_keyword">int</strong> ZOrder,
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>              PermanentView permanentWithAttachmentsView,
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>              Map&lt;UUID, MageCard&gt; cards,
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>              <a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> battlefieldPanel,
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>              JLayeredPane mainPanel,
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>             Rectangle lastAttachmentRect
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>     ) {
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         <em class="jxr_comment">// put attachments to the next level (take lastAttachmentRect and apply offsets)</em>
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         MageCard cardWithAttachments = cards.get(permanentWithAttachmentsView.getId());
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         <strong class="jxr_keyword">if</strong> (cardWithAttachments == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         }
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         <strong class="jxr_keyword">int</strong> col = getVerticalCul(permanentWithAttachmentsView, battlefieldPanel); <em class="jxr_comment">// from right to left [2][1][0]</em>
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <strong class="jxr_keyword">int</strong> currentAttachmentCol = col + 1;
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         cardWithAttachments.getLinks().clear();
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <strong class="jxr_keyword">int</strong> verticalIndex = permanentWithAttachmentsView.getAttachments().size();
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         <strong class="jxr_keyword">for</strong> (UUID attachmentId : permanentWithAttachmentsView.getAttachments()) {
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>             <em class="jxr_comment">// put child attachments of the attachment</em>
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>             PermanentView attachedPermanentView = battlefieldPanel.getBattlefield().get(attachmentId);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             <strong class="jxr_keyword">if</strong> (attachedPermanentView != <strong class="jxr_keyword">null</strong> &amp;&amp; attachedPermanentView.getAttachments() != <strong class="jxr_keyword">null</strong> &amp;&amp; !attachedPermanentView.getAttachments().isEmpty()) {
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>                 layoutAttachements(startingCardX, maxColumnLevels, ZOrder, attachedPermanentView, cards, battlefieldPanel, mainPanel, lastAttachmentRect);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>             }
+<a class="jxr_linenumber" name="L117" href="#L117">117</a> 
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>             <em class="jxr_comment">// put attachment</em>
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>             MageCard attachedCard = cards.get(attachmentId);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>             <strong class="jxr_keyword">if</strong> (attachedCard != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>                 <em class="jxr_comment">// x position</em>
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>                 Point point = <strong class="jxr_keyword">new</strong> Point();
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>                 point.setLocation(startingCardX + (maxColumnLevels - currentAttachmentCol) * Math.max(cardWithAttachments.getCardLocation().getCardWidth() / ATTACHMENTS_MAX_COLUMNS, ATTACHMENTS_OFFSET_ALL_X), lastAttachmentRect.getY());
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>                 lastAttachmentRect.setLocation(point);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a> 
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>                 <em class="jxr_comment">// set position first to the same as of the permanent it is attached to</em>
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>                 attachedCard.setCardLocation(lastAttachmentRect.x, lastAttachmentRect.y);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a> 
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>                 <em class="jxr_comment">// y position</em>
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>                 cardWithAttachments.getLinks().add(attachedCard);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>                 <strong class="jxr_keyword">int</strong> dyOffset = Math.max(cardWithAttachments.getCardLocation().getCardHeight() / ATTACHMENTS_MAX_COLUMNS, ATTACHMENTS_OFFSET_SINGLE_Y);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>                 <strong class="jxr_keyword">if</strong> (verticalIndex == 1) {
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>                     lastAttachmentRect.translate(Math.max(cardWithAttachments.getCardLocation().getCardWidth() / ATTACHMENTS_MAX_COLUMNS, ATTACHMENTS_OFFSET_ALL_X), dyOffset);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>                     lastAttachmentRect.translate(0, dyOffset);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>                 }
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>                 cardWithAttachments.setCardLocation(lastAttachmentRect.x, lastAttachmentRect.y);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a> 
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>                 battlefieldPanel.moveToFront(attachedCard);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>                 battlefieldPanel.moveToFront(cardWithAttachments);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>                 mainPanel.setComponentZOrder(attachedCard, ZOrder--);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>                 verticalIndex--;
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>             }
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         }
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>     }
+<a class="jxr_linenumber" name="L146" href="#L146">146</a> 
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     <strong class="jxr_keyword">private</strong> AttachmentLayoutInfos calculateNeededNumberOfVerticalColumns(<strong class="jxr_keyword">int</strong> currentCol, <a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> battlefieldPanel, Map&lt;UUID, MageCard&gt; cards, PermanentView permanentWithAttachmentsView) {
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         <strong class="jxr_keyword">int</strong> maxCol = ++currentCol;
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         <strong class="jxr_keyword">int</strong> attachments = 0;
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         <strong class="jxr_keyword">for</strong> (UUID attachmentId : permanentWithAttachmentsView.getAttachments()) {
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>             PermanentView attachedPermanent = battlefieldPanel.getBattlefield().get(attachmentId);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>             <strong class="jxr_keyword">if</strong> (attachedPermanent != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>                 attachments++;
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>                 <strong class="jxr_keyword">if</strong> (attachedPermanent.getAttachments() != <strong class="jxr_keyword">null</strong> &amp;&amp; !attachedPermanent.getAttachments().isEmpty()) {
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>                     AttachmentLayoutInfos attachmentLayoutInfos = calculateNeededNumberOfVerticalColumns(currentCol, battlefieldPanel, cards, attachedPermanent);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>                     <strong class="jxr_keyword">if</strong> (attachmentLayoutInfos.getColumns() &gt; maxCol) {
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>                         maxCol = attachmentLayoutInfos.getColumns();
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>                         attachments += attachmentLayoutInfos.getAttachments();
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>                     }
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>                 }
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>             }
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         }
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> AttachmentLayoutInfos(maxCol, attachments);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     }
+<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     <em class="jxr_comment">// The root permanent is col 0. An attachment attached to the root is col 1. And an attachement attached to the first attachment is col 2. etc.</em>
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> getVerticalCul(PermanentView permanentView, <a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> battlefieldPanel) {
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         <strong class="jxr_keyword">int</strong> cul = 0;
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <strong class="jxr_keyword">if</strong> (permanentView.isAttachedTo()) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>             PermanentView attachedToPermanent = battlefieldPanel.getBattlefield().get(permanentView.getAttachedTo());
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>             <strong class="jxr_keyword">if</strong> (attachedToPermanent != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>                 cul = getVerticalCul(attachedToPermanent, battlefieldPanel);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>             }
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>             cul++;
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         }
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         <strong class="jxr_keyword">return</strong> cul;
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>     }
+<a class="jxr_linenumber" name="L178" href="#L178">178</a> 
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     @Override
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getDefaultZOrder() {
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException(<span class="jxr_string">"Not supported yet."</span>);
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>     }
+<a class="jxr_linenumber" name="L183" href="#L183">183</a> 
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>     @Override
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> onAdd(<a name="BattlefieldPanel" href="../../../../../mage/client/game/BattlefieldPanel.html#BattlefieldPanel">BattlefieldPanel</a> jLayeredPane
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>     ) {
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException(<span class="jxr_string">"Not supported yet."</span>);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>     }
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

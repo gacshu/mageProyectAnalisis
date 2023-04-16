@@ -1,0 +1,611 @@
+
+dmage.player.ai.ComputerPlayer#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z€
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaë ë("startingBlock*q
+24
+ö ö(V
+T
+
+ö ö(,
+%8mage.constants.Outcome"__id*"
+
+__unknown_file (
+""*
+3
+22*ï
+25
+ò ò(ÖÓ
+
+ò ò(5
+%7boolean"pmage.player.ai.ComputerPlayer#chooseCreatureType(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*;
+
+__unknown_file (
+
+choicemage.choices.Choice*4
+
+__unknown_file (
+
+gamemage.game.Game2QchooseCreatureType(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+24*
+26
+ñb ñ(h¦£
+
+ñb ñ(u
+%5java.lang.String"2mage.choices.Choice#getMessage()Ljava/lang/String;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getMessage()×Ô
+ñb ñ(–
+%6boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%5java.lang.String*6
+
+__unknown_file (
+Choose a creature type2equals(Ljava/lang/Object;)*
+24
+25*š
+27
+ñ, ñ(2¦£
+
+ñ, ñ(?
+%3java.lang.String"2mage.choices.Choice#getMessage()Ljava/lang/String;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getMessage()ÔÑ
+
+ñ, ñ(^
+%4boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%3java.lang.String*4
+
+__unknown_file (
+Choose creature type2equals(Ljava/lang/Object;)*
+25
+26*ò
+28
+ì ì(W
+U
+
+ì ì(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÓĞ
+
+ì ì(
+
+%1void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger*(
+
+__unknown_file (
+
+choose 32debug(Ljava/lang/Object;)¦£
+
+ñ ñ(
+%2java.lang.String"2mage.choices.Choice#getMessage()Ljava/lang/String;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getMessage()*
+24
+27*û
+10
+„ „(ÒÏ
+
+„ „((
+%33void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*$
+
+__unknown_file (
+Blue2setChoice(Ljava/lang/String;)"
+
+… …(
+""*„
+11
+ƒH ƒ(N¡
+
+ƒH ƒ([
+%31java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÄÁ
+
+ƒH ƒ(l
+%32boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%31java.util.Set*$
+
+__unknown_file (
+Blue2contains(Ljava/lang/Object;)*
+9
+10*Ñ
+12
+ƒ ƒ(!–
+“
+
+ƒ ƒ(!)
+%28"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidManaa
+_
+
+ƒ0 ƒ(C'
+%29 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""¹¶
+
+ƒ ƒ(D
+%30boolean"Umage.abilities.costs.mana.ManaCost#containsColor(Lmage/constants/ColoredManaSymbol;)Z*G
+
+__unknown_file (+
+)
+%28"mage.abilities.costs.mana.ManaCost*E
+
+__unknown_file ()
+'
+%29 mage.constants.ColoredManaSymbol21containsColor(Lmage/constants/ColoredManaSymbol;)*
+9
+11*ü
+13
+€ €(ÓĞ
+
+€ €()
+%27void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*%
+
+__unknown_file (	
+Green2setChoice(Ljava/lang/String;)"
+
+ (
+""*†
+14
+ÿH ÿ(N¡
+
+ÿH ÿ([
+%25java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÅÂ
+
+ÿH ÿ(m
+%26boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%25java.util.Set*%
+
+__unknown_file (	
+Green2contains(Ljava/lang/Object;)*
+13
+12*Ò
+15
+ÿ ÿ(!–
+“
+
+ÿ ÿ(!)
+%22"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidManaa
+_
+
+ÿ0 ÿ(C'
+%23 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""¹¶
+
+ÿ ÿ(D
+%24boolean"Umage.abilities.costs.mana.ManaCost#containsColor(Lmage/constants/ColoredManaSymbol;)Z*G
+
+__unknown_file (+
+)
+%22"mage.abilities.costs.mana.ManaCost*E
+
+__unknown_file ()
+'
+%23 mage.constants.ColoredManaSymbol21containsColor(Lmage/constants/ColoredManaSymbol;)*
+14
+12*ú
+16
+ü ü(ÑÎ
+
+ü ü('
+%21void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*#
+
+__unknown_file (
+Red2setChoice(Ljava/lang/String;)"
+
+ı ı(
+""*„
+17
+ûH û(N¡
+
+ûH û([
+%19java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÃÀ
+
+ûH û(k
+%20boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%19java.util.Set*#
+
+__unknown_file (
+Red2contains(Ljava/lang/Object;)*
+15
+16*Ò
+18
+û û(!–
+“
+
+û û(!)
+%16"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidManaa
+_
+
+û0 û(C'
+%17 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""¹¶
+
+û û(D
+%18boolean"Umage.abilities.costs.mana.ManaCost#containsColor(Lmage/constants/ColoredManaSymbol;)Z*G
+
+__unknown_file (+
+)
+%16"mage.abilities.costs.mana.ManaCost*E
+
+__unknown_file ()
+'
+%17 mage.constants.ColoredManaSymbol21containsColor(Lmage/constants/ColoredManaSymbol;)*
+15
+17*ü
+19
+ø ø(ÓĞ
+
+ø ø()
+%15void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*%
+
+__unknown_file (	
+White2setChoice(Ljava/lang/String;)"
+
+ù ù(
+""*%
+1
+– –("
+
+– –(
+""*«
+2
+“ “(”‘
+
+“ “($
+%47void"&mage.choices.Choice#setRandomChoice()V*;
+
+__unknown_file (
+
+choicemage.choices.Choice2setRandomChoice()*
+1*£
+3
+’ ’(‰†
+
+’ ’(
+%46boolean"mage.choices.Choice#isChosen()Z*;
+
+__unknown_file (
+
+choicemage.choices.Choice2
+isChosen()*
+2
+1*ƒ
+startingBlock
+ë ë(D—
+”
+
+ê ê(
+%48"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcomed
+b
+
+ë" ë()!
+outcomemage.constants.Outcome"__annotation*#
+
+__unknown_file (
+
+%48“
+
+
+ê ê(
+%49"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+choicemage.choices.Choice`
+^
+
+ë2 ë(8
+choicemage.choices.Choice"__annotation*#
+
+__unknown_file (
+
+%49Œ
+‰
+
+ê ê(
+%50"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ë? ë(C
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%50*
+28*ÿ
+4
+Œ Œ(×Ô
+
+Œ Œ(-
+%45void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*)
+
+__unknown_file (
+	Colorless2setChoice(Ljava/lang/String;)"
+
+ (
+""*‡
+5
+‹B ‹(H¡
+
+‹B ‹(U
+%43java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÉÆ
+
+‹B ‹(k
+%44boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%43java.util.Set*)
+
+__unknown_file (
+	Colorless2contains(Ljava/lang/Object;)*
+3
+4*Ø
+6
+‹ ‹(!–
+“
+
+‹ ‹(!)
+%40"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidMana®«
+
+‹ ‹(+
+%41	mage.Mana"7mage.abilities.costs.mana.ManaCost#getMana()Lmage/Mana;*G
+
+__unknown_file (+
+)
+%40"mage.abilities.costs.mana.ManaCost2	getMana()us
+
+‹ ‹(:
+
+%42int"mage.Mana#getColorless()I*.
+
+__unknown_file (
+
+%41	mage.Mana2getColorless()*
+3
+5*û
+7
+ˆ ˆ(ÓĞ
+
+ˆ ˆ()
+%39void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*%
+
+__unknown_file (	
+Black2setChoice(Ljava/lang/String;)"
+
+‰ ‰(
+""*ƒ
+8
+‡H ‡(N¡
+
+‡H ‡([
+%37java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÅÂ
+
+‡H ‡(m
+%38boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%37java.util.Set*%
+
+__unknown_file (	
+Black2contains(Ljava/lang/Object;)*
+6
+7*Ï
+9
+‡ ‡(!–
+“
+
+‡ ‡(!)
+%34"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidManaa
+_
+
+‡0 ‡(C'
+%35 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""¹¶
+
+‡ ‡(D
+%36boolean"Umage.abilities.costs.mana.ManaCost#containsColor(Lmage/constants/ColoredManaSymbol;)Z*G
+
+__unknown_file (+
+)
+%34"mage.abilities.costs.mana.ManaCost*E
+
+__unknown_file ()
+'
+%35 mage.constants.ColoredManaSymbol21containsColor(Lmage/constants/ColoredManaSymbol;)*
+6
+8*†
+20
+÷H ÷(N¡
+
+÷H ÷([
+%13java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ÅÂ
+
+÷H ÷(m
+%14boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%13java.util.Set*%
+
+__unknown_file (	
+White2contains(Ljava/lang/Object;)*
+18
+19*Ò
+21
+÷ ÷(!–
+“
+
+÷ ÷(!)
+%10"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidManaa
+_
+
+÷0 ÷(C'
+%11 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""¹¶
+
+÷ ÷(D
+%12boolean"Umage.abilities.costs.mana.ManaCost#containsColor(Lmage/constants/ColoredManaSymbol;)Z*G
+
+__unknown_file (+
+)
+%10"mage.abilities.costs.mana.ManaCost*E
+
+__unknown_file ()
+'
+%11 mage.constants.ColoredManaSymbol21containsColor(Lmage/constants/ColoredManaSymbol;)*
+18
+20*±
+22
+öQ ö(b•
+’
+
+öQ ö(b(
+%9"mage.abilities.costs.mana.ManaCost"__id*T
+
+__unknown_file (8*6
+mage.player.ai.ComputerPlayer"
+currentUnpaidMana*
+3
+21:/
+
+ë ë(*!
+outcomemage.constants.Outcome:+
+
+ë+ ë(9
+choicemage.choices.Choice:$
+
+ë: ë(C
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerHP

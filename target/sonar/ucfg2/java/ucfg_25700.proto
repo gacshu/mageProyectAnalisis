@@ -1,0 +1,286 @@
+
+Zmage.server.MageServerImpl#leaveTable(Ljava/lang/String;Ljava/util/UUID;Ljava/util/UUID;)Zf
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MageServerImpl.javaÀ À("startingBlock*×
+2
+Ò Ò(X
+V
+
+Ò Ò(
+%22org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ƒ
+€
+
+Ò Ò(7
+%23java.lang.String"__concat*$
+
+Ò Ò(-
+table not found : *)
+
+Ò0 Ò(7
+
+tableIdjava.util.UUIDàİ
+
+Ò Ò(8
+%24void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%22org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%23java.lang.String2trace(Ljava/lang/Object;)*
+1*“
+
+3
+È È(
+Œ
+
+È- Ï(
+%8mage.interfaces.Action"__declareFunction*M
+
+__unknown_file (1/
+-__sonar_lambda_774$mage.server.MageServerImpl
+Š
+
+__unknown_file (+
+
+%8mage.interfaces.Action"
+	sessionId"__id*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String…
+‚
+
+__unknown_file ((
+
+%8mage.interfaces.Action"
+roomId"__id*6
+
+__unknown_file (
+
+roomIdjava.util.UUID…
+‚
+
+__unknown_file ((
+
+%8mage.interfaces.Action"
+userId"__id*6
+
+__unknown_file (
+
+userIdjava.util.UUID‡
+„
+
+__unknown_file ()
+
+%8mage.interfaces.Action"	
+tableId"__id*7
+
+__unknown_file (
+
+tableIdjava.util.UUID–
+“
+
+__unknown_file (5
+
+%8mage.interfaces.Action"
+MageServerImpl.this"__id*:
+
+__unknown_file (
+mage.server.MageServerImpl§¤
+
+È Ï(
+%21void"amage.server.MageServerImpl#execute(Ljava/lang/String;Ljava/lang/String;Lmage/interfaces/Action;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl**
+
+__unknown_file (
+
+leaveTable*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*:
+
+__unknown_file (
+
+%8mage.interfaces.Action2Eexecute(Ljava/lang/String;Ljava/lang/String;Lmage/interfaces/Action;)*
+1*ö
+startingBlock
+À À(\“
+
+
+¿ ¿(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String`
+^
+
+À+ À(4
+	sessionIdjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%25
+‹
+
+¿ ¿(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+roomIdjava.util.UUID[
+Y
+
+ÀA À(G
+roomIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%26
+Œ
+
+¿ ¿(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+tableIdjava.util.UUID\
+Z
+
+ÀT À([
+tableIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%27*
+7*%
+4
+Æ Æ("
+
+Æ Æ(
+""*r
+5
+Ä4 Ä(>Y
+W
+
+ÄB Ä([
+%7mage.constants.TableState"__id*"
+
+__unknown_file (
+""*
+3
+4*ê
+6
+Ã$ Ã(3ª§
+
+Ã$ Ã(9!
+%4mage.server.TableController"*java.util.Optional#get()Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+tableControllerjava.util.Optional2get()ÊÇ
+
+Ã$ Ã(I
+%5mage.constants.TableState"Fmage.server.TableController#getTableState()Lmage/constants/TableState;*?
+
+__unknown_file (#
+!
+%4mage.server.TableController2getTableState()|
+z
+
+Ã Ã(J'
+
+tableStatemage.constants.TableState"__id*=
+
+__unknown_file (!
+
+%5mage.constants.TableStateY
+W
+
+Ä Ä(0
+%6mage.constants.TableState"__id*"
+
+__unknown_file (
+""*
+3
+5*Â
+7
+Á4 Á(B
+
+
+Á4 Á(B)
+%0#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactoryèå
+
+Á4 Á(Q'
+%1!mage.server.managers.TableManager"Umage.server.managers.ManagerFactory#tableManager()Lmage/server/managers/TableManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2tableManager()¡
+
+Á4 Á(h
+%2java.util.Optional"Umage.server.managers.TableManager#getController(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%1!mage.server.managers.TableManager*7
+
+__unknown_file (
+
+tableIdjava.util.UUID2getController(Ljava/util/UUID;)s
+q
+
+Á Á(i%
+tableControllerjava.util.Optional"__id*6
+
+__unknown_file (
+
+%2java.util.Optional‘
+
+Â Â('
+%3boolean"java.util.Optional#isPresent()Z*C
+
+__unknown_file ('
+%
+tableControllerjava.util.Optional2isPresent()*
+2
+6*%
+1
+Ô Ô("
+
+Ô Ô(
+"":+
+
+À À(5
+	sessionIdjava.lang.String:&
+
+À6 À(H
+roomIdjava.util.UUID:'
+
+ÀI À([
+tableIdjava.util.UUIDB
+mage.server.MageServerImplHP

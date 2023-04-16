@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ReleaseToTheWindTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../testapidocs/org/mage/test/cards/single/rix/ReleaseToTheWindTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.single.rix;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ReleaseToTheWindTest" href="../../../../../../org/mage/test/cards/single/rix/ReleaseToTheWindTest.html#ReleaseToTheWindTest">ReleaseToTheWindTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      @Test
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_Exile_PermanentCard() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <em class="jxr_comment">// Exile target nonland permanent. For as long as that card remains exiled, its owner may cast it without paying its mana cost.</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Release to the Wind"</span>); <em class="jxr_comment">// {2}{U}</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 3);
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          <em class="jxr_comment">//</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Grizzly Bears"</span>, 1);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <em class="jxr_comment">// exile</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Release to the Wind"</span>, <span class="jxr_string">"Grizzly Bears"</span>);
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          waitStackResolved(1, PhaseStep.PRECOMBAT_MAIN);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          checkExileCount(<span class="jxr_string">"after exile"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Grizzly Bears"</span>, 1);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          checkPlayableAbility(<span class="jxr_string">"after exile - non owner can't play 1"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Cast Grizzly Bears"</span>, false);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <em class="jxr_comment">// owner can play</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          checkPlayableAbility(<span class="jxr_string">"after exile - non owner can't play 2"</span>, 2, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Cast Grizzly Bears"</span>, false);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          checkPlayableAbility(<span class="jxr_string">"after exile - owner can play"</span>, 2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Cast Grizzly Bears"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Grizzly Bears"</span>);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          setStopAt(2, PhaseStep.END_TURN);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          execute();
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          assertPermanentCount(playerB, <span class="jxr_string">"Grizzly Bears"</span>, 1);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      }
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      @Test
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_Exile_ModalDoubleFacesCard() {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <em class="jxr_comment">// Exile target nonland permanent. For as long as that card remains exiled, its owner may cast it without paying its mana cost.</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Release to the Wind"</span>); <em class="jxr_comment">// {2}{U}</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 3);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          <em class="jxr_comment">//</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <em class="jxr_comment">// Akoum Warrior {5}{R} - creature</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <em class="jxr_comment">// Akoum Teeth - land</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Akoum Warrior"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Mountain"</span>, 6);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <em class="jxr_comment">// prepare mdf</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          activateManaAbility(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"{T}: Add {R}"</span>, 6);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Akoum Warrior"</span>);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          waitStackResolved(1, PhaseStep.PRECOMBAT_MAIN, playerA);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          checkPermanentCount(<span class="jxr_string">"prepare"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Akoum Warrior"</span>, 1);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <em class="jxr_comment">// exile mdf creature</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Release to the Wind"</span>, <span class="jxr_string">"Akoum Warrior"</span>);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          waitStackResolved(1, PhaseStep.PRECOMBAT_MAIN);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          checkExileCount(<span class="jxr_string">"after exile"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Akoum Warrior"</span>, 1);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          <em class="jxr_comment">// you can cast mdf, but can't play a land</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          checkPlayableAbility(<span class="jxr_string">"after exile - can play mdf creature"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Cast Akoum Warrior"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          checkPlayableAbility(<span class="jxr_string">"after exile - can't play mdf land"</span>, 1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Play Akoum Teeth"</span>, false);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <em class="jxr_comment">// cast mdf again for free</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Akoum Warrior"</span>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          setStopAt(1, PhaseStep.END_TURN);
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          execute();
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          assertPermanentCount(playerA, <span class="jxr_string">"Akoum Warrior"</span>, 1);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      }
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

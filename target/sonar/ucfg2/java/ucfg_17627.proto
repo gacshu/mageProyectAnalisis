@@ -1,0 +1,214 @@
+
+ämage.target.common.TargetCreaturesWithDifferentPowers#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetCreaturesWithDifferentPowers.java% %("startingBlock*!
+2+ +("
++ +(
+""*•
+3) )(!äá
+) )(2#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+idjava.util.UUID2getPermanent(Ljava/util/UUID;)Ä
+~
+) )(3)
+creaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+2
+1*÷
+startingBlock% %(Sí
+è
+$ $(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+%" %(.
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12à
+Ö
+$ $(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDU
+S
+%5 %(7
+idjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%13î
+ë
+$ $(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+%A %(G 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14ä
+á
+$ $(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+%N %(R
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+5*!
+4' '("
+' '(
+""*≤
+5& &(ö
+ó
+& &(<
+%0boolean"pmage.target.TargetPermanent#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+3
+4*¡
+1- -(Ω∫
+- -( 
+%2java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*U
+
+__unknown_file (97
+5mage.target.common.TargetCreaturesWithDifferentPowers2getTargets()¢ü
+- .(
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%2java.util.List2stream()ÜÉ
+- /((
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)éã
+- 0()
+%5java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)ÜÉ
+- 1(*
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)†ù
+- 2(, 
+%7java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)±
+Æ
+3 3(C%
+%8java.util.function.IntPredicate"__declareFunction*h
+
+__unknown_file (LJ
+H__sonar_lambda_339$mage.target.common.TargetCreaturesWithDifferentPowers°
+û
+
+__unknown_file (3
+%
+%8java.util.function.IntPredicate"
+
+creature"__id*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanentöó
+- 3(D
+%11boolean"Hjava.util.stream.IntStream#noneMatch(Ljava/util/function/IntPredicate;)Z*>
+
+__unknown_file ("
+ 
+%7java.util.stream.IntStream*C
+
+__unknown_file ('
+%
+%8java.util.function.IntPredicate2,noneMatch(Ljava/util/function/IntPredicate;)"
+- 3(E
+"":*
+% %(/
+controllerIdjava.util.UUID: 
+%0 %(8
+idjava.util.UUID:,
+%9 %(H 
+sourcemage.abilities.Ability:"
+%I %(R
+gamemage.game.GameB97
+5mage.target.common.TargetCreaturesWithDifferentPowersHP

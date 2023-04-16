@@ -1,0 +1,244 @@
+
+€mage.abilities.hint.common.CardTypesInGraveyardHint#getStream(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/stream/Stream;v
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/hint/common/CardTypesInGraveyardHint.java5 5(("2*Ï
+26 6(#Y
+W
+6 6(#!
+	playerIdsjava.util.Collection"__id*"
+
+__unknown_file (
+""q
+o
+8 8(9
+%03mage.abilities.hint.common.CardTypesInGraveyardHint"__id*"
+
+__unknown_file (
+""q
+o
+? ?(9
+%13mage.abilities.hint.common.CardTypesInGraveyardHint"__id*"
+
+__unknown_file (
+""q
+o
+B B(9
+%23mage.abilities.hint.common.CardTypesInGraveyardHint"__id*"
+
+__unknown_file (
+""*
+3
+4
+5
+9*!
+3E F("
+F F(
+""*Æ
+4B D(›˜
+C C(+
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()²¯
+C> C(W
+%13java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()éæ
+C C(^
+%14mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*8
+
+__unknown_file (
+
+%12mage.game.GameState*3
+
+__unknown_file (
+
+%13java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)s
+q
+C C(^!
+	playerIdsjava.util.Collection"__id*<
+
+__unknown_file ( 
+
+%14mage.players.PlayerList*
+1*¡
+5? A(²¯
+@. @(G
+%10java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()ìé
+@ @(H
+%11java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%10java.util.UUID2getOpponents(Ljava/util/UUID;)i
+g
+@ @(H!
+	playerIdsjava.util.Collection"__id*2
+
+__unknown_file (
+
+%11java.util.Set*
+1*:
+6: >(""+
+: >("
+
+%5java.util.stream.Stream*Ç
+7;! ;('®«
+;! <('
+%8mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()íê
+;! =('
+%9java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+%8mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)¡ž
+;! >(!
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%9java.util.Set2stream()n
+l
+;! >(!
+%5java.util.stream.Stream"__id*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*
+6*u
+8; ;(a
+_
+; ;(
+%5java.util.stream.Stream"__id*.
+
+__unknown_file (
+
+%6
+<nulltype>*
+6*¨
+98 >("±®
+9/ 9(H
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()ðí
+9  9(I
+%4mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+9 9(J
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%4mage.players.Player*
+7
+8*‹
+1H H(°­
+H H(!
+%15java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*?
+
+__unknown_file (#
+!
+	playerIdsjava.util.Collection2stream()ˆ…
+H I(%
+%16java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%15java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)
+H J()
+%17java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)ˆ…
+H K(*
+%18java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%17java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)«
+¨
+L L(:"
+%19java.util.function.Function"__declareFunction*e
+
+__unknown_file (IG
+E__sonar_lambda_86$mage.abilities.hint.common.CardTypesInGraveyardHint‡
+„
+
+__unknown_file (,
+"
+%19java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¦£
+H L(;
+%21java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%19java.util.function.Function2"map(Ljava/util/function/Function;)
+H M(,
+%22java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%21java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)",
+H M(- 
+
+%22java.util.stream.Stream:"
+5) 5(3
+gamemage.game.Game:-
+54 5(C!
+abilitymage.abilities.AbilityB75
+3mage.abilities.hint.common.CardTypesInGraveyardHint

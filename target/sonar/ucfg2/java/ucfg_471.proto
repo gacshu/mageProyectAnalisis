@@ -1,0 +1,459 @@
+
+mage.player.ai.util.CombatUtil#getCombatInfo(Lmage/game/Game;Ljava/util/UUID;Ljava/util/UUID;Lmage/game/permanent/Permanent;)Lmage/player/ai/util/SurviveInfo;z
+nD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/util/CombatUtil.javaì ì(+"7*«
+2
+† †(ª§
+
+‡ ‡(!
+%35mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getStack()äá
+
+‡ ‡('
+%36void"5mage.game.stack.SpellStack#resolve(Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+%35mage.game.stack.SpellStack*3
+
+__unknown_file (
+
+simmage.game.Game2resolve(Lmage/game/Game;)€~
+
+ˆ ˆ(
+%37void"mage.game.Game#applyEffects()V*3
+
+__unknown_file (
+
+simmage.game.Game2applyEffects()*
+3*Ó
+3
+… …(ª§
+
+… …(!
+%33mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getStack()Œ‰
+
+… …((
+%34boolean"java.util.ArrayDeque#isEmpty()Z*?
+
+__unknown_file (#
+!
+%33mage.game.stack.SpellStack2	isEmpty()*
+2
+1*¤
+4
+ş ş(e
+c
+
+ş) ş(<+
+%18$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+ş) ş(W+
+%19$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""¤¡
+
+şY ş(p
+%20java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+simmage.game.Game2getActivePlayerId()¥¢
+şr ş(‰
+%21java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+simmage.game.Game2getActivePlayerId()®
+«
+ş ş(Š!
+%22mage.game.events.GameEvent"‡mage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%19$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%20java.util.UUID*3
+
+__unknown_file (
+
+%21java.util.UUIDõò
+ş ş(‹
+%23void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*3
+
+__unknown_file (
+
+simmage.game.Game*?
+
+__unknown_file (#
+!
+%22mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)a_
+
+€ €(3+
+%24$mage.game.turn.FirstCombatDamageStep"$mage.game.turn.FirstCombatDamageStep‘
+
+
+€ €(5
+%25".mage.game.turn.FirstCombatDamageStep#<init>()V*I
+
+__unknown_file (-
++
+%24$mage.game.turn.FirstCombatDamageStep±
+®
+
+€ €(6
+%26void"Smage.player.ai.util.CombatUtil#simulateStep(Lmage/game/Game;Lmage/game/turn/Step;)V*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*3
+
+__unknown_file (
+
+simmage.game.Game*I
+
+__unknown_file (-
++
+%24$mage.game.turn.FirstCombatDamageStepWU
+
+ (.&
+%27mage.game.turn.CombatDamageStep"mage.game.turn.CombatDamageStep‡
+„
+
+ (0
+%28")mage.game.turn.CombatDamageStep#<init>()V*D
+
+__unknown_file ((
+&
+%27mage.game.turn.CombatDamageStep¬
+©
+
+ (1
+%29void"Smage.player.ai.util.CombatUtil#simulateStep(Lmage/game/Game;Lmage/game/turn/Step;)V*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*3
+
+__unknown_file (
+
+simmage.game.Game*D
+
+__unknown_file ((
+&
+%27mage.game.turn.CombatDamageStepUS
+
+‚ ‚(-%
+%30mage.game.turn.EndOfCombatStep"mage.game.turn.EndOfCombatStep…
+‚
+
+‚ ‚(/
+%31"(mage.game.turn.EndOfCombatStep#<init>()V*C
+
+__unknown_file ('
+%
+%30mage.game.turn.EndOfCombatStep«
+¨
+
+‚ ‚(0
+%32void"Smage.player.ai.util.CombatUtil#simulateStep(Lmage/game/Game;Lmage/game/turn/Step;)V*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*3
+
+__unknown_file (
+
+simmage.game.Game*C
+
+__unknown_file ('
+%
+%30mage.game.turn.EndOfCombatStep*
+3*«
+5
+ú ú(ª§
+
+û û(!
+%15mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getStack()äá
+
+û û('
+%16void"5mage.game.stack.SpellStack#resolve(Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+%15mage.game.stack.SpellStack*3
+
+__unknown_file (
+
+simmage.game.Game2resolve(Lmage/game/Game;)€~
+
+ü ü(
+%17void"mage.game.Game#applyEffects()V*3
+
+__unknown_file (
+
+simmage.game.Game2applyEffects()*
+6*Ó
+6
+ù ù(ª§
+
+ù ù(!
+%13mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getStack()Œ‰
+
+ù ù((
+%14boolean"java.util.ArrayDeque#isEmpty()Z*?
+
+__unknown_file (#
+!
+%13mage.game.stack.SpellStack2	isEmpty()*
+4
+5*
+7
+í í(
+
+í í(
+%0mage.game.Game"+mage.util.Copyable#copy()Ljava/lang/Object;*4
+
+__unknown_file (
+
+gamemage.game.Game2copy()_
+]
+
+í í(
+simmage.game.Game"__id*2
+
+__unknown_file (
+
+%0mage.game.Game¥¢
+
+ï ï('
+%1mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*3
+
+__unknown_file (
+
+simmage.game.Game2getCombat()t
+r
+
+ï ï((!
+combatmage.game.combat.Combat"__id*;
+
+__unknown_file (
+
+%1mage.game.combat.Combatöó
+
+ğ ğ(-
+
+%2void"6mage.game.combat.Combat#setAttacker(Ljava/util/UUID;)V*?
+
+__unknown_file (#
+!
+combatmage.game.combat.Combat*A
+
+__unknown_file (%
+#
+attackingPlayerIdjava.util.UUID2setAttacker(Ljava/util/UUID;)êç
+
+ñ ñ( 
+
+%3void"7mage.game.combat.Combat#setDefenders(Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+combatmage.game.combat.Combat*3
+
+__unknown_file (
+
+simmage.game.Game2setDefenders(Lmage/game/Game;)¥¢
+
+ó ó()
+%4mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*3
+
+__unknown_file (
+
+simmage.game.Game2getCombat()¨¥
+
+ó ó(8
+%5java.util.Set"5mage.game.combat.Combat#getDefenders()Ljava/util/Set;*;
+
+__unknown_file (
+
+%4mage.game.combat.Combat2getDefenders()–“
+
+ó ó(C
+%6java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*1
+
+__unknown_file (
+
+%5java.util.Set2
+iterator()’
+
+ó ó(J
+%7java.util.UUID"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+%6java.util.Iterator2next()f
+d
+
+ó ó(K
+
+defenderIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%7java.util.UUIDd
+b
+
+ö) ö(<*
+%8$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""d
+b
+
+ö) ö(N*
+%9$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""È
+Å
+
+ö ö(u!
+%10mage.game.events.GameEvent"‡mage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*H
+
+__unknown_file (,
+*
+%9$mage.game.events.GameEvent$EventType*A
+
+__unknown_file (%
+#
+defendingPlayerIdjava.util.UUID*A
+
+__unknown_file (%
+#
+defendingPlayerIdjava.util.UUIDôñ
+
+ö ö(v
+%11void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*3
+
+__unknown_file (
+
+simmage.game.Game*?
+
+__unknown_file (#
+!
+%10mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)˜•
+
+ø ø($
+%12boolean"(mage.game.Game#checkStateAndTriggered()Z*3
+
+__unknown_file (
+
+simmage.game.Game2checkStateAndTriggered()*
+6*Ù
+
+1
+‹  ‹(#À½
+
+‹  ‹(4&
+%38mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*3
+
+__unknown_file (
+
+simmage.game.Game2getBattlefield()¨¥
+
+‹G ‹(W
+%39java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent2getId()…‚
+
+‹  ‹(X
+%40boolean"Dmage.game.permanent.Battlefield#containsPermanent(Ljava/util/UUID;)Z*D
+
+__unknown_file ((
+&
+%38mage.game.permanent.Battlefield*3
+
+__unknown_file (
+
+%39java.util.UUID2#containsPermanent(Ljava/util/UUID;)ú÷
+
+‹a ‹(z
+%41mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*3
+
+__unknown_file (
+
+simmage.game.Game*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID2getPlayer(Ljava/util/UUID;)WU
+
+‹ ‹(&
+%42mage.player.ai.util.SurviveInfo"mage.player.ai.util.SurviveInfoÂ
+¿
+‹ ‹(†
+%43"Amage.player.ai.util.SurviveInfo#<init>(ZZLmage/players/Player;Z)V*D
+
+__unknown_file ((
+&
+%42mage.player.ai.util.SurviveInfo*"
+
+__unknown_file (
+""*
+
+__unknown_file (2 *8
+
+__unknown_file (
+
+%41mage.players.Player*"
+
+__unknown_file (
+"""7
+‹ ‹(‡(
+&
+%42mage.player.ai.util.SurviveInfo:$
+
+ì, ì(6
+gamemage.game.Game:1
+
+ì7 ì(N#
+attackingPlayerIdjava.util.UUID:1
+
+ìO ì(f#
+defendingPlayerIdjava.util.UUID:7
+
+ìg ì(y)
+attackermage.game.permanent.PermanentB"" 
+mage.player.ai.util.CombatUtilH

@@ -1,0 +1,225 @@
+
+Jmage.server.Session#validateUserName(Ljava/lang/String;)Ljava/lang/String;_
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.javaå å(#"9*∏
+2
+† †( ~
+|
+
+† †(+
+%13java.lang.String"__concat*
+
+† †( 
+User name '*,
+
+†# †(+
+
+userNamejava.lang.String~
+|
+
+† †(@
+%14java.lang.String"__concat*'
+
+† †(+
+
+%13java.lang.String*"
+
+†. †(@
+' already in use"'
+
+† †(A
+
+%14java.lang.String*∏
+3
+û( û(@‹
+Ÿ
+
+û( û(N+
+%11$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository∏µ
+
+û( û(b!
+%12mage.server.AuthorizedUser"^mage.server.AuthorizedUserRepository#getByName(Ljava/lang/String;)Lmage/server/AuthorizedUser;*I
+
+__unknown_file (-
++
+%11$mage.server.AuthorizedUserRepository*:
+
+__unknown_file (
+
+userNamejava.lang.String2getByName(Ljava/lang/String;)Ñ
+Å
+
+û û(c,
+authorizedUsermage.server.AuthorizedUser"__id*?
+
+__unknown_file (#
+!
+%12mage.server.AuthorizedUser*
+2
+1*ﬂ
+4
+õ õ( }
+{
+
+õ õ(+
+%9java.lang.String"__concat*
+
+õ õ( 
+User name '*,
+
+õ# õ(+
+
+userNamejava.lang.String•
+¢
+
+õ õ(g
+%10java.lang.String"__concat*&
+
+õ õ(+
+
+%9java.lang.String*I
+
+õ. õ(g;9
+7' includes not allowed characters: use a-z, A-Z and 0-9"'
+
+õ õ(h
+
+%10java.lang.String*ç
+5
+ò) ò(0â
+Ü
+
+ò9 ò(G)
+%2#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÌ
+
+ò9 ò(X)
+%3#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%2#mage.server.managers.ManagerFactory2configSettings()‡›
+
+ò9 ò(t
+%4java.lang.String"Qmage.server.managers.ConfigSettings#getInvalidUserNamePattern()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%3#mage.server.managers.ConfigSettings2getInvalidUserNamePattern()D
+B
+òv ò(é	
+%5int"__id*"
+
+__unknown_file (
+""ñ
+ì
+ò) ò(è
+%6java.util.regex.Pattern"Mjava.util.regex.Pattern#compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;*7
+
+__unknown_file ("
+java.util.regex.Pattern*4
+
+__unknown_file (
+
+%4java.lang.String*'
+
+__unknown_file (
+	
+%5intÜ
+É
+ò ò(ê1
+invalidUserNamePatternjava.util.regex.Pattern"__id*;
+
+__unknown_file (
+
+%6java.util.regex.Pattern≤Ø
+
+ô ô(<
+%7java.util.regex.Matcher"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*O
+
+__unknown_file (3
+1
+invalidUserNamePatternjava.util.regex.Pattern*:
+
+__unknown_file (
+
+userNamejava.lang.String2!matcher(Ljava/lang/CharSequence;)o
+m
+
+ô ô(=
+mjava.util.regex.Matcher"__id*;
+
+__unknown_file (
+
+%7java.util.regex.MatcherÉÄ
+
+ö ö(
+%8boolean"java.util.regex.Matcher#find()Z*:
+
+__unknown_file (
+
+mjava.util.regex.Matcher2find()*
+3
+4*B
+6
+ï ï( "1
+
+ï ï(!#
+!
+returnMessagejava.lang.String*Û
+7
+ì ì(5Í
+Á
+
+ì ì(?
+%1java.lang.String"Pmage.server.Session#validateUserNameLength(Ljava/lang/String;)Ljava/lang/String;*3
+
+__unknown_file (
+mage.server.Session*:
+
+__unknown_file (
+
+userNamejava.lang.Stringm
+k
+
+ì ì(@!
+returnMessagejava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.String*
+5
+6*A
+8
+ê ê(3"0
+
+ê ê(4" 
+User name Admin already in use*Â
+9
+é é(À»
+
+é é($
+%0boolean",java.lang.String#equals(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+userNamejava.lang.String*%
+
+__unknown_file (	
+Admin2equals(Ljava/lang/Object;)*
+7
+8*%
+1
+§ §("
+
+§ §(
+"":*
+
+å$ å(3
+userNamejava.lang.StringB
+mage.server.Session

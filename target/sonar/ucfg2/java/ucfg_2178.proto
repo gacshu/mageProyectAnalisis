@@ -1,0 +1,180 @@
+
+pmage.game.command.emblems.LilianaDefiantNecromancerEmblemEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/emblems/LilianaDefiantNecromancerEmblem.java4 4("startingBlock*Â
+27 7(N´®
+7  7(LP
+%3Jmage.abilities.effects.common.ReturnFromGraveyardToBattlefieldTargetEffect"Jmage.abilities.effects.common.ReturnFromGraveyardToBattlefieldTargetEffectŸ
+÷
+7 7(N
+%4"Tmage.abilities.effects.common.ReturnFromGraveyardToBattlefieldTargetEffect#<init>()V*n
+
+__unknown_file (R
+P
+%3Jmage.abilities.effects.common.ReturnFromGraveyardToBattlefieldTargetEffect¨
+©
+7 7(O'
+effectmage.abilities.effects.Effect"__id*n
+
+__unknown_file (R
+P
+%3Jmage.abilities.effects.common.ReturnFromGraveyardToBattlefieldTargetEffect`^
+8( 8(3+
+%5%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetù
+ö
+8$ 8(?
+%6"Pmage.target.targetpointer.FixedTarget#<init>(Lmage/cards/Card;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+%5%mage.target.targetpointer.FixedTarget*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game˚¯
+8 8(@#
+%7mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*I
+
+__unknown_file (-
++
+%5%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)€ÿ
+9 9(g#
+%8mage.abilities.effects.Effect"Xmage.abilities.effects.Effect#setText(Ljava/lang/String;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*i
+
+__unknown_file (MK
+Ireturn that card to the battlefield at the beginning of the next end step2setText(Ljava/lang/String;)]
+[
+:g :({%
+%9mage.constants.TargetController"__id*"
+
+__unknown_file (
+""∞≠
+:0 :(^S
+%10Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility"Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility¨
+©
+:, :(|
+%11"ñmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility#<init>(Lmage/abilities/effects/Effect;Lmage/constants/TargetController;)V*q
+
+__unknown_file (U
+S
+%10Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*C
+
+__unknown_file ('
+%
+%9mage.constants.TargetControllerÈÊ
+	: :(Ö
+%12java.util.UUID"{mage.game.Game#addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*q
+
+__unknown_file (U
+S
+%10Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2\addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)"
+; ;(
+""*˙
+35 5(êç
+5! 5(3-
+%0'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*_
+
+__unknown_file (CA
+?mage.game.command.emblems.LilianaDefiantNecromancerEmblemEffect2getTargetPointer()ÜÉ
+5! 5(J
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)‰·
+5 5(K
+%2mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getCard(Ljava/util/UUID;)`
+^
+5 5(L
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%2mage.cards.Card*
+2
+1*˛
+startingBlock4 4(3ä
+á
+3 3(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+4 4("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13î
+ë
+3 3(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+4, 4(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+3*!
+1= =("
+= =(
+"":"
+4 4(#
+gamemage.game.Game:,
+4$ 4(2 
+sourcemage.abilities.AbilityBCA
+?mage.game.command.emblems.LilianaDefiantNecromancerEmblemEffectHP

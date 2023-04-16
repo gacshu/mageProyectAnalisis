@@ -1,0 +1,557 @@
+
+≤mage.player.human.HumanPlayer#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaü ü("startingBlock*”
+13
+µ µ((Å
+
+
+µ µ((
+%7java.util.Map"__id*V
+
+__unknown_file (:*8
+mage.player.human.HumanPlayer"
+requestAutoAnswerIdÆ´
+
+µ- µ(C
+%8java.util.UUID"6mage.abilities.Ability#getOriginalId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getOriginalId()k
+i
+
+µ- µ(I
+%9java.lang.String"__concat*$
+
+µ- µ(C
+
+%8java.util.UUID*
+
+µF µ(I
+#á
+Ñ
+
+µ- µ(S
+%10java.lang.String"__concat*&
+
+µ- µ(I
+
+%9java.lang.String*+
+
+µL µ(S
+
+messagejava.lang.Stringù
+ö
+
+µ µ(T
+%11java.lang.Boolean"__mapGet*1
+
+__unknown_file (
+
+%7java.util.Map*5
+
+__unknown_file (
+
+%10java.lang.Stringi
+g
+
+µ µ(T
+answerjava.lang.Boolean"__id*6
+
+__unknown_file (
+
+%11java.lang.Boolean*
+
+8
+9
+11*w
+14
+≤ ≤(U
+S
+
+≤ ≤(
+answerjava.lang.Boolean"__id*"
+
+__unknown_file (
+""*
+13
+8
+9
+11*ˆ
+16
+™ ™(›
+⁄
+
+™ ™(7
+%6java.io.Serializable"__mapSet*6
+
+__unknown_file (
+
+optionsjava.util.Map*1
+
+__unknown_file (
+UI.right.btn.text*;
+
+__unknown_file (
+
+	falseTextjava.lang.String*
+14*¯
+18
+ß ß(€
+ÿ
+
+ß ß(5
+%5java.io.Serializable"__mapSet*6
+
+__unknown_file (
+
+optionsjava.util.Map*0
+
+__unknown_file (
+UI.left.btn.text*:
+
+__unknown_file (
+
+trueTextjava.lang.String*
+14
+16*º
+19
+§> §(EJH
+
+§. §(=
+%1mage.util.MessageToClient"mage.util.MessageToClientô
+ñ
+
+§* §(U
+%2"Gmage.util.MessageToClient#<init>(Ljava/lang/String;Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%1mage.util.MessageToClient*9
+
+__unknown_file (
+
+messagejava.lang.String*?
+
+__unknown_file (#
+!
+secondMessagejava.lang.StringÅ
+
+
+§ §(V,
+messageToClientmage.util.MessageToClient"__id*=
+
+__unknown_file (!
+
+%1mage.util.MessageToClient:8
+
+•0 •(9
+%3java.util.HashMap"java.util.HashMapå
+â
+
+•, •(<
+%4"java.util.HashMap#<init>(I)V*5
+
+__unknown_file (
+
+%3java.util.HashMap* 
+
+__unknown_file (2e
+c
+
+• •(=
+optionsjava.util.Map"__id*5
+
+__unknown_file (
+
+%3java.util.HashMap*
+14
+16
+18*%
+1
+– –("
+
+– –(
+""*ˆ
+2
+Ã Ã(ã
+à
+
+Ã Ã('
+%26 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¿Ω
+
+Ã Ã(,
+%27java.lang.Boolean"@mage.player.human.PlayerResponse#getBoolean()Ljava/lang/Boolean;*E
+
+__unknown_file ()
+'
+%26 mage.player.human.PlayerResponse2getBoolean()"
+
+Ã Ã(-
+""*·
+3
+… …(ˆÛ
+
+… …(!
+%23void"@mage.player.human.HumanPlayer#waitForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2!waitForResponse(Lmage/game/Game;)ã
+à
+
+À À('
+%24 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¿Ω
+
+À À(%
+%25java.lang.Boolean"@mage.player.human.PlayerResponse#getBoolean()Ljava/lang/Boolean;*E
+
+__unknown_file ()
+'
+%24 mage.player.human.PlayerResponse2getBoolean()*
+2
+8*Ô
+startingBlockü ü(ëó
+î
+
+û û(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcomed
+b
+
+ü% ü(,!
+outcomemage.constants.Outcome"__annotation*#
+
+__unknown_file (
+
+%28ë
+é
+
+û û(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*9
+
+__unknown_file (
+
+messagejava.lang.String^
+\
+
+ü5 ü(<
+messagejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%29ó
+î
+
+û û(
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+secondMessagejava.lang.Stringd
+b
+
+üE ü(R!
+secondMessagejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%30í
+è
+
+û û(
+%31"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+trueTextjava.lang.String_
+]
+
+ü[ ü(c
+trueTextjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%31ì
+ê
+
+û û(
+%32"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	falseTextjava.lang.String`
+^
+
+ül ü(u
+	falseTextjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%32ñ
+ì
+
+û û(
+%33"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityd
+b
+ü ü(Ö 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%33å
+â
+
+û û(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.Game[
+Y
+üå ü(ê
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%34*
+21*º
+4
+« «(x
+v
+
+«( «(0
+%21java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId´®
+
+« «(S
+%22void"vmage.game.Game#fireAskPlayerEvent(Ljava/util/UUID;Lmage/util/MessageToClient;Lmage/abilities/Ability;Ljava/util/Map;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%21java.util.UUID*J
+
+__unknown_file (.
+,
+messageToClientmage.util.MessageToClient*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*6
+
+__unknown_file (
+
+optionsjava.util.Map2ffireAskPlayerEvent(Ljava/util/UUID;Lmage/util/MessageToClient;Lmage/abilities/Ability;Ljava/util/Map;)*
+3*ñ
+5
+ƒ ƒ(#’“
+
+ƒ ƒ(6
+%18void"Zmage.player.human.HumanPlayer#updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*)
+
+__unknown_file (
+	chooseUse*4
+
+__unknown_file (
+
+gamemage.game.Game2;updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)¸˘
+
+≈ ≈($
+%19void"Cmage.player.human.HumanPlayer#prepareForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2$prepareForResponse(Lmage/game/Game;)•¢
+
+∆ ∆(#
+%20boolean"1mage.player.human.HumanPlayer#isExecutingMacro()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isExecutingMacro()*
+3
+4*Ì
+6
+¡ ¡(Õ
+ 
+
+¡1 ¡(S
+%16java.lang.String"nmage.player.human.HumanPlayer#getRelatedObjectName(Lmage/abilities/Ability;Lmage/game/Game;)Ljava/lang/String;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.GameÜÉ
+
+¡ ¡(T
+%17void"?mage.util.MessageToClient#setSecondMessage(Ljava/lang/String;)V*J
+
+__unknown_file (.
+,
+messageToClientmage.util.MessageToClient*5
+
+__unknown_file (
+
+%16java.lang.String2$setSecondMessage(Ljava/lang/String;)*
+5*‚
+7
+¿ ¿(»≈
+
+¿ ¿(2
+%15java.lang.String">mage.util.MessageToClient#getSecondMessage()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+messageToClientmage.util.MessageToClient2getSecondMessage()*
+5
+6*≠
+8
+ø ø(ìê
+
+ø ø(
+%14boolean"%mage.players.PlayerImpl#canRespond()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2canRespond()*
+7
+1*%
+9
+º º("
+
+º º(
+""*&
+20
+° °("
+
+° °(
+""*±
+21
+† †(îë
+
+† †('
+%0boolean"&mage.game.Game#inCheckPlayableState()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2inCheckPlayableState()*
+19
+20*∞
+11
+π π(*Ö
+Ç
+
+π π(*
+%12java.util.Map"__id*X
+
+__unknown_file (<*:
+mage.player.human.HumanPlayer"
+requestAutoAnswerText¢
+ü
+
+π π(7
+%13java.lang.Boolean"__mapGet*2
+
+__unknown_file (
+
+%12java.util.Map*9
+
+__unknown_file (
+
+messagejava.lang.Stringi
+g
+
+π π(7
+answerjava.lang.Boolean"__id*6
+
+__unknown_file (
+
+%13java.lang.Boolean*
+8
+9:/
+
+ü ü(-!
+outcomemage.constants.Outcome:)
+
+ü. ü(=
+messagejava.lang.String:/
+
+ü> ü(S!
+secondMessagejava.lang.String:*
+
+üT ü(d
+trueTextjava.lang.String:+
+
+üe ü(v
+	falseTextjava.lang.String:/
+üw ü(Ü 
+sourcemage.abilities.Ability:&
+üá ü(ê
+gamemage.game.GameB!
+mage.player.human.HumanPlayerHP

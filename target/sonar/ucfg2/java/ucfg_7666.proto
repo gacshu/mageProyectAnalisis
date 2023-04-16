@@ -1,0 +1,213 @@
+
+Ymage.abilities.keyword.BloodthirstEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zl
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/BloodthirstAbility.javaF F("startingBlock*!
+2P P("
+P P(
+""*„
+3MB M(FŒ
+MB M(a
+%8java.lang.Object"Pmage.abilities.effects.EffectImpl#getValue(Ljava/lang/String;)Ljava/lang/Object;*H
+
+__unknown_file (,*
+(mage.abilities.keyword.BloodthirstEffect*.
+
+__unknown_file (
+appliedEffects2getValue(Ljava/lang/String;)j
+h
+M M(b 
+appliedEffectsjava.util.List"__id*4
+
+__unknown_file (
+
+%8java.lang.ObjectW
+U
+N* N(:
+%9mage.counters.CounterType"__id*"
+
+__unknown_file (
+""åâ
+N* N(Q
+%10mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%9mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)±®
+NS N(k
+%11java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()üù
+	N N(Š
+%12boolean"}mage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/List;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%10mage.counters.Counter*3
+
+__unknown_file (
+
+%11java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+appliedEffectsjava.util.List2laddCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/List;)*
+2*þ
+startingBlockF F(3Š
+‡
+E E(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+F F("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+E E(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+F, F(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+7*á
+4K& K(*¨¥
+K@ K(T
+%6java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()š—
+K& K(U#
+%7mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)
+
+K K(V*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%7mage.game.permanent.Permanent*
+2
+3*½
+5J# J(*¥¢
+J# J(9
+%5boolean"%mage.watchers.Watcher#conditionMet()Z*P
+
+__unknown_file (4
+2
+watcher'mage.watchers.common.BloodthirstWatcher2conditionMet()*
+4
+1*Õ
+6I) I(-š—
+I) I(8
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()°­
+I^ I(v
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÖÓ
+I) I(w-
+%4'mage.watchers.common.BloodthirstWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%2mage.game.GameState*"
+
+__unknown_file (
+""*2
+
+__unknown_file (
+
+%3java.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)”
+‘
+I I(x2
+watcher'mage.watchers.common.BloodthirstWatcher"__id*K
+
+__unknown_file (/
+-
+%4'mage.watchers.common.BloodthirstWatcher*
+5
+1*§
+7G G(°­
+G' G(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+G G(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+G G(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+6
+1*!
+1S S("
+S S(
+"":"
+F F(#
+gamemage.game.Game:,
+F$ F(2 
+sourcemage.abilities.AbilityB,*
+(mage.abilities.keyword.BloodthirstEffectHP

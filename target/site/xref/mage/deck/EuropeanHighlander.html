@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>EuropeanHighlander xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/deck/EuropeanHighlander.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.deck;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.cards.Sets;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.Constructed;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.Deck;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckValidatorErrorType;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.HashMap;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author ddzn</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> * @brief European Highlander is a classic competitive singleton format formalized around 2003.</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> * It is also known as 'German Highlander'.</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment"> * In short: 20 pts starting life, 100 card singleton deck without sideboard.</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * No command zone, so companions can only be played in the main deck.</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> * There is a ban list but no points system.</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment"> * More info at <a href="http://highlandermagic.info" target="alexandria_uri">http://highlandermagic.info</a></em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment"> * Banned list here <a href="http://highlandermagic.info/banned-list" target="alexandria_uri">http://highlandermagic.info/banned-list</a></em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_javadoccomment"> * Watch list here <a href="http://highlandermagic.info/watch-list" target="alexandria_uri">http://highlandermagic.info/watch-list</a></em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="EuropeanHighlander" href="../../mage/deck/EuropeanHighlander.html#EuropeanHighlander">EuropeanHighlander</a> <strong class="jxr_keyword">extends</strong> <a name="Constructed" href="../../mage/cards/decks/Constructed.html#Constructed">Constructed</a> {
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">public</strong> <a name="EuropeanHighlander" href="../../mage/deck/EuropeanHighlander.html#EuropeanHighlander">EuropeanHighlander</a>() {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"European Highlander"</span>, <span class="jxr_string">"EuroLander"</span>);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">for</strong> (<a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> set : Sets.getInstance().values()) {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>              <strong class="jxr_keyword">if</strong> (set.getSetType().isEternalLegal()) {
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>                  setCodes.add(set.getCode());
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              }
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          }
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <em class="jxr_comment">// Gold-bordered cards (WC97 etc) used to be allowed until FNM allowed European Highlander to be sanctioned</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          <em class="jxr_comment">// Since then, the tournament organizer must decide if the cards are allowed</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <em class="jxr_comment">// The following ban list is decided by the council in cooperation with the community (last update: 15.11.2020)</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          banned.add(<span class="jxr_string">"Ancestral Recall"</span>);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          banned.add(<span class="jxr_string">"Balance"</span>);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          banned.add(<span class="jxr_string">"Birthing Pod"</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          banned.add(<span class="jxr_string">"Black Lotus"</span>);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          banned.add(<span class="jxr_string">"Flash"</span>);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          banned.add(<span class="jxr_string">"Gifts Ungiven"</span>);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          banned.add(<span class="jxr_string">"Library of Alexandria"</span>);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          banned.add(<span class="jxr_string">"Mana Crypt"</span>);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          banned.add(<span class="jxr_string">"Mana Vault"</span>);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          banned.add(<span class="jxr_string">"Mind Twist"</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          banned.add(<span class="jxr_string">"Mystical Tutor"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          banned.add(<span class="jxr_string">"Mox Emerald"</span>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          banned.add(<span class="jxr_string">"Mox Jet"</span>);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          banned.add(<span class="jxr_string">"Mox Pearl"</span>);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          banned.add(<span class="jxr_string">"Mox Ruby"</span>);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          banned.add(<span class="jxr_string">"Mox Sapphire"</span>);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          banned.add(<span class="jxr_string">"Natural Order"</span>);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          banned.add(<span class="jxr_string">"Sensei's Divining Top"</span>);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          banned.add(<span class="jxr_string">"Skullclamp"</span>);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          banned.add(<span class="jxr_string">"Sol Ring"</span>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          banned.add(<span class="jxr_string">"Strip Mine"</span>);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          banned.add(<span class="jxr_string">"Survival of the Fittest"</span>);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          banned.add(<span class="jxr_string">"Time Vault"</span>);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          banned.add(<span class="jxr_string">"Time Walk"</span>);
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          banned.add(<span class="jxr_string">"Tinker"</span>);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          banned.add(<span class="jxr_string">"Tolarian Academy"</span>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          banned.add(<span class="jxr_string">"Treasure Cruise"</span>);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          banned.add(<span class="jxr_string">"True-Name Nemesis"</span>);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          banned.add(<span class="jxr_string">"Umezawa's Jitte"</span>);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          banned.add(<span class="jxr_string">"Vampiric Tutor"</span>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      }
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      @Override
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getDeckMinSize() {
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <strong class="jxr_keyword">return</strong> 100;
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      }
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      @Override
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> validate(<a name="Deck" href="../../mage/cards/decks/Deck.html#Deck">Deck</a> deck) {
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          errorsList.clear();
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>  
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <em class="jxr_comment">// Parent class checks the banned list</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <strong class="jxr_keyword">boolean</strong> valid = <strong class="jxr_keyword">super</strong>.validate(deck);
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">if</strong> (deck.getCards().size() &lt; 100) {
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>              addError(DeckValidatorErrorType.DECK_SIZE, <span class="jxr_string">"Deck"</span>, <span class="jxr_string">"Must contain 100 or more singleton cards: has "</span> + (deck.getCards().size()) + <span class="jxr_string">" cards"</span>);
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>              valid = false;
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          }
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          <strong class="jxr_keyword">if</strong> (!deck.getSideboard().isEmpty()) {
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>              addError(DeckValidatorErrorType.DECK_SIZE, <span class="jxr_string">"Sideboard"</span>, <span class="jxr_string">"Sideboard can't contain any cards: has "</span> + (deck.getSideboard().size()) + <span class="jxr_string">" cards"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>              valid = false;
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          }
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>  
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          <em class="jxr_comment">// Count main deck card occurrences</em>
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <em class="jxr_comment">// Note: Although a singleton format, the "any-number-of" cards are allowed</em>
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          Map&lt;String, Integer&gt; counts = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          countCards(counts, deck.getCards());
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          valid = checkCounts(1, counts) &amp;&amp; valid;
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>  
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          <strong class="jxr_keyword">return</strong> valid;
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      }
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

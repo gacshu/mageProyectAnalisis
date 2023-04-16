@@ -1,0 +1,258 @@
+
+pmage.abilities.effects.common.ReturnToBattlefieldAttachedEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z‚
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ReturnToBattlefieldAttachedEffect.java ("startingBlock*!
+2% %("
+% %(
+""*Š
+3$# $('š—
+$# $(2
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Š‡
+$; $(G
+%8java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+auramage.cards.Card2getId()ôñ
+$# $(H
+%9mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%7mage.game.GameState*2
+
+__unknown_file (
+
+%8java.util.UUID2getZone(Ljava/util/UUID;)R
+P
+$L $(Z
+%10mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+2
+1*þ
+startingBlock (3Š
+‡
+ (
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19”
+‘
+ (
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%20*
+6*Ë
+6 ( °­
++ (C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+ (D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+ (E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player
+ /  (A-
+%2'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*_
+
+__unknown_file (CA
+?mage.abilities.effects.common.ReturnToBattlefieldAttachedEffect2getTargetPointer()†ƒ
+ /  (X
+%3java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%2'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Š‡
+   (Y#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)€
+~
+   (Z)
+creaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent¨¥
+!! !(5
+%5java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+! !(6
+%6mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getCard(Ljava/util/UUID;)`
+^
+! !(7
+auramage.cards.Card"__id*3
+
+__unknown_file (
+
+%6mage.cards.Card*
+2
+3*¶
+1( ((›˜
+( ((
+%11mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‹ˆ
+(/ ((;
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+auramage.cards.Card2getId()o
+m
+(! ((;
+%13java.lang.String"__concat*
+(! ((,
+	attachTo:*#
+(/ ((;
+
+%12java.util.UUIDÉÆ
+( ((F
+%14void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%11mage.game.GameState*5
+
+__unknown_file (
+
+%13java.lang.String*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2.setValue(Ljava/lang/String;Ljava/lang/Object;)R
+P
+)# )(3
+%15mage.constants.Zone"__id*"
+
+__unknown_file (
+""
+) )(B
+%16boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+auramage.cards.Card*8
+
+__unknown_file (
+
+%15mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)‹ˆ
+*& *(2
+%17java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+auramage.cards.Card2getId()´±
+* *(A
+%18boolean"Xmage.cards.Card#addAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%17java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2GaddAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+* *(B
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityBCA
+?mage.abilities.effects.common.ReturnToBattlefieldAttachedEffectHP

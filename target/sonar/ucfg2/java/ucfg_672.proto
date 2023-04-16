@@ -1,0 +1,199 @@
+
+gmage.player.human.HumanPlayer#suppressAbilityPicker(Lmage/abilities/ActivatedAbility;Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.java£ £()"14*æ
+13
+® ®( ¥±
+
+®F ®([
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+abilitymage.abilities.ActivatedAbility2getSourceId()ó
+î
+
+®) ®(\
+%3java.util.UUID"Rmage.util.CardUtil#getMainCardId(Lmage/game/Game;Ljava/util/UUID;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUIDÊ„
+
+® ®(]
+%4mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getCard(Ljava/util/UUID;)f
+d
+
+® ®(^
+mainCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%4mage.cards.Card*
+
+5
+6
+12*%
+2
+Ω Ω("
+
+Ω Ω(?
+""*ã
+14
+§ §()∫∑
+
+§ §(/
+%0mage.players.net.UserData"bmage.players.PlayerImpl#getControllingPlayersUserData(Lmage/game/Game;)Lmage/players/net/UserData;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2/getControllingPlayersUserData(Lmage/game/Game;)≤Ø
+
+§ §(K
+%1boolean"6mage.players.net.UserData#isShowAbilityPickerForced()Z*=
+
+__unknown_file (!
+
+%0mage.players.net.UserData2isShowAbilityPickerForced()*
+13
+1*%
+3
+π π("
+
+π π(
+""*´
+4
+∏ ∏(ÎË
+
+∏ ∏(2*
+%13#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*H
+
+__unknown_file (,
+*
+abilitymage.abilities.ActivatedAbility2getManaCostsToPay()£†
+
+∏ ∏(>
+
+%14int"/mage.abilities.costs.mana.ManaCost#manaValue()I*H
+
+__unknown_file (,
+*
+%13#mage.abilities.costs.mana.ManaCosts2manaValue()*
+2
+3*˚
+5
+∑ ∑(1”–
+
+∑ ∑(3
+%10java.util.Set"Image.players.PlayerImpl#getCastSourceIdWithAlternateMana()Ljava/util/Set;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2"getCastSourceIdWithAlternateMana()µ≤
+
+∑= ∑(R
+%11java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+abilitymage.abilities.ActivatedAbility2getSourceId()”–
+
+∑ ∑(S
+%12boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%10java.util.Set*3
+
+__unknown_file (
+
+%11java.util.UUID2contains(Ljava/lang/Object;)*
+2
+4*%
+6
+≥ ≥("
+
+≥ ≥(
+""*%
+8
+≠ ≠( "
+
+≠ ≠(!
+""*ˆ
+12
+©% ©()S
+Q
+
+©% ©(5
+%5mage.constants.Zone"__id*"
+
+__unknown_file (
+""úô
+
+©= ©(L
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()êç
+
+©U ©(e
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*9
+
+__unknown_file (
+
+mainCardmage.cards.Card2getId()ˆÛ
+
+©= ©(f
+%8mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%6mage.game.GameState*2
+
+__unknown_file (
+
+%7java.util.UUID2getZone(Ljava/util/UUID;)ÿ’
+
+©% ©(g
+%9boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*7
+
+__unknown_file (
+
+%5mage.constants.Zone*7
+
+__unknown_file (
+
+%8mage.constants.Zone2equals(Ljava/lang/Object;)*	
+5
+6
+8*%
+1
+ø ø("
+
+ø ø(
+"":8
+
+£* £(C*
+abilitymage.abilities.ActivatedAbility:$
+
+£D £(M
+gamemage.game.GameB!
+mage.player.human.HumanPlayerP

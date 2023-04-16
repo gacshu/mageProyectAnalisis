@@ -1,0 +1,80 @@
+
+:mage.choices.VoteHandler#getVoteCount(Ljava/lang/Object;)I]
+QD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/choices/VoteHandler.javaà à("1*Ê
+1
+â â(r
+p
+
+â â(
+%0java.util.Map"__id*G
+
+__unknown_file (+*)
+mage.choices.VoteHandler"
+	playerMapñì
+
+â ä(
+%1java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%0java.util.Map2values()™ß
+
+â ã(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%1java.util.Collection2stream()êç
+
+â å(,
+%3java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)àÖ
+
+â ç("
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ó
+î
+
+é é((&
+%5 java.util.function.ToIntFunction"__declareFunction*K
+
+__unknown_file (/-
++__sonar_lambda_224$mage.choices.VoteHandlerƒ¡
+
+â é() 
+%9java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*D
+
+__unknown_file ((
+&
+%5 java.util.function.ToIntFunction2,mapToInt(Ljava/util/function/ToIntFunction;)ÖÇ
+
+â è(
+
+%10int"!java.util.stream.IntStream#sum()I*>
+
+__unknown_file ("
+ 
+%9java.util.stream.IntStream2sum()"
+
+â è(
+"":
+
+à à("	
+voteTB
+mage.choices.VoteHandlerHP

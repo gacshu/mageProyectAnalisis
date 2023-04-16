@@ -1,0 +1,200 @@
+
+qmage.abilities.effects.common.continuous.BecomesSubtypeAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)ZÉ
+yD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BecomesSubtypeAllEffect.java5 5("startingBlock*´	
+137# 7('æª
+7# 7(8%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()≥
+∞
+7M 7(S0
+%1*mage.filter.common.FilterCreaturePermanent"__id*l
+
+__unknown_file (P*NB
+@mage.abilities.effects.common.continuous.BecomesSubtypeAllEffect"
+filter∞≠
+7U 7(m
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÎË
+7# 7(|
+%3java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*N
+
+__unknown_file (2
+0
+%1*mage.filter.common.FilterCreaturePermanent*2
+
+__unknown_file (
+
+%2java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+5*”
+2D D(æª
+D D(
+
+%9void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*`
+
+__unknown_file (DB
+@mage.abilities.effects.common.continuous.BecomesSubtypeAllEffect2	discard()*
+1*ë
+3C C(¢
+ü
+C C(
+%7mage.constants.Duration"__id*n
+
+__unknown_file (R*PB
+@mage.abilities.effects.common.continuous.BecomesSubtypeAllEffect"
+
+durationU
+S
+C! C(0
+%8mage.constants.Duration"__id*"
+
+__unknown_file (
+""*
+2
+1*ˇ
+startingBlock5 5(3ä
+á
+4 4(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+5 5("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10î
+ë
+4 4(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+5, 5(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11*
+13*¢
+57 7( b
+`
+7 7( *
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ù
+ö
+7 7( *
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""*
+3
+5
+8
+9
+1*á
+6? ?( Y
+W
+? ?( !
+subtypemage.constants.SubType"__id*"
+
+__unknown_file (
+""î
+ë
+? ?( !
+subtypemage.constants.SubType"
+__arrayGet*2
+
+__unknown_file (
+
+%5java.util.List*"
+
+__unknown_file (
+""*
+5
+7*Ó
+7@ @(Ÿ÷
+@ @(3
+
+%6void"Fmage.MageObject#addSubType(Lmage/game/Game;[Lmage/constants/SubType;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+subtypemage.constants.SubType25addSubType(Lmage/game/Game;[Lmage/constants/SubType;)*
+6*Æ
+8?# ?(+ô
+ñ
+?# ?(+
+%5java.util.List"__id*n
+
+__unknown_file (R*PB
+@mage.abilities.effects.common.continuous.BecomesSubtypeAllEffect"
+
+subtypes*
+6*ì
+9= =(˛˚
+= =(6
+
+%4void"9mage.MageObject#removeAllCreatureTypes(Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2(removeAllCreatureTypes(Lmage/game/Game;)*
+8*!
+1F F("
+F F(
+"":"
+5 5(#
+gamemage.game.Game:,
+5$ 5(2 
+sourcemage.abilities.AbilityBDB
+@mage.abilities.effects.common.continuous.BecomesSubtypeAllEffectHP

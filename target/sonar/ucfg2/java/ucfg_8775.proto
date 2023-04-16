@@ -1,0 +1,106 @@
+
+amage.util.CardUtil#getAllSelectedTargets(Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/util/CardUtil.javaç ç(1"1*Ó
+1
+è è(±®
+
+è è(!
+%0mage.abilities.Modes"7mage.abilities.Ability#getModes()Lmage/abilities/Modes;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2
+getModes()¬©
+
+è è(4
+%1java.util.List"7mage.abilities.Modes#getSelectedModes()Ljava/util/List;*8
+
+__unknown_file (
+
+%0mage.abilities.Modes2getSelectedModes()¤¡
+
+è é(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%1java.util.List2stream()ˆ…
+
+è ê(-
+%3java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ˆ…
+
+è ë(&
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)
+
+è ì(,
+%5java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)ˆ…
+
+è í((
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)
+
+è î(,
+%7java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)¯
+¬
+
+ï ï(+ 
+%8java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors™–
+
+è ï(,
+%9java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%8java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"#
+
+è ï(-
+
+%9java.util.Set:/
+
+ç2 ç(B!
+abilitymage.abilities.Ability:$
+
+çC ç(L
+gamemage.game.GameB"
+mage.util.CardUtilH

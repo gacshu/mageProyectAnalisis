@@ -1,0 +1,155 @@
+
+smage.player.ai.ComputerPlayer#chooseAbilityForCast(Lmage/cards/Card;Lmage/game/Game;Z)Lmage/abilities/SpellAbility;€
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaÃ Ã(,"startingBlock*ô
+startingBlock
+Ã, Ã(RŒ
+‰
+
+Â Â(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+cardmage.cards.CardY
+W
+
+Ã2 Ã(6
+cardmage.cards.Card"__annotation*"
+
+__unknown_file (
+
+%9Œ
+‰
+
+Â Â(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+Ã= Ã(A
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+1*â
+1
+Ä* Ä(4›
+
+ÄU Ä(a
+%0java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer2getId()œ™
+
+Äi Ä(x
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‹
+Ä Ä(
+%2java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()÷ô
+Äi Ä(
+%3mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%1mage.game.GameState*2
+
+__unknown_file (
+
+%2java.util.UUID2getZone(Ljava/util/UUID;)ü
+ù
+Ä* Ä(—
+%4java.util.LinkedHashMap"“mage.players.PlayerImpl#getCastableSpellAbilities(Lmage/game/Game;Ljava/util/UUID;Lmage/MageObject;Lmage/constants/Zone;Z)Ljava/util/LinkedHashMap;*7
+
+__unknown_file ("
+mage.players.PlayerImpl*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID*5
+
+__unknown_file (
+
+cardmage.cards.Card*7
+
+__unknown_file (
+
+%3mage.constants.Zone*"
+
+__unknown_file (
+""l
+j
+Ä Ä(˜
+useablejava.util.Map"__id*;
+
+__unknown_file (
+
+%4java.util.LinkedHashMap›˜
+
+Å Å(
+%5java.util.Collection",java.util.Map#values()Ljava/util/Collection;*6
+
+__unknown_file (
+
+useablejava.util.Map2values()ª§
+
+Å Å((
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%5java.util.Collection2stream()¬©
+
+Å Å(4
+%7java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream2findFirst()ëè
+
+Å Å(A!
+%8mage.abilities.SpellAbility"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%7java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)"1
+
+Å Å(B#
+!
+%8mage.abilities.SpellAbility:%
+
+Ã- Ã(7
+cardmage.cards.Card:$
+
+Ã8 Ã(B
+gamemage.game.Game: 
+
+__unknown_file (
+""B!
+mage.player.ai.ComputerPlayerH

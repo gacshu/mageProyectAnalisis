@@ -1,0 +1,145 @@
+
+emage.game.permanent.Battlefield#getActivePermanents(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;d
+XD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/Battlefield.java≈ ≈(."3*Ç
+2
+« «() «
+
+« «(+
+%2java.util.List"Hmage.game.permanent.Battlefield#getAllActivePermanents()Ljava/util/List;*?
+
+__unknown_file (#!
+mage.game.permanent.Battlefield2getAllActivePermanents()"$
+
+« «(,
+
+%2java.util.List*≈
+3
+∆ ∆( «
+
+∆ ∆(&%
+%0mage.constants.RangeOfInfluence"Emage.game.Game#getRangeOfInfluence()Lmage/constants/RangeOfInfluence;*4
+
+__unknown_file (
+
+gamemage.game.Game2getRangeOfInfluence()_
+]
+
+∆* ∆(>%
+%1mage.constants.RangeOfInfluence"__id*"
+
+__unknown_file (
+""*
+2
+1*£
+1
+… …(#úô
+
+… …(.
+%3mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÙÒ
+
+… …(V
+%4mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%3mage.game.GameState*>
+
+__unknown_file ("
+ 
+sourcePlayerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)j
+h
+
+… …(W
+rangejava.util.List"__id*;
+
+__unknown_file (
+
+%4mage.players.PlayerListu
+s
+
+   (
+%5java.util.Map"__id*J
+
+__unknown_file (.*,!
+mage.game.permanent.Battlefield"
+fieldñì
+
+   (!
+%6java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%5java.util.Map2values()™ß
+
+  À(
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%6java.util.Collection2stream()ô
+ñ
+
+Ã Õ(E"
+%8java.util.function.Predicate"__declareFunction*Q
+
+__unknown_file (53
+1__sonar_lambda_65$mage.game.permanent.Battlefieldâ
+Ü
+
+__unknown_file (-
+"
+%8java.util.function.Predicate"
+range"__id*5
+
+__unknown_file (
+
+rangejava.util.ListØ¨
+
+  Õ(F
+%12java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)±
+Æ
+
+Œ Œ(0!
+%13java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsùö
+
+  Œ(1
+%14java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%13java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"%
+
+  Œ(2
+
+%14java.util.List:.
+
+≈/ ≈(C 
+sourcePlayerIdjava.util.UUID:$
+
+≈D ≈(M
+gamemage.game.GameB#!
+mage.game.permanent.BattlefieldH

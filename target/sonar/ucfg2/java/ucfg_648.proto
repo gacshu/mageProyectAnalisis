@@ -1,0 +1,463 @@
+
+mage.player.human.HumanPlayer#playManaHandling(Lmage/abilities/Ability;Lmage/abilities/costs/mana/ManaCost;Ljava/lang/String;Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaì
+ ì
+(&"18*Ä
+13
+ú
+ ú
+(öó
+
+ú
+ ú
+(!
+%10void"@mage.player.human.HumanPlayer#waitForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2!waitForResponse(Lmage/game/Game;)ñ
+î
+
+ü
+ ü
+(8
+%11java.util.UUID"Tmage.player.human.HumanPlayer#getFixedResponseUUID(Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Gameg
+e
+
+ü
+ ü
+(9
+
+responseIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%11java.util.UUID‹
+ˆ
+
+ı
+ ı
+('
+%12 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseÀ½
+
+ı
+ ı
+(%
+%13java.lang.Boolean"@mage.player.human.PlayerResponse#getBoolean()Ljava/lang/Boolean;*E
+
+__unknown_file ()
+'
+%12 mage.player.human.PlayerResponse2getBoolean()*
+9
+10
+12*›
+14
+ø
+ ø
+(w
+u
+
+ø
+' ø
+(/
+%7java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerIdx
+v
+
+ø
+1 ø
+(D
+%8java.lang.String"__concat*
+
+ø
+1 ø
+(7
+Pay *.
+
+ø
+: ø
+(D 
+
+
+promptTextjava.lang.StringŒ
+
+ø
+ ø
+(N
+
+%9void"Tmage.game.Game#firePlayManaEvent(Ljava/util/UUID;Ljava/lang/String;Ljava/util/Map;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+%8java.lang.String*6
+
+__unknown_file (
+
+optionsjava.util.Map2DfirePlayManaEvent(Ljava/util/UUID;Ljava/lang/String;Ljava/util/Map;)*
+13*¢
+15
+ô
+0 ô
+(?:8
+
+ô
+4 ô
+(=
+%2java.util.HashMap"java.util.HashMaph
+f
+
+ô
+0 ô
+(?
+%3"java.util.HashMap#<init>()V*5
+
+__unknown_file (
+
+%2java.util.HashMape
+c
+
+ô
+ ô
+(@
+optionsjava.util.Map"__id*5
+
+__unknown_file (
+
+%2java.util.HashMapÓĞ
+
+õ
+ õ
+(5
+
+%4void"Zmage.player.human.HumanPlayer#updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*(
+
+__unknown_file (
+
+playMana*4
+
+__unknown_file (
+
+gamemage.game.Game2;updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)ûø
+
+ö
+ ö
+($
+
+%5void"Cmage.player.human.HumanPlayer#prepareForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2$prepareForResponse(Lmage/game/Game;)¤¡
+
+÷
+ ÷
+(#
+%6boolean"1mage.player.human.HumanPlayer#isExecutingMacro()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isExecutingMacro()*
+13
+14*®
+16
+ó
+ ó
+(’
+
+ó
+ ó
+(
+%1boolean"%mage.players.PlayerImpl#canRespond()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2canRespond()*
+15
+1*&
+17
+ï
+ ï
+("
+
+ï
+ ï
+(
+""*û
+18
+î
+ î
+($Ş
+Û
+
+î
+ î
+(*
+%0boolean"Image.player.human.HumanPlayer#gameInCheckPlayableState(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game*
+16
+17*%
+1
+‘ ‘("
+
+‘ ‘(
+""*%
+2
+ ("
+
+ (
+""*µ
+3
+‰ ‰(¹¶
+
+‰ ‰(&
+%27mage.players.ManaPool"<mage.players.PlayerImpl#getManaPool()Lmage/players/ManaPool;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getManaPool()‹
+ˆ
+
+‰6 ‰(>'
+%28 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseÎË
+
+‰6 ‰(L
+%29mage.constants.ManaType"Gmage.player.human.PlayerResponse#getManaType()Lmage/constants/ManaType;*E
+
+__unknown_file ()
+'
+%28 mage.player.human.PlayerResponse2getManaType()ƒ€
+
+‰ ‰(M
+%30void"@mage.players.ManaPool#unlockManaType(Lmage/constants/ManaType;)V*:
+
+__unknown_file (
+
+%27mage.players.ManaPool*<
+
+__unknown_file ( 
+
+%29mage.constants.ManaType2)unlockManaType(Lmage/constants/ManaType;)*
+2*ú
+4
+ˆ ˆ(‹
+ˆ
+
+ˆ ˆ('
+%23 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseÜÙ
+
+ˆ ˆ(:
+%24java.util.UUID"Nmage.player.human.PlayerResponse#getResponseManaTypePlayerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+%23 mage.player.human.PlayerResponse2getResponseManaTypePlayerId()Ÿœ
+
+ˆB ˆ(N
+%25java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getId()ÑÎ
+
+ˆ ˆ(O
+%26boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%24java.util.UUID*3
+
+__unknown_file (
+
+%25java.util.UUID2equals(Ljava/lang/Object;)*
+2
+3*ö
+5
+† †(‹
+ˆ
+
+† †('
+%21 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseÎË
+
+† †(-
+%22mage.constants.ManaType"Gmage.player.human.PlayerResponse#getManaType()Lmage/constants/ManaType;*E
+
+__unknown_file ()
+'
+%21 mage.player.human.PlayerResponse2getManaType()*
+2
+4*­
+6
+„ „()–“
+
+„ „(7
+%20void"jmage.player.human.HumanPlayer#activateSpecialAction(Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCost2KactivateSpecialAction(Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)*
+2*³
+8
+‚ ‚(‹
+ˆ
+
+‚ ‚('
+%17 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¼¹
+
+‚ ‚(+
+%18java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+%17 mage.player.human.PlayerResponse2getString()ÉÆ
+
+‚ ‚(=
+%19boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%18java.lang.String*'
+
+__unknown_file (	
+special2equals(Ljava/lang/Object;)*	
+2
+5
+6*ä
+9
+ (‹
+ˆ
+
+ ('
+%15 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¼¹
+
+ (+
+%16java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+%15 mage.player.human.PlayerResponse2getString()*
+5
+8*ú
+10
+€ €(!âß
+
+€ €(J
+%14void"mage.player.human.HumanPlayer#playManaAbilities(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/abilities/costs/mana/ManaCost;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*:
+
+__unknown_file (
+
+
+responseIdjava.util.UUID*E
+
+__unknown_file ()
+'
+abilityToCastmage.abilities.Ability*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCost*4
+
+__unknown_file (
+
+gamemage.game.Game2oplayManaAbilities(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/abilities/costs/mana/ManaCost;Lmage/game/Game;)*
+2*&
+12
+ş
+ ş
+("
+
+ş
+ ş
+(
+"":5
+
+ì
+' ì
+(='
+abilityToCastmage.abilities.Ability::
+
+ì
+> ì
+(N,
+unpaid"mage.abilities.costs.mana.ManaCost:,
+
+ì
+O ì
+(a
+
+promptTextjava.lang.String:$
+
+ì
+b ì
+(k
+gamemage.game.GameB!
+mage.player.human.HumanPlayerP

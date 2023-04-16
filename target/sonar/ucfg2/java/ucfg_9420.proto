@@ -1,0 +1,206 @@
+
+~mage.abilities.common.SacrificeIfCastAtInstantTimeTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z…
+{D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.java( (("startingBlock*¿
+24S 4(W©¦
+4S 4(b!
+%15mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()}
+4S 4(i
+
+%16int"java.util.ArrayDeque#size()I*?
+
+__unknown_file (#
+!
+%15mage.game.stack.SpellStack2size()*
+1*…
+startingBlock( ((;—
+”
+' '(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+(* ((/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%17Š
+‡
+' '(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+(6 ((:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18*
+10*§
+44' 4(+°­
+4; 4(N
+%13java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()ÜÙ
+4' 4(O
+%14boolean"0mage.game.Game#isActivePlayer(Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%13java.util.UUID2 isActivePlayer(Ljava/util/UUID;)*
+2
+1*›
+54 4(€~
+4 4(#
+%12boolean"mage.game.Game#isMainPhase()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isMainPhase()*	
+2
+4
+1*!
+62 2("
+2 2(
+""*¥
+71 1(O
+M
+1 1(
+%6java.lang.Boolean"__id*"
+
+__unknown_file (
+""š—
+1  1(/
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÐÍ
+1T 1(a
+%8java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*b
+
+__unknown_file (FD
+Bmage.abilities.common.SacrificeIfCastAtInstantTimeTriggeredAbility2getSourceId()z
+x
+19 1(a
+%9java.lang.String"__concat*&
+19 1(Q
+PlayFromNotOwnHandZone*"
+1T 1(a
+
+%8java.util.UUID÷ô
+1  1(b
+%10java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%7mage.game.GameState*4
+
+__unknown_file (
+
+%9java.lang.String2getValue(Ljava/lang/String;)ÖÓ
+1 1(c
+%11boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%6java.lang.Boolean*5
+
+__unknown_file (
+
+%10java.lang.Object2equals(Ljava/lang/Object;)*
+5
+6*!
+8. .("
+. .(
+""*ß
+9- -(#¥¢
+- -(1
+%3java.util.UUID"3mage.game.stack.Spell#getSourceId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSourceId()ÐÍ
+-9 -(F
+%4java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*b
+
+__unknown_file (FD
+Bmage.abilities.common.SacrificeIfCastAtInstantTimeTriggeredAbility2getSourceId()ÌÉ
+- -(G
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+7
+8*í
+10, ,(¨¥
+, ,(% 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
+,/ ,(B
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ˆ…
+, ,(C
+%2mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%1java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+, ,(D
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%2mage.game.stack.Spell*
+8
+9*!
+14 4(o"
+4 4(p
+"":/
+(  ((0#
+eventmage.game.events.GameEvent:"
+(1 ((:
+gamemage.game.GameBFD
+Bmage.abilities.common.SacrificeIfCastAtInstantTimeTriggeredAbilityHP

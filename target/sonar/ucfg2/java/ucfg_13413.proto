@@ -1,0 +1,378 @@
+
+{mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)ZÇ
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DealsDamageToACreatureAllTriggeredAbility.javaA A("startingBlock*"
+13D D("
+D D(
+""*á
+14C" C(+ÈÊ
+C" C(<
+%2boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+13
+9
+11*€
+15B B("Ø¨
+B0 B(C
+%0java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()äá
+B B(D#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+B B(E*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+13
+14*!
+1] ]("
+] ](
+""*ã
+2M M(ÏÈ
+M M(%
+%24mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getEffects()íè
+M- M(>
+
+%25int"'mage.game.events.GameEvent#getAmount()I*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getAmount()±Æ
+M M(?
+%26void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%24mage.abilities.effects.Effects*&
+
+__unknown_file (
+
+damage*(
+
+__unknown_file (
+
+
+%25int2.setValue(Ljava/lang/String;Ljava/lang/Object;)ÏÈ
+N N(%
+%27mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getEffects()∞≠
+N/ N(B
+%28java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()æª
+N N(C
+%29void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%27mage.abilities.effects.Effects*(
+
+__unknown_file (
+
+sourceId*3
+
+__unknown_file (
+
+%28java.util.UUID2.setValue(Ljava/lang/String;Ljava/lang/Object;)≤
+Ø
+O O( &
+%30mage.constants.SetTargetPointer"__id*u
+
+__unknown_file (Y*WA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility"
+setTargetPointer^
+\
+P P(&
+%31mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""^
+\
+S S(&
+%32mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""^
+\
+V V(!&
+%33mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""*
+5
+6
+7
+1*Ö
+startingBlockA A(;ó
+î
+@ @(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+A* A(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%34ä
+á
+@ @(
+%35"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+A6 A(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%35*
+15*ˆ
+4Y Y(ÏÈ
+Y Y(%%
+%20mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getEffects()a_
+Y; Y(F,
+%21%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget«
+ƒ
+Y7 Y(^
+%22"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget*O
+
+__unknown_file (3
+1
+permanent_targetmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game≈¬
+Y Y(_
+%23void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*C
+
+__unknown_file ('
+%
+%20mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*Ñ
+5V [(∞≠
+WO W(b
+%18java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()¨©
+W- W(c$
+%19mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%18java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)ä
+á
+W W(d1
+permanent_targetmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%19mage.game.permanent.Permanent*
+4
+1*Ô
+6S U(ÏÈ
+T T(!%
+%14mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getEffects()a_
+T7 T(B,
+%15%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¿
+Ω
+T3 T(S
+%16"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%15%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game≈¬
+T T(T
+%17void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*C
+
+__unknown_file ('
+%
+%14mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%15%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*¡
+7P R(ÎË
+Q Q(!$
+%9mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getEffects()ª∏
+QC Q(^
+%10java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()a_
+Q7 Q(B,
+%11%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget÷
+”
+Q3 Q(_
+%12"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%11%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%10java.util.UUIDƒ¡
+Q Q(`
+%13void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%9mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%11%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*!
+8K K("
+K K(
+""*—
+9I I(Ø¨
+I6 I(I
+%4java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()™ß
+I I(J#
+%5mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)Å
+
+I I(J*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent¨
+©
+J J(!
+%6mage.filter.FilterPermanent"__id*t
+
+__unknown_file (X*VA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility"
+filterPermanent’“
+J. J(?
+%7java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility2getControllerId()œÃ
+J J(L
+%8boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%6mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%7java.util.UUID*_
+
+__unknown_file (CA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+8*"
+10G G("
+G G(
+""*º
+11F+ F(0¢ü
+F F(B
+%3boolean"/mage.game.events.DamagedEvent#isCombatDamage()Z*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2isCombatDamage()*
+9
+10:/
+A  A(0#
+eventmage.game.events.GameEvent:"
+A1 A(:
+gamemage.game.GameBCA
+?mage.abilities.common.DealsDamageToACreatureAllTriggeredAbilityHP

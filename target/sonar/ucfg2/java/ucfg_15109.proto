@@ -1,0 +1,86 @@
+
+Rmage.game.Exile#getCards(Lmage/filter/FilterCard;Lmage/game/Game;)Ljava/util/List;R
+HD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/Exile.javaD D("1*Ñ
+1E E()èå
+E E(/
+%0java.util.List"=mage.game.Exile#getAllCards(Lmage/game/Game;)Ljava/util/List;*/
+
+__unknown_file (
+mage.game.Exile*4
+
+__unknown_file (
+
+gamemage.game.Game2getAllCards(Lmage/game/Game;)b
+`
+E E(0
+allCardsjava.util.List"__id*2
+
+__unknown_file (
+
+%0java.util.List¨¥
+F F( 
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+allCardsjava.util.List2stream()ˆ
+…
+F( F(H"
+%2java.util.function.Predicate"__declareFunction*B
+
+__unknown_file (&$
+"__sonar_lambda_306$mage.game.Exile“
+
+
+__unknown_file (.
+"
+%2java.util.function.Predicate"
+filter"__id*>
+
+__unknown_file ("
+ 
+filtermage.filter.FilterCard‡
+„
+
+__unknown_file (,
+"
+%2java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¬©
+F F(I
+%4java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%2java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)®
+«
+FR F(e 
+%5java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors˜•
+F F(f
+%6java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%5java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)""
+F F(g
+
+%6java.util.List:,
+D D(1 
+filtermage.filter.FilterCard:"
+D2 D(;
+gamemage.game.GameB
+mage.game.ExileH

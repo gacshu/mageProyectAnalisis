@@ -1,0 +1,133 @@
+
+omage.abilities.condition.common.BlockedThisTurnSourceCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)ZÅ
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/BlockedThisTurnSourceCondition.java ("startingBlock* 
+2* (1ÒÓ
+* (O
+%4java.util.Set"Xmage.watchers.common.BlockedThisTurnWatcher#getBlockedThisTurnCreatures()Ljava/util/Set;*T
+
+__unknown_file (8
+6
+watcher+mage.watchers.common.BlockedThisTurnWatcher2getBlockedThisTurnCreatures()FD
+] (p
+%5mage.MageObjectReference"mage.MageObjectReferenceù
+ö
+	Y (á
+%6"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*<
+
+__unknown_file ( 
+
+%5mage.MageObjectReference*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameŸ÷
+	* (à
+%7boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%4java.util.Set*<
+
+__unknown_file ( 
+
+%5mage.MageObjectReference2contains(Ljava/lang/Object;)*
+1*Ω	
+3$ ((®•
+F (Z
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()™ß
+$ ([#
+%1mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)à
+Ö
+ (\0
+sourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanentöó
+) (8
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÜÉ
+) (a1
+%3+mage.watchers.common.BlockedThisTurnWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%2mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)ú
+ô
+ (b6
+watcher+mage.watchers.common.BlockedThisTurnWatcher"__id*O
+
+__unknown_file (3
+1
+%3+mage.watchers.common.BlockedThisTurnWatcher*
+2
+1*˙
+startingBlock (3â
+Ü
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8ì
+ê
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+, (2 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9*
+3*#
+1	 (â"
+	 (â
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityBB@
+>mage.abilities.condition.common.BlockedThisTurnSourceConditionHP

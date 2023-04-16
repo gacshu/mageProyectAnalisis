@@ -1,0 +1,714 @@
+
+@mage.client.draft.DraftPanel#updateDraft(Lmage/view/DraftView;)Vh
+\D:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/draft/DraftPanel.javaï ï("10*¡
+2
+µ µ(™
+ß
+
+∂ ∂(C
+%68void"Hmage.client.draft.DraftPanel#setPlayerNameToLabel(Ljava/lang/String;II)V*<
+
+__unknown_file ( 
+mage.client.draft.DraftPanel*<
+
+__unknown_file ( 
+
+
+playerNamejava.lang.String*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*
+1*Ω
+3
+¥" ¥(+¶£
+
+¥" ¥(8
+%67java.util.List"0mage.view.DraftView#getPlayers()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getPlayers()*
+1*…
+4Æ Æ(ñÙ
+Ò
+Æ Æ(ñ
+%53java.awt.Image"Vmage.client.util.ImageHelper#getImageFromResources(Ljava/lang/String;)Ljava/awt/Image;*<
+
+__unknown_file ( "
+mage.client.util.ImageHelper*5
+
+__unknown_file (
+
+%50java.lang.Stringh
+f
+Æ	 Æ(ó
+
+tableImagejava.awt.Image"__id*3
+
+__unknown_file (
+
+%53java.awt.ImageE
+C
+Øo Ø(ä
+
+%54int"__id*"
+
+__unknown_file (
+""Œ
+À
+ØB Ø(ã#
+%55java.awt.image.BufferedImage"fmage.client.util.gui.BufferedImageBuilder#bufferImage(Ljava/awt/Image;I)Ljava/awt/image/BufferedImage;*I
+
+__unknown_file (-"+
+)mage.client.util.gui.BufferedImageBuilder*:
+
+__unknown_file (
+
+
+tableImagejava.awt.Image*(
+
+__unknown_file (
+
+
+%54intÉ
+Ä
+Øç Ø(ö
+%56javax.swing.JLabel"__id*O
+
+__unknown_file (3*1
+mage.client.draft.DraftPanel"
+lblTableImageÜÉ
+Øç Ø(•
+
+%57int""javax.swing.JComponent#getWidth()I*7
+
+__unknown_file (
+
+%56javax.swing.JLabel2
+getWidth()É
+Ä
+Øß Ø(¥
+%58javax.swing.JLabel"__id*O
+
+__unknown_file (3*1
+mage.client.draft.DraftPanel"
+lblTableImageàÖ
+Øß Ø(¿
+
+%59int"#javax.swing.JComponent#getHeight()I*7
+
+__unknown_file (
+
+%58javax.swing.JLabel2getHeight()¯
+ı
+Ø& Ø(¡#
+%60java.awt.image.BufferedImage"lmage.client.util.ImageHelper#getResizedImage(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;*<
+
+__unknown_file ( "
+mage.client.util.ImageHelper*A
+
+__unknown_file (%
+#
+%55java.awt.image.BufferedImage*(
+
+__unknown_file (
+
+
+%57int*(
+
+__unknown_file (
+
+
+%59intá
+Ñ
+Ø	 Ø(¬,
+resizedTablejava.awt.image.BufferedImage"__id*A
+
+__unknown_file (%
+#
+%60java.awt.image.BufferedImageÄ
+~
+
+∞	 ∞(
+%61javax.swing.JLabel"__id*O
+
+__unknown_file (3*1
+mage.client.draft.DraftPanel"
+lblTableImageCA
+
+∞# ∞(,
+%62javax.swing.ImageIcon"javax.swing.ImageIconœ
+Ã
+
+∞ ∞(:
+%63"/javax.swing.ImageIcon#<init>(Ljava/awt/Image;)V*:
+
+__unknown_file (
+
+%62javax.swing.ImageIcon*J
+
+__unknown_file (.
+,
+resizedTablejava.awt.image.BufferedImageﬂ‹
+
+∞	 ∞(;
+%64void"/javax.swing.JLabel#setIcon(Ljavax/swing/Icon;)V*7
+
+__unknown_file (
+
+%61javax.swing.JLabel*:
+
+__unknown_file (
+
+%62javax.swing.ImageIcon2setIcon(Ljavax/swing/Icon;)¶£
+
+≥ ≥(3
+%65java.util.List"0mage.view.DraftView#getPlayers()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getPlayers()om
+
+≥ ≥(:
+
+%66int"java.util.List#size()I*3
+
+__unknown_file (
+
+%65java.util.List2size()*
+3*|
+5Æ} Æ(ïe
+c
+Æ} Æ(ï
+%50java.lang.String"__id*5
+
+__unknown_file (
+
+%52java.lang.String*
+4*z
+6
+Æc Æ(zd
+b
+
+Æc Æ(z
+%50java.lang.String"__id*5
+
+__unknown_file (
+
+%51java.lang.String*
+4*∞&
+7
+†	 †(~
+|
+
+†	 †(
+%20javax.swing.JCheckBox"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+chkPack1íè
+
+†# †(<
+
+%21int"$mage.view.DraftView#getBoosterNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getBoosterNum()∏µ
+
+†	 †(A
+%22void"*javax.swing.AbstractButton#setSelected(Z)V*:
+
+__unknown_file (
+
+%20javax.swing.JCheckBox*"
+
+__unknown_file (
+""2setSelected(Z)~
+|
+
+°	 °(
+%23javax.swing.JCheckBox"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+chkPack2íè
+
+°# °(<
+
+%24int"$mage.view.DraftView#getBoosterNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getBoosterNum()∏µ
+
+°	 °(A
+%25void"*javax.swing.AbstractButton#setSelected(Z)V*:
+
+__unknown_file (
+
+%23javax.swing.JCheckBox*"
+
+__unknown_file (
+""2setSelected(Z)~
+|
+
+¢	 ¢(
+%26javax.swing.JCheckBox"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+chkPack3íè
+
+¢# ¢(<
+
+%27int"$mage.view.DraftView#getBoosterNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getBoosterNum()∏µ
+
+¢	 ¢(A
+%28void"*javax.swing.AbstractButton#setSelected(Z)V*:
+
+__unknown_file (
+
+%26javax.swing.JCheckBox*"
+
+__unknown_file (
+""2setSelected(Z)Ä
+~
+
+£	 £(
+%29javax.swing.JTextField"__id*K
+
+__unknown_file (/*-
+mage.client.draft.DraftPanel"
+	txtCardNoåâ
+
+£1 £(G
+
+%30int"!mage.view.DraftView#getCardNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getCardNum()∂
+≥
+
+£  £(H
+%31java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%30intÎË
+
+£	 £(I
+%32void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%29javax.swing.JTextField*5
+
+__unknown_file (
+
+%31java.lang.String2setText(Ljava/lang/String;)íè
+
+• •(+
+
+%33int"$mage.view.DraftView#getBoosterNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getBoosterNum()åâ
+
+¶ ¶((
+
+%34int"!mage.view.DraftView#getCardNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getCardNum()®•
+
+ß ß(+
+%35java.util.List"1mage.view.DraftView#getSetCodes()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getSetCodes()w
+u
+
+ß	 ß(+,
+mage.client.draft.DraftPanel"
+
+setCodes"__id*3
+
+__unknown_file (
+
+%35java.util.Listé
+ã
+
+®	 ®((
+%36!mage.client.draft.DraftPickLogger"__id*M
+
+__unknown_file (1*/
+mage.client.draft.DraftPanel"
+draftLoggerv
+t
+
+®! ®((
+%37java.util.UUID"__id*I
+
+__unknown_file (-*+
+mage.client.draft.DraftPanel"	
+draftId‰·
+
+®	 ®(4
+%38void"Umage.client.draft.DraftPickLogger#updateDraft(Ljava/util/UUID;Lmage/view/DraftView;)V*F
+
+__unknown_file (*
+(
+%36!mage.client.draft.DraftPickLogger*3
+
+__unknown_file (
+
+%37java.util.UUID*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView22updateDraft(Ljava/util/UUID;Lmage/view/DraftView;)¶£
+
+™ ™(+
+%39java.util.List"0mage.view.DraftView#getPlayers()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getPlayers()om
+
+™ ™(2
+
+%40int"java.util.List#size()I*3
+
+__unknown_file (
+
+%39java.util.List2size()¶£
+
+´ ´(*
+%41java.util.List"0mage.view.DraftView#getPlayers()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getPlayers()om
+
+´ ´(1
+
+%42int"java.util.List#size()I*3
+
+__unknown_file (
+
+%41java.util.List2size()Ä
+~
+
+≠	 ≠(
+%43javax.swing.JLabel"__id*O
+
+__unknown_file (3*1
+mage.client.draft.DraftPanel"
+lblTableImageÄ
+~
+
+≠- ≠(:
+%44javax.swing.JLabel"__id*O
+
+__unknown_file (3*1
+mage.client.draft.DraftPanel"
+lblTableImageÑÅ
+
+≠- ≠(E
+
+%45int""javax.swing.JComponent#getWidth()I*7
+
+__unknown_file (
+
+%44javax.swing.JLabel2
+getWidth()=;
+
+≠# ≠(,
+%46java.awt.Dimension"java.awt.DimensionΩ
+∫
+
+≠ ≠(N
+%47"java.awt.Dimension#<init>(II)V*7
+
+__unknown_file (
+
+%46java.awt.Dimension*(
+
+__unknown_file (
+
+
+%45int*"
+
+__unknown_file (
+""‡›
+
+≠	 ≠(O
+%48void"1java.awt.Component#setSize(Ljava/awt/Dimension;)V*7
+
+__unknown_file (
+
+%43javax.swing.JLabel*7
+
+__unknown_file (
+
+%46java.awt.Dimension2setSize(Ljava/awt/Dimension;)íè
+
+Æ> Æ(W
+
+%49int"$mage.view.DraftView#getBoosterNum()I*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2getBoosterNum()*
+5
+6*Ó
+8
+ú ú(~
+|
+
+ú ú(
+%8javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack1üú
+
+ú# ú(6
+%9java.util.List"-mage.view.DraftView#getSets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2	getSets()à
+Ö
+
+ú# ú(=
+%10java.lang.String"
+__arrayGet*2
+
+__unknown_file (
+
+%9java.util.List*
+
+__unknown_file (2 ÍÁ
+
+ú ú(>
+%11void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%8javax.swing.JTextField*5
+
+__unknown_file (
+
+%10java.lang.String2setText(Ljava/lang/String;)
+}
+
+ù ù(
+%12javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack2†ù
+
+ù# ù(6
+%13java.util.List"-mage.view.DraftView#getSets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2	getSets()ã
+à
+
+ù# ù(=
+%14java.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%13java.util.List* 
+
+__unknown_file (2ÎË
+
+ù ù(>
+%15void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%12javax.swing.JTextField*5
+
+__unknown_file (
+
+%14java.lang.String2setText(Ljava/lang/String;)
+}
+
+û û(
+%16javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack3†ù
+
+û# û(6
+%17java.util.List"-mage.view.DraftView#getSets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2	getSets()ã
+à
+
+û# û(=
+%18java.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%17java.util.List* 
+
+__unknown_file (2ÎË
+
+û û(>
+%19void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%16javax.swing.JTextField*5
+
+__unknown_file (
+
+%18java.lang.String2setText(Ljava/lang/String;)*
+7*∆
+9
+ò ò(~
+|
+
+ò ò(
+%2javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack1„‡
+
+ò ò(5
+
+%3void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%2javax.swing.JTextField*/
+
+__unknown_file (
+Random Boosters2setText(Ljava/lang/String;)~
+|
+
+ô ô(
+%4javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack2„‡
+
+ô ô(5
+
+%5void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%4javax.swing.JTextField*/
+
+__unknown_file (
+Random Boosters2setText(Ljava/lang/String;)~
+|
+
+ö ö(
+%6javax.swing.JTextField"__id*J
+
+__unknown_file (.*,
+mage.client.draft.DraftPanel"
+
+txtPack3„‡
+
+ö ö(5
+
+%7void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%6javax.swing.JTextField*/
+
+__unknown_file (
+Random Boosters2setText(Ljava/lang/String;)*
+7*©
+10
+ñ ñ(üú
+
+ñ ñ( 
+%0java.util.List"-mage.view.DraftView#getSets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+	draftViewmage.view.DraftView2	getSets()mk
+
+ñ ñ('	
+%1int"java.util.List#size()I*2
+
+__unknown_file (
+
+%0java.util.List2size()*
+8
+9*(
+0 "!
+
+∏ ∏(
+implicit return*à
+1
+¥ ¥(X
+V
+
+¥ ¥(
+
+playerNamejava.lang.String"__id*"
+
+__unknown_file (
+""î
+ë
+
+¥ ¥(
+
+playerNamejava.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%67java.util.List*"
+
+__unknown_file (
+""*
+2
+0:.
+
+ï ï(0 
+	draftViewmage.view.DraftViewB 
+mage.client.draft.DraftPanelH

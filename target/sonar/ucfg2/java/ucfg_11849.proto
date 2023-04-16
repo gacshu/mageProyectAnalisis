@@ -1,0 +1,271 @@
+
+smage.abilities.mana.AnyColorLandsProduceManaEffect#produceMana(Lmage/game/Game;Lmage/abilities/Ability;)Lmage/Mana;v
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/mana/AnyColorLandsProduceManaAbility.javah h("startingBlock*-
+1} }(@"
+} }(@
+
+%15	mage.Mana*Í
+2}4 }(>)'
+}/ }(3
+%17	mage.Mana"	mage.Mana·
+´
+}+ }(?
+%18",mage.Mana#<init>(Lmage/constants/ManaType;)V*.
+
+__unknown_file (
+
+%17	mage.Mana*C
+
+__unknown_file ('
+%
+
+chosenTypemage.constants.ManaTypeT
+R
+}+ }(?
+%15	mage.Mana"__id*.
+
+__unknown_file (
+
+%17	mage.Mana*
+1*i
+3}$ }((U
+S
+}$ }((
+%15	mage.Mana"__id*/
+
+__unknown_file (
+
+%16
+<nulltype>*
+1*ƒ
+startingBlockh h(6Š
+‡
+g g(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+h! h(%
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19”
+‘
+g g(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+h/ h(5 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%20*
+11
+12*¥
+4| |(&£ 
+|2 |(D
+%13java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoice()î
+ë
+| |(E
+%14mage.constants.ManaType"Omage.constants.ManaType#findByName(Ljava/lang/String;)Lmage/constants/ManaType;*7
+
+__unknown_file ("
+mage.constants.ManaType*5
+
+__unknown_file (
+
+%13java.lang.Stringw
+u
+| |(F%
+
+chosenTypemage.constants.ManaType"__id*<
+
+__unknown_file ( 
+
+%14mage.constants.ManaType*
+2
+3*!
+5x x("
+x x(
+""*Û
+6w# w()“
+
+w1 w(8
+%11mage.constants.Outcome"__id*_
+
+__unknown_file (C*A4
+2mage.abilities.mana.AnyColorLandsProduceManaEffect"	
+outcome­ª
+w# w(G
+%12boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%11mage.constants.Outcome*;
+
+__unknown_file (
+
+choicemage.choices.Choice*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+4
+5*©
+7v v( °­
+v+ v(C
+%9java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ñî
+v v(D
+%10mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%9java.util.UUID2getPlayer(Ljava/util/UUID;)k
+i
+v v(E
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%10mage.players.Player*
+5
+6*Á
+8t t(ž›
+t t(0
+%5java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()”‘
+t t(;
+%6java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*1
+
+__unknown_file (
+
+%5java.util.Set2
+iterator()’
+t t(B
+%7java.lang.String"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+%6java.util.Iterator2next()ßÜ
+t t(C
+
+%8void"2mage.choices.Choice#setChoice(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*4
+
+__unknown_file (
+
+%7java.lang.String2setChoice(Ljava/lang/String;)*
+4* 
+9r r( 
+
+r r(H
+%2mage.choices.Choice"Smage.constants.ManaType#getChoiceOfManaTypes(Ljava/util/Set;Z)Lmage/choices/Choice;*7
+
+__unknown_file ("
+mage.constants.ManaType*4
+
+__unknown_file (
+
+typesjava.util.Set*"
+
+__unknown_file (
+""j
+h
+r r(I
+choicemage.choices.Choice"__id*7
+
+__unknown_file (
+
+%2mage.choices.Choicež›
+s s(
+%3java.util.Set"/mage.choices.Choice#getChoices()Ljava/util/Set;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoices()ig
+s s(&	
+%4int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%3java.util.Set2size()*
+7
+8*"
+10o o("
+o o(
+""*×
+11m m(*æ
+ã
+m m(8
+%0java.util.Set"xmage.abilities.mana.AnyColorLandsProduceManaEffect#getManaTypes(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/Set;*R
+
+__unknown_file (64
+2mage.abilities.mana.AnyColorLandsProduceManaEffect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability]
+[
+m m(9
+typesjava.util.Set"__id*1
+
+__unknown_file (
+
+%0java.util.Setvt
+n n(
+%1boolean"java.util.Set#isEmpty()Z*4
+
+__unknown_file (
+
+typesjava.util.Set2	isEmpty()*
+9
+10*"
+12j j("
+j j(
+"":"
+h h(&
+gamemage.game.Game:,
+h' h(5 
+sourcemage.abilities.AbilityB64
+2mage.abilities.mana.AnyColorLandsProduceManaEffectH

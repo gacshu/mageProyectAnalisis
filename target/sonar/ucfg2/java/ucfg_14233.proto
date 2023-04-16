@@ -1,0 +1,196 @@
+
+çmage.abilities.dynamicvalue.common.AttackingCreatureCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/AttackingCreatureCount.java- -("startingBlock*õ
+2/ /($c
+a
+/ /($+
+combatGroupmage.game.combat.CombatGroup"__id*"
+
+__unknown_file (
+""û
+õ
+/ /($+
+combatGroupmage.game.combat.CombatGroup"
+__arrayGet*2
+
+__unknown_file (
+
+%1java.util.List*"
+
+__unknown_file (
+""*
+8
+1*ı
+30 0(P
+N
+0 0(
+permIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ã
+à
+0 0(
+permIdjava.util.UUID"
+__arrayGet*2
+
+__unknown_file (
+
+%2java.util.List*"
+
+__unknown_file (
+""*
+2
+7*ê
+startingBlock- -(Iâ
+Ü
+, ,(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+- -("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8ö
+ó
+, ,(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityg
+e
+-, -(9'
+sourceAbilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9õ
+ò
+, ,(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+-B -(H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%10*
+9*’
+
+62) 2(-éã
+2) 2(B#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*6
+
+__unknown_file (
+
+permIdjava.util.UUID2getPermanent(Ljava/util/UUID;)Ä
+~
+2 2(C)
+attackermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent¨
+©
+3 3(0
+%5*mage.filter.common.FilterCreaturePermanent"__id*e
+
+__unknown_file (I*G;
+9mage.abilities.dynamicvalue.common.AttackingCreatureCount"
+filter∑¥
+3/ 3(N
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()√¿
+3 3(d
+%7boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%5*mage.filter.common.FilterCreaturePermanent*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%6java.util.UUID*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+3*ƒ
+71 1(¨
+©
+1 1(0
+%3*mage.filter.common.FilterCreaturePermanent"__id*e
+
+__unknown_file (I*G;
+9mage.abilities.dynamicvalue.common.AttackingCreatureCount"
+filter*
+3
+6*–
+80 0(*ª∏
+0 0(9
+%2java.util.List";mage.game.combat.CombatGroup#getAttackers()Ljava/util/List;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getAttackers()*
+3*ﬁ
+9/' /(+§°
+/' /(7
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¢ü
+/' /(C
+%1java.util.List"3mage.game.combat.Combat#getGroups()Ljava/util/List;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getGroups()*
+2*!
+1; ;("
+; ;(
+"":"
+- -(#
+gamemage.game.Game:3
+-$ -(:'
+sourceAbilitymage.abilities.Ability:3
+-; -(H'
+effectmage.abilities.effects.EffectB=;
+9mage.abilities.dynamicvalue.common.AttackingCreatureCountHP

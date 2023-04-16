@@ -1,0 +1,1811 @@
+
+2mage.deck.Brawl#validate(Lmage/cards/decks/Deck;)Zm
+cD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/Brawl.java- -("startingBlock*˝
+68C C(f
+d
+C C(7.
+%19'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ÚÔ
+	C C(Ç
+%20void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%19'mage.cards.decks.DeckValidatorErrorType*%
+
+__unknown_file (	
+Brawl*]
+
+__unknown_file (A?
+=Sideboard must contain only the brawler and up to 1 companion2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+49
+51
+65
+54*Ú
+69@ @(!h
+f
+@ @(!
+	companionmage.cards.Card"__id*6
+
+__unknown_file (
+
+card2mage.cards.Cardf
+d
+A A(
+brawlermage.cards.Card"__id*6
+
+__unknown_file (
+
+card1mage.cards.Card*
+49
+51
+65
+54*ó
+25
+Å Å(#wu
+
+Å Å(*
+%117int"java.util.Set#size()I*;
+
+__unknown_file (
+
+basicsInDeckjava.util.Set2size()*
+20
+21
+23*¬
+26
+Ä Ä(&ùö
+
+Ä Ä(4
+%116boolean"%mage.filter.FilterMana#isColorless()Z*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana2isColorless()*
+25
+20
+21
+23*ä
+27 (¥±
+C (Z
+%114mage.filter.FilterMana":mage.cards.Card#getColorIdentity()Lmage/filter/FilterMana;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getColorIdentity()∏
+µ
+ ([
+%115boolean"_mage.util.ManaUtil#isColorIdentityCompatible(Lmage/filter/FilterMana;Lmage/filter/FilterMana;)Z*2
+
+__unknown_file ("
+mage.util.ManaUtil*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana*<
+
+__unknown_file ( 
+
+%114mage.filter.FilterMana*
+26
+20*Ω
+28~ ~(¶£
+~ ~(,
+%113java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+20*˜
+29u u(O
+M
+u u(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ã
+à
+u u(
+cardmage.cards.Card"
+__arrayGet*3
+
+__unknown_file (
+
+%100java.util.Set*"
+
+__unknown_file (
+""*
+36
+28*Î
+70? ?(∞≠
+? ?(+
+%16mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*6
+
+__unknown_file (
+
+card2mage.cards.Card2getAbilities()Æ´
+? ?(4
+%17java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%16mage.abilities.Abilities2stream()ÏÈ
+? ?(a
+%18boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%17java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)*
+68
+69*Ú
+71= =(!h
+f
+= =(!
+	companionmage.cards.Card"__id*6
+
+__unknown_file (
+
+card1mage.cards.Cardf
+d
+> >(
+brawlermage.cards.Card"__id*6
+
+__unknown_file (
+
+card2mage.cards.Card*
+49
+51
+65
+54*â
+729" 9(&§°
+9" 9(5
+%9java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ïí
+9" 9(@
+%10java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*1
+
+__unknown_file (
+
+%9java.util.Set2
+iterator()g
+e
+9 9(A
+iterjava.util.Iterator"__id*7
+
+__unknown_file (
+
+%10java.util.Iteratorîë
+: :($
+%11mage.cards.Card"+java.util.Iterator#next()Ljava/lang/Object;*8
+
+__unknown_file (
+
+iterjava.util.Iterator2next()b
+`
+: :(%
+card1mage.cards.Card"__id*4
+
+__unknown_file (
+
+%11mage.cards.Cardîë
+; ;($
+%12mage.cards.Card"+java.util.Iterator#next()Ljava/lang/Object;*8
+
+__unknown_file (
+
+iterjava.util.Iterator2next()b
+`
+; ;(%
+card2mage.cards.Card"__id*4
+
+__unknown_file (
+
+%12mage.cards.Card∞≠
+< <($
+%13mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*6
+
+__unknown_file (
+
+card1mage.cards.Card2getAbilities()Æ´
+< <(-
+%14java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%13mage.abilities.Abilities2stream()ÏÈ
+< <(Z
+%15boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%14java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)*
+70
+71*™
+738 8(§°
+8 8(&
+%7java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ig
+8 8(-	
+%8int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%7java.util.Set2size()*
+72
+67*Å
+745 5(O
+M
+5 5(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""â
+Ü
+5 5(
+cardmage.cards.Card"
+__arrayGet*1
+
+__unknown_file (
+
+%6java.util.Set*"
+
+__unknown_file (
+""*
+49
+51
+75
+65
+54*µ	
+30z z(g
+e
+z z(5/
+%107'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ñì
+z7 z(E
+%108java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()Ø¨
+z[ z(s
+%109java.lang.String"3mage.filter.FilterMana#toString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana2
+toString()y
+w
+zG z(s
+%110java.lang.String"__concat*
+zG z(X
+Invalid color (*&
+z[ z(s
+
+%109java.lang.Stringk
+i
+zG z(y
+%111java.lang.String"__concat*&
+zG z(s
+
+%110java.lang.String*
+zv z(y
+)Çˇ
+	z z(Ä
+%112void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*M
+
+__unknown_file (1
+/
+%107'mage.cards.decks.DeckValidatorErrorType*6
+
+__unknown_file (
+
+%108java.lang.String*6
+
+__unknown_file (
+
+%111java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+29*{
+756 6(e
+c
+6 6(
+brawlermage.cards.Card"__id*5
+
+__unknown_file (
+
+cardmage.cards.Card*
+74*ª
+765 5(!§°
+5 5(0
+%6java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+74*í
+32y y(#ñì
+y- y(;
+%105java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()ﬁ€
+y y(<
+%106boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*;
+
+__unknown_file (
+
+basicsInDeckjava.util.Set*6
+
+__unknown_file (
+
+%105java.lang.String2contains(Ljava/lang/Object;)*
+29
+30* 
+77. .(i
+g
+/ /(
+%0java.util.List"__id*?
+
+__unknown_file (#*!
+mage.deck.Brawl"
+
+errorsListZ
+X
+/ /(
+
+%1void"__arrayClear*2
+
+__unknown_file (
+
+%0java.util.ListR
+P
+0 0(
+brawlermage.cards.Card"__id*"
+
+__unknown_file (
+""T
+R
+1 1(
+	companionmage.cards.Card"__id*"
+
+__unknown_file (
+""B@
+2' 2(1
+%2mage.filter.FilterMana"mage.filter.FilterManap
+n
+2# 2(3
+%3" mage.filter.FilterMana#<init>()V*:
+
+__unknown_file (
+
+%2mage.filter.FilterManaw
+u
+2 2(4'
+colorIdentitymage.filter.FilterMana"__id*:
+
+__unknown_file (
+
+%2mage.filter.FilterMana§°
+4 4(
+%4java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ig
+4 4(&	
+%5int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%4java.util.Set2size()*
+73
+76*ì
+34x x(#us
+x x(*
+%104int"java.util.Set#size()I*;
+
+__unknown_file (
+
+basicsInDeckjava.util.Set2size()*
+29
+30
+32*æ
+35w w(&õò
+w w(4
+%103boolean"%mage.filter.FilterMana#isColorless()Z*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana2isColorless()*
+29
+30
+32
+34*ä
+36v v(¥±
+vC v(Z
+%101mage.filter.FilterMana":mage.cards.Card#getColorIdentity()Lmage/filter/FilterMana;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getColorIdentity()∏
+µ
+v v([
+%102boolean"_mage.util.ManaUtil#isColorIdentityCompatible(Lmage/filter/FilterMana;Lmage/filter/FilterMana;)Z*2
+
+__unknown_file ("
+mage.util.ManaUtil*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana*<
+
+__unknown_file ( 
+
+%101mage.filter.FilterMana*
+35
+29*µ
+37u u(ûõ
+u u((
+%100java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+29*ˆ
+38o o(O
+M
+o o(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ä
+á
+o o(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%94java.util.Set*"
+
+__unknown_file (
+""*
+37
+40*Ï
+39q q( ïí
+q% q(3
+%98java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()Ω
+∫
+q q(4
+%99boolean"
+__arrayAdd*;
+
+__unknown_file (
+
+basicsInDeckjava.util.Set*
+
+__unknown_file (: *5
+
+__unknown_file (
+
+%98java.lang.String*
+38*◊
+40p p("M
+K
+p p("
+%95java.util.List"__id*"
+
+__unknown_file (
+""ïí
+p, p(:
+%96java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()’“
+p p(;
+%97boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%95java.util.List*5
+
+__unknown_file (
+
+%96java.lang.String2contains(Ljava/lang/Object;)*
+38
+39*¥
+41o o(!ùö
+o o(,
+%94java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+38*≈
+42m# m(297
+m' m(0
+%91java.util.HashSet"java.util.HashSeth
+f
+m# m(2
+%92"java.util.HashSet#<init>()V*6
+
+__unknown_file (
+
+%91java.util.HashSeti
+g
+m m(3
+basicsInDeckjava.util.Set"__id*6
+
+__unknown_file (
+
+%91java.util.HashSetöó
+n n('
+%93boolean"%mage.filter.FilterMana#isColorless()Z*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana2isColorless()*
+37
+41*Ö
+43f f(V
+T
+f f(
+
+bannedCardjava.lang.String"__id*"
+
+__unknown_file (
+""í
+è
+f f(
+
+bannedCardjava.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%87java.util.List*"
+
+__unknown_file (
+""*
+42
+45*Ù
+44h h(f
+d
+h h(6.
+%89'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ıÚ
+h h(S
+%90void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%89'mage.cards.decks.DeckValidatorErrorType*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String*&
+
+__unknown_file (
+
+Banned* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+43*˛
+45g g(„‡
+g g(.
+%88boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+countsjava.util.Map*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String2containsKey(Ljava/lang/Object;)*
+43
+44*|
+46f! f('f
+d
+f! f('
+%87java.util.List"__id*;
+
+__unknown_file (*
+mage.deck.Brawl"
+banned*
+43*Í
+49a& a(597
+a* a(3
+%80java.util.HashMap"java.util.HashMaph
+f
+a& a(5
+%81"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%80java.util.HashMapc
+a
+a a(6
+countsjava.util.Map"__id*6
+
+__unknown_file (
+
+%80java.util.HashMapùö
+b b(*
+%82java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ºπ
+b b(+
+%83void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*/
+
+__unknown_file (
+mage.deck.Brawl*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%82java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)•¢
+c c(.
+%84java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ºπ
+c c(/
+%85void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*/
+
+__unknown_file (
+mage.deck.Brawl*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%84java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)ÉÄ
+d d(&
+%86boolean";mage.cards.decks.Constructed#checkCounts(ILjava/util/Map;)Z*/
+
+__unknown_file (
+mage.deck.Brawl* 
+
+__unknown_file (2*5
+
+__unknown_file (
+
+countsjava.util.Map2checkCounts(ILjava/util/Map;)*
+46*¡
+50] ](f
+d
+] ](5.
+%69'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""åâ
+]Q ](a
+
+%70int".mage.cards.decks.Constructed#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Brawl2getDeckMinSize()h
+f
+]? ](a
+%71java.lang.String"__concat*
+]? ](N
+Must contain *
+]Q ](a
+
+
+%70intt
+r
+]? ](r
+%72java.lang.String"__concat*%
+]? ](a
+
+%71java.lang.String*
+]d ](r
+ cards: has ûõ
+	]v ](Ö
+%73java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()lj
+	]v ](å
+
+%74int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%73java.util.Set2size()ß§
+
+]è ](¢
+%75java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()mk
+
+]è ](©
+
+%76int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%75java.util.Set2size()l
+j
+	]? ](™
+%77java.lang.String"__concat*%
+]? ](r
+
+%72java.lang.String*
+	]u ](™
+""r
+p
+	]? ](µ
+%78java.lang.String"__concat*&
+	]? ](™
+
+%77java.lang.String*
+
+]≠ ](µ
+
+ cards…∆
+	] ](∂
+%79void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%69'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%78java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+49*…
+51\( \(,ùö
+\( \(7
+%64java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ki
+\( \(>
+
+%65int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%64java.util.Set2size()•¢
+\A \(T
+%66java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ki
+\A \([
+
+%67int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%66java.util.Set2size()åâ
+\_ \(o
+
+%68int".mage.cards.decks.Constructed#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Brawl2getDeckMinSize()*
+49
+50*ˆ
+53Z Z(f
+d
+Z Z(5.
+%53'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""åâ
+ZR Z(b
+
+%54int".mage.cards.decks.Constructed#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Brawl2getDeckMinSize()b
+`
+Z? Z(g
+%55java.lang.String"__concat*
+Z? Z(N
+Must contain *
+ZQ Z(g
+""™
+ß
+	Z? Z(´
+%56java.lang.String"__concat*%
+Z? Z(g
+
+%55java.lang.String*P
+	Zj Z(´CA
+? cards (companion doesn't count in deck size requirement): has üú
+
+ZØ Z(æ
+%57java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()mk
+
+ZØ Z(≈
+
+%58int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%57java.util.Set2size()ß§
+
+Z» Z(€
+%59java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()mk
+
+Z» Z(‚
+
+%60int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%59java.util.Set2size()n
+l
+	Z? Z(„
+%61java.lang.String"__concat*&
+	Z? Z(´
+
+%56java.lang.String*
+
+ZÆ Z(„
+""r
+p
+	Z? Z(Ó
+%62java.lang.String"__concat*&
+	Z? Z(„
+
+%61java.lang.String*
+
+ZÊ Z(Ó
+
+ cards…∆
+	Z Z(Ô
+%63void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%53'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%62java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+49*Õ
+54Y! Y(%ùö
+Y! Y(0
+%48java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ki
+Y! Y(7
+
+%49int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%48java.util.Set2size()•¢
+Y: Y(M
+%50java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ki
+Y: Y(T
+
+%51int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%50java.util.Set2size()åâ
+YX Y(h
+
+%52int".mage.cards.decks.Constructed#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Brawl2getDeckMinSize()*
+49
+51
+53*ˇ
+10
+è è(Q
+O
+
+è è(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ç
+ä
+
+è è(
+cardmage.cards.Card"
+__arrayGet*3
+
+__unknown_file (
+
+%135java.util.Set*"
+
+__unknown_file (
+""*
+
+13
+8
+1*⁄
+11
+í í(i
+g
+
+í í(=/
+%139'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""òï
+
+í? í(M
+%140java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()∞≠
+
+íe í(
+%141java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()Å
+
+
+íO í(
+%142java.lang.String"__concat*#
+
+íO í(b
+Not allowed Set: *(
+
+íe í(
+
+%141java.lang.StringÑÅ
+í í(Ü
+%143void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*M
+
+__unknown_file (1
+/
+%139'mage.cards.decks.DeckValidatorErrorType*6
+
+__unknown_file (
+
+%140java.lang.String*6
+
+__unknown_file (
+
+%142java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+10*°	
+56T T(f
+d
+T T(7.
+%42'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""òï
+T9 T(J
+%43java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2	getName()òï
+Tb T(s
+%44java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2	getName()y
+w
+TL T(s
+%45java.lang.String"__concat*!
+TL T(_
+Brawler Invalid (*%
+Tb T(s
+
+%44java.lang.Stringi
+g
+TL T(y
+%46java.lang.String"__concat*%
+TL T(s
+
+%45java.lang.String*
+Tv T(y
+)˛˚
+	T T(Ä
+%47void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%42'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%43java.lang.String*5
+
+__unknown_file (
+
+%46java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+49
+51
+54*ˇ
+12
+ë ë(‚ﬂ
+
+ë ë($
+%138boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*/
+
+__unknown_file (
+mage.deck.Brawl*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+10
+11*ª
+13
+ê ê(∞≠
+
+ê ê(8
+%136java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()ÎË
+
+ê ê(9
+%137boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*/
+
+__unknown_file (
+mage.deck.Brawl*6
+
+__unknown_file (
+
+%136java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+10
+12*ı
+58S S(≤Ø
+S S(-
+%39mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2getAbilities()Ü
+É
+S7 S(^6
+%40/mage.abilities.common.CanBeYourCommanderAbility"nmage.abilities.common.CanBeYourCommanderAbility#getInstance()Lmage/abilities/common/CanBeYourCommanderAbility;*O
+
+__unknown_file (3"1
+/mage.abilities.common.CanBeYourCommanderAbilityîë
+S S(_
+%41boolean"<mage.abilities.Abilities#contains(Lmage/abilities/Ability;)Z*=
+
+__unknown_file (!
+
+%39mage.abilities.Abilities*T
+
+__unknown_file (8
+6
+%40/mage.abilities.common.CanBeYourCommanderAbility2"contains(Lmage/abilities/Ability;)*
+49
+51
+54
+56*¡
+14
+è è(®•
+
+è è(,
+%135java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+10*˝
+15
+á á(Q
+O
+
+á á(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ç
+ä
+
+á á(
+cardmage.cards.Card"
+__arrayGet*3
+
+__unknown_file (
+
+%126java.util.Set*"
+
+__unknown_file (
+""*
+14
+18*⁄
+16
+ä ä(i
+g
+
+ä ä(=/
+%130'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""òï
+
+ä? ä(M
+%131java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()∞≠
+
+äe ä(
+%132java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()Å
+
+
+äO ä(
+%133java.lang.String"__concat*#
+
+äO ä(b
+Not allowed Set: *(
+
+äe ä(
+
+%132java.lang.StringÑÅ
+ä ä(Ü
+%134void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*M
+
+__unknown_file (1
+/
+%130'mage.cards.decks.DeckValidatorErrorType*6
+
+__unknown_file (
+
+%131java.lang.String*6
+
+__unknown_file (
+
+%133java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+15*ˇ
+17
+â â(‚ﬂ
+
+â â($
+%129boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*/
+
+__unknown_file (
+mage.deck.Brawl*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+15
+16*ª
+18
+à à(∞≠
+
+à à(8
+%127java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()ÎË
+
+à à(9
+%128boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*/
+
+__unknown_file (
+mage.deck.Brawl*6
+
+__unknown_file (
+
+%127java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+15
+17*π
+19
+á á(†ù
+
+á á((
+%126java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+15*%
+1
+® ®("
+
+® ®(
+""*ú
+2
+õ õ( [
+Y
+
+õ õ( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""¢
+ü
+
+õ õ( !
+abilitymage.abilities.Ability"
+__arrayGet*>
+
+__unknown_file ("
+ 
+%148mage.abilities.Abilities*"
+
+__unknown_file (
+""*	
+2
+5
+1*ï
+startingBlock- -(&í
+è
+, ,(
+%156"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck_
+]
+-! -(%
+deckmage.cards.decks.Deck"__annotation*$
+
+__unknown_file (
+
+%156*
+77*´
+
+4
+ü ü( i
+g
+
+ü! ü(?/
+%151'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ùö
+
+üA ü(T
+%152java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	companionmage.cards.Card2	getName()ﬁ€
+
+†M †(l
+%153java.lang.String"Hmage.abilities.keyword.CompanionAbility#getLegalRule()Ljava/lang/String;*Y
+
+__unknown_file (=
+;
+companionAbility'mage.abilities.keyword.CompanionAbility2getLegalRule()¢
+ü
+
+†  †(m
+%154java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*;
+
+__unknown_file (
+Brawl companion illegal: %s*6
+
+__unknown_file (
+
+%153java.lang.StringÉÄ
+
+ü †(t
+%155void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*M
+
+__unknown_file (1
+/
+%151'mage.cards.decks.DeckValidatorErrorType*6
+
+__unknown_file (
+
+%152java.lang.String*6
+
+__unknown_file (
+
+%154java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+1*˝
+5
+ùK ù(Rì
+ê
+
+ù ù(S;
+companionAbility'mage.abilities.keyword.CompanionAbility"__id*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityèå
+
+û9 û(I
+%149int".mage.cards.decks.Constructed#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Brawl2getDeckMinSize()ª∏
+
+û û(J
+%150boolean"Bmage.abilities.keyword.CompanionAbility#isLegal(Ljava/util/Set;I)Z*Y
+
+__unknown_file (=
+;
+companionAbility'mage.abilities.keyword.CompanionAbility*4
+
+__unknown_file (
+
+cardsjava.util.Set*)
+
+__unknown_file (
+
+%149int2isLegal(Ljava/util/Set;I)*
+4
+1*Œ
+7
+õ# õ(,∑¥
+
+õ# õ(; 
+%148mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*:
+
+__unknown_file (
+
+	companionmage.cards.Card2getAbilities()*
+2*÷
+8
+ô, ô(0†ù
+
+ô, ô(;
+%144java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()<:
+
+ô" ô(+
+%145java.util.HashSet"java.util.HashSet∏
+µ
+
+ô ô(<
+%146"1java.util.HashSet#<init>(Ljava/util/Collection;)V*7
+
+__unknown_file (
+
+%145java.util.HashSet*3
+
+__unknown_file (
+
+%144java.util.Sete
+c
+
+ô ô(=
+cardsjava.util.Set"__id*7
+
+__unknown_file (
+
+%145java.util.HashSetº
+π
+
+ö ö(
+%147boolean"
+__arrayAdd*4
+
+__unknown_file (
+
+cardsjava.util.Set*
+
+__unknown_file (: *8
+
+__unknown_file (
+
+brawlermage.cards.Card*
+7*ì
+60R R(V
+T
+R: R(O
+%37mage.constants.CardType"__id*"
+
+__unknown_file (
+""îë
+R R(P
+%38boolean"Fmage.cards.Card#hasCardTypeForDeckbuilding(Lmage/constants/CardType;)Z*8
+
+__unknown_file (
+
+brawlermage.cards.Card*<
+
+__unknown_file ( 
+
+%37mage.constants.CardType25hasCardTypeForDeckbuilding(Lmage/constants/CardType;)*
+58
+49
+51
+54
+56*±
+62QL Q(SÜÉ
+QL Q(a
+%36boolean"mage.MageObject#isLegendary()Z*8
+
+__unknown_file (
+
+brawlermage.cards.Card2isLegendary()*
+58
+49
+60
+51
+54
+56*õ
+63Q Q(V
+T
+Q6 Q(G
+%34mage.constants.CardType"__id*"
+
+__unknown_file (
+""îë
+Q Q(H
+%35boolean"Fmage.cards.Card#hasCardTypeForDeckbuilding(Lmage/constants/CardType;)Z*8
+
+__unknown_file (
+
+brawlermage.cards.Card*<
+
+__unknown_file ( 
+
+%34mage.constants.CardType25hasCardTypeForDeckbuilding(Lmage/constants/CardType;)*
+58
+49
+60
+62
+51
+54
+56*ó	
+64N N(f
+d
+N N(7.
+%28'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""òï
+N9 N(J
+%29java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2	getName()òï
+Na N(r
+%30java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2	getName()x
+v
+NL N(r
+%31java.lang.String"__concat* 
+NL N(^
+Brawler banned (*%
+Na N(r
+
+%30java.lang.Stringi
+g
+NL N(x
+%32java.lang.String"__concat*%
+NL N(r
+
+%31java.lang.String*
+Nu N(x
+)˝˙
+N N(
+%33void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%28'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%29java.lang.String*5
+
+__unknown_file (
+
+%32java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+63*˜
+20~ ~(O
+M
+~ ~(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ã
+à
+~ ~(
+cardmage.cards.Card"
+__arrayGet*3
+
+__unknown_file (
+
+%113java.util.Set*"
+
+__unknown_file (
+""*
+27
+19*Ê
+65L L(∂≥
+L9 L(S
+%23mage.filter.FilterMana":mage.cards.Card#getColorIdentity()Lmage/filter/FilterMana;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2getColorIdentity()Æ
+´
+L L(T
+%24void"Zmage.util.ManaUtil#collectColorIdentity(Lmage/filter/FilterMana;Lmage/filter/FilterMana;)V*2
+
+__unknown_file ("
+mage.util.ManaUtil*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana*;
+
+__unknown_file (
+
+%23mage.filter.FilterManao
+m
+M M(
+%25java.util.List"__id*D
+
+__unknown_file ((*&
+mage.deck.Brawl"
+bannedCommanderòï
+M) M(:
+%26java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+brawlermage.cards.Card2	getName()’“
+M M(;
+%27boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%25java.util.List*5
+
+__unknown_file (
+
+%26java.lang.String2contains(Ljava/lang/Object;)*
+63
+64*À	
+21
+É É(i
+g
+
+É É(5/
+%120'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""òï
+
+É7 É(E
+%121java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()±Æ
+
+É[ É(s
+%122java.lang.String"3mage.filter.FilterMana#toString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+colorIdentitymage.filter.FilterMana2
+toString()
+}
+
+ÉG É(s
+%123java.lang.String"__concat*!
+
+ÉG É(X
+Invalid color (*(
+
+É[ É(s
+
+%122java.lang.Stringq
+o
+
+ÉG É(y
+%124java.lang.String"__concat*(
+
+ÉG É(s
+
+%123java.lang.String*
+
+Év É(y
+)ÑÅ
+É É(Ä
+%125void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Brawl*M
+
+__unknown_file (1
+/
+%120'mage.cards.decks.DeckValidatorErrorType*6
+
+__unknown_file (
+
+%121java.lang.String*6
+
+__unknown_file (
+
+%124java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+20*¸
+67G G(f
+d
+G G(3.
+%21'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ÒÓ
+G G(~
+%22void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*/
+
+__unknown_file (
+mage.deck.Brawl*L
+
+__unknown_file (0
+.
+%21'mage.cards.decks.DeckValidatorErrorType*%
+
+__unknown_file (	
+Brawl*]
+
+__unknown_file (A?
+=Sideboard must contain only the brawler and up to 1 companion2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+49
+51
+65
+54*ò
+23
+Ç Ç(#òï
+
+Ç- Ç(;
+%118java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()‡›
+
+Ç Ç(<
+%119boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*;
+
+__unknown_file (
+
+basicsInDeckjava.util.Set*6
+
+__unknown_file (
+
+%118java.lang.String2contains(Ljava/lang/Object;)*
+20
+21:)
+- -(%
+deckmage.cards.decks.DeckB
+mage.deck.BrawlHP

@@ -1,0 +1,404 @@
+
+Ymage.game.permanent.PermanentImpl#canAttackInPrinciple(Ljava/util/UUID;Lmage/game/Game;)Zf
+ZD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/PermanentImpl.javaÈ
+ È
+('"startingBlock*÷
+
+2
+˝
+ ˝
+(ﬂ‹
+
+˝
+ ˝
+(6/
+%16(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()|
+z
+
+˝
+@ ˝
+(M
+%17java.util.UUID"__id*O
+
+__unknown_file (3*1#
+!mage.game.permanent.PermanentImpl"
+
+objectIdb
+`
+
+˝
+O ˝
+(h(
+%18!mage.constants.AsThoughEffectType"__id*"
+
+__unknown_file (
+""¬ø
+˝
+p ˝
+(Ü
+%19java.util.UUID"Cmage.game.permanent.PermanentImpl#getControllerId()Ljava/util/UUID;*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getControllerId()∂≥
+˝
+ ˝
+(ç
+%20mage.ApprovingObject"¥mage.abilities.effects.ContinuousEffects#asThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/ApprovingObject;*M
+
+__unknown_file (1
+/
+%16(mage.abilities.effects.ContinuousEffects*3
+
+__unknown_file (
+
+%17java.util.UUID*F
+
+__unknown_file (*
+(
+%18!mage.constants.AsThoughEffectType*"
+
+__unknown_file (
+""*3
+
+__unknown_file (
+
+%19java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2uasThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+1*™
+3
+¸
+ ¸
+(à
+Ö
+
+¸
+ ¸
+(
+%12mage.abilities.Abilities"__id*P
+
+__unknown_file (4*2#
+!mage.game.permanent.PermanentImpl"
+	abilities‰
+·
+
+¸
+& ¸
+(C-
+%13&mage.abilities.keyword.DefenderAbility"\mage.abilities.keyword.DefenderAbility#getInstance()Lmage/abilities/keyword/DefenderAbility;*F
+
+__unknown_file (*"(
+&mage.abilities.keyword.DefenderAbility∞≠
+
+¸
+& ¸
+(K
+%14java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%13&mage.abilities.keyword.DefenderAbility2getId()ÎË
+
+¸
+ ¸
+(L
+%15boolean"7mage.abilities.Abilities#containsKey(Ljava/util/UUID;)Z*=
+
+__unknown_file (!
+
+%12mage.abilities.Abilities*3
+
+__unknown_file (
+
+%14java.util.UUID2containsKey(Ljava/util/UUID;)*
+2
+1*Å
+startingBlock
+È
+' È
+(Cí
+è
+
+Ë
+ Ë
+(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID_
+]
+
+È
+- È
+(7
+
+defenderIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%21å
+â
+
+Ë
+ Ë
+(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+È
+> È
+(B
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22*
+11*%
+4
+˘
+ ˘
+("
+
+˘
+ ˘
+(
+""*’
+5
+¯
+ ¯
+(4ª
+∏
+
+¯
+ ¯
+(F
+%11boolean"emage.game.permanent.PermanentImpl#canAttackCheckRestrictionEffects(Ljava/util/UUID;Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game*
+3
+4*%
+6
+ˆ
+ ˆ
+("
+
+ˆ
+ ˆ
+(
+""*Ô	
+7
+Ú
+ Ú
+(¶£
+
+Ú
+ Ú
+( 
+%5mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()®•
+
+Ú
+ Û
+(#
+%6java.util.Set"5mage.game.combat.Combat#getDefenders()Ljava/util/Set;*;
+
+__unknown_file (
+
+%5mage.game.combat.Combat2getDefenders()£†
+
+Ú
+ Ù
+(
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%6java.util.Set2stream()ú
+ô
+
+ı
+ ı
+(m"
+%8java.util.function.Predicate"__declareFunction*T
+
+__unknown_file (86
+4__sonar_lambda_130$mage.game.permanent.PermanentImplá
+Ñ
+
+__unknown_file (,
+"
+%8java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¢
+ü
+
+__unknown_file (:
+"
+%8java.util.function.Predicate"
+PermanentImpl.this"__id*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImplçä
+
+Ú
+ ı
+(n
+%10boolean"Bjava.util.stream.Stream#noneMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2)noneMatch(Ljava/util/function/Predicate;)*
+3
+6*%
+9
+Ó
+ Ó
+("
+
+Ó
+ Ó
+(
+""*«
+11
+Í
+* Í
+(.ﬁ€
+
+Í
+* Í
+(E.
+%0(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects(){
+y
+
+Î
+ Î
+(
+%1java.util.UUID"__id*O
+
+__unknown_file (3*1#
+!mage.game.permanent.PermanentImpl"
+
+objectIda
+_
+
+Î
+ Î
+(A'
+%2!mage.constants.AsThoughEffectType"__id*"
+
+__unknown_file (
+""∏µ
+
+Í
+* Ï
+(	
+%3mage.ApprovingObject"¥mage.abilities.effects.ContinuousEffects#asThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/ApprovingObject;*L
+
+__unknown_file (0
+.
+%0(mage.abilities.effects.ContinuousEffects*2
+
+__unknown_file (
+
+%1java.util.UUID*E
+
+__unknown_file ()
+'
+%2!mage.constants.AsThoughEffectType*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2uasThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)w
+u
+
+Í
+ Ï
+(
+'
+approvingObjectmage.ApprovingObject"__id*8
+
+__unknown_file (
+
+%3mage.ApprovingObject¥±
+
+Ì
+ Ì
+("
+%4boolean"9mage.game.permanent.PermanentImpl#hasSummoningSickness()Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2hasSummoningSickness()*	
+5
+7
+9*'
+1¸
+ ˝
+(é"
+¸
+ ˝
+(é
+"":*
+
+È
+( È
+(8
+
+defenderIdjava.util.UUID:$
+
+È
+9 È
+(B
+gamemage.game.GameB%#
+!mage.game.permanent.PermanentImplHP

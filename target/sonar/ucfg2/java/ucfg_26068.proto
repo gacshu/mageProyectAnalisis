@@ -1,0 +1,238 @@
+
+Pmage.server.UserManagerImpl#getUserHistory(Ljava/lang/String;)Ljava/lang/String;g
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/UserManagerImpl.java≠ ≠( "startingBlock*√
+2
+µ µ(%Ñ
+Å
+
+µ µ(0
+%10java.lang.String"__concat*"
+
+µ µ(%
+History of user *,
+
+µ( µ(0
+
+userNamejava.lang.Stringq
+o
+
+µ µ(8
+%11java.lang.String"__concat*'
+
+µ µ(0
+
+%10java.lang.String*
+
+µ3 µ(8
+ - Ì
+
+µS µ(g3
+%12,mage.game.result.ResultProtos$UserStatsProto"Umage.server.record.UserStats#getProto()Lmage/game/result/ResultProtos$UserStatsProto;*G
+
+__unknown_file (+
+)
+	userStatsmage.server.record.UserStats2
+getProto()î
+ë
+
+µ; µ(h
+%13java.lang.String"emage.server.User#userStatsToHistory(Lmage/game/result/ResultProtos$UserStatsProto;)Ljava/lang/String;*0
+
+__unknown_file ("
+mage.server.User*Q
+
+__unknown_file (5
+3
+%12,mage.game.result.ResultProtos$UserStatsProtoÑ
+Å
+
+µ µ(h
+%14java.lang.String"__concat*'
+
+µ µ(8
+
+%11java.lang.String*'
+
+µ; µ(h
+
+%13java.lang.String"'
+
+µ µ(i
+
+%14java.lang.String*¿
+3
+≥ ≥(1f
+d
+
+≥ ≥(:,
+%8&mage.server.record.UserStatsRepository"__id*"
+
+__unknown_file (
+""∫∑
+
+≥ ≥(L"
+%9mage.server.record.UserStats"`mage.server.record.UserStatsRepository#getUser(Ljava/lang/String;)Lmage/server/record/UserStats;*J
+
+__unknown_file (.
+,
+%8&mage.server.record.UserStatsRepository*:
+
+__unknown_file (
+
+userNamejava.lang.String2getUser(Ljava/lang/String;)Å
+
+
+≥ ≥(M)
+	userStatsmage.server.record.UserStats"__id*@
+
+__unknown_file ($
+"
+%9mage.server.record.UserStats*
+2
+1*ñ
+startingBlock
+≠  ≠(1í
+è
+
+¨ ¨(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+userNamejava.lang.String_
+]
+
+≠( ≠(0
+userNamejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%17*
+5*¨
+4
+∞ ∞(%É
+Ä
+
+∞ ∞(0
+%2java.lang.String"__concat*"
+
+∞ ∞(%
+History of user *,
+
+∞( ∞(0
+
+userNamejava.lang.Stringo
+m
+
+∞ ∞(8
+%3java.lang.String"__concat*&
+
+∞ ∞(0
+
+%2java.lang.String*
+
+∞3 ∞(8
+ - îë
+
+∞; ∞(E
+%4mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()∞≠
+
+∞; ∞(S
+%5mage.players.net.UserData"9mage.server.User#getUserData()Lmage/players/net/UserData;*4
+
+__unknown_file (
+
+%4mage.server.User2getUserData()Æ´
+
+∞; ∞(`
+%6java.lang.String"8mage.players.net.UserData#getHistory()Ljava/lang/String;*=
+
+__unknown_file (!
+
+%5mage.players.net.UserData2getHistory()Ä
+~
+
+∞ ∞(`
+%7java.lang.String"__concat*&
+
+∞ ∞(8
+
+%3java.lang.String*&
+
+∞; ∞(`
+
+%6java.lang.String"&
+
+∞ ∞(a
+
+%7java.lang.String*•
+5
+Æ Æ(+òï
+
+Æ Æ(5
+%0java.util.Optional"Qmage.server.UserManagerImpl#getUserByName(Ljava/lang/String;)Ljava/util/Optional;*;
+
+__unknown_file (
+mage.server.UserManagerImpl*:
+
+__unknown_file (
+
+userNamejava.lang.String2!getUserByName(Ljava/lang/String;)h
+f
+
+Æ Æ(6
+userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%0java.util.OptionalÜÉ
+
+Ø Ø(
+%1boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+3
+4*¨
+1
+∏ ∏(x
+v
+
+∏ ∏(!
+%15java.lang.String"__concat*
+
+∏ ∏(	
+User *,
+
+∏ ∏(!
+
+userNamejava.lang.Stringx
+v
+
+∏ ∏(0
+%16java.lang.String"__concat*'
+
+∏ ∏(!
+
+%15java.lang.String*
+
+∏$ ∏(0
+
+ not found"'
+
+∏ ∏(1
+
+%16java.lang.String:*
+
+≠! ≠(0
+userNamejava.lang.StringB
+mage.server.UserManagerImplH

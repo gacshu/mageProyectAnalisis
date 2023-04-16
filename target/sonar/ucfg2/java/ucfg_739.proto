@@ -1,0 +1,323 @@
+
+}mage.player.ai.ComputerPlayer#chooseMode(Lmage/abilities/Modes;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/abilities/Mode;Ä
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.java≈ ≈("startingBlock*Å
+2
+– –(U
+S
+
+– –(
+modemage.abilities.Mode"__id*"
+
+__unknown_file (
+""ê
+ç
+
+– –(
+modemage.abilities.Mode"
+__arrayGet*2
+
+__unknown_file (
+
+%7java.util.List*"
+
+__unknown_file (
+""*
+8
+1*<
+3
+ÿ ÿ("+
+
+ÿ ÿ(
+
+modemage.abilities.Mode*Å
+startingBlock
+≈ ≈(Bì
+ê
+
+ƒ ƒ(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+modesmage.abilities.Modes`
+^
+
+≈! ≈(&
+modesmage.abilities.Modes"__annotation*#
+
+__unknown_file (
+
+%16ñ
+ì
+
+ƒ ƒ(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+≈0 ≈(6 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17å
+â
+
+ƒ ƒ(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+≈= ≈(A
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18*
+12*°
+4
+◊ ◊(´®
+
+◊ ◊(!
+%13mage.target.Targets"5mage.abilities.Mode#getTargets()Lmage/target/Targets;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getTargets()≥∞
+
+◊, ◊(D
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()£†
+
+◊ ◊(S
+%15boolean"Xmage.target.Targets#canChoose(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*8
+
+__unknown_file (
+
+%13mage.target.Targets*3
+
+__unknown_file (
+
+%14java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CcanChoose(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+3*ã
+5
+— —($Z
+X
+
+— —($ 
+selectedModeIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ï
+í
+
+— —($ 
+selectedModeIdjava.util.UUID"
+__arrayGet*2
+
+__unknown_file (
+
+%8java.util.List*"
+
+__unknown_file (
+""*
+4
+7*œ
+7
+“$ “()±
+Æ
+
+“$ “(=
+%9mage.abilities.Mode"__mapGet*;
+
+__unknown_file (
+
+modesmage.abilities.Modes*>
+
+__unknown_file ("
+ 
+selectedModeIdjava.util.UUIDr
+p
+
+“ “(>#
+selectedModemage.abilities.Mode"__id*7
+
+__unknown_file (
+
+%9mage.abilities.Modeüú
+
+” ”((
+%10java.util.UUID"+mage.abilities.Mode#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+selectedModemage.abilities.Mode2getId()óî
+
+”0 ”(<
+%11java.util.UUID"+mage.abilities.Mode#getId()Ljava/util/UUID;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getId()—Œ
+
+” ”(=
+%12boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%10java.util.UUID*3
+
+__unknown_file (
+
+%11java.util.UUID2equals(Ljava/lang/Object;)*
+2
+5*∆
+8
+—' —(,Ø¨
+
+—' —(?
+%8java.util.List"7mage.abilities.Modes#getSelectedModes()Ljava/util/List;*;
+
+__unknown_file (
+
+modesmage.abilities.Modes2getSelectedModes()*
+5*é
+9
+– –(˜Ù
+
+– –(>
+%7java.util.List"`mage.abilities.Modes#getAvailableModes(Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*;
+
+__unknown_file (
+
+modesmage.abilities.Modes*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2;getAvailableModes(Lmage/abilities/Ability;Lmage/game/Game;)*
+2*Â
+10
+… …(ß§
+
+… …("
+%6mage.abilities.Mode"3mage.abilities.Modes#getMode()Lmage/abilities/Mode;*;
+
+__unknown_file (
+
+modesmage.abilities.Modes2	getMode()")
+
+… …(#
+
+%6mage.abilities.Mode*é
+11
+«' «(,—Œ
+
+«' «(F	
+%3int"Kmage.abilities.Modes#getMaxModes(Lmage/game/Game;Lmage/abilities/Ability;)I*;
+
+__unknown_file (
+
+modesmage.abilities.Modes*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability25getMaxModes(Lmage/game/Game;Lmage/abilities/Ability;)Ø¨
+
+«J «(b
+%4java.util.List"7mage.abilities.Modes#getSelectedModes()Ljava/util/List;*;
+
+__unknown_file (
+
+modesmage.abilities.Modes2getSelectedModes()mk
+
+«J «(i	
+%5int"java.util.List#size()I*2
+
+__unknown_file (
+
+%4java.util.List2size()*
+9
+10*Ù
+12
+∆ ∆(W
+U
+
+∆ ∆(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""’“
+
+∆ ∆(
+
+%1void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger**
+
+__unknown_file (
+
+chooseMode2debug(Ljava/lang/Object;)ß§
+
+« «(
+%2mage.abilities.Mode"3mage.abilities.Modes#getMode()Lmage/abilities/Mode;*;
+
+__unknown_file (
+
+modesmage.abilities.Modes2	getMode()*
+9
+11*%
+1
+€ €("
+
+€ €(
+"":+
+
+≈ ≈('
+modesmage.abilities.Modes:.
+
+≈( ≈(7 
+sourcemage.abilities.Ability:$
+
+≈8 ≈(A
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerH

@@ -1,0 +1,171 @@
+
+lmage.abilities.keyword.DashAddDelayedTriggeredAbilityEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Ze
+[D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/DashAbility.java> >("startingBlock*!
+2@ @("
+@ @(
+""*›
+3? ?(®•
+?& ?(:
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()öó
+? ?(;#
+%1mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)*
+2
+1*˛
+startingBlock> >(3ä
+á
+= =(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+> >("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15î
+ë
+= =(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+>, >(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%16*
+3*Ï
+1C C(ÉÄ
+D D(,<
+%26mage.abilities.effects.common.ReturnToHandTargetEffect"6mage.abilities.effects.common.ReturnToHandTargetEffect±
+Æ
+D D(.
+%3"@mage.abilities.effects.common.ReturnToHandTargetEffect#<init>()V*Z
+
+__unknown_file (>
+<
+%26mage.abilities.effects.common.ReturnToHandTargetEffectÓÎ
+D E(g#
+%4mage.abilities.effects.Effect"\mage.abilities.effects.EffectImpl#setText(Ljava/lang/String;)Lmage/abilities/effects/Effect;*Z
+
+__unknown_file (>
+<
+%26mage.abilities.effects.common.ReturnToHandTargetEffect*c
+
+__unknown_file (GE
+Creturn the dashed creature from the battlefield to its owner's hand2setText(Ljava/lang/String;)®•
+F: F(N
+%5java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()öó
+FP F(_
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()©¶
+	Fu F(â
+%7java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÎË
+	FP F(ä	
+%8int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*7
+
+__unknown_file (
+
+%6mage.game.GameState*2
+
+__unknown_file (
+
+%7java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)`^
+F. F(9+
+%9%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget˙
+˜
+	F* F(è
+%10"@mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;I)V*I
+
+__unknown_file (-
++
+%9%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%5java.util.UUID*"
+
+__unknown_file (
+""˘ˆ
+	D F(ê$
+%11mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*A
+
+__unknown_file (%
+#
+%4mage.abilities.effects.Effect*I
+
+__unknown_file (-
++
+%9%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)∞≠
+C, C(ZS
+%12Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility"Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility¬
+ø
+C( G(	
+%13"umage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility#<init>(Lmage/abilities/effects/Effect;)V*q
+
+__unknown_file (U
+S
+%12Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*B
+
+__unknown_file (&
+$
+%11mage.abilities.effects.EffectËÂ
+C G(
+%14java.util.UUID"{mage.game.Game#addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*q
+
+__unknown_file (U
+S
+%12Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2\addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)"
+H H(
+"":"
+> >(#
+gamemage.game.Game:,
+>$ >(2 
+sourcemage.abilities.AbilityB?=
+;mage.abilities.keyword.DashAddDelayedTriggeredAbilityEffectHP

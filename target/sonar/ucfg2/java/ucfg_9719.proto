@@ -1,0 +1,204 @@
+
+Omage.abilities.keyword.BoastAbility#getMaxActivationsPerTurn(Lmage/game/Game;)If
+\D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/BoastAbility.java4 4('"startingBlock*\
+2CE C(FH
+F
+CE C(F
+
+%15int"__id*(
+
+__unknown_file (
+
+
+%17int*
+1*\
+3CA C(BH
+F
+CA C(B
+
+%15int"__id*(
+
+__unknown_file (
+
+
+%16int*
+1*Ñ
+startingBlock4' 4(2ä
+á
+3 3(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+4- 4(1
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18*
+9*Î
+4< <(æª
+< <($%
+%5mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()j
+h
+> >(A2
+%6,mage.filter.common.FilterControlledPermanent"__id*"
+
+__unknown_file (
+""π∂
+? ?()
+%7java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*C
+
+__unknown_file ('%
+#mage.abilities.keyword.BoastAbility2getControllerId()ÚÔ
+< @(
+%8java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%5mage.game.permanent.Battlefield*P
+
+__unknown_file (4
+2
+%6,mage.filter.common.FilterControlledPermanent*2
+
+__unknown_file (
+
+%7java.util.UUID*C
+
+__unknown_file ('%
+#mage.abilities.keyword.BoastAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¢ü
+< @(
+%9java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%8java.util.List2stream()ú
+ô
+A A(."
+%10java.util.function.Function"__declareFunction*V
+
+__unknown_file (:8
+6__sonar_lambda_196$mage.abilities.keyword.BoastAbilityá
+Ñ
+
+__unknown_file (,
+"
+%10java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game•¢
+< A(/
+%12java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%10java.util.function.Function2"map(Ljava/util/function/Function;)êç
+< B(,
+%13java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)ÏÈ
+< C(>
+%14boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%13java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)*
+2
+3*!
+5: :("
+: :(
+""*Å
+69" 9(+ÈÊ
+9" 9(<
+%4boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+4
+5*⁄
+78 8("±Æ
+80 8(=
+%2java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*C
+
+__unknown_file ('%
+#mage.abilities.keyword.BoastAbility2getSourceId()äá
+8 8(>#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+8 8(?*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+4
+6*!
+86 6("
+6 6(
+""*Æ
+95 5(π∂
+5! 5(2
+%0java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*C
+
+__unknown_file ('%
+#mage.abilities.keyword.BoastAbility2getControllerId()⁄◊
+5 5(3
+%1boolean"0mage.game.Game#isActivePlayer(Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2 isActivePlayer(Ljava/util/UUID;)*
+7
+8*!
+1< C(G"
+< C(G
+"":"
+4( 4(1
+gamemage.game.GameB'%
+#mage.abilities.keyword.BoastAbilityHP

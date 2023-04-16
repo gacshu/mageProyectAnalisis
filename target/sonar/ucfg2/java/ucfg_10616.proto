@@ -1,0 +1,259 @@
+
+{mage.abilities.keyword.OfferingCostReductionEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/Ability;)Zk
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/OfferingAbility.javaá á("startingBlock*ò
+2
+ä ä(åâ
+
+ä ä(+
+%3boolean"Rmage.game.permanent.Permanent#sacrifice(Lmage/abilities/Ability;Lmage/game/Game;)Z*F
+
+__unknown_file (*
+(
+toOffermage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23sacrifice(Lmage/abilities/Ability;Lmage/game/Game;)ÍÊ
+
+å@ å(Y!
+%4mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*F
+
+__unknown_file (*
+(
+toOffermage.game.permanent.Permanent2getSpellAbility()ÛØ
+
+å@ å(h)
+%5#mage.abilities.costs.mana.ManaCosts"Nmage.abilities.AbilityImpl#getManaCosts()Lmage/abilities/costs/mana/ManaCosts;*?
+
+__unknown_file (#
+!
+%4mage.abilities.SpellAbility2getManaCosts()Å
+Â
+
+å å(i
+
+%6void"bmage.util.CardUtil#reduceCost(Lmage/abilities/SpellAbility;Lmage/abilities/costs/mana/ManaCosts;)V*2
+
+__unknown_file ("
+mage.util.CardUtil*G
+
+__unknown_file (+
+)
+abilityToModifymage.abilities.Ability*G
+
+__unknown_file (+
+)
+%5#mage.abilities.costs.mana.ManaCosts*
+1*½
+3
+â â( …‚
+
+â. â(@-
+%0'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*R
+
+__unknown_file (64
+2mage.abilities.keyword.OfferingCostReductionEffect2getTargetPointer()ˆ…
+
+â. â(W
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Œ‰
+
+â â(X#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+
+â â(Y(
+toOffermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+2
+1*˜
+startingBlock
+á á(LŒ
+‰
+
+à à(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+á á("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16–
+“
+
+à à(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+á, á(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17Ÿ
+œ
+
+à à(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*G
+
+__unknown_file (+
+)
+abilityToModifymage.abilities.Abilityl
+j
+
+á< á(K)
+abilityToModifymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%18*
+3*´
+1
+ç ç(œ™
+
+ç ç(
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ª§
+
+ç/ ç(C
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()s
+q
+
+ç! ç(C
+%9java.lang.String"__concat*
+
+ç! ç(,
+	offering_*$
+
+ç/ ç(C
+
+%8java.util.UUID¤¡
+
+ç ç(J
+%10void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*7
+
+__unknown_file (
+
+%7mage.game.GameState*4
+
+__unknown_file (
+
+%9java.lang.String*"
+
+__unknown_file (
+""2.setValue(Ljava/lang/String;Ljava/lang/Object;)š
+
+è è(
+%11mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()«¨
+
+è2 è(F
+%12java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()x
+v
+
+è! è(F
+%13java.lang.String"__concat*
+
+è! è(/
+offering_ok_*%
+
+è2 è(F
+
+%12java.util.UUID¦£
+
+è è(M
+%14void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%11mage.game.GameState*5
+
+__unknown_file (
+
+%13java.lang.String*"
+
+__unknown_file (
+""2.setValue(Ljava/lang/String;Ljava/lang/Object;)³°
+
+é é(
+%15void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*R
+
+__unknown_file (64
+2mage.abilities.keyword.OfferingCostReductionEffect2	discard()"
+
+ê ê(
+"":$
+
+á á(#
+gamemage.game.Game:.
+
+á$ á(3 
+sourcemage.abilities.Ability:7
+
+á4 á(K)
+abilityToModifymage.abilities.AbilityB64
+2mage.abilities.keyword.OfferingCostReductionEffectHP

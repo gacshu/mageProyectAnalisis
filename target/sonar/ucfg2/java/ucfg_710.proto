@@ -1,0 +1,220 @@
+
+¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;€
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaÁ Á("12*ì
+2
+Ó Ó(ÔÑ
+
+Ó Ó(
+%9boolean"*java.util.List#remove(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+cardsjava.util.List*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Ljava/lang/Object;)*
+11*8
+3
+Ð Ð("'
+
+Ð Ð( 
+
+cardmage.cards.Card*8
+4
+Í Í(#"'
+
+Í Í($
+
+cardmage.cards.Card*°
+5
+Ì Ì(Œ‰
+
+Ì> Ì(J
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‡„
+
+Ì Ì(Y
+%8boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*2
+
+__unknown_file (
+
+%7java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+4*¡
+7
+Ê Ê( 
+
+Ê Ê($
+%4java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()Œ‰
+
+Ê. Ê(:
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()ÒÏ
+
+Ê Ê(;
+%6boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%4java.util.List*2
+
+__unknown_file (
+
+%5java.util.UUID2contains(Ljava/lang/Object;)*	
+2
+3
+5*÷
+8
+È È($üù
+
+È È(G
+%3mage.cards.Card"šmage.player.ai.ComputerPlayer#pickWorstCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*5
+
+__unknown_file (
+
+cardsjava.util.List*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2kpickWorstCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)b
+`
+
+È È(G
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+7*õ
+9
+Æ Æ(#ú÷
+
+Æ Æ(F
+%2mage.cards.Card"™mage.player.ai.ComputerPlayer#pickBestCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*5
+
+__unknown_file (
+
+cardsjava.util.List*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jpickBestCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)b
+`
+
+Æ Æ(F
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%2mage.cards.Card*
+7*¦
+10
+Å Å(‹ˆ
+
+Å Å( 
+%1boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+8
+9*•
+11
+Ã Ã(zx
+
+Ã Ã(
+%0boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+10
+1*i
+12
+Â Â(Q
+O
+
+Â Â(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""*
+11*%
+1
+Õ Õ("
+
+Õ Õ(
+"":3
+
+Á Á(7%
+abilityControllerIdjava.util.UUID:%
+
+Á8 Á(I
+cardsjava.util.List:/
+
+ÁJ Á(Z!
+outcomemage.constants.Outcome:*
+
+Á[ Á(i
+targetmage.target.Target:.
+
+Áj Á(y 
+sourcemage.abilities.Ability:%
+Áz Á(ƒ
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayer

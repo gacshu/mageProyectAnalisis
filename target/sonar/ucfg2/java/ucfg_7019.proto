@@ -1,0 +1,397 @@
+
+tmage.game.permanent.PermanentImpl#entersBattlefield(Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)Zf
+ZD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/PermanentImpl.javaê	 ê	($"startingBlock*&
+13
+ú	 ú	("
+
+ú	 ú	(
+""*Ï	
+14
+ö	H ö	(L¿Ω
+
+ö	V ö	(g
+%7java.util.UUID"Cmage.game.permanent.PermanentImpl#getControllerId()Ljava/util/UUID;*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getControllerId()lj
+
+ö	. ö	(G0
+%8*mage.game.events.EntersTheBattlefieldEvent"*mage.game.events.EntersTheBattlefieldEventÓ
+Î
+
+ö	* ö	(r
+%9"êmage.game.events.EntersTheBattlefieldEvent#<init>(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;)V*N
+
+__unknown_file (2
+0
+%8*mage.game.events.EntersTheBattlefieldEvent*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%7java.util.UUID*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zoneö
+ó
+
+ö	 ö	(s3
+event*mage.game.events.EntersTheBattlefieldEvent"__id*N
+
+__unknown_file (2
+0
+%8*mage.game.events.EntersTheBattlefieldEventêç
+
+õ	 õ	($
+%10boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*Q
+
+__unknown_file (5
+3
+event*mage.game.events.EntersTheBattlefieldEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+13
+12*&
+15
+ò	 ò	("
+
+ò	 ò	(
+""*å
+
+16
+ó	 ó	(¿Ω
+
+ó	J ó	([
+%2java.util.UUID"Cmage.game.permanent.PermanentImpl#getControllerId()Ljava/util/UUID;*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getControllerId()]
+[
+
+ó	g ó	(z#
+%3mage.constants.EnterEventType"__id*"
+
+__unknown_file (
+""lj
+
+ó	" ó	(;0
+%4*mage.game.events.EntersTheBattlefieldEvent"*mage.game.events.EntersTheBattlefieldEvent–
+Õ
+
+ó	 ó	({
+%5"Ømage.game.events.EntersTheBattlefieldEvent#<init>(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;Lmage/constants/EnterEventType;)V*N
+
+__unknown_file (2
+0
+%4*mage.game.events.EntersTheBattlefieldEvent*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%2java.util.UUID*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*A
+
+__unknown_file (%
+#
+%3mage.constants.EnterEventTypeåâ
+
+ó	 ó	(|
+%6boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*N
+
+__unknown_file (2
+0
+%4*mage.game.events.EntersTheBattlefieldEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+14
+15*⁄
+17
+î	 î	(¡
+æ
+
+î	 î	(C
+
+%1void"fmage.abilities.keyword.MorphAbility#setPermanentToFaceDownCreature(Lmage/MageObject;Lmage/game/Game;)V*C
+
+__unknown_file ('"%
+#mage.abilities.keyword.MorphAbility*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*4
+
+__unknown_file (
+
+gamemage.game.Game*
+16*ì
+18
+ë	. ë	(3ˆÛ
+
+í	 í	(!
+%0boolean"?mage.game.permanent.PermanentImpl#isFaceDown(Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2isFaceDown(Lmage/game/Game;)*
+16
+17*≈
+1
+≤	 ≤	(ùö
+
+≤	 ≤	((
+%23void"Bmage.game.Game#addSimultaneousEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*Q
+
+__unknown_file (5
+3
+event*mage.game.events.EntersTheBattlefieldEvent22addSimultaneousEvent(Lmage/game/events/GameEvent;)"
+
+≥	 ≥	(
+""*%
+2
+∞	 ∞	("
+
+∞	 ∞	(
+""*Ö
+startingBlock
+ê	$ ê	(añ
+ì
+
+è	 è	(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+ê	- ê	(3 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%24å
+â
+
+è	 è	(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ê	: ê	(>
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25ï
+í
+
+è	 è	(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zoneb
+`
+
+ê	E ê	(M
+fromZonemage.constants.Zone"__annotation*#
+
+__unknown_file (
+
+%26*
+18*¶
+4
+¨	 ¨	(Z
+X
+
+¨	! ¨	(4 
+%20mage.counters.CounterType"__id*"
+
+__unknown_file (
+""ËÂ
+
+¨	! ¨	(R
+%21mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%20mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)≈¬
+
+¨	 ¨	(a
+%22boolean"amage.cards.CardImpl#addCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*:
+
+__unknown_file (
+
+%21mage.counters.Counter*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2LaddCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*≥
+7
+ß	  ß	('·ﬁ
+
+ß	. ß	(H*
+%18#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()≤Ø
+
+ß	. ß	([
+
+%19int"7mage.abilities.costs.mana.ManaCosts#getPhyrexianPaid()I*H
+
+__unknown_file (,
+*
+%18#mage.abilities.costs.mana.ManaCosts2getPhyrexianPaid()*	
+2
+4
+1*˜
+8
+•	 •	(Ï
+È
+
+¶	  ¶	(?/
+%16(mage.abilities.keyword.CompleatedAbility"`mage.abilities.keyword.CompleatedAbility#getInstance()Lmage/abilities/keyword/CompleatedAbility;*H
+
+__unknown_file (,"*
+(mage.abilities.keyword.CompleatedAbilityËÂ
+
+¶	 ¶	(F
+%17boolean"Image.cards.CardImpl#hasAbility(Lmage/abilities/Ability;Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*M
+
+__unknown_file (1
+/
+%16(mage.abilities.keyword.CompleatedAbility*4
+
+__unknown_file (
+
+gamemage.game.Game24hasAbility(Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+4
+7
+1*∂
+9
+£	 £	(üú
+
+£	 £	(3
+
+%15int")mage.MageObjectImpl#getStartingLoyalty()I*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getStartingLoyalty()*
+8*ñ
+10
+°	 °	( ·ﬁ
+
+°	 °	(4*
+%13#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()öó
+
+°	 °	(;
+
+%14int"+mage.abilities.costs.mana.ManaCosts#getX()I*H
+
+__unknown_file (,
+*
+%13#mage.abilities.costs.mana.ManaCosts2getX()*
+8*ª
+11
+ü	 ü	(üú
+
+†	 †	()
+
+%12int")mage.MageObjectImpl#getStartingLoyalty()I*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getStartingLoyalty()*
+9
+10*å
+12
+û	 û	(ÌÍ
+
+û	 û	(%
+%11boolean"1mage.MageObject#isPlaneswalker(Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2 isPlaneswalker(Lmage/game/Game;)*
+
+2
+11
+1:.
+
+ê	% ê	(4 
+sourcemage.abilities.Ability:$
+
+ê	5 ê	(?
+gamemage.game.Game:-
+
+ê	@ ê	(N
+fromZonemage.constants.Zone: 
+
+__unknown_file (
+""B%#
+!mage.game.permanent.PermanentImplHP

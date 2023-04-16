@@ -1,0 +1,330 @@
+
+{mage.game.command.planes.EdgeOfMalacolEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Zn
+dD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/planes/EdgeOfMalacolPlane.java[ [("startingBlock*„
+2g% g(+±Æ
+g% g(=
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()h
+f
+g g(>
+oldControllerjava.util.UUID"__id*3
+
+__unknown_file (
+
+%14java.util.UUID£†
+h' h(?
+%15java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()ÌÍ
+h h(@
+%16void"9mage.abilities.Ability#setControllerId(Ljava/util/UUID;)V*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%15java.util.UUID2!setControllerId(Ljava/util/UUID;)X
+V
+i< i(L 
+%17mage.counters.CounterType"__id*"
+
+__unknown_file (
+""‰·
+i< i(^
+%18mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%17mage.counters.CounterType* 
+
+__unknown_file (22createInstance(I)íè
+i$ i(;D
+%19=mage.abilities.effects.common.counter.AddCountersTargetEffect"=mage.abilities.effects.common.counter.AddCountersTargetEffectî
+ë
+i  i(_
+%20"^mage.abilities.effects.common.counter.AddCountersTargetEffect#<init>(Lmage/counters/Counter;)V*b
+
+__unknown_file (F
+D
+%19=mage.abilities.effects.common.counter.AddCountersTargetEffect*:
+
+__unknown_file (
+
+%18mage.counters.Counter†
+ù
+i i(`'
+effectmage.abilities.effects.Effect"__id*b
+
+__unknown_file (F
+D
+%19=mage.abilities.effects.common.counter.AddCountersTargetEffecta_
+j, j(7,
+%21%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¿
+Ω
+j( j(H
+%22"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game˝˙
+j j(I$
+%23mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)€ÿ
+k k(*
+%24boolean"Nmage.abilities.effects.Effect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)˜Ù
+l l(5
+%25void"9mage.abilities.Ability#setControllerId(Ljava/util/UUID;)V*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*=
+
+__unknown_file (!
+
+oldControllerjava.util.UUID2!setControllerId(Ljava/util/UUID;)"
+m m(
+""*˜
+3f1 f(8ª∏
+f@ f([
+%11java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()£†
+f] f(u
+%12java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()˚
+¯
+f1 f(v
+%13boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%11java.util.UUID*3
+
+__unknown_file (
+
+%12java.util.UUID*
+2
+1*˛
+startingBlock[ [(Fó
+î
+Z Z(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+[% [(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%26î
+ë
+Z Z(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+[4 [(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%27ä
+á
+Z Z(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+[A [(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%28*
+9*†
+4e" e(&Ø¨
+e4 e(G
+%7java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()äá
+e" e(H#
+%8mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+e e(I*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%8mage.game.permanent.Permanenth
+f
+f f(0
+%9*mage.filter.common.FilterCreaturePermanent"__id*"
+
+__unknown_file (
+""€ÿ
+f f(-
+%10boolean"Amage.filter.FilterImpl#match(Ljava/lang/Object;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%9*mage.filter.common.FilterCreaturePermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2)match(Ljava/lang/Object;Lmage/game/Game;)*
+3
+1*!
+5c c("
+c c(
+""*Ñ
+6b b(∫∑
+b b(&
+%4mage.constants.Planes"=mage.game.command.Plane#getPlaneType()Lmage/constants/Planes;*?
+
+__unknown_file (#
+!
+cPlanemage.game.command.Plane2getPlaneType()S
+Q
+b. b(J
+%5mage.constants.Planes"__id*"
+
+__unknown_file (
+""⁄◊
+b b(K
+%6boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+%4mage.constants.Planes*9
+
+__unknown_file (
+
+%5mage.constants.Planes2equals(Ljava/lang/Object;)*
+4
+5*!
+7` `("
+` `(
+""*·
+8^ ^(öó
+^ ^(*
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()∏µ
+^ ^(<
+%3mage.game.command.Plane">mage.game.GameState#getCurrentPlane()Lmage/game/command/Plane;*7
+
+__unknown_file (
+
+%2mage.game.GameState2getCurrentPlane()r
+p
+^ ^(=!
+cPlanemage.game.command.Plane"__id*;
+
+__unknown_file (
+
+%3mage.game.command.Plane*
+6
+7*¢
+9] ](≤Ø
+] ]("
+%0mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()V
+T
+]& ](5
+%1mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+8
+1*!
+1p p("
+p p(
+"":/
+[ [(+#
+eventmage.game.events.GameEvent:,
+[, [(; 
+sourcemage.abilities.Ability:"
+[< [(E
+gamemage.game.GameB0.
+,mage.game.command.planes.EdgeOfMalacolEffectHP

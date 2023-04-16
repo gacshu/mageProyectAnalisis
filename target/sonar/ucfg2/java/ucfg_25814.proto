@@ -1,0 +1,153 @@
+
+]mage.server.MageServerImpl$GameViewActionWithNullNegativeResult#execute()Lmage/view/GameView;f
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MageServerImpl.javaﬂ	 ﬂ	("3*É
+2
+‚	 ‚	(W
+U
+
+‚	 ‚	(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ù
+ö
+
+‚	6 ‚	(?
+%6java.lang.String"__id*n
+
+__unknown_file (R*PA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+	sessionIdÄ
+~
+
+‚	 ‚	(?
+%7java.lang.String"__concat*&
+
+‚	 ‚	(3
+Session not found : *&
+
+‚	6 ‚	(?
+
+%6java.lang.Stringﬂ‹
+
+‚	 ‚	(@
+
+%8void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%7java.lang.String2error(Ljava/lang/Object;)"
+
+„	 „	(
+""*˛
+3
+‡	( ‡	(6µ
+≤
+
+‡	( ‡	(6)
+%0#mage.server.managers.ManagerFactory"__id*s
+
+__unknown_file (W*UA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+managerFactoryÌ
+
+‡	( ‡	(G)
+%1#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2sessionManager()ù
+ö
+
+‡	S ‡	(\
+%2java.lang.String"__id*n
+
+__unknown_file (R*PA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+	sessionId†ù
+
+‡	( ‡	(]
+%3java.util.Optional"Vmage.server.managers.SessionManager#getSession(Ljava/lang/String;)Ljava/util/Optional;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.SessionManager*4
+
+__unknown_file (
+
+%2java.lang.String2getSession(Ljava/lang/String;)k
+i
+
+‡	 ‡	(^
+sessionjava.util.Optional"__id*6
+
+__unknown_file (
+
+%3java.util.OptionalâÜ
+
+·	 ·	($
+%4boolean"java.util.Optional#isPresent()Z*;
+
+__unknown_file (
+
+sessionjava.util.Optional2isPresent()*
+2
+1*Ö	
+1
+Ê	 Ê	(%µ
+≤
+
+Ê	 Ê	(%)
+%9#mage.server.managers.ManagerFactory"__id*s
+
+__unknown_file (W*UA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+managerFactoryÂ‚
+
+Ê	 Ê	(3'
+%10 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*G
+
+__unknown_file (+
+)
+%9#mage.server.managers.ManagerFactory2gameManager()ô
+ñ
+
+Ê	@ Ê	(F
+%11java.util.UUID"__id*k
+
+__unknown_file (O*MA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+gameIdõ
+ò
+
+Ê	H Ê	(P
+%12java.util.UUID"__id*m
+
+__unknown_file (Q*OA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResult"
+
+playerIdÓÎ
+
+Ê	 Ê	(Q
+%13mage.view.GameView"bmage.server.managers.GameManager#getGameView(Ljava/util/UUID;Ljava/util/UUID;)Lmage/view/GameView;*E
+
+__unknown_file ()
+'
+%10 mage.server.managers.GameManager*3
+
+__unknown_file (
+
+%11java.util.UUID*3
+
+__unknown_file (
+
+%12java.util.UUID2-getGameView(Ljava/util/UUID;Ljava/util/UUID;)")
+
+Ê	 Ê	(R
+
+%13mage.view.GameViewBCA
+?mage.server.MageServerImpl$GameViewActionWithNullNegativeResultH

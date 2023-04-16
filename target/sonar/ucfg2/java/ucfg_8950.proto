@@ -1,0 +1,281 @@
+
+‚mage.cards.decks.importer.O8dDeckImporter#importDeck(Ljava/lang/String;Ljava/lang/StringBuilder;Z)Lmage/cards/decks/DeckCardLists;l
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/importer/O8dDeckImporter.java (#"startingBlock*ª
+13#( #(0“
+#( #(^
+%11java.util.List"lmage.cards.decks.importer.XmlDeckImporter#getNodes(Lorg/w3c/dom/Document;Ljava/lang/String;)Ljava/util/List;*I
+
+__unknown_file (-+
+)mage.cards.decks.importer.O8dDeckImporter*9
+
+__unknown_file (
+
+docorg.w3c.dom.Document*E
+
+__unknown_file ()'
+%/deck/section[@name='Sideboard']/card22getNodes(Lorg/w3c/dom/Document;Ljava/lang/String;)*
+12*‡
+14 !(2ðí
+ !(2
+%10void":mage.cards.decks.DeckCardLists#setCards(Ljava/util/List;)V*H
+
+__unknown_file (,
+*
+decklistmage.cards.decks.DeckCardLists*2
+
+__unknown_file (
+
+%9java.util.List2setCards(Ljava/util/List;)*
+13*¯
+15 !(1˜•
+ !(1
+%9java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%8java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+14*Å
+16! !('®
+«
+! !(0 
+%8java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*
+15*Â
+17  (L«¨
+  (L
+%7java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%6java.util.function.Function2&flatMap(Ljava/util/function/Function;)*
+16*½
+18 =  (J¦
+£
+   (K!
+%6java.util.function.Function"–mage.cards.decks.importer.O8dDeckImporter#toDeckCardInfo(Lmage/cards/decks/importer/CardLookup;Ljava/lang/StringBuilder;)Ljava/util/function/Function;*I
+
+__unknown_file (-"+
+)mage.cards.decks.importer.O8dDeckImporter*H
+
+__unknown_file (,
+*
+%5$mage.cards.decks.importer.CardLookup*F
+
+__unknown_file (*
+(
+errorMessagesjava.lang.StringBuilder*
+17*Š
+19   (+óð
+ ,  (;*
+%5$mage.cards.decks.importer.CardLookup"\mage.cards.decks.importer.DeckImporter#getCardLookup()Lmage/cards/decks/importer/CardLookup;*I
+
+__unknown_file (-+
+)mage.cards.decks.importer.O8dDeckImporter2getCardLookup()*
+18*›
+startingBlock# (l
+
+ (
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+fileNamejava.lang.String]
+[
++ (3
+fileNamejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%24œ
+™
+ (
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*F
+
+__unknown_file (*
+(
+errorMessagesjava.lang.StringBuilderi
+g
+C (P(
+errorMessagesjava.lang.StringBuilder"__annotation*#
+
+__unknown_file (
+
+%25*
+23*G
+5( (("8
+( ((,
+*
+decklistmage.cards.decks.DeckCardLists*Ž
+6$ &(2ùö
+$ &(2
+%18void">mage.cards.decks.DeckCardLists#setSideboard(Ljava/util/List;)V*H
+
+__unknown_file (,
+*
+decklistmage.cards.decks.DeckCardLists*3
+
+__unknown_file (
+
+%17java.util.List2setSideboard(Ljava/util/List;)*
+5*°
+7$" &(1›˜
+$" &(1
+%17java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%15java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%16java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+6*Ä
+8& &('¯
+¬
+& &(0!
+%16java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*
+7*Ã
+9$" %(L®«
+$" %(L
+%15java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%14java.util.function.Function2&flatMap(Ljava/util/function/Function;)*
+8*¥
+20 (Uc
+a
+ (U
+	mainCardsjava.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.List©¦
+ (0
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*9
+
+__unknown_file (
+
+	mainCardsjava.util.List2stream()*
+19*ª
+21 (9ƒ
+€
+ (9*
+decklistmage.cards.decks.DeckCardLists"__id*B
+
+__unknown_file (&
+$
+%1mage.cards.decks.DeckCardListsŠ
+# (T
+%3java.util.List"lmage.cards.decks.importer.XmlDeckImporter#getNodes(Lorg/w3c/dom/Document;Ljava/lang/String;)Ljava/util/List;*I
+
+__unknown_file (-+
+)mage.cards.decks.importer.O8dDeckImporter*9
+
+__unknown_file (
+
+docorg.w3c.dom.Document*@
+
+__unknown_file ($"
+ /deck/section[@name='Main']/card22getNodes(Lorg/w3c/dom/Document;Ljava/lang/String;)*
+20*¾
+10%= %(J¨
+¥
+% %(K"
+%14java.util.function.Function"–mage.cards.decks.importer.O8dDeckImporter#toDeckCardInfo(Lmage/cards/decks/importer/CardLookup;Ljava/lang/StringBuilder;)Ljava/util/function/Function;*I
+
+__unknown_file (-"+
+)mage.cards.decks.importer.O8dDeckImporter*I
+
+__unknown_file (-
++
+%13$mage.cards.decks.importer.CardLookup*F
+
+__unknown_file (*
+(
+errorMessagesjava.lang.StringBuilder*
+9*Ö
+22 (4i
+g
+ (4
+docorg.w3c.dom.Document"__id*8
+
+__unknown_file (
+
+%0org.w3c.dom.DocumentRP
+) (6$
+%1mage.cards.decks.DeckCardLists"mage.cards.decks.DeckCardLists€
+~
+% (8
+%2"(mage.cards.decks.DeckCardLists#<init>()V*B
+
+__unknown_file (&
+$
+%1mage.cards.decks.DeckCardLists*
+21*‹
+11% %(+ôñ
+%, %(;+
+%13$mage.cards.decks.importer.CardLookup"\mage.cards.decks.importer.DeckImporter#getCardLookup()Lmage/cards/decks/importer/CardLookup;*I
+
+__unknown_file (-+
+)mage.cards.decks.importer.O8dDeckImporter2getCardLookup()*
+10*Ï
+23 ()¸µ
+ (3
+%0org.w3c.dom.Document"bmage.cards.decks.importer.XmlDeckImporter#getXmlDocument(Ljava/lang/String;)Lorg/w3c/dom/Document;*I
+
+__unknown_file (-+
+)mage.cards.decks.importer.O8dDeckImporter*:
+
+__unknown_file (
+
+fileNamejava.lang.String2"getXmlDocument(Ljava/lang/String;)*
+22*±
+12# #(_i
+g
+# #(_ 
+sideboardCardsjava.util.List"__id*3
+
+__unknown_file (
+
+%11java.util.List¯¬
+$" $(9
+%12java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*>
+
+__unknown_file ("
+ 
+sideboardCardsjava.util.List2stream()*
+11:(
+$ (4
+fileNamejava.lang.String:4
+5 (Q(
+errorMessagesjava.lang.StringBuilder: 
+
+__unknown_file (
+""B-+
+)mage.cards.decks.importer.O8dDeckImporterH

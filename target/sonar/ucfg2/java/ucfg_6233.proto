@@ -1,0 +1,211 @@
+
+lmage.filter.predicate.permanent.BlockedByIdPredicate#apply(Lmage/game/permanent/Permanent;Lmage/game/Game;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/BlockedByIdPredicate.java ("startingBlock*á
+2! !(½º
+! !(O
+%12boolean"—mage.watchers.common.BlockedAttackerWatcher#creatureHasBlockedAttacker(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;Lmage/game/Game;)Z*T
+
+__unknown_file (8
+6
+watcher+mage.watchers.common.BlockedAttackerWatcher*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2jcreatureHasBlockedAttacker(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;Lmage/game/Game;)"
+! !(P
+""*Þ
+3- (1›˜
+- (<
+%10mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ˆ…
+- (e2
+%11+mage.watchers.common.BlockedAttackerWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%10mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)
+š
+ (f6
+watcher+mage.watchers.common.BlockedAttackerWatcher"__id*P
+
+__unknown_file (4
+2
+%11+mage.watchers.common.BlockedAttackerWatcher*
+2
+1*Š
+startingBlock (4š
+—
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanentg
+e
+# ((&
+inputmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+ (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+/ (3
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+9*Ô
+4 ( Ž
+‹
+> (G
+%8java.util.UUID"__id*c
+
+__unknown_file (G*E6
+4mage.filter.predicate.permanent.BlockedByIdPredicate"
+	blockerIdª§
+ (H#
+%9mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)
+}
+ (I(
+blockermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+3
+1*›
+5 ($c
+a
+ ($+
+combatGroupmage.game.combat.CombatGroup"__id*"
+
+__unknown_file (
+""ž
+›
+ ($+
+combatGroupmage.game.combat.CombatGroup"
+__arrayGet*2
+
+__unknown_file (
+
+%1java.util.List*"
+
+__unknown_file (
+""*
+4
+8*!
+6 ("
+ (
+""*Ë
+7A (L»¸
+A ([
+%5java.util.List";mage.game.combat.CombatGroup#getAttackers()Ljava/util/List;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getAttackers()¢Ÿ
+e (r
+%6java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getId()ÐÍ
+A (s
+%7boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%5java.util.List*2
+
+__unknown_file (
+
+%6java.util.UUID2contains(Ljava/lang/Object;)*
+5
+6*µ
+8 (¹¶
+ ()
+%2java.util.List":mage.game.combat.CombatGroup#getBlockers()Ljava/util/List;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getBlockers()Ž
+‹
+3 (<
+%3java.util.UUID"__id*c
+
+__unknown_file (G*E6
+4mage.filter.predicate.permanent.BlockedByIdPredicate"
+	blockerIdÐÍ
+ (=
+%4boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%2java.util.List*2
+
+__unknown_file (
+
+%3java.util.UUID2contains(Ljava/lang/Object;)*
+5
+7*Þ
+9' (+¤¡
+' (7
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¢Ÿ
+' (C
+%1java.util.List"3mage.game.combat.Combat#getGroups()Ljava/util/List;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getGroups()*
+5*!
+1$ $("
+$ $(
+"":2
+ ()&
+inputmage.game.permanent.Permanent:"
+* (3
+gamemage.game.GameB86
+4mage.filter.predicate.permanent.BlockedByIdPredicateHP

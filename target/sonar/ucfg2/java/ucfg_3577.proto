@@ -1,0 +1,94 @@
+
+umage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Lmage/game/Game;)Ljava/util/List;d
+XD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/Battlefield.javaû û(1"1*´
+1
+ü ü(u
+s
+
+ü ü(
+%0java.util.Map"__id*J
+
+__unknown_file (.*,!
+mage.game.permanent.Battlefield"
+field–“
+
+ü ü(
+%1java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%0java.util.Map2values()ª§
+
+ü ý(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%1java.util.Collection2stream()™
+–
+
+þ þ(M"
+%3java.util.function.Predicate"__declareFunction*Q
+
+__unknown_file (53
+1__sonar_lambda_61$mage.game.permanent.Battlefield˜
+•
+
+__unknown_file (.
+"
+%3java.util.function.Predicate"
+filter"__id*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent‡
+„
+
+__unknown_file (,
+"
+%3java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game®«
+
+ü þ(N
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%3java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)°
+­
+
+ÿ ÿ(, 
+%7java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+
+ü ÿ(-
+%8java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"$
+
+ü ÿ(.
+
+%8java.util.List:3
+
+û2 û(I%
+filtermage.filter.FilterPermanent:$
+
+ûJ û(S
+gamemage.game.GameB#!
+mage.game.permanent.BattlefieldH

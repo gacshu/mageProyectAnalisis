@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ElspethsNightmare xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/mage/cards/e/ElspethsNightmare.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.cards.e;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.SagaAbility;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.DestroyTargetEffect;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.ExileGraveyardAllTargetPlayerEffect;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.discard.DiscardCardYouChooseTargetEffect;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.cards.CardImpl;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.cards.CardSetInfo;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.constants.CardType;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.constants.ComparisonType;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.constants.SagaChapter;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.constants.SubType;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.filter.FilterCard;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.filter.FilterPermanent;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.filter.common.FilterNonlandCard;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> mage.filter.common.FilterOpponentsCreaturePermanent;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> mage.filter.predicate.Predicates;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> mage.filter.predicate.mageobject.PowerPredicate;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> mage.target.TargetPermanent;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> mage.target.common.TargetOpponent;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> java.util.UUID;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <em class="jxr_javadoccomment"> * @author TheElk801</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a> <strong class="jxr_keyword">extends</strong> <a name="CardImpl" href="../../../mage/cards/CardImpl.html#CardImpl">CardImpl</a> {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FilterPermanent" href="../../../mage/filter/FilterPermanent.html#FilterPermanent">FilterPermanent</a> filter
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              = <strong class="jxr_keyword">new</strong> <a name="FilterOpponentsCreaturePermanent" href="../../../mage/filter/common/FilterOpponentsCreaturePermanent.html#FilterOpponentsCreaturePermanent">FilterOpponentsCreaturePermanent</a>(<span class="jxr_string">"creature an opponent controls with power 2 or less"</span>);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FilterCard" href="../../../mage/filter/FilterCard.html#FilterCard">FilterCard</a> filter2 = <strong class="jxr_keyword">new</strong> <a name="FilterNonlandCard" href="../../../mage/filter/common/FilterNonlandCard.html#FilterNonlandCard">FilterNonlandCard</a>(<span class="jxr_string">"noncreature, nonland card"</span>);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      <strong class="jxr_keyword">static</strong> {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          filter.add(<strong class="jxr_keyword">new</strong> <a name="PowerPredicate" href="../../../mage/filter/predicate/mageobject/PowerPredicate.html#PowerPredicate">PowerPredicate</a>(ComparisonType.FEWER_THAN, 3));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          filter2.add(Predicates.not(CardType.CREATURE.getPredicate()));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      }
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      <strong class="jxr_keyword">public</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a>(UUID ownerId, <a name="CardSetInfo" href="../../../mage/cards/CardSetInfo.html#CardSetInfo">CardSetInfo</a> setInfo) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <strong class="jxr_keyword">super</strong>(ownerId, setInfo, <strong class="jxr_keyword">new</strong> <a name="CardType" href="../../../mage/constants/CardType.html#CardType">CardType</a>[]{CardType.ENCHANTMENT}, <span class="jxr_string">"{2}{B}"</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <strong class="jxr_keyword">this</strong>.subtype.add(SubType.SAGA);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <em class="jxr_comment">// &lt;i&gt;(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.)&lt;/i&gt;</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          <a name="SagaAbility" href="../../../mage/abilities/common/SagaAbility.html#SagaAbility">SagaAbility</a> sagaAbility = <strong class="jxr_keyword">new</strong> <a name="SagaAbility" href="../../../mage/abilities/common/SagaAbility.html#SagaAbility">SagaAbility</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <em class="jxr_comment">// I - Destroy target creature an opponent controls with power 2 or less.</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          sagaAbility.addChapterEffect(
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>                  <strong class="jxr_keyword">this</strong>, SagaChapter.CHAPTER_I, SagaChapter.CHAPTER_I,
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>                  <strong class="jxr_keyword">new</strong> <a name="DestroyTargetEffect" href="../../../mage/abilities/effects/common/DestroyTargetEffect.html#DestroyTargetEffect">DestroyTargetEffect</a>(), <strong class="jxr_keyword">new</strong> <a name="TargetPermanent" href="../../../mage/target/TargetPermanent.html#TargetPermanent">TargetPermanent</a>(filter)
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          );
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <em class="jxr_comment">// II - Target opponent reveals their hand. You choose a noncreature, nonland card from it. That player discards that card.</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          sagaAbility.addChapterEffect(
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>                  <strong class="jxr_keyword">this</strong>, SagaChapter.CHAPTER_II, SagaChapter.CHAPTER_II,
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>                  <strong class="jxr_keyword">new</strong> <a name="DiscardCardYouChooseTargetEffect" href="../../../mage/abilities/effects/common/discard/DiscardCardYouChooseTargetEffect.html#DiscardCardYouChooseTargetEffect">DiscardCardYouChooseTargetEffect</a>(filter2), <strong class="jxr_keyword">new</strong> <a name="TargetOpponent" href="../../../mage/target/common/TargetOpponent.html#TargetOpponent">TargetOpponent</a>()
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          );
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <em class="jxr_comment">// III - Exile target opponent's graveyard.</em>
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          sagaAbility.addChapterEffect(
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>                  <strong class="jxr_keyword">this</strong>, SagaChapter.CHAPTER_III, SagaChapter.CHAPTER_III,
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>                  <strong class="jxr_keyword">new</strong> <a name="ExileGraveyardAllTargetPlayerEffect" href="../../../mage/abilities/effects/common/ExileGraveyardAllTargetPlayerEffect.html#ExileGraveyardAllTargetPlayerEffect">ExileGraveyardAllTargetPlayerEffect</a>()
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>                          .setText(<span class="jxr_string">"exile target opponent's graveyard"</span>),
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>                  <strong class="jxr_keyword">new</strong> <a name="TargetOpponent" href="../../../mage/target/common/TargetOpponent.html#TargetOpponent">TargetOpponent</a>()
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          );
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">this</strong>.addAbility(sagaAbility);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      }
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      <strong class="jxr_keyword">private</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a>(<strong class="jxr_keyword">final</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a> card) {
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <strong class="jxr_keyword">super</strong>(card);
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>      }
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>      @Override
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      <strong class="jxr_keyword">public</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a> copy() {
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="ElspethsNightmare" href="../../../mage/cards/e/ElspethsNightmare.html#ElspethsNightmare">ElspethsNightmare</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      }
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

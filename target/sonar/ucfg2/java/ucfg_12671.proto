@@ -1,0 +1,596 @@
+
+Ömage.game.permanent.token.TokenImpl#putOntoBattlefield(ILmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZZLjava/util/UUID;Z)Zh
+\D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/token/TokenImpl.javaæ æ(%"startingBlock*&
+14
+¡ ¡("
+
+¡ ¡(
+""*è
+15
+ø ø( ¸˘
+
+ø ø(8
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+
+ø ø(9!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Player*
+14
+11
+12*%
+1
+È È("
+
+È È(
+""*∆
+2
+ﬁ ﬁ($Ì
+Í
+
+ﬁ ﬁ(e
+%30void"ùmage.game.permanent.token.TokenImpl#putOntoBattlefieldHelper(Lmage/game/events/CreateTokenEvent;Lmage/game/Game;Lmage/abilities/Ability;ZZLjava/util/UUID;Z)V*C
+
+__unknown_file ('"%
+#mage.game.permanent.token.TokenImpl*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+attackedPlayerjava.util.UUID*"
+
+__unknown_file (
+""∫∑
+
+ﬂ ﬂ(
+%31java.util.Map"<mage.game.events.CreateTokenEvent#getTokens()Ljava/util/Map;*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent2getTokens()äá
+
+ﬂ ‡(
+%32java.util.Set"%java.util.Map#keySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%31java.util.Map2keySet()•¢
+
+ﬂ ·(
+%33java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%32java.util.Set2stream()äá
+
+ﬂ ‚(5
+%34java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%33java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)íè
+
+ﬂ „(0
+%35java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%34java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)∂≥
+
+ﬂ ‰(
+%36java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%35java.util.stream.Stream2
+distinct()ü
+ú
+
+Â Â(J#
+%37java.util.function.Predicate"__declareFunction*V
+
+__unknown_file (:8
+6__sonar_lambda_254$mage.game.permanent.token.TokenImpl°
+û
+
+__unknown_file (7
+#
+%37java.util.function.Predicate"
+TokenImpl.this"__id*C
+
+__unknown_file ('%
+#mage.game.permanent.token.TokenImpl±Æ
+
+ﬂ Â(K
+%40java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%36java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%37java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+ﬂ Ê(9
+%41void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%40java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)"
+
+Á Á(
+""*∑
+3
+⁄ ⁄("£†
+
+⁄& ⁄(6
+%28java.lang.Integer"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue(){y
+
+€ €(
+%29void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()*
+7*Ñ
+startingBlockæ% æ(®å
+â
+
+Ω Ω(
+%42"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+æ7 æ(;
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%42ñ
+ì
+
+Ω Ω(
+%43"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+æE æ(K 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%43î
+ë
+
+Ω Ω(
+%44"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUIDa
+_
+
+æR æ(^
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%44ñ
+ì
+
+Ω Ω(
+%45"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+attackedPlayerjava.util.UUIDe
+c
+æà æ(ñ 
+attackedPlayerjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%45*
+15*Ç
+4
+◊ ◊(ÎË
+
+◊ ◊(0
+%27java.lang.Integer"Bjava.util.Map$Entry#setValue(Ljava/lang/Object;)Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry*"
+
+__unknown_file (
+""2setValue(Ljava/lang/Object;)*
+2*∆
+5
+‘6 ‘(8òï
+
+‘6 ‘(?
+%25java.util.Map$Entry"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()l
+j
+
+‘ ‘(@
+entryjava.util.Map$Entry"__id*8
+
+__unknown_file (
+
+%25java.util.Map$Entry£†
+
+’# ’(3
+%26java.lang.Integer"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+3
+4*ö
+7
+” ”(Ä~
+
+” ”(#
+%24boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+2
+5*ù
+8
+Œ Œ(D
+B
+
+œ; œ(N
+
+%12int"__id*"
+
+__unknown_file (
+""
+}
+
+œ œ(N
+%13java.lang.String"__concat*0
+
+œ œ(8" 
+The token limit per player is *
+
+œ; œ(N
+
+
+%12intp
+n
+
+œ œ(U
+%14java.lang.String"__concat*'
+
+œ œ(N
+
+%13java.lang.String*
+
+œQ œ(U
+, •¢
+
+œX œ(l
+%15java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()Ñ
+Å
+
+œ œ(l
+%16java.lang.String"__concat*'
+
+œ œ(U
+
+%14java.lang.String*'
+
+œX œ(l
+
+%15java.lang.StringÄ
+~
+
+œ –(6
+%17java.lang.String"__concat*'
+
+œ œ(l
+
+%16java.lang.String*$
+
+–" –(6
+ will only create p
+n
+
+œ –(C
+%18java.lang.String"__concat*'
+
+œ –(6
+
+%17java.lang.String*
+
+–9 –(C
+""v
+t
+
+œ –(P
+%19java.lang.String"__concat*'
+
+œ –(C
+
+%18java.lang.String*
+
+–F –(P
+
+ tokens.ﬂ‹
+
+Œ —(
+%20void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%19java.lang.String2!informPlayers(Ljava/lang/String;)∫∑
+
+“9 “(J
+%21java.util.Map"<mage.game.events.CreateTokenEvent#getTokens()Ljava/util/Map;*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent2getTokens()éã
+
+“9 “(U
+%22java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%21java.util.Map2
+entrySet()òï
+
+“9 “(`
+%23java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%22java.util.Set2
+iterator()g
+e
+
+“ “(a
+itjava.util.Iterator"__id*7
+
+__unknown_file (
+
+%23java.util.Iterator*
+7*ü
+9
+    ($¿Ω
+
+    (5%
+%6mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()∏µ
+
+ B  (U
+%7java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent2getPlayerId()ÚÔ
+
+    (V	
+%8int">mage.game.permanent.Battlefield#countTokens(Ljava/util/UUID;)I*C
+
+__unknown_file ('
+%
+%6mage.game.permanent.Battlefield*2
+
+__unknown_file (
+
+%7java.util.UUID2countTokens(Ljava/util/UUID;)C
+A
+
+À& À(9	
+%9int"__id*"
+
+__unknown_file (
+""®
+•
+
+À À(M
+
+%10int"java.lang.Math#max(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*
+
+__unknown_file (2 ¢ü
+
+Ã! Ã(2
+
+%11int".mage.game.events.CreateTokenEvent#getAmount()I*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent2getAmount()*
+2
+8*°
+10
+… …(ÜÉ
+
+… …(1
+%5boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*H
+
+__unknown_file (,
+*
+event!mage.game.events.CreateTokenEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+9
+1*Ø
+11
+∆ ∆(å
+â
+
+∆ ∆(
+%1java.util.ArrayList"__id*Z
+
+__unknown_file (>*<%
+#mage.game.permanent.token.TokenImpl"
+lastAddedTokenIdsa
+_
+
+∆ ∆(!
+
+%2void"__arrayClear*7
+
+__unknown_file (
+
+%1java.util.ArrayListZX
+
+»% »(5'
+%3!mage.game.events.CreateTokenEvent"!mage.game.events.CreateTokenEvent∫
+∑
+
+»! »(Y
+%4"umage.game.events.CreateTokenEvent#<init>(Lmage/abilities/Ability;Ljava/util/UUID;ILmage/game/permanent/token/Token;)V*E
+
+__unknown_file ()
+'
+%3!mage.game.events.CreateTokenEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID*"
+
+__unknown_file (
+""*C
+
+__unknown_file ('%
+#mage.game.permanent.token.TokenImplà
+Ö
+
+» »(Z*
+event!mage.game.events.CreateTokenEvent"__id*E
+
+__unknown_file ()
+'
+%3!mage.game.events.CreateTokenEvent*
+9
+10*&
+12
+ƒ ƒ("
+
+ƒ ƒ(
+"": 
+
+__unknown_file (
+"":$
+
+æ2 æ(<
+gamemage.game.Game:.
+
+æ= æ(L 
+sourcemage.abilities.Ability:,
+
+æM æ(_
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"":0
+æÉ æ(ó 
+attackedPlayerjava.util.UUID: 
+
+__unknown_file (
+""B'%
+#mage.game.permanent.token.TokenImplHP

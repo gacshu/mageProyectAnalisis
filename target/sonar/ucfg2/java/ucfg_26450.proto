@@ -1,0 +1,153 @@
+
+ƒmage.server.game.GamesRoomImpl#createTournamentTable(Ljava/util/UUID;Lmage/game/tournament/TournamentOptions;)Lmage/view/TableView;j
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GamesRoomImpl.java” ”(*"startingBlock*¬
+startingBlock
+”* ”(R
+Š
+
+“ “(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+userIdjava.util.UUIDZ
+X
+
+”0 ”(6
+userIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%9§
+¤
+
+“ “(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+options&mage.game.tournament.TournamentOptionst
+r
+
+”J ”(Q1
+options&mage.game.tournament.TournamentOptions"__annotation*#
+
+__unknown_file (
+
+%10*
+1*ó
+1
+• •($”
+‘
+
+• •($)
+%0#mage.server.managers.ManagerFactory"__id*R
+
+__unknown_file (6*4 
+mage.server.game.GamesRoomImpl"
+managerFactoryèå
+
+• •(3'
+%1!mage.server.managers.TableManager"Umage.server.managers.ManagerFactory#tableManager()Lmage/server/managers/TableManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2tableManager()¤¡
+
+•J •(Z
+%2java.util.UUID"0mage.server.RoomImpl#getRoomId()Ljava/util/UUID;*>
+
+__unknown_file (" 
+mage.server.game.GamesRoomImpl2getRoomId() 
+
+• •(l
+%3mage.game.Table"’mage.server.managers.TableManager#createTournamentTable(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/tournament/TournamentOptions;)Lmage/game/Table;*E
+
+__unknown_file ()
+'
+%1!mage.server.managers.TableManager*2
+
+__unknown_file (
+
+%2java.util.UUID*6
+
+__unknown_file (
+
+userIdjava.util.UUID*O
+
+__unknown_file (3
+1
+options&mage.game.tournament.TournamentOptions2_createTournamentTable(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/tournament/TournamentOptions;)c
+a
+
+• •(m
+tablemage.game.Table"__id*3
+
+__unknown_file (
+
+%3mage.game.Table
+Œ
+
+– –(,
+%4&java.util.concurrent.ConcurrentHashMap"__id*J
+
+__unknown_file (.*, 
+mage.server.game.GamesRoomImpl"
+tablesŒ
+
+– –( 
+%5java.util.UUID"'mage.game.Table#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+tablemage.game.Table2getId()è
+å
+
+– –((
+%6mage.game.Table"__mapSet*J
+
+__unknown_file (.
+,
+%4&java.util.concurrent.ConcurrentHashMap*2
+
+__unknown_file (
+
+%5java.util.UUID*6
+
+__unknown_file (
+
+tablemage.game.Table><
+
+— —(
+%7mage.view.TableView"mage.view.TableView¶
+³
+
+— —(#
+%8".mage.view.TableView#<init>(Lmage/game/Table;)V*7
+
+__unknown_file (
+
+%7mage.view.TableView*6
+
+__unknown_file (
+
+tablemage.game.Table")
+
+— —($
+
+%7mage.view.TableView:&
+
+”+ ”(7
+userIdjava.util.UUID:?
+
+”8 ”(Q1
+options&mage.game.tournament.TournamentOptionsB" 
+mage.server.game.GamesRoomImplH

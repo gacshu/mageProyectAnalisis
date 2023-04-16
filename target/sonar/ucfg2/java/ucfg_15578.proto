@@ -1,0 +1,529 @@
+
+fmage.game.command.dungeons.ThroneOfTheDeadThreeEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zp
+dD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/dungeons/UndercityDungeon.javaã ã("startingBlock*ò 
+2
+† †(T
+R
+
+†# †(3
+%19mage.constants.Zone"__id*"
+
+__unknown_file (
+""éã
+
+† †(B
+%20boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%19mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)çä
+
+°4 °(@
+%21java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()éã
+
+°" °(A$
+%22mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%21java.util.UUID2getPermanent(Ljava/util/UUID;)Ö
+Ç
+
+° °(B*
+	permanentmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%22mage.game.permanent.PermanentZ
+X
+
+¢" ¢(2 
+%23mage.counters.CounterType"__id*"
+
+__unknown_file (
+""Ê„
+
+¢" ¢(D
+%24mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%23mage.counters.CounterType* 
+
+__unknown_file (22createInstance(I)»≈
+
+¢ ¢(S
+%25boolean"]mage.cards.Card#addCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%24mage.counters.Counter*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2LaddCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)‰
+·
+
+£7 £(T-
+%26&mage.abilities.keyword.HexproofAbility"\mage.abilities.keyword.HexproofAbility#getInstance()Lmage/abilities/keyword/HexproofAbility;*F
+
+__unknown_file (*"(
+&mage.abilities.keyword.HexproofAbilityX
+V
+
+£V £(p
+%27mage.constants.Duration"__id*"
+
+__unknown_file (
+""öó
+
+£ £(6G
+%28@mage.abilities.effects.common.continuous.GainAbilityTargetEffect"@mage.abilities.effects.common.continuous.GainAbilityTargetEffectÖ
+Ç
+
+£ £(q
+%29"{mage.abilities.effects.common.continuous.GainAbilityTargetEffect#<init>(Lmage/abilities/Ability;Lmage/constants/Duration;)V*e
+
+__unknown_file (I
+G
+%28@mage.abilities.effects.common.continuous.GainAbilityTargetEffect*K
+
+__unknown_file (/
+-
+%26&mage.abilities.keyword.HexproofAbility*<
+
+__unknown_file ( 
+
+%27mage.constants.Durationca
+
+§* §(5,
+%30%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¬
+ø
+
+§& §(F
+%31"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%30%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game¬ø
+
+£ §(G.
+%32'mage.abilities.effects.ContinuousEffect"êmage.abilities.effects.ContinuousEffectImpl#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*e
+
+__unknown_file (I
+G
+%28@mage.abilities.effects.common.continuous.GainAbilityTargetEffect*J
+
+__unknown_file (.
+,
+%30%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)åâ
+
+£ §(P
+%33void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*L
+
+__unknown_file (0
+.
+%32'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+1*à
+startingBlock
+ã ã(3å
+â
+
+ä ä(
+%35"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ã ã("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%35ñ
+ì
+
+ä ä(
+%36"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+ã, ã(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%36*
+9*ã
+4
+ê$ ê(*Ø¨
+
+ê$ ê(7
+%12mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*;
+
+__unknown_file (
+
+playermage.players.Player2getLibrary()úô
+
+ê$ ê(M
+%13java.util.Set"Bmage.players.Library#getTopCards(Lmage/game/Game;I)Ljava/util/Set;*9
+
+__unknown_file (
+
+%12mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2
+2getTopCards(Lmage/game/Game;I)A?
+
+ê ê(#
+%14mage.cards.CardsImpl"mage.cards.CardsImpl¥
+±
+
+ê ê(N
+%15"-mage.cards.CardsImpl#<init>(Ljava/util/Set;)V*9
+
+__unknown_file (
+
+%14mage.cards.CardsImpl*2
+
+__unknown_file (
+
+%13java.util.Setj
+h
+
+ê ê(O
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%14mage.cards.CardsImplØ¨
+
+ë ë(/
+%16void"\mage.players.Player#revealCards(Lmage/abilities/Ability;Lmage/cards/Cards;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+playermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2GrevealCards(Lmage/abilities/Ability;Lmage/cards/Cards;Lmage/game/Game;)Q
+O
+
+í í(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""f
+d
+
+ì ì(>,
+%17%mage.filter.common.FilterCreatureCard"__id*"
+
+__unknown_file (
+"" «
+
+ì ì(E
+
+%18int"Amage.cards.Cards#count(Lmage/filter/FilterCard;Lmage/game/Game;)I*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*J
+
+__unknown_file (.
+,
+%17%mage.filter.common.FilterCreatureCard*4
+
+__unknown_file (
+
+gamemage.game.Game2/count(Lmage/filter/FilterCard;Lmage/game/Game;)*	
+5
+6
+7*ö
+5
+ö ù(@e
+c
+
+õE õ(g+
+%5%mage.filter.common.FilterCreatureCard"__id*"
+
+__unknown_file (
+""db
+
+õ1 õ(D,
+%6&mage.target.common.TargetCardInLibrary"&mage.target.common.TargetCardInLibraryˆ
+Û
+
+õ- õ(h
+%7"Hmage.target.common.TargetCardInLibrary#<init>(Lmage/filter/FilterCard;)V*J
+
+__unknown_file (.
+,
+%6&mage.target.common.TargetCardInLibrary*I
+
+__unknown_file (-
++
+%5%mage.filter.common.FilterCreatureCardì
+ê
+
+õ õ(i0
+target&mage.target.common.TargetCardInLibrary"__id*J
+
+__unknown_file (.
+,
+%6&mage.target.common.TargetCardInLibraryó
+î
+
+ú ú(%
+%8mage.constants.Outcome"__id*b
+
+__unknown_file (F*D7
+5mage.game.command.dungeons.ThroneOfTheDeadThreeEffect"	
+outcome£†
+
+ú ú(;
+%9boolean"omage.players.Player#choose(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*:
+
+__unknown_file (
+
+%8mage.constants.Outcome*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetCardInLibrary*4
+
+__unknown_file (
+
+gamemage.game.Game2Zchoose(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/game/Game;)¡æ
+
+ù! ù(8
+%10java.util.UUID"7mage.target.TargetImpl#getFirstTarget()Ljava/util/UUID;*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetCardInLibrary2getFirstTarget()ª∏
+
+ù ù(?
+%11mage.cards.Card"Gmage.cards.Cards#get(Ljava/util/UUID;Lmage/game/Game;)Lmage/cards/Card;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*3
+
+__unknown_file (
+
+%10java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2%get(Ljava/util/UUID;Lmage/game/Game;)c
+a
+
+ù ù(?
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%11mage.cards.Card*
+2
+1*≤
+6
+ó ô(e
+c
+
+òF ò(h+
+%2%mage.filter.common.FilterCreatureCard"__id*"
+
+__unknown_file (
+""Ê„
+
+ò7 ò(o
+%3java.util.Set"Rmage.cards.Cards#getCards(Lmage/filter/FilterCard;Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*I
+
+__unknown_file (-
++
+%2%mage.filter.common.FilterCreatureCard*4
+
+__unknown_file (
+
+gamemage.game.Game22getCards(Lmage/filter/FilterCard;Lmage/game/Game;)‰
+·
+
+ò ò(p
+%4mage.cards.Card"Smage.util.RandomUtil#randomFromCollection(Ljava/util/Collection;)Ljava/lang/Object;*4
+
+__unknown_file ("
+mage.util.RandomUtil*1
+
+__unknown_file (
+
+%3java.util.Setb
+`
+
+ò ò(p
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%4mage.cards.Card*
+2
+1*j
+7
+î ñ(Q
+O
+
+ï ï(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""*
+2
+1*%
+8
+é é("
+
+é é(
+""*Ø
+9
+å å(≤Ø
+
+å' å(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÚÔ
+
+å å(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+å å(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+4
+8*Ä
+1
+¶ ¶(ÿ’
+
+¶ ¶(+
+%34void"Mmage.players.Player#shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+playermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game28shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)"
+
+ß ß(
+"":$
+
+ã ã(#
+gamemage.game.Game:.
+
+ã$ ã(2 
+sourcemage.abilities.AbilityB97
+5mage.game.command.dungeons.ThroneOfTheDeadThreeEffectHP

@@ -1,0 +1,23 @@
+mage.game.Table#toProto()Lmage/game/result/ResultProtos$TableProto;
+mage.game.result.ResultProtos$TableProto#newBuilder()Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#setName(Ljava/lang/String;)Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#setEndTimeMs(J)Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#build()Lmage/game/result/ResultProtos$TableProto;
+mage.game.result.ResultProtos$TableProto$Builder#setDeckType(Ljava/lang/String;)Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#setControllerName(Ljava/lang/String;)Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#setStartTimeMs(J)Lmage/game/result/ResultProtos$TableProto$Builder;
+mage.game.result.ResultProtos$TourneyProto$Builder#mergeFrom(Lmage/game/result/ResultProtos$TourneyProto;)Lmage/game/result/ResultProtos$TourneyProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#getTourneyBuilder()Lmage/game/result/ResultProtos$TourneyProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#getMatchBuilder()Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#mergeFrom(Lmage/game/result/ResultProtos$MatchProto;)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$TableProto$Builder#setGameType(Ljava/lang/String;)Lmage/game/result/ResultProtos$TableProto$Builder;
+==
+getName mage.game.Table#getName()Ljava/lang/String;
+getTournament mage.game.Table#getTournament()Lmage/game/tournament/Tournament;
+getEndTime mage.game.Table#getEndTime()Ljava/util/Date;
+getControllerName mage.game.Table#getControllerName()Ljava/lang/String;
+getGameType mage.game.Table#getGameType()Ljava/lang/String;
+getStartTime mage.game.Table#getStartTime()Ljava/util/Date;
+getMatch mage.game.Table#getMatch()Lmage/game/match/Match;
+isTournament mage.game.Table#isTournament()Z
+getDeckType mage.game.Table#getDeckType()Ljava/lang/String;

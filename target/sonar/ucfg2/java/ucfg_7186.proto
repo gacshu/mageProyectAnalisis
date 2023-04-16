@@ -1,0 +1,156 @@
+
+mage.abilities.effects.PreventDamageAndRemoveCountersEffect#replaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z~
+tD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/PreventDamageAndRemoveCountersEffect.java' '("startingBlock*ø
+startingBlock' '(K–
+“
+& &(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+'* '(/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%7“
+
+& &(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+'9 '(? 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8‰
+†
+& &(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+'F '(J
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9*
+5*!
+4, ,("
+, ,(
+""*Î
+
+5( ((‘Ž
+( ((&	
+%0int"'mage.game.events.GameEvent#getAmount()I*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getAmount()æã
+) )(01
+%1+mage.abilities.effects.PreventionEffectData"²mage.abilities.effects.PreventionEffectImpl#preventDamageAction(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/abilities/effects/PreventionEffectData;*[
+
+__unknown_file (?=
+;mage.abilities.effects.PreventDamageAndRemoveCountersEffect*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YpreventDamageAction(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)¨¥
+*0 *(D
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+* *(E#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+* *(F*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+4
+1*«
+11 1(W
+U
+1! 1(1
+%4mage.counters.CounterType"__id*"
+
+__unknown_file (
+""äá
+1! 1(H
+%5mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%4mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)ÇÄ
+1 1(W
+
+%6void"`mage.cards.Card#removeCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%5mage.counters.Counter*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2OremoveCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)"
+2 2(
+"":/
+'  '(0#
+eventmage.game.events.GameEvent:,
+'1 '(@ 
+sourcemage.abilities.Ability:"
+'A '(J
+gamemage.game.GameB?=
+;mage.abilities.effects.PreventDamageAndRemoveCountersEffectHP

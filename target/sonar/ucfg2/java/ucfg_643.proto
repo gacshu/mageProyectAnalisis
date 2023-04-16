@@ -1,0 +1,1816 @@
+
+9mage.player.human.HumanPlayer#priority(Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaﬂ ﬂ("startingBlock*∫
+24
+∞	  ∞	($ûõ
+
+∞	  ∞	(/
+%115mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()êç
+
+∞	8 ∞	(F
+%116java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+
+objectmage.MageObject2getId()¸˘
+
+∞	  ∞	(G
+%117mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*9
+
+__unknown_file (
+
+%115mage.game.GameState*4
+
+__unknown_file (
+
+%116java.util.UUID2getZone(Ljava/util/UUID;)l
+j
+
+∞	 ∞	(H
+zonemage.constants.Zone"__id*9
+
+__unknown_file (
+
+%117mage.constants.Zone*
+4
+23*™
+68
+ 1  (5ÖÇ
+
+À  À(;
+%65boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+65
+55
+44
+67*¯
+25
+≠	! ≠	(&ÙÒ
+
+Æ	$ Æ	(>
+%114mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+responseIdjava.util.UUID2getObject(Ljava/util/UUID;)f
+d
+
+Æ	 Æ	(?
+objectmage.MageObject"__id*5
+
+__unknown_file (
+
+%114mage.MageObject*
+24
+4*á
+27
+´	 ´	(%ÔÏ
+
+´	 ´	(1
+%113void"jmage.player.human.HumanPlayer#activateSpecialAction(Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2KactivateSpecialAction(Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)*
+2*ª
+28
+™	 ™	(å
+â
+
+™	 ™	((
+%110 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseæª
+
+™	 ™	(+
+%111java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+%110 mage.player.human.PlayerResponse2getString()À»
+
+™	 ™	(=
+%112boolean",java.lang.String#equals(Ljava/lang/Object;)Z*6
+
+__unknown_file (
+
+%111java.lang.String*'
+
+__unknown_file (	
+special2equals(Ljava/lang/Object;)*
+3
+25
+27*Ã
+29
+®	 ®	(2Ú
+Ô
+
+®	 ®	(8
+%107java.util.UUID"Tmage.player.human.HumanPlayer#getFixedResponseUUID(Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Gameh
+f
+
+®	 ®	(9
+
+responseIdjava.util.UUID"__id*4
+
+__unknown_file (
+
+%107java.util.UUIDå
+â
+
+©	 ©	((
+%108 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseæª
+
+©	 ©	($
+%109java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+%108 mage.player.human.PlayerResponse2getString()*
+3
+25
+28*&
+70
+√+ √(0"
+
+√$ √(1
+""*™
+71
+¡5 ¡(9ÖÇ
+
+¬$ ¬(?
+%64boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+70
+65
+55
+44*Ω
+72
+¿( ¿(9‘—
+
+¿( ¿(G 
+%61mage.players.net.UserData"@mage.players.PlayerImpl#getUserData()Lmage/players/net/UserData;*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer2getUserData()¯ı
+
+¿( ¿(b-
+%62&mage.players.net.UserSkipPrioritySteps"\mage.players.net.UserData#getUserSkipPrioritySteps()Lmage/players/net/UserSkipPrioritySteps;*>
+
+__unknown_file ("
+ 
+%61mage.players.net.UserData2getUserSkipPrioritySteps()∆√
+
+¿( ¿(z
+%63boolean"?mage.players.net.UserSkipPrioritySteps#isStopOnAllMainPhases()Z*K
+
+__unknown_file (/
+-
+%62&mage.players.net.UserSkipPrioritySteps2isStopOnAllMainPhases()*
+71
+65
+55
+44*ò
+73
+ø) ø(1x
+v
+
+ø) ø(1
+%58java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId•¢
+
+ø9 ø(Q
+%59java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()—Œ
+
+ø) ø(R
+%60boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%58java.util.UUID*3
+
+__unknown_file (
+
+%59java.util.UUID2equals(Ljava/lang/Object;)*
+72
+65
+55
+44*±
+75
+º# º('µ≤
+
+º# º(9
+%56mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()Y
+W
+
+º= º(U
+%57mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+68
+71
+73*–
+32
+ü	  ü	(+ô
+ñ
+
+ü	  ü	(+2
+%105*java.util.concurrent.ConcurrentLinkedQueue"__id*N
+
+__unknown_file (2*0
+mage.player.human.HumanPlayer"
+actionQueueõò
+
+ü	  ü	(7
+%106void"java.lang.Object#notifyAll()V*P
+
+__unknown_file (4
+2
+%105*java.util.concurrent.ConcurrentLinkedQueue2notifyAll()*
+44*±
+76
+ª ª( µ≤
+
+ª ª(2
+%54mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()Y
+W
+
+ª6 ª(O
+%55mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+71
+73
+75*≤
+33
+û	* û	(5ô
+ñ
+
+û	* û	(52
+%104*java.util.concurrent.ConcurrentLinkedQueue"__id*N
+
+__unknown_file (2*0
+mage.player.human.HumanPlayer"
+actionQueue*
+32*&
+78
+∂# ∂(("
+
+∂ ∂()
+""*Æ
+79
+µ µ(1ÖÇ
+
+µ µ(7
+%53boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+76
+65
+55
+44
+78*&
+35
+õ	 õ	($"
+
+õ	 õ	(%
+""*ß
+36
+ö	, ö	(AÜÉ
+
+ö	, ö	(G
+%103boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+35
+33
+44*ˆ
+38
+ô	 ô	(#å
+â
+
+ô	 ô	(#(
+%101 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¬ø
+
+ô	 ô	(0
+%102java.lang.Integer"@mage.player.human.PlayerResponse#getInteger()Ljava/lang/Integer;*F
+
+__unknown_file (*
+(
+%101 mage.player.human.PlayerResponse2getInteger()*
+36
+29
+33
+44*Ù
+39
+ò	 ò	(ã
+à
+
+ò	 ò	('
+%99 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response¡æ
+
+ò	 ò	()
+%100java.lang.Boolean"@mage.player.human.PlayerResponse#getBoolean()Ljava/lang/Boolean;*E
+
+__unknown_file ()
+'
+%99 mage.player.human.PlayerResponse2getBoolean()*
+36
+38
+33
+44*«
+102
+àJ à(gª∏
+
+àJ à(m 
+%36mage.players.net.UserData"bmage.players.PlayerImpl#getControllingPlayersUserData(Lmage/game/Game;)Lmage/players/net/UserData;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2/getControllingPlayersUserData(Lmage/game/Game;)˘ˆ
+àJ à(à-
+%37&mage.players.net.UserSkipPrioritySteps"\mage.players.net.UserData#getUserSkipPrioritySteps()Lmage/players/net/UserSkipPrioritySteps;*>
+
+__unknown_file ("
+ 
+%36mage.players.net.UserData2getUserSkipPrioritySteps()ÔÏ
+àJ à(¥
+%38boolean"Smage.players.net.UserSkipPrioritySteps#isStopOnDeclareBlockersWithZeroPermanents()Z*K
+
+__unknown_file (/
+-
+%37&mage.players.net.UserSkipPrioritySteps2+isStopOnDeclareBlockersWithZeroPermanents()*
+97
+44* 
+104
+áI á(fª∏
+
+áI á(l 
+%33mage.players.net.UserData"bmage.players.PlayerImpl#getControllingPlayersUserData(Lmage/game/Game;)Lmage/players/net/UserData;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2/getControllingPlayersUserData(Lmage/game/Game;)˘ˆ
+áI á(á-
+%34&mage.players.net.UserSkipPrioritySteps"\mage.players.net.UserData#getUserSkipPrioritySteps()Lmage/players/net/UserSkipPrioritySteps;*>
+
+__unknown_file ("
+ 
+%33mage.players.net.UserData2getUserSkipPrioritySteps()ÌÍ
+áI á(≤
+%35boolean"Rmage.players.net.UserSkipPrioritySteps#isStopOnDeclareBlockersWithAnyPermanents()Z*K
+
+__unknown_file (/
+-
+%34&mage.players.net.UserSkipPrioritySteps2*isStopOnDeclareBlockersWithAnyPermanents()*
+102
+97
+44*–
+105
+É: É(VÆ
+´
+
+É: É(V6
+%24/mage.filter.common.FilterCreatureForCombatBlock"__id*_
+
+__unknown_file (C*A
+mage.player.human.HumanPlayer"
+filterCreatureForCombatBlockéã
+
+É: É(]6
+%25/mage.filter.common.FilterCreatureForCombatBlock"gmage.filter.common.FilterCreatureForCombatBlock#copy()Lmage/filter/common/FilterCreatureForCombatBlock;*T
+
+__unknown_file (8
+6
+%24/mage.filter.common.FilterCreatureForCombatBlock2copy()¶
+£
+
+É É(^9
+filter/mage.filter.common.FilterCreatureForCombatBlock"__id*T
+
+__unknown_file (8
+6
+%25/mage.filter.common.FilterCreatureForCombatBlockx
+v
+
+Ñ9 Ñ(A
+%26java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerIdÑÅ
+
+Ñ# Ñ(8<
+%275mage.filter.predicate.permanent.ControllerIdPredicate"5mage.filter.predicate.permanent.ControllerIdPredicate¯
+ı
+
+Ñ Ñ(B
+%28"Omage.filter.predicate.permanent.ControllerIdPredicate#<init>(Ljava/util/UUID;)V*Z
+
+__unknown_file (>
+<
+%275mage.filter.predicate.permanent.ControllerIdPredicate*3
+
+__unknown_file (
+
+%26java.util.UUID⁄◊
+
+Ñ Ñ(C
+%29mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*W
+
+__unknown_file (;
+9
+filter/mage.filter.common.FilterCreatureForCombatBlock*Z
+
+__unknown_file (>
+<
+%275mage.filter.predicate.permanent.ControllerIdPredicate2&add(Lmage/filter/predicate/Predicate;)¡æ
+
+Ü0 Ü(E&
+%30mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()x
+v
+
+ÜT Ü(\
+%31java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId¶£
+
+Ü0 Ü(i
+
+%32int"}mage.game.permanent.Battlefield#count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*D
+
+__unknown_file ((
+&
+%30mage.game.permanent.Battlefield*W
+
+__unknown_file (;
+9
+filter/mage.filter.common.FilterCreatureForCombatBlock*3
+
+__unknown_file (
+
+%31java.util.UUID*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2\count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+102
+104
+97
+44*©
+106
+Ç Ç(ß§
+
+Ç Ç(+
+%20mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()åâ
+
+Ç Ç(D
+%21java.util.Set"Kmage.game.combat.Combat#getPlayerDefenders(Lmage/game/Game;)Ljava/util/Set;*<
+
+__unknown_file ( 
+
+%20mage.game.combat.Combat*4
+
+__unknown_file (
+
+gamemage.game.Game2$getPlayerDefenders(Lmage/game/Game;)x
+v
+
+ÇN Ç(V
+%22java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId”–
+
+Ç Ç(W
+%23boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%21java.util.Set*3
+
+__unknown_file (
+
+%22java.util.UUID2contains(Ljava/lang/Object;)*
+105
+97
+44*≥
+107
+Å Å(µ≤
+
+Å Å(*
+%18mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()Y
+W
+
+Å. Å(I
+%19mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+106
+97
+44*∆
+108
+˛  ˛(%£†
+
+ˇ ˇ($
+%17boolean"-mage.players.PlayerImpl#isGameUnderControl()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isGameUnderControl()*
+107
+97
+44*á
+109
+˜ ˜((Ä˝
+
+˜ ˜(.
+%15void"Kmage.players.PlayerImpl#setJustActivatedType(Lmage/constants/AbilityType;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*"
+
+__unknown_file (
+""22setJustActivatedType(Lmage/constants/AbilityType;)⁄◊
+
+¯ ¯(
+%16void"/mage.players.PlayerImpl#pass(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2pass(Lmage/game/Game;)"
+
+˘ ˘(!
+""*Á
+84
+™ ™(´®
+
+™ ™(#!
+%51mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()åâ
+
+™ ™(-
+%52boolean"java.util.ArrayDeque#isEmpty()Z*?
+
+__unknown_file (#
+!
+%51mage.game.stack.SpellStack2	isEmpty()*
+79
+52
+76
+65
+55
+44*&
+40
+ï	 ï	("
+
+ï	 ï	( 
+""*•
+41
+í	 í	(ˆÛ
+
+í	 í	(%
+%97void"@mage.player.human.HumanPlayer#waitForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2!waitForResponse(Lmage/game/Game;)èå
+
+î	 î	(,
+%98boolean"#mage.game.Game#executingRollback()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2executingRollback()*
+39
+40*&
+86
+°' °(,"
+
+°  °(-
+""*Ù
+42
+ê	 ê	(x
+v
+
+ê	+ ê	(3
+%95java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId·ﬁ
+
+ê	 ê	(4
+%96void"3mage.game.Game#firePriorityEvent(Ljava/util/UUID;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%95java.util.UUID2#firePriorityEvent(Ljava/util/UUID;)*
+41*¢
+87
+†  †(5ÖÇ
+
+†  †(;
+%50boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+84
+86*ò
+43
+ã	" ã	('‘—
+
+ç	 ç	(9
+%92void"Zmage.player.human.HumanPlayer#updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*(
+
+__unknown_file (
+
+priority*4
+
+__unknown_file (
+
+gamemage.game.Game2;updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)¸˘
+
+é	 é	((
+%93void"Cmage.player.human.HumanPlayer#prepareForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2$prepareForResponse(Lmage/game/Game;)•¢
+
+è	 è	('
+%94boolean"1mage.player.human.HumanPlayer#isExecutingMacro()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isExecutingMacro()*
+41
+42*	
+88
+û0 û(4ùö
+
+û0 û(?
+%44mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()x
+v
+
+ûN û(V
+%45java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerIdçä
+
+û0 û(W
+%46mage.players.PlayerList"Lmage.game.GameState#getPlayerList(Ljava/util/UUID;)Lmage/players/PlayerList;*8
+
+__unknown_file (
+
+%44mage.game.GameState*3
+
+__unknown_file (
+
+%45java.util.UUID2getPlayerList(Ljava/util/UUID;)y
+w
+
+û û(X%
+
+playerListmage.players.PlayerList"__id*<
+
+__unknown_file ( 
+
+%46mage.players.PlayerList≤Ø
+
+ü ü(5
+%47java.util.UUID"6mage.util.CircularList#getPrevious()Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+
+playerListmage.players.PlayerList2getPrevious()•¢
+
+ü= ü(U
+%48java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()—Œ
+
+ü ü(V
+%49boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%47java.util.UUID*3
+
+__unknown_file (
+
+%48java.util.UUID2equals(Ljava/lang/Object;)*
+84
+87*∞
+44
+ä	 ä	(ìê
+
+ä	 ä	(
+%91boolean"%mage.players.PlayerImpl#canRespond()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2canRespond()*
+29
+43*&
+89
+ö# ö(("
+
+ö ö()
+""*&
+45
+Ñ	# Ñ	(("
+
+Ñ	 Ñ	()
+""*¢
+46
+É	 É	(1ÖÇ
+
+É	 É	(7
+%90boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+44
+45*π
+49
+¯# ¯(4‘—
+
+¯# ˘(. 
+%87mage.players.net.UserData"@mage.players.PlayerImpl#getUserData()Lmage/players/net/UserData;*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer2getUserData()¯ı
+
+¯# ˙(;-
+%88&mage.players.net.UserSkipPrioritySteps"\mage.players.net.UserData#getUserSkipPrioritySteps()Lmage/players/net/UserSkipPrioritySteps;*>
+
+__unknown_file ("
+ 
+%87mage.players.net.UserData2getUserSkipPrioritySteps() «
+
+¯# ˚(:
+%89boolean"Amage.players.net.UserSkipPrioritySteps#isStopOnStackNewObjects()Z*K
+
+__unknown_file (/
+-
+%88&mage.players.net.UserSkipPrioritySteps2isStopOnStackNewObjects()*
+46
+44*“
+110
+ˆ ˆ(/’“
+
+ˆ ˆ(1!
+%13mage.constants.AbilityType"Jmage.players.PlayerImpl#getJustActivatedType()Lmage/constants/AbilityType;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getJustActivatedType()[
+Y
+
+ˆ5 ˆ(J!
+%14mage.constants.AbilityType"__id*"
+
+__unknown_file (
+""*
+
+108
+109*©
+111
+ı ı(%‘—
+
+ı ı(3 
+%11mage.players.net.UserData"@mage.players.PlayerImpl#getUserData()Lmage/players/net/UserData;*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer2getUserData()≤Ø
+
+ı ı(N
+%12boolean"5mage.players.net.UserData#isPassPriorityActivation()Z*>
+
+__unknown_file ("
+ 
+%11mage.players.net.UserData2isPassPriorityActivation()*
+
+108
+110*Ü
+112
+Ò Ò((ˇ¸
+
+Ò Ò(.
+
+%9void"Kmage.players.PlayerImpl#setJustActivatedType(Lmage/constants/AbilityType;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*"
+
+__unknown_file (
+""22setJustActivatedType(Lmage/constants/AbilityType;)⁄◊
+
+Ú Ú(
+%10void"/mage.players.PlayerImpl#pass(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2pass(Lmage/game/Game;)"
+
+Û Û(!
+""*–
+113
+ (/‘—
+
+ (1 
+%7mage.constants.AbilityType"Jmage.players.PlayerImpl#getJustActivatedType()Lmage/constants/AbilityType;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getJustActivatedType()Z
+X
+
+5 (F 
+%8mage.constants.AbilityType"__id*"
+
+__unknown_file (
+""*
+
+112
+111*ö
+114
+Ô Ô(%”–
+
+Ô Ô(3
+%5mage.players.net.UserData"@mage.players.PlayerImpl#getUserData()Lmage/players/net/UserData;*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer2getUserData()§°
+
+Ô Ô(H
+%6boolean"/mage.players.net.UserData#isPassPriorityCast()Z*=
+
+__unknown_file (!
+
+%5mage.players.net.UserData2isPassPriorityCast()*
+
+113
+111*Ù
+116
+Ó Ó($‘—
+
+Ó Ó(& 
+%4mage.constants.AbilityType"Jmage.players.PlayerImpl#getJustActivatedType()Lmage/constants/AbilityType;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getJustActivatedType()*
+
+114
+108*°
+117
+Í6 Í(<Ü
+É
+
+Í Í(<2
+controllingPlayermage.player.human.HumanPlayer"__id*;
+
+__unknown_file (
+
+playermage.players.Player*
+116*¢
+90
+ô ô(1ÖÇ
+
+ô ô(7
+%43boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+84
+89*Ω
+118
+Ë  Ë($∫∑
+
+Ë/ Ë(D
+%2java.util.UUID"=mage.players.PlayerImpl#getTurnControlledBy()Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getTurnControlledBy()ÚÔ
+
+Ë  Ë(E
+%3mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+Ë Ë(F
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%3mage.players.Player*
+
+116
+117*≠
+91
+ó ó(µ≤
+
+ó ó(.
+%41mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()Y
+W
+
+ó2 ó(D
+%42mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+90
+88*Õ
+119
+Ê, Ê(0à
+Ö
+
+Ê Ê(12
+controllingPlayermage.player.human.HumanPlayer"__id*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer¢ü
+
+Á Á($
+%1boolean"-mage.players.PlayerImpl#isGameUnderControl()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isGameUnderControl()*
+
+116
+118*&
+93
+í í($"
+
+í í(%
+""*¶
+94
+ë ë(-ÖÇ
+
+ë ë(3
+%40boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+91
+93
+84*î
+50
+˜$ ˜(,x
+v
+
+˜$ ˜(,
+%84java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId•¢
+
+˜4 ˜(L
+%85java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()—Œ
+
+˜$ ˜(M
+%86boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%84java.util.UUID*3
+
+__unknown_file (
+
+%85java.util.UUID2equals(Ljava/lang/Object;)*
+46
+49
+44*Ñ
+
+52
+Û5 Û(<Ö
+Ç
+
+ÛD Û(X
+%78java.util.Date"__id*W
+
+__unknown_file (;*9
+mage.player.human.HumanPlayer"
+dateLastAddedToStack´®
+
+ÛZ Û(i!
+%79mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()∫∑
+
+ÛZ Û(|
+%80java.util.Date"=mage.game.stack.SpellStack#getDateLastAdded()Ljava/util/Date;*?
+
+__unknown_file (#
+!
+%79mage.game.stack.SpellStack2getDateLastAdded()˝
+˙
+
+Û5 Û(}
+%81boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%78java.util.Date*3
+
+__unknown_file (
+
+%80java.util.Date´®
+
+Ù+ Ù(:!
+%82mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()∫∑
+
+Ù+ Ù(M
+%83java.util.Date"=mage.game.stack.SpellStack#getDateLastAdded()Ljava/util/Date;*?
+
+__unknown_file (#
+!
+%82mage.game.stack.SpellStack2getDateLastAdded()Ö
+Ç
+
+Ù Ù(M9
+mage.player.human.HumanPlayer"
+dateLastAddedToStack"__id*3
+
+__unknown_file (
+
+%83java.util.Date*
+46
+50
+44*»
+97
+é é(0£†
+
+é é(2
+%39boolean"-mage.players.PlayerImpl#isGameUnderControl()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isGameUnderControl()*
+91
+94
+84
+44*&
+53
+Ì# Ì(("
+
+Ì Ì()
+""*¢
+54
+Ï Ï(1ÖÇ
+
+Ï Ï(7
+%77boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+53
+44*¶
+11
+«	) «	(8[
+Y
+
+«	) «	(8!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""¢
+ü
+
+«	) «	(8!
+abilitymage.abilities.Ability"
+__arrayGet*>
+
+__unknown_file ("
+ 
+%130mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+14
+6
+9
+11
+12*‚
+55
+Î Î(,≈
+¬
+
+Î Î(E
+%76boolean"]mage.player.human.HumanPlayer#checkPassStep(Lmage/game/Game;Lmage/player/human/HumanPlayer;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer*
+54
+44*¡
+12
+ 	,  	(<°û
+
+ 	I  	(X
+%134java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getId()ÑÅ
+
+ 	,  	(u'
+%135mage.abilities.ActivatedAbility"Ujava.util.HashMap#putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;*I
+
+__unknown_file (-
++
+useableAbilitiesjava.util.LinkedHashMap*4
+
+__unknown_file (
+
+%134java.util.UUID*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability21putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)*
+11*&
+57
+Â' Â(,"
+
+Â  Â(-
+""*™
+14
+»	_ »	(fõò
+»	t »	(à
+%131java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+actingPlayermage.players.Player2getId()£†
+»	O »	(è8
+%1320mage.abilities.ActivatedAbility$ActivationStatus"{mage.abilities.SpellAbility#canActivate(Ljava/util/UUID;Lmage/game/Game;)Lmage/abilities/ActivatedAbility$ActivationStatus;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+%131java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2-canActivate(Ljava/util/UUID;Lmage/game/Game;)…∆
+»	O »	(ù
+%133boolean"?mage.abilities.ActivatedAbility$ActivationStatus#canActivate()Z*V
+
+__unknown_file (:
+8
+%1320mage.abilities.ActivatedAbility$ActivationStatus2canActivate()*
+11
+12*¶
+58
+„1 „(5ÖÇ
+
+‰  ‰(;
+%75boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+57
+55
+44*£
+16
+«	C «	(Iäá
+
+«	; «	(] 
+%130mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*7
+
+__unknown_file (
+
+objectmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)*
+11*Ê
+18
+º	/ º	(;˘ˆ
+
+º	/ º	(m
+%128java.util.LinkedHashMap"Çmage.players.Player#getPlayableActivatedAbilities(Lmage/MageObject;Lmage/constants/Zone;Lmage/game/Game;)Ljava/util/LinkedHashMap;*A
+
+__unknown_file (%
+#
+actingPlayermage.players.Player*7
+
+__unknown_file (
+
+objectmage.MageObject*9
+
+__unknown_file (
+
+zonemage.constants.Zone*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetPlayableActivatedAbilities(Lmage/MageObject;Lmage/constants/Zone;Lmage/game/Game;)Ä
+~
+
+º	 º	(m+
+useableAbilitiesjava.util.LinkedHashMap"__id*=
+
+__unknown_file (!
+
+%128java.util.LinkedHashMapI
+G
+
+≈	  ≈	(Z
+%129boolean"__id*"
+
+__unknown_file (
+""*
+
+16
+6
+9*∞
+120
+‡ ‡(íè
+
+Â Â(
+%0boolean"%mage.players.PlayerImpl#canRespond()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2canRespond()*
+119
+1*%
+1
+‰	 ‰	("
+
+‰	 ‰	(
+""*%
+2
+·	 ·	("
+
+·	 ·	(
+""*á
+3
+ﬂ	 ﬂ	(å
+â
+
+ﬂ	 ﬂ	((
+%141 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response–Õ
+
+ﬂ	 ﬂ	(-
+%142mage.constants.ManaType"Gmage.player.human.PlayerResponse#getManaType()Lmage/constants/ManaType;*F
+
+__unknown_file (*
+(
+%141 mage.player.human.PlayerResponse2getManaType()"
+
+ﬂ	 ﬂ	(6
+""*é
+startingBlock
+ﬂ ﬂ(&ç
+ä
+
+ﬁ ﬁ(
+%143"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameZ
+X
+
+ﬂ! ﬂ(%
+gamemage.game.Game"__annotation*$
+
+__unknown_file (
+
+%143*
+120*%
+4
+›	 ›	("
+
+›	 ›	(
+""*Ê
+5
+◊	  ◊	(/œÃ
+
+◊	  ◊	(O
+%140void"jmage.player.human.HumanPlayer#activateAbility(Ljava/util/LinkedHashMap;Lmage/MageObject;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*I
+
+__unknown_file (-
++
+useableAbilitiesjava.util.LinkedHashMap*7
+
+__unknown_file (
+
+objectmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2KactivateAbility(Ljava/util/LinkedHashMap;Lmage/MageObject;Lmage/game/Game;)*
+4*Æ
+6
+÷	! ÷	(1îë
+
+÷	! ÷	(;
+%139boolean"java.util.HashMap#isEmpty()Z*I
+
+__unknown_file (-
++
+useableAbilitiesjava.util.LinkedHashMap2	isEmpty()*
+4
+5*©
+8
+”	# ”	(5äá
+
+”	K ”	(b
+%137int"java.util.HashMap#size()I*I
+
+__unknown_file (-
++
+useableAbilitiesjava.util.LinkedHashMap2size()Çˇ
+
+”	# ”	(c
+%138boolean"Omage.players.PlayerImpl#lookAtFaceDownCard(Lmage/cards/Card;Lmage/game/Game;I)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*7
+
+__unknown_file (
+
+objectmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game*)
+
+__unknown_file (
+
+%137int26lookAtFaceDownCard(Lmage/cards/Card;Lmage/game/Game;I)*
+4
+6*ˆ
+9
+“	+ “	(1‹Ÿ
+
+“	# “	(C
+%136boolean"-mage.cards.Card#isFaceDown(Lmage/game/Game;)Z*7
+
+__unknown_file (
+
+objectmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2isFaceDown(Lmage/game/Game;)*
+6
+8*&
+60
+‹+ ‹(0"
+
+‹$ ‹(1
+""*¶
+61
+⁄5 ⁄(9ÖÇ
+
+€$ €(?
+%74boolean"Fmage.player.human.HumanPlayer#passWithManaPoolCheck(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2'passWithManaPoolCheck(Lmage/game/Game;)*
+60
+55
+44*∑
+62
+÷( ÷(9‘—
+
+÷( ◊(2 
+%71mage.players.net.UserData"@mage.players.PlayerImpl#getUserData()Lmage/players/net/UserData;*P
+
+__unknown_file (4
+2
+controllingPlayermage.player.human.HumanPlayer2getUserData()¯ı
+
+÷( ÿ(?-
+%72&mage.players.net.UserSkipPrioritySteps"\mage.players.net.UserData#getUserSkipPrioritySteps()Lmage/players/net/UserSkipPrioritySteps;*>
+
+__unknown_file ("
+ 
+%71mage.players.net.UserData2getUserSkipPrioritySteps()ƒ¡
+
+÷( Ÿ(;
+%73boolean">mage.players.net.UserSkipPrioritySteps#isStopOnAllEndPhases()Z*K
+
+__unknown_file (/
+-
+%72&mage.players.net.UserSkipPrioritySteps2isStopOnAllEndPhases()*
+61
+55
+44*î
+63
+’( ’(0x
+v
+
+’( ’(0
+%68java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId•¢
+
+’8 ’(P
+%69java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()—Œ
+
+’( ’(Q
+%70boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%68java.util.UUID*3
+
+__unknown_file (
+
+%69java.util.UUID2equals(Ljava/lang/Object;)*
+62
+55
+44*∏
+20
+π	+ π	(/™ß
+
+π	: π	(T
+%126java.util.UUID"4mage.game.Game#getPriorityPlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPriorityPlayerId()ˆÛ
+
+π	+ π	(U
+%127mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%126java.util.UUID2getPlayer(Ljava/util/UUID;)t
+r
+
+π	 π	(U#
+actingPlayermage.players.Player"__id*9
+
+__unknown_file (
+
+%127mage.players.Player*
+
+6
+18
+9*Ò
+21
+∏	# ∏	(=»≈
+
+∏	# ∏	(?
+%123java.util.Set"Cmage.players.PlayerImpl#getPlayersUnderYourControl()Ljava/util/Set;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2getPlayersUnderYourControl()™ß
+
+∏	I ∏	(c
+%124java.util.UUID"4mage.game.Game#getPriorityPlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPriorityPlayerId()÷”
+
+∏	# ∏	(d
+%125boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%123java.util.Set*4
+
+__unknown_file (
+
+%124java.util.UUID2contains(Ljava/lang/Object;)*
+6
+18
+9
+20*±
+65
+“ “( µ≤
+
+“ “(2
+%66mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()Y
+W
+
+“6 “(H
+%67mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+58
+61
+63*ñ
+22
+∑	+ ∑	(/x
+v
+
+∑	 ∑	(/#
+actingPlayermage.players.Player"__id*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*
+
+6
+18
+9*ø
+23
+≥	Q ≥	(fHF
+
+≥	U ≥	(d
+%118java.util.LinkedHashMap"java.util.LinkedHashMapx
+v
+
+≥	Q ≥	(f
+%119"!java.util.LinkedHashMap#<init>()V*=
+
+__unknown_file (!
+
+%118java.util.LinkedHashMapÄ
+~
+
+≥	 ≥	(g+
+useableAbilitiesjava.util.LinkedHashMap"__id*=
+
+__unknown_file (!
+
+%118java.util.LinkedHashMap]
+[
+
+µ	 µ	(3#
+actingPlayermage.players.Player"__id*"
+
+__unknown_file (
+""y
+w
+
+∂	 ∂	($
+%120java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId™ß
+
+∂	, ∂	(F
+%121java.util.UUID"4mage.game.Game#getPriorityPlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPriorityPlayerId()‘—
+
+∂	 ∂	(G
+%122boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%120java.util.UUID*4
+
+__unknown_file (
+
+%121java.util.UUID2equals(Ljava/lang/Object;)*
+21
+22*&
+67
+Ã' Ã(,"
+
+Ã  Ã(-
+"":$
+
+ﬂ ﬂ(%
+gamemage.game.GameB!
+mage.player.human.HumanPlayerHP

@@ -1,0 +1,133 @@
+
+porg.mage.plugins.card.images.ImageCache#loadImage(Lnet/java/truevfs/access/TFile;)Ljava/awt/image/BufferedImage;s
+gD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/org/mage/plugins/card/images/ImageCache.javaò  ò()"10"11*“
+4
+ı ı(1}
+{
+
+ı ı(1%
+imagejava.awt.image.BufferedImage"__id*@
+
+__unknown_file ($
+"
+%7java.awt.image.BufferedImage*
+1*È
+5
+ü ü(Jœ
+™
+
+ü ü(J7
+inputStream(net.java.truevfs.access.TFileInputStream"__id*L
+
+__unknown_file (0
+.
+%5(net.java.truevfs.access.TFileInputStream’
+
+
+ı ı(1"
+%7java.awt.image.BufferedImage"Ojavax.imageio.ImageIO#read(Ljava/io/InputStream;)Ljava/awt/image/BufferedImage;*5
+
+__unknown_file ("
+javax.imageio.ImageIO*U
+
+__unknown_file (9
+7
+inputStream(net.java.truevfs.access.TFileInputStream*
+4*ë
+6
+üE ü(Ihf
+
+ü4 ü(D.
+%5(net.java.truevfs.access.TFileInputStream"(net.java.truevfs.access.TFileInputStreamê
+ç
+
+ü0 ü(J
+%6"@net.java.truevfs.access.TFileInputStream#<init>(Ljava/io/File;)V*L
+
+__unknown_file (0
+.
+%5(net.java.truevfs.access.TFileInputStream*C
+
+__unknown_file ('
+%
+filenet.java.truevfs.access.TFile*
+5*u
+8
+ú ú("_
+]
+
+ú ú(#%
+imagejava.awt.image.BufferedImage"__id*"
+
+__unknown_file (
+""*
+6*›
+9
+÷ ÷(W
+U
+
+÷ ÷(
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""´±
+
+÷3 ÷(B
+%2java.lang.String":net.java.truevfs.access.TFile#toString()Ljava/lang/String;*C
+
+__unknown_file ('
+%
+filenet.java.truevfs.access.TFile2
+toString()
+
+
+÷ ÷(B
+%3java.lang.String"__concat*'
+
+÷ ÷(0
+File does not exist: *&
+
+÷3 ÷(B
+
+%2java.lang.StringßÜ
+
+÷ ÷(C
+
+%4void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%3java.lang.String2debug(Ljava/lang/Object;)"
+
+ø ø(
+""*±
+10
+ö ö(–“
+
+ö ö(
+%0boolean"'net.java.truevfs.access.TFile#exists()Z*C
+
+__unknown_file ('
+%
+filenet.java.truevfs.access.TFile2exists()*
+8
+9*&
+11
+ô ô("
+
+ô ô(
+""*F
+1
+ƒ ƒ("5
+
+ƒ ƒ('
+%
+imagejava.awt.image.BufferedImage:3
+
+ò* ò(4%
+filenet.java.truevfs.access.TFileB+")
+'org.mage.plugins.card.images.ImageCacheH

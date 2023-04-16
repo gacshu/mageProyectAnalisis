@@ -1,0 +1,297 @@
+
+xmage.abilities.effects.common.ExileCardFromOwnGraveyardControllerEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z‹
+€D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileCardFromOwnGraveyardControllerEffect.java) )("startingBlock*ú
+26 6(R
+P
+6 6(
+targetIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Ž
+‹
+6 6(
+targetIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%15java.util.List*"
+
+__unknown_file (
+""*
+3
+1*Ø
+37 7(¯¬
+7 7(+
+%16mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()ÃÀ
+7 7(?
+%17mage.cards.Card"Kmage.cards.CardsImpl#get(Ljava/util/UUID;Lmage/game/Game;)Lmage/cards/Card;*8
+
+__unknown_file (
+
+%16mage.game.Graveyard*8
+
+__unknown_file (
+
+targetIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2%get(Ljava/util/UUID;Lmage/game/Game;)ËÈ
+7 7(@
+%18void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+%17mage.cards.Card2add(Lmage/cards/Card;)*
+2*ÿ
+startingBlock) )(3Š
+‡
+( ((
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+) )("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%21”
+‘
+( ((
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+), )(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%22*
+10*Ò
+46 6(#½º
+6 6(0
+%15java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*T
+
+__unknown_file (8
+6
+target,mage.target.common.TargetCardInYourGraveyard2getTargets()*
+2*­
+55 5(%?=
+5 5(#
+%13mage.cards.CardsImpl"mage.cards.CardsImpln
+l
+5 5(%
+%14"mage.cards.CardsImpl#<init>()V*9
+
+__unknown_file (
+
+%13mage.cards.CardsImplh
+f
+5 5(&
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%13mage.cards.CardsImpl*
+4*!
+63 3("
+3 3(
+""*­
+7.I .(M®«
+/ /(-
+%4mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()sq
+/ /(4	
+%5int"java.util.HashSet#size()I*7
+
+__unknown_file (
+
+%4mage.game.Graveyard2size()®
+«
+.I 0(		
+%6int"java.lang.Math#min(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*'
+
+__unknown_file (
+	
+%5intT
+R
+0 0($
+%7mage.filter.FilterCard"__id*"
+
+__unknown_file (
+""nl
+./ .(H2
+%8,mage.target.common.TargetCardInYourGraveyard",mage.target.common.TargetCardInYourGraveyard›
+˜
+.+ 0(%
+%9"Omage.target.common.TargetCardInYourGraveyard#<init>(ILmage/filter/FilterCard;)V*P
+
+__unknown_file (4
+2
+%8,mage.target.common.TargetCardInYourGraveyard*'
+
+__unknown_file (
+	
+%6int*:
+
+__unknown_file (
+
+%7mage.filter.FilterCard
+š
+. 0(&6
+target,mage.target.common.TargetCardInYourGraveyard"__id*P
+
+__unknown_file (4
+2
+%8,mage.target.common.TargetCardInYourGraveyardÌÉ
+1 1(!
+%10void"'mage.target.TargetImpl#setNotTarget(Z)V*T
+
+__unknown_file (8
+6
+target,mage.target.common.TargetCardInYourGraveyard* 
+
+__unknown_file (22setNotTarget(Z)¨
+¥
+2! 2((
+%11mage.constants.Outcome"__id*t
+
+__unknown_file (X*VI
+Gmage.abilities.effects.common.ExileCardFromOwnGraveyardControllerEffect"	
+outcomeÀ½
+2 2(?
+%12boolean"wmage.players.Player#chooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%11mage.constants.Outcome*T
+
+__unknown_file (8
+6
+target,mage.target.common.TargetCardInYourGraveyard*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2bchooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*
+5
+6*!
+8, ,("
+, ,(
+""*Å
+9+ +($®«
++ +(3
+%2mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()}{
++ +(=
+%3boolean"java.util.HashSet#isEmpty()Z*7
+
+__unknown_file (
+
+%2mage.game.Graveyard2	isEmpty()*
+7
+8*¨
+10* *(°­
+*' *(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+* *(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+* *(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+8
+9*ˆ
+19 9(R
+P
+9' 9(2
+%19mage.constants.Zone"__id*"
+
+__unknown_file (
+""
+9 9(A
+%20boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*8
+
+__unknown_file (
+
+%19mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)"
+9 9(B
+"":"
+) )(#
+gamemage.game.Game:,
+)$ )(2 
+sourcemage.abilities.AbilityBKI
+Gmage.abilities.effects.common.ExileCardFromOwnGraveyardControllerEffectHP

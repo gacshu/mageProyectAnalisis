@@ -1,0 +1,691 @@
+
+;mage.deck.AbstractCommander#checkPartners(Ljava/util/Set;)Zy
+oD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/AbstractCommander.java8 8(#"20*∞
+13K K(µ≤
+K K(,
+%14mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2getAbilities()ﬁ€
+K K(T
+%15boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*=
+
+__unknown_file (!
+
+%14mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+8
+12*∞
+14J J(µ≤
+J J(%
+%12mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2getAbilities()ﬁ€
+J J(M
+%13boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*=
+
+__unknown_file (!
+
+%12mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+13
+8*"
+15H H("
+H H(
+""*±
+16G G(µ≤
+G G(,
+%10mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2getAbilities()ﬁ€
+G G(W
+%11boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*=
+
+__unknown_file (!
+
+%10mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+14
+15*Æ
+17F F(¥±
+F F(,
+%8mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2getAbilities()‹Ÿ
+F F(W
+%9boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*<
+
+__unknown_file ( 
+
+%8mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+14
+16*Æ
+18E E(¥±
+E E(,
+%6mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2getAbilities()‹Ÿ
+E E(P
+%7boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*<
+
+__unknown_file ( 
+
+%6mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+15
+17*±	
+19A A((úô
+A A(3
+%1java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*9
+
+__unknown_file (
+
+
+commandersjava.util.Set2
+iterator()f
+d
+A A(4
+iterjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%1java.util.Iteratorìê
+B B(%
+%2mage.cards.Card"+java.util.Iterator#next()Ljava/lang/Object;*8
+
+__unknown_file (
+
+iterjava.util.Iterator2next()f
+d
+B B(&
+
+commander1mage.cards.Card"__id*3
+
+__unknown_file (
+
+%2mage.cards.Cardìê
+C C(%
+%3mage.cards.Card"+java.util.Iterator#next()Ljava/lang/Object;*8
+
+__unknown_file (
+
+iterjava.util.Iterator2next()f
+d
+C C(&
+
+commander2mage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card¥±
+D D(%
+%4mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2getAbilities()‹Ÿ
+D D(I
+%5boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*<
+
+__unknown_file ( 
+
+%4mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)*
+17
+18*!
+1_ _("
+_ _(
+""*≈	
+2] ](f
+d
+] ](3.
+%62'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""õò
+]5 ](I
+%63java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()úô
+	]t ](à
+%64java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2	getName()è
+å
+	]K ](à
+%65java.lang.String"__concat*4
+]K ](q(&
+$Background without valid Commander (*&
+	]t ](à
+
+%64java.lang.Stringm
+k
+	]K ](é
+%66java.lang.String"__concat*&
+	]K ](à
+
+%65java.lang.String*
+
+]ã ](é
+)äá
+	] ](ï
+%67void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*;
+
+__unknown_file (
+mage.deck.AbstractCommander*L
+
+__unknown_file (0
+.
+%62'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%63java.lang.String*5
+
+__unknown_file (
+
+%66java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+1*Å
+3\ \(U
+S
+\1 \(C
+%60mage.constants.SubType"__id*"
+
+__unknown_file (
+""íè
+\ \(D
+%61boolean"Dmage.cards.Card#hasSubTypeForDeckbuilding(Lmage/constants/SubType;)Z*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card*;
+
+__unknown_file (
+
+%60mage.constants.SubType23hasSubTypeForDeckbuilding(Lmage/constants/SubType;)*
+2
+1*≈	
+4Z Z(f
+d
+Z Z(3.
+%54'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""õò
+Z5 Z(I
+%55java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()úô
+	Zt Z(à
+%56java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()è
+å
+	ZK Z(à
+%57java.lang.String"__concat*4
+ZK Z(q(&
+$Background without valid Commander (*&
+	Zt Z(à
+
+%56java.lang.Stringm
+k
+	ZK Z(é
+%58java.lang.String"__concat*&
+	ZK Z(à
+
+%57java.lang.String*
+
+Zã Z(é
+)äá
+	Z Z(ï
+%59void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*;
+
+__unknown_file (
+mage.deck.AbstractCommander*L
+
+__unknown_file (0
+.
+%54'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%55java.lang.String*5
+
+__unknown_file (
+
+%58java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+3*Å
+5Y Y(U
+S
+Y1 Y(C
+%52mage.constants.SubType"__id*"
+
+__unknown_file (
+""íè
+Y Y(D
+%53boolean"Dmage.cards.Card#hasSubTypeForDeckbuilding(Lmage/constants/SubType;)Z*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card*;
+
+__unknown_file (
+
+%52mage.constants.SubType23hasSubTypeForDeckbuilding(Lmage/constants/SubType;)*
+3
+4*!
+6W W("
+W W(
+""*ù
+7V V(µ≤
+V V(,
+%48mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2getAbilities()ﬁ€
+V V(Z
+%49boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*=
+
+__unknown_file (!
+
+%48mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)W
+U
+
+VÉ V(ï
+%50mage.constants.SubType"__id*"
+
+__unknown_file (
+""ìê
+	V^ V(ñ
+%51boolean"Dmage.cards.Card#hasSubTypeForDeckbuilding(Lmage/constants/SubType;)Z*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card*;
+
+__unknown_file (
+
+%50mage.constants.SubType23hasSubTypeForDeckbuilding(Lmage/constants/SubType;)*
+5
+6*ú
+8U U(µ≤
+U U(%
+%44mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2getAbilities()ﬁ€
+U U(S
+%45boolean":mage.abilities.Abilities#containsClass(Ljava/lang/Class;)Z*=
+
+__unknown_file (!
+
+%44mage.abilities.Abilities*"
+
+__unknown_file (
+""2 containsClass(Ljava/lang/Class;)V
+T
+	U| U(é
+%46mage.constants.SubType"__id*"
+
+__unknown_file (
+""ìê
+	UW U(è
+%47boolean"Dmage.cards.Card#hasSubTypeForDeckbuilding(Lmage/constants/SubType;)Z*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card*;
+
+__unknown_file (
+
+%46mage.constants.SubType23hasSubTypeForDeckbuilding(Lmage/constants/SubType;)*
+5
+7*ˇ
+9Q Q(f
+d
+Q Q(3.
+%32'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""õò
+Q5 Q(I
+%33java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()úô
+	Qp Q(Ñ
+%34java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()ã
+à
+	QK Q(Ñ
+%35java.lang.String"__concat*0
+QK Q(m$"
+ Commander with invalid Partner (*&
+	Qp Q(Ñ
+
+%34java.lang.Stringm
+k
+	QK Q(ä
+%36java.lang.String"__concat*&
+	QK Q(Ñ
+
+%35java.lang.String*
+
+Qá Q(ä
+)äá
+	Q Q(ë
+%37void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*;
+
+__unknown_file (
+mage.deck.AbstractCommander*L
+
+__unknown_file (0
+.
+%32'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%33java.lang.String*5
+
+__unknown_file (
+
+%36java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)f
+d
+R R(3.
+%38'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""õò
+R5 R(I
+%39java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2	getName()úô
+	Rp R(Ñ
+%40java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2	getName()ã
+à
+	RK R(Ñ
+%41java.lang.String"__concat*0
+RK R(m$"
+ Commander with invalid Partner (*&
+	Rp R(Ñ
+
+%40java.lang.Stringm
+k
+	RK R(ä
+%42java.lang.String"__concat*&
+	RK R(Ñ
+
+%41java.lang.String*
+
+Rá R(ä
+)äá
+	R R(ë
+%43void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*;
+
+__unknown_file (
+mage.deck.AbstractCommander*L
+
+__unknown_file (0
+.
+%38'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%39java.lang.String*5
+
+__unknown_file (
+
+%42java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)"
+S S(
+""*è
+209 9(qo
+9 9(!	
+%0int"java.util.Set#size()I*9
+
+__unknown_file (
+
+
+commandersjava.util.Set2size()*
+19
+21
+23*"
+21> ?("
+? ?(
+""*"
+10O O("
+O O(
+""*è
+11N6 N(@õò
+N6 N(J
+%30java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2	getName()◊‘
+N6 N(X
+%31boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%30java.lang.String*7
+
+__unknown_file (
+
+name2java.lang.String2equals(Ljava/lang/Object;)*
+9
+10*"
+23: ;("
+; ;(
+""*√
+12L L(#µ≤
+L/ L(H
+%16mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander2mage.cards.Card2getAbilities()Æ´
+L/ L(Q
+%17java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%16mage.abilities.Abilities2stream()ß
+§
+L L(l
+%18java.util.stream.Stream"bmage.util.CardUtil#castStream(Ljava/util/stream/Stream;Ljava/lang/Class;)Ljava/util/stream/Stream;*2
+
+__unknown_file ("
+mage.util.CardUtil*<
+
+__unknown_file ( 
+
+%17java.util.stream.Stream*"
+
+__unknown_file (
+""âÜ
+	L L(î
+%19java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)≠™
+	L L(†
+%20java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*<
+
+__unknown_file ( 
+
+%19java.util.stream.Stream2findFirst()·ﬁ
+	L L(≠
+%21java.lang.String"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%20java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)e
+c
+	L L(Æ
+name1java.lang.String"__id*5
+
+__unknown_file (
+
+%21java.lang.Stringµ≤
+M/ M(H
+%22mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2getAbilities()Æ´
+M/ M(Q
+%23java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%22mage.abilities.Abilities2stream()ß
+§
+M M(l
+%24java.util.stream.Stream"bmage.util.CardUtil#castStream(Ljava/util/stream/Stream;Ljava/lang/Class;)Ljava/util/stream/Stream;*2
+
+__unknown_file ("
+mage.util.CardUtil*<
+
+__unknown_file ( 
+
+%23java.util.stream.Stream*"
+
+__unknown_file (
+""âÜ
+	M M(î
+%25java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%24java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)≠™
+	M M(†
+%26java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*<
+
+__unknown_file ( 
+
+%25java.util.stream.Stream2findFirst()·ﬁ
+	M M(≠
+%27java.lang.String"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%26java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)e
+c
+	M M(Æ
+name2java.lang.String"__id*5
+
+__unknown_file (
+
+%27java.lang.Stringõò
+N N($
+%28java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+commander1mage.cards.Card2	getName()◊‘
+N N(2
+%29boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%28java.lang.String*7
+
+__unknown_file (
+
+name1java.lang.String2equals(Ljava/lang/Object;)*
+9
+11:'
+8$ 8(8
+
+commandersjava.util.SetB
+mage.deck.AbstractCommanderP

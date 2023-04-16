@@ -1,0 +1,187 @@
+
+amage.abilities.keyword.ProvokeAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zh
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ProvokeAbility.java+ +("startingBlock*Õ
+2-I -(mjh
+-1 -(H0
+%1*mage.filter.common.FilterCreaturePermanent"*mage.filter.common.FilterCreaturePermanentÔ
+Ï
+-- -(n
+%2"Fmage.filter.common.FilterCreaturePermanent#<init>(Ljava/lang/String;)V*N
+
+__unknown_file (2
+0
+%1*mage.filter.common.FilterCreaturePermanent*B
+
+__unknown_file (&$
+"creature defending player controlsô
+ñ
+- -(o4
+filter*mage.filter.common.FilterCreaturePermanent"__id*N
+
+__unknown_file (2
+0
+%1*mage.filter.common.FilterCreaturePermanent§°
+.% .(5
+%3mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()}
+{
+.K .(S
+%4java.util.UUID"__id*S
+
+__unknown_file (7*5'
+%mage.abilities.keyword.ProvokeAbility"
+
+sourceId‚ﬂ
+.% .(Z
+%5java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%3mage.game.combat.Combat*2
+
+__unknown_file (
+
+%4java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)k
+i
+. .([#
+defendingPlayerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUIDÄ~
+/ /(0;
+%65mage.filter.predicate.permanent.ControllerIdPredicate"5mage.filter.predicate.permanent.ControllerIdPredicateÇ
+ˇ
+/ /(C
+%7"Omage.filter.predicate.permanent.ControllerIdPredicate#<init>(Ljava/util/UUID;)V*Y
+
+__unknown_file (=
+;
+%65mage.filter.predicate.permanent.ControllerIdPredicate*A
+
+__unknown_file (%
+#
+defendingPlayerIdjava.util.UUID—Œ
+/ /(D
+%8mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*R
+
+__unknown_file (6
+4
+filter*mage.filter.common.FilterCreaturePermanent*Y
+
+__unknown_file (=
+;
+%65mage.filter.predicate.permanent.ControllerIdPredicate2&add(Lmage/filter/predicate/Predicate;)ª∏
+0 0(
+%9mage.target.Targets"<mage.abilities.AbilityImpl#getTargets()Lmage/target/Targets;*E
+
+__unknown_file ()'
+%mage.abilities.keyword.ProvokeAbility2getTargets()`
+^
+0 0(%
+%10void"__arrayClear*7
+
+__unknown_file (
+
+%9mage.target.Targetski
+11 1(H1
+%11*mage.target.common.TargetCreaturePermanent"*mage.target.common.TargetCreaturePermanentõ
+ò
+1- 1(P
+%12"`mage.target.common.TargetCreaturePermanent#<init>(Lmage/filter/common/FilterCreaturePermanent;)V*O
+
+__unknown_file (3
+1
+%11*mage.target.common.TargetCreaturePermanent*R
+
+__unknown_file (6
+4
+filter*mage.filter.common.FilterCreaturePermanentö
+ó
+1 1(Q4
+target*mage.target.common.TargetCreaturePermanent"__id*O
+
+__unknown_file (3
+1
+%11*mage.target.common.TargetCreaturePermanentìê
+2 2("
+%13void";mage.abilities.AbilityImpl#addTarget(Lmage/target/Target;)V*E
+
+__unknown_file ()'
+%mage.abilities.keyword.ProvokeAbility*R
+
+__unknown_file (6
+4
+target*mage.target.common.TargetCreaturePermanent2addTarget(Lmage/target/Target;)"
+3 3(
+""*º
+3, ,(§
+°
+, ,(+
+%0boolean"image.abilities.common.AttacksTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent*4
+
+__unknown_file (
+
+gamemage.game.Game*
+2
+1*Ñ
+startingBlock+ +(;ó
+î
+* *(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
++* +(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%14ä
+á
+* *(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
++6 +(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+3*!
+15 5("
+5 5(
+"":/
++  +(0#
+eventmage.game.events.GameEvent:"
++1 +(:
+gamemage.game.GameB)'
+%mage.abilities.keyword.ProvokeAbilityHP

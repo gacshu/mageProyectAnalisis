@@ -1,0 +1,281 @@
+
+amage.abilities.condition.common.AdamantCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zs
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/AdamantCondition.java ("startingBlock*¤	
+22 2(È
+Å
+3 3(6)
+%17"mage.constants.ColoredManaSymbol[]"Lmage.constants.ColoredManaSymbol#values()[Lmage/constants/ColoredManaSymbol;*@
+
+__unknown_file ($""
+ mage.constants.ColoredManaSymbolï
+ì
+2 3(7
+%18java.util.stream.Stream"Ejava.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;*0
+
+__unknown_file ("
+java.util.Arrays*G
+
+__unknown_file (+
+)
+%17"mage.constants.ColoredManaSymbol[]ˆ…
+2 4(+
+%19java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ª
+§
+5 5((#
+%20java.util.function.Predicate"__declareFunction*c
+
+__unknown_file (GE
+C__sonar_lambda_191$mage.abilities.condition.common.AdamantCondition‹ˆ
+2 5()
+%21boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%19java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%20java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)"
+2 5(*
+""*½
+31 1(¥
+¢
+1 1('
+%16 mage.constants.ColoredManaSymbol"__id*g
+
+__unknown_file (K*I2
+0mage.abilities.condition.common.AdamantCondition"
+coloredManaSymbol*
+2
+1*ÿ
+startingBlock (3Š
+‡
+ (
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24”
+‘
+ (
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%25*
+11*!
+4/ /("
+/ /(
+""*Ë
+5- -(©¦
+-2 -(F
+%14java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()­ª
+- -(G
+%15	mage.Mana"[mage.watchers.common.ManaSpentToCastWatcher#getLastManaPayment(Ljava/util/UUID;)Lmage/Mana;*T
+
+__unknown_file (8
+6
+watcher+mage.watchers.common.ManaSpentToCastWatcher*3
+
+__unknown_file (
+
+%14java.util.UUID2$getLastManaPayment(Ljava/util/UUID;)X
+V
+- -(H
+payment	mage.Mana"__id*.
+
+__unknown_file (
+
+%15	mage.Mana*
+3
+4*!
+6+ +("
++ +(
+""*Þ
+7)) )(-›˜
+)) )(8
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ˆ…
+)) )(a2
+%13+mage.watchers.common.ManaSpentToCastWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%12mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)
+š
+) )(b6
+watcher+mage.watchers.common.ManaSpentToCastWatcher"__id*P
+
+__unknown_file (4
+2
+%13+mage.watchers.common.ManaSpentToCastWatcher*
+5
+6*ã
+8' '(ÞÛ
+' '(-)
+%8#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()½º
+' '(@
+%9	mage.Mana"@mage.abilities.costs.mana.ManaCost#getUsedManaToPay()Lmage/Mana;*G
+
+__unknown_file (+
+)
+%8#mage.abilities.costs.mana.ManaCosts2getUsedManaToPay()¥
+¢
+'J '(['
+%10 mage.constants.ColoredManaSymbol"__id*g
+
+__unknown_file (K*I2
+0mage.abilities.condition.common.AdamantCondition"
+coloredManaSymbolöó
+' '(\
+
+%11int"7mage.Mana#getColor(Lmage/constants/ColoredManaSymbol;)I*-
+
+__unknown_file (
+
+%9	mage.Mana*E
+
+__unknown_file ()
+'
+%10 mage.constants.ColoredManaSymbol2,getColor(Lmage/constants/ColoredManaSymbol;)"
+' '(a
+""*›	
+9" "(Ç
+Ä
+#  #(:(
+%3"mage.constants.ColoredManaSymbol[]"Lmage.constants.ColoredManaSymbol#values()[Lmage/constants/ColoredManaSymbol;*@
+
+__unknown_file ($""
+ mage.constants.ColoredManaSymbolí
+ê
+" #(;
+%4java.util.stream.Stream"Ejava.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;*0
+
+__unknown_file ("
+java.util.Arrays*F
+
+__unknown_file (*
+(
+%3"mage.constants.ColoredManaSymbol[]†ƒ
+" $(U
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)©
+¦
+%" %(,"
+%6java.util.function.Predicate"__declareFunction*c
+
+__unknown_file (GE
+C__sonar_lambda_190$mage.abilities.condition.common.AdamantConditionˆ…
+" %(-
+%7boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%6java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)"
+" %(.
+""*½
+10! !(!¤
+¡
+! !(!&
+%2 mage.constants.ColoredManaSymbol"__id*g
+
+__unknown_file (K*I2
+0mage.abilities.condition.common.AdamantCondition"
+coloredManaSymbol*
+8
+9*º
+11   (ÆÃ
+   (# 
+%0mage.constants.AbilityType"Cmage.abilities.Ability#getAbilityType()Lmage/constants/AbilityType;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getAbilityType()X
+V
+ '  (8 
+%1mage.constants.AbilityType"__id*"
+
+__unknown_file (
+""*
+7
+10*Ç
+17 7(¥
+¢
+7  7(1'
+%22 mage.constants.ColoredManaSymbol"__id*g
+
+__unknown_file (K*I2
+0mage.abilities.condition.common.AdamantCondition"
+coloredManaSymbolûø
+7 7(2
+
+%23int"7mage.Mana#getColor(Lmage/constants/ColoredManaSymbol;)I*2
+
+__unknown_file (
+
+payment	mage.Mana*E
+
+__unknown_file ()
+'
+%22 mage.constants.ColoredManaSymbol2,getColor(Lmage/constants/ColoredManaSymbol;)"
+7 7(7
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB42
+0mage.abilities.condition.common.AdamantConditionHP

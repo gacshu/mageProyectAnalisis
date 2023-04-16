@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>SoldierArtifactToken xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../apidocs/mage/game/permanent/token/SoldierArtifactToken.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.game.permanent.token;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.MageInt;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.CardType;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SubType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.util.RandomUtil;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.Arrays;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * @author TheElk801</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a> <strong class="jxr_keyword">extends</strong> <a name="TokenImpl" href="../../../../mage/game/permanent/token/TokenImpl.html#TokenImpl">TokenImpl</a> {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      <strong class="jxr_keyword">public</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a>() {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Soldier Token"</span>, <span class="jxr_string">"1/1 colorless Soldier artifact creature token"</span>);
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          cardType.add(CardType.ARTIFACT);
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          cardType.add(CardType.CREATURE);
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          subtype.add(SubType.SOLDIER);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          power = <strong class="jxr_keyword">new</strong> <a name="MageInt" href="../../../../mage/MageInt.html#MageInt">MageInt</a>(1);
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          toughness = <strong class="jxr_keyword">new</strong> <a name="MageInt" href="../../../../mage/MageInt.html#MageInt">MageInt</a>(1);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          availableImageSetCodes = Arrays.asList(<span class="jxr_string">"BRO"</span>);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          <strong class="jxr_keyword">this</strong>.setTokenType(RandomUtil.nextInt(2) + 1);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      }
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a>(<strong class="jxr_keyword">final</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a> token) {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">super</strong>(token);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      }
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">public</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a> copy() {
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="SoldierArtifactToken" href="../../../../mage/game/permanent/token/SoldierArtifactToken.html#SoldierArtifactToken">SoldierArtifactToken</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      }
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

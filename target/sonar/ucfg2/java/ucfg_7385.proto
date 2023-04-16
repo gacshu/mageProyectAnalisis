@@ -1,0 +1,92 @@
+
+–mage.abilities.common.SanctuaryInterveningIfTriggeredAbility#makeOrCondition(Lmage/ObjectColor;Lmage/ObjectColor;)Lmage/abilities/condition/Condition;
+uD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/SanctuaryInterveningIfTriggeredAbility.java (,"1*©
+1! (6LJ
+% (4!
+%0mage.filter.FilterPermanent"mage.filter.FilterPermanentz
+x
+! (6
+%1"%mage.filter.FilterPermanent#<init>()V*?
+
+__unknown_file (#
+!
+%0mage.filter.FilterPermanentz
+x
+ (7%
+filtermage.filter.FilterPermanent"__id*?
+
+__unknown_file (#
+!
+%0mage.filter.FilterPermanenttr
+ ("5
+%2/mage.filter.predicate.mageobject.ColorPredicate"/mage.filter.predicate.mageobject.ColorPredicateï
+ì
+ (*
+%3"Kmage.filter.predicate.mageobject.ColorPredicate#<init>(Lmage/ObjectColor;)V*S
+
+__unknown_file (7
+5
+%2/mage.filter.predicate.mageobject.ColorPredicate*8
+
+__unknown_file (
+
+color1mage.ObjectColortr
+ ("5
+%4/mage.filter.predicate.mageobject.ColorPredicate"/mage.filter.predicate.mageobject.ColorPredicateï
+ì
+ (*
+%5"Kmage.filter.predicate.mageobject.ColorPredicate#<init>(Lmage/ObjectColor;)V*S
+
+__unknown_file (7
+5
+%4/mage.filter.predicate.mageobject.ColorPredicate*8
+
+__unknown_file (
+
+color2mage.ObjectColor«
+¨
+ (	%
+%6mage.filter.predicate.Predicate"ˆmage.filter.predicate.Predicates#or(Lmage/filter/predicate/Predicate;Lmage/filter/predicate/Predicate;)Lmage/filter/predicate/Predicate;*@
+
+__unknown_file ($""
+ mage.filter.predicate.Predicates*S
+
+__unknown_file (7
+5
+%2/mage.filter.predicate.mageobject.ColorPredicate*S
+
+__unknown_file (7
+5
+%4/mage.filter.predicate.mageobject.ColorPredicate¬©
+ (
+
+%7mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent*C
+
+__unknown_file ('
+%
+%6mage.filter.predicate.Predicate2&add(Lmage/filter/predicate/Predicate;)š
+ (6I
+%8Cmage.abilities.condition.common.PermanentsOnTheBattlefieldCondition"Cmage.abilities.condition.common.PermanentsOnTheBattlefieldCondition­
+ª
+ (>
+%9"jmage.abilities.condition.common.PermanentsOnTheBattlefieldCondition#<init>(Lmage/filter/FilterPermanent;)V*g
+
+__unknown_file (K
+I
+%8Cmage.abilities.condition.common.PermanentsOnTheBattlefieldCondition*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent"W
+ (?K
+I
+%8Cmage.abilities.condition.common.PermanentsOnTheBattlefieldCondition:&
+- (@
+color1mage.ObjectColor:&
+A (S
+color2mage.ObjectColorB@">
+<mage.abilities.common.SanctuaryInterveningIfTriggeredAbility

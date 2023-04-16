@@ -1,0 +1,192 @@
+
+›mage.abilities.effects.common.DontUntapInControllersUntapStepEnchantedEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z
+…D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DontUntapInControllersUntapStepEnchantedEffect.java: :("startingBlock*!
+2@ @("
+@ @( 
+""*¶
+3?* ?(3£ 
+?C ?([
+%10java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()øõ
+?* ?(\
+%11boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%10java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*þ
+startingBlock: :(F—
+”
+9 9(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+:% :(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+9 9(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+:4 :(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+9 9(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+:A :(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+8*è
+4>& >(*¿¼
+>8 >(S
+%8java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()Š‡
+>& >(T#
+%9mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+> >(U*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+3
+1*Ú
+5=N =(S¯¬
+=N =(a
+%5java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()À½
+	=i =(„
+%6java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()ÍÊ
+	=N =(…
+%7boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%5java.util.UUID*2
+
+__unknown_file (
+
+%6java.util.UUID2equals(Ljava/lang/Object;)*
+4
+1*×
+6=' =(2¿¼
+=' =(B
+%4java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()*
+5
+1*Ô
+7<$ <((¨¥
+<6 <(J
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+<$ <(K#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)„
+
+< <(L,
+enchantmentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+6
+1*¢
+8; ;(²¯
+; ;("
+%0mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()V
+T
+;& ;(5
+%1mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+7
+1*!
+1D D("
+D D(
+"":/
+: :(+#
+eventmage.game.events.GameEvent:,
+:, :(; 
+sourcemage.abilities.Ability:"
+:< :(E
+gamemage.game.GameBPN
+Lmage.abilities.effects.common.DontUntapInControllersUntapStepEnchantedEffectHP

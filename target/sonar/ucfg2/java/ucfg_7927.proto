@@ -1,0 +1,188 @@
+
+Œmage.abilities.effects.common.PreventAllDamageToPlayersEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z€
+vD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/PreventAllDamageToPlayersEffect.java% %("startingBlock*!
+2) )("
+) )(
+""*É
+3(& ((*š—
+(& ((5
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()”‘
+(H ((Z
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()æã
+(& ((a
+%8mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%6mage.game.GameState*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)¯¬
+(k ((~
+%9java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()âß
+(& ((
+%10boolean"4mage.util.CircularList#contains(Ljava/lang/Object;)Z*;
+
+__unknown_file (
+
+%8mage.players.PlayerList*2
+
+__unknown_file (
+
+%9java.util.UUID2contains(Ljava/lang/Object;)*
+2
+1*þ
+startingBlock% %(F—
+”
+$ $(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+%% %(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%11”
+‘
+$ $(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+%4 %(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12Š
+‡
+$ $(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+%A %(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13*
+6*«
+4'  '($°­
+'/ '(G
+%4java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+'  '(H
+%5mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+' '(I!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%5mage.players.Player*
+3
+1*³
+5&2 &(7ÓÐ
+&2 &(A*
+%1$mage.game.events.GameEvent$EventType"Jmage.game.events.GameEvent#getType()Lmage/game/events/GameEvent$EventType;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2	getType()b
+`
+&E &(X*
+%2$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""b
+`
+&E &(f*
+%3$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""*
+4
+1*
+6& &(õ
+ò
+& &(.
+%0boolean"zmage.abilities.effects.PreventionEffectImpl#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+5
+1*!
+1, ,("
+, ,(
+"":/
+% %(+#
+eventmage.game.events.GameEvent:,
+%, %(; 
+sourcemage.abilities.Ability:"
+%< %(E
+gamemage.game.GameBA?
+=mage.abilities.effects.common.PreventAllDamageToPlayersEffectHP

@@ -1,0 +1,99 @@
+
+@mage.server.SessionManagerImpl#connectAdmin(Ljava/lang/String;)Zh
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/SessionManagerImpl.javaZ Z("startingBlock*„
+2] ](Œ‰
+] ]("
+
+%2void"#mage.server.Session#connectAdmin()V*<
+
+__unknown_file ( 
+
+sessionmage.server.Session2connectAdmin()U
+S
+^ ^(
+%3org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ÿœ
+^2 ^(C
+%4java.lang.String"/mage.server.Session#getHost()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+sessionmage.server.Session2	getHost(){
+y
+^ ^(C
+%5java.lang.String"__concat*%
+^ ^(/
+Admin connected from *$
+^2 ^(C
+
+%4java.lang.StringÛØ
+^ ^(D
+
+%6void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%3org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%5java.lang.String2info(Ljava/lang/Object;)"
+_ _(
+""*Ò
+3[ [("
+Œ
+[ [(",
+%0&java.util.concurrent.ConcurrentHashMap"__id*L
+
+__unknown_file (0*. 
+mage.server.SessionManagerImpl"
+
+sessions»
+¸
+[ [(1
+%1mage.server.Session"__mapGet*J
+
+__unknown_file (.
+,
+%0&java.util.concurrent.ConcurrentHashMap*;
+
+__unknown_file (
+
+	sessionIdjava.lang.Stringk
+i
+[ [(2
+sessionmage.server.Session"__id*7
+
+__unknown_file (
+
+%1mage.server.Session*
+2
+1*
+startingBlockZ Z(1
+
+Y Y(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String]
+[
+Z' Z(0
+	sessionIdjava.lang.String"__annotation*"
+
+__unknown_file (
+
+%7*
+3*!
+1a a("
+a a(
+"":)
+Z  Z(0
+	sessionIdjava.lang.StringB" 
+mage.server.SessionManagerImplHP

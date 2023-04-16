@@ -1,0 +1,337 @@
+
+Qmage.player.ai.ComputerPlayer6#createSimulation(Lmage/game/Game;)Lmage/game/Game;z
+nD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/ComputerPlayer6.javaÉ É(#"7*ë
+2
+Ü Ü(Z
+X
+
+Ü Ü( 
+	oldPlayermage.players.Player"__id*"
+
+__unknown_file (
+""õ
+ò
+
+Ü Ü( 
+	oldPlayermage.players.Player"
+__arrayGet*8
+
+__unknown_file (
+
+%4java.util.Collection*"
+
+__unknown_file (
+""*
+5
+1*û
+3
+å> å(Gñì
+
+åI å(Z
+%18java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player2getId()y
+w
+
+åb å(j
+%19java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId—Œ
+
+åI å(k
+%20boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%18java.util.UUID*3
+
+__unknown_file (
+
+%19java.util.UUID2equals(Ljava/lang/Object;)Å
+
+
+åm å(}
+%21java.util.List"__id*T
+
+__unknown_file (8*6 
+mage.player.ai.ComputerPlayer6"
+suggestedActionsWU
+
+å- å(=&
+%22mage.player.ai.SimulatedPlayer2"mage.player.ai.SimulatedPlayer2–
+Õ
+
+å) å(~
+%23"Omage.player.ai.SimulatedPlayer2#<init>(Lmage/players/Player;ZLjava/util/List;)V*D
+
+__unknown_file ((
+&
+%22mage.player.ai.SimulatedPlayer2*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player*,
+
+__unknown_file (
+
+%20boolean*3
+
+__unknown_file (
+
+%21java.util.Listâ
+Ü
+
+å å(,
+	simPlayermage.player.ai.SimulatedPlayer2"__id*D
+
+__unknown_file ((
+&
+%22mage.player.ai.SimulatedPlayer2àÖ
+
+ç ç()
+%24void"=mage.player.ai.ComputerPlayer#restore(Lmage/players/Player;)V*J
+
+__unknown_file (.
+,
+	simPlayermage.player.ai.SimulatedPlayer2*?
+
+__unknown_file (#
+!
+
+origPlayermage.players.Player2restore(Lmage/players/Player;)úô
+
+é é(
+%25mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getState()¨©
+
+é é('
+%26mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*8
+
+__unknown_file (
+
+%25mage.game.GameState2getPlayers()ñì
+
+é, é(=
+%27java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player2getId()Ò
+Ó
+
+é é(I
+%28mage.players.Player"__mapSet*9
+
+__unknown_file (
+
+%26mage.players.Players*3
+
+__unknown_file (
+
+%27java.util.UUID*J
+
+__unknown_file (.
+,
+	simPlayermage.player.ai.SimulatedPlayer2*
+2*ˇ
+4
+ä ä(X
+V
+
+ä ä(
+%12org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""•¢
+
+ä ä(1
+%13java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+origPlayermage.players.Player2	getName()z
+x
+
+ä ä(B
+%14java.lang.String"__concat*'
+
+ä ä(1
+
+%13java.lang.String*
+
+ä4 ä(B
+ suggested: Å
+
+
+äE ä(U
+%15java.util.List"__id*T
+
+__unknown_file (8*6 
+mage.player.ai.ComputerPlayer6"
+suggestedActionsÅ
+
+
+ä ä(U
+%16java.lang.String"__concat*'
+
+ä ä(B
+
+%14java.lang.String*%
+
+äE ä(U
+
+%15java.util.List‚ﬂ
+
+ä ä(V
+%17void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%12org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%16java.lang.String2debug(Ljava/lang/Object;)*
+3*∞	
+5
+à  à($úô
+
+à  à(/
+%5mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()™ß
+
+à  à(<
+%6mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%5mage.game.GameState2getPlayers()ïí
+
+àA à(R
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player2getId()¢
+ü
+
+à  à(S
+%8mage.players.Player"__mapGet*8
+
+__unknown_file (
+
+%6mage.players.Players*2
+
+__unknown_file (
+
+%7java.util.UUIDúô
+
+à  à(Z
+%9mage.players.Player"/mage.players.Player#copy()Lmage/players/Player;*7
+
+__unknown_file (
+
+%8mage.players.Player2copy()p
+n
+
+à à([!
+
+origPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%9mage.players.PlayerÅ
+
+
+â â(!
+%10java.util.List"__id*T
+
+__unknown_file (8*6 
+mage.player.ai.ComputerPlayer6"
+suggestedActionsyw
+
+â â(+
+%11boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%10java.util.List2	isEmpty()*
+3
+4*â
+6
+Ü  Ü(#õò
+
+Ü  Ü(.
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*3
+
+__unknown_file (
+
+simmage.game.Game2
+getState()™ß
+
+Ü  Ü(;
+%3mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%2mage.game.GameState2getPlayers()ß§
+
+Ü  Ü(D
+%4java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*8
+
+__unknown_file (
+
+%3mage.players.Players2values()*
+2*±
+7
+Ñ Ñ(êç
+
+Ñ Ñ(
+%0mage.game.Game"+mage.util.Copyable#copy()Ljava/lang/Object;*4
+
+__unknown_file (
+
+gamemage.game.Game2copy()_
+]
+
+Ñ Ñ(
+simmage.game.Game"__id*2
+
+__unknown_file (
+
+%0mage.game.Game¶£
+
+Ö Ö(
+
+%1void" mage.game.Game#setSimulation(Z)V*3
+
+__unknown_file (
+
+simmage.game.Game* 
+
+__unknown_file (22setSimulation(Z)*
+6*6
+1
+ê ê("%
+
+ê ê(
+
+simmage.game.Game:$
+
+É$ É(-
+gamemage.game.GameB" 
+mage.player.ai.ComputerPlayer6

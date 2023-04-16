@@ -1,0 +1,277 @@
+
+umage.abilities.common.SpellCastControllerTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/SpellCastControllerTriggeredAbility.javaN N("startingBlock*"
+13P P("
+P P(
+""*Î
+14O O(Ø¨
+O O( 
+%0java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()œÃ
+O( O(>
+%1java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*Y
+
+__unknown_file (=;
+9mage.abilities.common.SpellCastControllerTriggeredAbility2getControllerId()Ã…
+O O(?
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+13
+12*!
+1\ \("
+\ \(
+""*ﬂ
+2	Z Z(Éa_
+Z3 Z(>,
+%20%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetù
+ö
+	Z/ Z(Ñ
+%21"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%20%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%16java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game∆√
+	Z Z(Ö
+%22void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*C
+
+__unknown_file ('
+%
+%15mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%20%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*è
+3Zp Z(uöó
+Zp Z(}
+%18java.util.UUID"-mage.game.stack.Spell#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getId()^
+\
+Zp Z(}
+%16java.util.UUID"__id*3
+
+__unknown_file (
+
+%18java.util.UUID*
+2*Ö
+startingBlockN N(;ó
+î
+M M(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+N* N(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%23ä
+á
+M M(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+N6 N(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24*
+14*¢
+4ZV Z([†ù
+ZV Z(e
+%19mage.cards.Card"0mage.game.stack.Spell#getCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2	getCard()äá
+ZV Z(m
+%17java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%19mage.cards.Card2getId()^
+\
+ZV Z(m
+%16java.util.UUID"__id*3
+
+__unknown_file (
+
+%17java.util.UUID*
+2*˛
+5Z Z(Ê„
+Z Z(%
+%15mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*Y
+
+__unknown_file (=;
+9mage.abilities.common.SpellCastControllerTriggeredAbility2getEffects()*
+3
+4*…
+6X X(Ê„
+X X(%
+%13mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*Y
+
+__unknown_file (=;
+9mage.abilities.common.SpellCastControllerTriggeredAbility2getEffects()»≈
+X X(6
+%14void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%13mage.abilities.effects.Effects*)
+
+__unknown_file (
+	spellCast*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+5
+1*!
+7V V("
+V V(
+""*„
+9U- U(5ò
+ï
+U- U(5
+%11mage.constants.Zone"__id*g
+
+__unknown_file (K*I;
+9mage.abilities.common.SpellCastControllerTriggeredAbility"
+
+fromZone∞≠
+U9 U(L
+%12mage.constants.Zone"8mage.game.stack.Spell#getFromZone()Lmage/constants/Zone;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getFromZone()*
+6
+7*á
+10U U(ó
+î
+U U(
+%9mage.constants.Zone"__id*g
+
+__unknown_file (K*I;
+9mage.abilities.common.SpellCastControllerTriggeredAbility"
+
+fromZoneR
+P
+U! U()
+%10mage.constants.Zone"__id*"
+
+__unknown_file (
+""*	
+6
+7
+9*π
+11T T(ô
+ñ
+T T(
+%6mage.filter.FilterSpell"__id*e
+
+__unknown_file (I*G;
+9mage.abilities.common.SpellCastControllerTriggeredAbility"
+filterœÃ
+T( T(9
+%7java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*Y
+
+__unknown_file (=;
+9mage.abilities.common.SpellCastControllerTriggeredAbility2getControllerId()±Æ
+T T(F
+%8boolean"umage.filter.FilterSpell#match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+%6mage.filter.FilterSpell*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*2
+
+__unknown_file (
+
+%7java.util.UUID*Y
+
+__unknown_file (=;
+9mage.abilities.common.SpellCastControllerTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2\match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+7
+10*Ó
+12R R(®•
+R R(% 
+%3mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()Ø¨
+R/ R(B
+%4java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()àÖ
+R R(C
+%5mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%3mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%4java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+R R(D
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%5mage.game.stack.Spell*
+7
+11:/
+N  N(0#
+eventmage.game.events.GameEvent:"
+N1 N(:
+gamemage.game.GameB=;
+9mage.abilities.common.SpellCastControllerTriggeredAbilityHP

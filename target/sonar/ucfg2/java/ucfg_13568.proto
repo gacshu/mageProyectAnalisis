@@ -1,0 +1,139 @@
+
+omage.abilities.keyword.JumpStartAbility#getSpellAbilityToResolve(Lmage/game/Game;)Lmage/abilities/SpellAbility;j
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/JumpStartAbility.java8 8(0"startingBlock*ó
+2<) <(-xv
+=. =(H7
+%21mage.abilities.keyword.JumpStartReplacementEffect"1mage.abilities.keyword.JumpStartReplacementEffect§
+¤
+=* =(J
+%3";mage.abilities.keyword.JumpStartReplacementEffect#<init>()V*U
+
+__unknown_file (9
+7
+%21mage.abilities.keyword.JumpStartReplacementEffect
+š
+= =(K1
+effect'mage.abilities.effects.ContinuousEffect"__id*U
+
+__unknown_file (9
+7
+%21mage.abilities.keyword.JumpStartReplacementEffectµ²
+>8 >(E
+%4java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*G
+
+__unknown_file (+)
+'mage.abilities.keyword.JumpStartAbility2getSourceId()š—
+>G >(V
+%5mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()µ²
+>l >(y
+%6java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*G
+
+__unknown_file (+)
+'mage.abilities.keyword.JumpStartAbility2getSourceId()êç
+>G >(z	
+%7int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*7
+
+__unknown_file (
+
+%5mage.game.GameState*2
+
+__unknown_file (
+
+%6java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)`^
+>, >(7+
+%8%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetý
+ú
+>( >({
+%9"@mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;I)V*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%4java.util.UUID*'
+
+__unknown_file (
+	
+%7int¥¢
+> >(|.
+%10'mage.abilities.effects.ContinuousEffect"Œmage.abilities.effects.ContinuousEffect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)–“
+? ?(,
+%11void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*G
+
+__unknown_file (+)
+'mage.abilities.keyword.JumpStartAbility2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+1*„
+startingBlock80 8(;Š
+‡
+7 7(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+86 8(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12*
+4*–
+49 9(µ²
+9! 9(.
+%0java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*G
+
+__unknown_file (+)
+'mage.abilities.keyword.JumpStartAbility2getSourceId()äá
+9 9(/
+%1mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getCard(Ljava/util/UUID;)`
+^
+9 9(0
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%1mage.cards.Card*
+2
+1*F
+1B B("7
+B B(+)
+'mage.abilities.keyword.JumpStartAbility:"
+81 8(:
+gamemage.game.GameB+)
+'mage.abilities.keyword.JumpStartAbilityH

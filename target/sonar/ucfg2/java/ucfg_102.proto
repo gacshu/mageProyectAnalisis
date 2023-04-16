@@ -1,0 +1,276 @@
+
+2mage.deck.Momir#validate(Lmage/cards/decks/Deck;)Zm
+cD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/Momir.java   ("startingBlock*Û
+2* *(O
+M
+* *(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ä
+á
+* *(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%17java.util.Set*"
+
+__unknown_file (
+""*
+4
+1*ô
+3, ,(f
+d
+, ,(5.
+%20'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ïí
+,7 ,(E
+%21java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()ÑÅ
+, ,(l
+%22void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*/
+
+__unknown_file (
+mage.deck.Momir*L
+
+__unknown_file (0
+.
+%20'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%21java.lang.String*<
+
+__unknown_file ( 
+Only basic lands are allowed* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+2*í
+startingBlock   (&ë
+é
+ (
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck^
+\
+ !  (%
+deckmage.cards.decks.Deck"__annotation*#
+
+__unknown_file (
+
+%23*
+8*ê
+4+ +(ïí
++) +(7
+%18java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()‡›
++ +(8
+%19boolean",java.util.List#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+basicLandNamesjava.util.List*5
+
+__unknown_file (
+
+%18java.lang.String2contains(Ljava/lang/Object;)*
+2
+3*≤
+5* *(ùö
+* *((
+%17java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+2*á
+6)6 )(<Ü
+É
+	)6 )(Ä
+%14java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*0
+
+__unknown_file ("
+java.util.Arrays*&
+
+__unknown_file (
+
+Forest*&
+
+__unknown_file (
+
+Island*(
+
+__unknown_file (
+
+Mountain*%
+
+__unknown_file (	
+Swamp*&
+
+__unknown_file (
+
+Plains*&
+
+__unknown_file (
+
+Wastes=;
+)* )(5
+%15java.util.ArrayList"java.util.ArrayListπ
+∂
+	)& )(Å
+%16"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%15java.util.ArrayList*3
+
+__unknown_file (
+
+%14java.util.Listo
+m
+	) )(Ç 
+basicLandNamesjava.util.List"__id*8
+
+__unknown_file (
+
+%15java.util.ArrayList*
+5*ì
+7% %(e
+c
+% %(5-
+%5'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""}{
+%Q %(a	
+%6int"!mage.deck.Momir#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Momir2getDeckMinSize()f
+d
+%? %(a
+%7java.lang.String"__concat*
+%? %(N
+Must contain *
+%Q %(a
+	
+%6intr
+p
+%? %(r
+%8java.lang.String"__concat*$
+%? %(a
+
+%7java.lang.String*
+%d %(r
+ cards: has ùö
+	%u %(Ñ
+%9java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ki
+	%u %(ã
+
+%10int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%9java.util.Set2size()q
+o
+	%? %(ã
+%11java.lang.String"__concat*$
+%? %(r
+
+%8java.lang.String*
+	%u %(ã
+
+
+%10intr
+p
+	%? %(ñ
+%12java.lang.String"__concat*&
+	%? %(ã
+
+%11java.lang.String*
+
+%é %(ñ
+
+ cards»≈
+	% %(ó
+%13void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*/
+
+__unknown_file (
+mage.deck.Momir*K
+
+__unknown_file (/
+-
+%5'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%12java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+6*Â
+8! !(i
+g
+" "(
+%0java.util.List"__id*?
+
+__unknown_file (#*!
+mage.deck.Momir"
+
+errorsListZ
+X
+" "(
+
+%1void"__arrayClear*2
+
+__unknown_file (
+
+%0java.util.Listúô
+$ $(
+%2java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ig
+$ $("	
+%3int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%2java.util.Set2size()}{
+$& $(6	
+%4int"!mage.deck.Momir#getDeckMinSize()I*/
+
+__unknown_file (
+mage.deck.Momir2getDeckMinSize()*
+6
+7*!
+11 1("
+1 1(
+"":)
+   (%
+deckmage.cards.decks.DeckB
+mage.deck.MomirHP

@@ -1,0 +1,229 @@
+
+mmage.abilities.effects.common.DamageAttachedControllerEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+uD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DamageAttachedControllerEffect.java* *("startingBlock*÷
+
+2: :(≠
+™
+: :( .
+%9(mage.abilities.dynamicvalue.DynamicValue"__id*h
+
+__unknown_file (L*J>
+<mage.abilities.effects.common.DamageAttachedControllerEffect"
+amountçä
+: :(>
+
+%10int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%9(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*\
+
+__unknown_file (@>
+<mage.abilities.effects.common.DamageAttachedControllerEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)©¶
+:@ :(T
+%11java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()∆√
+: :(c
+
+%12int"Vmage.players.Player#damage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*;
+
+__unknown_file (
+
+playermage.players.Player*(
+
+__unknown_file (
+
+
+%10int*3
+
+__unknown_file (
+
+%11java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Adamage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+; ;(
+""*±
+38 8(∫∑
+8' 8(B
+%7java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	enchantedmage.game.permanent.Permanent2getControllerId()Ì
+8 8(C
+%8mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+8 8(D
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%8mage.players.Player*
+2
+1*˛
+startingBlock* *(3ä
+á
+) )(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+* *("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13î
+ë
+) )(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+*, *(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+9*!
+46 6("
+6 6(
+""*à
+54 4("øº
+4@ 4([
+%5java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()™ß
+4 4(\#
+%6mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)Å
+
+4 4(]*
+	enchantedmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+3
+4*!
+62 2("
+2 2(
+""*Ù
+8/ /(®•
+/< /(P
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()™ß
+/ /(Q#
+%4mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)Ñ
+Å
+/ /(Q,
+enchantmentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+5
+6*˜
+9,, ,(0®•
+,I ,(]
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Q
+O
+,_ ,(o
+%1mage.constants.Zone"__id*"
+
+__unknown_file (
+""Á‰
+,, ,(p
+%2mage.MageObject"^mage.game.Game#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID*7
+
+__unknown_file (
+
+%1mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)u
+s
+, ,(q,
+enchantmentmage.game.permanent.Permanent"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*	
+5
+6
+8*!
+1= =("
+= =(
+"":"
+* *(#
+gamemage.game.Game:,
+*$ *(2 
+sourcemage.abilities.AbilityB@>
+<mage.abilities.effects.common.DamageAttachedControllerEffectHP

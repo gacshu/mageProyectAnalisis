@@ -1,0 +1,222 @@
+
+Ymage.abilities.keyword.DemonstrateEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zl
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/DemonstrateAbility.java5 5("startingBlock*´
+2B B(º·
+B2 B(I
+%11java.util.UUID"7mage.target.TargetImpl#getFirstTarget()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetOpponent2getFirstTarget()âß
+B B(P
+%12void"mmage.game.stack.StackObjectImpl#createCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;Z)V*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%11java.util.UUID* 
+
+__unknown_file (22LcreateCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;Z)*
+1*¥
+3> >(°­
+>. >(F
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()àÝ
+> >(M
+
+%4void"mmage.game.stack.StackObjectImpl#createCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;Z)V*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%3java.util.UUID* 
+
+__unknown_file (22LcreateCopyOnStack(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;Z)XV
+?$ ?(2'
+%5!mage.target.common.TargetOpponent"!mage.target.common.TargetOpponentª
+§
+?  ?(8
+%6",mage.target.common.TargetOpponent#<init>(Z)V*E
+
+__unknown_file ()
+'
+%5!mage.target.common.TargetOpponent* 
+
+__unknown_file (2‡
+„
+? ?(9+
+target!mage.target.common.TargetOpponent"__id*E
+
+__unknown_file ()
+'
+%5!mage.target.common.TargetOpponentˆ
+…
+@ @(!
+%7mage.constants.Outcome"__id*U
+
+__unknown_file (9*7*
+(mage.abilities.keyword.DemonstrateEffect"	
+outcome«¨
+@ @(8
+%8boolean"qmage.players.Player#choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%7mage.constants.Outcome*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetOpponent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)¹¶
+A A(2
+%9java.util.UUID"7mage.target.TargetImpl#getFirstTarget()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetOpponent2getFirstTarget()ñî
+A A(3
+%10mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%9java.util.UUID2getPlayer(Ljava/util/UUID;)*
+2
+1*þ
+startingBlock5 5(3Š
+‡
+4 4(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+5 5("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+4 4(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+5, 5(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+7*!
+4< <("
+< <(
+""*Œ
+5: :(&Š‡
+: :(3
+%2java.lang.Object"Pmage.abilities.effects.EffectImpl#getValue(Ljava/lang/String;)Ljava/lang/Object;*H
+
+__unknown_file (,*
+(mage.abilities.keyword.DemonstrateEffect*)
+
+__unknown_file (
+	spellCast2getValue(Ljava/lang/String;)h
+f
+: :(4
+spellmage.game.stack.Spell"__id*4
+
+__unknown_file (
+
+%2java.lang.Object*
+3
+4*!
+68 8("
+8 8(
+""*«
+76 6( °­
+6+ 6(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+6 6(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+6 6(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+5
+6*!
+1D D("
+D D(
+"":"
+5 5(#
+gamemage.game.Game:,
+5$ 5(2 
+sourcemage.abilities.AbilityB,*
+(mage.abilities.keyword.DemonstrateEffectHP

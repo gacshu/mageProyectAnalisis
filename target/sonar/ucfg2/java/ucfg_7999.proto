@@ -1,0 +1,141 @@
+
+amage.abilities.keyword.RecoverAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zh
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/RecoverAbility.java1 1("startingBlock*!
+27 7("
+7 7(
+""*•
+36 6(ÖÓ
+6 6(*#
+%6mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()Ÿœ
+6 6(2
+%7java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent2getId()³°
+6: 6(G
+%8java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*E
+
+__unknown_file ()'
+%mage.abilities.keyword.RecoverAbility2getSourceId()ÌÉ
+6 6(H
+%9boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%7java.util.UUID*2
+
+__unknown_file (
+
+%8java.util.UUID2equals(Ljava/lang/Object;)*
+2
+1*„
+startingBlock1 1(;—
+”
+0 0(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+1* 1(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+0 0(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+16 1(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+6*Ó
+45 5(ÖÓ
+5 5()#
+%4mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()âß
+5 5(:
+%5boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+3
+1*
+54 4(ÖÓ
+4 4("#
+%1mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()»¸
+4- 4(>
+%2java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()'
+%mage.abilities.keyword.RecoverAbility2getControllerId()ÞÛ
+4 4(?
+%3boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%2java.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+4
+1*Â
+623 2(8
+
+2 2(9*
+zEvent mage.game.events.ZoneChangeEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent¦£
+3 3( 
+%0boolean"/mage.game.events.ZoneChangeEvent#isDiesEvent()Z*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2isDiesEvent()*
+5
+1*!
+1: :("
+: :(
+"":/
+1  1(0#
+eventmage.game.events.GameEvent:"
+11 1(:
+gamemage.game.GameB)'
+%mage.abilities.keyword.RecoverAbilityHP

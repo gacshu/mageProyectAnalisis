@@ -1,0 +1,200 @@
+
+émage.server.game.PlayerFactory#createPlayer(Lmage/players/PlayerType;Ljava/lang/String;Lmage/constants/RangeOfInfluence;I)Ljava/util/Optional;h
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/PlayerFactory.java (("11*‹
+3# #(V
+T
+# #(
+%11org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""å
+â
+# #(A
+%12java.lang.String"__concat*%
+# #(4
+Unknown player type: *3
+#7 #(A'
+%
+
+playerTypemage.players.PlayerType‡›
+# #(B
+%13void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%11org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%12java.lang.String2fatal(Ljava/lang/Object;)*
+1*6
+4! !(+"'
+! !(+
+
+%10java.util.Optional*Ì
+5! !(ÿ
+’
+! !(*
+%10java.util.Optional"=java.util.Optional#of(Ljava/lang/Object;)Ljava/util/Optional;*2
+
+__unknown_file ("
+java.util.Optional*;
+
+__unknown_file (
+
+playermage.players.Player*
+4*Í
+6   (Ox
+v
+   (O
+%8java.lang.String"__concat*$
+   (>
+
+%6java.lang.String*"
+ A  (O
+
+%7java.util.UUID€ÿ
+   (P
+
+%9void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%4org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%8java.lang.String2trace(Ljava/lang/Object;)*
+5*√
+7  (L`
+^
+ (M
+playermage.players.Player"__id*-
+
+__unknown_file (
+
+%3	!capture!U
+S
+   (
+%4org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""x
+v
+   (6
+%5java.lang.String"__concat* 
+   (/
+Player created: *&
+ 2  (6
+
+namejava.lang.Stringi
+g
+   (>
+%6java.lang.String"__concat*$
+   (6
+
+%5java.lang.String*
+ 9  (>
+ - êç
+ A  (O
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()*
+6*å
+8 (u{
+y
+ (u$
+conjava.lang.reflect.Constructor"__id*A
+
+__unknown_file (%
+#
+%2java.lang.reflect.Constructor˙˜
+) (L
+%3	!capture!"Pjava.lang.reflect.Constructor#newInstance([Ljava/lang/Object;)Ljava/lang/Object;*B
+
+__unknown_file (&
+$
+conjava.lang.reflect.Constructor*6
+
+__unknown_file (
+
+namejava.lang.String*F
+
+__unknown_file (*
+(
+rangemage.constants.RangeOfInfluence*"
+
+__unknown_file (
+""2 newInstance([Ljava/lang/Object;)*
+7*Ï
+9% (4◊‘
+% (t#
+%2java.lang.reflect.Constructor"Qjava.lang.Class#getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;*@
+
+__unknown_file ($
+"
+playerTypeClassjava.lang.Class*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2"getConstructor([Ljava/lang/Class;)*
+8*É
+10 (@k
+i
+ (@"
+playerTypeClassjava.lang.Class"__id*3
+
+__unknown_file (
+
+%1java.lang.Class*
+3
+9*ø
+11$ (/|
+z
+$ (/
+%0java.util.EnumMap"__id*O
+
+__unknown_file (3*1 
+mage.server.game.PlayerFactory"
+playerTypes™
+ß
+$ (?
+%1java.lang.Class"__mapGet*5
+
+__unknown_file (
+
+%0java.util.EnumMap*C
+
+__unknown_file ('
+%
+
+playerTypemage.players.PlayerType*
+10*≈
+1( ((å
+â
+( ((
+%16java.util.Optional".java.util.Optional#empty()Ljava/util/Optional;*2
+
+__unknown_file ("
+java.util.Optional"'
+( (( 
+
+%16java.util.Optional:1
+) (?%
+
+playerTypemage.players.PlayerType:$
+@ (L
+namejava.lang.String:4
+M (d(
+rangemage.constants.RangeOfInfluence: 
+
+__unknown_file (
+""B" 
+mage.server.game.PlayerFactoryH

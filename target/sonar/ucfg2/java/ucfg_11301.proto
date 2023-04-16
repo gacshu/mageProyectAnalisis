@@ -1,0 +1,345 @@
+
+omage.cards.CardImpl#moveToZone(Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/List;)ZX
+LD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/CardImpl.javaà à("startingBlock*•
+2
+ò ò(˝
+˙
+
+ò ò(F
+%15boolean"dmage.game.ZonesHandler#moveCard(Lmage/game/ZoneChangeInfo;Lmage/game/Game;Lmage/abilities/Ability;)Z*6
+
+__unknown_file ("
+mage.game.ZonesHandler*H
+
+__unknown_file (,
+*
+zoneChangeInfomage.game.ZoneChangeInfo*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability"
+
+ò ò(G
+""*∆
+3
+ç ç(T
+R
+
+é é(
+%13mage.constants.Zone"__id*"
+
+__unknown_file (
+""T
+R
+
+ë ë( 
+%14mage.constants.Zone"__id*"
+
+__unknown_file (
+""*	
+4
+5
+6*˛
+startingBlock
+à à(nì
+ê
+
+á á(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+toZonemage.constants.Zone`
+^
+
+à# à()
+toZonemage.constants.Zone"__annotation*#
+
+__unknown_file (
+
+%16ñ
+ì
+
+á á(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+à3 à(9 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17å
+â
+
+á á(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+à@ à(D
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18ñ
+ì
+
+á á(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+appliedEffectsjava.util.Listc
+a
+
+à_ à(m 
+appliedEffectsjava.util.List"__annotation*#
+
+__unknown_file (
+
+%19*
+7*«
+4
+î ñ(IG
+
+ï) ï(7
+%11mage.game.ZoneChangeInfo"mage.game.ZoneChangeInfo‰
+·
+
+ï% ï(>
+%12"Dmage.game.ZoneChangeInfo#<init>(Lmage/game/events/ZoneChangeEvent;)V*=
+
+__unknown_file (!
+
+%11mage.game.ZoneChangeInfo*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent
+}
+
+ï ï(>*
+zoneChangeInfomage.game.ZoneChangeInfo"__id*=
+
+__unknown_file (!
+
+%11mage.game.ZoneChangeInfo*
+2*ˇ
+5
+ë ì(`^
+
+í) í(C*
+%9$mage.game.ZoneChangeInfo$Battlefield"$mage.game.ZoneChangeInfo$Battlefield¯
+ı
+
+í% í(u
+%10"image.game.ZoneChangeInfo$Battlefield#<init>(Lmage/game/events/ZoneChangeEvent;ZLmage/abilities/Ability;)V*H
+
+__unknown_file (,
+*
+%9$mage.game.ZoneChangeInfo$Battlefield*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityã
+à
+
+í í(u*
+zoneChangeInfomage.game.ZoneChangeInfo"__id*H
+
+__unknown_file (,
+*
+%9$mage.game.ZoneChangeInfo$Battlefield*
+2*í
+6
+é ê(XV
+
+è) è(?&
+%7 mage.game.ZoneChangeInfo$Library" mage.game.ZoneChangeInfo$Libraryó
+î
+
+è% è(]
+%8"Mmage.game.ZoneChangeInfo$Library#<init>(Lmage/game/events/ZoneChangeEvent;Z)V*D
+
+__unknown_file ((
+&
+%7 mage.game.ZoneChangeInfo$Library*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent*"
+
+__unknown_file (
+""á
+Ñ
+
+è è(]*
+zoneChangeInfomage.game.ZoneChangeInfo"__id*D
+
+__unknown_file ((
+&
+%7 mage.game.ZoneChangeInfo$Library*
+2*ï
+7
+â â(úô
+
+â â('
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()m
+k
+
+â0 â(8
+%1java.util.UUID"__id*A
+
+__unknown_file (%*#
+mage.cards.CardImpl"
+
+objectIdˆÛ
+
+â â(9
+%2mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%0mage.game.GameState*2
+
+__unknown_file (
+
+%1java.util.UUID2getZone(Ljava/util/UUID;)n
+l
+
+â â(:
+fromZonemage.constants.Zone"__id*7
+
+__unknown_file (
+
+%2mage.constants.Zonem
+k
+
+ä4 ä(A
+%3java.util.UUID"__id*A
+
+__unknown_file (%*#
+mage.cards.CardImpl"
+
+objectIdl
+j
+
+äK ä(R
+%4java.util.UUID"__id*@
+
+__unknown_file ($*"
+mage.cards.CardImpl"	
+ownerIdXV
+
+ä$ ä(3&
+%5 mage.game.events.ZoneChangeEvent" mage.game.events.ZoneChangeEventﬁ
+€
+
+ä  ä(u
+%6"úmage.game.events.ZoneChangeEvent#<init>(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;Lmage/constants/Zone;Ljava/util/List;)V*D
+
+__unknown_file ((
+&
+%5 mage.game.events.ZoneChangeEvent*2
+
+__unknown_file (
+
+%3java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%4java.util.UUID*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*;
+
+__unknown_file (
+
+toZonemage.constants.Zone*>
+
+__unknown_file ("
+ 
+appliedEffectsjava.util.ListÜ
+É
+
+ä ä(v)
+event mage.game.events.ZoneChangeEvent"__id*D
+
+__unknown_file ((
+&
+%5 mage.game.events.ZoneChangeEventd
+b
+
+ã ã(&*
+zoneChangeInfomage.game.ZoneChangeInfo"__id*"
+
+__unknown_file (
+""*
+3
+1*%
+1
+ö ö("
+
+ö ö(
+"":+
+
+à à(*
+toZonemage.constants.Zone:.
+
+à+ à(: 
+sourcemage.abilities.Ability:$
+
+à; à(E
+gamemage.game.Game: 
+
+__unknown_file (
+"":.
+
+àT à(m 
+appliedEffectsjava.util.ListB
+mage.cards.CardImplHP

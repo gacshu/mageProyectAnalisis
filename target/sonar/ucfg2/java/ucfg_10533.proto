@@ -1,0 +1,271 @@
+
+image.abilities.hint.common.DomainHint#getText(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;h
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/hint/common/DomainHint.java ("startingBlock*v
+2(V ((Xb
+`
+(V ((X
+%24java.lang.String"__id*5
+
+__unknown_file (
+
+%26java.lang.String*
+1*ﬁ
+3(* ((.é
+ã
+(1 ((M
+%27java.lang.String"Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*"
+
+__unknown_file (
+, *9
+
+__unknown_file (
+
+	landTypesjava.util.Listj
+h
+(* ((M
+%28java.lang.String"__concat*
+(* ((.
+ (*%
+(1 ((M
+
+%27java.lang.Stringi
+g
+(* ((S
+%25java.lang.String"__concat*%
+(* ((M
+
+%28java.lang.String*
+(P ((S
+)b
+`
+(* ((S
+%24java.lang.String"__id*5
+
+__unknown_file (
+
+%25java.lang.String*
+1*Ä
+startingBlock (5ä
+á
+ (
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ (#
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%30ï
+í
+ (
+%31"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+- (4!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%31*
+4*–
+4! (%æª
+! (6%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()j
+h
+ (G2
+%1,mage.filter.common.FilterControlledPermanent"__id*"
+
+__unknown_file (
+""±Æ
+ (1
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()ÓÎ
+! (
+%3java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*P
+
+__unknown_file (4
+2
+%1,mage.filter.common.FilterControlledPermanent*2
+
+__unknown_file (
+
+%2java.util.UUID*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¢ü
+! (
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%3java.util.List2stream()ù
+ö
+ !(4!
+%5java.util.function.Function"__declareFunction*X
+
+__unknown_file (<:
+8__sonar_lambda_211$mage.abilities.hint.common.DomainHintÜ
+É
+
+__unknown_file (+
+!
+%5java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game§°
+! !(5
+%13java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%5java.util.function.Function2"map(Ljava/util/function/Function;)êç
+! "(,
+%14java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%13java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)¥±
+! #(
+%15java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%14java.util.stream.Stream2
+distinct()àÖ
+! $(-
+%16java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%15java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ÿ
+÷
+% %(C
+%17java.util.Comparator"Sjava.util.Comparator#comparing(Ljava/util/function/Function;)Ljava/util/Comparator;*4
+
+__unknown_file ("
+java.util.Comparator*"
+
+__unknown_file (
+""óî
+! %(D
+%18java.util.stream.Stream"Ojava.util.stream.Stream#sorted(Ljava/util/Comparator;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*9
+
+__unknown_file (
+
+%17java.util.Comparator2sorted(Ljava/util/Comparator;)Ø
+¨
+& &(,!
+%19java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsõò
+! &(-
+%20java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%19java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)d
+b
+ &(.
+	landTypesjava.util.List"__id*3
+
+__unknown_file (
+
+%20java.util.Listsq
+'> '(N
+
+%21int"java.util.List#size()I*9
+
+__unknown_file (
+
+	landTypesjava.util.List2size()Ü
+É
+' '(N
+%22java.lang.String"__concat*:
+' '(;.,
+*Basic land types among lands you control: *
+'> '(N
+
+
+%21intsq
+( ((#
+
+%23int"java.util.List#size()I*9
+
+__unknown_file (
+
+	landTypesjava.util.List2size()*
+2
+3*≥
+1' ((Y}
+{
+' ((Y
+%29java.lang.String"__concat*%
+' '(N
+
+%22java.lang.String*%
+( ((Y
+
+%24java.lang.String"%
+' ((Z
+
+%29java.lang.String:"
+ ($
+gamemage.game.Game:-
+% (4!
+abilitymage.abilities.AbilityB)'
+%mage.abilities.hint.common.DomainHintH

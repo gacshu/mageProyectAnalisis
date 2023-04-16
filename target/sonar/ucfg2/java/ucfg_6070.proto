@@ -1,0 +1,207 @@
+
+\mage.abilities.keyword.AscendAbility#checkAscend(Lmage/game/Game;Lmage/abilities/Ability;Z)Zg
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/AscendAbility.java( ((%"10*!
+29 9("
+9 9(
+""*«
+36 6(©¦
+6' 6(>
+%17java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()Š
+‡
+6' 6(d
+%18java.lang.String"__concat*%
+6' 6(>
+
+%17java.lang.String*1
+6A 6(d%#
+! already has the city's blessing.ÝÚ
+6 6(e
+%19void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%18java.lang.String2!informPlayers(Ljava/lang/String;)*
+2*¬
+51 1(©¦
+1+ 1(B
+%14java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()‹
+ˆ
+1+ 1(i
+%15java.lang.String"__concat*%
+1+ 1(B
+
+%14java.lang.String*2
+1E 1(i&$
+" does not get the city's blessing.ÝÚ
+1 1(j
+%16void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%15java.lang.String2!informPlayers(Ljava/lang/String;)*
+2*³
+7- -(TR
+-2 -(?%
+%8mage.designations.CitysBlessing"mage.designations.CitysBlessingƒ
+€
+-. -(A
+%9")mage.designations.CitysBlessing#<init>()V*C
+
+__unknown_file ('
+%
+%8mage.designations.CitysBlessing—”
+- -(B
+%10void"Dmage.players.Player#addDesignation(Lmage/designations/Designation;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*C
+
+__unknown_file ('
+%
+%8mage.designations.CitysBlessing2/addDesignation(Lmage/designations/Designation;)©¦
+.' .(>
+%11java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()œ
+™
+.' .(v
+%12java.lang.String"__concat*%
+.' .(>
+
+%11java.lang.String*C
+.A .(v75
+3 gets the city's blessing for the rest of the game.ÝÚ
+. .(w
+%13void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%12java.lang.String2!informPlayers(Ljava/lang/String;)*
+2*‰
+8, ,(¾»
+, ,()%
+%4mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()Y
+W
+,3 ,(Q!
+%5mage.filter.FilterPermanent"__id*"
+
+__unknown_file (
+""”‘
+,S ,(e
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()»¸
+, ,(l	
+%7int"hmage.game.permanent.Battlefield#countAll(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)I*C
+
+__unknown_file ('
+%
+%4mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%5mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2GcountAll(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)*	
+2
+5
+7*Ÿ
+9+ +(_
+]
+++ +(I'
+%2!mage.designations.DesignationType"__id*"
+
+__unknown_file (
+""£ 
++ +(J
+%3boolean"Hmage.players.Player#hasDesignation(Lmage/designations/DesignationType;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*E
+
+__unknown_file ()
+'
+%2!mage.designations.DesignationType23hasDesignation(Lmage/designations/DesignationType;)*	
+2
+3
+8*¬
+10) )( °­
+)+ )(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+) )(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+) )(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+9
+1*!
+1; ;("
+; ;(
+"":"
+(& ((0
+gamemage.game.Game:,
+(1 ((@ 
+sourcemage.abilities.Ability: 
+
+__unknown_file (
+""B("&
+$mage.abilities.keyword.AscendAbilityHP

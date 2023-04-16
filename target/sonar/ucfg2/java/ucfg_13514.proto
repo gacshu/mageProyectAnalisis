@@ -1,0 +1,175 @@
+
+çmage.abilities.effects.common.combat.AttacksIfAbleAllEffect#applies(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z~
+tD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/AttacksIfAbleAllEffect.java6 6("startingBlock*#
+2	< <(Å"
+	< <(Å
+""*«
+3<' <(.ıÚ
+<' <(M
+%5java.util.Set"Zmage.watchers.common.AttackedThisTurnWatcher#getAttackedThisTurnCreatures()Ljava/util/Set;*U
+
+__unknown_file (9
+7
+watcher,mage.watchers.common.AttackedThisTurnWatcher2getAttackedThisTurnCreatures()FD
+<[ <(n
+%6mage.MageObjectReference"mage.MageObjectReferenceñ
+ì
+<W <(
+%7"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*<
+
+__unknown_file ( 
+
+%6mage.MageObjectReference*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameŸ÷
+	<' <(Ä
+%8boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Set*<
+
+__unknown_file ( 
+
+%6mage.MageObjectReference2contains(Ljava/lang/Object;)*
+2*ä
+startingBlock6 6(Jù
+ö
+5 5(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanentj
+h
+6% 6(.*
+	permanentmage.game.permanent.Permanent"__annotation*"
+
+__unknown_file (
+
+%9î
+ë
+5 5(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+68 6(> 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10ä
+á
+5 5(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+6E 6(I
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+7*›
+4;. ;(2öó
+;. ;(=
+%3mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()áÑ
+;. ;(g2
+%4,mage.watchers.common.AttackedThisTurnWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%3mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)û
+õ
+; ;(h7
+watcher,mage.watchers.common.AttackedThisTurnWatcher"__id*P
+
+__unknown_file (4
+2
+%4,mage.watchers.common.AttackedThisTurnWatcher*
+2
+3*!
+59 9("
+9 9(
+""*û
+77 7(ü
+ú
+7 7(!
+%0mage.filter.FilterPermanent"__id*g
+
+__unknown_file (K*I=
+;mage.abilities.effects.common.combat.AttacksIfAbleAllEffect"
+filter∞≠
+7$ 7(<
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Æ´
+7 7(K
+%2boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%0mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%1java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*	
+4
+5
+1*!
+1> >("
+> >(
+"":6
+6 6(/*
+	permanentmage.game.permanent.Permanent:,
+60 6(? 
+sourcemage.abilities.Ability:"
+6@ 6(I
+gamemage.game.GameB?=
+;mage.abilities.effects.common.combat.AttacksIfAbleAllEffectHP

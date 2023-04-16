@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>DeckFormatsTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/decks/exporter/DeckFormatsTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.decks.exporter;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckFormats;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.util.HashMap;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.Locale;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="DeckFormatsTest" href="../../../../../org/mage/test/decks/exporter/DeckFormatsTest.html#DeckFormatsTest">DeckFormatsTest</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      @Test
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_FormatsExt() {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          Map&lt;String, DeckFormats&gt; extList = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">for</strong> (DeckFormats df : DeckFormats.values()) {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>              <em class="jxr_comment">// 1. must be unique</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>              <strong class="jxr_keyword">if</strong> (extList.containsKey(df.getExporter().getDefaultFileExt())) {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>                  Assert.fail(<span class="jxr_string">"Default ext must be unique for each format: "</span> + df.getExporter().getDescription());
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>              } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>                  extList.putIfAbsent(df.getExporter().getDefaultFileExt(), df);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>              }
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>              <em class="jxr_comment">// 2. must work with files</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>              String fileName = <span class="jxr_string">"C:&#92;&#92;xmage&#92;&#92;deck"</span> + <span class="jxr_string">"."</span> + df.getExporter().getDefaultFileExt();
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>              Assert.assertTrue(<span class="jxr_string">"Must support lower ext: "</span> + df.getExporter().getDescription(), DeckFormats.getFormatForExtension(fileName.toLowerCase(Locale.ENGLISH)).isPresent());
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>              Assert.assertTrue(<span class="jxr_string">"Must support upper ext: "</span> + df.getExporter().getDescription(), DeckFormats.getFormatForExtension(fileName.toUpperCase(Locale.ENGLISH)).isPresent());
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          }
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <em class="jxr_comment">// 3. wrong ext</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          Assert.assertFalse(<span class="jxr_string">"Must not find empty ext"</span>, DeckFormats.getFormatForExtension(<span class="jxr_string">"deck"</span>).isPresent());
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          Assert.assertFalse(<span class="jxr_string">"Must not find . ext"</span>, DeckFormats.getFormatForExtension(<span class="jxr_string">"deck."</span>).isPresent());
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          Assert.assertFalse(<span class="jxr_string">"Must not find unknown ext"</span>, DeckFormats.getFormatForExtension(<span class="jxr_string">"deck.xxx"</span>).isPresent());
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <em class="jxr_comment">// 3. double ext</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          String fileName = <span class="jxr_string">"C:&#92;&#92;xmage&#92;&#92;deck"</span>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                  + <span class="jxr_string">"."</span> + DeckFormats.XMAGE.getExporter().getDefaultFileExt()
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                  + <span class="jxr_string">"."</span> + DeckFormats.MTG_ONLINE.getExporter().getDefaultFileExt();
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          Assert.assertEquals(<span class="jxr_string">"Must find mtgo"</span>, DeckFormats.getFormatForExtension(fileName).get(), DeckFormats.MTG_ONLINE);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          fileName = <span class="jxr_string">"C:&#92;&#92;xmage&#92;&#92;deck"</span>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  + <span class="jxr_string">"."</span> + DeckFormats.MTG_ONLINE.getExporter().getDefaultFileExt()
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>                  + <span class="jxr_string">"."</span> + DeckFormats.XMAGE.getExporter().getDefaultFileExt();
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          Assert.assertEquals(<span class="jxr_string">"Must find xmage"</span>, DeckFormats.getFormatForExtension(fileName).get(), DeckFormats.XMAGE);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      }
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

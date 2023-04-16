@@ -1,0 +1,198 @@
+
+:mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Za
+UD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/Constructed.javaÉ É("11*Ö
+2
+Ú Ú(h
+f
+
+Ú Ú(5.
+%10'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""—”
+
+Ú7 Ú(E
+%11java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()¯¬
+
+ÚY Ú(s
+%12java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode(){
+y
+
+ÚG Ú(s
+%13java.lang.String"__concat*
+
+ÚG Ú(V
+Invalid set: *'
+
+ÚY Ú(s
+
+%12java.lang.StringŒ‰
+
+Ú Ú(z
+%14void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*L
+
+__unknown_file (0
+.
+%10'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%13java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+1*¿
+3
+Ù Ù(.–“
+
+Ù/ Ù(=
+%8java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()Œ‰
+
+Ù Ù(>
+%9boolean"Kmage.cards.decks.DeckValidator#errorsListContainsGroup(Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*4
+
+__unknown_file (
+
+%8java.lang.String2+errorsListContainsGroup(Ljava/lang/String;)*
+2
+1*ÿ
+6
+Õ Õ(x
+v
+
+Õ Õ(
+%5java.util.Set"__id*M
+
+__unknown_file (1*/
+mage.cards.decks.Constructed"
+singleCards–“
+
+Õ! Õ(/
+%6java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()ÒÏ
+
+Õ Õ(0
+%7boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Set*4
+
+__unknown_file (
+
+%6java.lang.String2contains(Ljava/lang/Object;)*
+3
+1*¦
+7
+Í Í(d
+b
+
+Í Í(*
+cardInfomage.cards.repository.CardInfo"__id*"
+
+__unknown_file (
+""¦
+£
+
+Í Í(*
+cardInfomage.cards.repository.CardInfo"
+__arrayGet*9
+
+__unknown_file (
+
+	cardInfosjava.util.List*"
+
+__unknown_file (
+""*
+6
+9*Ï
+9
+Î Î(¾»
+
+Î Î(2
+%3java.lang.String"=mage.cards.repository.CardInfo#getSetCode()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2getSetCode()ôñ
+
+Î Î(3
+%4boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*4
+
+__unknown_file (
+
+%3java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+6
+7*–
+11
+Ë Ë(d
+b
+
+Ì# Ì(:*
+%0$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""–“
+
+ÌE Ì(S
+%1java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()˜•
+
+Ì# Ì(T
+%2java.util.List"Rmage.cards.repository.CardRepository#findCards(Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,
+*
+%0$mage.cards.repository.CardRepository*4
+
+__unknown_file (
+
+%1java.lang.String2findCards(Ljava/lang/String;)e
+c
+
+Ì Ì(U
+	cardInfosjava.util.List"__id*2
+
+__unknown_file (
+
+%2java.util.List*
+7*%
+1
+Ü Ü("
+
+Ü Ü(
+"":%
+
+É  É()
+cardmage.cards.CardB 
+mage.cards.decks.ConstructedP

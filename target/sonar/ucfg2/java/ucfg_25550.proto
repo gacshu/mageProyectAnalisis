@@ -1,0 +1,383 @@
+
+6mage.server.TableController#endGameAndStartNextGame()Zg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/TableController.java˚ ˚(*"23*∂
+14
+ç ç(z
+x
+
+ç ç(
+%24mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchûõ
+
+ç ç(#
+%25mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%24mage.game.match.Match2	getGame()*
+7
+12*¢
+16
+å å(z
+x
+
+å å(
+%22mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchäá
+
+å å(!
+%23boolean"!mage.game.match.Match#hasEnded()Z*:
+
+__unknown_file (
+
+%22mage.game.match.Match2
+hasEnded()*
+3
+14*≤
+17
+à à(í
+è
+
+à à(*
+%16#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryÊ„
+
+à à($'
+%17 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%16#mage.server.managers.ManagerFactory2gameManager()åâ
+
+à0 à(<
+%18java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getId()ˆÛ
+
+à à(=
+%19void">mage.server.managers.GameManager#removeGame(Ljava/util/UUID;)V*E
+
+__unknown_file ()
+'
+%17 mage.server.managers.GameManager*3
+
+__unknown_file (
+
+%18java.util.UUID2removeGame(Ljava/util/UUID;)d
+b
+
+â â(#*
+%20#mage.server.util.ServerMessagesUtil"__id*"
+
+__unknown_file (
+""≠™
+
+â â(3
+%21void"4mage.server.util.ServerMessagesUtil#incGamesEnded()V*H
+
+__unknown_file (,
+*
+%20#mage.server.util.ServerMessagesUtil2incGamesEnded()*
+16*‘
+18
+Ö Ö(z
+x
+
+Ö Ö(
+%14mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchøº
+
+Ö Ö(.
+%15void",mage.game.match.Match#setReplayAvailable(Z)V*:
+
+__unknown_file (
+
+%14mage.game.match.Match* 
+
+__unknown_file (22setReplayAvailable(Z)*
+17*ü
+19
+Ñ Ñ(í
+è
+
+Ñ Ñ(*
+%10#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryÊ„
+
+Ñ Ñ(,'
+%11 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%10#mage.server.managers.ManagerFactory2gameManager()åâ
+
+Ñ6 Ñ(B
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getId()ıÚ
+
+Ñ Ñ(C
+%13boolean"<mage.server.managers.GameManager#saveGame(Ljava/util/UUID;)Z*E
+
+__unknown_file ()
+'
+%11 mage.server.managers.GameManager*3
+
+__unknown_file (
+
+%12java.util.UUID2saveGame(Ljava/util/UUID;)*
+17
+18*Æ
+1
+õ õ(z
+x
+
+õ õ(
+%38mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchäá
+
+õ õ(
+%39boolean"!mage.game.match.Match#hasEnded()Z*:
+
+__unknown_file (
+
+%38mage.game.match.Match2
+hasEnded()"
+
+õ õ( 
+""*õ
+3
+ñ ñ(Ñ
+Å
+
+ñ ñ(
+%35void")mage.server.TableController#closeTable()V*;
+
+__unknown_file (
+mage.server.TableController*
+1*õ
+4
+ì ì(Ñ
+Å
+
+ì ì( 
+%34void")mage.server.TableController#closeTable()V*;
+
+__unknown_file (
+mage.server.TableController*
+1*Ï
+5
+ë ë(’
+“
+
+ë ë(/
+%33void"8mage.server.TableController#startGame(Ljava/util/UUID;)V*;
+
+__unknown_file (
+mage.server.TableController*@
+
+__unknown_file ($
+"
+choosingPlayerIdjava.util.UUID*
+1*†
+7
+ê ê(z
+x
+
+ê ê(
+%31mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchäá
+
+ê ê(%
+%32boolean"!mage.game.match.Match#hasEnded()Z*:
+
+__unknown_file (
+
+%31mage.game.match.Match2
+hasEnded()*
+4
+5*ö
+8
+é é(É
+Ä
+
+é é(
+%30void"(mage.server.TableController#sideboard()V*;
+
+__unknown_file (
+mage.server.TableController*
+7*°
+20
+ÉF É(JÑÅ
+
+ÉF É(Y
+%9boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+17
+19*â
+
+21
+Å  Å(%y
+w
+
+Å  Å(%
+%2mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¢ü
+
+Å  Å(2
+%3java.util.UUID"2mage.game.match.Match#getChooser()Ljava/util/UUID;*9
+
+__unknown_file (
+
+%2mage.game.match.Match2getChooser()l
+j
+
+Å Å(3"
+choosingPlayerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%3java.util.UUIDy
+w
+
+Ç Ç(
+%4mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchÉÄ
+
+Ç Ç(
+
+%5void" mage.game.match.Match#endGame()V*9
+
+__unknown_file (
+
+%4mage.game.match.Match2	endGame()ë
+é
+
+É É()
+%6#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryÌ
+
+É É(+)
+%7#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%6#mage.server.managers.ManagerFactory2configSettings()÷”
+
+É É(A
+%8java.lang.Boolean"Lmage.server.managers.ConfigSettings#isSaveGameActivated()Ljava/lang/Boolean;*G
+
+__unknown_file (+
+)
+%7#mage.server.managers.ConfigSettings2isSaveGameActivated()*
+17
+20*«
+10
+ç/ ç(d¨©
+
+ç/ ç(d
+%29boolean"2mage.game.match.MatchType#isSideboardingAllowed()Z*>
+
+__unknown_file ("
+ 
+%28mage.game.match.MatchType2isSideboardingAllowed()*
+7
+8*&
+22
+ˇ ˇ("
+
+ˇ ˇ(
+""*«
+11
+ç/ ç(LÆ´
+
+ç/ ç(L 
+%28mage.game.match.MatchType"7mage.game.Game#getGameType()Lmage/game/match/MatchType;*3
+
+__unknown_file (
+
+%27mage.game.Game2getGameType()*
+10*ñ
+23
+˝ ˝(y
+w
+
+˝ ˝(
+%0mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchúô
+
+˝ ˝(#
+%1mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*9
+
+__unknown_file (
+
+%0mage.game.match.Match2	getGame()`
+^
+
+˝ ˝($
+gamemage.game.Game"__id*2
+
+__unknown_file (
+
+%1mage.game.Game*
+21
+22*≥
+12
+ç/ ç(4z
+x
+
+ç/ ç(4
+%26mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchûõ
+
+ç/ ç(>
+%27mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%26mage.game.match.Match2	getGame()*
+11B
+mage.server.TableControllerHP

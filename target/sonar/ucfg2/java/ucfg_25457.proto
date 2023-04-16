@@ -1,0 +1,325 @@
+
+2mage.view.CardView#getTypeText()Ljava/lang/String;^
+RD:/eclipse-workspace/mage-master/Mage.Common/src/main/java/mage/view/CardView.javaã	 ã	("7*Ï
+2
+ñ	 ñ	(Ä˝
+
+ñ	 ñ	("
+%24java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*#
+
+__unknown_file (
+ - 2append(Ljava/lang/String;)£†
+
+ó	- ó	(:
+%25mage.util.SubTypes"4mage.view.CardView#getSubTypes()Lmage/util/SubTypes;*2
+
+__unknown_file (
+mage.view.CardView2getSubTypes()™ß
+
+ó	- ó	(C
+%26java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*7
+
+__unknown_file (
+
+%25mage.util.SubTypes2stream()äá
+
+ó	- ó	(Z
+%27java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%26java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)±
+Æ
+
+ó	c ó	(v!
+%28java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsùö
+
+ó	- ó	(w
+%29java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%27java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%28java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)â
+Ü
+
+ó	 ó	(x
+%30java.lang.String"Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*!
+
+__unknown_file (
+ *3
+
+__unknown_file (
+
+%29java.util.Listíè
+
+ó	 ó	(y
+%31java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%30java.lang.String2append(Ljava/lang/String;)*
+1*√
+3
+ï	 ï	(£†
+
+ï	 ï	(
+%22mage.util.SubTypes"4mage.view.CardView#getSubTypes()Lmage/util/SubTypes;*2
+
+__unknown_file (
+mage.view.CardView2getSubTypes()ÉÄ
+
+ï	 ï	($
+%23boolean"java.util.ArrayList#isEmpty()Z*7
+
+__unknown_file (
+
+%22mage.util.SubTypes2	isEmpty()*
+2
+1*‡
+4
+í	 í	(ùö
+
+í	- í	(;
+%14java.util.List"1mage.view.CardView#getCardTypes()Ljava/util/List;*2
+
+__unknown_file (
+mage.view.CardView2getCardTypes()¶£
+
+í	- í	(D
+%15java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*3
+
+__unknown_file (
+
+%14java.util.List2stream()äá
+
+í	- í	(\
+%16java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%15java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)±
+Æ
+
+í	e í	(x!
+%17java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsùö
+
+í	- í	(y
+%18java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%17java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)â
+Ü
+
+í	 í	(z
+%19java.lang.String"Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*!
+
+__unknown_file (
+ *3
+
+__unknown_file (
+
+%18java.util.Listíè
+
+í	 í	({
+%20java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%19java.lang.String2append(Ljava/lang/String;)˛˚
+
+ì	 ì	( 
+%21java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*!
+
+__unknown_file (
+ 2append(Ljava/lang/String;)*
+3*≤
+5
+ë	 ë	(ùö
+
+ë	 ë	(
+%12java.util.List"1mage.view.CardView#getCardTypes()Ljava/util/List;*2
+
+__unknown_file (
+mage.view.CardView2getCardTypes()yw
+
+ë	 ë	(%
+%13boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%12java.util.List2	isEmpty()*
+3
+4*”
+6
+é	 é	(úô
+
+é	- é	(<
+%4java.util.Set"1mage.view.CardView#getSuperTypes()Ljava/util/Set;*2
+
+__unknown_file (
+mage.view.CardView2getSuperTypes()£†
+
+é	- é	(E
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%4java.util.Set2stream()àÖ
+
+é	- é	(^
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)∞
+≠
+
+é	g é	(z 
+%7java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsöó
+
+é	- é	({
+%8java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)á
+Ñ
+
+é	 é	(|
+%9java.lang.String"Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*!
+
+__unknown_file (
+ *2
+
+__unknown_file (
+
+%8java.util.Listëé
+
+é	 é	(}
+%10java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*4
+
+__unknown_file (
+
+%9java.lang.String2append(Ljava/lang/String;)˛˚
+
+è	 è	( 
+%11java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder*!
+
+__unknown_file (
+ 2append(Ljava/lang/String;)*
+5*„
+7
+å	! å	(4FD
+
+å	% å	(2
+%0java.lang.StringBuilder"java.lang.StringBuildert
+r
+
+å	! å	(4
+%1"!java.lang.StringBuilder#<init>()V*;
+
+__unknown_file (
+
+%0java.lang.StringBuilderv
+t
+
+å	 å	(5#
+typeTextjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%0java.lang.StringBuilderúô
+
+ç	 ç	(
+%2java.util.Set"1mage.view.CardView#getSuperTypes()Ljava/util/Set;*2
+
+__unknown_file (
+mage.view.CardView2getSuperTypes()us
+
+ç	 ç	(&
+%3boolean"java.util.Set#isEmpty()Z*1
+
+__unknown_file (
+
+%2java.util.Set2	isEmpty()*
+5
+6*Ë
+1
+ô	 ô	(≠™
+
+ô	 ô	("
+%32java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+typeTextjava.lang.StringBuilder2
+toString()"'
+
+ô	 ô	(#
+
+%32java.lang.StringB
+mage.view.CardViewH

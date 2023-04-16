@@ -1,0 +1,579 @@
+
+jmage.server.Session#registerUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;]
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.java? ?("18*∫
+13N9 N(;FD
+N, N(8
+%8mage.server.RandomString"mage.server.RandomStringò
+ï
+N( N(<
+%9"#mage.server.RandomString#<init>(I)V*<
+
+__unknown_file ( 
+
+%8mage.server.RandomString* 
+
+__unknown_file (2
+z
+x
+N N(=(
+randomStringmage.server.RandomString"__id*<
+
+__unknown_file ( 
+
+%8mage.server.RandomStringµ≤
+O O(0
+%10java.lang.String"7mage.server.RandomString#nextString()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+randomStringmage.server.RandomString2nextString()g
+e
+O O(0
+passwordjava.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.String±
+Æ
+P P(@
+%11java.lang.String"\mage.server.Session#validatePassword(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*3
+
+__unknown_file (
+mage.server.Session*:
+
+__unknown_file (
+
+passwordjava.lang.String*:
+
+__unknown_file (
+
+userNamejava.lang.Stringl
+j
+P P(@!
+returnMessagejava.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+11
+12*¬
+14I I((Ä˝
+I I(7
+
+%7void"Amage.server.Session#sendErrorMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*?
+
+__unknown_file (#
+!
+returnMessagejava.lang.String2,sendErrorMessageToClient(Ljava/lang/String;)"/
+J J(%#
+!
+returnMessagejava.lang.String*Í
+15G# G(3‚
+ﬂ
+G# G(=
+%6java.lang.String"Jmage.server.Session#validateUserName(Ljava/lang/String;)Ljava/lang/String;*3
+
+__unknown_file (
+mage.server.Session*:
+
+__unknown_file (
+
+userNamejava.lang.Stringk
+i
+G G(>!
+returnMessagejava.lang.String"__id*4
+
+__unknown_file (
+
+%6java.lang.String*
+13
+14*
+16E E(.Ÿ
+÷
+E E(<*
+%5$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository*
+15*ﬁ
+17A# A(@¨
+©
+A# A(@
+%3java.lang.String"__id*
+
+__unknown_file (ca
+_Registration has been disabled on the server. You can use any name and empty password to login.k
+i
+A A(A!
+returnMessagejava.lang.String"__id*4
+
+__unknown_file (
+
+%3java.lang.StringÄ˝
+B B(3
+
+%4void"Amage.server.Session#sendErrorMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*?
+
+__unknown_file (#
+!
+returnMessagejava.lang.String2,sendErrorMessageToClient(Ljava/lang/String;)"/
+C C(!#
+!
+returnMessagejava.lang.String*ˆ
+18@ @(á
+Ñ
+@ @()
+%0#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÓÎ
+@ @(,)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()‡›
+@ @(H
+%2java.lang.Boolean"Rmage.server.managers.ConfigSettings#isAuthenticationActivated()Ljava/lang/Boolean;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettings2isAuthenticationActivated()*
+16
+17*!
+1w w("
+w w(
+""*ù	
+2r r(z»
+≈
+	r r(Ç
+%45java.lang.String"__concat*k
+r r(z_]
+[Email sending failed. Try use another email address or service. Or reset password by email *(
+	r} r(Ç
+
+emailjava.lang.Stringx
+v
+	r r(ì
+%46java.lang.String"__concat*&
+	r r(Ç
+
+%45java.lang.String*
+
+rÖ r(ì
+ for a user á
+Ñ
+	r r(û
+%47java.lang.String"__concat*&
+	r r(ì
+
+%46java.lang.String*,
+
+rñ r(û
+
+userNamejava.lang.Stringc
+a
+	r r(ü
+errjava.lang.String"__id*5
+
+__unknown_file (
+
+%47java.lang.StringV
+T
+s s(
+%48org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‡›
+s s(!
+%49void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%48org.apache.log4j.Logger*5
+
+__unknown_file (
+
+errjava.lang.String2error(Ljava/lang/Object;)˜Ù
+t t(-
+%50void"Amage.server.Session#sendErrorMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*5
+
+__unknown_file (
+
+errjava.lang.String2,sendErrorMessageToClient(Ljava/lang/String;)"%
+u u(
+
+errjava.lang.String*Ô
+3n n(tƒ
+¡
+n n(
+%39java.lang.String"__concat*f
+n n(tZX
+VEmail sending failed. Server is in test mode. Your account registered with a password **
+nw n(
+
+passwordjava.lang.Stringw
+u
+	n n(ê
+%40java.lang.String"__concat*%
+n n(
+
+%39java.lang.String*
+
+nÇ n(ê
+ for a user á
+Ñ
+	n n(õ
+%41java.lang.String"__concat*&
+	n n(ê
+
+%40java.lang.String*,
+
+nì n(õ
+
+userNamejava.lang.Stringb
+`
+	n n(ú
+okjava.lang.String"__id*5
+
+__unknown_file (
+
+%41java.lang.StringV
+T
+o o(
+%42org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""›⁄
+o o(
+%43void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%42org.apache.log4j.Logger*4
+
+__unknown_file (
+
+okjava.lang.String2info(Ljava/lang/Object;)ÙÒ
+p p(+
+%44void"@mage.server.Session#sendInfoMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*4
+
+__unknown_file (
+
+okjava.lang.String2+sendInfoMessageToClient(Ljava/lang/String;)*
+1*Ö
+4m m(n
+l
+m m((
+%38boolean"mage.server.Main#isTestMode()Z*0
+
+__unknown_file ("
+mage.server.Main*
+2
+3*≤
+5j j(Bè
+å
+j j(J
+%32java.lang.String"__concat*4
+j j(B(&
+$Email with initial password sent to *'
+jE j(J
+
+emailjava.lang.Stringt
+r
+j j([
+%33java.lang.String"__concat*%
+j j(J
+
+%32java.lang.String*
+jM j([
+ for a user É
+Ä
+j j(f
+%34java.lang.String"__concat*%
+j j([
+
+%33java.lang.String**
+j^ j(f
+
+userNamejava.lang.Stringa
+_
+j j(g
+okjava.lang.String"__id*5
+
+__unknown_file (
+
+%34java.lang.StringV
+T
+k k(
+%35org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""›⁄
+k k(
+%36void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%35org.apache.log4j.Logger*4
+
+__unknown_file (
+
+okjava.lang.String2info(Ljava/lang/Object;)ÙÒ
+l l(+
+%37void"@mage.server.Session#sendInfoMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*4
+
+__unknown_file (
+
+okjava.lang.String2+sendInfoMessageToClient(Ljava/lang/String;)*
+1*∆
+7g g((à
+Ö
+g g((*
+%29#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÊ„
+g g(8&
+%30mage.server.managers.MailClient"Tmage.server.managers.ManagerFactory#mailgunClient()Lmage/server/managers/MailClient;*H
+
+__unknown_file (,
+*
+%29#mage.server.managers.ManagerFactory2mailgunClient()∫∑
+g g(Z
+%31boolean"dmage.server.managers.MailClient#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z*D
+
+__unknown_file ((
+&
+%30mage.server.managers.MailClient*7
+
+__unknown_file (
+
+emailjava.lang.String*9
+
+__unknown_file (
+
+subjectjava.lang.String*6
+
+__unknown_file (
+
+textjava.lang.String2CsendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+4
+5*¿
+8e e((à
+Ö
+e e((*
+%26#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactory‡›
+e e(5&
+%27mage.server.managers.MailClient"Qmage.server.managers.ManagerFactory#mailClient()Lmage/server/managers/MailClient;*H
+
+__unknown_file (,
+*
+%26#mage.server.managers.ManagerFactory2mailClient()∫∑
+e e(W
+%28boolean"dmage.server.managers.MailClient#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z*D
+
+__unknown_file ((
+&
+%27mage.server.managers.MailClient*7
+
+__unknown_file (
+
+emailjava.lang.String*9
+
+__unknown_file (
+
+subjectjava.lang.String*6
+
+__unknown_file (
+
+textjava.lang.String2CsendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+4
+5*Ω
+9^ ^($⁄
+◊
+^ ^(2+
+%16$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository∂≥
+^ ^(Q
+%17void"amage.server.AuthorizedUserRepository#add(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*I
+
+__unknown_file (-
++
+%16$mage.server.AuthorizedUserRepository*:
+
+__unknown_file (
+
+userNamejava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String*7
+
+__unknown_file (
+
+emailjava.lang.String2;add(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)ë
+é
+_ _(J
+%18java.lang.String"__concat*3
+_ _(?'%
+#You are successfully registered as **
+_B _(J
+
+userNamejava.lang.Stringi
+g
+_ _(P
+%19java.lang.String"__concat*%
+_ _(J
+
+%18java.lang.String*
+_M _(P
+.c
+a
+_ _(Q
+textjava.lang.String"__id*5
+
+__unknown_file (
+
+%19java.lang.Stringï
+í
+` `(H
+%20java.lang.String"__concat*7
+` `(=+)
+'  Your initial, generated password is: **
+`@ `(H
+
+passwordjava.lang.String~
+|
+` `(H
+%21java.lang.String"__concat*&
+` `(H
+
+textjava.lang.String*%
+` `(H
+
+%20java.lang.Stringc
+a
+` `(H
+textjava.lang.String"__id*5
+
+__unknown_file (
+
+%21java.lang.Stringm
+k
+c c(<
+subjectjava.lang.String"__id*<
+
+__unknown_file ( 
+XMage Registration Completedà
+Ö
+d d(*
+%22#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÌ
+d d(0*
+%23#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*H
+
+__unknown_file (,
+*
+%22#mage.server.managers.ManagerFactory2configSettings()ƒ¡
+d d(>
+%24java.lang.String"Cmage.server.managers.ConfigSettings#getMailUser()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+%23#mage.server.managers.ConfigSettings2getMailUser(){y
+d d(H
+%25boolean"java.lang.String#isEmpty()Z*5
+
+__unknown_file (
+
+%24java.lang.String2	isEmpty()*
+7
+8*√
+10Y Y((Å˛
+Y Y(7
+%15void"Amage.server.Session#sendErrorMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*?
+
+__unknown_file (#
+!
+returnMessagejava.lang.String2,sendErrorMessageToClient(Ljava/lang/String;)"/
+Z Z(%#
+!
+returnMessagejava.lang.String*Â
+11W W()›
+⁄
+W W(0
+%14java.lang.String"Gmage.server.Session#validateEmail(Ljava/lang/String;)Ljava/lang/String;*3
+
+__unknown_file ("
+mage.server.Session*7
+
+__unknown_file (
+
+emailjava.lang.Stringl
+j
+W W(0!
+returnMessagejava.lang.String"__id*5
+
+__unknown_file (
+
+%14java.lang.String*
+9
+10*ÿ
+12R R((ú
+ô
+R) R(d
+%12java.lang.String"__concat*9
+R) R(T-+
+)Auto-generated password fail, try again: */
+RW R(d#
+!
+returnMessagejava.lang.String˜Ù
+R R(e
+%13void"Amage.server.Session#sendErrorMessageToClient(Ljava/lang/String;)V*3
+
+__unknown_file (
+mage.server.Session*5
+
+__unknown_file (
+
+%12java.lang.String2,sendErrorMessageToClient(Ljava/lang/String;)"/
+S S(%#
+!
+returnMessagejava.lang.String:(
+? ?(/
+userNamejava.lang.String:(
+?0 ?(@
+passwordjava.lang.String:%
+?A ?(M
+emailjava.lang.StringB
+mage.server.SessionH

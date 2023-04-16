@@ -28,17 +28,7 @@
 			</plugin>
 
 
-			<plugin>
-				<groupId>com.github.spotbugs</groupId>
-				<artifactId>spotbugs-maven-plugin</artifactId>
-				<version>4.7.2.1</version>
-				<configuration>
-					<effort>Max</effort>
-					<threshold>Low</threshold>
-					<failOnError>false</failOnError>
-					<maxHeap>1024</maxHeap>
-				</configuration>
-			</plugin>
+			
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
@@ -192,15 +182,16 @@
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<configuration>
+					<excludeFilterFile>findbugs-exclude.xml</excludeFilterFile>
 					<skipEmptyReport>false</skipEmptyReport>
 				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<configuration>
+				<configuration>					
 					<skipEmptyReport>false</skipEmptyReport>
-				</configuration>
+				</configuration>	
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>

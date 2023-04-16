@@ -1,0 +1,91 @@
+
+ƒmage.filter.predicate.permanent.DefendingPlayerControlsPredicate#apply(Lmage/filter/predicate/ObjectSourcePlayer;Lmage/game/Game;)Zƒ
+yD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/DefendingPlayerControlsPredicate.java ("startingBlock*œ
+startingBlock (H¤
+¡
+ (
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayerq
+o
+7 (<1
+input(mage.filter.predicate.ObjectSourcePlayer"__annotation*"
+
+__unknown_file (
+
+%5‰
+†
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+C (G
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%6*
+1*È	
+1 (ØÕ
+ ( #
+%0mage.game.permanent.Permanent"Fmage.filter.predicate.ObjectSourcePlayer#getObject()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getObject()¤¡
+0 (@
+%1mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ËÈ
+V (i
+%2java.util.UUID"Fmage.filter.predicate.ObjectSourcePlayer#getSourceId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getSourceId()âß
+0 (p
+%3java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%1mage.game.combat.Combat*2
+
+__unknown_file (
+
+%2java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)ïì
+ (q
+%4boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%3java.util.UUID2 isControlledBy(Ljava/util/UUID;)"
+ (r
+"":=
+ (=1
+input(mage.filter.predicate.ObjectSourcePlayer:"
+> (G
+gamemage.game.GameBDB
+@mage.filter.predicate.permanent.DefendingPlayerControlsPredicateHP

@@ -1,0 +1,283 @@
+
+tmage.abilities.common.DealtDamageAndDiedTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z{
+qD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DealtDamageAndDiedTriggeredAbility.java8 8("startingBlock*ø
+14:7 :(<
+
+: :(=*
+zEvent mage.game.events.ZoneChangeEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent«
+¨
+; ;(0
+%1*mage.filter.common.FilterCreaturePermanent"__id*d
+
+__unknown_file (H*F:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbility"
+filterÖÓ
+; ;(/#
+%2mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()ÓÐ
+; ;(6
+%3boolean"Amage.filter.FilterImpl#match(Ljava/lang/Object;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%1*mage.filter.common.FilterCreaturePermanent*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2)match(Ljava/lang/Object;Lmage/game/Game;)*
+1
+12*¹
+159 9($Ÿœ
+9 9(3
+%0boolean"/mage.game.events.ZoneChangeEvent#isDiesEvent()Z*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2isDiesEvent()*
+14
+1*!
+1N N("
+N N(
+""*!
+2J J("
+J J( 
+""*¤
+3F F(*_
+]
+F F(*'
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""«
+¨
+F F(*'
+effectmage.abilities.effects.Effect"
+__arrayGet*C
+
+__unknown_file ('
+%
+%14mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+2
+4*…
+startingBlock8 8(;—
+”
+7 7(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+8* 8(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%19Š
+‡
+7 7(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+86 8(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20*
+15*Ç
+4G G("°­
+GD G(W
+%15java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()a_
+G8 G(C,
+%16%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetœ
+™
+G4 G(^
+%17"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%16%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%15java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gameýú
+G G(_$
+%18mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%16%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+3*ú
+5F- F(7åâ
+F- F(9%
+%14mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*X
+
+__unknown_file (<:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbility2getEffects()*
+3*£
+6E E(«
+¨
+E E(-&
+%12mage.constants.SetTargetPointer"__id*n
+
+__unknown_file (R*P:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbility"
+setTargetPointer^
+\
+E1 E(K&
+%13mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""*
+2
+5*†
+8= =(,W
+U
+= =(,
+mormage.MageObjectReference"__id*"
+
+__unknown_file (
+""‘
+Ž
+= =(,
+mormage.MageObjectReference"
+__arrayGet*1
+
+__unknown_file (
+
+%5java.util.Set*"
+
+__unknown_file (
+""*
+
+6
+11
+1*‚
+10?  ?(#§¤
+?- ?(B
+%10mage.MageObject"Mmage.abilities.AbilityImpl#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*X
+
+__unknown_file (<:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)¼¹
+?  ?(I
+%11boolean"Emage.MageObjectReference#refersTo(Lmage/MageObject;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+
+mormage.MageObjectReference*4
+
+__unknown_file (
+
+%10mage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2+refersTo(Lmage/MageObject;Lmage/game/Game;)*	
+6
+8
+1*Ý
+11> >(ÆÃ
+>B >(O
+%6java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*X
+
+__unknown_file (<:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbility2getSourceId()Q
+O
+>Q >(a
+%7mage.constants.Zone"__id*"
+
+__unknown_file (
+""çä
+>% >(b
+%8mage.MageObject"^mage.game.Game#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID*7
+
+__unknown_file (
+
+%7mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)º·
+> >(i
+%9boolean"Emage.MageObjectReference#refersTo(Lmage/MageObject;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+
+mormage.MageObjectReference*3
+
+__unknown_file (
+
+%8mage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2+refersTo(Lmage/MageObject;Lmage/game/Game;)*
+
+6
+10
+1*¹
+12=/ =(5ÖÓ
+=/ =(A#
+%4mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()ÊÇ
+=/ =(\
+%5java.util.Set"Gmage.game.permanent.Permanent#getDealtDamageByThisTurn()Ljava/util/Set;*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent2getDealtDamageByThisTurn()*
+8:/
+8  8(0#
+eventmage.game.events.GameEvent:"
+81 8(:
+gamemage.game.GameB<:
+8mage.abilities.common.DealtDamageAndDiedTriggeredAbilityHP

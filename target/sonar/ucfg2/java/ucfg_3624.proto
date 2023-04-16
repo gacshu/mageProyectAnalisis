@@ -1,0 +1,205 @@
+
+òmage.abilities.dynamicvalue.common.InstantSorceryExileGraveyardCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Iá
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/InstantSorceryExileGraveyardCount.java ("startingBlock*ï
+2 (Æ´
+ ((
+%8mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()k
+i
+ (@3
+%9-mage.filter.common.FilterInstantOrSorceryCard"__id*"
+
+__unknown_file (
+""”–
+ (
+
+%10int"Emage.cards.CardsImpl#count(Lmage/filter/FilterCard;Lmage/game/Game;)I*7
+
+__unknown_file (
+
+%8mage.game.Graveyard*Q
+
+__unknown_file (5
+3
+%9-mage.filter.common.FilterInstantOrSorceryCard*4
+
+__unknown_file (
+
+gamemage.game.Game2/count(Lmage/filter/FilterCard;Lmage/game/Game;)"
+ (
+""*ˇ
+3 ( U
+S
+ ( 
+
+exiledCardmage.cards.Card"__id*"
+
+__unknown_file (
+""ê
+ç
+ ( 
+
+exiledCardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""*
+2
+6*î
+startingBlock (Iä
+á
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11õ
+ò
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12õ
+ò
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%13*
+9*Å
+5F (PÏÈ
+F (i
+%7boolean"5mage.MageObject#isInstantOrSorcery(Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+
+exiledCardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2$isInstantOrSorcery(Lmage/game/Game;)*
+3*ñ
+6 (úô
+ (+
+%4java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+exiledCardmage.cards.Card2getOwnerId()êç
+3 (A
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()Ã…
+ (B
+%6boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%4java.util.UUID*2
+
+__unknown_file (
+
+%5java.util.UUID2equals(Ljava/lang/Object;)*
+3
+5*ñ
+7# ('íè
+# (2
+%2mage.game.Exile"*mage.game.Game#getExile()Lmage/game/Exile;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getExile()ÏÈ
+# (D
+%3java.util.List"=mage.game.Exile#getAllCards(Lmage/game/Game;)Ljava/util/List;*3
+
+__unknown_file (
+
+%2mage.game.Exile*4
+
+__unknown_file (
+
+gamemage.game.Game2getAllCards(Lmage/game/Game;)*
+3*Æ
+9 (∑¥
+' (F
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()Ì
+ (G
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+ (H
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+7
+1*!
+1 ("
+ (
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectBHF
+Dmage.abilities.dynamicvalue.common.InstantSorceryExileGraveyardCountHP

@@ -1,0 +1,147 @@
+
+cmage.filter.predicate.card.AuraCardCanAttachToPermanentId#apply(Lmage/cards/Card;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/card/AuraCardCanAttachToPermanentId.java ("startingBlock*!
+2 ("
+ (
+""*õ
+33 (8ÝÚ
+3 (L
+%2boolean"0mage.MageObject#isEnchantment(Lmage/game/Game;)Z*6
+
+__unknown_file (
+
+inputmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2isEnchantment(Lmage/game/Game;)*
+2
+1*î
+startingBlock (/Œ
+‰
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+inputmage.cards.CardY
+W
+ (#
+inputmage.cards.Card"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+* (.
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+5*É
+5 (# 
+
+1 (G
+%0java.util.UUID"__id*u
+
+__unknown_file (Y*W;
+9mage.filter.predicate.card.AuraCardCanAttachToPermanentId"
+toBeCheckedPermanentIdŠ‡
+ (H#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+	 (I*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+2
+3*­
+
+1 (»¸
+ ("!
+%3mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*6
+
+__unknown_file (
+
+inputmage.cards.Card2getSpellAbility()µ²
+ (
+%4mage.target.Targets"<mage.abilities.AbilityImpl#getTargets()Lmage/target/Targets;*?
+
+__unknown_file (#
+!
+%3mage.abilities.SpellAbility2getTargets()§¤
+ (
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*7
+
+__unknown_file (
+
+%4mage.target.Targets2stream()±
+®
+   (M"
+%6java.util.function.Predicate"__declareFunction*k
+
+__unknown_file (OM
+K__sonar_lambda_84$mage.filter.predicate.card.AuraCardCanAttachToPermanentId 
+
+
+__unknown_file (1
+"
+%6java.util.function.Predicate"
+	permanent"__id*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent‡
+„
+
+__unknown_file (,
+"
+%6java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameˆ…
+  (N
+%9boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%6java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)"
+  (O
+"":$
+ ($
+inputmage.cards.Card:"
+% (.
+gamemage.game.GameB=;
+9mage.filter.predicate.card.AuraCardCanAttachToPermanentIdHP

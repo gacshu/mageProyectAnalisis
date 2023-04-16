@@ -1,0 +1,183 @@
+
+4mage.server.game.GameWorker#call()Ljava/lang/Object;e
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GameWorker.java ("21*ã
+13$ $(7ÙÒ
+$ $(7
+%18void"=mage.server.game.GameCallback#gameResult(Ljava/lang/String;)V*B
+
+__unknown_file (&
+$
+%15mage.server.game.GameCallback*5
+
+__unknown_file (
+
+%17java.lang.String2gameResult(Ljava/lang/String;)*
+12*¨
+14$ $(ä
+á
+$ $($
+%15mage.server.game.GameCallback"__id*O
+
+__unknown_file (3*1
+mage.server.game.GameWorker"
+gameControllerp
+n
+$& $(*
+%16mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+gameñì
+$& $(6
+%17java.lang.String",mage.game.Game#getWinner()Ljava/lang/String;*3
+
+__unknown_file (
+
+%16mage.game.Game2getWinner()*
+13*ú
+15# #(p
+n
+# #(
+%13mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+gameìê
+# #()
+%14void"(mage.game.Game#fireUpdatePlayersEvent()V*3
+
+__unknown_file (
+
+%13mage.game.Game2fireUpdatePlayersEvent()*
+14*Õ
+16" "(p
+n
+" "(
+%10mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+game|
+z
+" "('
+%11java.util.UUID"__id*Q
+
+__unknown_file (5*3
+mage.server.game.GameWorker"
+choosingPlayerId∆√
+" "((
+%12void"'mage.game.Game#start(Ljava/util/UUID;)V*3
+
+__unknown_file (
+
+%10mage.game.Game*3
+
+__unknown_file (
+
+%11java.util.UUID2start(Ljava/util/UUID;)*
+15*”
+17!+ !(Ai
+g
+!+ !(A
+%8java.lang.String"__concat*
+!+ !(2	
+GAME *"
+!5 !(A
+
+%7java.util.UUID—Œ
+! !(B
+
+%9void"-java.lang.Thread#setName(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+%5java.lang.Thread*4
+
+__unknown_file (
+
+%8java.lang.String2setName(Ljava/lang/String;)*
+16*è
+18!+ !(2o
+m
+!5 !(9
+%6mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+gameáÑ
+!5 !(A
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*2
+
+__unknown_file (
+
+%6mage.game.Game2getId()*
+17*¢
+19! !(ã
+à
+! !("
+%5java.lang.Thread"2java.lang.Thread#currentThread()Ljava/lang/Thread;*0
+
+__unknown_file ("
+java.lang.Thread*
+18*ı
+20   (E
+}
+   (E
+%3java.lang.String"__concat*+
+   (6
+GAME WORKER started gameId *"
+ 9  (E
+
+%2java.util.UUID›⁄
+   (F
+
+%4void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%3java.lang.String2debug(Ljava/lang/Object;)*
+19*Ê
+21   (U
+S
+   (
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""o
+m
+ 9  (=
+%1mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+gameáÑ
+ 9  (E
+%2java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*2
+
+__unknown_file (
+
+%1mage.game.Game2getId()*
+20*˚
+12% %(p
+n
+% %(
+%19mage.game.Game"__id*E
+
+__unknown_file ()*'
+mage.server.game.GameWorker"
+gametr
+% %(
+%20void"mage.game.Game#cleanUp()V*3
+
+__unknown_file (
+
+%19mage.game.Game2	cleanUp()*
+1*!
+10 0("
+0 0(
+""B
+mage.server.game.GameWorkerH

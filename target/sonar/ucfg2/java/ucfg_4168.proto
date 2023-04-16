@@ -1,0 +1,134 @@
+
+tmage.abilities.common.TappedNotAttackingTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z{
+qD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/TappedNotAttackingTriggeredAbility.java$ $("startingBlock*ﬁ
+2* *(∫∑
+*% *(@
+%4java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()ÍÁ
+* *(A
+%5java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getOpponents(Ljava/util/UUID;)ŒÀ
+*K *(\
+%6java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*X
+
+__unknown_file (<:
+8mage.abilities.common.TappedNotAttackingTriggeredAbility2getControllerId()ŒÀ
+* *(]
+%7boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Set*2
+
+__unknown_file (
+
+%6java.util.UUID2contains(Ljava/lang/Object;)*
+1*Ä
+startingBlock$ $(;ñ
+ì
+# #(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+$* $(/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%8â
+Ü
+# #(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+$6 $(:
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9*
+7*Å
+4)$ )(-ÈÊ
+)$ )(>
+%3boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+2
+1*€
+5( (("Ø¨
+(0 ((C
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()äá
+( ((D#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+( ((E*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*	
+2
+4
+1*!
+6& &("
+& &(
+""*©
+7% %(ëé
+% %(
+%0boolean"%mage.game.events.GameEvent#getFlag()Z*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2	getFlag()*
+5
+6*!
+1) *(^"
+) *(^
+"":/
+$  $(0#
+eventmage.game.events.GameEvent:"
+$1 $(:
+gamemage.game.GameB<:
+8mage.abilities.common.TappedNotAttackingTriggeredAbilityHP

@@ -1,0 +1,159 @@
+
+Pmage.server.Session#validateUserNameLength(Ljava/lang/String;)Ljava/lang/String;]
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.java{ {()"9*Q
+2
+á á(C"@
+
+á á(D20
+.User name is too long (500 characters or more)*ï
+3
+Ü Ü(|z
+
+Ü Ü(
+
+%13int"java.lang.String#length()I*:
+
+__unknown_file (
+
+userNamejava.lang.String2length()*
+2
+1*Q
+4
+Ñ Ñ(C"@
+
+Ñ Ñ(D20
+.User name is too short (3 characters or fewer)*ï
+5
+É É(|z
+
+É É(
+
+%12int"java.lang.String#length()I*:
+
+__unknown_file (
+
+userNamejava.lang.String2length()*
+3
+4*ˆ
+6
+Å Å(6ºπ
+
+Å9 Å(V	
+%9int";mage.server.managers.ConfigSettings#getMaxUserNameLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMaxUserNameLength()Å
+
+
+Å Å(V
+%10java.lang.String"__concat*3
+
+Å Å(6%#
+!User name may not be longer than *
+
+Å9 Å(V
+	
+%9inty
+w
+
+Å Å(f
+%11java.lang.String"__concat*'
+
+Å Å(V
+
+%10java.lang.String*
+
+ÅY Å(f
+ characters"'
+
+Å Å(g
+
+%11java.lang.String*”
+7
+Ä Ä({y
+
+Ä Ä(	
+%7int"java.lang.String#length()I*:
+
+__unknown_file (
+
+userNamejava.lang.String2length()ºπ
+
+Ä  Ä(=	
+%8int";mage.server.managers.ConfigSettings#getMaxUserNameLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMaxUserNameLength()*
+5
+6*‡
+8~ ~(7∫∑
+~: ~(W	
+%4int";mage.server.managers.ConfigSettings#getMinUserNameLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMinUserNameLength(){
+y
+~ ~(W
+%5java.lang.String"__concat*2
+~ ~(7&$
+"User name may not be shorter than *
+~: ~(W
+	
+%4intq
+o
+~ ~(g
+%6java.lang.String"__concat*$
+~ ~(W
+
+%5java.lang.String*
+~Z ~(g
+ characters"$
+~ ~(h
+
+%6java.lang.String*÷
+9|  |(.á
+Ñ
+|  |(.)
+%0#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÓÎ
+|  |(?)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()ã
+à
+| |(@-
+config#mage.server.managers.ConfigSettings"__id*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettingsyw
+} }(	
+%2int"java.lang.String#length()I*:
+
+__unknown_file (
+
+userNamejava.lang.String2length()∫∑
+}  }(=	
+%3int";mage.server.managers.ConfigSettings#getMinUserNameLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMinUserNameLength()*
+7
+8*%
+1
+â â("
+
+â â(
+"":(
+{* {(9
+userNamejava.lang.StringB
+mage.server.Session

@@ -1,0 +1,290 @@
+
+image.abilities.common.GainManaAbilitiesWhileExiledEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/GiveManaAbilityAndCastSourceAbility.javai i("startingBlock*æ
+13n n("âÜ
+n0 n(B-
+%3'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*X
+
+__unknown_file (<:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffect2getTargetPointer()ÜÉ
+n0 n(Y
+%4java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%3'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)äá
+n n(Z#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+n n([*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent*
+11
+12*€
+14k k(∂≥
+k k(
+
+%2void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*X
+
+__unknown_file (<:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffect2	discard()"
+l l(
+""*˘
+15j j(#¢ü
+j@ j(]
+%0java.lang.Object"Pmage.abilities.effects.EffectImpl#getValue(Ljava/lang/String;)Ljava/lang/Object;*X
+
+__unknown_file (<:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffect*1
+
+__unknown_file (
+exiledHandCardRef2getValue(Ljava/lang/String;)π
+∂
+j j(d
+%1boolean"`mage.abilities.common.WasCastFromExileWatcher#check(Lmage/MageObjectReference;Lmage/game/Game;)Z*M
+
+__unknown_file (1"/
+-mage.abilities.common.WasCastFromExileWatcher*4
+
+__unknown_file (
+
+%0java.lang.Object*4
+
+__unknown_file (
+
+gamemage.game.Game*
+13
+14*%
+1
+ä ä("
+
+ä ä(
+""*Ö
+3
+à à(´®
+
+à* à(>
+%19java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Ω∫
+
+à à(E
+%20void"cmage.game.permanent.Permanent#addAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*3
+
+__unknown_file (
+
+%19java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2DaddAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+4
+1*ˇ
+startingBlocki i(3ä
+á
+h h(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+i i("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%21î
+ë
+h h(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+i, i(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%22*
+15*Ä
+4t t(Y
+W
+t t(!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""*
+4
+6
+7
+8
+9
+10
+1*ë
+6
+Ç Ñ(a_
+
+É" É(2+
+%17$mage.abilities.mana.GreenManaAbility"$mage.abilities.mana.GreenManaAbilityë
+é
+
+É É(4
+%18".mage.abilities.mana.GreenManaAbility#<init>()V*I
+
+__unknown_file (-
++
+%17$mage.abilities.mana.GreenManaAbilityÉ
+Ä
+
+É É(4!
+abilitymage.abilities.Ability"__id*I
+
+__unknown_file (-
++
+%17$mage.abilities.mana.GreenManaAbility*
+3*Ö
+7	 Å(][
+
+Ä" Ä(0)
+%15"mage.abilities.mana.RedManaAbility""mage.abilities.mana.RedManaAbilityç
+ä
+
+Ä Ä(2
+%16",mage.abilities.mana.RedManaAbility#<init>()V*G
+
+__unknown_file (+
+)
+%15"mage.abilities.mana.RedManaAbilityÄ
+~
+
+Ä Ä(2!
+abilitymage.abilities.Ability"__id*G
+
+__unknown_file (+
+)
+%15"mage.abilities.mana.RedManaAbility*
+3*à
+8| ~(_]
+}" }(2+
+%13$mage.abilities.mana.BlackManaAbility"$mage.abilities.mana.BlackManaAbilityè
+å
+} }(4
+%14".mage.abilities.mana.BlackManaAbility#<init>()V*I
+
+__unknown_file (-
++
+%13$mage.abilities.mana.BlackManaAbilityÄ
+~
+} }(4!
+abilitymage.abilities.Ability"__id*I
+
+__unknown_file (-
++
+%13$mage.abilities.mana.BlackManaAbility*
+3*Ç
+9y {(][
+z" z(1*
+%11#mage.abilities.mana.BlueManaAbility"#mage.abilities.mana.BlueManaAbilityç
+ä
+z z(3
+%12"-mage.abilities.mana.BlueManaAbility#<init>()V*H
+
+__unknown_file (,
+*
+%11#mage.abilities.mana.BlueManaAbility
+}
+z z(3!
+abilitymage.abilities.Ability"__id*H
+
+__unknown_file (,
+*
+%11#mage.abilities.mana.BlueManaAbility*
+3*Ö
+10v x(^\
+w" w(2*
+%9$mage.abilities.mana.WhiteManaAbility"$mage.abilities.mana.WhiteManaAbilityé
+ã
+w w(4
+%10".mage.abilities.mana.WhiteManaAbility#<init>()V*H
+
+__unknown_file (,
+*
+%9$mage.abilities.mana.WhiteManaAbility
+}
+w w(4!
+abilitymage.abilities.Ability"__id*H
+
+__unknown_file (,
+*
+%9$mage.abilities.mana.WhiteManaAbility*
+3*Æ
+11s s(ë
+é
+s s(
+%7java.lang.String"__id*d
+
+__unknown_file (H*F:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffect"
+colorsÅ
+s s(*
+%8char[]" java.lang.String#toCharArray()[C*4
+
+__unknown_file (
+
+%7java.lang.String2toCharArray()*
+4
+1*€
+12p p(∂≥
+p p(
+
+%6void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*X
+
+__unknown_file (<:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffect2	discard()"
+q q(
+"":"
+i i(#
+gamemage.game.Game:,
+i$ i(2 
+sourcemage.abilities.AbilityB<:
+8mage.abilities.common.GainManaAbilitiesWhileExiledEffectHP

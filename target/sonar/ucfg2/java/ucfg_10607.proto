@@ -1,0 +1,192 @@
+
+§mage.abilities.keyword.OfferingAbility#getManaOptions(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)Lmage/abilities/mana/ManaOptions;i
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/OfferingAbility.java_ _(%"startingBlock*ê
+startingBlock_% _(Qî
+ë
+^ ^(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+_. _(4 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%23ä
+á
+^ ^(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+_; _(?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24†
+ù
+^ ^(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCostm
+k
+_J _(P,
+unpaid"mage.abilities.costs.mana.ManaCost"__annotation*#
+
+__unknown_file (
+
+%25*
+1*±
+1`: `(KTR
+`> `(I%
+%0mage.abilities.mana.ManaOptions"mage.abilities.mana.ManaOptionsÉ
+Ä
+`: `(K
+%1")mage.abilities.mana.ManaOptions#<init>()V*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptions†
+ù
+` `(LF
+#additionalManaOptionsForThisAbilitymage.abilities.mana.ManaOptions"__id*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptionsæª
+c c(%
+%2mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()õ
+ò
+c2 c(82
+%3,mage.filter.common.FilterControlledPermanent"__id*R
+
+__unknown_file (6*4(
+&mage.abilities.keyword.OfferingAbility"
+filter∞≠
+c: c(R
+%4java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÌÍ
+c c(a
+%5java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%2mage.game.permanent.Battlefield*P
+
+__unknown_file (4
+2
+%3,mage.filter.common.FilterControlledPermanent*2
+
+__unknown_file (
+
+%4java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¢ü
+c d(
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%5java.util.List2stream()ÜÉ
+c e(+
+%7java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)éã
+c f()
+%8java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)û
+õ
+g t(!
+%9java.util.function.Consumer"__declareFunction*Y
+
+__unknown_file (=;
+9__sonar_lambda_217$mage.abilities.keyword.OfferingAbility’
+“
+
+__unknown_file (J
+!
+%9java.util.function.Consumer"%
+#additionalManaOptionsForThisAbility"__id*d
+
+__unknown_file (H
+F
+#additionalManaOptionsForThisAbilitymage.abilities.mana.ManaOptions®
+•
+
+__unknown_file (;
+!
+%9java.util.function.Consumer"
+OfferingAbility.this"__id*F
+
+__unknown_file (*(
+&mage.abilities.keyword.OfferingAbilityÅ˛
+c u(
+%21void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%9java.util.function.Consumer2&forEach(Ljava/util/function/Consumer;)„‡
+w w(K
+%22void"@mage.abilities.mana.ManaOptions#removeFullyIncludedVariations()V*d
+
+__unknown_file (H
+F
+#additionalManaOptionsForThisAbilitymage.abilities.mana.ManaOptions2removeFullyIncludedVariations()"T
+x x(3H
+F
+#additionalManaOptionsForThisAbilitymage.abilities.mana.ManaOptions:,
+_& _(5 
+sourcemage.abilities.Ability:"
+_6 _(@
+gamemage.game.Game:8
+_A _(P,
+unpaid"mage.abilities.costs.mana.ManaCostB*(
+&mage.abilities.keyword.OfferingAbilityH

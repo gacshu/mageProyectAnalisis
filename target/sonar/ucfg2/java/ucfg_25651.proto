@@ -1,0 +1,417 @@
+
+smage.server.MageServerImpl#resetPassword(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Zd
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MageServerImpl.javat t( "startingBlock*Í
+2
+‡ ‡($¶
+³
+
+‡ ‡(V
+%16void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*C
+
+__unknown_file ('%
+#User with that email doesn't existsX
+V
+
+ˆ ˆ(
+%17org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¦
+£
+
+ˆ ˆ(W
+%18java.lang.String"__concat*G
+
+ˆ ˆ(O97
+5Auth token is valid, but the user with email address *)
+
+ˆR ˆ(W
+
+emailjava.lang.String†
+ƒ
+
+ˆ ˆ(s
+%19java.lang.String"__concat*'
+
+ˆ ˆ(W
+
+%18java.lang.String*)
+
+ˆZ ˆ(s
+ is no longer in the DBàÝ
+
+ˆ ˆ(t
+%20void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%17org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%19java.lang.String2info(Ljava/lang/Object;)"
+
+‰ ‰(
+""*·
+3
+…( …(@Ü
+Ù
+
+…( …(N+
+%14$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository·´
+
+…( …(`!
+%15mage.server.AuthorizedUser"_mage.server.AuthorizedUserRepository#getByEmail(Ljava/lang/String;)Lmage/server/AuthorizedUser;*I
+
+__unknown_file (-
++
+%14$mage.server.AuthorizedUserRepository*7
+
+__unknown_file (
+
+emailjava.lang.String2getByEmail(Ljava/lang/String;)„
+
+
+… …(a,
+authorizedUsermage.server.AuthorizedUser"__id*?
+
+__unknown_file (#
+!
+%15mage.server.AuthorizedUser*
+2
+1*ä
+startingBlockt  t(c‘
+Ž
+s s(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String^
+\
+t( t(1
+	sessionIdjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%29
+Š
+s s(
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+emailjava.lang.StringZ
+X
+t: t(?
+emailjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%30‘
+Ž
+s s(
+%31"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	authTokenjava.lang.String^
+\
+tH t(Q
+	authTokenjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%31
+
+s s(
+%32"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+passwordjava.lang.String]
+[
+tZ t(b
+passwordjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%32*
+8*˜
+4
+€ €($¤
+¡
+
+€ €(E
+
+%8void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*2
+
+__unknown_file (
+Invalid auth tokenW
+U
+
+ (
+%9org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ˆ
+…
+
+ (9
+%10java.lang.String"__concat*%
+
+ (-
+Invalid auth token *-
+
+0 (9
+
+	authTokenjava.lang.String{
+y
+
+ (K
+%11java.lang.String"__concat*'
+
+ (9
+
+%10java.lang.String*
+
+< (K
+ is sent for †
+ƒ
+
+ (S
+%12java.lang.String"__concat*'
+
+ (K
+
+%11java.lang.String*)
+
+N (S
+
+emailjava.lang.StringßÜ
+
+ (T
+%13void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%9org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%12java.lang.String2info(Ljava/lang/Object;)"
+
+‚ ‚(
+""*þ
+5( (7æã
+( (I
+%7boolean",java.lang.String#equals(Ljava/lang/Object;)Z*A
+
+__unknown_file (%
+#
+storedAuthTokenjava.lang.String*;
+
+__unknown_file (
+
+	authTokenjava.lang.String2equals(Ljava/lang/Object;)*
+3
+4*³
+6~! ~(1„
+
+~! ~(1
+%5java.util.LinkedHashMap"__id*P
+
+__unknown_file (4*2
+mage.server.MageServerImpl"
+activeAuthTokens¥
+¢
+~! ~(<
+%6java.lang.String"__mapGet*;
+
+__unknown_file (
+
+%5java.util.LinkedHashMap*7
+
+__unknown_file (
+
+emailjava.lang.Stringm
+k
+~ ~(=#
+storedAuthTokenjava.lang.String"__id*4
+
+__unknown_file (
+
+%6java.lang.String*
+4
+5*÷
+7v v($¬
+©
+v0 v(U
+%3java.lang.String"__id*
+
+__unknown_file (ca
+_Registration has been disabled on the server. You can use any name and empty password to login.¤
+¡
+v v(V
+
+%4void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"
+w w(
+""*ú
+8u u(Ž
+‹
+u u()
+%0#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactoryîë
+u u(,)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()àÝ
+u u(H
+%2java.lang.Boolean"Rmage.server.managers.ConfigSettings#isAuthenticationActivated()Ljava/lang/Boolean;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettings2isAuthenticationActivated()*
+6
+7*Å
+1
+ ( Ü
+Ù
+
+ (.+
+%21$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository·´
+
+6 (N
+%22java.lang.String"6mage.server.AuthorizedUser#getName()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+authorizedUsermage.server.AuthorizedUser2	getName()üù
+
+ (O
+%23void"@mage.server.AuthorizedUserRepository#remove(Ljava/lang/String;)V*I
+
+__unknown_file (-
++
+%21$mage.server.AuthorizedUserRepository*5
+
+__unknown_file (
+
+%22java.lang.String2remove(Ljava/lang/String;)Ü
+Ù
+
+Ž Ž(.+
+%24$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository·´
+
+Ž3 Ž(K
+%25java.lang.String"6mage.server.AuthorizedUser#getName()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+authorizedUsermage.server.AuthorizedUser2	getName()³°
+
+Ž Ž(]
+%26void"amage.server.AuthorizedUserRepository#add(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*I
+
+__unknown_file (-
++
+%24$mage.server.AuthorizedUserRepository*5
+
+__unknown_file (
+
+%25java.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String*7
+
+__unknown_file (
+
+emailjava.lang.String2;add(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)‡
+„
+
+ (
+%27java.util.LinkedHashMap"__id*P
+
+__unknown_file (4*2
+mage.server.MageServerImpl"
+activeAuthTokens¬
+©
+
+ (&
+%28java.lang.String"__mapRemove*<
+
+__unknown_file ( 
+
+%27java.util.LinkedHashMap*7
+
+__unknown_file (
+
+emailjava.lang.String"
+
+ (
+"":)
+t! t(2
+	sessionIdjava.lang.String:%
+t3 t(@
+emailjava.lang.String:)
+tA t(R
+	authTokenjava.lang.String:(
+tS t(b
+passwordjava.lang.StringB
+mage.server.MageServerImplHP

@@ -1,0 +1,226 @@
+
+emage.abilities.effects.common.DamageWithExcessEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DamageWithExcessEffect.java$ $("startingBlock*
+2/ /(©¦
+/+ /(?
+%11java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()À½
+/ /(N
+
+%12int"Vmage.players.Player#damage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*;
+
+__unknown_file (
+
+playermage.players.Player*"
+
+__unknown_file (
+""*3
+
+__unknown_file (
+
+%11java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Adamage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*þ
+startingBlock$ $(3Š
+‡
+# #(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+$ $("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+# #(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+$, $(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+7*á
+4* *(¨¥
+*/ *(C
+%4java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÑÎ
+* *(J	
+%5int"Pmage.game.permanent.Permanent#getLethalDamage(Ljava/util/UUID;Lmage/game/Game;)I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%4java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game21getLethalDamage(Ljava/util/UUID;Lmage/game/Game;)©
+¦
++ +()	
+%6int"java.lang.Math#min(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""¨¥
+,! ,(5
+%7java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÕÒ
+, ,(D	
+%8int"`mage.game.permanent.Permanent#damage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""*2
+
+__unknown_file (
+
+%7java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Adamage(ILjava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)º·
+-' -(B
+%9java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()ñî
+- -(C
+%10mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%9java.util.UUID2getPlayer(Ljava/util/UUID;)k
+i
+- -(D
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%10mage.players.Player*
+2
+1*!
+5( (("
+( ((
+""*Ò
+
+7% %("«
+¨
+%0 %(=-
+%0'mage.target.targetpointer.TargetPointer"__id*g
+
+__unknown_file (K*I6
+4mage.abilities.effects.common.DamageWithExcessEffect"
+targetPointer†ƒ
+%0 %(T
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Š‡
+% %(U#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+% %(V*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanentˆ…
+&" &(>
+%3mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)h
+f
+& &(?
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*
+4
+5*!
+11 1("
+1 1(
+"":"
+$ $(#
+gamemage.game.Game:,
+$$ $(2 
+sourcemage.abilities.AbilityB86
+4mage.abilities.effects.common.DamageWithExcessEffectHP

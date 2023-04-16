@@ -1,0 +1,497 @@
+
+mage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z”
+‰D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/search/SearchLibraryPutInHandOrOnBattlefieldEffect.java? ?("startingBlock*ü
+13J J( P
+N
+J J( 
+cardIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Œ
+‰
+J J( 
+cardIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%12java.util.List*"
+
+__unknown_file (
+""*
+17
+9
+11*ã
+14Q Q(ÌÉ
+Q Q('
+%17void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*5
+
+__unknown_file (
+
+cardmage.cards.Card2add(Lmage/cards/Card;)*
+13*
+15N- N(1k
+i
+O O(0 
+cardToPutOnBfmage.cards.Card"__id*5
+
+__unknown_file (
+
+cardmage.cards.Card*
+14*Æ
+16M M( •’
+M M(*
+%14java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()»
+¸
+M2 M(H
+%15java.lang.String"__id*Œ
+
+__unknown_file (p*nR
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect"
+nameToPutOnBattlefieldÕÒ
+M M(I
+%16boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%14java.lang.String*5
+
+__unknown_file (
+
+%15java.lang.String2equals(Ljava/lang/Object;)*
+14
+15*ç
+17K  K($éæ
+K  K(4
+%13mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*6
+
+__unknown_file (
+
+cardIdjava.util.UUID2getCard(Ljava/util/UUID;)a
+_
+K K(5
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%13mage.cards.Card*
+13
+16*Ž
+18J# J()À
+½
+J# J()-
+%11&mage.target.common.TargetCardInLibrary"__id*|
+
+__unknown_file (`*^R
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect"
+target´±
+J# J(6
+%12java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*K
+
+__unknown_file (/
+-
+%11&mage.target.common.TargetCardInLibrary2getTargets()*
+13*†
+19G G(-><
+G" G(+
+%9mage.cards.CardsImpl"mage.cards.CardsImplm
+k
+G G(-
+%10"mage.cards.CardsImpl#<init>()V*8
+
+__unknown_file (
+
+%9mage.cards.CardsImplg
+e
+G G(.
+cardsmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%9mage.cards.CardsImplX
+V
+I I(* 
+cardToPutOnBfmage.cards.Card"__id*"
+
+__unknown_file (
+""*
+18*!
+1h h("
+h h(
+""*ï
+2f f(Ú×
+f f(3
+%32void"Mmage.players.Player#shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game28shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ÿ
+startingBlock? ?(3Š
+‡
+> >(
+%33"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+? ?("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%33”
+‘
+> >(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+?, ?(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%34*
+23*þ
+4b b(Ú×
+b b(3
+%31void"Mmage.players.Player#shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game28shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)"
+c c(
+""*²
+5_ _(š
+_ _(=
+%30void"Vmage.players.Player#revealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*6
+
+__unknown_file (
+
+namejava.lang.String*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2ArevealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)*
+4*™
+6] ]()Ÿœ
+] ](5
+%29java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+sourceCardmage.cards.Card2getIdName()c
+a
+] ](5
+namejava.lang.String"__id*5
+
+__unknown_file (
+
+%29java.lang.String*
+5*é
+7Z" Z(*T
+R
+Z Z(+
+namejava.lang.String"__id*&
+
+__unknown_file (
+
+Reveal©¦
+[3 [(G
+%27java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()æã
+[& [(H
+%28mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%27java.util.UUID2getCard(Ljava/util/UUID;)g
+e
+[ [(I
+
+sourceCardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%28mage.cards.Card*
+5
+6*€
+9W W(R
+P
+W0 W(9
+%25mage.constants.Zone"__id*"
+
+__unknown_file (
+""”‘
+W W(H
+%26boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*8
+
+__unknown_file (
+
+%25mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+4
+7*…
+20F F(¿
+¼
+F F(,
+%6&mage.target.common.TargetCardInLibrary"__id*|
+
+__unknown_file (`*^R
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect"
+target²¯
+F F($
+%7java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*J
+
+__unknown_file (.
+,
+%6&mage.target.common.TargetCardInLibrary2getTargets()us
+F F(.
+%8boolean"java.util.List#isEmpty()Z*2
+
+__unknown_file (
+
+%7java.util.List2	isEmpty()*
+4
+19*µ
+21D D(¿
+¼
+D D(,
+%2&mage.target.common.TargetCardInLibrary"__id*|
+
+__unknown_file (`*^R
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect"
+target›˜
+D D(
+
+%3void"%mage.target.TargetImpl#clearChosen()V*J
+
+__unknown_file (.
+,
+%2&mage.target.common.TargetCardInLibrary2clearChosen()¿
+¼
+E% E(+,
+%4&mage.target.common.TargetCardInLibrary"__id*|
+
+__unknown_file (`*^R
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffect"
+targetöó
+E E(:
+%5boolean"tmage.players.Player#searchLibrary(Lmage/target/common/TargetCardInLibrary;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*J
+
+__unknown_file (.
+,
+%4&mage.target.common.TargetCardInLibrary*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2_searchLibrary(Lmage/target/common/TargetCardInLibrary;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+2
+20
+1*
+10U U(R
+P
+U0 U(@
+%23mage.constants.Zone"__id*"
+
+__unknown_file (
+""”‘
+U U(O
+%24boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*8
+
+__unknown_file (
+
+%23mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+4
+7*"
+22B B("
+B B(
+""*®
+11T& T(0U
+S
+T; T(P
+%18mage.constants.Outcome"__id*"
+
+__unknown_file (
+""¤¡
+T[ T(u
+%19java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+cardToPutOnBfmage.cards.Card2getLogName()l
+j
+TR T(u
+%20java.lang.String"__concat*
+TR T(X
+Put *%
+T[ T(u
+
+%19java.lang.String‰
+†
+	TR T(˜
+%21java.lang.String"__concat*%
+TR T(u
+
+%20java.lang.String*/
+	Tx T(˜" 
+ onto the battlefield instead?œ™
+	T& T(§
+%22boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%18mage.constants.Outcome*5
+
+__unknown_file (
+
+%21java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+9
+10*®
+23@ @( °­
+@+ @(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+@ @(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+@ @(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+21
+22:"
+? ?(#
+gamemage.game.Game:,
+?$ ?(2 
+sourcemage.abilities.AbilityBTR
+Pmage.abilities.effects.common.search.SearchLibraryPutInHandOrOnBattlefieldEffectHP

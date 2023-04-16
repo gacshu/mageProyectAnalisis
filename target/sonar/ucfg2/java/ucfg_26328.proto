@@ -1,0 +1,3277 @@
+
++mage.server.Main#main([Ljava/lang/String;)VZ
+PD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Main.javaS S("93* 
+68
+å å(X
+V
+
+å å(
+%74org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""–Õ
+
+å å(
+%75void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%74org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)Ä~
+
+é é(!
+%76boolean"java.util.List#isEmpty()Z*:
+
+__unknown_file (
+
+
+extensionsjava.util.List2	isEmpty()*
+59
+67*~
+24
+‡] ‡(df
+d
+
+‡] ‡(d
+%199java.lang.String"__id*6
+
+__unknown_file (
+
+%201java.lang.String*
+23*Ç
+69
+Å Å(K
+I
+
+Å Å(
+fjava.io.File"__id*"
+
+__unknown_file (
+""ò
+ï
+
+Å Å(
+fjava.io.File"
+__arrayGet*D
+
+__unknown_file ((
+&
+extensionDirectoriesjava.io.File[]*"
+
+__unknown_file (
+""*
+68
+75*~
+25
+‡T ‡(Zf
+d
+
+‡T ‡(Z
+%199java.lang.String"__id*6
+
+__unknown_file (
+
+%200java.lang.String*
+23*‹*
+26
+ÿ ÿ(Y
+W
+
+ÿ ÿ(
+%165org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Æ´
+
+ÿ4 ÿ(N
+%166int"3mage.server.util.ConfigWrapper#getMaxSecondsIdle()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxSecondsIdle()~
+|
+
+ÿ ÿ(N
+%167java.lang.String"__concat*-
+
+ÿ ÿ(1
+Config - max seconds idle: *
+
+ÿ4 ÿ(N
+
+%166int„‡
+
+ÿ ÿ(O
+%168void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%165org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%167java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ÿ Ÿ(
+%169org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Æ´
+
+Ÿ4 Ÿ(N
+%170int"3mage.server.util.ConfigWrapper#getMaxGameThreads()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxGameThreads()~
+|
+
+Ÿ Ÿ(N
+%171java.lang.String"__concat*-
+
+Ÿ Ÿ(1
+Config - max game threads: *
+
+Ÿ4 Ÿ(N
+
+%170int„‡
+
+Ÿ Ÿ(O
+%172void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%169org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%171java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+⁄ ⁄(
+%173org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ã…
+
+⁄4 ⁄(N
+%174java.lang.String"Dmage.server.util.ConfigWrapper#getMaxAiOpponents()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxAiOpponents()å
+â
+
+⁄ ⁄(N
+%175java.lang.String"__concat*-
+
+⁄ ⁄(1
+Config - max AI opponents: *(
+
+⁄4 ⁄(N
+
+%174java.lang.String„‡
+
+⁄ ⁄(O
+%176void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%173org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%175java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+€ €(
+%177org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¥±
+
+€4 €(Q
+%178int"6mage.server.util.ConfigWrapper#getMinUserNameLength()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMinUserNameLength()~
+|
+
+€ €(Q
+%179java.lang.String"__concat*-
+
+€ €(1
+Config - min usr name le.: *
+
+€4 €(Q
+
+%178int„‡
+
+€ €(R
+%180void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%177org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%179java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+‹ ‹(
+%181org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¥±
+
+‹4 ‹(Q
+%182int"6mage.server.util.ConfigWrapper#getMaxUserNameLength()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxUserNameLength()~
+|
+
+‹ ‹(Q
+%183java.lang.String"__concat*-
+
+‹ ‹(1
+Config - max usr name le.: *
+
+‹4 ‹(Q
+
+%182int„‡
+
+‹ ‹(R
+%184void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%181org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%183java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+› ›(
+%185org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¥±
+
+›4 ›(Q
+%186int"6mage.server.util.ConfigWrapper#getMinPasswordLength()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMinPasswordLength()~
+|
+
+› ›(Q
+%187java.lang.String"__concat*-
+
+› ›(1
+Config - min pswrd length: *
+
+›4 ›(Q
+
+%186int„‡
+
+› ›(R
+%188void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%185org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%187java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+ﬁ ﬁ(
+%189org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¥±
+
+ﬁ4 ﬁ(Q
+%190int"6mage.server.util.ConfigWrapper#getMaxPasswordLength()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxPasswordLength()~
+|
+
+ﬁ ﬁ(Q
+%191java.lang.String"__concat*-
+
+ﬁ ﬁ(1
+Config - max pswrd length: *
+
+ﬁ4 ﬁ(Q
+
+%190int„‡
+
+ﬁ ﬁ(R
+%192void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%189org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%191java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+ﬂ ﬂ(
+%193org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‹Ÿ
+
+ﬂ4 ﬂ(V
+%194java.lang.String"Lmage.server.util.ConfigWrapper#getInvalidUserNamePattern()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getInvalidUserNamePattern()å
+â
+
+ﬂ ﬂ(V
+%195java.lang.String"__concat*-
+
+ﬂ ﬂ(1
+Config - inv.usr name pat: *(
+
+ﬂ4 ﬂ(V
+
+%194java.lang.String„‡
+
+ﬂ ﬂ(W
+%196void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%193org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%195java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+‡ ‡(
+%197org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""“œ
+
+‡5 ‡(Q
+%198java.lang.Boolean"Gmage.server.util.ConfigWrapper#isSaveGameActivated()Ljava/lang/Boolean;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2isSaveGameActivated()*
+24
+25*ú
+27
+À À(!]
+[
+
+À À(!#
+pkgmage.server.ExtensionPackage"__id*"
+
+__unknown_file (
+""†
+ù
+
+À À(!#
+pkgmage.server.ExtensionPackage"
+__arrayGet*:
+
+__unknown_file (
+
+
+extensionsjava.util.List*"
+
+__unknown_file (
+""*
+26
+33*á
+28
+— —(/V
+T
+
+— —(/
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""í
+è
+
+— —(/
+entryjava.util.Map$Entry"
+__arrayGet*3
+
+__unknown_file (
+
+%152java.util.Set*"
+
+__unknown_file (
+""*
+27
+29*ÿ
+29
+“ “(Y
+W
+
+“ “(
+%153org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""üú
+
+“5 “(C
+%154java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()Ö
+Ç
+
+“ “(C
+%155java.lang.String"__concat*&
+
+“ “(2
+Loading extension: [*(
+
+“5 “(C
+
+%154java.lang.Stringr
+p
+
+“ “(J
+%156java.lang.String"__concat*(
+
+“ “(C
+
+%155java.lang.String*
+
+“F “(J
+] ¢ü
+
+“M “(]
+%157java.lang.Class"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()öó
+
+“M “(h
+%158java.lang.String",java.lang.Class#toString()Ljava/lang/String;*5
+
+__unknown_file (
+
+%157java.lang.Class2
+toString()á
+Ñ
+
+“ “(h
+%159java.lang.String"__concat*(
+
+“ “(J
+
+%156java.lang.String*(
+
+“M “(h
+
+%158java.lang.String„‡
+
+“ “(i
+%160void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%153org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%159java.lang.String2info(Ljava/lang/Object;)g
+e
+
+‘ ‘(--
+%161%mage.cards.decks.DeckValidatorFactory"__id*"
+
+__unknown_file (
+""üú
+
+‘: ‘(H
+%162java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()¢ü
+
+‘J ‘(Z
+%163java.lang.Class"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()‰·
+
+‘ ‘([
+%164void"Wmage.cards.decks.DeckValidatorFactory#addDeckType(Ljava/lang/String;Ljava/lang/Class;)V*K
+
+__unknown_file (/
+-
+%161%mage.cards.decks.DeckValidatorFactory*6
+
+__unknown_file (
+
+%162java.lang.String*5
+
+__unknown_file (
+
+%163java.lang.Class20addDeckType(Ljava/lang/String;Ljava/lang/Class;)*
+28*„
+71
+Ö Ö(O 
+«
+
+Ö Ö(O
+%69boolean"
+__arrayAdd*:
+
+__unknown_file (
+
+
+extensionsjava.util.List*
+
+__unknown_file (: *A
+
+__unknown_file (%
+#
+%68mage.server.ExtensionPackage*
+69*¢
+72
+Ö Ö("â
+Ü
+
+Ö' Ö(N#
+%68mage.server.ExtensionPackage"^mage.server.ExtensionPackageLoader#loadExtension(Ljava/io/File;)Lmage/server/ExtensionPackage;*B
+
+__unknown_file (&"$
+"mage.server.ExtensionPackageLoader*/
+
+__unknown_file (
+
+fjava.io.File*
+71*Ÿ
+73
+Ñ Ñ(X
+V
+
+Ñ Ñ(
+%65org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""É
+Ä
+
+Ñ$ Ñ(D
+%66java.lang.String"__concat*,
+
+Ñ$ Ñ(@
+ - Loading extension from *!
+
+ÑC Ñ(D
+
+fjava.io.File‡›
+
+Ñ Ñ(E
+%67void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%65org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%66java.lang.String2info(Ljava/lang/Object;)*
+72*·
+30
+—2 —(5µ≤
+
+—2 —(D
+%151java.util.Map":mage.server.ExtensionPackage#getDeckTypes()Ljava/util/Map;*A
+
+__unknown_file (%
+#
+pkgmage.server.ExtensionPackage2getDeckTypes()êç
+
+—2 —(O
+%152java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*3
+
+__unknown_file (
+
+%151java.util.Map2
+entrySet()*
+28*ó
+75
+Ç Ç({y
+
+Ç Ç(#
+%64boolean"java.io.File#isDirectory()Z*/
+
+__unknown_file (
+
+fjava.io.File2isDirectory()*
+69
+73*á
+31
+Ã Ã(/V
+T
+
+Ã Ã(/
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""í
+è
+
+Ã Ã(/
+entryjava.util.Map$Entry"
+__arrayGet*3
+
+__unknown_file (
+
+%138java.util.Set*"
+
+__unknown_file (
+""*
+30
+32*¬
+32
+Õ Õ(Y
+W
+
+Õ Õ(
+%139org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""üú
+
+Õ5 Õ(C
+%140java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()Ö
+Ç
+
+Õ Õ(C
+%141java.lang.String"__concat*&
+
+Õ Õ(2
+Loading extension: [*(
+
+Õ5 Õ(C
+
+%140java.lang.Stringr
+p
+
+Õ Õ(J
+%142java.lang.String"__concat*(
+
+Õ Õ(C
+
+%141java.lang.String*
+
+ÕF Õ(J
+] ¢ü
+
+ÕM Õ(]
+%143java.lang.Class"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()öó
+
+ÕM Õ(h
+%144java.lang.String",java.lang.Class#toString()Ljava/lang/String;*5
+
+__unknown_file (
+
+%143java.lang.Class2
+toString()á
+Ñ
+
+Õ Õ(h
+%145java.lang.String"__concat*(
+
+Õ Õ(J
+
+%142java.lang.String*(
+
+ÕM Õ(h
+
+%144java.lang.String„‡
+
+Õ Õ(i
+%146void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%139org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%145java.lang.String2info(Ljava/lang/Object;)_
+]
+
+œ œ($%
+%147mage.server.draft.CubeFactory"__id*"
+
+__unknown_file (
+""üú
+
+œ2 œ(@
+%148java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()¢ü
+
+œB œ(R
+%149java.lang.Class"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()÷”
+
+œ œ(S
+%150void"Pmage.server.draft.CubeFactory#addDraftCube(Ljava/lang/String;Ljava/lang/Class;)V*C
+
+__unknown_file ('
+%
+%147mage.server.draft.CubeFactory*6
+
+__unknown_file (
+
+%148java.lang.String*5
+
+__unknown_file (
+
+%149java.lang.Class21addDraftCube(Ljava/lang/String;Ljava/lang/Class;)*
+31*ˇ
+77~& ~(5K
+I
+~& ~(5
+%60java.io.File"__id*"
+
+__unknown_file (
+""çä
+~& ~(A
+%61java.io.File[]"'java.io.File#listFiles()[Ljava/io/File;*1
+
+__unknown_file (
+
+%60java.io.File2listFiles()o
+m
+~ ~(B&
+extensionDirectoriesjava.io.File[]"__id*3
+
+__unknown_file (
+
+%61java.io.File[]=;
+0 (;
+%62java.util.ArrayList"java.util.ArrayListl
+j
+, (=
+%63"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%62java.util.ArrayListj
+h
+ (>
+
+extensionsjava.util.List"__id*8
+
+__unknown_file (
+
+%62java.util.ArrayList*
+68
+69*„
+33
+Ã2 Ã(5∑¥
+
+Ã2 Ã(E
+%137java.util.Map";mage.server.ExtensionPackage#getDraftCubes()Ljava/util/Map;*A
+
+__unknown_file (%
+#
+pkgmage.server.ExtensionPackage2getDraftCubes()êç
+
+Ã2 Ã(P
+%138java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*3
+
+__unknown_file (
+
+%137java.util.Map2
+entrySet()*
+31*‡
+78{ {(V
+T
+{ {(
+%58org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÒÓ
+{ {(F
+%59void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%58org.apache.log4j.Logger*F
+
+__unknown_file (*(
+&Could not create extensions directory.2error(Ljava/lang/Object;)*
+77*ÿ
+79z z( K
+I
+z z( 
+%56java.io.File"__id*"
+
+__unknown_file (
+""qo
+z z()
+%57boolean"java.io.File#mkdirs()Z*1
+
+__unknown_file (
+
+%56java.io.File2mkdirs()*
+77
+78*†
+35
+∆ ∆(b
+`
+
+∆ ∆((
+pluginmage.server.util.config.Plugin"__id*"
+
+__unknown_file (
+""ü
+ú
+
+∆ ∆((
+pluginmage.server.util.config.Plugin"
+__arrayGet*4
+
+__unknown_file (
+
+%132java.util.List*"
+
+__unknown_file (
+""*
+36
+27*ñ
+36
+« «(g
+e
+
+» »()-
+%133%mage.cards.decks.DeckValidatorFactory"__id*"
+
+__unknown_file (
+""∏µ
+
+»6 »(F
+%134java.lang.String":mage.server.util.config.Plugin#getName()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin2	getName()Ú
+Ô
+
+»H »(Z
+%135java.lang.Class"Nmage.server.Main#loadPlugin(Lmage/server/util/config/Plugin;)Ljava/lang/Class;*0
+
+__unknown_file ("
+mage.server.Main*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin‰·
+
+» »([
+%136void"Wmage.cards.decks.DeckValidatorFactory#addDeckType(Ljava/lang/String;Ljava/lang/Class;)V*K
+
+__unknown_file (/
+-
+%133%mage.cards.decks.DeckValidatorFactory*6
+
+__unknown_file (
+
+%134java.lang.String*5
+
+__unknown_file (
+
+%135java.lang.Class20addDeckType(Ljava/lang/String;Ljava/lang/Class;)*
+35*◊
+37
+∆ ∆(#æª
+
+∆ ∆(2
+%132java.util.List"=mage.server.util.ConfigWrapper#getDeckTypes()Ljava/util/List;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getDeckTypes()*
+35*†
+39
+¿ ¿(b
+`
+
+¿ ¿((
+pluginmage.server.util.config.Plugin"__id*"
+
+__unknown_file (
+""ü
+ú
+
+¿ ¿((
+pluginmage.server.util.config.Plugin"
+__arrayGet*4
+
+__unknown_file (
+
+%127java.util.List*"
+
+__unknown_file (
+""*
+37
+40*ﬂ
+80u u(ö
+ó
+u u()
+%49void"8mage.cards.repository.RepositoryUtil#bootstrapLocalDb()V*D
+
+__unknown_file (("&
+$mage.cards.repository.RepositoryUtilV
+T
+v v(
+%50org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ŒÀ
+v v(
+%51void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%50org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)V
+T
+x x(
+%52org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ê„
+x x(4
+%53void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%52org.apache.log4j.Logger*=
+
+__unknown_file (!
+Loading extension packages...2info(Ljava/lang/Object;)K
+I
+y y(
+%54java.io.File"__id*"
+
+__unknown_file (
+""qo
+y y(%
+%55boolean"java.io.File#exists()Z*1
+
+__unknown_file (
+
+%54java.io.File2exists()*
+79
+77*Ω
+81q q(V
+T
+q q(
+%47org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ŒÀ
+q q( 
+%48void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%47org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)*
+80*ﬂ
+82n n(V
+T
+n n(
+%45org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‚ﬂ
+n n(7
+%46void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%45org.apache.log4j.Logger*7
+
+__unknown_file (
+Failed to start server.2fatal(Ljava/lang/Object;)"
+o o(
+""*ö
+83l l(V
+T
+l l(
+%41org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÌÍ
+l l(?
+%42void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%41org.apache.log4j.Logger*D
+
+__unknown_file ((&
+$Check authorized user DB version ...2info(Ljava/lang/Object;)⁄
+◊
+m m(7+
+%43$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository⁄◊
+m m(\
+%44boolean"Jmage.server.AuthorizedUserRepository#checkAlterAndMigrateAuthorizedUser()Z*I
+
+__unknown_file (-
++
+%43$mage.server.AuthorizedUserRepository2$checkAlterAndMigrateAuthorizedUser()*
+81
+82*˝
+84d" d(*^
+\
+dI d(W
+%29java.lang.String"__id*1
+
+__unknown_file (
+xmage.config.path”
+–
+d6 d(X
+%30java.lang.String"Bjava.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*5
+
+__unknown_file (
+
+%29java.lang.String⁄
+◊
+d" d(Y
+%31java.util.Optional"Ejava.util.Optional#ofNullable(Ljava/lang/Object;)Ljava/util/Optional;*2
+
+__unknown_file ("
+java.util.Optional*5
+
+__unknown_file (
+
+%30java.lang.StringO
+M
+e e()
+%32java.lang.String"__id*"
+
+__unknown_file (
+""Û
+d" e(*
+%33java.lang.String"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%31java.util.Optional*5
+
+__unknown_file (
+
+%32java.lang.String2orElse(Ljava/lang/Object;)i
+g
+d e(+
+
+configPathjava.lang.String"__id*5
+
+__unknown_file (
+
+%33java.lang.StringV
+T
+g g(
+%34org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨
+©
+g g(S
+%35java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*B
+
+__unknown_file (&$
+"Reading configuration from path=%s*<
+
+__unknown_file ( 
+
+
+configPathjava.lang.Stringﬁ€
+g g(T
+%36void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%34org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%35java.lang.String2info(Ljava/lang/Object;)ì
+ê
+h7 h(]%
+%37mage.server.util.config.Config"_mage.server.util.ConfigFactory#loadFromFile(Ljava/lang/String;)Lmage/server/util/config/Config;*>
+
+__unknown_file ("" 
+mage.server.util.ConfigFactory*<
+
+__unknown_file ( 
+
+
+configPathjava.lang.StringSQ
+h) h(6%
+%38mage.server.util.ConfigWrapper"mage.server.util.ConfigWrapperË
+Â
+h% h(^
+%39"Hmage.server.util.ConfigWrapper#<init>(Lmage/server/util/config/Config;)V*C
+
+__unknown_file ('
+%
+%38mage.server.util.ConfigWrapper*C
+
+__unknown_file ('
+%
+%37mage.server.util.config.ConfigÅ
+
+h h(_(
+configmage.server.util.ConfigWrapper"__id*C
+
+__unknown_file ('
+%
+%38mage.server.util.ConfigWrapper€ÿ
+k k(.
+%40java.lang.Boolean"Mmage.server.util.ConfigWrapper#isAuthenticationActivated()Ljava/lang/Boolean;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2isAuthenticationActivated()*
+80
+83*Ä
+40
+¡ ¡(_
+]
+
+¬ ¬( %
+%128mage.server.draft.CubeFactory"__id*"
+
+__unknown_file (
+""∏µ
+
+¬. ¬(>
+%129java.lang.String":mage.server.util.config.Plugin#getName()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin2	getName()Ú
+Ô
+
+¬@ ¬(R
+%130java.lang.Class"Nmage.server.Main#loadPlugin(Lmage/server/util/config/Plugin;)Ljava/lang/Class;*0
+
+__unknown_file ("
+mage.server.Main*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin÷”
+
+¬ ¬(S
+%131void"Pmage.server.draft.CubeFactory#addDraftCube(Ljava/lang/String;Ljava/lang/Class;)V*C
+
+__unknown_file ('
+%
+%128mage.server.draft.CubeFactory*6
+
+__unknown_file (
+
+%129java.lang.String*5
+
+__unknown_file (
+
+%130java.lang.Class21addDraftCube(Ljava/lang/String;Ljava/lang/Class;)*
+39*¸
+85Y Y(O
+M
+Y Y(
+argjava.lang.String"__id*"
+
+__unknown_file (
+""ê
+ç
+Y Y(
+argjava.lang.String"
+__arrayGet*8
+
+__unknown_file (
+
+argsjava.lang.String[]*"
+
+__unknown_file (
+""*
+91
+84*Ÿ
+41
+¿ ¿(#¿Ω
+
+¿ ¿(3
+%127java.util.List">mage.server.util.ConfigWrapper#getDraftCubes()Ljava/util/List;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getDraftCubes()*
+39*ï
+86` `($Y
+W
+`9 `(F
+%26java.lang.String"__id*,
+
+__unknown_file (
+-fastDbMode=Õ 
+`- `(K
+%27java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%26java.lang.String*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)”
+–
+` `(L
+%28java.lang.Boolean"@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;*1
+
+__unknown_file ("
+java.lang.Boolean*5
+
+__unknown_file (
+
+%27java.lang.String*
+85*”
+87_ _(Y
+W
+_& _(3
+%24java.lang.String"__id*,
+
+__unknown_file (
+-fastDbMode=›⁄
+_ _(4
+%25boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%24java.lang.String2startsWith(Ljava/lang/String;)*
+85
+86*†
+43
+∫ ∫(b
+`
+
+∫ ∫((
+pluginmage.server.util.config.Plugin"__id*"
+
+__unknown_file (
+""ü
+ú
+
+∫ ∫((
+pluginmage.server.util.config.Plugin"
+__arrayGet*4
+
+__unknown_file (
+
+%122java.util.List*"
+
+__unknown_file (
+""*
+41
+44*ë
+88]  ](#\
+Z
+], ](<
+%21java.lang.String"__id*/
+
+__unknown_file (
+-adminPassword=Õ 
+]  ](A
+%22java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%21java.lang.String*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)l
+j
+] ](A!
+adminPasswordjava.lang.String"__id*5
+
+__unknown_file (
+
+%22java.lang.String
+Ì
+^  ^(B
+%23java.lang.String"Jmage.server.util.SystemUtil#sanitize(Ljava/lang/String;)Ljava/lang/String;*;
+
+__unknown_file ("
+mage.server.util.SystemUtil*?
+
+__unknown_file (#
+!
+adminPasswordjava.lang.Stringl
+j
+^ ^(B!
+adminPasswordjava.lang.String"__id*5
+
+__unknown_file (
+
+%23java.lang.String*
+85*Ö
+44
+ª ª(`
+^
+
+º º("&
+%123mage.server.game.PlayerFactory"__id*"
+
+__unknown_file (
+""∏µ
+
+º1 º(A
+%124java.lang.String":mage.server.util.config.Plugin#getName()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin2	getName()Ú
+Ô
+
+ºC º(U
+%125java.lang.Class"Nmage.server.Main#loadPlugin(Lmage/server/util/config/Plugin;)Ljava/lang/Class;*0
+
+__unknown_file ("
+mage.server.Main*F
+
+__unknown_file (*
+(
+pluginmage.server.util.config.Plugin⁄◊
+
+º º(V
+%126void"Rmage.server.game.PlayerFactory#addPlayerType(Ljava/lang/String;Ljava/lang/Class;)V*D
+
+__unknown_file ((
+&
+%123mage.server.game.PlayerFactory*6
+
+__unknown_file (
+
+%124java.lang.String*5
+
+__unknown_file (
+
+%125java.lang.Class22addPlayerType(Ljava/lang/String;Ljava/lang/Class;)*
+43*÷
+89\ \(\
+Z
+\& \(6
+%19java.lang.String"__id*/
+
+__unknown_file (
+-adminPassword=›⁄
+\ \(7
+%20boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%19java.lang.String2startsWith(Ljava/lang/String;)*
+87
+88*€
+45
+∫ ∫(#¬ø
+
+∫ ∫(4
+%122java.util.List"?mage.server.util.ConfigWrapper#getPlayerTypes()Ljava/util/List;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getPlayerTypes()*
+43*®
+47
+¥ ¥(f
+d
+
+¥ ¥(,
+plugin"mage.server.util.config.GamePlugin"__id*"
+
+__unknown_file (
+""£
+†
+
+¥ ¥(,
+plugin"mage.server.util.config.GamePlugin"
+__arrayGet*4
+
+__unknown_file (
+
+%116java.util.List*"
+
+__unknown_file (
+""*
+48
+45*ˆ
+
+48
+µ µ(j
+h
+
+∂ ∂(&0
+%117(mage.server.tournament.TournamentFactory"__id*"
+
+__unknown_file (
+""ºπ
+
+∂9 ∂(I
+%118java.lang.String":mage.server.util.config.Plugin#getName()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePlugin2	getName()™
+ß
+
+∂K ∂(e+
+%119#mage.game.tournament.TournamentType"nmage.server.Main#loadTournamentType(Lmage/server/util/config/GamePlugin;)Lmage/game/tournament/TournamentType;*0
+
+__unknown_file ("
+mage.server.Main*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePluginˆ
+Û
+
+∂g ∂(y
+%120java.lang.Class"Nmage.server.Main#loadPlugin(Lmage/server/util/config/Plugin;)Ljava/lang/Class;*0
+
+__unknown_file ("
+mage.server.Main*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePluginåâ
+
+∂ ∂(z
+%121void"Ömage.server.tournament.TournamentFactory#addTournamentType(Ljava/lang/String;Lmage/game/tournament/TournamentType;Ljava/lang/Class;)V*N
+
+__unknown_file (2
+0
+%117(mage.server.tournament.TournamentFactory*6
+
+__unknown_file (
+
+%118java.lang.String*I
+
+__unknown_file (-
++
+%119#mage.game.tournament.TournamentType*5
+
+__unknown_file (
+
+%120java.lang.Class2[addTournamentType(Ljava/lang/String;Lmage/game/tournament/TournamentType;Ljava/lang/Class;)*
+47*„
+49
+¥! ¥(' «
+
+¥! ¥(<
+%116java.util.List"Cmage.server.util.ConfigWrapper#getTournamentTypes()Ljava/util/List;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getTournamentTypes()*
+47*ì
+90[ [("W
+U
+[7 [(B
+%16java.lang.String"__id**
+
+__unknown_file (
+
+-testMode=Õ 
+[+ [(G
+%17java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%16java.lang.String*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)”
+–
+[ [(H
+%18java.lang.Boolean"@java.lang.Boolean#valueOf(Ljava/lang/String;)Ljava/lang/Boolean;*1
+
+__unknown_file ("
+java.lang.Boolean*5
+
+__unknown_file (
+
+%17java.lang.String*
+85*—
+91Z Z(W
+U
+Z Z(*
+%14java.lang.String"__id**
+
+__unknown_file (
+
+-testMode=›⁄
+Z Z(+
+%15boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*5
+
+__unknown_file (
+
+argjava.lang.String*5
+
+__unknown_file (
+
+%14java.lang.String2startsWith(Ljava/lang/String;)*
+90
+89*€
+93T T(ò
+ï
+T T(I
+%0java.lang.String"Tjava.lang.System#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*C
+
+__unknown_file ('%
+#java.util.Arrays.useLegacyMergeSort*$
+
+__unknown_file (
+trueU
+S
+U U(
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""T
+R
+U6 U(=
+%2mage.utils.MageVersion"__id*"
+
+__unknown_file (
+""ä
+á
+U U(=
+%3java.lang.String"__concat*-
+U U(3!
+Starting MAGE server version **
+U6 U(=
+
+%2mage.utils.MageVersion€ÿ
+U U(>
+
+%4void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%3java.lang.String2info(Ljava/lang/Object;)U
+S
+V V(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""U
+S
+V( V(.
+%6org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ƒ¡
+V( V(B
+%7org.apache.log4j.Level"Eorg.apache.log4j.Category#getEffectiveLevel()Lorg/apache/log4j/Level;*;
+
+__unknown_file (
+
+%6org.apache.log4j.Logger2getEffectiveLevel(){
+y
+V V(B
+%8java.lang.String"__concat*
+V V(%
+Logging level: **
+V( V(B
+
+%7org.apache.log4j.Level€ÿ
+V V(C
+
+%9void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%8java.lang.String2info(Ljava/lang/Object;)V
+T
+W W(
+%10org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""≠
+™
+W* W(B
+%11java.nio.charset.Charset"Cjava.nio.charset.Charset#defaultCharset()Ljava/nio/charset/Charset;*8
+
+__unknown_file ("
+java.nio.charset.CharsetÅ
+
+W W(B
+%12java.lang.String"__concat*!
+W W('
+Default charset: *-
+W* W(B!
+
+%11java.nio.charset.Charsetﬁ€
+W W(C
+%13void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%10org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%12java.lang.String2info(Ljava/lang/Object;)U
+S
+X X("!
+adminPasswordjava.lang.String"__id*
+
+__unknown_file ( *
+85*®
+51
+Æ Æ(f
+d
+
+Æ Æ(,
+plugin"mage.server.util.config.GamePlugin"__id*"
+
+__unknown_file (
+""£
+†
+
+Æ Æ(,
+plugin"mage.server.util.config.GamePlugin"
+__arrayGet*4
+
+__unknown_file (
+
+%110java.util.List*"
+
+__unknown_file (
+""*
+49
+52*ç
+
+52
+Ø Ø(^
+\
+
+∞ ∞( $
+%111mage.server.game.GameFactory"__id*"
+
+__unknown_file (
+""ºπ
+
+∞- ∞(=
+%112java.lang.String":mage.server.util.config.Plugin#getName()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePlugin2	getName()ê
+ç
+
+∞? ∞(S!
+%113mage.game.match.MatchType"^mage.server.Main#loadGameType(Lmage/server/util/config/GamePlugin;)Lmage/game/match/MatchType;*0
+
+__unknown_file ("
+mage.server.Main*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePluginˆ
+Û
+
+∞U ∞(g
+%114java.lang.Class"Nmage.server.Main#loadPlugin(Lmage/server/util/config/Plugin;)Ljava/lang/Class;*0
+
+__unknown_file ("
+mage.server.Main*J
+
+__unknown_file (.
+,
+plugin"mage.server.util.config.GamePlugin…∆
+
+∞ ∞(h
+%115void"image.server.game.GameFactory#addGameType(Ljava/lang/String;Lmage/game/match/MatchType;Ljava/lang/Class;)V*B
+
+__unknown_file (&
+$
+%111mage.server.game.GameFactory*6
+
+__unknown_file (
+
+%112java.lang.String*?
+
+__unknown_file (#
+!
+%113mage.game.match.MatchType*5
+
+__unknown_file (
+
+%114java.lang.Class2KaddGameType(Ljava/lang/String;Lmage/game/match/MatchType;Ljava/lang/Class;)*
+51*◊
+53
+Æ! Æ('æª
+
+Æ! Æ(6
+%110java.util.List"=mage.server.util.ConfigWrapper#getGameTypes()Ljava/util/List;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getGameTypes()*
+51*ø
+54
+® ®(Y
+W
+
+® ®(
+%103org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ê„
+
+® ®(0
+%104void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%103org.apache.log4j.Logger*9
+
+__unknown_file (
+Updating user stats DB...2info(Ljava/lang/Object;)h
+f
+
+© ©($.
+%105&mage.server.record.UserStatsRepository"__id*"
+
+__unknown_file (
+""“œ
+
+© ©(6
+%106java.util.List"Hmage.server.record.UserStatsRepository#updateUserStats()Ljava/util/List;*L
+
+__unknown_file (0
+.
+%105&mage.server.record.UserStatsRepository2updateUserStats()Y
+W
+
+™ ™(
+%107org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""“œ
+
+™ ™(
+%108void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%107org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)t
+r
+
+´ ´(
+%109void"$mage.server.Main#deleteSavedGames()V*0
+
+__unknown_file ("
+mage.server.Main*
+53*©
+10Ç Ç(€fd
+
+Ç Ç(2.
+%300&mage.server.Main$MageTransporterServer"&mage.server.Main$MageTransporterServer®
+•
+Ç Ç(€
+%301" mage.server.Main$MageTransporterServer#<init>(Lmage/server/managers/ManagerFactory;Lorg/jboss/remoting/InvokerLocator;Ljava/lang/Object;Ljava/lang/String;Lmage/server/Main$MageServerInvocationHandler;)V*L
+
+__unknown_file (0
+.
+%300&mage.server.Main$MageTransporterServer*S
+
+__unknown_file (7
+5
+managerFactory#mage.server.managers.ManagerFactory*P
+
+__unknown_file (4
+2
+serverLocator!org.jboss.remoting.InvokerLocator*@
+
+__unknown_file ($
+"
+%295mage.server.MageServerImpl*6
+
+__unknown_file (
+
+%297java.lang.String*R
+
+__unknown_file (6
+4
+%298,mage.server.Main$MageServerInvocationHandler*
+9*÷
+55
+§ §(ç
+ä
+
+§ §(/
+%100void"4mage.game.draft.RateCard#bootstrapCardsAndRatings()V*8
+
+__unknown_file ("
+mage.game.draft.RateCardY
+W
+
+• •(
+%101org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""“œ
+
+• •( 
+%102void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%101org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)*
+54*∞
+11ÇÀ Ç(Ÿtr
+ÇØ Ç( 4
+%298,mage.server.Main$MageServerInvocationHandler",mage.server.Main$MageServerInvocationHandlerü
+ú
+Ç´ Ç(⁄
+%299"[mage.server.Main$MageServerInvocationHandler#<init>(Lmage/server/managers/ManagerFactory;)V*R
+
+__unknown_file (6
+4
+%298,mage.server.Main$MageServerInvocationHandler*S
+
+__unknown_file (7
+5
+managerFactory#mage.server.managers.ManagerFactory*
+10*ë
+56
+† †(X
+V
+
+† †(
+%97org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""–Õ
+
+† †(
+%98void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%97org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)H
+F
+
+£ £(4
+%99boolean"__id*"
+
+__unknown_file (
+""*
+54
+55*¢
+12Çè Ç(üáÑ
+Çè Ç(©
+%297java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*"
+
+__unknown_file (
+""2	getName()*
+11*£
+57
+û û(ä
+á
+
+û û(
+%96void")mage.cards.repository.CardScanner#scan()V*A
+
+__unknown_file (%"#
+!mage.cards.repository.CardScanner*
+56*€
+13
+Ç3 Ç(ANL
+
+ÇV Ç(d"
+%295mage.server.MageServerImpl"mage.server.MageServerImplÚ
+Ô
+ÇR Ç(ç
+%296"\mage.server.MageServerImpl#<init>(Lmage/server/managers/ManagerFactory;Ljava/lang/String;Z)V*@
+
+__unknown_file ($
+"
+%295mage.server.MageServerImpl*S
+
+__unknown_file (7
+5
+managerFactory#mage.server.managers.ManagerFactory*?
+
+__unknown_file (#
+!
+adminPasswordjava.lang.String*"
+
+__unknown_file (
+""*
+12*“
+59
+ö ö(X
+V
+
+ö ö(
+%94org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""€ÿ
+
+ö ö('
+%95void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%94org.apache.log4j.Logger*0
+
+__unknown_file (
+Loading cards...2info(Ljava/lang/Object;)*
+57
+56*ã
+15
+Ä Ä(Sí
+è
+
+Ä Ä(S2
+serverLocator!org.jboss.remoting.InvokerLocator"__id*G
+
+__unknown_file (+
+)
+%292!org.jboss.remoting.InvokerLocator⁄
+◊
+
+Å Å(8
+%294boolean"lmage.server.Main#isAlreadyRunning(Lmage/server/managers/ConfigSettings;Lorg/jboss/remoting/InvokerLocator;)Z*0
+
+__unknown_file ("
+mage.server.Main*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper*P
+
+__unknown_file (4
+2
+serverLocator!org.jboss.remoting.InvokerLocator*
+13
+3*Œ
+16
+Ä+ Ä(R\Z
+
+Ä/ Ä(=)
+%292!org.jboss.remoting.InvokerLocator"!org.jboss.remoting.InvokerLocator◊
+‘
+
+Ä+ Ä(R
+%293"=org.jboss.remoting.InvokerLocator#<init>(Ljava/lang/String;)V*G
+
+__unknown_file (+
+)
+%292!org.jboss.remoting.InvokerLocator*6
+
+__unknown_file (
+
+%291java.lang.String*
+15*√
+17
+Ä> Ä(H™ß
+
+Ä> Ä(Q
+%291java.lang.String"1mage.remote.Connection#getURI()Ljava/lang/String;*B
+
+__unknown_file (&
+$
+
+connectionmage.remote.Connection2getURI()*
+16*¥
+18
+˙/ ˙(>®•
+
+˙A ˙(X
+%281int"0mage.server.util.ConfigWrapper#getMaxPoolSize()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxPoolSize()p
+n
+
+˙/ ˙(X
+%282java.lang.String"__concat*
+
+˙/ ˙(>
+&maxPoolSize=*
+
+˙A ˙(X
+
+%281intFD
+
+˙$ ˙(.
+%283mage.remote.Connection"mage.remote.Connection¡
+æ
+
+˙  ˙(Y
+%284"2mage.remote.Connection#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%283mage.remote.Connection*6
+
+__unknown_file (
+
+%282java.lang.Stringx
+v
+
+˙ ˙(Z$
+
+connectionmage.remote.Connection"__id*<
+
+__unknown_file ( 
+
+%283mage.remote.Connection «
+
+˚ ˚(4
+%285java.lang.String"Cmage.server.util.ConfigWrapper#getServerAddress()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getServerAddress()ÎË
+
+˚ ˚(5
+%286void"3mage.remote.Connection#setHost(Ljava/lang/String;)V*B
+
+__unknown_file (&
+$
+
+connectionmage.remote.Connection*6
+
+__unknown_file (
+
+%285java.lang.String2setHost(Ljava/lang/String;)öó
+
+¸ ¸(+
+%287int")mage.server.util.ConfigWrapper#getPort()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2	getPort()ºπ
+
+¸ ¸(,
+%288void""mage.remote.Connection#setPort(I)V*B
+
+__unknown_file (&
+$
+
+connectionmage.remote.Connection*)
+
+__unknown_file (
+
+%287int2
+setPort(I)VT
+
+˝2 ˝(D&
+%289mage.server.MainManagerFactory"mage.server.MainManagerFactoryÙ
+Ò
+
+˝. ˝(L
+%290"Mmage.server.MainManagerFactory#<init>(Lmage/server/managers/ConfigSettings;)V*D
+
+__unknown_file ((
+&
+%289mage.server.MainManagerFactory*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapperí
+è
+
+˝ ˝(M5
+managerFactory#mage.server.managers.ManagerFactory"__id*D
+
+__unknown_file ((
+&
+%289mage.server.MainManagerFactory*
+17*¿
+19
+˜ ˜(Y
+W
+
+˜ ˜(
+%279org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ã…
+˜ ˜(ó
+%280void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%279org.apache.log4j.Logger*õ
+
+__unknown_file (}
+{ERROR, can't load any game types. Check your config.xml in server's config folder (example: old jar versions after update).2error(Ljava/lang/Object;)*
+18*(
+0 "!
+
+ê ê(
+implicit return*Ä
+3
+ã ã(Y
+W
+
+ã ã(
+%311org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""éã
+
+ã ã(_
+%312void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%311org.apache.log4j.Logger*_
+
+__unknown_file (CA
+?Unable to start MAGE server - another server is already started2fatal(Ljava/lang/Object;)*
+0*à
+4
+â â(r
+p
+
+â â( 
+%310void""mage.server.Main#initStatistics()V*0
+
+__unknown_file ("
+mage.server.Main*
+0*ﬂ
+5
+á á(Y
+W
+
+á á(
+%308org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÌÍ
+
+á á(C
+%309void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%308org.apache.log4j.Logger*@
+
+__unknown_file ($"
+ MAGE server running in test mode2info(Ljava/lang/Object;)*
+4*î
+7
+Ñ Ñ(Yî
+ë
+
+Ñ Ñ(Y
+%306java.lang.String"__concat*5
+
+Ñ Ñ(A'%
+#Started MAGE server - listening on *(
+
+ÑD Ñ(Y
+
+%305java.lang.String„‡
+
+Ñ Ñ(Z
+%307void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%304org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%306java.lang.String2info(Ljava/lang/Object;)*
+4
+5*†
+8
+Ñ Ñ(Y
+W
+
+Ñ Ñ(
+%304org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Æ´
+
+ÑD Ñ(Y
+%305java.lang.String"3mage.remote.Connection#toString()Ljava/lang/String;*B
+
+__unknown_file (&
+$
+
+connectionmage.remote.Connection2
+toString()*
+7*Ë
+9Ç Ç(€Ñ
+Å
+Ç Ç(€
+mage.server.Main"
+server"__id*L
+
+__unknown_file (0
+.
+%300&mage.server.Main$MageTransporterServerç
+ä
+
+É É(8
+%3020org.jboss.remoting.transporter.TransporterServer"__id*<
+
+__unknown_file ( *
+mage.server.Main"
+serverπ∂
+
+É É(
+%303void"9org.jboss.remoting.transporter.TransporterServer#start()V*V
+
+__unknown_file (:
+8
+%3020org.jboss.remoting.transporter.TransporterServer2start()*
+8*√
+60
+ó ó(X
+V
+
+ó ó(
+%92org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""–Õ
+
+ó ó( 
+%93void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%92org.apache.log4j.Logger*%
+
+__unknown_file (	
+Done.2info(Ljava/lang/Object;)*
+59*ú
+61
+ê ê(%]
+[
+
+ê ê(%#
+pkgmage.server.ExtensionPackage"__id*"
+
+__unknown_file (
+""†
+ù
+
+ê ê(%#
+pkgmage.server.ExtensionPackage"
+__arrayGet*:
+
+__unknown_file (
+
+
+extensionsjava.util.List*"
+
+__unknown_file (
+""*
+60
+65*Ù
+62
+ï ï(*»≈
+
+ïE ï(Y
+%90java.lang.ClassLoader"Dmage.server.ExtensionPackage#getClassLoader()Ljava/lang/ClassLoader;*A
+
+__unknown_file (%
+#
+pkgmage.server.ExtensionPackage2getClassLoader()ê
+ç
+
+ï ï(Z
+%91void"dmage.cards.repository.PluginClassloaderRegistery#registerPluginClassloader(Ljava/lang/ClassLoader;)V*P
+
+__unknown_file (4"2
+0mage.cards.repository.PluginClassloaderRegistery*:
+
+__unknown_file (
+
+%90java.lang.ClassLoader*
+61*ã
+63
+ë ë(%X
+V
+
+ë ë(%
+setmage.cards.ExpansionSet"__id*"
+
+__unknown_file (
+""î
+ë
+
+ë ë(%
+setmage.cards.ExpansionSet"
+__arrayGet*3
+
+__unknown_file (
+
+%79java.util.List*"
+
+__unknown_file (
+""*
+62
+64*˛
+64
+í í(X
+V
+
+í í(
+%80org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¶£
+
+í/ í(<
+%81java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()x
+v
+
+í  í(<
+%82java.lang.String"__concat*
+
+í  í(,
+
+- Loading *'
+
+í/ í(<
+
+%81java.lang.Stringp
+n
+
+í  í(C
+%83java.lang.String"__concat*'
+
+í  í(<
+
+%82java.lang.String*
+
+í? í(C
+ (¶£
+
+íF í(S
+%84java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()Ñ
+Å
+
+í  í(S
+%85java.lang.String"__concat*'
+
+í  í(C
+
+%83java.lang.String*'
+
+íF í(S
+
+%84java.lang.Stringo
+m
+
+í  í(Y
+%86java.lang.String"__concat*'
+
+í  í(S
+
+%85java.lang.String*
+
+íV í(Y
+)‡›
+
+í í(Z
+%87void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%80org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%86java.lang.String2info(Ljava/lang/Object;)à
+Ö
+
+ì ì(&
+%88mage.cards.Sets".mage.cards.Sets#getInstance()Lmage/cards/Sets;*/
+
+__unknown_file ("
+mage.cards.SetsÁ‰
+
+ì ì(2
+%89void"2mage.cards.Sets#addSet(Lmage/cards/ExpansionSet;)V*4
+
+__unknown_file (
+
+%88mage.cards.Sets*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2!addSet(Lmage/cards/ExpansionSet;)*
+63* 8
+20
+Á Á(kå
+â
+
+Á Á(k
+%233java.lang.String"__concat*-
+
+Á Á(1
+Config - auth. activated : *(
+
+Á4 Á(k
+
+%230java.lang.String„‡
+
+Á Á(l
+%234void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%228org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%233java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ë Ë(
+%235org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+"" «
+
+Ë4 Ë(M
+%236java.lang.String"Cmage.server.util.ConfigWrapper#getMailgunApiKey()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailgunApiKey()å
+â
+
+Ë Ë(M
+%237java.lang.String"__concat*-
+
+Ë Ë(1
+Config - mailgun api key : *(
+
+Ë4 Ë(M
+
+%236java.lang.String„‡
+
+Ë Ë(N
+%238void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%235org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%237java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+È È(
+%239org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+"" «
+
+È4 È(M
+%240java.lang.String"Cmage.server.util.ConfigWrapper#getMailgunDomain()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailgunDomain()å
+â
+
+È È(M
+%241java.lang.String"__concat*-
+
+È È(1
+Config - mailgun domain  : *(
+
+È4 È(M
+
+%240java.lang.String„‡
+
+È È(N
+%242void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%239org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%241java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Í Í(
+%243org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""»≈
+
+Í4 Í(L
+%244java.lang.String"Bmage.server.util.ConfigWrapper#getMailSmtpHost()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailSmtpHost()å
+â
+
+Í Í(L
+%245java.lang.String"__concat*-
+
+Í Í(1
+Config - mail smtp Host  : *(
+
+Í4 Í(L
+
+%244java.lang.String„‡
+
+Í Í(M
+%246void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%243org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%245java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Î Î(
+%247org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""»≈
+
+Î4 Î(L
+%248java.lang.String"Bmage.server.util.ConfigWrapper#getMailSmtpPort()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailSmtpPort()å
+â
+
+Î Î(L
+%249java.lang.String"__concat*-
+
+Î Î(1
+Config - mail smtpPort   : *(
+
+Î4 Î(L
+
+%248java.lang.String„‡
+
+Î Î(M
+%250void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%247org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%249java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ï Ï(
+%251org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¿Ω
+
+Ï4 Ï(H
+%252java.lang.String">mage.server.util.ConfigWrapper#getMailUser()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailUser()å
+â
+
+Ï Ï(H
+%253java.lang.String"__concat*-
+
+Ï Ï(1
+Config - mail user       : *(
+
+Ï4 Ï(H
+
+%252java.lang.String„‡
+
+Ï Ï(I
+%254void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%251org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%253java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ì Ì(
+%255org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""»≈
+
+Ì4 Ì(L
+%256java.lang.String"Bmage.server.util.ConfigWrapper#getMailPassword()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailPassword()yw
+
+Ì4 Ì(U
+%257int"java.lang.String#length()I*6
+
+__unknown_file (
+
+%256java.lang.String2length()~
+|
+
+Ì Ì(U
+%258java.lang.String"__concat*-
+
+Ì Ì(1
+Config - mail passw. len.: *
+
+Ì4 Ì(U
+
+%257int„‡
+
+Ì Ì(V
+%259void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%255org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%258java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ó Ó(
+%260org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ŒÀ
+
+Ó4 Ó(O
+%261java.lang.String"Emage.server.util.ConfigWrapper#getMailFromAddress()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMailFromAddress()å
+â
+
+Ó Ó(O
+%262java.lang.String"__concat*-
+
+Ó Ó(1
+Config - mail from addre.: *(
+
+Ó4 Ó(O
+
+%261java.lang.String„‡
+
+Ó Ó(P
+%263void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%260org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%262java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ô Ô(
+%264org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+"" «
+
+Ô4 Ô(M
+%265java.lang.String"Cmage.server.util.ConfigWrapper#getGoogleAccount()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getGoogleAccount()å
+â
+
+Ô Ô(M
+%266java.lang.String"__concat*-
+
+Ô Ô(1
+Config - google account  : *(
+
+Ô4 Ô(M
+
+%265java.lang.String„‡
+
+Ô Ô(N
+%267void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%264org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%266java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ò Ò(
+%268org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""o
+m
+
+Ò Ò(5
+%269java.lang.String"__concat*%
+
+Ò Ò()
+Loaded game types: *
+
+Ò, Ò(5
+""|
+z
+
+Ò Ú( 
+%270java.lang.String"__concat*(
+
+Ò Ò(5
+
+%269java.lang.String*
+
+Ú Ú( 
+, tourneys: r
+p
+
+Ò Ú(/
+%271java.lang.String"__concat*(
+
+Ò Ú( 
+
+%270java.lang.String*
+
+Ú# Ú(/
+""{
+y
+
+Ò Û(
+%272java.lang.String"__concat*(
+
+Ò Ú(/
+
+%271java.lang.String*
+
+Û Û(
+, players: r
+p
+
+Ò Û(-
+%273java.lang.String"__concat*(
+
+Ò Û(
+
+%272java.lang.String*
+
+Û" Û(-
+""y
+w
+
+Ò Ù(
+%274java.lang.String"__concat*(
+
+Ò Û(-
+
+%273java.lang.String*
+
+Ù Ù(
+	, cubes: r
+p
+
+Ò Ù()
+%275java.lang.String"__concat*(
+
+Ò Ù(
+
+%274java.lang.String*
+
+Ù  Ù()
+""y
+w
+
+Ò ı(
+%276java.lang.String"__concat*(
+
+Ò Ù()
+
+%275java.lang.String*
+
+ı ı(
+	, decks: r
+p
+
+Ò ı()
+%277java.lang.String"__concat*(
+
+Ò ı(
+
+%276java.lang.String*
+
+ı  ı()
+""„‡
+
+Ò ı(*
+%278void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%268org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%277java.lang.String2info(Ljava/lang/Object;)*
+18
+19*≈
+65
+ë( ë(+¨©
+
+ë( ë(5
+%79java.util.List"6mage.server.ExtensionPackage#getSets()Ljava/util/List;*A
+
+__unknown_file (%
+#
+pkgmage.server.ExtensionPackage2	getSets()*
+63*~
+21
+Ác Á(jf
+d
+
+Ác Á(j
+%230java.lang.String"__id*6
+
+__unknown_file (
+
+%232java.lang.String*
+20*~
+22
+ÁZ Á(`f
+d
+
+ÁZ Á(`
+%230java.lang.String"__id*6
+
+__unknown_file (
+
+%231java.lang.String*
+20*ÿ
+67
+è è(X
+V
+
+è è(
+%77org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Â‚
+
+è è(5
+%78void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%77org.apache.log4j.Logger*:
+
+__unknown_file (
+Registering custom sets...2info(Ljava/lang/Object;)*
+61*˜"
+23
+‡ ‡(eå
+â
+
+‡ ‡(e
+%202java.lang.String"__concat*-
+
+‡ ‡(1
+Config - save game active: *(
+
+‡4 ‡(e
+
+%199java.lang.String„‡
+
+‡ ‡(f
+%203void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%197org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%202java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+· ·(
+%204org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""®•
+
+·4 ·(K
+%205int"0mage.server.util.ConfigWrapper#getBacklogSize()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getBacklogSize()~
+|
+
+· ·(K
+%206java.lang.String"__concat*-
+
+· ·(1
+Config - backlog size    : *
+
+·4 ·(K
+
+%205int„‡
+
+· ·(L
+%207void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%204org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%206java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+‚ ‚(
+%208org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""®•
+
+‚4 ‚(K
+%209int"0mage.server.util.ConfigWrapper#getLeasePeriod()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getLeasePeriod()~
+|
+
+‚ ‚(K
+%210java.lang.String"__concat*-
+
+‚ ‚(1
+Config - lease period    : *
+
+‚4 ‚(K
+
+%209int„‡
+
+‚ ‚(L
+%211void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%208org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%210java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+„ „(
+%212org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""∂≥
+
+„4 „(R
+%213int"7mage.server.util.ConfigWrapper#getSocketWriteTimeout()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getSocketWriteTimeout()~
+|
+
+„ „(R
+%214java.lang.String"__concat*-
+
+„ „(1
+Config - sock wrt timeout: *
+
+„4 „(R
+
+%213int„‡
+
+„ „(S
+%215void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%212org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%214java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+‰ ‰(
+%216org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""®•
+
+‰4 ‰(K
+%217int"0mage.server.util.ConfigWrapper#getMaxPoolSize()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getMaxPoolSize()~
+|
+
+‰ ‰(K
+%218java.lang.String"__concat*-
+
+‰ ‰(1
+Config - max pool size   : *
+
+‰4 ‰(K
+
+%217int„‡
+
+‰ ‰(L
+%219void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%216org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%218java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Â Â(
+%220org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""≤Ø
+
+Â4 Â(P
+%221int"5mage.server.util.ConfigWrapper#getNumAcceptThreads()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getNumAcceptThreads()~
+|
+
+Â Â(P
+%222java.lang.String"__concat*-
+
+Â Â(1
+Config - num accp.threads: *
+
+Â4 Â(P
+
+%221int„‡
+
+Â Â(Q
+%223void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%220org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%222java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Ê Ê(
+%224org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¥±
+
+Ê4 Ê(Q
+%225int"6mage.server.util.ConfigWrapper#getSecondaryBindPort()I*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2getSecondaryBindPort()~
+|
+
+Ê Ê(Q
+%226java.lang.String"__concat*-
+
+Ê Ê(1
+Config - second.bind port: *
+
+Ê4 Ê(Q
+
+%225int„‡
+
+Ê Ê(R
+%227void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%224org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%226java.lang.String2info(Ljava/lang/Object;)Y
+W
+
+Á Á(
+%228org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Á5 Á(W
+%229java.lang.Boolean"Mmage.server.util.ConfigWrapper#isAuthenticationActivated()Ljava/lang/Boolean;*F
+
+__unknown_file (*
+(
+configmage.server.util.ConfigWrapper2isAuthenticationActivated()*
+21
+22:&
+S S()
+argsjava.lang.String[]B"
+mage.server.MainH

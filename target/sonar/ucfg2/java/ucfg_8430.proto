@@ -1,0 +1,332 @@
+
+°mage.abilities.costs.common.CyclingDiscardCost#pay(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZLmage/abilities/costs/Cost;)Zq
+gD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/CyclingDiscardCost.java" "("startingBlock*È
+2*9 *(=GE
+*% *(8
+%11mage.MageObjectReference"mage.MageObjectReferenceÖ
+Ç
+*! *(D
+%12"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*=
+
+__unknown_file (!
+
+%11mage.MageObjectReference*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Gameî
+ë
+* *(D@0
+.mage.abilities.costs.common.CyclingDiscardCost"
+
+cycledCard"__id*=
+
+__unknown_file (!
+
+%11mage.MageObjectReferencec
+a
++6 +(I+
+%13$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
++6 +(U+
+%14$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ãà
++W +(c
+%15java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()óî
++m +(~
+%16java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getOwnerId()É
+Ä
++# +(!
+%17mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%14$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%15java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%16java.util.UUIDÙÒ
+	+ +(Ä
+%18void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%17mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)*
+1*ƒ
+3' '(b
+`
+'2 '(E*
+%4$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""b
+`
+'2 '(P*
+%5$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""äá
+'R '(^
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()ñì
+'h '(y
+%7java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getOwnerId()ˇ
+¸
+' '(z 
+%8mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*H
+
+__unknown_file (,
+*
+%5$mage.game.events.GameEvent$EventType*2
+
+__unknown_file (
+
+%6java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%7java.util.UUIDÒÓ
+' '({
+
+%9void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+%8mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)»≈
+( ((?
+%10boolean"Xmage.players.Player#discard(Lmage/cards/Card;ZLmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card* 
+
+__unknown_file (2*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Cdiscard(Lmage/cards/Card;ZLmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*ˆ	
+startingBlock" "(uï
+í
+! !(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+" "(&!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%19ä
+á
+! !(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+"- "(1
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20î
+ë
+! !(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+"; "(A 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21í
+è
+! !(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+"H "(T
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%22ö
+ó
+! !(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Costg
+e
+"k "(t&
+	costToPaymage.abilities.costs.Cost"__annotation*#
+
+__unknown_file (
+
+%23*
+5*˙
+4% %(ûõ
+% %((
+%1mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*;
+
+__unknown_file (
+
+playermage.players.Player2	getHand()®•
+%- %(A
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()¥±
+% %(H
+%3mage.cards.Card"Gmage.cards.Cards#get(Ljava/util/UUID;Lmage/game/Game;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+%1mage.cards.Cards*2
+
+__unknown_file (
+
+%2java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2%get(Ljava/util/UUID;Lmage/game/Game;)`
+^
+% %(I
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+3
+1*˛
+5# #(˙˜
+# #(4
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+# #(5
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Player*
+4
+1*!
+1/ /("
+/ /(
+"":-
+" "('!
+abilitymage.abilities.Ability:"
+"( "(2
+gamemage.game.Game:,
+"3 "(B 
+sourcemage.abilities.Ability:*
+"C "(U
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"":2
+"f "(t&
+	costToPaymage.abilities.costs.CostB20
+.mage.abilities.costs.common.CyclingDiscardCostHP

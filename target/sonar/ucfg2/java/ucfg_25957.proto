@@ -1,0 +1,2395 @@
+
+fmage.server.ChatManagerImpl#performUserCommand(Lmage/server/User;Ljava/lang/String;Ljava/util/UUID;Z)Zg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/ChatManagerImpl.javaª ª(&"67*Ò
+24
+ç ç(‘—
+
+ç ç('
+%107boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*%
+
+__unknown_file (	
+CARD 2startsWith(Ljava/lang/String;)*
+15
+23*&
+25
+ã ã("
+
+ã ã(
+""*Ü
+26
+ˇ ˇ(:V
+T
+
+ˇ ˇ(:
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ë
+é
+
+ˇ ˇ(:
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%98java.util.Set*"
+
+__unknown_file (
+""*
+25
+29*ó	
+27
+É  É('»≈
+
+É+ É(D
+%102java.lang.String"@mage.server.game.GameController#getPingsInfo()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+
+controllermage.server.game.GameController2getPingsInfo()ä
+á
+
+É  É(D
+%103java.lang.String"__concat*+
+
+É+ É(D
+
+messagejava.lang.String*(
+
+É+ É(D
+
+%102java.lang.Stringi
+g
+
+É  É(D
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%103java.lang.Stringî
+ë
+
+Ñ  Ñ(,.
+%104&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+Ñ  Ñ(8
+%105mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%104&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUID·ﬁ
+
+Ñ  Ñ([
+%106boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%105mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)*
+26*›
+28
+Å8 Å(=≤Ø
+
+Å8 Å(H'
+%101mage.server.game.GameController"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ã
+à
+
+Å Å(I-
+
+controllermage.server.game.GameController"__id*E
+
+__unknown_file ()
+'
+%101mage.server.game.GameController*
+26
+27*ç
+29
+Ä Ä(!úô
+
+Ä Ä(*
+%99java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()—Œ
+
+Ä Ä(5
+%100boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%99java.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID2equals(Ljava/lang/Object;)*
+26
+28*Ó
+30
+ˇ= ˇ(Kí
+è
+
+ˇ= ˇ(K*
+%95#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryÊ„
+
+ˇ= ˇ(Y'
+%96 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%95#mage.server.managers.ManagerFactory2gameManager()∆√
+
+ˇ= ˇ(m
+%97java.util.Map"Cmage.server.managers.GameManager#getGameController()Ljava/util/Map;*E
+
+__unknown_file ()
+'
+%96 mage.server.managers.GameManager2getGameController()éã
+
+ˇ= ˇ(x
+%98java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%97java.util.Map2
+entrySet()*
+26*å
+31
+˛ ˛("√¿
+
+˛8 ˛(K
+%93java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*8
+
+__unknown_file (
+
+gameIdjava.lang.String* 
+
+__unknown_file (22substring(I)Ã
+…
+
+˛ ˛(L
+%94java.util.UUID"=java.util.UUID#fromString(Ljava/lang/String;)Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUID*5
+
+__unknown_file (
+
+%93java.lang.String_
+]
+
+˛ ˛(M
+idjava.util.UUID"__id*3
+
+__unknown_file (
+
+%94java.util.UUID*
+30*Ö
+32
+¸  ¸('™ß
+
+¸  ¸(1
+%91java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()g
+e
+
+¸ ¸(2
+gameIdjava.lang.String"__id*5
+
+__unknown_file (
+
+%91java.lang.String“œ
+
+˝ ˝(.
+%92boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*8
+
+__unknown_file (
+
+gameIdjava.lang.String*%
+
+__unknown_file (	
+Game 2startsWith(Ljava/lang/String;)*
+25
+31*«
+33
+˚# ˚(*™ß
+
+˚# ˚(4
+%90java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()*
+25
+32*Ã
+34
+˘ ˘(w
+u
+
+˘ ˘(
+%87java.lang.String"__concat*+
+
+˘ ˘(
+
+messagejava.lang.String*
+
+˘ ˘(	
+<br/>h
+f
+
+˘ ˘(
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%87java.lang.Stringì
+ê
+
+˙" ˙(.-
+%88&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+˙" ˙(:
+%89mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%88&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDv
+t
+
+˙ ˙(;"
+sessionmage.server.ChatSession"__id*<
+
+__unknown_file ( 
+
+%89mage.server.ChatSession*
+25
+33*Ë
+35
+¯ ¯(À»
+
+¯ ¯(#
+%86boolean",java.lang.String#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*%
+
+__unknown_file (	
+PINGS2equals(Ljava/lang/Object;)*
+24
+34*&
+36
+ˆ ˆ("
+
+ˆ ˆ(
+""*Ü
+37
+Í Í(:V
+T
+
+Í Í(:
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ë
+é
+
+Í Í(:
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%77java.util.Set*"
+
+__unknown_file (
+""*
+36
+40*Ú	
+38
+Ó  Ó('´®
+
+Ó+ Ó(L
+%81java.lang.String"Vmage.server.game.GameController#attemptToFixGame(Lmage/server/User;)Ljava/lang/String;*K
+
+__unknown_file (/
+-
+
+controllermage.server.game.GameController*6
+
+__unknown_file (
+
+usermage.server.User2$attemptToFixGame(Lmage/server/User;)à
+Ö
+
+Ó  Ó(L
+%82java.lang.String"__concat*+
+
+Ó+ Ó(L
+
+messagejava.lang.String*'
+
+Ó+ Ó(L
+
+%81java.lang.Stringh
+f
+
+Ó  Ó(L
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%82java.lang.Stringì
+ê
+
+Ô  Ô(,-
+%83&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+Ô  Ô(8
+%84mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%83&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDﬂ‹
+
+Ô  Ô([
+%85boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+
+%84mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)*
+37*€
+39
+Ï8 Ï(=±Æ
+
+Ï8 Ï(H&
+%80mage.server.game.GameController"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ä
+á
+
+Ï Ï(I-
+
+controllermage.server.game.GameController"__id*D
+
+__unknown_file ((
+&
+%80mage.server.game.GameController*
+37
+38*å
+40
+Î Î(!úô
+
+Î Î(*
+%78java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()–Õ
+
+Î Î(5
+%79boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%78java.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID2equals(Ljava/lang/Object;)*
+37
+39*Ó
+41
+Í= Í(Kí
+è
+
+Í= Í(K*
+%74#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryÊ„
+
+Í= Í(Y'
+%75 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%74#mage.server.managers.ManagerFactory2gameManager()∆√
+
+Í= Í(m
+%76java.util.Map"Cmage.server.managers.GameManager#getGameController()Ljava/util/Map;*E
+
+__unknown_file ()
+'
+%75 mage.server.managers.GameManager2getGameController()éã
+
+Í= Í(x
+%77java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%76java.util.Map2
+entrySet()*
+37*å
+42
+È È("√¿
+
+È8 È(K
+%72java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*8
+
+__unknown_file (
+
+gameIdjava.lang.String* 
+
+__unknown_file (22substring(I)Ã
+…
+
+È È(L
+%73java.util.UUID"=java.util.UUID#fromString(Ljava/lang/String;)Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUID*5
+
+__unknown_file (
+
+%72java.lang.String_
+]
+
+È È(M
+idjava.util.UUID"__id*3
+
+__unknown_file (
+
+%73java.util.UUID*
+41*Ö
+43
+Á  Á('™ß
+
+Á  Á(1
+%70java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()g
+e
+
+Á Á(2
+gameIdjava.lang.String"__id*5
+
+__unknown_file (
+
+%70java.lang.String“œ
+
+Ë Ë(.
+%71boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*8
+
+__unknown_file (
+
+gameIdjava.lang.String*%
+
+__unknown_file (	
+Game 2startsWith(Ljava/lang/String;)*
+36
+42*«
+44
+Ê# Ê(*™ß
+
+Ê# Ê(4
+%69java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()*
+36
+43*Ã
+45
+‰ ‰(w
+u
+
+‰ ‰(
+%66java.lang.String"__concat*+
+
+‰ ‰(
+
+messagejava.lang.String*
+
+‰ ‰(	
+<br/>h
+f
+
+‰ ‰(
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%66java.lang.Stringì
+ê
+
+Â" Â(.-
+%67&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+Â" Â(:
+%68mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%67&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDv
+t
+
+Â Â(;"
+sessionmage.server.ChatSession"__id*<
+
+__unknown_file ( 
+
+%68mage.server.ChatSession*
+36
+44*Ó
+46
+„ „(—Œ
+
+„ „(%
+%65boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*#
+
+__unknown_file (
+FIX2startsWith(Ljava/lang/String;)*
+35
+45*&
+47
+· ·("
+
+· ·(
+""*Ü
+48
+’ ’(:V
+T
+
+’ ’(:
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ë
+é
+
+’ ’(:
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%56java.util.Set*"
+
+__unknown_file (
+""*
+47
+51*¶	
+49
+Ÿ  Ÿ('ﬂ‹
+
+Ÿ+ Ÿ(P
+%60java.lang.String"Lmage.server.game.GameController#getGameStateDebugMessage()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+
+controllermage.server.game.GameController2getGameStateDebugMessage()à
+Ö
+
+Ÿ  Ÿ(P
+%61java.lang.String"__concat*+
+
+Ÿ+ Ÿ(P
+
+messagejava.lang.String*'
+
+Ÿ+ Ÿ(P
+
+%60java.lang.Stringh
+f
+
+Ÿ  Ÿ(P
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%61java.lang.Stringì
+ê
+
+⁄  ⁄(,-
+%62&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+⁄  ⁄(8
+%63mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%62&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDﬂ‹
+
+⁄  ⁄([
+%64boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+
+%63mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)*
+48*€
+50
+◊8 ◊(=±Æ
+
+◊8 ◊(H&
+%59mage.server.game.GameController"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ä
+á
+
+◊ ◊(I-
+
+controllermage.server.game.GameController"__id*D
+
+__unknown_file ((
+&
+%59mage.server.game.GameController*
+48
+49*å
+51
+÷ ÷(!úô
+
+÷ ÷(*
+%57java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()–Õ
+
+÷ ÷(5
+%58boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%57java.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID2equals(Ljava/lang/Object;)*
+48
+50*Ó
+52
+’= ’(Kí
+è
+
+’= ’(K*
+%53#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryÊ„
+
+’= ’(Y'
+%54 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%53#mage.server.managers.ManagerFactory2gameManager()∆√
+
+’= ’(m
+%55java.util.Map"Cmage.server.managers.GameManager#getGameController()Ljava/util/Map;*E
+
+__unknown_file ()
+'
+%54 mage.server.managers.GameManager2getGameController()éã
+
+’= ’(x
+%56java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%55java.util.Map2
+entrySet()*
+48*å
+53
+‘ ‘("√¿
+
+‘8 ‘(K
+%51java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*8
+
+__unknown_file (
+
+gameIdjava.lang.String* 
+
+__unknown_file (22substring(I)Ã
+…
+
+‘ ‘(L
+%52java.util.UUID"=java.util.UUID#fromString(Ljava/lang/String;)Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUID*5
+
+__unknown_file (
+
+%51java.lang.String_
+]
+
+‘ ‘(M
+idjava.util.UUID"__id*3
+
+__unknown_file (
+
+%52java.util.UUID*
+52*Ö
+54
+“  “('™ß
+
+“  “(1
+%49java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()g
+e
+
+“ “(2
+gameIdjava.lang.String"__id*5
+
+__unknown_file (
+
+%49java.lang.String“œ
+
+” ”(.
+%50boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*8
+
+__unknown_file (
+
+gameIdjava.lang.String*%
+
+__unknown_file (	
+Game 2startsWith(Ljava/lang/String;)*
+47
+53*ı
+10
+° °(MŒÀ
+
+° °(M
+%142java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*9
+
+__unknown_file (
+
+messagejava.lang.String*)
+
+__unknown_file (
+
+%139int2substring(I)f
+d
+
+° °(N
+restjava.lang.String"__id*6
+
+__unknown_file (
+
+%142java.lang.String°û
+
+¢ ¢()
+%143int"java.lang.String#indexOf(I)I*6
+
+__unknown_file (
+
+restjava.lang.String*!
+
+__unknown_file (
+ 2
+indexOf(I)*
+4
+9*«
+55
+—# —(*™ß
+
+—# —(4
+%48java.lang.String"3mage.server.ChatSession#getInfo()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+sessionmage.server.ChatSession2	getInfo()*
+47
+54*d
+11
+°K °(LL
+J
+
+°K °(L
+%139int"__id*)
+
+__unknown_file (
+
+%141int*
+10*Ã
+56
+œ œ(w
+u
+
+œ œ(
+%45java.lang.String"__concat*+
+
+œ œ(
+
+messagejava.lang.String*
+
+œ œ(	
+<br/>h
+f
+
+œ œ(
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%45java.lang.Stringì
+ê
+
+–" –(.-
+%46&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+–" –(:
+%47mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%46&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDv
+t
+
+– –(;"
+sessionmage.server.ChatSession"__id*<
+
+__unknown_file ( 
+
+%47mage.server.ChatSession*
+47
+55*d
+12
+°G °(HL
+J
+
+°G °(H
+%139int"__id*)
+
+__unknown_file (
+
+%140int*
+10*Ô
+57
+Œ Œ(“œ
+
+Œ Œ(&
+%44boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*$
+
+__unknown_file (
+GAME2startsWith(Ljava/lang/String;)*
+46
+56*Ó
+13
+° °(!—Œ
+
+°, °(D
+%138boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*"
+
+__unknown_file (
+W 2startsWith(Ljava/lang/String;)*
+11
+12*á
+58
+   (í
+è
+
+ !  (/*
+%35#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryÊ„
+
+ !  (='
+%36 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%35#mage.server.managers.ManagerFactory2userManager()ôñ
+
+ M  ([
+%37java.lang.String",mage.server.User#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getName()°û
+
+ !  (\
+%38java.lang.String"Umage.server.managers.UserManager#getUserHistory(Ljava/lang/String;)Ljava/lang/String;*E
+
+__unknown_file ()
+'
+%36 mage.server.managers.UserManager*5
+
+__unknown_file (
+
+%37java.lang.String2"getUserHistory(Ljava/lang/String;)s
+q
+
+   (\
+%39java.lang.String"__concat*
+
+   (	
+<br/>*'
+
+ !  (\
+
+%38java.lang.Stringà
+Ö
+
+   (\
+%40java.lang.String"__concat*+
+
+   (\
+
+messagejava.lang.String*'
+
+   (\
+
+%39java.lang.Stringh
+f
+
+   (\
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%40java.lang.Stringì
+ê
+
+À À(-
+%41&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+À À($
+%42mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%41&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDﬂ‹
+
+À À(G
+%43boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+
+%42mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)"
+
+Ã Ã(
+""*Û
+14
+†( †(/◊‘
+
+†( †(F
+%137boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*(
+
+__unknown_file (
+
+WHISPER 2startsWith(Ljava/lang/String;)*
+13
+4*Â
+59
+… …(»≈
+
+… …( 
+%34boolean",java.lang.String#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*"
+
+__unknown_file (
+ME2equals(Ljava/lang/Object;)*
+57
+58*Ó
+15
+† †(—Œ
+
+† †($
+%136boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*"
+
+__unknown_file (
+W 2startsWith(Ljava/lang/String;)*
+13
+14*‰
+16
+ù ù(î
+ë
+
+ù ù(.
+%133&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+ù ù($
+%134mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%133&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUID·ﬁ
+
+ù ù(G
+%135boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%134mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)"
+
+û û(
+""*à
+17
+ô ô(/Ñ
+Å
+
+ô ô(:
+%132java.lang.String"__concat*!
+
+ô ô(/
+Couldn't find: *,
+
+ô2 ô(:
+
+cardNamejava.lang.Stringi
+g
+
+ô ô(:
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%132java.lang.String*
+16*Ä
+18
+ï ï($R
+P
+
+ï ï($
+rulejava.lang.String"__id*"
+
+__unknown_file (
+""è
+å
+
+ï ï($
+rulejava.lang.String"
+__arrayGet*4
+
+__unknown_file (
+
+%130java.util.List*"
+
+__unknown_file (
+""*
+16
+19*é
+19
+ñ" ñ()ä
+á
+
+ñ" ñ(0
+%131java.lang.String"__concat*+
+
+ñ" ñ()
+
+messagejava.lang.String*(
+
+ñ, ñ(0
+
+rulejava.lang.Stringi
+g
+
+ñ ñ(0
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%131java.lang.String*
+18*%
+1
+π π("
+
+π π(
+""*Ì
+2
+¥ ¥(©
+¶
+
+¥ ¥($
+%175java.lang.String"__id*˜
+
+__unknown_file (⁄◊
+‘<br/>List of commands:<br/>\history or \h [username] - shows the history of a player<br/>\me - shows the history of the current player<br/>\list or \l - Show a list of commands<br/>\whisper or \w [player name] [text] - whisper to the player with the given name<br/>\card Card Name - Print oracle text for card<br/>[Card Name] - Show a highlighted card name<br/>\ignore - shows your ignore list on this server.<br/>\ignore [username] - add username to ignore list (they won't be able to chat or join to your game).<br/>\unignore [username] - remove a username from your ignore list on this server.ä
+á
+
+¥ ¥($
+%176java.lang.String"__concat*+
+
+¥ ¥($
+
+messagejava.lang.String*(
+
+¥ ¥($
+
+%175java.lang.Stringi
+g
+
+¥ ¥($
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%176java.lang.Stringöó
+
+µ< µ(J
+%177java.lang.String",mage.server.User#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getName()ë
+é
+
+µ µ(J
+%178java.lang.String"__concat*2
+
+µ µ(9$"
+ <br/>Type <font color=green>\\w *(
+
+µ< µ(J
+
+%177java.lang.String∂
+≥
+µ µ(í
+%179java.lang.String"__concat*(
+
+µ µ(J
+
+%178java.lang.String*V
+µM µ(íGE
+C profanity 0 (or 1 or 2)</font> to use/not use the profanity filterç
+ä
+µ µ(í
+%180java.lang.String"__concat*,
+µ µ(í
+
+messagejava.lang.String*)
+µ µ(í
+
+%179java.lang.Stringj
+h
+µ µ(í
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%180java.lang.Stringî
+ë
+
+∂ ∂(.
+%181&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+∂ ∂($
+%182mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%181&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUID·ﬁ
+
+∂ ∂(G
+%183boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%182mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)"
+
+∑ ∑(
+""*Â
+3
+≥# ≥(*À»
+
+≥# ≥(9
+%174boolean",java.lang.String#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*$
+
+__unknown_file (
+LIST2equals(Ljava/lang/Object;)*
+2
+1*‚
+4
+≥ ≥(»≈
+
+≥ ≥(
+%173boolean",java.lang.String#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*!
+
+__unknown_file (
+L2equals(Ljava/lang/Object;)*
+2
+3*%
+5
+∞ ∞("
+
+∞ ∞(
+""*õ
+6
+≠ ≠(HF
+
+≠# ≠(0
+%164java.lang.StringBuilder"java.lang.StringBuilder∑
+¥
+
+≠ ≠(>
+%165"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%164java.lang.StringBuilder**
+
+__unknown_file (
+
+<br/>User ñì
+
+≠ ≠(Q
+%166java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%164java.lang.StringBuilder*<
+
+__unknown_file ( 
+
+
+userToNamejava.lang.String2append(Ljava/lang/String;)ÑÅ
+
+≠ ≠(f
+%167java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%166java.lang.StringBuilder**
+
+__unknown_file (
+
+ not found2append(Ljava/lang/String;)™ß
+
+≠ ≠(q
+%168java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*=
+
+__unknown_file (!
+
+%167java.lang.StringBuilder2
+toString()ä
+á
+
+≠ ≠(q
+%169java.lang.String"__concat*+
+
+≠ ≠(q
+
+messagejava.lang.String*(
+
+≠ ≠(q
+
+%168java.lang.Stringi
+g
+
+≠ ≠(q
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%169java.lang.Stringî
+ë
+
+Æ Æ( .
+%170&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+Æ Æ(,
+%171mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%170&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUID·ﬁ
+
+Æ Æ(O
+%172boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%171mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)*
+5*õ
+7
+© ©(HF
+
+©' ©(4
+%155java.lang.StringBuilder"java.lang.StringBuilder∑
+¥
+
+©# ©(B
+%156"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%155java.lang.StringBuilder**
+
+__unknown_file (
+
+<br/>User ñì
+
+©# ©(U
+%157java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%155java.lang.StringBuilder*<
+
+__unknown_file ( 
+
+
+userToNamejava.lang.String2append(Ljava/lang/String;)ÑÅ
+
+©# ©(j
+%158java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%157java.lang.StringBuilder**
+
+__unknown_file (
+
+ not found2append(Ljava/lang/String;)™ß
+
+©# ©(u
+%159java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*=
+
+__unknown_file (!
+
+%158java.lang.StringBuilder2
+toString()ä
+á
+
+© ©(u
+%160java.lang.String"__concat*+
+
+©# ©(u
+
+messagejava.lang.String*(
+
+©# ©(u
+
+%159java.lang.Stringi
+g
+
+© ©(u
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%160java.lang.Stringî
+ë
+
+™ ™($.
+%161&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+™ ™(0
+%162mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%161&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUID·ﬁ
+
+™ ™(S
+%163boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%162mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)*
+5*œ
+8
+® ®(%î
+ë
+
+® ®(%.
+%151&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessions¿
+Ω
+
+® ®(1
+%152mage.server.ChatSession"__mapGet*L
+
+__unknown_file (0
+.
+%151&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDòï
+
+®O ®([
+%153mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*:
+
+__unknown_file (
+
+userTojava.util.Optional2get()¿Ω
+
+® ®(b
+%154boolean"gmage.server.ChatSession#broadcastWhisperToUser(Lmage/server/User;Lmage/server/User;Ljava/lang/String;)Z*=
+
+__unknown_file (!
+
+%152mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*6
+
+__unknown_file (
+
+%153mage.server.User*6
+
+__unknown_file (
+
+restjava.lang.String2NbroadcastWhisperToUser(Lmage/server/User;Lmage/server/User;Ljava/lang/String;)*
+5
+7*ﬂ
+9
+§$ §((Ê„
+
+§$ §(<
+%144java.lang.String"0java.lang.String#substring(II)Ljava/lang/String;*6
+
+__unknown_file (
+
+restjava.lang.String*
+
+__unknown_file (2 *"
+
+__unknown_file (
+""2substring(II)l
+j
+
+§ §(=
+
+userToNamejava.lang.String"__id*6
+
+__unknown_file (
+
+%144java.lang.Stringƒ¡
+
+• •(0
+%145java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*6
+
+__unknown_file (
+
+restjava.lang.String*"
+
+__unknown_file (
+""2substring(I)îë
+
+• •(7
+%146java.lang.String")java.lang.String#trim()Ljava/lang/String;*6
+
+__unknown_file (
+
+%145java.lang.String2trim()f
+d
+
+• •(7
+restjava.lang.String"__id*6
+
+__unknown_file (
+
+%146java.lang.Stringì
+ê
+
+¶( ¶(6+
+%147#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryËÂ
+
+¶( ¶(D(
+%148 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*I
+
+__unknown_file (-
++
+%147#mage.server.managers.ManagerFactory2userManager()¨©
+
+¶( ¶(^
+%149java.util.Optional"Vmage.server.managers.UserManager#getUserByName(Ljava/lang/String;)Ljava/util/Optional;*F
+
+__unknown_file (*
+(
+%148 mage.server.managers.UserManager*<
+
+__unknown_file ( 
+
+
+userToNamejava.lang.String2!getUserByName(Ljava/lang/String;)l
+j
+
+¶ ¶(_
+userTojava.util.Optional"__id*8
+
+__unknown_file (
+
+%149java.util.Optionaläá
+
+ß ß(&
+%150boolean"java.util.Optional#isPresent()Z*:
+
+__unknown_file (
+
+userTojava.util.Optional2isPresent()*
+6
+8*≈
+60≈M ≈(ÄÕ 
+≈M ≈(Ä
+%27java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*9
+
+__unknown_file (
+
+messagejava.lang.String*(
+
+__unknown_file (
+
+
+%24int2substring(I)¢ü
+≈! ≈(Å
+%28java.lang.String"Umage.server.managers.UserManager#getUserHistory(Ljava/lang/String;)Ljava/lang/String;*E
+
+__unknown_file ()
+'
+%22 mage.server.managers.UserManager*5
+
+__unknown_file (
+
+%27java.lang.String2"getUserHistory(Ljava/lang/String;)u
+s
+≈ ≈(Å
+%29java.lang.String"__concat*
+
+≈ ≈(	
+<br/>*(
+≈! ≈(Å
+
+%28java.lang.Stringã
+à
+≈ ≈(Å
+%30java.lang.String"__concat*,
+≈ ≈(Å
+
+messagejava.lang.String*(
+≈ ≈(Å
+
+%29java.lang.Stringi
+g
+≈ ≈(Å
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%30java.lang.Stringì
+ê
+
+∆ ∆(-
+%31&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+∆ ∆($
+%32mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%31&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDﬂ‹
+
+∆ ∆(G
+%33boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+
+%32mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)"
+
+« «(
+""*b
+61
+≈~ ≈(J
+H
+
+≈~ ≈(
+
+%24int"__id*(
+
+__unknown_file (
+
+
+%26int*
+60*b
+62
+≈z ≈({J
+H
+
+≈z ≈({
+
+%24int"__id*(
+
+__unknown_file (
+
+
+%25int*
+60*Î
+63
+≈ ≈(í
+è
+
+≈! ≈(/*
+%21#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.ChatManagerImpl"
+managerFactoryÊ„
+
+≈! ≈(='
+%22 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%21#mage.server.managers.ManagerFactory2userManager()–Õ
+
+≈_ ≈(w
+%23boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*"
+
+__unknown_file (
+H 2startsWith(Ljava/lang/String;)*
+61
+62*Û
+64
+ƒ( ƒ(/÷”
+
+ƒ( ƒ(F
+%20boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*(
+
+__unknown_file (
+
+HISTORY 2startsWith(Ljava/lang/String;)*
+59
+63*—
+20
+ï' ï(/∏µ
+
+ï' ï(:
+%130java.util.List"9mage.cards.repository.CardInfo#getRules()Ljava/util/List;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2
+getRules()*
+18*Ì
+65
+ƒ ƒ(–Õ
+
+ƒ ƒ($
+%19boolean"0java.lang.String#startsWith(Ljava/lang/String;)Z*9
+
+__unknown_file (
+
+commandjava.lang.String*"
+
+__unknown_file (
+H 2startsWith(Ljava/lang/String;)*
+63
+64*›
+21
+ì ì(∏µ
+
+ì ì('
+%116java.util.List"9mage.cards.repository.CardInfo#getRules()Ljava/util/List;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2
+getRules()∫∑
+
+î6 î(H
+%117java.lang.String":mage.cards.repository.CardInfo#getName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2	getName()Ñ
+Å
+
+î î(H
+%118java.lang.String"__concat*%
+
+î î(3
+<font color=orange>*(
+
+î6 î(H
+
+%117java.lang.String~
+|
+
+î î([
+%119java.lang.String"__concat*(
+
+î î(H
+
+%118java.lang.String* 
+
+îK î([
+</font>: Cost:n
+l
+ît î(â3
+%120+mage.cards.repository.CardInfo$ManaCostSide"__id*"
+
+__unknown_file (
+""n
+l
+ît î(ç3
+%121+mage.cards.repository.CardInfo$ManaCostSide"__id*"
+
+__unknown_file (
+""ÓÎ
+î^ î(é
+%122java.util.List"jmage.cards.repository.CardInfo#getManaCosts(Lmage/cards/repository/CardInfo$ManaCostSide;)Ljava/util/List;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo*Q
+
+__unknown_file (5
+3
+%121+mage.cards.repository.CardInfo$ManaCostSide2;getManaCosts(Lmage/cards/repository/CardInfo$ManaCostSide;)õò
+î^ î(ô
+%123java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%122java.util.List2
+toString()â
+Ü
+î î(ô
+%124java.lang.String"__concat*(
+
+î î([
+
+%119java.lang.String*)
+î^ î(ô
+
+%123java.lang.String}
+{
+î î(ß
+%125java.lang.String"__concat*)
+î î(ô
+
+%124java.lang.String*
+îú î(ß
+	,  Types:∫∑
+î™ î(Ω
+%126java.util.List"9mage.cards.repository.CardInfo#getTypes()Ljava/util/List;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2
+getTypes()úô
+î™ î(»
+%127java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%126java.util.List2
+toString()ã
+à
+î î(»
+%128java.lang.String"__concat*)
+î î(ß
+
+%125java.lang.String**
+î™ î(»
+
+%127java.lang.Stringv
+t
+î î(œ
+%129java.lang.String"__concat*)
+î î(»
+
+%128java.lang.String*
+îÀ î(œ
+, j
+h
+î î(œ
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%129java.lang.String*
+20*õ
+66
+æ æ(ç
+ä
+
+æ) æ(P
+%4java.lang.String"__concat*-
+
+æ) æ(F
+<br/>Invalid User Command '*+
+
+æI æ(P
+
+messagejava.lang.Stringn
+l
+
+æ) æ(W
+%5java.lang.String"__concat*&
+
+æ) æ(P
+
+%4java.lang.String*
+
+æS æ(W
+'.FD
+
+æ æ((
+%6java.lang.StringBuilder"java.lang.StringBuilderΩ
+∫
+
+æ æ(X
+%7"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%6java.lang.StringBuilder*4
+
+__unknown_file (
+
+%5java.lang.Stringß
+§
+
+æ` æ(m
+%8java.lang.String"__id*˜
+
+__unknown_file (⁄◊
+‘<br/>List of commands:<br/>\history or \h [username] - shows the history of a player<br/>\me - shows the history of the current player<br/>\list or \l - Show a list of commands<br/>\whisper or \w [player name] [text] - whisper to the player with the given name<br/>\card Card Name - Print oracle text for card<br/>[Card Name] - Show a highlighted card name<br/>\ignore - shows your ignore list on this server.<br/>\ignore [username] - add username to ignore list (they won't be able to chat or join to your game).<br/>\unignore [username] - remove a username from your ignore list on this server.äá
+
+æ æ(n
+%9java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%6java.lang.StringBuilder*4
+
+__unknown_file (
+
+%8java.lang.String2append(Ljava/lang/String;)ß§
+
+æ æ(y
+%10java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+%9java.lang.StringBuilder2
+toString()à
+Ö
+
+æ æ(y
+%11java.lang.String"__concat*+
+
+æ æ(y
+
+messagejava.lang.String*'
+
+æ æ(y
+
+%10java.lang.Stringh
+f
+
+æ æ(y
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.Stringôñ
+
+ø< ø(J
+%12java.lang.String",mage.server.User#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getName()è
+å
+
+ø ø(J
+%13java.lang.String"__concat*2
+
+ø ø(9$"
+ <br/>Type <font color=green>\\w *'
+
+ø< ø(J
+
+%12java.lang.String¥
+±
+ø ø(í
+%14java.lang.String"__concat*'
+
+ø ø(J
+
+%13java.lang.String*V
+øM ø(íGE
+C profanity 0 (or 1 or 2)</font> to use/not use the profanity filterã
+à
+ø ø(í
+%15java.lang.String"__concat*,
+ø ø(í
+
+messagejava.lang.String*(
+ø ø(í
+
+%14java.lang.Stringi
+g
+ø ø(í
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%15java.lang.Stringì
+ê
+
+¿ ¿(-
+%16&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.ChatManagerImpl"
+chatSessionsæ
+ª
+
+¿ ¿($
+%17mage.server.ChatSession"__mapGet*K
+
+__unknown_file (/
+-
+%16&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+chatIdjava.util.UUIDﬂ‹
+
+¿ ¿(G
+%18boolean"Rmage.server.ChatSession#broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+
+%17mage.server.ChatSession*6
+
+__unknown_file (
+
+usermage.server.User*9
+
+__unknown_file (
+
+messagejava.lang.String29broadcastInfoToUser(Lmage/server/User;Ljava/lang/String;)"
+
+¡ ¡(
+""*∫
+22
+ê" ê(.–Õ
+
+ê" ê(7
+%113java.lang.String"2java.util.regex.Matcher#group(I)Ljava/lang/String;*E
+
+__unknown_file ()
+'
+matchPatternjava.util.regex.Matcher* 
+
+__unknown_file (22group(I)j
+h
+
+ê ê(8
+cardNamejava.lang.String"__id*6
+
+__unknown_file (
+
+%113java.lang.Stringf
+d
+
+ë$ ë(;,
+%114$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""ÏÈ
+
+ë$ ë(d&
+%115mage.cards.repository.CardInfo"wmage.cards.repository.CardRepository#findPreferredCoreExpansionCard(Ljava/lang/String;)Lmage/cards/repository/CardInfo;*J
+
+__unknown_file (.
+,
+%114$mage.cards.repository.CardRepository*:
+
+__unknown_file (
+
+cardNamejava.lang.String22findPreferredCoreExpansionCard(Ljava/lang/String;)á
+Ñ
+
+ë ë(e*
+cardInfomage.cards.repository.CardInfo"__id*D
+
+__unknown_file ((
+&
+%115mage.cards.repository.CardInfo*
+17
+21*©
+67
+º º( √¿
+
+º º(-
+%0java.lang.String"/java.lang.String#substring(I)Ljava/lang/String;*9
+
+__unknown_file (
+
+messagejava.lang.String* 
+
+__unknown_file (22substring(I)êç
+
+º º(4
+%1java.lang.String")java.lang.String#trim()Ljava/lang/String;*4
+
+__unknown_file (
+
+%0java.lang.String2trim()P
+N
+
+ºA º(O
+%2java.util.Locale"__id*"
+
+__unknown_file (
+""¯ı
+
+º º(P
+%3java.lang.String"Bjava.lang.String#toUpperCase(Ljava/util/Locale;)Ljava/lang/String;*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.util.Locale2toUpperCase(Ljava/util/Locale;)g
+e
+
+º º(Q
+commandjava.lang.String"__id*4
+
+__unknown_file (
+
+%3java.lang.String*
+65
+66*≤
+23
+é# é(5ã
+à
+
+é# é(5
+%108java.util.regex.Pattern"__id*S
+
+__unknown_file (7*5
+mage.server.ChatManagerImpl"
+getCardTextPatternR
+P
+
+éR é(`
+%109java.util.Locale"__id*"
+
+__unknown_file (
+""Å˛
+
+é> é(a
+%110java.lang.String"Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;*9
+
+__unknown_file (
+
+messagejava.lang.String*6
+
+__unknown_file (
+
+%109java.util.Locale2toLowerCase(Ljava/util/Locale;)ûõ
+
+é# é(b
+%111java.util.regex.Matcher"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*=
+
+__unknown_file (!
+
+%108java.util.regex.Pattern*6
+
+__unknown_file (
+
+%110java.lang.String2!matcher(Ljava/lang/CharSequence;)|
+z
+
+é é(c'
+matchPatternjava.util.regex.Matcher"__id*=
+
+__unknown_file (!
+
+%111java.util.regex.Matcherêç
+
+è è(#
+%112boolean"java.util.regex.Matcher#find()Z*E
+
+__unknown_file ()
+'
+matchPatternjava.util.regex.Matcher2find()*
+16
+22:&
+
+ª' ª(1
+usermage.server.User:)
+
+ª2 ª(A
+messagejava.lang.String:&
+
+ªB ª(N
+chatIdjava.util.UUID: 
+
+__unknown_file (
+""B
+mage.server.ChatManagerImplP

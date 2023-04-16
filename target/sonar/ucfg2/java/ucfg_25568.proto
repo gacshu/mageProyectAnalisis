@@ -1,0 +1,793 @@
+
+5mage.server.TableController#isMatchTableStillValid()Zg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/TableController.javaÍ Í()"26*ã
+13
+ù ù(À½
+
+ù ù('
+%41mage.players.Player"<mage.game.match.MatchPlayer#getPlayer()Lmage/players/Player;*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2getPlayer()„
+
+ù ù(1
+%42boolean"mage.players.Player#isHuman()Z*8
+
+__unknown_file (
+
+%41mage.players.Player2	isHuman()*
+7
+12*€	
+24
+Ô Ô(Y
+W
+
+Õ Õ("
+%2mage.constants.TableState"__id*"
+
+__unknown_file (
+""Y
+W
+
+Ö Ö()
+%3mage.constants.TableState"__id*"
+
+__unknown_file (
+""Y
+W
+
+× ×(#
+%4mage.constants.TableState"__id*"
+
+__unknown_file (
+""Ò
+Ï
+
+Ô Ø(	
+%5java.util.List"<java.util.Arrays#asList([Ljava/lang/Object;)Ljava/util/List;*0
+
+__unknown_file ("
+java.util.Arrays*=
+
+__unknown_file (!
+
+%2mage.constants.TableState*=
+
+__unknown_file (!
+
+%3mage.constants.TableState*=
+
+__unknown_file (!
+
+%4mage.constants.TableStates
+q
+
+Ø Ø(
+%6mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+table¨¥
+
+Ø Ø(#
+%7mage.constants.TableState"5mage.game.Table#getState()Lmage/constants/TableState;*3
+
+__unknown_file (
+
+%6mage.game.Table2
+getState()ÝÚ
+
+Ô Ø($
+%8boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%5java.util.List*=
+
+__unknown_file (!
+
+%7mage.constants.TableState2contains(Ljava/lang/Object;)*
+22
+23*ÿ
+14
+ò ò(X
+V
+
+ò ò(
+%26org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""öó
+
+ò ò(I
+%27void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%26org.apache.log4j.Logger*I
+
+__unknown_file (-+
+)- Match player not found in started game:2error(Ljava/lang/Object;)X
+V
+
+ó ó(
+%28org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+ó- ó(2
+%29mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchš—
+
+ó- ó(:
+%30java.util.UUID"-mage.game.match.Match#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+%29mage.game.match.Match2getId()w
+u
+
+ó ó(:
+%31java.lang.String"__concat*
+
+ó ó(*
+-- matchId:*%
+
+ó- ó(:
+
+%30java.util.UUIDâß
+
+ó ó(;
+%32void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%28org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%31java.lang.String2error(Ljava/lang/Object;)X
+V
+
+ô ô(
+%33org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¦£
+
+ô, ô(D
+%34java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2getKey()v
+t
+
+ô ô(D
+%35java.lang.String"__concat*
+
+ô ô()
+
+-- userId:*%
+
+ô, ô(D
+
+%34java.util.UUIDâß
+
+ô ô(E
+%36void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%33org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%35java.lang.String2error(Ljava/lang/Object;)X
+V
+
+õ õ(
+%37org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ª§
+
+õ. õ(H
+%38java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2
+getValue()x
+v
+
+õ õ(H
+%39java.lang.String"__concat*
+
+õ õ(+
+-- playerId:*%
+
+õ. õ(H
+
+%38java.util.UUIDâß
+
+õ õ(I
+%40void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%37org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%39java.lang.String2error(Ljava/lang/Object;)*
+7*&
+25
+Ð Ð("
+
+Ð Ð(
+""*Ý
+15
+î& î(+z
+x
+
+î& î(+
+%23mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchª§
+
+î6 î(P
+%24java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2
+getValue()‘Ž
+
+î& î(Q"
+%25mage.game.match.MatchPlayer"Nmage.game.match.Match#getPlayer(Ljava/util/UUID;)Lmage/game/match/MatchPlayer;*:
+
+__unknown_file (
+
+%23mage.game.match.Match*3
+
+__unknown_file (
+
+%24java.util.UUID2getPlayer(Ljava/util/UUID;)ƒ
+€
+
+î î(R*
+matchPlayermage.game.match.MatchPlayer"__id*@
+
+__unknown_file ($
+"
+%25mage.game.match.MatchPlayer*
+13
+14*–
+26
+Ï Ï(s
+q
+
+Ï Ï(
+%0mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+table„
+
+Ï Ï( 
+%1boolean"mage.game.Table#isTournament()Z*3
+
+__unknown_file (
+
+%0mage.game.Table2isTournament()*
+24
+25*ï
+16
+í5 í(B”
+‘
+
+í5 í(B-
+%21&java.util.concurrent.ConcurrentHashMap"__id*N
+
+__unknown_file (2*0
+mage.server.TableController"
+userPlayerMapÀ½
+
+í5 í(M
+%22java.util.Set"@java.util.concurrent.ConcurrentHashMap#entrySet()Ljava/util/Set;*K
+
+__unknown_file (/
+-
+%21&java.util.concurrent.ConcurrentHashMap2
+entrySet()*
+7*¿
+18
+ã ã(X
+V
+
+ã ã(
+%14org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ëè
+
+ã ã(:
+%15void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%14org.apache.log4j.Logger*>
+
+__unknown_file (" 
+- Match without started games:2error(Ljava/lang/Object;)X
+V
+
+ä ä(
+%16org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+ä) ä(.
+%17mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchš—
+
+ä) ä(6
+%18java.util.UUID"-mage.game.match.Match#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+%17mage.game.match.Match2getId()w
+u
+
+ä ä(6
+%19java.lang.String"__concat*
+
+ä ä(&
+-- matchId:*%
+
+ä) ä(6
+
+%18java.util.UUIDâß
+
+ä ä(7
+%20void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%16org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%19java.lang.String2error(Ljava/lang/Object;)"
+
+å å(
+""*·
+19
+â â(z
+x
+
+â â(
+%12mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchž›
+
+â â(
+%13mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%12mage.game.match.Match2	getGame()*
+16
+18*%
+1
+– –("
+
+– –(7
+""* 
+2
+ ($d
+b
+
+ ($*
+matchPlayermage.game.match.MatchPlayer"__id*"
+
+__unknown_file (
+"" 
+
+
+ ($*
+matchPlayermage.game.match.MatchPlayer"
+__arrayGet*3
+
+__unknown_file (
+
+%70java.util.List*"
+
+__unknown_file (
+""*
+5
+1*à
+4
+ (À½
+
+ (+
+%73mage.players.Player"<mage.game.match.MatchPlayer#getPlayer()Lmage/players/Player;*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2getPlayer()†ƒ
+
+ (6
+%74boolean"mage.players.Player#isInGame()Z*8
+
+__unknown_file (
+
+%73mage.players.Player2
+isInGame()*
+2*á
+5
+Ž Ž(À½
+
+Ž Ž((
+%71mage.players.Player"<mage.game.match.MatchPlayer#getPlayer()Lmage/players/Player;*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2getPlayer()„
+
+Ž Ž(2
+%72boolean"mage.players.Player#isHuman()Z*8
+
+__unknown_file (
+
+%71mage.players.Player2	isHuman()*
+2
+4*·
+6
+' (,z
+x
+
+' (,
+%69mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¤¡
+
+' (9
+%70java.util.List"2mage.game.match.Match#getPlayers()Ljava/util/List;*:
+
+__unknown_file (
+
+%69mage.game.match.Match2getPlayers()*
+2*˜
+7
+í í(2`
+^
+
+í í(2&
+userPlayerEntryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""›
+˜
+
+í í(2&
+userPlayerEntryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%22java.util.Set*"
+
+__unknown_file (
+""*
+15
+6*É
+9
+ÿ ÿ(X
+V
+
+ÿ ÿ(
+%52org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¶³
+
+ÿM ÿ(b
+%53java.lang.String"7mage.game.match.MatchPlayer#getName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2	getName()’
+
+
+ÿ% ÿ(b
+%54java.lang.String"__concat*5
+
+ÿ% ÿ(J'%
+#- Active user of match is missing: *'
+
+ÿM ÿ(b
+
+%53java.lang.Stringâß
+
+ÿ ÿ(c
+%55void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%52org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%54java.lang.String2error(Ljava/lang/Object;)X
+V
+
+€ €(
+%56org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+€5 €(:
+%57mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchš—
+
+€5 €(B
+%58java.util.UUID"-mage.game.match.Match#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+%57mage.game.match.Match2getId()w
+u
+
+€% €(B
+%59java.lang.String"__concat*
+
+€% €(2
+-- matchId:*%
+
+€5 €(B
+
+%58java.util.UUIDâß
+
+€ €(C
+%60void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%56org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%59java.lang.String2error(Ljava/lang/Object;)X
+V
+
+ (
+%61org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¦£
+
+4 (L
+%62java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2getKey()v
+t
+
+% (L
+%63java.lang.String"__concat*
+
+% (1
+
+-- userId:*%
+
+4 (L
+
+%62java.util.UUIDâß
+
+ (M
+%64void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%61org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%63java.lang.String2error(Ljava/lang/Object;)X
+V
+
+‚ ‚(
+%65org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ª§
+
+‚6 ‚(P
+%66java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2
+getValue()x
+v
+
+‚% ‚(P
+%67java.lang.String"__concat*
+
+‚% ‚(3
+-- playerId:*%
+
+‚6 ‚(P
+
+%66java.util.UUIDâß
+
+‚ ‚(Q
+%68void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%65org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%67java.lang.String2error(Ljava/lang/Object;)"
+
+ƒ ƒ(%
+""*&
+20
+Þ Þ("
+
+Þ Þ(
+""*·
+21
+Ü Ü(#z
+x
+
+Ü Ü(#
+%10mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchž›
+
+Ü Ü(8
+%11boolean"+mage.game.match.Match#isDoneSideboarding()Z*:
+
+__unknown_file (
+
+%10mage.game.match.Match2isDoneSideboarding()*
+19
+20*±
+10
+þ. þ(2•’
+
+þ. þ(8
+%50mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()}
+
+þ. þ(C
+%51boolean"mage.server.User#isActive()Z*5
+
+__unknown_file (
+
+%50mage.server.User2
+isActive()*
+7
+9*•
+22
+Ü Ü(y
+w
+
+Ü Ü(
+%9mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match*
+19
+21*É
+11
+û* û(8’
+
+
+û* û(8*
+%45#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryæã
+
+û* û(F'
+%46 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%45#mage.server.managers.ManagerFactory2userManager()¦£
+
+ûO û(g
+%47java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*D
+
+__unknown_file ((
+&
+userPlayerEntryjava.util.Map$Entry2getKey()‘Ž
+
+û* û(h
+%48java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%46 mage.server.managers.UserManager*3
+
+__unknown_file (
+
+%47java.util.UUID2getUser(Ljava/util/UUID;)i
+g
+
+û û(i
+userjava.util.Optional"__id*7
+
+__unknown_file (
+
+%48java.util.Optional‡„
+
+þ þ()
+%49boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+9
+10*å
+12
+ú ú(À½
+
+ú ú(+
+%43mage.players.Player"<mage.game.match.MatchPlayer#getPlayer()Lmage/players/Player;*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2getPlayer()†ƒ
+
+ú ú(6
+%44boolean"mage.players.Player#isInGame()Z*8
+
+__unknown_file (
+
+%43mage.players.Player2
+isInGame()*
+7
+11*&
+23
+Ú Ú("
+
+Ú Ú(
+""B
+mage.server.TableControllerHP

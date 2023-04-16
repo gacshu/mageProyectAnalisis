@@ -1,0 +1,240 @@
+
+±mage.abilities.effects.PayCostToAttackBlockEffectImpl#handleManaCosts(Lmage/abilities/costs/mana/ManaCosts;Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/PayCostToAttackBlockEffectImpl.javah h(#"11*!
+2z z("
+z z(
+""*!
+3v v($"
+v v(%
+""*î
+4u u(*∞≠
+uO u(b
+%16java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()…∆
+u u(c
+%17boolean"Ñmage.abilities.costs.mana.ManaCosts#payOrRollback(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)Z*W
+
+__unknown_file (;
+9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%16java.util.UUID2_payOrRollback(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)*
+2
+3*ç
+6s s(U
+S
+s( s(7
+%14mage.constants.Outcome"__id*"
+
+__unknown_file (
+""ûõ
+s s(R
+%15boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%14mage.constants.Outcome*<
+
+__unknown_file ( 
+
+
+chooseTextjava.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+4*á
+7q q(®•
+q q(*
+%11void"&mage.abilities.costs.Cost#clearPaid()V*W
+
+__unknown_file (;
+9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts2clearPaid()ëé
+r: r(H
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()∞≠
+r r(O
+%13boolean"smage.abilities.costs.Cost#canPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Z*W
+
+__unknown_file (;
+9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%12java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2XcanPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+2
+6*®
+8o o(#…∆
+o& o(B
+%8java.lang.String">mage.abilities.costs.mana.ManaCost#getText()Ljava/lang/String;*W
+
+__unknown_file (;
+9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts2	getText()j
+h
+o o(B
+%9java.lang.String"__concat*
+o o(#
+Pay *$
+o& o(B
+
+%8java.lang.Stringq
+o
+o o(Q
+%10java.lang.String"__concat*$
+o o(B
+
+%9java.lang.String*
+oE o(Q
+
+ to block?i
+g
+o o(Q
+
+chooseTextjava.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.String*
+7*ß
+9m m(#…∆
+m& m(B
+%5java.lang.String">mage.abilities.costs.mana.ManaCost#getText()Ljava/lang/String;*W
+
+__unknown_file (;
+9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts2	getText()j
+h
+m m(B
+%6java.lang.String"__concat*
+m m(#
+Pay *$
+m& m(B
+
+%5java.lang.Stringq
+o
+m m(R
+%7java.lang.String"__concat*$
+m m(B
+
+%6java.lang.String*
+mE m(R
+ to attack?h
+f
+m m(R
+
+chooseTextjava.lang.String"__id*4
+
+__unknown_file (
+
+%7java.lang.String*
+7*å
+10k k(V
+T
+k k(
+
+chooseTextjava.lang.String"__id*"
+
+__unknown_file (
+""”–
+l l(*
+%2$mage.game.events.GameEvent$EventType"Jmage.game.events.GameEvent#getType()Lmage/game/events/GameEvent$EventType;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2	getType()b
+`
+l# l(6*
+%3$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""b
+`
+l# l(G*
+%4$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""*
+8
+9*®
+11i i(Ø¨
+i' i(:
+%0java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()Ì
+i i(;
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+i i(<
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+10
+1*!
+1| |("
+| |(
+"":E
+h$ h(A9
+attackBlockManaTax#mage.abilities.costs.mana.ManaCosts:/
+hB h(R#
+eventmage.game.events.GameEvent:,
+hS h(b 
+sourcemage.abilities.Ability:"
+hc h(l
+gamemage.game.GameB97
+5mage.abilities.effects.PayCostToAttackBlockEffectImplP

@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>OathbreakerFreeForAllMatch xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/game/OathbreakerFreeForAllMatch.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.game;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.game.match.MatchImpl;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.game.match.MatchOptions;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.game.mulligan.Mulligan;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="OathbreakerFreeForAllMatch" href="../../mage/game/OathbreakerFreeForAllMatch.html#OathbreakerFreeForAllMatch">OathbreakerFreeForAllMatch</a> <strong class="jxr_keyword">extends</strong> <a name="MatchImpl" href="../../mage/game/match/MatchImpl.html#MatchImpl">MatchImpl</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">public</strong> <a name="OathbreakerFreeForAllMatch" href="../../mage/game/OathbreakerFreeForAllMatch.html#OathbreakerFreeForAllMatch">OathbreakerFreeForAllMatch</a>(<a name="MatchOptions" href="../../mage/game/match/MatchOptions.html#MatchOptions">MatchOptions</a> options) {
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>          <strong class="jxr_keyword">super</strong>(options);
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      }
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      @Override
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> startGame() <strong class="jxr_keyword">throws</strong> <a name="GameException" href="../../mage/game/GameException.html#GameException">GameException</a> {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          <strong class="jxr_keyword">int</strong> startLife = 20;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <a name="Mulligan" href="../../mage/game/mulligan/Mulligan.html#Mulligan">Mulligan</a> mulligan = options.getMulliganType().getMulligan(options.getFreeMulligans());
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <a name="OathbreakerFreeForAll" href="../../mage/game/OathbreakerFreeForAll.html#OathbreakerFreeForAll">OathbreakerFreeForAll</a> game = <strong class="jxr_keyword">new</strong> <a name="OathbreakerFreeForAll" href="../../mage/game/OathbreakerFreeForAll.html#OathbreakerFreeForAll">OathbreakerFreeForAll</a>(options.getAttackOption(), options.getRange(), mulligan, startLife);
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          game.setCheckCommanderDamage(false);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          game.setStartMessage(<strong class="jxr_keyword">this</strong>.createGameStartMessage());
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          initGame(game);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          games.add(game);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      }
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

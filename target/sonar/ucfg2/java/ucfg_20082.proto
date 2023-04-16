@@ -1,0 +1,79 @@
+
+Jmage.cards.Sets#findSetByName(Ljava/lang/String;)Lmage/cards/ExpansionSet;T
+HD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/Sets.java   (,"1*≥
+1
+À À(O
+M
+
+À À(
+%0mage.cards.Sets"__id*"
+
+__unknown_file (
+""úô
+
+À À( 
+%1java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*3
+
+__unknown_file (
+
+%0mage.cards.Sets2values()™ß
+
+À À()
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%1java.util.Collection2stream()z
+x
+
+Ã Ã(N"
+%3java.util.function.Predicate"__declareFunction*3
+
+__unknown_file (
+__sonar_lambda_400$è
+å
+
+__unknown_file (/
+"
+%3java.util.function.Predicate"	
+setName"__id*9
+
+__unknown_file (
+
+setNamejava.lang.StringÆ´
+
+À Ã(O
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%3java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)¨©
+
+À Õ(
+%7java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream2findFirst()Á‰
+
+À Œ(
+%8mage.cards.ExpansionSet"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%7java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)"-
+
+À Œ(
+
+%8mage.cards.ExpansionSet:)
+
+ -  (;
+setNamejava.lang.StringB"
+mage.cards.SetsH

@@ -1,0 +1,251 @@
+
+Kmage.server.TableManagerImpl#removeTable(Ljava/util/UUID;Ljava/util/UUID;)Zh
+\D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/TableManagerImpl.javaç ç("startingBlock*%
+2
+ğ ğ("
+
+ğ ğ(
+""*÷	
+3
+ì ì(©¦
+
+ì ì(/
+%11void",mage.server.TableController#leaveTableAll()V*L
+
+__unknown_file (0
+.
+tableControllermage.server.TableController2leaveTableAll()“
+
+
+í í(*
+%12#mage.server.managers.ManagerFactory"__id*P
+
+__unknown_file (4*2
+mage.server.TableManagerImpl"
+managerFactoryæã
+
+í í(,'
+%13 mage.server.managers.ChatManager"Smage.server.managers.ManagerFactory#chatManager()Lmage/server/managers/ChatManager;*H
+
+__unknown_file (,
+*
+%12#mage.server.managers.ManagerFactory2chatManager()º·
+
+í@ í([
+%14java.util.UUID"7mage.server.TableController#getChatId()Ljava/util/UUID;*L
+
+__unknown_file (0
+.
+tableControllermage.server.TableController2getChatId()†ƒ
+
+í í(\
+%15void"Fmage.server.managers.ChatManager#destroyChatSession(Ljava/util/UUID;)V*E
+
+__unknown_file ()
+'
+%13 mage.server.managers.ChatManager*3
+
+__unknown_file (
+
+%14java.util.UUID2$destroyChatSession(Ljava/util/UUID;)ïì
+
+î î($
+%16void";mage.server.TableManagerImpl#removeTable(Ljava/util/UUID;)V*<
+
+__unknown_file ( 
+mage.server.TableManagerImpl*7
+
+__unknown_file (
+
+tableIdjava.util.UUID2removeTable(Ljava/util/UUID;)*
+2*ş
+startingBlock
+ç ç(9
+‹
+
+æ æ(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+userIdjava.util.UUID[
+Y
+
+ç$ ç(*
+userIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%17
+Œ
+
+æ æ(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+tableIdjava.util.UUID\
+Z
+
+ç1 ç(8
+tableIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%18*
+6*ì	
+4
+é é(}
+{
+
+é é(
+%4org.apache.log4j.Logger"__id*H
+
+__unknown_file (,**
+mage.server.TableManagerImpl"
+logger
+‹
+
+é é(C
+%5java.lang.String"__concat*1
+
+é é(:#!
+Table remove request - userId: *(
+
+é= é(C
+
+userIdjava.util.UUIDv
+t
+
+é é(R
+%6java.lang.String"__concat*&
+
+é é(C
+
+%5java.lang.String*
+
+éF é(R
+
+ tableId: „
+
+
+é é(\
+%7java.lang.String"__concat*&
+
+é é(R
+
+%6java.lang.String*)
+
+éU é(\
+
+tableIdjava.util.UUIDßÜ
+
+é é(]
+
+%8void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%4org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%7java.lang.String2debug(Ljava/lang/Object;)’
+
+
+ê. ê(9,
+%9&java.util.concurrent.ConcurrentHashMap"__id*M
+
+__unknown_file (1*/
+mage.server.TableManagerImpl"
+controllersÂ
+¿
+
+ê. ê(F"
+%10mage.server.TableController"__mapGet*J
+
+__unknown_file (.
+,
+%9&java.util.concurrent.ConcurrentHashMap*7
+
+__unknown_file (
+
+tableIdjava.util.UUID‡
+„
+
+ê ê(G.
+tableControllermage.server.TableController"__id*@
+
+__unknown_file ($
+"
+%10mage.server.TableController*
+2
+3*Š
+5
+è- è(;’
+
+
+è- è(;)
+%1#mage.server.managers.ManagerFactory"__id*P
+
+__unknown_file (4*2
+mage.server.TableManagerImpl"
+managerFactoryäá
+
+è- è(I&
+%2 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ManagerFactory2userManager()ôñ
+
+è- è(Y
+%3boolean";mage.server.managers.UserManager#isAdmin(Ljava/util/UUID;)Z*D
+
+__unknown_file ((
+&
+%2 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2isAdmin(Ljava/util/UUID;)*
+4
+1*å
+6
+è è(ËÈ
+
+è è()
+%0boolean"Lmage.server.TableManagerImpl#isTableOwner(Ljava/util/UUID;Ljava/util/UUID;)Z*<
+
+__unknown_file ( 
+mage.server.TableManagerImpl*7
+
+__unknown_file (
+
+tableIdjava.util.UUID*6
+
+__unknown_file (
+
+userIdjava.util.UUID2.isTableOwner(Ljava/util/UUID;Ljava/util/UUID;)*
+4
+5*%
+1
+ò ò("
+
+ò ò(
+"":&
+
+ç ç(+
+userIdjava.util.UUID:'
+
+ç, ç(8
+tableIdjava.util.UUIDB 
+mage.server.TableManagerImplHP

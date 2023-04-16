@@ -1,0 +1,208 @@
+
+†mage.abilities.dynamicvalue.common.GetKickerXValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Iu
+kD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/GetKickerXValue.java ("startingBlock*”
+2   ( Y
+W
+   ( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ž
+›
+   ( !
+abilitymage.abilities.Ability"
+__arrayGet*<
+
+__unknown_file ( 
+
+%6mage.abilities.Abilities*"
+
+__unknown_file (
+""*	
+2
+5
+1*•
+startingBlock (IŠ
+‡
+ (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14›
+˜
+ (
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15›
+˜
+ (
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%16*
+10*Š
+4*; *(Bõò
+** *(i
+
+%13int"`mage.abilities.keyword.KickerAbility#getKickedCounter(Lmage/game/Game;Lmage/abilities/Ability;)I*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2:getKickedCounter(Lmage/game/Game;Lmage/abilities/Ability;)*
+2*Ö
+5$B $(I‹
+ˆ
+$ $(J5
+kickerAbility$mage.abilities.keyword.KickerAbility"__id*?
+
+__unknown_file (#
+!
+abilitymage.abilities.AbilityÑÎ
+%* %(H
+%7java.util.List"Emage.abilities.keyword.KickerAbility#getKickerCosts()Ljava/util/List;*S
+
+__unknown_file (7
+5
+kickerAbility$mage.abilities.keyword.KickerAbility2getKickerCosts()¢Ÿ
+%* &(%
+%8java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%7java.util.List2stream()«
+¨
+'& '(u"
+%9java.util.function.Predicate"__declareFunction*e
+
+__unknown_file (IG
+E__sonar_lambda_107$mage.abilities.dynamicvalue.common.GetKickerXValue‰†
+%* '(v
+%12boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%9java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)*
+2
+4*Ð
+7 #  ((»¸
+ #  (7
+%6mage.abilities.Abilities">mage.game.stack.Spell#getAbilities()Lmage/abilities/Abilities;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getAbilities()*
+2*Û
+8 (ÇÄ
+ (0!
+%3mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()ãà
+ (D)
+%4#mage.abilities.costs.mana.ManaCosts"Smage.abilities.AbilityImpl#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*?
+
+__unknown_file (#
+!
+%3mage.abilities.SpellAbility2getManaCostsToPay()–“
+ (K	
+%5int"+mage.abilities.costs.mana.ManaCosts#getX()I*G
+
+__unknown_file (+
+)
+%4#mage.abilities.costs.mana.ManaCosts2getX()*
+7*ß
+9 ("ÇÄ
+ (4!
+%2mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()*
+8
+1*À
+10 (¯¬
+. (I
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getSourceId()†ƒ
+ (J
+%1mage.game.stack.Spell"Jmage.game.Game#getSpellOrLKIStack(Ljava/util/UUID;)Lmage/game/stack/Spell;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2$getSpellOrLKIStack(Ljava/util/UUID;)m
+k
+ (K
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%1mage.game.stack.Spell*
+9
+1*!
+12 2("
+2 2(
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectB64
+2mage.abilities.dynamicvalue.common.GetKickerXValueHP

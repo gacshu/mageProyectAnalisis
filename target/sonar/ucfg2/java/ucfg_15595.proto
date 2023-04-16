@@ -1,0 +1,110 @@
+
+Vmage.cards.repository.CardRepository#getMissingCards(Ljava/util/List;)Ljava/util/List;i
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/repository/CardRepository.java¿ ¿()"10*5
+4
+Ä Ä(9"$
+
+Ä Ä(9
+
+%7java.util.List*È
+5
+Ä Ä(8±®
+
+Ä Ä(8
+%7java.util.List"Ucom.j256.ormlite.dao.Dao#query(Lcom/j256/ormlite/stmt/PreparedQuery;)Ljava/util/List;*<
+
+__unknown_file ( 
+
+%5com.j256.ormlite.dao.Dao*G
+
+__unknown_file (+
+)
+%6#com.j256.ormlite.stmt.PreparedQuery2,query(Lcom/j256/ormlite/stmt/PreparedQuery;)*
+4*Œ
+6
+Ä Ä(ˆ
+…
+
+Ä Ä(
+%5com.j256.ormlite.dao.Dao"__id*Q
+
+__unknown_file (5*3&
+$mage.cards.repository.CardRepository"	
+cardDaoêç
+
+Ä! Ä(7)
+%6#com.j256.ormlite.stmt.PreparedQuery"Qcom.j256.ormlite.stmt.QueryBuilder#prepare()Lcom/j256/ormlite/stmt/PreparedQuery;*P
+
+__unknown_file (4
+2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder2	prepare()*
+5*‚
+7
+Â* Â(5ëè
+
+Â Â(B!
+%4com.j256.ormlite.stmt.Where"ccom.j256.ormlite.stmt.Where#in(Ljava/lang/String;Ljava/lang/Iterable;)Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%3com.j256.ormlite.stmt.Where*)
+
+__unknown_file (
+	className*:
+
+__unknown_file (
+
+
+classNamesjava.util.List2*in(Ljava/lang/String;Ljava/lang/Iterable;)*
+6*Ñ
+8
+Â Â(&º·
+
+Â Â(&!
+%3com.j256.ormlite.stmt.Where">com.j256.ormlite.stmt.Where#not()Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%2com.j256.ormlite.stmt.Where2not()*
+7*…
+9
+Á Á(Q‘
+Ž
+
+Á Á(Q2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder"__id*F
+
+__unknown_file (*
+(
+%1"com.j256.ormlite.stmt.QueryBuilderÚ×
+
+Â Â( !
+%2com.j256.ormlite.stmt.Where"Kcom.j256.ormlite.stmt.StatementBuilder#where()Lcom/j256/ormlite/stmt/Where;*P
+
+__unknown_file (4
+2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder2where()*
+8*÷
+10
+Á: Á(Aˆ
+…
+
+Á: Á(A
+%0com.j256.ormlite.dao.Dao"__id*Q
+
+__unknown_file (5*3&
+$mage.cards.repository.CardRepository"	
+cardDaoÔÑ
+
+Á: Á(P(
+%1"com.j256.ormlite.stmt.QueryBuilder"Kcom.j256.ormlite.dao.Dao#queryBuilder()Lcom/j256/ormlite/stmt/QueryBuilder;*<
+
+__unknown_file ( 
+
+%0com.j256.ormlite.dao.Dao2queryBuilder()*
+9:*
+
+¿* ¿(A
+
+classNamesjava.util.ListB(&
+$mage.cards.repository.CardRepositoryH

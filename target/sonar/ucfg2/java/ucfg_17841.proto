@@ -1,0 +1,470 @@
+
+9mage.game.GameImpl#findWinnersAndLosers()Ljava/util/UUID;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameImpl.javaº
+ º
+('"15*°
+13
+ø
+ ø
+(ÑÅ
+
+ø
+ ø
+(
+%3boolean"mage.players.Player#hasWon()Z*;
+
+__unknown_file (
+
+playermage.players.Player2hasWon()*
+11
+12*‹
+14
+æ
+ æ
+("n
+l
+
+æ
+ æ
+("
+%0mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state™ß
+
+æ
+ æ
+(/
+%1mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getPlayers()ß§
+
+æ
+ æ
+(8
+%2java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*8
+
+__unknown_file (
+
+%1mage.players.Players2values()*
+8*q
+15
+Ω
+ Ω
+(!Y
+W
+
+Ω
+ Ω
+("
+winnerIdFoundjava.util.UUID"__id*"
+
+__unknown_file (
+""*
+14*@
+1
+–
+ –
+("/
+
+–
+ –
+(!
+
+winnerIdFoundjava.util.UUID*è
+2
+À
+ À
+(W
+U
+
+À
+ À
+(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+À
+ À
+(
+playermage.players.Player"
+__arrayGet*9
+
+__unknown_file (
+
+%23java.util.Collection*"
+
+__unknown_file (
+""*	
+2
+5
+1*È
+3
+Õ
+ Õ
+(“œ
+
+Õ
+ Õ
+(!
+%27void"+mage.players.Player#lost(Lmage/game/Game;)V*;
+
+__unknown_file (
+
+playermage.players.Player*2
+
+__unknown_file (
+mage.game.GameImpl2lost(Lmage/game/Game;)*
+2*°
+4
+Ã
+S Ã
+(YáÑ
+
+Ã
+S Ã
+(c
+%26boolean"mage.players.Player#hasLost()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	hasLost()*
+2
+3*ã
+5
+Ã
+* Ã
+(0ìê
+
+Ã
+* Ã
+(8
+%24java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()€ÿ
+
+Ã
+* Ã
+(N
+%25boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%24java.util.UUID*=
+
+__unknown_file (!
+
+winnerIdFoundjava.util.UUID2equals(Ljava/lang/Object;)*
+2
+4*‡
+7
+À
+ À
+("o
+m
+
+À
+ À
+("
+%21mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state¨©
+
+À
+ À
+(/
+%22mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*8
+
+__unknown_file (
+
+%21mage.game.GameState2getPlayers()©¶
+
+À
+ À
+(8
+%23java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*9
+
+__unknown_file (
+
+%22mage.players.Players2values()*
+2*å
+8
+æ
+ æ
+(W
+U
+
+æ
+ æ
+(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""ò
+ï
+
+æ
+ æ
+(
+playermage.players.Player"
+__arrayGet*8
+
+__unknown_file (
+
+%2java.util.Collection*"
+
+__unknown_file (
+""*
+13
+7*ˆ
+
+9
+≈
+ ≈
+(X
+V
+
+≈
+ ≈
+(
+%13org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""°û
+
+≈
+ ≈
+(-
+%14java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+playermage.players.Player2	getName()ë
+é
+
+≈
+ ≈
+(T
+%15java.lang.String"__concat*'
+
+≈
+ ≈
+(-
+
+%14java.lang.String*4
+
+≈
+0 ≈
+(T&$
+" has not lost so they won gameId: èå
+
+≈
+W ≈
+(c
+%16java.util.UUID"*mage.game.GameImpl#getId()Ljava/util/UUID;*2
+
+__unknown_file (
+mage.game.GameImpl2getId()Å
+
+
+≈
+ ≈
+(c
+%17java.lang.String"__concat*'
+
+≈
+ ≈
+(T
+
+%15java.lang.String*%
+
+≈
+W ≈
+(c
+
+%16java.util.UUID‚ﬂ
+
+≈
+ ≈
+(d
+%18void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%13org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%17java.lang.String2debug(Ljava/lang/Object;)–Õ
+
+∆
+ ∆
+( 
+%19void"*mage.players.Player#won(Lmage/game/Game;)V*;
+
+__unknown_file (
+
+playermage.players.Player*2
+
+__unknown_file (
+mage.game.GameImpl2won(Lmage/game/Game;)ìê
+
+«
+  «
+(.
+%20java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()j
+h
+
+«
+ «
+(.
+winnerIdFoundjava.util.UUID"__id*3
+
+__unknown_file (
+
+%20java.util.UUID*
+7*¢
+10
+ƒ
+& ƒ
+(,áÑ
+
+ƒ
+& ƒ
+(6
+%12boolean"mage.players.Player#hasLeft()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	hasLeft()*
+8
+9*£
+11
+ƒ
+ ƒ
+(áÑ
+
+ƒ
+ ƒ
+(!
+%11boolean"mage.players.Player#hasLost()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	hasLost()*
+8
+10*Ö	
+12
+¿
+ ¿
+(W
+U
+
+¿
+ ¿
+(
+%4org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""†ù
+
+¿
+ ¿
+(-
+%5java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+playermage.players.Player2	getName()}
+{
+
+¿
+ ¿
+(C
+%6java.lang.String"__concat*&
+
+¿
+ ¿
+(-
+
+%5java.lang.String*#
+
+¿
+0 ¿
+(C
+ has won gameId: éã
+
+¿
+F ¿
+(M
+%7java.util.UUID"*mage.game.GameImpl#getId()Ljava/util/UUID;*2
+
+__unknown_file (
+mage.game.GameImpl2getId()~
+|
+
+¿
+ ¿
+(M
+%8java.lang.String"__concat*&
+
+¿
+ ¿
+(C
+
+%6java.lang.String*$
+
+¿
+F ¿
+(M
+
+%7java.util.UUIDﬂ‹
+
+¿
+ ¿
+(N
+
+%9void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%4org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%8java.lang.String2debug(Ljava/lang/Object;)ìê
+
+¡
+  ¡
+(.
+%10java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()j
+h
+
+¡
+ ¡
+(.
+winnerIdFoundjava.util.UUID"__id*3
+
+__unknown_file (
+
+%10java.util.UUID*
+7B
+mage.game.GameImpl

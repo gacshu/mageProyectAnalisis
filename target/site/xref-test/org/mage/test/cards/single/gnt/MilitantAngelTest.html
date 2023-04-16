@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>MilitantAngelTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../testapidocs/org/mage/test/cards/single/gnt/MilitantAngelTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.single.gnt;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.abilities.Ability;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.SimpleStaticAbility;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.dynamicvalue.common.AttackedThisTurnOpponentsCount;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.Effect;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.game.Game;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.players.Player;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.watchers.common.PlayersAttackedThisTurnWatcher;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestCommander4Players;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="MilitantAngelTest" href="../../../../../../org/mage/test/cards/single/gnt/MilitantAngelTest.html#MilitantAngelTest">MilitantAngelTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestCommander4Players" href="../../../../../../org/mage/test/serverside/base/CardTestCommander4Players.html#CardTestCommander4Players">CardTestCommander4Players</a> {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      @Test
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> test_AttackedThisTurnOpponentsCount() {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <em class="jxr_comment">// Player order: A -&gt; D -&gt; C -&gt; B</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          <em class="jxr_comment">// it's testing counter only (no need to test card -- it's same)</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <em class="jxr_comment">// When Militant Angel enters the battlefield, create a number of 2/2 white Knight creature tokens</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <em class="jxr_comment">// with vigilance equal to the number of opponents you attacked this turn.</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <em class="jxr_comment">//addCard(Zone.BATTLEFIELD, playerA, "Militant Angel", 2);</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Balduvian Bears"</span>, 1);
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Kitesail Corsair"</span>, 1);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <em class="jxr_comment">// turn 1: 2x attack -&gt; 1 player = 1 value</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          mustHaveValue(<span class="jxr_string">"2x-&gt;1 = 1"</span>, 1, PhaseStep.PRECOMBAT_MAIN, 0);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          attack(1, playerA, <span class="jxr_string">"Balduvian Bears"</span>, playerB);
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          attack(1, playerA, <span class="jxr_string">"Kitesail Corsair"</span>, playerB);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          mustHaveValue(<span class="jxr_string">"2x-&gt;1 = 1"</span>, 1, PhaseStep.POSTCOMBAT_MAIN, 1);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <em class="jxr_comment">// between attacks - no value</em>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          mustHaveValue(<span class="jxr_string">"no attacks = 0"</span>, 2, PhaseStep.PRECOMBAT_MAIN, 0);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <em class="jxr_comment">// turn 5: 2x attack -&gt; 2 players = 2 value</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          mustHaveValue(<span class="jxr_string">"2x-&gt;2 = 2"</span>, 5, PhaseStep.PRECOMBAT_MAIN, 0);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          attack(5, playerA, <span class="jxr_string">"Balduvian Bears"</span>, playerB);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          attack(5, playerA, <span class="jxr_string">"Kitesail Corsair"</span>, playerC);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          mustHaveValue(<span class="jxr_string">"2x-&gt;2 = 2"</span>, 5, PhaseStep.POSTCOMBAT_MAIN, 2);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          runCode(<span class="jxr_string">"watcher must be copyable"</span>, 5, PhaseStep.POSTCOMBAT_MAIN, playerA, (info, player, game) -&gt; {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              PlayersAttackedThisTurnWatcher watcher = game.getState().getWatcher(PlayersAttackedThisTurnWatcher.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              PlayersAttackedThisTurnWatcher newWatcher = watcher.copy();
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              Assert.assertEquals(<span class="jxr_string">"old watcher"</span>, 2, watcher.getAttackedOpponentsCount(player.getId()));
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              Assert.assertEquals(<span class="jxr_string">"new watcher"</span>, 2, newWatcher.getAttackedOpponentsCount(player.getId()));
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          });
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <em class="jxr_comment">// between attacks - no value</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          mustHaveValue(<span class="jxr_string">"no attacks = 0"</span>, 6, PhaseStep.PRECOMBAT_MAIN, 0);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          setStopAt(6, PhaseStep.END_TURN);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          execute();
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> mustHaveValue(String needInfo, <strong class="jxr_keyword">int</strong> turnNum, PhaseStep step, <strong class="jxr_keyword">int</strong> needValue) {
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          runCode(needInfo, turnNum, step, playerA, (info, player, game) -&gt; {
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>              assertCounterValue(info, player, game, needValue);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          });
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      }
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> assertCounterValue(String checkName, Player player, Game game, <strong class="jxr_keyword">int</strong> needValue) {
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          Ability fakeAbility = <strong class="jxr_keyword">new</strong> SimpleStaticAbility((Effect) <strong class="jxr_keyword">null</strong>); <em class="jxr_comment">// dynamic value need ability's controllerId</em>
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          fakeAbility.setControllerId(player.getId());
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          Assert.assertEquals(checkName, needValue, AttackedThisTurnOpponentsCount.instance.calculate(game, fakeAbility, <strong class="jxr_keyword">null</strong>));
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

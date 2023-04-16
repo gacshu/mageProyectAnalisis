@@ -1,0 +1,312 @@
+
+hmage.abilities.effects.common.ChooseBasicLandTypeEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zz
+pD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ChooseBasicLandTypeEffect.java% %("startingBlock*!
+23 3("
+3 3(
+""*¯
+31! 1(+­ª
+	1~ 1(‘
+%21java.lang.String"5mage.choices.ChoiceImpl#getChoice()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+choicesmage.choices.ChoiceImpl2getChoice()ƒ
+€
+	1a 1(‘
+%22java.lang.String"__concat*(
+1a 1({
+Chosen basic land type: *&
+	1~ 1(‘
+
+%21java.lang.Stringß
+Ü
+	1E 1(’
+%23java.lang.String"Kmage.util.CardUtil#addToolTipMarkTags(Ljava/lang/String;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*5
+
+__unknown_file (
+
+%22java.lang.String‚ÿ
+	1 1(™
+%24void"Nmage.cards.Card#addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject*,
+
+__unknown_file (
+chosen color*5
+
+__unknown_file (
+
+%23java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Game2=addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)*
+2*þ
+startingBlock% %(3Š
+‡
+$ $(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+% %("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25”
+‘
+$ $(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+%, %(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%26*
+9*Õ
+4. .(š—
+.# .(7
+%9java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject2	getName()…
+‚
+.# .(Y
+%10java.lang.String"__concat*$
+.# .(7
+
+%9java.lang.String*-
+.: .(Y!
+:  Chosen basic land type is ¬©
+.\ .(o
+%11java.lang.String"5mage.choices.ChoiceImpl#getChoice()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+choicesmage.choices.ChoiceImpl2getChoice()}
+{
+.# .(o
+%12java.lang.String"__concat*%
+.# .(Y
+
+%10java.lang.String*%
+.\ .(o
+
+%11java.lang.StringÝÚ
+. .(p
+%13void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%12java.lang.String2!informPlayers(Ljava/lang/String;)›˜
+/ /(
+%14mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‘Ž
+/) /(;
+%15java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject2getId()”‘
+/) /(F
+%16java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%15java.util.UUID2
+toString()Z
+X
+/I /(R
+%17java.lang.String"__id*-
+
+__unknown_file (
+BasicLandType}
+{
+/) /(R
+%18java.lang.String"__concat*%
+/) /(F
+
+%16java.lang.String*%
+/I /(R
+
+%17java.lang.String¬©
+/T /(g
+%19java.lang.String"5mage.choices.ChoiceImpl#getChoice()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+choicesmage.choices.ChoiceImpl2getChoice()·´
+/ /(h
+%20void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%14mage.game.GameState*5
+
+__unknown_file (
+
+%18java.lang.String*5
+
+__unknown_file (
+
+%19java.lang.String2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+2
+3*€
+5,! ,(:VT
+,% ,(8&
+%5 mage.choices.ChoiceBasicLandType" mage.choices.ChoiceBasicLandType…
+‚
+,! ,(:
+%6"*mage.choices.ChoiceBasicLandType#<init>()V*D
+
+__unknown_file ((
+&
+%5 mage.choices.ChoiceBasicLandType|
+z
+, ,(;"
+choicesmage.choices.ChoiceImpl"__id*D
+
+__unknown_file ((
+&
+%5 mage.choices.ChoiceBasicLandTypeT
+R
+-" -(1
+%7mage.constants.Outcome"__id*"
+
+__unknown_file (
+""´±
+- -(A
+%8boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%7mage.constants.Outcome*@
+
+__unknown_file ($
+"
+choicesmage.choices.ChoiceImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+4
+1*„
+8) )(„
+) )(/
+%4mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)f
+d
+) )(/
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%4mage.MageObject*
+5
+1*ì
+9& &( °­
+&+ &(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+& &(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+& &(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player¨¥
+': '(N
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()š—
+'  '(O#
+%3mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)t
+r
+' '(P
+
+mageObjectmage.MageObject"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*	
+5
+8
+1*!
+16 6("
+6 6(
+"":"
+% %(#
+gamemage.game.Game:,
+%$ %(2 
+sourcemage.abilities.AbilityB;9
+7mage.abilities.effects.common.ChooseBasicLandTypeEffectHP

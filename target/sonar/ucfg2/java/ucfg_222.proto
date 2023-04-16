@@ -1,0 +1,128 @@
+
+hmage.player.ai.SimulatedPlayerMCTS#chooseAttackerOrder(Ljava/util/List;Lmage/game/Game;)Ljava/util/UUID;
+sD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AIMCTS/src/mage/player/ai/SimulatedPlayerMCTS.javaˆ ˆ(#"startingBlock*”
+2
+Š Š(tr
+
+Š4 Š(D	
+%1int"java.util.List#size()I*9
+
+__unknown_file (
+
+	attackersjava.util.List2size()›
+˜
+
+Š! Š(E	
+%2int" mage.util.RandomUtil#nextInt(I)I*4
+
+__unknown_file ("
+mage.util.RandomUtil*'
+
+__unknown_file (
+	
+%1int¤
+¡
+
+Š Š(F#
+%3mage.game.permanent.Permanent"
+__arrayGet*9
+
+__unknown_file (
+
+	attackersjava.util.List*'
+
+__unknown_file (
+	
+%2int¡ž
+
+Š Š(N
+%4java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent2getId()"$
+
+Š Š(O
+
+%4java.util.UUID*±
+3
+‰ ‰(—”
+
+‰ ‰(
+%0boolean"(mage.player.ai.ComputerPlayer#isHuman()Z*B
+
+__unknown_file (&$
+"mage.player.ai.SimulatedPlayerMCTS2	isHuman()*
+2
+1*ú
+startingBlock
+ˆ# ˆ(I
+
+
+‡ ‡(
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*9
+
+__unknown_file (
+
+	attackersjava.util.List]
+[
+
+ˆ4 ˆ(=
+	attackersjava.util.List"__annotation*"
+
+__unknown_file (
+
+%6‹
+ˆ
+
+‡ ‡(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameX
+V
+
+ˆD ˆ(H
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7*
+3*×
+1
+Œ Œ(Ÿ
+œ
+
+Œ Œ(9
+%5java.util.UUID"cmage.player.ai.ComputerPlayer#chooseAttackerOrder(Ljava/util/List;Lmage/game/Game;)Ljava/util/UUID;*"
+
+__unknown_file (
+""*9
+
+__unknown_file (
+
+	attackersjava.util.List*4
+
+__unknown_file (
+
+gamemage.game.Game"$
+
+Œ Œ(:
+
+%5java.util.UUID:)
+
+ˆ$ ˆ(>
+	attackersjava.util.List:$
+
+ˆ? ˆ(H
+gamemage.game.GameB&$
+"mage.player.ai.SimulatedPlayerMCTSH

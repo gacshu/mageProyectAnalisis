@@ -1,0 +1,132 @@
+
+rmage.abilities.condition.common.CardsInOpponentGraveyardCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z„
+zD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/CardsInOpponentGraveyardCondition.java" "("startingBlock*ü
+startingBlock" "(3‰
+†
+! !(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+" "("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+! !(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+", "(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10*
+1*á
+1# #(°­
+$ $(6
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()êç
+# $(7
+%1java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getOpponents(Ljava/util/UUID;)¡ž
+# %(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%1java.util.Set2stream()†ƒ
+# &(%
+%3java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+# '()
+%4java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)†ƒ
+# ((*
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;) 
+# )(* 
+%6java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)½
+º
+* *(.%
+%7java.util.function.IntPredicate"__declareFunction*t
+
+__unknown_file (XV
+T__sonar_lambda_307$mage.abilities.condition.common.CardsInOpponentGraveyardConditionÙ
+Ö
+
+__unknown_file (Q
+%
+%7java.util.function.IntPredicate"(
+&CardsInOpponentGraveyardCondition.this"__id*a
+
+__unknown_file (EC
+Amage.abilities.condition.common.CardsInOpponentGraveyardCondition—”
+# *(/
+%8boolean"Gjava.util.stream.IntStream#anyMatch(Ljava/util/function/IntPredicate;)Z*>
+
+__unknown_file ("
+ 
+%6java.util.stream.IntStream*C
+
+__unknown_file ('
+%
+%7java.util.function.IntPredicate2+anyMatch(Ljava/util/function/IntPredicate;)"
+# *(0
+"":"
+" "(#
+gamemage.game.Game:,
+"$ "(2 
+sourcemage.abilities.AbilityBEC
+Amage.abilities.condition.common.CardsInOpponentGraveyardConditionHP

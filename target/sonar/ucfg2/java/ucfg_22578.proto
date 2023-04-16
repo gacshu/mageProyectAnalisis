@@ -1,0 +1,110 @@
+
+ymage.client.deck.generator.DeckGenerator#getBasicLand(Lmage/constants/ColoredManaSymbol;Ljava/util/Map;)Lmage/cards/Card;t
+hD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/deck/generator/DeckGenerator.javaí í($"1*–
+1
+î î(+»¸
+
+î= î(M
+%0java.lang.String"=mage.constants.ColoredManaSymbol#toString()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+color mage.constants.ColoredManaSymbol2
+toString()
+
+
+î î(N
+%1java.lang.String"cmage.client.deck.generator.DeckGeneratorPool#getBasicLandName(Ljava/lang/String;)Ljava/lang/String;*L
+
+__unknown_file (0".
+,mage.client.deck.generator.DeckGeneratorPool*4
+
+__unknown_file (
+
+%0java.lang.Stringh
+f
+
+î î(O
+landNamejava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.String¦
+£
+
+ï( ï(@
+%2java.util.List"__mapGet*9
+
+__unknown_file (
+
+
+basicLandsjava.util.Map*:
+
+__unknown_file (
+
+landNamejava.lang.Stringj
+h
+
+ï ï(A 
+basicLandsInfojava.util.List"__id*2
+
+__unknown_file (
+
+%2java.util.Listyw
+
+ð5 ð(J	
+%3int"java.util.List#size()I*>
+
+__unknown_file ("
+ 
+basicLandsInfojava.util.List2size()›
+˜
+
+ð" ð(K	
+%4int" mage.util.RandomUtil#nextInt(I)I*4
+
+__unknown_file ("
+mage.util.RandomUtil*'
+
+__unknown_file (
+	
+%3intª
+§
+
+ð ð(L$
+%5mage.cards.repository.CardInfo"
+__arrayGet*>
+
+__unknown_file ("
+ 
+basicLandsInfojava.util.List*'
+
+__unknown_file (
+	
+%4int¸µ
+
+ð ð(Z
+%6mage.cards.Card"=mage.cards.repository.CardInfo#getMockCard()Lmage/cards/Card;*B
+
+__unknown_file (&
+$
+%5mage.cards.repository.CardInfo2getMockCard()Œ‰
+
+ð ð(a
+%7mage.cards.Card"'mage.cards.Card#copy()Lmage/cards/Card;*3
+
+__unknown_file (
+
+%6mage.cards.Card2copy()"%
+
+ð ð(b
+
+%7mage.cards.Card:7
+
+í% í(=)
+color mage.constants.ColoredManaSymbol:)
+
+í> í(d
+
+basicLandsjava.util.MapB,"*
+(mage.client.deck.generator.DeckGenerator

@@ -1,0 +1,136 @@
+
+mage.abilities.effects.common.ReplaceTreasureWithAdditionalEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z„
+zD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ReplaceTreasureWithAdditionalEffect.java) )("startingBlock*!
+2+ +("
++ +(
+""*¶
+3*5 *(;¯¬
+*K *(^
+%0java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()ìé
+*5 *(_
+%1boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%0java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*ÿ
+startingBlock) )(F–
+“
+( ((
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+)% )(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+( ((
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+)4 )(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+( ((
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+)A )(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+2
+3*Ó
+1-# -((°­
+- -(5
+%2java.util.Map"<mage.game.events.CreateTokenEvent#getTokens()Ljava/util/Map;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTokens()†ƒ
+- -(>
+%3java.util.Set"%java.util.Map#keySet()Ljava/util/Set;*1
+
+__unknown_file (
+
+%2java.util.Map2keySet()¡ž
+- -(G
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%3java.util.Set2stream()º
+·
+. .(K"
+%5java.util.function.Predicate"__declareFunction*t
+
+__unknown_file (XV
+T__sonar_lambda_291$mage.abilities.effects.common.ReplaceTreasureWithAdditionalEffect‡
+„
+
+__unknown_file (,
+"
+%5java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameˆ…
+- .(L
+%8boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%5java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)"
+- .(M
+"":/
+) )(+#
+eventmage.game.events.GameEvent:,
+), )(; 
+sourcemage.abilities.Ability:"
+)< )(E
+gamemage.game.GameBEC
+Amage.abilities.effects.common.ReplaceTreasureWithAdditionalEffectHP

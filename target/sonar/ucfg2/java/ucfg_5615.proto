@@ -1,0 +1,212 @@
+
+zmage.abilities.mana.ManaOptions#checkManaReplacementAndTriggeredMana(Lmage/abilities/Ability;Lmage/game/Game;Lmage/Mana;)Zd
+XD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/mana/ManaOptions.javaÉ É(8"5*ç
+2
+â â(ˆÛ
+
+â â(!
+
+%6void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*A
+
+__unknown_file (%
+#
+eventmage.game.events.ManaEvent2'fireEvent(Lmage/game/events/GameEvent;)*
+1*%
+3
+á á("
+
+á á(
+""*◊
+
+4
+Ö5 Ö(<´®
+
+Ö5 Ö(J
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()≥∞
+
+ÖU Ö(n
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()^\
+
+Ö" Ö(4)
+%3#mage.game.events.TappedForManaEvent"#mage.game.events.TappedForManaEventÒ
+Ó
+
+Ö Ö({
+%4"Ämage.game.events.TappedForManaEvent#<init>(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/Mana;Lmage/game/Game;)V*G
+
+__unknown_file (+
+)
+%3#mage.game.events.TappedForManaEvent*2
+
+__unknown_file (
+
+%1java.util.UUID*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*2
+
+__unknown_file (
+
+%2java.util.UUID*/
+
+__unknown_file (
+
+mana	mage.Mana*4
+
+__unknown_file (
+
+gamemage.game.GameÉ
+Ä
+
+Ö Ö(|#
+eventmage.game.events.ManaEvent"__id*G
+
+__unknown_file (+
+)
+%3#mage.game.events.TappedForManaEventˇ¸
+
+Ü Ü((
+%5boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*A
+
+__unknown_file (%
+#
+eventmage.game.events.ManaEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+2
+3*≠
+5
+Ñ Ñ(ìê
+
+Ñ Ñ( 
+%0boolean"$mage.abilities.Ability#hasTapCost()Z*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2hasTapCost()*
+4
+1*∏
+1
+ã, ã(5d
+b
+
+ã, ã(?*
+%7$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""d
+b
+
+ã, ã(J*
+%8$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""´®
+
+ãL ã(a
+%9java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()µ≤
+ãl ã(Ö
+%10java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()MK
+
+ã" ã(+!
+%11mage.game.events.ManaEvent"mage.game.events.ManaEventç
+ä
+ã ã(å
+%12"çmage.game.events.ManaEvent#<init>(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/Mana;)V*?
+
+__unknown_file (#
+!
+%11mage.game.events.ManaEvent*H
+
+__unknown_file (,
+*
+%8$mage.game.events.GameEvent$EventType*2
+
+__unknown_file (
+
+%9java.util.UUID*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*3
+
+__unknown_file (
+
+%10java.util.UUID*/
+
+__unknown_file (
+
+mana	mage.Mana
+}
+ã ã(ç'
+	manaEventmage.game.events.ManaEvent"__id*?
+
+__unknown_file (#
+!
+%11mage.game.events.ManaEventçä
+
+å å()
+%13java.lang.String"&mage.Mana#toString()Ljava/lang/String;*/
+
+__unknown_file (
+
+mana	mage.Mana2
+toString()Ì
+
+å å(*
+%14void"7mage.game.events.GameEvent#setData(Ljava/lang/String;)V*E
+
+__unknown_file ()
+'
+	manaEventmage.game.events.ManaEvent*5
+
+__unknown_file (
+
+%13java.lang.String2setData(Ljava/lang/String;)˚¯
+
+ç ç(!
+%15void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+	manaEventmage.game.events.ManaEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+
+é é(
+"":/
+
+É9 É(I!
+abilitymage.abilities.Ability:$
+
+ÉJ É(T
+gamemage.game.Game:
+
+ÉU É(^
+mana	mage.ManaB#!
+mage.abilities.mana.ManaOptionsP

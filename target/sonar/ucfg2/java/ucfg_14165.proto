@@ -1,0 +1,335 @@
+
+jmage.game.command.planes.TrailOfTheMageRingsReboundEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zt
+jD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/planes/TrailOfTheMageRingsPlane.java\ \("startingBlock*–
+13e e(!†ù
+e e(.
+%5mage.players.Players"1mage.game.Game#getPlayers()Lmage/players/Players;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPlayers()óî
+e e(7
+%6java.util.Set"/java.util.LinkedHashMap#keySet()Ljava/util/Set;*8
+
+__unknown_file (
+
+%5mage.players.Players2keySet()*
+2*"
+14b b("
+b b(
+""*á
+15a a(∫∑
+a a("
+%2mage.constants.Planes"=mage.game.command.Plane#getPlaneType()Lmage/constants/Planes;*?
+
+__unknown_file (#
+!
+cPlanemage.game.command.Plane2getPlaneType()S
+Q
+a* a(N
+%3mage.constants.Planes"__id*"
+
+__unknown_file (
+""⁄◊
+a a(O
+%4boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+%2mage.constants.Planes*9
+
+__unknown_file (
+
+%3mage.constants.Planes2equals(Ljava/lang/Object;)*
+13
+14*"
+16_ _("
+_ _(
+""*‰
+17] ](öó
+] ](&
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()∏µ
+] ](8
+%1mage.game.command.Plane">mage.game.GameState#getCurrentPlane()Lmage/game/command/Plane;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getCurrentPlane()r
+p
+] ](9!
+cPlanemage.game.command.Plane"__id*;
+
+__unknown_file (
+
+%1mage.game.command.Plane*
+15
+16*!
+1w w("
+w w(
+""*˘
+2e e(R
+P
+e e(
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""å
+â
+e e(
+playerIdjava.util.UUID"
+__arrayGet*1
+
+__unknown_file (
+
+%6java.util.Set*"
+
+__unknown_file (
+""*
+1
+12*¡
+3q q(-¨
+©
+q q(A
+%19void"ámage.game.command.planes.TrailOfTheMageRingsReboundEffect#addReboundAbility(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;)V*Y
+
+__unknown_file (=;
+9mage.game.command.planes.TrailOfTheMageRingsReboundEffect*5
+
+__unknown_file (
+
+cardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+7*ˇ
+startingBlock\ \(3ä
+á
+[ [(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+\ \("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20î
+ë
+[ [(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+\, \(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21*
+17*ô
+4n. n(9|
+z
+n n(:
+spellmage.game.stack.Spell"__id*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject†ù
+o$ o(3
+%18mage.cards.Card"0mage.game.stack.Spell#getCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2	getCard()a
+_
+o o(4
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%18mage.cards.Card*
+3
+7*ƒ
+5m8 m(C±Æ
+mS m(k
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¯ı
+m8 m(l
+%17boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*3
+
+__unknown_file (
+
+%16java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+4
+7*ø
+6l. l(6§°
+l. l(="
+%15mage.game.stack.StackObject"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()Ä
+~
+l l(>*
+stackObjectmage.game.stack.StackObject"__id*@
+
+__unknown_file ($
+"
+%15mage.game.stack.StackObject*
+5
+7*ù
+7kR k(ZÖÇ
+kR k(d
+%14boolean"java.util.Iterator#hasNext()Z*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2	hasNext()*
+2
+6*ÿ
+8k6 k(:©¶
+k6 k(E!
+%12mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()™ß
+k6 k(P
+%13java.util.Iterator"3java.util.ArrayDeque#iterator()Ljava/util/Iterator;*?
+
+__unknown_file (#
+!
+%12mage.game.stack.SpellStack2
+iterator()k
+i
+k k(P
+iteratorjava.util.Iterator"__id*7
+
+__unknown_file (
+
+%13java.util.Iterator*
+7*Ù
+9h h(O
+M
+h h(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""ä
+á
+h h(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%10java.util.Set*"
+
+__unknown_file (
+""*
+8
+10*¬
+10i i(%¨
+©
+i i(9
+%11void"ámage.game.command.planes.TrailOfTheMageRingsReboundEffect#addReboundAbility(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;)V*Y
+
+__unknown_file (=;
+9mage.game.command.planes.TrailOfTheMageRingsReboundEffect*5
+
+__unknown_file (
+
+cardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+9*‡
+11h! h('ûõ
+h! h(1
+%8mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*;
+
+__unknown_file (
+
+playermage.players.Player2	getHand()T
+R
+h; h(A
+%9mage.filter.FilterCard"__id*"
+
+__unknown_file (
+""”–
+h! h(H
+%10java.util.Set"Rmage.cards.Cards#getCards(Lmage/filter/FilterCard;Lmage/game/Game;)Ljava/util/Set;*4
+
+__unknown_file (
+
+%8mage.cards.Cards*:
+
+__unknown_file (
+
+%9mage.filter.FilterCard*4
+
+__unknown_file (
+
+gamemage.game.Game22getCards(Lmage/filter/FilterCard;Lmage/game/Game;)*
+9*¸
+12f f( ˆÛ
+f f(4
+%7mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+f f(5
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Player*
+2
+11:"
+\ \(#
+gamemage.game.Game:,
+\$ \(2 
+sourcemage.abilities.AbilityB=;
+9mage.game.command.planes.TrailOfTheMageRingsReboundEffectHP

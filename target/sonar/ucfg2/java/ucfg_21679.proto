@@ -1,0 +1,2039 @@
+
+Omage.client.dialog.PreferencesDialog#loadPhases(Ljava/util/prefs/Preferences;)Vp
+dD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/dialog/PreferencesDialog.javaâ â(""15*”
+13
+ù; ù(cp
+n
+
+ù; ù(c
+%61java.lang.String"__id*A
+
+__unknown_file (%#
+!battlefieldFeedbackColorizingMode»≈
+
+ù ù(i
+%62java.lang.String"Wjava.util.prefs.Preferences#get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*@
+
+__unknown_file ($
+"
+%60java.util.prefs.Preferences*5
+
+__unknown_file (
+
+%61java.lang.String*!
+
+__unknown_file (
+22)get(Ljava/lang/String;Ljava/lang/String;)*
+12*»
+14
+ù ù(%Ø
+¨
+
+ù ù(6"
+%60java.util.prefs.Preferences"Cmage.client.MageFrame#getPreferences()Ljava/util/prefs/Preferences;*5
+
+__unknown_file ("
+mage.client.MageFrame*
+13*·`
+15
+ä ä(d
+b
+
+ä ä(*
+%0$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""å
+â
+
+ä ä('
+%1javax.swing.JSlider"__id*Z
+
+__unknown_file (>*<
+*
+%0$mage.client.dialog.PreferencesDialog"
+tooltipDelay_
+]
+
+ä) ä(@
+%2java.lang.String"__id*1
+
+__unknown_file (
+showTooltipsDelayæ
+ª
+
+ä ä(H
+
+%3void"Çmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JSlider;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*7
+
+__unknown_file (
+
+%1javax.swing.JSlider*4
+
+__unknown_file (
+
+%2java.lang.String*#
+
+__unknown_file (
+300d
+b
+
+ã ã(*
+%4$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""é
+ã
+
+ã ã('
+%5javax.swing.JCheckBox"__id*Z
+
+__unknown_file (>*<
+*
+%4$mage.client.dialog.PreferencesDialog"
+showCardName[
+Y
+
+ã) ã(<
+%6java.lang.String"__id*-
+
+__unknown_file (
+showCardNames√
+¿
+
+ã ã(E
+
+%7void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*9
+
+__unknown_file (
+
+%5javax.swing.JCheckBox*4
+
+__unknown_file (
+
+%6java.lang.String*$
+
+__unknown_file (
+trued
+b
+
+å å(*
+%8$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ì
+ê
+
+å å(,
+%9javax.swing.JCheckBox"__id*_
+
+__unknown_file (C*A
+*
+%8$mage.client.dialog.PreferencesDialog"
+showFullImagePath`
+^
+
+å. å(F
+%10java.lang.String"__id*1
+
+__unknown_file (
+showFullImagePath≈
+¬
+
+å å(O
+%11void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*9
+
+__unknown_file (
+
+%9javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%10java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ç ç(+
+%12$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""û
+õ
+
+ç ç(5
+%13javax.swing.JCheckBox"__id*i
+
+__unknown_file (M*K
++
+%12$mage.client.dialog.PreferencesDialog"
+nonLandPermanentsInOnePilei
+g
+
+ç7 ç(Q
+%14java.lang.String"__id*:
+
+__unknown_file (
+nonLandPermanentsInOnePile∆
+√
+
+ç ç(Z
+%15void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%13javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%14java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+é é(+
+%16$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""û
+õ
+
+é é(5
+%17javax.swing.JCheckBox"__id*i
+
+__unknown_file (M*K
++
+%16$mage.client.dialog.PreferencesDialog"
+showPlayerNamesPermanentlyi
+g
+
+é7 é(X
+%18java.lang.String"__id*:
+
+__unknown_file (
+showPlayerNamesPermanently∆
+√
+
+é é(a
+%19void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%17javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%18java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+è è(+
+%20$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ó
+î
+
+è è(.
+%21javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
++
+%20$mage.client.dialog.PreferencesDialog"
+displayLifeOnAvatarb
+`
+
+è0 è(J
+%22java.lang.String"__id*3
+
+__unknown_file (
+displayLiveOnAvatar∆
+√
+
+è è(S
+%23void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%21javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%22java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ê ê(+
+%24$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""õ
+ò
+
+ê ê(2
+%25javax.swing.JCheckBox"__id*f
+
+__unknown_file (J*H
++
+%24$mage.client.dialog.PreferencesDialog"
+showAbilityPickerForced`
+^
+
+ê4 ê(R
+%26java.lang.String"__id*1
+
+__unknown_file (
+showAbilityPicker∆
+√
+
+ê ê([
+%27void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%25javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%26java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ë ë(+
+%28$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""°
+û
+
+ë ë(8
+%29javax.swing.JCheckBox"__id*l
+
+__unknown_file (P*N
++
+%28$mage.client.dialog.PreferencesDialog"
+cbAllowRequestToShowHandCardsl
+j
+
+ë: ë(`
+%30java.lang.String"__id*=
+
+__unknown_file (!
+gameAllowRequestShowHandCards∆
+√
+
+ë ë(i
+%31void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%29javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%30java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+í í(+
+%32$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+í í(-
+%33javax.swing.JCheckBox"__id*a
+
+__unknown_file (E*C
++
+%32$mage.client.dialog.PreferencesDialog"
+cbShowStormCounterc
+a
+
+í/ í(J
+%34java.lang.String"__id*4
+
+__unknown_file (
+gameShowStormCounter∆
+√
+
+í í(S
+%35void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%33javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%34java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ì ì(+
+%36$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ö
+ó
+
+ì ì(1
+%37javax.swing.JCheckBox"__id*e
+
+__unknown_file (I*G
++
+%36$mage.client.dialog.PreferencesDialog"
+cbConfirmEmptyManaPoolg
+e
+
+ì3 ì(S
+%38java.lang.String"__id*8
+
+__unknown_file (
+gameConfirmEmptyManaPool∆
+√
+
+ì ì(\
+%39void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%37javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%38java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+î î(+
+%40$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+î î(0
+%41javax.swing.JCheckBox"__id*d
+
+__unknown_file (H*F
++
+%40$mage.client.dialog.PreferencesDialog"
+cbAskMoveToGraveOrderf
+d
+
+î2 î(R
+%42java.lang.String"__id*7
+
+__unknown_file (
+gameAskMoveToGraveORder∆
+√
+
+î î([
+%43void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%41javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%42java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ñ ñ(+
+%44$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+ñ ñ(0
+%45javax.swing.JCheckBox"__id*d
+
+__unknown_file (H*F
++
+%44$mage.client.dialog.PreferencesDialog"
+cbGameLogShowTurnInfob
+`
+
+ñ2 ñ(M
+%46java.lang.String"__id*3
+
+__unknown_file (
+gameLogShowTurnInfo∆
+√
+
+ñ ñ(V
+%47void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%45javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%46java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ó ó(+
+%48$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ï
+í
+
+ó ó(,
+%49javax.swing.JCheckBox"__id*`
+
+__unknown_file (D*B
++
+%48$mage.client.dialog.PreferencesDialog"
+cbGameLogAutoSave^
+\
+
+ó. ó(D
+%50java.lang.String"__id*/
+
+__unknown_file (
+gameLogAutoSave∆
+√
+
+ó ó(M
+%51void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%49javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%50java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ò ò(+
+%52$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+ò ò(-
+%53javax.swing.JCheckBox"__id*a
+
+__unknown_file (E*C
++
+%52$mage.client.dialog.PreferencesDialog"
+cbDraftLogAutoSave_
+]
+
+ò/ ò(F
+%54java.lang.String"__id*0
+
+__unknown_file (
+draftLogAutoSave∆
+√
+
+ò ò(O
+%55void"Ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%53javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%54java.lang.String*$
+
+__unknown_file (
+truee
+c
+
+ô ô(+
+%56$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+ô ô(0
+%57javax.swing.JCheckBox"__id*d
+
+__unknown_file (H*F
++
+%56$mage.client.dialog.PreferencesDialog"
+cbGameJsonLogAutoSaveb
+`
+
+ô2 ô(M
+%58java.lang.String"__id*3
+
+__unknown_file (
+gameLogJsonAutoSaveˇ
+¸
+
+ô ô(_
+%59void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%57javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%58java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falseW
+U
+
+õ õ("!
+feedbackParamjava.lang.String"__id*
+
+__unknown_file ( *
+14*Ÿ
+4
+® ®(Ce
+c
+
+© ©(+
+%81$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""õ
+ò
+
+© ©(*
+%82javax.swing.JComboBox"__id*f
+
+__unknown_file (J*H
++
+%81$mage.client.dialog.PreferencesDialog"
+cbTargetAutoChooseLevelΩ∫
+
+© ©(K
+%83void"*javax.swing.JComboBox#setSelectedIndex(I)V*:
+
+__unknown_file (
+
+%82javax.swing.JComboBox*"
+
+__unknown_file (
+""2setSelectedIndex(I)*
+1*À
+5
+ß ß(Xp
+n
+
+ß ß(X#
+autoTargetParamjava.lang.String"__id*5
+
+__unknown_file (
+
+%79java.lang.String¬
+ø
+
+®! ®(B
+
+%80int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*1
+
+__unknown_file ("
+java.lang.Integer*A
+
+__unknown_file (%
+#
+autoTargetParamjava.lang.String*
+4*ø
+6
+ß= ß(R^
+\
+
+ß= ß(R
+%78java.lang.String"__id*/
+
+__unknown_file (
+autoTargetLevel»≈
+
+ß ß(X
+%79java.lang.String"Wjava.util.prefs.Preferences#get(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*@
+
+__unknown_file ($
+"
+%77java.util.prefs.Preferences*5
+
+__unknown_file (
+
+%78java.lang.String*!
+
+__unknown_file (
+12)get(Ljava/lang/String;Ljava/lang/String;)*
+5*∆
+7
+ß ß('Ø
+¨
+
+ß ß(8"
+%77java.util.prefs.Preferences"Cmage.client.MageFrame#getPreferences()Ljava/util/prefs/Preferences;*5
+
+__unknown_file ("
+mage.client.MageFrame*
+6*s
+8
+• •(]
+[
+
+• •(#
+autoTargetParamjava.lang.String"__id*"
+
+__unknown_file (
+""*
+7*Ê
+11
+û û(?e
+c
+
+ü ü(+
+%64$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ß
+§
+
+ü ü(6
+%65javax.swing.JComboBox"__id*r
+
+__unknown_file (V*T
++
+%64$mage.client.dialog.PreferencesDialog"%
+#cbBattlefieldFeedbackColorizingModeΩ∫
+
+ü ü(U
+%66void"*javax.swing.JComboBox#setSelectedIndex(I)V*:
+
+__unknown_file (
+
+%65javax.swing.JComboBox*"
+
+__unknown_file (
+""2setSelectedIndex(I)*
+8*(
+0 "!
+
+   (
+implicit return*…
+12
+ù ù(in
+l
+
+ù ù(i!
+feedbackParamjava.lang.String"__id*5
+
+__unknown_file (
+
+%62java.lang.String¿
+Ω
+
+û û(>
+
+%63int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*1
+
+__unknown_file ("
+java.lang.Integer*?
+
+__unknown_file (#
+!
+feedbackParamjava.lang.String*
+11*”£
+1
+∞ ∞(e
+c
+
+∞ ∞(+
+%94$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ï
+í
+
+∞ ∞(,
+%95javax.swing.JCheckBox"__id*`
+
+__unknown_file (D*B
++
+%94$mage.client.dialog.PreferencesDialog"
+checkBoxUpkeepYouX
+V
+
+∞. ∞(8
+%96java.lang.String"__id*)
+
+__unknown_file (
+	upkeepYou˙
+˜
+
+∞ ∞(E
+%97void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%95javax.swing.JCheckBox*5
+
+__unknown_file (
+
+%96java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+one
+c
+
+± ±(+
+%98$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ì
+ê
+
+± ±(*
+%99javax.swing.JCheckBox"__id*^
+
+__unknown_file (B*@
++
+%98$mage.client.dialog.PreferencesDialog"
+checkBoxDrawYouW
+U
+
+±, ±(4
+%100java.lang.String"__id*'
+
+__unknown_file (	
+drawYou¸
+˘
+
+± ±(A
+%101void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*:
+
+__unknown_file (
+
+%99javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%100java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+≤ ≤(,
+%102$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ï
+í
+
+≤ ≤(*
+%103javax.swing.JCheckBox"__id*_
+
+__unknown_file (C*A
+,
+%102$mage.client.dialog.PreferencesDialog"
+checkBoxMainYouW
+U
+
+≤, ≤(4
+%104java.lang.String"__id*'
+
+__unknown_file (	
+mainYou˝
+˙
+
+≤ ≤(A
+%105void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%103javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%104java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+≥ ≥(,
+%106$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+≥ ≥(-
+%107javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%106$mage.client.dialog.PreferencesDialog"
+checkBoxBeforeCYou_
+]
+
+≥/ ≥(@
+%108java.lang.String"__id*/
+
+__unknown_file (
+beforeCombatYou˝
+˙
+
+≥ ≥(M
+%109void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%107javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%108java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+¥ ¥(,
+%110$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ó
+î
+
+¥ ¥(,
+%111javax.swing.JCheckBox"__id*a
+
+__unknown_file (E*C
+,
+%110$mage.client.dialog.PreferencesDialog"
+checkBoxEndOfCYou^
+\
+
+¥. ¥(?
+%112java.lang.String"__id*.
+
+__unknown_file (
+endOfCombatYou˝
+˙
+
+¥ ¥(L
+%113void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%111javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%112java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+µ µ(,
+%114$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+µ µ(+
+%115javax.swing.JCheckBox"__id*`
+
+__unknown_file (D*B
+,
+%114$mage.client.dialog.PreferencesDialog"
+checkBoxMain2YouX
+V
+
+µ- µ(9
+%116java.lang.String"__id*(
+
+__unknown_file (
+
+main2You˝
+˙
+
+µ µ(F
+%117void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%115javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%116java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+∂ ∂(,
+%118$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+∂ ∂(-
+%119javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%118$mage.client.dialog.PreferencesDialog"
+checkBoxEndTurnYou\
+Z
+
+∂/ ∂(>
+%120java.lang.String"__id*,
+
+__unknown_file (
+endOfTurnYou˝
+˙
+
+∂ ∂(K
+%121void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%119javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%120java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+∏ ∏(,
+%122$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ö
+ó
+
+∏ ∏(/
+%123javax.swing.JCheckBox"__id*d
+
+__unknown_file (H*F
+,
+%122$mage.client.dialog.PreferencesDialog"
+checkBoxUpkeepOthers\
+Z
+
+∏1 ∏(>
+%124java.lang.String"__id*,
+
+__unknown_file (
+upkeepOthers˝
+˙
+
+∏ ∏(K
+%125void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%123javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%124java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+π π(,
+%126$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+π π(-
+%127javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%126$mage.client.dialog.PreferencesDialog"
+checkBoxDrawOthersZ
+X
+
+π/ π(:
+%128java.lang.String"__id**
+
+__unknown_file (
+
+drawOthers˝
+˙
+
+π π(G
+%129void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%127javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%128java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+∫ ∫(,
+%130$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+∫ ∫(-
+%131javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%130$mage.client.dialog.PreferencesDialog"
+checkBoxMainOthersZ
+X
+
+∫/ ∫(:
+%132java.lang.String"__id**
+
+__unknown_file (
+
+mainOthers˝
+˙
+
+∫ ∫(G
+%133void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%131javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%132java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+ª ª(,
+%134$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""õ
+ò
+
+ª ª(0
+%135javax.swing.JCheckBox"__id*e
+
+__unknown_file (I*G
+,
+%134$mage.client.dialog.PreferencesDialog"
+checkBoxBeforeCOthersb
+`
+
+ª2 ª(F
+%136java.lang.String"__id*2
+
+__unknown_file (
+beforeCombatOthers˝
+˙
+
+ª ª(S
+%137void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%135javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%136java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+º º(,
+%138$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ö
+ó
+
+º º(/
+%139javax.swing.JCheckBox"__id*d
+
+__unknown_file (H*F
+,
+%138$mage.client.dialog.PreferencesDialog"
+checkBoxEndOfCOthersa
+_
+
+º1 º(E
+%140java.lang.String"__id*1
+
+__unknown_file (
+endOfCombatOthers˝
+˙
+
+º º(R
+%141void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%139javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%140java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+Ω Ω(,
+%142$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+Ω Ω(.
+%143javax.swing.JCheckBox"__id*c
+
+__unknown_file (G*E
+,
+%142$mage.client.dialog.PreferencesDialog"
+checkBoxMain2Others[
+Y
+
+Ω0 Ω(?
+%144java.lang.String"__id*+
+
+__unknown_file (
+main2Others˝
+˙
+
+Ω Ω(L
+%145void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%143javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%144java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+æ æ(,
+%146$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""õ
+ò
+
+æ æ(0
+%147javax.swing.JCheckBox"__id*e
+
+__unknown_file (I*G
+,
+%146$mage.client.dialog.PreferencesDialog"
+checkBoxEndTurnOthers_
+]
+
+æ2 æ(D
+%148java.lang.String"__id*/
+
+__unknown_file (
+endOfTurnOthers˝
+˙
+
+æ æ(Q
+%149void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%147javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%148java.lang.String*"
+
+__unknown_file (
+on*"
+
+__unknown_file (
+onf
+d
+
+¿ ¿(,
+%150$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""í
+è
+
+¿ ¿('
+%151javax.swing.JCheckBox"__id*\
+
+__unknown_file (@*>
+,
+%150$mage.client.dialog.PreferencesDialog"
+cbStopAttackf
+d
+
+¿) ¿(8
+%152java.lang.String"__id*6
+
+__unknown_file (
+stopDeclareAttacksStepÅ
+˛
+
+¿ ¿(I
+%153void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%151javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%152java.lang.String*$
+
+__unknown_file (
+true*$
+
+__unknown_file (
+truef
+d
+
+¡ ¡(,
+%154$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+¡ ¡(-
+%155javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%154$mage.client.dialog.PreferencesDialog"
+cbStopBlockWithAnyn
+l
+
+¡/ ¡(F
+%156java.lang.String"__id*>
+
+__unknown_file (" 
+stopDeclareBlockersStepWithAnyÅ
+˛
+
+¡ ¡(W
+%157void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%155javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%156java.lang.String*$
+
+__unknown_file (
+true*$
+
+__unknown_file (
+truef
+d
+
+¬ ¬(,
+%158$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+¬ ¬(.
+%159javax.swing.JCheckBox"__id*c
+
+__unknown_file (G*E
+,
+%158$mage.client.dialog.PreferencesDialog"
+cbStopBlockWithZeroo
+m
+
+¬0 ¬(H
+%160java.lang.String"__id*?
+
+__unknown_file (#!
+stopDeclareBlockersStepWithZeroÇ
+ˇ
+
+¬ ¬(Z
+%161void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%159javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%160java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+√ √(,
+%162$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ï
+í
+
+√ √(*
+%163javax.swing.JCheckBox"__id*_
+
+__unknown_file (C*A
+,
+%162$mage.client.dialog.PreferencesDialog"
+cbStopOnAllMainc
+a
+
+√, √(D
+%164java.lang.String"__id*3
+
+__unknown_file (
+stopOnAllMainPhasesÇ
+ˇ
+
+√ √(V
+%165void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%163javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%164java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+ƒ ƒ(,
+%166$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""î
+ë
+
+ƒ ƒ()
+%167javax.swing.JCheckBox"__id*^
+
+__unknown_file (B*@
+,
+%166$mage.client.dialog.PreferencesDialog"
+cbStopOnAllEndb
+`
+
+ƒ+ ƒ(B
+%168java.lang.String"__id*2
+
+__unknown_file (
+stopOnAllEndPhasesÇ
+ˇ
+
+ƒ ƒ(T
+%169void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%167javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%168java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+≈ ≈(,
+%170$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ù
+ö
+
+≈ ≈(2
+%171javax.swing.JCheckBox"__id*g
+
+__unknown_file (K*I
+,
+%170$mage.client.dialog.PreferencesDialog"
+cbStopOnNewStackObjectse
+c
+
+≈4 ≈(N
+%172java.lang.String"__id*5
+
+__unknown_file (
+stopOnNewStackObjectsÇ
+ˇ
+
+≈ ≈(`
+%173void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%171javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%172java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+∆ ∆(,
+%174$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+∆ ∆(-
+%175javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%174$mage.client.dialog.PreferencesDialog"
+cbPassPriorityCast`
+^
+
+∆/ ∆(E
+%176java.lang.String"__id*0
+
+__unknown_file (
+passPriorityCastÇ
+ˇ
+
+∆ ∆(W
+%177void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%175javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%176java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+« «(,
+%178$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""û
+õ
+
+« «(3
+%179javax.swing.JCheckBox"__id*h
+
+__unknown_file (L*J
+,
+%178$mage.client.dialog.PreferencesDialog"
+cbPassPriorityActivationf
+d
+
+«5 «(Q
+%180java.lang.String"__id*6
+
+__unknown_file (
+passPriorityActivationÇ
+ˇ
+
+« «(c
+%181void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%179javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%180java.lang.String*$
+
+__unknown_file (
+true*%
+
+__unknown_file (	
+falsef
+d
+
+» »(,
+%182$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""ò
+ï
+
+» »(-
+%183javax.swing.JCheckBox"__id*b
+
+__unknown_file (F*D
+,
+%182$mage.client.dialog.PreferencesDialog"
+cbAutoOrderTrigger`
+^
+
+»/ »(E
+%184java.lang.String"__id*0
+
+__unknown_file (
+autoOrderTriggerÅ
+˛
+
+» »(V
+%185void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%183javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%184java.lang.String*$
+
+__unknown_file (
+true*$
+
+__unknown_file (
+truef
+d
+
+… …(,
+%186$mage.client.dialog.PreferencesDialog"__id*"
+
+__unknown_file (
+""´
+®
+
+… …(@
+%187javax.swing.JCheckBox"__id*u
+
+__unknown_file (Y*W
+,
+%186$mage.client.dialog.PreferencesDialog"'
+%cbUseSameSettingsForReplacementEffectx
+v
+
+…B …(t
+%188java.lang.String"__id*H
+
+__unknown_file (,*
+(useSameSettingsForSameReplacementEffectsÇ
+ˇ
+… …(Ö
+%189void"ñmage.client.dialog.PreferencesDialog#load(Ljava/util/prefs/Preferences;Ljavax/swing/JCheckBox;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*B
+
+__unknown_file (&
+$
+prefsjava.util.prefs.Preferences*;
+
+__unknown_file (
+
+%187javax.swing.JCheckBox*6
+
+__unknown_file (
+
+%188java.lang.String*$
+
+__unknown_file (
+true*$
+
+__unknown_file (
+true*
+0:2
+
+â# â(4$
+prefsjava.util.prefs.PreferencesB("&
+$mage.client.dialog.PreferencesDialog

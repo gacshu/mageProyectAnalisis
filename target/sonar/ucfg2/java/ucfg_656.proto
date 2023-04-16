@@ -1,0 +1,359 @@
+
+^mage.player.human.HumanPlayer#selectDefender(Ljava/util/Set;Ljava/util/UUID;Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaø ø($"13*•
+13
+ù! ù(&¦£
+
+ú% ú(5
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ÄÁ
+
+ú% ú(R
+%1java.util.Map"Cmage.game.combat.Combat#getCreaturesForcedToAttack()Ljava/util/Map;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getCreaturesForcedToAttack()
+š
+
+ú% ú(b
+%2java.util.Set"__mapGet*1
+
+__unknown_file (
+
+%1java.util.Map*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUIDj
+h
+
+ú ú(c!
+possibleDefenderjava.util.Set"__id*1
+
+__unknown_file (
+
+%2java.util.Set*
+9
+10*Ñ
+2
+" (6ñ
+î
+
+" (<
+%22java.util.UUID"Tmage.player.human.HumanPlayer#getFixedResponseUUID(Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Gameg
+e
+
+ (=
+
+defenderIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%22java.util.UUIDÌÉ
+
+‘ ‘(C
+%23void"[mage.players.PlayerImpl#declareAttacker(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/Game;Z)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUID*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22BdeclareAttacker(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/Game;Z)"
+
+’ ’(
+""*›
+3
+ (W
+U
+
+ (+
+%20mage.constants.Outcome"__id*"
+
+__unknown_file (
+""¨¥
+
+ (@
+%21boolean"mage.player.human.HumanPlayer#chooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*;
+
+__unknown_file (
+
+%20mage.constants.Outcome*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetDefender*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2bchooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*Ï
+
+4
+‹ ‹(ùö
+
+‹ ‹(#
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*"
+
+__unknown_file (
+ (2append(Ljava/lang/String;)©¦
+
+‹+ ‹(=
+%15java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent2	getName()Š
+
+‹ ‹(>
+%16java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%14java.lang.StringBuilder*5
+
+__unknown_file (
+
+%15java.lang.String2append(Ljava/lang/String;)×Ô
+
+‹ ‹(J
+%17java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%16java.lang.StringBuilder*!
+
+__unknown_file (
+)2	append(C)§¤
+
+Œ) Œ(6
+%18java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2
+toString()üù
+
+Œ Œ(7
+%19void"9mage.target.TargetImpl#setTargetName(Ljava/lang/String;)V*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetDefender*5
+
+__unknown_file (
+
+%18java.lang.String2!setTargetName(Ljava/lang/String;)*
+3*ö
+5
+ˆ5 ˆ(;¾»
+
+ˆ5 ˆ(K
+%10java.lang.String"8mage.target.TargetImpl#getTargetName()Ljava/lang/String;*I
+
+__unknown_file (-
++
+target!mage.target.common.TargetDefender2getTargetName()GE
+
+ˆ' ˆ(4
+%11java.lang.StringBuilder"java.lang.StringBuilderÀ
+½
+
+ˆ# ˆ(L
+%12"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%11java.lang.StringBuilder*5
+
+__unknown_file (
+
+%10java.lang.Stringq
+o
+
+ˆ ˆ(M
+sbjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%11java.lang.StringBuilder•’
+
+‰% ‰(B$
+%13mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUID2getPermanent(Ljava/util/UUID;)„
+
+
+‰ ‰(C)
+attackermage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%13mage.game.permanent.Permanent*
+3
+4*§
+6
+†7 †(GZX
+
+†( †(6'
+%8!mage.target.common.TargetDefender"!mage.target.common.TargetDefender¥
+¢
+
+†$ †(T
+%9"Jmage.target.common.TargetDefender#<init>(Ljava/util/Set;Ljava/util/UUID;)V*E
+
+__unknown_file ()
+'
+%8!mage.target.common.TargetDefender*?
+
+__unknown_file (#
+!
+possibleDefenderjava.util.Set*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUID‰
+†
+
+† †(U+
+target!mage.target.common.TargetDefender"__id*E
+
+__unknown_file ()
+'
+%8!mage.target.common.TargetDefender*
+3
+5*§
+7
+ƒ ƒ(¤¡
+
+ƒ( ƒ(C
+%5java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*?
+
+__unknown_file (#
+!
+possibleDefenderjava.util.Set2
+iterator()’
+
+ƒ( ƒ(J
+%6java.util.UUID"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+%5java.util.Iterator2next()ÃÀ
+
+ƒ ƒ(W
+
+%7void"[mage.players.PlayerImpl#declareAttacker(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/Game;Z)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUID*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22BdeclareAttacker(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/Game;Z)"
+
+„ „(
+""*’
+8
+‚ ‚(yw
+
+‚ ‚(#	
+%4int"java.util.Set#size()I*?
+
+__unknown_file (#
+!
+possibleDefenderjava.util.Set2size()*
+6
+7*‡
+9
+€ €((q
+o
+
+€ €((!
+possibleDefenderjava.util.Set"__id*8
+
+__unknown_file (
+
+	defendersjava.util.Set*
+8*Ÿ
+10
+ÿ ÿ(#„
+
+ÿ ÿ(-
+%3boolean"java.util.Set#isEmpty()Z*?
+
+__unknown_file (#
+!
+possibleDefenderjava.util.Set2	isEmpty()*
+8
+9*%
+1
+• •("
+
+• •(
+"":(
+
+ø% ø(9
+	defendersjava.util.Set:*
+
+ø: ø(J
+
+attackerIdjava.util.UUID:$
+
+øK ø(T
+gamemage.game.GameB!
+mage.player.human.HumanPlayerP

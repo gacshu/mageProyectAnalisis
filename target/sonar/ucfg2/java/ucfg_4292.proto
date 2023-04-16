@@ -1,0 +1,289 @@
+
+Åmage.cards.decks.Deck#createCardNotFoundGameException(Lmage/cards/decks/DeckCardInfo;Ljava/lang/String;)Lmage/game/GameException;Z
+ND:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/Deck.javaà! à(@"6*Ü
+2ê/ ê(Åâ
+Ü
+ê/ ê(Å
+%12java.lang.String"__concat*+
+
+ê/ ê(J
+Tried to restart the DB: *'
+êM ê(Å
+
+%9java.lang.String‚ﬂ
+ê ê(Ç
+%13void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%8org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%12java.lang.String2error(Ljava/lang/Object;)*
+1*{
+3êt ê(Äd
+b
+êt ê(Ä
+%9java.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+2*y
+4
+êa ê(qc
+a
+
+êa ê(q
+%9java.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.String*
+2*®
+
+5
+ç ç(d
+b
+
+ç ç(#*
+%2$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""°û
+
+ç ç(-
+
+%3void"/mage.cards.repository.CardRepository#closeDB()V*H
+
+__unknown_file (,
+*
+%2$mage.cards.repository.CardRepository2	closeDB()d
+b
+
+é é(#*
+%4$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""üú
+
+é é(,
+
+%5void".mage.cards.repository.CardRepository#openDB()V*H
+
+__unknown_file (,
+*
+%4$mage.cards.repository.CardRepository2openDB()d
+b
+
+è è(.*
+%6$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""±Æ
+
+è è(J$
+%7mage.cards.repository.CardInfo"amage.cards.repository.CardRepository#findCard(Ljava/lang/String;)Lmage/cards/repository/CardInfo;*H
+
+__unknown_file (,
+*
+%6$mage.cards.repository.CardRepository*/
+
+__unknown_file (
+Silvercoat Lion2findCard(Ljava/lang/String;)Ö
+Ç
+
+è è(J*
+cardInfomage.cards.repository.CardInfo"__id*B
+
+__unknown_file (&
+$
+%7mage.cards.repository.CardInfo⁄
+◊
+
+ê ê((
+%8org.apache.log4j.Logger"Morg.apache.log4j.Logger#getLogger(Ljava/lang/Class;)Lorg/apache/log4j/Logger;*7
+
+__unknown_file ("
+org.apache.log4j.Logger*"
+
+__unknown_file (
+""*
+3
+4*π
+6
+ä ä(*d
+b
+
+ä ä(3*
+%0$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""±Æ
+
+ä ä(O$
+%1mage.cards.repository.CardInfo"amage.cards.repository.CardRepository#findCard(Ljava/lang/String;)Lmage/cards/repository/CardInfo;*H
+
+__unknown_file (,
+*
+%0$mage.cards.repository.CardRepository*/
+
+__unknown_file (
+Silvercoat Lion2findCard(Ljava/lang/String;)Ö
+Ç
+
+ä ä(P*
+cardInfomage.cards.repository.CardInfo"__id*B
+
+__unknown_file (&
+$
+%1mage.cards.repository.CardInfo*
+5
+1*Õ
+1
+í! í(4√¿
+
+í7 í(Q
+%14java.lang.String"=mage.cards.decks.DeckCardInfo#getCardName()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+deckCardInfomage.cards.decks.DeckCardInfo2getCardName()
+}
+
+í! í(Q
+%15java.lang.String"__concat*#
+
+í! í(4
+Card not found - *'
+
+í7 í(Q
+
+%14java.lang.Stringq
+o
+
+í! í(Y
+%16java.lang.String"__concat*'
+
+í! í(Q
+
+%15java.lang.String*
+
+íT í(Y
+ - ¡æ
+
+í\ í(u
+%17java.lang.String"<mage.cards.decks.DeckCardInfo#getSetCode()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+deckCardInfomage.cards.decks.DeckCardInfo2getSetCode()Ñ
+Å
+
+í! í(u
+%18java.lang.String"__concat*'
+
+í! í(Y
+
+%16java.lang.String*'
+
+í\ í(u
+
+%17java.lang.Stringo
+m
+
+í! í({
+%19java.lang.String"__concat*'
+
+í! í(u
+
+%18java.lang.String*
+
+íx í({
+/¬ø
+í~ í(ó
+%20java.lang.String"<mage.cards.decks.DeckCardInfo#getCardNum()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+deckCardInfomage.cards.decks.DeckCardInfo2getCardNum()Ü
+É
+í! í(ó
+%21java.lang.String"__concat*'
+
+í! í({
+
+%19java.lang.String*(
+í~ í(ó
+
+%20java.lang.String~
+|
+í! í(®
+%22java.lang.String"__concat*(
+í! í(ó
+
+%21java.lang.String* 
+íö í(®
+ for deck - ç
+ä
+í! í(≥
+%23java.lang.String"__concat*(
+í! í(®
+
+%22java.lang.String*.
+í´ í(≥
+
+deckNamejava.lang.Stringt
+r
+í! í(∫
+%24java.lang.String"__concat*(
+í! í(≥
+
+%23java.lang.String*
+í∂ í(∫
+\n‚
+ﬂ
+í! ì(É
+%25java.lang.String"__concat*(
+í! í(∫
+
+%24java.lang.String*Ç
+ì ì(Ésq
+oPossible reason is, that you use cards in your deck, that are only supported in newer versions of the server.\n–
+Õ
+
+í! î(t
+%26java.lang.String"__concat*(
+í! ì(É
+
+%25java.lang.String*r
+
+î î(tdb
+`So it can help to use the same card from another set, that's already supported from this server.GE
+
+í í( 
+%27mage.game.GameException"mage.game.GameException¿
+Ω
+
+í î(u
+%28"3mage.game.GameException#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%27mage.game.GameException*5
+
+__unknown_file (
+
+%26java.lang.String".
+
+í î(v 
+
+%27mage.game.GameException:;
+
+àA à([-
+deckCardInfomage.cards.decks.DeckCardInfo:*
+
+à\ à(k
+deckNamejava.lang.StringB"
+mage.cards.decks.Deck

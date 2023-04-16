@@ -1,0 +1,259 @@
+
+omage.abilities.effects.common.continuous.BecomesColorAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BecomesColorAllEffect.javag g("startingBlock*"
+13j j("
+j j(
+""*®
+14h h( °­
+h+ h(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+h h(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+h h(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+13
+12*!
+1} }("
+} }(
+""*!
+2{ {("
+{ {(
+""*œ
+3m m($b
+`
+m m($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""
+š
+m m($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%6java.util.List*"
+
+__unknown_file (
+""*	
+2
+5
+6*ÿ
+startingBlockg g(3Š
+‡
+f f(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+g g("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19”
+‘
+f f(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+g, g(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%20*
+14*Ò
+4x x(½º
+x x(
+%18void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect2	discard()*
+3*‘
+5w w(#¡
+ž
+w w(#
+%16mage.constants.Duration"__id*l
+
+__unknown_file (P*N@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect"
+
+durationV
+T
+w' w(6
+%17mage.constants.Duration"__id*"
+
+__unknown_file (
+""*
+3
+4*‹
+6o o(!›
+˜
+o o(!
+%14mage.constants.Layer"__id*i
+
+__unknown_file (M*K@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect"
+layerS
+Q
+p p(3
+%15mage.constants.Layer"__id*"
+
+__unknown_file (
+""*	
+3
+7
+8*‹
+7t t(%€ý
+t t(4
+%11mage.ObjectColor"<mage.MageObject#getColor(Lmage/game/Game;)Lmage/ObjectColor;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getColor(Lmage/game/Game;)š
+—
+t> t(F
+%12mage.ObjectColor"__id*l
+
+__unknown_file (P*N@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect"
+
+setColorÖÓ
+t t(G
+%13void".mage.ObjectColor#addColor(Lmage/ObjectColor;)V*5
+
+__unknown_file (
+
+%11mage.ObjectColor*5
+
+__unknown_file (
+
+%12mage.ObjectColor2addColor(Lmage/ObjectColor;)*
+3*‰
+8r  r()ÿü
+r  r(8
+%7mage.ObjectColor"<mage.MageObject#getColor(Lmage/game/Game;)Lmage/ObjectColor;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getColor(Lmage/game/Game;)64
+rF r(Q
+%8mage.ObjectColor"mage.ObjectColord
+b
+rB r(S
+%9"mage.ObjectColor#<init>()V*4
+
+__unknown_file (
+
+%8mage.ObjectColorÔÑ
+r  r(T
+%10void".mage.ObjectColor#setColor(Lmage/ObjectColor;)V*4
+
+__unknown_file (
+
+%7mage.ObjectColor*4
+
+__unknown_file (
+
+%8mage.ObjectColor2setColor(Lmage/ObjectColor;)*
+7*Œ	
+11m' m(+¾»
+m' m(<%
+%3mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¢
+Ÿ
+mQ m(W!
+%4mage.filter.FilterPermanent"__id*j
+
+__unknown_file (N*L@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect"
+filter°­
+mY m(q
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÝÚ
+	m' m(€
+%6java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%3mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%4mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%5java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+3*³
+12l l(™
+–
+l l(
+%2mage.ObjectColor"__id*l
+
+__unknown_file (P*N@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffect"
+
+setColor*
+11
+1:"
+g g(#
+gamemage.game.Game:,
+g$ g(2 
+sourcemage.abilities.AbilityBB@
+>mage.abilities.effects.common.continuous.BecomesColorAllEffectHP

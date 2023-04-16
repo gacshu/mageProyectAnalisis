@@ -1,0 +1,173 @@
+
+zmage.abilities.common.SpellCounteredControllerTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/SpellCounteredControllerTriggeredAbility.java* *("startingBlock*
+20= 0(A¯¬
+0Z 0(m
+%8java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()Q
+O
+0o 0(y
+%9mage.constants.Zone"__id*"
+
+__unknown_file (
+""èå
+0= 0(z
+%10mage.MageObject"^mage.game.Game#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID*7
+
+__unknown_file (
+
+%9mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)}
+{
+0 0({3
+counteredStackObjectmage.game.stack.StackObject"__id*4
+
+__unknown_file (
+
+%10mage.MageObject"
+1 1(;
+""*ò
+3/0 /(HÔÑ
+/X /(i
+%6java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*^
+
+__unknown_file (B@
+>mage.abilities.common.SpellCounteredControllerTriggeredAbility2getControllerId()ƒ€
+/0 /(j
+%7boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*U
+
+__unknown_file (9
+7
+stackObjectThatCounteredmage.game.stack.StackObject*2
+
+__unknown_file (
+
+%6java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*„
+startingBlock* *(;—
+”
+) )(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+** *(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%11Š
+‡
+) )(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+*6 *(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12*
+6*‡
+5-5 -(9¯¬
+-R -(e
+%3java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()Q
+O
+-g -(q
+%4mage.constants.Zone"__id*"
+
+__unknown_file (
+""çä
+-5 -(r
+%5mage.MageObject"^mage.game.Game#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID*7
+
+__unknown_file (
+
+%4mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)€
+~
+- -(r7
+stackObjectThatCounteredmage.game.stack.StackObject"__id*3
+
+__unknown_file (
+
+%5mage.MageObject*
+3
+1*¨
+6+/ +(3¨¥
++/ +(> 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
++N +(a
+%1java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId() 
++/ +(b!
+%2mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%1java.util.UUID2 getStackObject(Ljava/util/UUID;)
+Š
++ +(c7
+stackObjectThatCounteredmage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%2mage.game.stack.StackObject*	
+3
+5
+1*!
+13 3("
+3 3(
+"":/
+*  *(0#
+eventmage.game.events.GameEvent:"
+*1 *(:
+gamemage.game.GameBB@
+>mage.abilities.common.SpellCounteredControllerTriggeredAbilityHP

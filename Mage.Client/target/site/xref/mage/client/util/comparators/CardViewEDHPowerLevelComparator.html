@@ -1,0 +1,607 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>CardViewEDHPowerLevelComparator xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../apidocs/mage/client/util/comparators/CardViewEDHPowerLevelComparator.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.client.util.comparators;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.view.CardView;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> java.util.Locale;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="CardViewEDHPowerLevelComparator" href="../../../../mage/client/util/comparators/CardViewEDHPowerLevelComparator.html#CardViewEDHPowerLevelComparator">CardViewEDHPowerLevelComparator</a> <strong class="jxr_keyword">implements</strong> <a name="CardViewComparator" href="../../../../mage/client/util/comparators/CardViewComparator.html#CardViewComparator">CardViewComparator</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      @Override
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> compare(CardView o1, CardView o2) {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>          <strong class="jxr_keyword">return</strong> Integer.compare(getPowerLevel(o1), getPowerLevel(o2));
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      }
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      @Override
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">public</strong> String getCategoryName(CardView sample) {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"EDH: "</span> + getPowerLevel(sample);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      }
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> getPowerLevel(CardView card) {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          <strong class="jxr_keyword">int</strong> thisMaxPower = 0;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">boolean</strong> anyNumberOfTarget = false;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">boolean</strong> annihilator = false;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">boolean</strong> buyback = false;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">boolean</strong> cascade = false;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">boolean</strong> cantBe = false;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          <strong class="jxr_keyword">boolean</strong> cantUntap = false;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">boolean</strong> copy = false;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <strong class="jxr_keyword">boolean</strong> costLessEach = false;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          <strong class="jxr_keyword">boolean</strong> createToken = false;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <strong class="jxr_keyword">boolean</strong> dredge = false;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <strong class="jxr_keyword">boolean</strong> exile = false;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">boolean</strong> exileAll = false;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <strong class="jxr_keyword">boolean</strong> counter = false;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <strong class="jxr_keyword">boolean</strong> destroy = false;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          <strong class="jxr_keyword">boolean</strong> destroyAll = false;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <strong class="jxr_keyword">boolean</strong> each = false;
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <strong class="jxr_keyword">boolean</strong> exalted = false;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">boolean</strong> doesntUntap = false;
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          <strong class="jxr_keyword">boolean</strong> drawCards = false;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">boolean</strong> evoke = false;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">boolean</strong> extraTurns = false;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <strong class="jxr_keyword">boolean</strong> flash = false;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          <strong class="jxr_keyword">boolean</strong> flashback = false;
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          <strong class="jxr_keyword">boolean</strong> flicker = false;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <strong class="jxr_keyword">boolean</strong> gainControl = false;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <strong class="jxr_keyword">boolean</strong> hexproof = false;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">boolean</strong> infect = false;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <strong class="jxr_keyword">boolean</strong> lifeTotalBecomes = false;
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <strong class="jxr_keyword">boolean</strong> mayCastForFree = false;
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <strong class="jxr_keyword">boolean</strong> menace = false;
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <strong class="jxr_keyword">boolean</strong> miracle = false;
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">boolean</strong> overload = false;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <strong class="jxr_keyword">boolean</strong> persist = false;
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <strong class="jxr_keyword">boolean</strong> preventDamage = false;
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <strong class="jxr_keyword">boolean</strong> proliferate = false;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          <strong class="jxr_keyword">boolean</strong> protection = false;
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <strong class="jxr_keyword">boolean</strong> putUnderYourControl = false;
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <strong class="jxr_keyword">boolean</strong> retrace = false;
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <strong class="jxr_keyword">boolean</strong> returnFromYourGY = false;
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">boolean</strong> sacrifice = false;
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <strong class="jxr_keyword">boolean</strong> shroud = false;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <strong class="jxr_keyword">boolean</strong> skip = false;
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">boolean</strong> sliver = false;
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <strong class="jxr_keyword">boolean</strong> storm = false;
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">boolean</strong> trample = false;
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <strong class="jxr_keyword">boolean</strong> tutor = false;
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <strong class="jxr_keyword">boolean</strong> tutorBasic = false;
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">boolean</strong> twiceAs = false;
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">boolean</strong> unblockable = false;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          <strong class="jxr_keyword">boolean</strong> undying = false;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <strong class="jxr_keyword">boolean</strong> untapTarget = false;
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">boolean</strong> wheneverEnters = false;
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <strong class="jxr_keyword">boolean</strong> whenCounterThatSpell = false;
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <strong class="jxr_keyword">boolean</strong> xCost = false;
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          <strong class="jxr_keyword">boolean</strong> youControlTarget = false;
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">boolean</strong> yourOpponentsControl = false;
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">boolean</strong> whenYouCast = false;
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          <strong class="jxr_keyword">for</strong> (String str : card.getRules()) {
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>              String s = str.toLowerCase(Locale.ENGLISH);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>              annihilator |= s.contains(<span class="jxr_string">"annihilator"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>              anyNumberOfTarget |= s.contains(<span class="jxr_string">"any number"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>              buyback |= s.contains(<span class="jxr_string">"buyback"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>              cantBe |= s.contains(<span class="jxr_string">"can't be"</span>);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>              cantUntap |= s.contains(<span class="jxr_string">"can't untap"</span>) || s.contains(<span class="jxr_string">"don't untap"</span>);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>              cascade |= s.contains(<span class="jxr_string">"cascade"</span>);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>              copy |= s.contains(<span class="jxr_string">"copy"</span>);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>              costLessEach |= s.contains(<span class="jxr_string">"cost"</span>) || s.contains(<span class="jxr_string">"less"</span>) || s.contains(<span class="jxr_string">"each"</span>);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>              counter |= s.contains(<span class="jxr_string">"counter"</span>) &amp;&amp; s.contains(<span class="jxr_string">"target"</span>);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>              createToken |= s.contains(<span class="jxr_string">"create"</span>) &amp;&amp; s.contains(<span class="jxr_string">"token"</span>);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>              destroy |= s.contains(<span class="jxr_string">"destroy"</span>);
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>              destroyAll |= s.contains(<span class="jxr_string">"destroy all"</span>);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>              doesntUntap |= s.contains(<span class="jxr_string">"doesn't untap"</span>);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>              doesntUntap |= s.contains(<span class="jxr_string">"don't untap"</span>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>             drawCards |= s.contains(<span class="jxr_string">"draw cards"</span>);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>             dredge |= s.contains(<span class="jxr_string">"dredge"</span>);
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>             each |= s.contains(<span class="jxr_string">"each"</span>);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>             evoke |= s.contains(<span class="jxr_string">"evoke"</span>);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>             exalted |= s.contains(<span class="jxr_string">"exalted"</span>);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>             exile |= s.contains(<span class="jxr_string">"exile"</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>             exileAll |= s.contains(<span class="jxr_string">"exile"</span>) &amp;&amp; s.contains(<span class="jxr_string">" all "</span>);
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>             extraTurns |= s.contains(<span class="jxr_string">"extra turn"</span>);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>             flicker |= s.contains(<span class="jxr_string">"exile"</span>) &amp;&amp; s.contains(<span class="jxr_string">"return"</span>) &amp;&amp; s.contains(<span class="jxr_string">"to the battlefield under"</span>);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>             flash |= s.contains(<span class="jxr_string">"flash"</span>);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>             flashback |= s.contains(<span class="jxr_string">"flashback"</span>);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>             gainControl |= s.contains(<span class="jxr_string">"gain control"</span>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>             hexproof |= s.contains(<span class="jxr_string">"hexproof"</span>);
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>             infect |= s.contains(<span class="jxr_string">"infect"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             lifeTotalBecomes |= s.contains(<span class="jxr_string">"life total becomes"</span>);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>             mayCastForFree |= s.contains(<span class="jxr_string">"may cast"</span>) &amp;&amp; s.contains(<span class="jxr_string">"without paying"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>             menace |= s.contains(<span class="jxr_string">"menace"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>             miracle |= s.contains(<span class="jxr_string">"miracle"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>             overload |= s.contains(<span class="jxr_string">"overload"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>             persist |= s.contains(<span class="jxr_string">"persist"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>             preventDamage |= s.contains(<span class="jxr_string">"prevent"</span>) &amp;&amp; s.contains(<span class="jxr_string">"all"</span>) &amp;&amp; s.contains(<span class="jxr_string">"damage"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>             proliferate |= s.contains(<span class="jxr_string">"proliferate"</span>);
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>             protection |= s.contains(<span class="jxr_string">"protection"</span>);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>             putUnderYourControl |= s.contains(<span class="jxr_string">"put"</span>) &amp;&amp; s.contains(<span class="jxr_string">"under your control"</span>);
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>             retrace |= s.contains(<span class="jxr_string">"retrace"</span>);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>             returnFromYourGY |= s.contains(<span class="jxr_string">"return"</span>) &amp;&amp; s.contains(<span class="jxr_string">"from your graveyard"</span>);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>             sacrifice |= s.contains(<span class="jxr_string">"sacrifice"</span>);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>             shroud |= s.contains(<span class="jxr_string">"shroud"</span>);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>             skip |= s.contains(<span class="jxr_string">"skip"</span>);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>             sliver |= s.contains(<span class="jxr_string">"sliver"</span>);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>             storm |= s.contains(<span class="jxr_string">"storm"</span>);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>             trample |= s.contains(<span class="jxr_string">"trample"</span>);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>             tutor |= s.contains(<span class="jxr_string">"search your library"</span>) &amp;&amp; !s.contains(<span class="jxr_string">"basic land"</span>);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>             tutorBasic |= s.contains(<span class="jxr_string">"search your library"</span>) &amp;&amp; s.contains(<span class="jxr_string">"basic land"</span>);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>             twiceAs |= s.contains(<span class="jxr_string">"twice that many"</span>) || s.contains(<span class="jxr_string">"twice as much"</span>);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>             unblockable |= s.contains(<span class="jxr_string">"can't be blocked"</span>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>             undying |= s.contains(<span class="jxr_string">"undying"</span>);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>             untapTarget |= s.contains(<span class="jxr_string">"untap target"</span>);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>             whenCounterThatSpell |= s.contains(<span class="jxr_string">"when"</span>) &amp;&amp; s.contains(<span class="jxr_string">"counter that spell"</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>             wheneverEnters |= s.contains(<span class="jxr_string">"when"</span>) &amp;&amp; s.contains(<span class="jxr_string">"another"</span>) &amp;&amp; s.contains(<span class="jxr_string">"enters"</span>);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>             youControlTarget |= s.contains(<span class="jxr_string">"you control target"</span>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>             yourOpponentsControl |= s.contains(<span class="jxr_string">"your opponents control"</span>);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>             whenYouCast |= s.contains(<span class="jxr_string">"when you cast"</span>) || s.contains(<span class="jxr_string">"whenever you cast"</span>);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         }
+<a class="jxr_linenumber" name="L144" href="#L144">144</a> 
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <strong class="jxr_keyword">if</strong> (extraTurns) {
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>             thisMaxPower = Math.max(thisMaxPower, 7);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         }
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         <strong class="jxr_keyword">if</strong> (buyback) {
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>             thisMaxPower = Math.max(thisMaxPower, 6);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         }
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         <strong class="jxr_keyword">if</strong> (tutor) {
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>             thisMaxPower = Math.max(thisMaxPower, 6);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         }
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         <strong class="jxr_keyword">if</strong> (annihilator) {
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         }
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         <strong class="jxr_keyword">if</strong> (cantUntap) {
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         }
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         <strong class="jxr_keyword">if</strong> (costLessEach) {
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         }
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         <strong class="jxr_keyword">if</strong> (infect) {
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         }
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         <strong class="jxr_keyword">if</strong> (overload) {
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         }
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <strong class="jxr_keyword">if</strong> (twiceAs) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>             thisMaxPower = Math.max(thisMaxPower, 5);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         }
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         <strong class="jxr_keyword">if</strong> (cascade) {
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         }
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         <strong class="jxr_keyword">if</strong> (doesntUntap) {
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         }
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         <strong class="jxr_keyword">if</strong> (each) {
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         }
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <strong class="jxr_keyword">if</strong> (exileAll) {
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         }
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <strong class="jxr_keyword">if</strong> (flash) {
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         }
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         <strong class="jxr_keyword">if</strong> (flashback) {
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         }
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         <strong class="jxr_keyword">if</strong> (flicker) {
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         }
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         <strong class="jxr_keyword">if</strong> (gainControl) {
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         }
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         <strong class="jxr_keyword">if</strong> (lifeTotalBecomes) {
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         }
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         <strong class="jxr_keyword">if</strong> (mayCastForFree) {
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         }
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         <strong class="jxr_keyword">if</strong> (preventDamage) {
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         }
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         <strong class="jxr_keyword">if</strong> (proliferate) {
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         }
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         <strong class="jxr_keyword">if</strong> (protection) {
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         }
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         <strong class="jxr_keyword">if</strong> (putUnderYourControl) {
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         }
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         <strong class="jxr_keyword">if</strong> (returnFromYourGY) {
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         }
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         <strong class="jxr_keyword">if</strong> (sacrifice) {
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         }
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         <strong class="jxr_keyword">if</strong> (skip) {
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         }
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         <strong class="jxr_keyword">if</strong> (storm) {
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         }
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         <strong class="jxr_keyword">if</strong> (unblockable) {
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         }
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         <strong class="jxr_keyword">if</strong> (whenCounterThatSpell) {
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         }
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         <strong class="jxr_keyword">if</strong> (wheneverEnters) {
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         }
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         <strong class="jxr_keyword">if</strong> (xCost) {
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         }
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         <strong class="jxr_keyword">if</strong> (youControlTarget) {
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         }
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         <strong class="jxr_keyword">if</strong> (yourOpponentsControl) {
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         }
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         <strong class="jxr_keyword">if</strong> (whenYouCast) {
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>             thisMaxPower = Math.max(thisMaxPower, 4);
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         }
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         <strong class="jxr_keyword">if</strong> (anyNumberOfTarget) {
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         }
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         <strong class="jxr_keyword">if</strong> (createToken) {
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         }
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         <strong class="jxr_keyword">if</strong> (destroyAll) {
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         }
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         <strong class="jxr_keyword">if</strong> (dredge) {
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         }
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         <strong class="jxr_keyword">if</strong> (hexproof) {
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         }
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         <strong class="jxr_keyword">if</strong> (shroud) {
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         }
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         <strong class="jxr_keyword">if</strong> (undying) {
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         }
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         <strong class="jxr_keyword">if</strong> (persist) {
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>             thisMaxPower = Math.max(thisMaxPower, 3);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         }
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         <strong class="jxr_keyword">if</strong> (cantBe) {
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         }
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         <strong class="jxr_keyword">if</strong> (evoke) {
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>         }
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         <strong class="jxr_keyword">if</strong> (exile) {
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         }
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         <strong class="jxr_keyword">if</strong> (menace) {
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         }
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         <strong class="jxr_keyword">if</strong> (miracle) {
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         }
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         <strong class="jxr_keyword">if</strong> (sliver) {
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         }
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         <strong class="jxr_keyword">if</strong> (untapTarget) {
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>             thisMaxPower = Math.max(thisMaxPower, 2);
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         }
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         <strong class="jxr_keyword">if</strong> (copy) {
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         }
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         <strong class="jxr_keyword">if</strong> (counter) {
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         }
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         <strong class="jxr_keyword">if</strong> (destroy) {
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         }
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         <strong class="jxr_keyword">if</strong> (drawCards) {
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         }
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         <strong class="jxr_keyword">if</strong> (exalted) {
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         }
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>         <strong class="jxr_keyword">if</strong> (retrace) {
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>         }
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         <strong class="jxr_keyword">if</strong> (trample) {
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         }
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         <strong class="jxr_keyword">if</strong> (tutorBasic) {
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>             thisMaxPower = Math.max(thisMaxPower, 1);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         }
+<a class="jxr_linenumber" name="L316" href="#L316">316</a> 
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         <strong class="jxr_keyword">if</strong> (card.isPlanesWalker()) {
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>             thisMaxPower = Math.max(thisMaxPower, 6);
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         }
+<a class="jxr_linenumber" name="L320" href="#L320">320</a> 
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>         String cn = card.getName().toLowerCase(Locale.ENGLISH);
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         <strong class="jxr_keyword">if</strong> (cn.equals(<span class="jxr_string">"acid rain"</span>)
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>                 || cn.equals(<span class="jxr_string">"agent of treachery"</span>)
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>                 || cn.equals(<span class="jxr_string">"anafenza, the foremost"</span>)
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>                 || cn.equals(<span class="jxr_string">"ancient tomb"</span>)
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>                 || cn.equals(<span class="jxr_string">"animar, soul of element"</span>)
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>                 || cn.equals(<span class="jxr_string">"animate artifact"</span>)
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>                 || cn.equals(<span class="jxr_string">"apocalypse"</span>)
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>                 || cn.equals(<span class="jxr_string">"archaeomancer"</span>)
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>                 || cn.equals(<span class="jxr_string">"arcum dagsson"</span>)
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>                 || cn.equals(<span class="jxr_string">"armageddon"</span>)
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>                 || cn.equals(<span class="jxr_string">"ashnod's altar"</span>)
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>                 || cn.equals(<span class="jxr_string">"atraxa, praetors' voice"</span>)
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>                 || cn.equals(<span class="jxr_string">"aura flux"</span>)
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>                 || cn.equals(<span class="jxr_string">"aura shards"</span>)
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>                 || cn.equals(<span class="jxr_string">"avacyn, angel of hope"</span>)
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>                 || cn.equals(<span class="jxr_string">"azami, lady of scrolls"</span>)
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>                 || cn.equals(<span class="jxr_string">"azusa, lost but seeking"</span>)
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>                 || cn.equals(<span class="jxr_string">"back to basics"</span>)
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>                 || cn.equals(<span class="jxr_string">"bane of progress"</span>)
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>                 || cn.equals(<span class="jxr_string">"basalt monolith"</span>)
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>                 || cn.equals(<span class="jxr_string">"bend or break"</span>)
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>                 || cn.equals(<span class="jxr_string">"blightsteel collossus"</span>)
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>                 || cn.equals(<span class="jxr_string">"blightsteel colossus"</span>)
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>                 || cn.equals(<span class="jxr_string">"blood moon"</span>)
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>                 || cn.equals(<span class="jxr_string">"boil"</span>)
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>                 || cn.equals(<span class="jxr_string">"boiling seas"</span>)
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>                 || cn.equals(<span class="jxr_string">"brago, king eternal"</span>)
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>                 || cn.equals(<span class="jxr_string">"braids, cabal minion"</span>)
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>                 || cn.equals(<span class="jxr_string">"bribery"</span>)
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>                 || cn.equals(<span class="jxr_string">"burning sands"</span>)
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>                 || cn.equals(<span class="jxr_string">"cabal coffers"</span>)
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>                 || cn.equals(<span class="jxr_string">"candelabra of tawnos"</span>)
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>                 || cn.equals(<span class="jxr_string">"captain sisay"</span>)
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>                 || cn.equals(<span class="jxr_string">"card view"</span>)
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>                 || cn.equals(<span class="jxr_string">"cataclysm"</span>)
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>                 || cn.equals(<span class="jxr_string">"catastrophe"</span>)
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>                 || cn.equals(<span class="jxr_string">"celestial dawn"</span>)
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>                 || cn.equals(<span class="jxr_string">"cephalid aristocrat"</span>)
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>                 || cn.equals(<span class="jxr_string">"cephalid illusionist"</span>)
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>                 || cn.equals(<span class="jxr_string">"changeling berserker"</span>)
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>                 || cn.equals(<span class="jxr_string">"child of alara"</span>)
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>                 || cn.equals(<span class="jxr_string">"chulane, teller of tales"</span>)
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>                 || cn.equals(<span class="jxr_string">"cinderhaze wretch"</span>)
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>                 || cn.equals(<span class="jxr_string">"coalition relic"</span>)
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>                 || cn.equals(<span class="jxr_string">"confusion in the ranks"</span>)
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>                 || cn.equals(<span class="jxr_string">"consecrated sphinx"</span>)
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>                 || cn.equals(<span class="jxr_string">"contamination"</span>)
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>                 || cn.equals(<span class="jxr_string">"craterhoof behemoth"</span>)
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>                 || cn.equals(<span class="jxr_string">"cryptic gateway"</span>)
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>                 || cn.equals(<span class="jxr_string">"cyclonic rift"</span>)
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>                 || cn.equals(<span class="jxr_string">"deadeye navigator"</span>)
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>                 || cn.equals(<span class="jxr_string">"death cloud"</span>)
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>                 || cn.equals(<span class="jxr_string">"decree of annihilation"</span>)
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>                 || cn.equals(<span class="jxr_string">"decree of silence"</span>)
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>                 || cn.equals(<span class="jxr_string">"deepglow skate"</span>)
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>                 || cn.equals(<span class="jxr_string">"demonic consultation"</span>)
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>                 || cn.equals(<span class="jxr_string">"derevi, empyrial tactician"</span>)
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>                 || cn.equals(<span class="jxr_string">"devastation"</span>)
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>                 || cn.equals(<span class="jxr_string">"dig through time"</span>)
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>                 || cn.equals(<span class="jxr_string">"divine intervention"</span>)
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>                 || cn.equals(<span class="jxr_string">"dockside extortionist"</span>)
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>                 || cn.equals(<span class="jxr_string">"doomsday"</span>)
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>                 || cn.equals(<span class="jxr_string">"doubling season"</span>)
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>                 || cn.equals(<span class="jxr_string">"drannith magistrate"</span>)
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>                 || cn.equals(<span class="jxr_string">"dross scorpion"</span>)
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>                 || cn.equals(<span class="jxr_string">"earthcraft"</span>)
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>                 || cn.equals(<span class="jxr_string">"edric, spymaster of trest"</span>)
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>                 || cn.equals(<span class="jxr_string">"elesh norn, grand cenobite"</span>)
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>                 || cn.equals(<span class="jxr_string">"embargo"</span>)
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>                 || cn.equals(<span class="jxr_string">"emrakul, the promised end"</span>)
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>                 || cn.equals(<span class="jxr_string">"enter the infinite"</span>)
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>                 || cn.equals(<span class="jxr_string">"entomb"</span>)
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>                 || cn.equals(<span class="jxr_string">"epicenter"</span>)
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>                 || cn.equals(<span class="jxr_string">"erratic portal"</span>)
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>                 || cn.equals(<span class="jxr_string">"expropriate"</span>)
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>                 || cn.equals(<span class="jxr_string">"exquisite blood"</span>)
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>                 || cn.equals(<span class="jxr_string">"fall of the thran"</span>)
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>                 || cn.equals(<span class="jxr_string">"fierce guardianship"</span>)
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>                 || cn.equals(<span class="jxr_string">"food chain"</span>)
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>                 || cn.equals(<span class="jxr_string">"force of negation"</span>)
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>                 || cn.equals(<span class="jxr_string">"force of will"</span>)
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>                 || cn.equals(<span class="jxr_string">"future sight"</span>)
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>                 || cn.equals(<span class="jxr_string">"gaddock teeg"</span>)
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>                 || cn.equals(<span class="jxr_string">"gaea's cradle"</span>)
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>                 || cn.equals(<span class="jxr_string">"genesis chamber"</span>)
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>                 || cn.equals(<span class="jxr_string">"ghave, guru of spores"</span>)
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>                 || cn.equals(<span class="jxr_string">"gilded drake"</span>)
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>                 || cn.equals(<span class="jxr_string">"glenn, the voice of calm"</span>)
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>                 || cn.equals(<span class="jxr_string">"global ruin"</span>)
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>                 || cn.equals(<span class="jxr_string">"golos, tireless pilgrim"</span>)
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>                 || cn.equals(<span class="jxr_string">"grand arbiter augustin iv"</span>)
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>                 || cn.equals(<span class="jxr_string">"grave pact"</span>)
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>                 || cn.equals(<span class="jxr_string">"grave titan"</span>)
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>                 || cn.equals(<span class="jxr_string">"great whale"</span>)
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>                 || cn.equals(<span class="jxr_string">"grim monolith"</span>)
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>                 || cn.equals(<span class="jxr_string">"grip of chaos"</span>)
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>                 || cn.equals(<span class="jxr_string">"gush"</span>)
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>                 || cn.equals(<span class="jxr_string">"hellkite charger"</span>)
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>                 || cn.equals(<span class="jxr_string">"hermit druid"</span>)
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>                 || cn.equals(<span class="jxr_string">"hokori, dust drinker"</span>)
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>                 || cn.equals(<span class="jxr_string">"humility"</span>)
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>                 || cn.equals(<span class="jxr_string">"impending disaster"</span>)
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>                 || cn.equals(<span class="jxr_string">"imperial seal"</span>)
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>                 || cn.equals(<span class="jxr_string">"intruder alarm"</span>)
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>                 || cn.equals(<span class="jxr_string">"invoke prejudice"</span>)
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>                 || cn.equals(<span class="jxr_string">"iona, shield of emeria"</span>)
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>                 || cn.equals(<span class="jxr_string">"jin-gitaxias, core augur"</span>)
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>                 || cn.equals(<span class="jxr_string">"jokulhaups"</span>)
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>                 || cn.equals(<span class="jxr_string">"kaalia of the vast"</span>)
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>                 || cn.equals(<span class="jxr_string">"karador, ghost chieftain"</span>)
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>                 || cn.equals(<span class="jxr_string">"karakas"</span>)
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>                 || cn.equals(<span class="jxr_string">"karn, silver golem"</span>)
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>                 || cn.equals(<span class="jxr_string">"kataki, war's wage"</span>)
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>                 || cn.equals(<span class="jxr_string">"keldon firebombers"</span>)
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>                 || cn.equals(<span class="jxr_string">"kiki-jiki, mirror breaker"</span>)
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>                 || cn.equals(<span class="jxr_string">"kinnan, bonder prodigy"</span>)
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>                 || cn.equals(<span class="jxr_string">"knowledge pool"</span>)
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>                 || cn.equals(<span class="jxr_string">"kozilek, butcher of truth"</span>)
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>                 || cn.equals(<span class="jxr_string">"krark-clan ironworks"</span>)
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>                 || cn.equals(<span class="jxr_string">"krenko, mob boss"</span>)
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>                 || cn.equals(<span class="jxr_string">"krosan restorer"</span>)
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>                 || cn.equals(<span class="jxr_string">"laboratory maniac"</span>)
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>                 || cn.equals(<span class="jxr_string">"land equilibrium"</span>)
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>                 || cn.equals(<span class="jxr_string">"leonin relic-warder"</span>)
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>                 || cn.equals(<span class="jxr_string">"leovold, emissary of trest"</span>)
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>                 || cn.equals(<span class="jxr_string">"leyline of the void"</span>)
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>                 || cn.equals(<span class="jxr_string">"linvala, keeper of silence"</span>)
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>                 || cn.equals(<span class="jxr_string">"living death"</span>)
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>                 || cn.equals(<span class="jxr_string">"llawan, cephalid empress"</span>)
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>                 || cn.equals(<span class="jxr_string">"loyal retainers"</span>)
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>                 || cn.equals(<span class="jxr_string">"maelstrom wanderer"</span>)
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>                 || cn.equals(<span class="jxr_string">"magister sphinx"</span>)
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>                 || cn.equals(<span class="jxr_string">"malfegor"</span>)
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>                 || cn.equals(<span class="jxr_string">"mana breach"</span>)
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>                 || cn.equals(<span class="jxr_string">"mana crypt"</span>)
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>                 || cn.equals(<span class="jxr_string">"mana drain"</span>)
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>                 || cn.equals(<span class="jxr_string">"mana vault"</span>)
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>                 || cn.equals(<span class="jxr_string">"mana vortex"</span>)
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>                 || cn.equals(<span class="jxr_string">"master of cruelties"</span>)
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>                 || cn.equals(<span class="jxr_string">"memnarch"</span>)
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>                 || cn.equals(<span class="jxr_string">"meren of clan nel toth"</span>)
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>                 || cn.equals(<span class="jxr_string">"michiko konda, truth seeker"</span>)
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>                 || cn.equals(<span class="jxr_string">"mikaeus the unhallowed"</span>)
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>                 || cn.equals(<span class="jxr_string">"mikaeus, the unhallowed"</span>)
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>                 || cn.equals(<span class="jxr_string">"mindcrank"</span>)
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>                 || cn.equals(<span class="jxr_string">"mindslaver"</span>)
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>                 || cn.equals(<span class="jxr_string">"minion reflector"</span>)
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>                 || cn.equals(<span class="jxr_string">"mycosynth lattice"</span>)
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>                 || cn.equals(<span class="jxr_string">"myr turbine"</span>)
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>                 || cn.equals(<span class="jxr_string">"narset, enlightened master"</span>)
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>                 || cn.equals(<span class="jxr_string">"narset, parter of veils"</span>)
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>                 || cn.equals(<span class="jxr_string">"nath of the gilt-leaf"</span>)
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>                 || cn.equals(<span class="jxr_string">"natural order"</span>)
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>                 || cn.equals(<span class="jxr_string">"necrotic ooze"</span>)
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>                 || cn.equals(<span class="jxr_string">"negan, the cold-blooded"</span>)
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>                 || cn.equals(<span class="jxr_string">"nekusar, the mindrazer"</span>)
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>                 || cn.equals(<span class="jxr_string">"nether void"</span>)
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>                 || cn.equals(<span class="jxr_string">"nexus of fate"</span>)
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>                 || cn.equals(<span class="jxr_string">"nicol bolas"</span>)
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>                 || cn.equals(<span class="jxr_string">"norin the wary"</span>)
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>                 || cn.equals(<span class="jxr_string">"notion thief"</span>)
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>                 || cn.equals(<span class="jxr_string">"numot, the devastator"</span>)
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>                 || cn.equals(<span class="jxr_string">"oath of druids"</span>)
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>                 || cn.equals(<span class="jxr_string">"obliterate"</span>)
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>                 || cn.equals(<span class="jxr_string">"oko, thief of crowns"</span>)
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>                 || cn.equals(<span class="jxr_string">"oloro, ageless ascetic"</span>)
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>                 || cn.equals(<span class="jxr_string">"omniscience"</span>)
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>                 || cn.equals(<span class="jxr_string">"opalescence"</span>)
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>                 || cn.equals(<span class="jxr_string">"opposition agent"</span>)
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>                 || cn.equals(<span class="jxr_string">"oppression"</span>)
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>                 || cn.equals(<span class="jxr_string">"ornithopter"</span>)
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>                 || cn.equals(<span class="jxr_string">"overwhelming splendor"</span>)
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>                 || cn.equals(<span class="jxr_string">"palinchron"</span>)
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>                 || cn.equals(<span class="jxr_string">"paradox engine"</span>)
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>                 || cn.equals(<span class="jxr_string">"pattern of rebirth"</span>)
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>                 || cn.equals(<span class="jxr_string">"peregrine drake"</span>)
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>                 || cn.equals(<span class="jxr_string">"planar portal"</span>)
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>                 || cn.equals(<span class="jxr_string">"possessed portal"</span>)
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>                 || cn.equals(<span class="jxr_string">"power artifact"</span>)
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>                 || cn.equals(<span class="jxr_string">"price of glory"</span>)
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>                 || cn.equals(<span class="jxr_string">"prossh, skyraider of kher"</span>)
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>                 || cn.equals(<span class="jxr_string">"protean hulk"</span>)
+<a class="jxr_linenumber" name="L504" href="#L504">504</a>                 || cn.equals(<span class="jxr_string">"purphoros, god of the forge"</span>)
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>                 || cn.equals(<span class="jxr_string">"ravages of war"</span>)
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>                 || cn.equals(<span class="jxr_string">"reclamation sage"</span>)
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>                 || cn.equals(<span class="jxr_string">"rhystic study"</span>)
+<a class="jxr_linenumber" name="L508" href="#L508">508</a>                 || cn.equals(<span class="jxr_string">"rick, steadfast leader"</span>)
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>                 || cn.equals(<span class="jxr_string">"rings of brighthearth"</span>)
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>                 || cn.equals(<span class="jxr_string">"rising waters"</span>)
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>                 || cn.equals(<span class="jxr_string">"rite of replication"</span>)
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>                 || cn.equals(<span class="jxr_string">"ruination"</span>)
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>                 || cn.equals(<span class="jxr_string">"sanguine bond"</span>)
+<a class="jxr_linenumber" name="L514" href="#L514">514</a>                 || cn.equals(<span class="jxr_string">"scrambleverse"</span>)
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>                 || cn.equals(<span class="jxr_string">"seedborn muse"</span>)
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>                 || cn.equals(<span class="jxr_string">"sen triplets"</span>)
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>                 || cn.equals(<span class="jxr_string">"sensei's divining top"</span>)
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>                 || cn.equals(<span class="jxr_string">"serra's sanctum"</span>)
+<a class="jxr_linenumber" name="L519" href="#L519">519</a>                 || cn.equals(<span class="jxr_string">"sheoldred, whispering one"</span>)
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>                 || cn.equals(<span class="jxr_string">"sire of insanity"</span>)
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>                 || cn.equals(<span class="jxr_string">"skithiryx, the blight dragon"</span>)
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>                 || cn.equals(<span class="jxr_string">"smokestack"</span>)
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>                 || cn.equals(<span class="jxr_string">"smothering tithe"</span>)
+<a class="jxr_linenumber" name="L524" href="#L524">524</a>                 || cn.equals(<span class="jxr_string">"sol ring"</span>)
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>                 || cn.equals(<span class="jxr_string">"sorin markov"</span>)
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>                 || cn.equals(<span class="jxr_string">"splinter twin"</span>)
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>                 || cn.equals(<span class="jxr_string">"spore frog"</span>)
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>                 || cn.equals(<span class="jxr_string">"stasis"</span>)
+<a class="jxr_linenumber" name="L529" href="#L529">529</a>                 || cn.equals(<span class="jxr_string">"static orb"</span>)
+<a class="jxr_linenumber" name="L530" href="#L530">530</a>                 || cn.equals(<span class="jxr_string">"stony silence"</span>)
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>                 || cn.equals(<span class="jxr_string">"storage matrix"</span>)
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>                 || cn.equals(<span class="jxr_string">"storm cauldron"</span>)
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>                 || cn.equals(<span class="jxr_string">"strip mine"</span>)
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>                 || cn.equals(<span class="jxr_string">"sunder"</span>)
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>                 || cn.equals(<span class="jxr_string">"survival of the fittest"</span>)
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>                 || cn.equals(<span class="jxr_string">"table view"</span>)
+<a class="jxr_linenumber" name="L537" href="#L537">537</a>                 || cn.equals(<span class="jxr_string">"tainted aether"</span>)
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>                 || cn.equals(<span class="jxr_string">"tangle wire"</span>)
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>                 || cn.equals(<span class="jxr_string">"tectonic break"</span>)
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>                 || cn.equals(<span class="jxr_string">"teferi's protection"</span>)
+<a class="jxr_linenumber" name="L541" href="#L541">541</a>                 || cn.equals(<span class="jxr_string">"teferi's puzzle box"</span>)
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>                 || cn.equals(<span class="jxr_string">"teferi, mage of zhalfir"</span>)
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>                 || cn.equals(<span class="jxr_string">"teferi, master of time"</span>)
+<a class="jxr_linenumber" name="L544" href="#L544">544</a>                 || cn.equals(<span class="jxr_string">"teferi, time raveler"</span>)
+<a class="jxr_linenumber" name="L545" href="#L545">545</a>                 || cn.equals(<span class="jxr_string">"temporal manipulation"</span>)
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>                 || cn.equals(<span class="jxr_string">"tergrid, god of fright"</span>)
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>                 || cn.equals(<span class="jxr_string">"text view"</span>)
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>                 || cn.equals(<span class="jxr_string">"tezzeret the seeker"</span>)
+<a class="jxr_linenumber" name="L549" href="#L549">549</a>                 || cn.equals(<span class="jxr_string">"thassa's oracle"</span>)
+<a class="jxr_linenumber" name="L550" href="#L550">550</a>                 || cn.equals(<span class="jxr_string">"the chain veil"</span>)
+<a class="jxr_linenumber" name="L551" href="#L551">551</a>                 || cn.equals(<span class="jxr_string">"the tabernacle at pendrell vale"</span>)
+<a class="jxr_linenumber" name="L552" href="#L552">552</a>                 || cn.equals(<span class="jxr_string">"thieves' auction"</span>)
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>                 || cn.equals(<span class="jxr_string">"thoughts of ruin"</span>)
+<a class="jxr_linenumber" name="L554" href="#L554">554</a>                 || cn.equals(<span class="jxr_string">"thrasios, triton hero"</span>)
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>                 || cn.equals(<span class="jxr_string">"time stretch"</span>)
+<a class="jxr_linenumber" name="L556" href="#L556">556</a>                 || cn.equals(<span class="jxr_string">"time warp"</span>)
+<a class="jxr_linenumber" name="L557" href="#L557">557</a>                 || cn.equals(<span class="jxr_string">"tinker"</span>)
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>                 || cn.equals(<span class="jxr_string">"tooth and nail"</span>)
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>                 || cn.equals(<span class="jxr_string">"torment of hailfire"</span>)
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>                 || cn.equals(<span class="jxr_string">"torpor orb"</span>)
+<a class="jxr_linenumber" name="L561" href="#L561">561</a>                 || cn.equals(<span class="jxr_string">"training grounds"</span>)
+<a class="jxr_linenumber" name="L562" href="#L562">562</a>                 || cn.equals(<span class="jxr_string">"treasure cruise"</span>)
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>                 || cn.equals(<span class="jxr_string">"triskelavus"</span>)
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>                 || cn.equals(<span class="jxr_string">"triskelion"</span>)
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>                 || cn.equals(<span class="jxr_string">"triumph of the hordes"</span>)
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>                 || cn.equals(<span class="jxr_string">"turnabout"</span>)
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>                 || cn.equals(<span class="jxr_string">"ugin, the spirit dragon"</span>)
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>                 || cn.equals(<span class="jxr_string">"ulamog, the ceaseless hunger"</span>)
+<a class="jxr_linenumber" name="L569" href="#L569">569</a>                 || cn.equals(<span class="jxr_string">"ulamog, the infinite gyre"</span>)
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>                 || cn.equals(<span class="jxr_string">"umbral mantle"</span>)
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>                 || cn.equals(<span class="jxr_string">"urabrask the hidden"</span>)
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>                 || cn.equals(<span class="jxr_string">"urza, lord high artificer"</span>)
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>                 || cn.equals(<span class="jxr_string">"uyo, silent prophet"</span>)
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>                 || cn.equals(<span class="jxr_string">"void winnower"</span>)
+<a class="jxr_linenumber" name="L575" href="#L575">575</a>                 || cn.equals(<span class="jxr_string">"voltaic key"</span>)
+<a class="jxr_linenumber" name="L576" href="#L576">576</a>                 || cn.equals(<span class="jxr_string">"vorinclex, voice of hunger"</span>)
+<a class="jxr_linenumber" name="L577" href="#L577">577</a>                 || cn.equals(<span class="jxr_string">"wake of destruction"</span>)
+<a class="jxr_linenumber" name="L578" href="#L578">578</a>                 || cn.equals(<span class="jxr_string">"warp world"</span>)
+<a class="jxr_linenumber" name="L579" href="#L579">579</a>                 || cn.equals(<span class="jxr_string">"winter orb"</span>)
+<a class="jxr_linenumber" name="L580" href="#L580">580</a>                 || cn.equals(<span class="jxr_string">"workhorse"</span>)
+<a class="jxr_linenumber" name="L581" href="#L581">581</a>                 || cn.equals(<span class="jxr_string">"worldgorger dragon"</span>)
+<a class="jxr_linenumber" name="L582" href="#L582">582</a>                 || cn.equals(<span class="jxr_string">"worthy cause"</span>)
+<a class="jxr_linenumber" name="L583" href="#L583">583</a>                 || cn.equals(<span class="jxr_string">"xanathar, guild kingpin"</span>)
+<a class="jxr_linenumber" name="L584" href="#L584">584</a>                 || cn.equals(<span class="jxr_string">"yawgmoth's will"</span>)
+<a class="jxr_linenumber" name="L585" href="#L585">585</a>                 || cn.equals(<span class="jxr_string">"zealous conscripts"</span>)
+<a class="jxr_linenumber" name="L586" href="#L586">586</a>                 || cn.equals(<span class="jxr_string">"zur the enchanter"</span>)) {
+<a class="jxr_linenumber" name="L587" href="#L587">587</a>                     thisMaxPower = Math.max(thisMaxPower, 12);
+<a class="jxr_linenumber" name="L588" href="#L588">588</a>                 }
+<a class="jxr_linenumber" name="L589" href="#L589">589</a>         <strong class="jxr_keyword">return</strong> thisMaxPower;
+<a class="jxr_linenumber" name="L590" href="#L590">590</a>     }
+<a class="jxr_linenumber" name="L591" href="#L591">591</a> 
+<a class="jxr_linenumber" name="L592" href="#L592">592</a> }
+<a class="jxr_linenumber" name="L593" href="#L593">593</a> 
+<a class="jxr_linenumber" name="L594" href="#L594">594</a> 
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

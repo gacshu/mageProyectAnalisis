@@ -1,0 +1,242 @@
+
+mmage.server.Main$MageServerInvocationHandler#invoke(Lorg/jboss/remoting/InvocationRequest;)Ljava/lang/Object;\
+PD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Main.java› ›("startingBlock*’
+2
+ª ª(›˜
+
+ª ª(
+%13mage.server.Session"*java.util.Optional#get()Ljava/lang/Object;*;
+
+__unknown_file (
+
+sessionjava.util.Optional2get()ÝÚ
+
+ª ª(+
+%14void"0mage.server.Session#setHost(Ljava/lang/String;)V*8
+
+__unknown_file (
+
+%13mage.server.Session*6
+
+__unknown_file (
+
+hostjava.lang.String2setHost(Ljava/lang/String;)*
+1*ß
+3
+¨ ¨(X
+V
+
+¨ ¨(
+%10org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‰
+†
+
+¨ ¨(?
+%11java.lang.String"__concat*&
+
+¨ ¨(3
+Session not found : *-
+
+¨6 ¨(?
+
+	sessionIdjava.lang.Stringâß
+
+¨ ¨(@
+%12void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%10org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%11java.lang.String2error(Ljava/lang/Object;)*
+1*Â
+startingBlock
+› ›(@¨
+¥
+
+š š(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*P
+
+__unknown_file (4
+2
+
+invocation$org.jboss.remoting.InvocationRequestu
+s
+
+›5 ›(?2
+
+invocation$org.jboss.remoting.InvocationRequest"__annotation*#
+
+__unknown_file (
+
+%15*
+7*Ò
+4
+¦( ¦(6¢
+Ÿ
+
+¦( ¦(6)
+%6#mage.server.managers.ManagerFactory"__id*`
+
+__unknown_file (D*B.
+,mage.server.Main$MageServerInvocationHandler"
+managerFactoryðí
+
+¦( ¦(G)
+%7#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*G
+
+__unknown_file (+
+)
+%6#mage.server.managers.ManagerFactory2sessionManager()§¤
+
+¦( ¦(]
+%8java.util.Optional"Vmage.server.managers.SessionManager#getSession(Ljava/lang/String;)Ljava/util/Optional;*G
+
+__unknown_file (+
+)
+%7#mage.server.managers.SessionManager*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String2getSession(Ljava/lang/String;)k
+i
+
+¦ ¦(^
+sessionjava.util.Optional"__id*6
+
+__unknown_file (
+
+%8java.util.Optional‰†
+
+§ §($
+%9boolean"java.util.Optional#isPresent()Z*;
+
+__unknown_file (
+
+sessionjava.util.Optional2isPresent()*
+2
+3*o
+5
+¤ ¤("Y
+W
+
+¤ ¤("
+hostjava.lang.String"__id*)
+
+__unknown_file (
+	localhost*
+4*ø
+6
+¡: ¡(DÔÑ
+
+¡: ¡(X
+%2java.util.Map"Gorg.jboss.remoting.InvocationRequest#getRequestPayload()Ljava/util/Map;*P
+
+__unknown_file (4
+2
+
+invocation$org.jboss.remoting.InvocationRequest2getRequestPayload()[
+Y
+
+¡] ¡(t
+%3java.lang.String"__id*-
+
+__unknown_file (
+clientAddressš
+—
+
+¡: ¡(u
+%4java.lang.Object"__mapGet*1
+
+__unknown_file (
+
+%2java.util.Map*4
+
+__unknown_file (
+
+%3java.lang.Stringq
+o
+
+¡ ¡(v%
+clientAddressjava.net.InetAddress"__id*4
+
+__unknown_file (
+
+%4java.lang.Object·´
+
+¢ ¢(5
+%5java.lang.String"7java.net.InetAddress#getHostAddress()Ljava/lang/String;*C
+
+__unknown_file ('
+%
+clientAddressjava.net.InetAddress2getHostAddress()d
+b
+
+¢ ¢(5
+hostjava.lang.String"__id*4
+
+__unknown_file (
+
+%5java.lang.String*
+4*ß
+7
+ ()ÐÍ
+
+ (8
+%0java.lang.String"Eorg.jboss.remoting.InvocationRequest#getSessionId()Ljava/lang/String;*P
+
+__unknown_file (4
+2
+
+invocation$org.jboss.remoting.InvocationRequest2getSessionId()i
+g
+
+ (9
+	sessionIdjava.lang.String"__id*4
+
+__unknown_file (
+
+%0java.lang.StringÔÑ
+
+ž ž(4
+%1java.util.Map"Gorg.jboss.remoting.InvocationRequest#getRequestPayload()Ljava/util/Map;*P
+
+__unknown_file (4
+2
+
+invocation$org.jboss.remoting.InvocationRequest2getRequestPayload()]
+[
+
+ž ž(5
+mapjava.util.Map"__id*1
+
+__unknown_file (
+
+%1java.util.MapR
+P
+
+Ÿ Ÿ(
+hostjava.lang.String"__id*"
+
+__unknown_file (
+""*
+5
+6*%
+1
+¬ ¬("
+
+¬ ¬(
+"":@
+
+› ›(?2
+
+invocation$org.jboss.remoting.InvocationRequestB0.
+,mage.server.Main$MageServerInvocationHandlerH

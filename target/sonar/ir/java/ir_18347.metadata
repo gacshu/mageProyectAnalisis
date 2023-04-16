@@ -1,0 +1,23 @@
+mage.players.PlayerImpl#moveCards(Ljava/util/Set;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;ZZZLjava/util/List;)Z
+java.util.ArrayList#<init>()V
+mage.game.events.ZoneChangeEvent#<init>(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;Lmage/constants/Zone;Ljava/util/List;)V
+mage.game.events.ZoneChangeEvent#<init>(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;Lmage/constants/Zone;Ljava/util/List;)V
+mage.game.ZonesHandler#moveCards(Ljava/util/List;Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/List;
+mage.util.CardUtil#getSourceLogName(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)Ljava/lang/String;
+java.util.ArrayList#instance-init#
+java.util.LinkedHashSet#instance-init#
+java.util.LinkedHashSet#<init>()V
+mage.game.ZoneChangeInfo$Battlefield#instance-init#
+mage.constants.Zone#toString()Ljava/lang/String;
+mage.game.ZoneChangeInfo$Battlefield#<init>(Lmage/game/events/ZoneChangeEvent;ZZLmage/abilities/Ability;)V
+java.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;
+mage.game.events.ZoneChangeEvent#instance-init#
+java.lang.UnsupportedOperationException#instance-init#
+java.lang.UnsupportedOperationException#<init>(Ljava/lang/String;)V
+==
+getId mage.players.PlayerImpl#getId()Ljava/util/UUID;
+moveCardToLibraryWithInfo mage.players.PlayerImpl#moveCardToLibraryWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;ZZ)Z
+moveCardToExileWithInfo mage.players.PlayerImpl#moveCardToExileWithInfo(Lmage/cards/Card;Ljava/util/UUID;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)Z
+moveCardToCommandWithInfo mage.players.PlayerImpl#moveCardToCommandWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;)Z
+moveCardsToGraveyardWithInfo mage.players.PlayerImpl#moveCardsToGraveyardWithInfo(Ljava/util/Set;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;)Ljava/util/Set;
+moveCardToHandWithInfo mage.players.PlayerImpl#moveCardToHandWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Z)Z

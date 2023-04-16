@@ -1,0 +1,224 @@
+
+“mage.abilities.dynamicvalue.common.ColorsOfManaSpentToCastCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I‚
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/ColorsOfManaSpentToCastCount.java ("startingBlock*ˆ
+13$  $(*o
+m
+$ $(*
+spellmage.game.stack.Spell"__id*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject*
+11
+1*ò
+14"$ "((¯¬
+"A "(\
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getSourceId()Q
+O
+"^ "(h
+%4mage.constants.Zone"__id*"
+
+__unknown_file (
+""çä
+"$ "(i
+%5mage.MageObject"^mage.game.Game#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID*7
+
+__unknown_file (
+
+%4mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)f
+d
+" "(j
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%5mage.MageObject*
+13
+11
+1*€
+36 6(lj
+6 6(
+
+%13int"mage.Mana#getWhite()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getWhite()*
+1*•
+startingBlock (IŠ
+‡
+ (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14›
+˜
+ (
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15›
+˜
+ (
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%16*
+15*ò
+15 (¨¥
+   (% 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
+ /  (J
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getSourceId()ˆ…
+   (K
+%2mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%1java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+   (L
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%2mage.game.stack.Spell*
+14
+11
+1*|
+53 3(hf
+3 3(
+
+%12int"mage.Mana#getRed()I*/
+
+__unknown_file (
+
+mana	mage.Mana2getRed()*
+3*€
+70 0(lj
+0 0(
+
+%11int"mage.Mana#getGreen()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getGreen()*
+5*~
+9- -(jh
+- -(
+
+%10int"mage.Mana#getBlue()I*/
+
+__unknown_file (
+
+mana	mage.Mana2	getBlue()*
+7*Æ
+11) )(ÇÄ
+) )(/!
+%6mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()ãà
+) )(C)
+%7#mage.abilities.costs.mana.ManaCosts"Smage.abilities.AbilityImpl#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*?
+
+__unknown_file (#
+!
+%6mage.abilities.SpellAbility2getManaCostsToPay()½º
+) )(V
+%8	mage.Mana"@mage.abilities.costs.mana.ManaCost#getUsedManaToPay()Lmage/Mana;*G
+
+__unknown_file (+
+)
+%7#mage.abilities.costs.mana.ManaCosts2getUsedManaToPay()T
+R
+) )(W
+mana	mage.Mana"__id*-
+
+__unknown_file (
+
+%8	mage.Manaki
+* *(	
+%9int"mage.Mana#getBlack()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getBlack()*
+9*!
+1: :("
+: :(
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectBCA
+?mage.abilities.dynamicvalue.common.ColorsOfManaSpentToCastCountHP

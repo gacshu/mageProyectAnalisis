@@ -1,0 +1,213 @@
+
+image.game.permanent.token.AshiokNightmareMuseTokenEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zu
+kD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/token/AshiokNightmareMuseToken.java@ @("startingBlock*!
+2C C("
+C C(
+""*§
+3A A(°­
+A' A(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+A A(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+A A(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+2
+1*þ
+startingBlock@ @(3Š
+‡
+? ?(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+@ @("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16”
+‘
+? ?(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+@, @(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17*
+3*‰
+1E E(°­
+F F(6
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()êç
+E F(7
+%3java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getOpponents(Ljava/util/UUID;)¡ž
+E G(
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%3java.util.Set2stream()†ƒ
+E H(%
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+E I()
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)†ƒ
+E J((
+%7java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¯
+¬
+K K(<!
+%8java.util.function.Function"__declareFunction*j
+
+__unknown_file (NL
+J__sonar_lambda_89$mage.game.permanent.token.AshiokNightmareMuseTokenEffect†
+ƒ
+
+__unknown_file (+
+!
+%8java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¤¡
+E K(=
+%10java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%8java.util.function.Function2"map(Ljava/util/function/Function;)
+E L(,
+%11java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%10java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)®
+«
+M M(+!
+%12java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+E M(,
+%13java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%11java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%12java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)^
+\
+E M(-
+cardsjava.util.Set"__id*2
+
+__unknown_file (
+
+%13java.util.SetR
+P
+N' N(2
+%14mage.constants.Zone"__id*"
+
+__unknown_file (
+""‡„
+N N(A
+%15boolean"lmage.players.Player#moveCards(Ljava/util/Set;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*4
+
+__unknown_file (
+
+cardsjava.util.Set*8
+
+__unknown_file (
+
+%14mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2WmoveCards(Ljava/util/Set;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)"
+N N(B
+"":"
+@ @(#
+gamemage.game.Game:,
+@$ @(2 
+sourcemage.abilities.AbilityB<:
+8mage.game.permanent.token.AshiokNightmareMuseTokenEffectHP

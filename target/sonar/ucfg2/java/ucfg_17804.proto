@@ -1,0 +1,196 @@
+
+Nmage.game.GameImpl#getSpellOrLKIStack(Ljava/util/UUID;)Lmage/game/stack/Spell;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameImpl.javaš š(#"startingBlock*³
+2
+¥ ¥(W
+U
+
+¥ ¥(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""–“
+
+§  §(.
+%6java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*4
+
+__unknown_file (
+
+objmage.MageObject2
+getClass()”‘
+
+§  §(8
+%7java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*3
+
+__unknown_file (
+
+%6java.lang.Class2	getName()•’
+
+§: §(G
+%8java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*4
+
+__unknown_file (
+
+objmage.MageObject2	getName()ƒ
+€
+
+¥ §(H
+%9java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*j
+
+__unknown_file (NL
+JgetSpellOrLKIStack got non-spell id %s correlating to non-spell object %s.*4
+
+__unknown_file (
+
+%7java.lang.String*4
+
+__unknown_file (
+
+%8java.lang.String?=
+
+¨ ¨(%
+%10java.lang.Throwable"java.lang.Throwablen
+l
+
+¨ ¨('
+%11"java.lang.Throwable#<init>()V*8
+
+__unknown_file (
+
+%10java.lang.ThrowableÄÁ
+
+¥ ©(
+%12void"Iorg.apache.log4j.Category#error(Ljava/lang/Object;Ljava/lang/Throwable;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%9java.lang.String*8
+
+__unknown_file (
+
+%10java.lang.Throwable2.error(Ljava/lang/Object;Ljava/lang/Throwable;)*
+1*
+startingBlock
+š# š(1
+Œ
+
+™ ™(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+spellIdjava.util.UUID\
+Z
+
+š) š(0
+spellIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%13*
+6*€
+4
+£  £(#j
+h
+
+£ £(#
+spellmage.game.stack.Spell"__id*4
+
+__unknown_file (
+
+objmage.MageObject*
+1*Å
+5
+ (!S
+Q
+
+C (M
+%3mage.constants.Zone"__id*"
+
+__unknown_file (
+""ðí
+
+ (N
+%4mage.MageObject"bmage.game.GameImpl#getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)Lmage/MageObject;*2
+
+__unknown_file (
+mage.game.GameImpl*7
+
+__unknown_file (
+
+spellIdjava.util.UUID*7
+
+__unknown_file (
+
+%3mage.constants.Zone2>getLastKnownInformation(Ljava/util/UUID;Lmage/constants/Zone;)a
+_
+
+ (O
+objmage.MageObject"__id*3
+
+__unknown_file (
+
+%4mage.MageObject*	
+2
+4
+1*¿
+6
+› ›(n
+l
+
+› ›(
+%0mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state²¯
+
+› ›(& 
+%1mage.game.stack.SpellStack":mage.game.GameState#getStack()Lmage/game/stack/SpellStack;*7
+
+__unknown_file (
+
+%0mage.game.GameState2
+getStack()Œ
+
+› ›(8
+%2mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%1mage.game.stack.SpellStack*7
+
+__unknown_file (
+
+spellIdjava.util.UUID2getSpell(Ljava/util/UUID;)o
+m
+
+› ›(9
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%2mage.game.stack.Spell*
+5
+1*?
+1
+¬ ¬(".
+
+¬ ¬( 
+
+spellmage.game.stack.Spell:'
+
+š$ š(0
+spellIdjava.util.UUIDB
+mage.game.GameImplH

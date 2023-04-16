@@ -1,0 +1,294 @@
+
+’mage.abilities.keyword.ForetellAbility$ForetellLookAtCardEffect#applies(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Zk
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ForetellAbility.java® ®("startingBlock*%
+2
+¹ º(:"
+
+¹ º(:
+""*ý
+3
+º º($æã
+
+º º(9
+%11boolean"/java.util.HashSet#contains(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+exilemage.game.ExileZone*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2contains(Ljava/lang/Object;)*
+2*„
+startingBlock
+® ®(c
+
+
+­ ­(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+objectIdjava.util.UUID]
+[
+
+®$ ®(,
+objectIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12–
+“
+
+­ ­(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+®6 ®(< 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13œ
+™
+
+­ ­(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUIDi
+g
+
+®C ®(W&
+affectedControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%14Œ
+‰
+
+­ ­(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+®^ ®(b
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+8*Ñ
+4
+¶& ¶(*œ™
+
+¶& ¶(8
+%4mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getMainCard()Š‡
+
+¶& ¶(@
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%4mage.cards.Card2getId()f
+d
+
+¶ ¶(A
+
+mainCardIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUIDœ™
+
+·; ·(P
+%6java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2
+toString(){
+y
+
+·; ·(d
+%7java.lang.String"__concat*&
+
+·; ·(P
+
+%6java.lang.String*!
+
+·S ·(d
+foretellAbilityœ
+™
+
+·# ·(k
+%8java.util.UUID"Umage.util.CardUtil#getExileZoneId(Ljava/lang/String;Lmage/game/Game;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+%7java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Gamec
+a
+
+· ·(l
+exileIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUID”‘
+
+¸& ¸(5
+%9mage.game.Exile"*mage.game.Game#getExile()Lmage/game/Exile;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getExile()þû
+
+¸& ¸(K
+%10mage.game.ExileZone"Cmage.game.Exile#getExileZone(Ljava/util/UUID;)Lmage/game/ExileZone;*3
+
+__unknown_file (
+
+%9mage.game.Exile*7
+
+__unknown_file (
+
+exileIdjava.util.UUID2getExileZone(Ljava/util/UUID;)l
+j
+
+¸ ¸(L
+exilemage.game.ExileZone"__id*8
+
+__unknown_file (
+
+%10mage.game.ExileZone*
+2
+3*%
+5
+´ ´($"
+
+´ ´(%
+""*Œ
+6
+². ²(2†ƒ
+
+². ²(D
+%3mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)j
+h
+
+² ²(E
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*
+4
+5*ê
+7
+° °( ìé
+
+° °(2
+%2mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getCard(Ljava/util/UUID;)b
+`
+
+° °(3
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%2mage.cards.Card*
+6
+1*¯
+8
+¯ ¯($²¯
+
+¯, ¯(D
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()àÝ
+
+¯ ¯(E
+%1boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*2
+
+__unknown_file (
+
+%0java.util.UUID2equals(Ljava/lang/Object;)*
+7
+1*%
+1
+½ ½("
+
+½ ½(
+"":(
+
+® ®(-
+objectIdjava.util.UUID:.
+
+®. ®(= 
+sourcemage.abilities.Ability:4
+
+®> ®(X&
+affectedControllerIdjava.util.UUID:$
+
+®Y ®(b
+gamemage.game.GameBCA
+?mage.abilities.keyword.ForetellAbility$ForetellLookAtCardEffectHP

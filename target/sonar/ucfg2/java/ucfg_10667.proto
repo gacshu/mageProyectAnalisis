@@ -1,0 +1,140 @@
+
+pmage.abilities.condition.common.TargetAttackedThisTurnCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z‚
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/TargetAttackedThisTurnCondition.java ("startingBlock*Å
+2# (*õò
+# (I
+%5java.util.Set"Zmage.watchers.common.AttackedThisTurnWatcher#getAttackedThisTurnCreatures()Ljava/util/Set;*U
+
+__unknown_file (9
+7
+watcher,mage.watchers.common.AttackedThisTurnWatcher2getAttackedThisTurnCreatures()FD
+W (j
+%6mage.MageObjectReference"mage.MageObjectReference•
+’
+S (z
+%7"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*<
+
+__unknown_file ( 
+
+%6mage.MageObjectReference*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameØÕ
+# ({
+%8boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Set*<
+
+__unknown_file ( 
+
+%6mage.MageObjectReference2contains(Ljava/lang/Object;)*
+1*ç
+
+3 (!°­
+? (R
+%0mage.target.Targets"8mage.abilities.Ability#getTargets()Lmage/target/Targets;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getTargets()¤¡
+? (c
+%1java.util.UUID"4mage.target.Targets#getFirstTarget()Ljava/util/UUID;*7
+
+__unknown_file (
+
+%0mage.target.Targets2getFirstTarget()ª§
+ (d#
+%2mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)€
+~
+ (e)
+creaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanentš—
+* (9
+%3mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‡„
+* (c2
+%4,mage.watchers.common.AttackedThisTurnWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%3mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)ž
+›
+ (d7
+watcher,mage.watchers.common.AttackedThisTurnWatcher"__id*P
+
+__unknown_file (4
+2
+%4,mage.watchers.common.AttackedThisTurnWatcher*
+2
+1*ü
+startingBlock (3‰
+†
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10*
+3*!
+1 (|"
+ (|
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityBCA
+?mage.abilities.condition.common.TargetAttackedThisTurnConditionHP

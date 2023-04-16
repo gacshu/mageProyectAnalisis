@@ -1,0 +1,136 @@
+
+lmage.abilities.effects.common.CreateTokenAttachSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z~
+tD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CreateTokenAttachSourceEffect.java ("startingBlock*þ
+2   (¨¥
+    (4
+%6java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()¯¬
+   (C
+%7boolean"Xmage.cards.Card#addAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*D
+
+__unknown_file ((
+&
+tokenmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%6java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2GaddAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+! !(
+""*à
+3 (˜
+•
+ (!
+%0boolean"`mage.abilities.effects.common.CreateTokenEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityðí
+, (G
+%1java.util.List"Vmage.abilities.effects.common.CreateTokenEffect#getLastAddedTokenIds()Ljava/util/List;*[
+
+__unknown_file (?=
+;mage.abilities.effects.common.CreateTokenAttachSourceEffect2getLastAddedTokenIds()¢Ÿ
+, (P
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%1java.util.List2stream()ª§
+, (\
+%3java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream2findFirst()ÜÙ
+, (i
+%4java.util.UUID"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%3java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)Š‡
+ (j#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPermanent(Ljava/util/UUID;)}
+{
+ (k&
+tokenmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent*
+2
+1*ú
+startingBlock (3‰
+†
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8“
+
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+, (2 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9*
+3*!
+1# #("
+# #(
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB?=
+;mage.abilities.effects.common.CreateTokenAttachSourceEffectHP

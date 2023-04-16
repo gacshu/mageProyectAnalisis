@@ -1,0 +1,296 @@
+
+7mage.game.GameImpl#pickChoosingPlayer()Ljava/util/UUID;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameImpl.java⁄
+ ⁄
+(%"6*Ã
+2
+·
+ ·
+(n
+l
+
+·
+  ·
+(%
+%9mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+stateÅ˛
+
+·
+  ·
+(9
+%10mage.players.Player"Dmage.game.GameState#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*7
+
+__unknown_file (
+
+%9mage.game.GameState*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)§°
+
+·
+  ·
+(F
+%11java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*8
+
+__unknown_file (
+
+%10mage.players.Player2getLogName(){
+y
+
+·
+  ·
+(X
+%12java.lang.String"__concat*'
+
+·
+  ·
+(F
+
+%11java.lang.String*
+
+·
+I ·
+(X
+ won the tossÂ‚
+
+·
+ ·
+(Y
+%13void"7mage.game.GameImpl#fireInformEvent(Ljava/lang/String;)V*2
+
+__unknown_file (
+mage.game.GameImpl*5
+
+__unknown_file (
+
+%12java.lang.String2#fireInformEvent(Ljava/lang/String;)ìê
+
+‚
+ ‚
+(%
+%14java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()"%
+
+‚
+ ‚
+(&
+
+%14java.util.UUID*¶
+3
+‡
+" ‡
+((åâ
+
+‡
+" ‡
+(5
+%8boolean"!mage.players.Player#canRespond()Z*;
+
+__unknown_file (
+
+playermage.players.Player2canRespond()*
+2
+5*ô
+4
+ﬁ
+ ﬁ
+(ñ
+ì
+
+ﬁ
+ ﬁ
+(A	
+%5int" mage.util.RandomUtil#nextInt(I)I*4
+
+__unknown_file ("
+mage.util.RandomUtil*"
+
+__unknown_file (
+""ï
+í
+
+ﬁ
+ ﬁ
+(B
+%6java.util.UUID"
+__arrayGet*9
+
+__unknown_file (
+
+playersjava.util.UUID[]*'
+
+__unknown_file (
+	
+%5intd
+b
+
+ﬁ
+ ﬁ
+(B
+playerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%6java.util.UUID˙˜
+
+ﬂ
+ ﬂ
+(/
+%7mage.players.Player"Cmage.game.GameImpl#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*2
+
+__unknown_file (
+mage.game.GameImpl*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+ﬂ
+ ﬂ
+(0
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Player*
+3
+5*ñ
+5
+›
+ ›
+(}{
+
+›
+ ›
+(
+%4boolean"mage.game.GameImpl#hasEnded()Z*2
+
+__unknown_file (
+mage.game.GameImpl2
+hasEnded()*
+4
+1*¿
+6
+€
+ €
+(#§°
+
+€
+ €
+(%
+%0mage.players.Players"5mage.game.GameImpl#getPlayers()Lmage/players/Players;*2
+
+__unknown_file (
+mage.game.GameImpl2getPlayers()ôñ
+
+€
+ €
+(.
+%1java.util.Set"/java.util.LinkedHashMap#keySet()Ljava/util/Set;*8
+
+__unknown_file (
+
+%0mage.players.Players2keySet()86
+
+€
+7 €
+(B
+%2java.util.UUID[]"java.util.UUID[]ÌÍ
+
+€
+ €
+(C
+%3java.util.UUID[]"=java.util.Set#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*1
+
+__unknown_file (
+
+%1java.util.Set*4
+
+__unknown_file (
+
+%2java.util.UUID[]2toArray([Ljava/lang/Object;)g
+e
+
+€
+ €
+(D
+playersjava.util.UUID[]"__id*4
+
+__unknown_file (
+
+%3java.util.UUID[]T
+R
+
+‹
+ ‹
+(
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""*
+5*û
+1
+Â
+ Â
+(X
+V
+
+Â
+ Â
+(
+%15org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""èå
+
+Â
+R Â
+(Y
+%16java.util.UUID"*mage.game.GameImpl#getId()Ljava/util/UUID;*2
+
+__unknown_file (
+mage.game.GameImpl2getId()•
+¢
+
+Â
+ Â
+(Y
+%17java.lang.String"__concat*J
+
+Â
+ Â
+(O<:
+8Game was not possible to pick a choosing player. GameId:*%
+
+Â
+R Â
+(Y
+
+%16java.util.UUID‚ﬂ
+
+Â
+ Â
+(Z
+%18void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%15org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%17java.lang.String2debug(Ljava/lang/Object;)"
+
+Ê
+ Ê
+(
+""B
+mage.game.GameImpl

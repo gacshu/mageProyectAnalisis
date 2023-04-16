@@ -1,0 +1,156 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ExtraTurnsTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../testapidocs/org/mage/test/turnmod/ExtraTurnsTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.turnmod;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ExtraTurnsTest" href="../../../../org/mage/test/turnmod/ExtraTurnsTest.html#ExtraTurnsTest">ExtraTurnsTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment">     * Emrakul, the Promised End not giving an extra turn when cast in the</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * opponent's turn</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      @Test
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEmrakulCastOnOpponentsTurnCheckTurn3() {
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 12);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          addCard(Zone.GRAVEYARD, playerA, <span class="jxr_string">"Island"</span>, 1);
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <em class="jxr_comment">// Emrakul, the Promised End costs {1} less to cast for each card type among cards in your graveyard.</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          <em class="jxr_comment">// When you cast Emrakul, you gain control of target opponent during that player's next turn. After that turn, that player takes an extra turn.</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <em class="jxr_comment">// Trample</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <em class="jxr_comment">// Protection from instants</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1); <em class="jxr_comment">// {13}</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <em class="jxr_comment">// Flash (You may cast this spell any time you could cast an instant.)</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <em class="jxr_comment">// Creature cards you own that aren't on the battlefield have flash.</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          <em class="jxr_comment">// Each opponent can cast spells only any time they could cast a sorcery.</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Teferi, Mage of Zhalfir"</span>, 1);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>);
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <em class="jxr_comment">// Turn 4 is the next turn of opponent (player B)  that player A controls</em>
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <em class="jxr_comment">// So Turn 5 is the extra turn for player B after Turn 4</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          setStopAt(3, PhaseStep.DRAW);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          execute();
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          assertPermanentCount(playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          Assert.assertTrue(<span class="jxr_string">"Turn 3 is no extra turn "</span>, !currentGame.getState().isExtraTurn());
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          Assert.assertEquals(<span class="jxr_string">"For turn "</span> + currentGame.getTurnNum() + <span class="jxr_string">", playerA has to be the active player but active player is: "</span>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  + currentGame.getPlayer(currentGame.getActivePlayerId()).getName(), currentGame.getActivePlayerId(), playerA.getId());
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      }
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      @Test
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEmrakulCastOnOpponentsTurnCheckTurn4() {
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 12);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          addCard(Zone.GRAVEYARD, playerA, <span class="jxr_string">"Island"</span>, 1);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <em class="jxr_comment">// Emrakul, the Promised End costs {1} less to cast for each card type among cards in your graveyard.</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <em class="jxr_comment">// When you cast Emrakul, you gain control of target opponent during that player's next turn. After that turn, that player takes an extra turn.</em>
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <em class="jxr_comment">// Trample</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <em class="jxr_comment">// Protection from instants</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1); <em class="jxr_comment">// {13}</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <em class="jxr_comment">// Flash (You may cast this spell any time you could cast an instant.)</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <em class="jxr_comment">// Creature cards you own that aren't on the battlefield have flash.</em>
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <em class="jxr_comment">// Each opponent can cast spells only any time they could cast a sorcery.</em>
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Teferi, Mage of Zhalfir"</span>, 1);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <em class="jxr_comment">// Turn 4 is the next turn of opponent (player B)  that player A controls</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <em class="jxr_comment">// So Turn 5 is the extra turn for player B after Turn 4</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          setStopAt(4, PhaseStep.DRAW);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          execute();
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          assertPermanentCount(playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          Assert.assertTrue(<span class="jxr_string">"Turn 4 is a controlled turn "</span>, !playerB.isGameUnderControl());
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          Assert.assertEquals(<span class="jxr_string">"For turn "</span> + currentGame.getTurnNum() + <span class="jxr_string">", playerB has to be the active player but active player is: "</span>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>                  + currentGame.getPlayer(currentGame.getActivePlayerId()).getName(), currentGame.getActivePlayerId(), playerB.getId());
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      @Test
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testEmrakulCastOnOpponentsTurnCheckTurn5() {
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 12);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          addCard(Zone.GRAVEYARD, playerA, <span class="jxr_string">"Island"</span>, 1);
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <em class="jxr_comment">// Emrakul, the Promised End costs {1} less to cast for each card type among cards in your graveyard.</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <em class="jxr_comment">// When you cast Emrakul, you gain control of target opponent during that player's next turn. After that turn, that player takes an extra turn.</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          <em class="jxr_comment">// Trample</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <em class="jxr_comment">// Protection from instants</em>
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1); <em class="jxr_comment">// {13}</em>
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          <em class="jxr_comment">// Flash (You may cast this spell any time you could cast an instant.)</em>
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          <em class="jxr_comment">// Creature cards you own that aren't on the battlefield have flash.</em>
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <em class="jxr_comment">// Each opponent can cast spells only any time they could cast a sorcery.</em>
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Teferi, Mage of Zhalfir"</span>, 1);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          <em class="jxr_comment">// Turn 4 is the next turn of opponent (player B)  that player A controls</em>
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          <em class="jxr_comment">// So Turn 5 is the extra turn for player B after Turn 4</em>
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          setStopOnTurn(5);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          execute();
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          assertPermanentCount(playerA, <span class="jxr_string">"Emrakul, the Promised End"</span>, 1);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          Assert.assertTrue(<span class="jxr_string">"Turn 5 is an extra turn "</span>, currentGame.getState().isExtraTurn());
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          Assert.assertEquals(<span class="jxr_string">"For turn "</span> + currentGame.getTurnNum() + <span class="jxr_string">", playerB has to be the active player but active player is: "</span>
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>                  + currentGame.getPlayer(currentGame.getActivePlayerId()).getName(), currentGame.getActivePlayerId(), playerB.getId());
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      }
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L101" href="#L101">101</a> <em class="jxr_javadoccomment">     * <a href="https://github.com/magefree/mage/issues/6824" target="alexandria_uri">https://github.com/magefree/mage/issues/6824</a></em>
+<a class="jxr_linenumber" name="L102" href="#L102">102</a> <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> <em class="jxr_javadoccomment">     * When you cast miracled Temporal Mastery with God-Eternal Kefnet on the</em>
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> <em class="jxr_javadoccomment">     * battlefield and copy it with it's ability you get only 1 extra turn. It</em>
+<a class="jxr_linenumber" name="L105" href="#L105">105</a> <em class="jxr_javadoccomment">     * should be 2, since you cast Temporal Mastery with it's miracle ability +</em>
+<a class="jxr_linenumber" name="L106" href="#L106">106</a> <em class="jxr_javadoccomment">     * you get a copy from Kefnet's ability. Still after first extra turn game</em>
+<a class="jxr_linenumber" name="L107" href="#L107">107</a> <em class="jxr_javadoccomment">     * proceeds to next player.</em>
+<a class="jxr_linenumber" name="L108" href="#L108">108</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>     @Test
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCopyMiracledTemporalMastery4TwoExtraTurns() {
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> 
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Island"</span>, 7);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         <em class="jxr_comment">// You may reveal the first card you draw each turn as you draw it. Whenever you reveal an instant or sorcery card this way,</em>
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         <em class="jxr_comment">// copy that card and you may cast the copy. That copy costs {2} less to cast.</em>
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         <em class="jxr_comment">// When God-Eternal Kefnet dies or is put into exile from the battlefield, you may put it into its owner’s library third from the top.</em>
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"God-Eternal Kefnet"</span>, 1);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         <em class="jxr_comment">// Take an extra turn after this one. Exile Temporal Mastery.</em>
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         <em class="jxr_comment">// Miracle {1}{U} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)</em>
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         addCard(Zone.LIBRARY, playerB, <span class="jxr_string">"Temporal Mastery"</span>, 1); <em class="jxr_comment">// Sorcery {5}{U}{U}</em>
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         skipInitShuffling();
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> 
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         setChoice(playerB, <strong class="jxr_keyword">true</strong>); <em class="jxr_comment">// Would you like to reveal first drawn card (Temporal Mastery, you can copy it and cast {2} less)?</em>
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         setChoice(playerB, <strong class="jxr_keyword">true</strong>); <em class="jxr_comment">// Would you like to copy Temporal Mastery and cast it {2} less?</em>
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         setChoice(playerB, <strong class="jxr_keyword">true</strong>); <em class="jxr_comment">// Reveal Temporal Mastery to be able to use Miracle?</em>
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         setChoice(playerB, <strong class="jxr_keyword">true</strong>); <em class="jxr_comment">// Miracle {1}{U} (You may cast this card for its miracle cost when you draw it if it's the first card you drew this turn.)</em>
+<a class="jxr_linenumber" name="L128" href="#L128">128</a> 
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         setChoice(playerB, false); <em class="jxr_comment">// Would you like to reveal first drawn card? (Turn 3)</em>
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         setChoice(playerB, false); <em class="jxr_comment">// Would you like to reveal first drawn card? (Turn 4)</em>
+<a class="jxr_linenumber" name="L131" href="#L131">131</a> 
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         <em class="jxr_comment">// Turn 3 + 4 are extra turns</em>
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>         setStopAt(4, PhaseStep.PRECOMBAT_MAIN);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         execute();
+<a class="jxr_linenumber" name="L135" href="#L135">135</a> 
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         assertExileCount(playerB, <span class="jxr_string">"Temporal Mastery"</span>, 1);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a> 
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         Assert.assertTrue(<span class="jxr_string">"Turn 4 is an extra turn "</span>, currentGame.getState().isExtraTurn());
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         Assert.assertEquals(<span class="jxr_string">"For turn "</span> + currentGame.getTurnNum() + <span class="jxr_string">", playerB has to be the active player but active player is: "</span>
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>                 + currentGame.getPlayer(currentGame.getActivePlayerId()).getName(), currentGame.getActivePlayerId(), playerB.getId());
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>     }
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> 
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

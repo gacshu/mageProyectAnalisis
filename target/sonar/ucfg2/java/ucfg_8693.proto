@@ -1,0 +1,131 @@
+
+_mage.game.GameState#getActivePowerInsteadOfToughnessForDamageLethalityFilters()Ljava/util/List;X
+LD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameState.javaã) ã(b"4*¥
+2
+å] å(kƒ¡
+
+å] å(m%
+%6mage.game.permanent.Battlefield"Emage.game.GameState#getBattlefield()Lmage/game/permanent/Battlefield;*3
+
+__unknown_file (
+mage.game.GameState2getBattlefield()œÃ
+å] å(Ü
+%7java.util.List"Hmage.game.permanent.Battlefield#getAllActivePermanents()Ljava/util/List;*C
+
+__unknown_file ('
+%
+%6mage.game.permanent.Battlefield2getAllActivePermanents()•¢
+å] å(è
+%8java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%7java.util.List2stream()àÖ
+
+å] ç(!
+%9java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ëé
+
+å] é(Y
+%10java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)äá
+
+å] è(N
+%11java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%10java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)±
+Æ
+
+ê ê(,!
+%12java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsúô
+
+å] ê(-
+%4java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%11java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%12java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)^
+\
+
+å] ê(-
+%2java.util.List"__id*2
+
+__unknown_file (
+
+%4java.util.List*
+1*÷
+3
+åO å(XN
+L
+
+åO å(X
+%5java.util.List"__id*"
+
+__unknown_file (
+""è
+å
+
+åO å(Z
+%3java.util.List"1java.util.Collections#emptyList()Ljava/util/List;*5
+
+__unknown_file ("
+java.util.Collections^
+\
+
+åO å(Z
+%2java.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.List*
+1*©
+4
+å å(Bò
+ï
+
+å å(B
+%0java.util.Map"__id*l
+
+__unknown_file (P*N
+mage.game.GameState"5
+3usePowerInsteadOfToughnessForDamageLethalityFiltersus
+
+å å(L
+%1boolean"java.util.Map#isEmpty()Z*1
+
+__unknown_file (
+
+%0java.util.Map2	isEmpty()*
+2
+3*5
+1
+å ê(."$
+
+å ê(.
+
+%2java.util.ListB
+mage.game.GameStateH

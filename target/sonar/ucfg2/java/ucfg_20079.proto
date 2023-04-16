@@ -1,0 +1,851 @@
+
+Zmage.cards.Sets#generateRandomCardPool(ILjava/util/List;ZLjava/util/List;)Ljava/util/List;R
+HD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/Sets.javaE E(3"65*®
+25
+ô8 ô(@èå
+
+ô8 ô(J
+%57boolean"!mage.filter.FilterMana#isGreen()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isGreen()*
+23*é
+26
+ô ô($rp
+
+ô ô(/
+
+%56int"mage.Mana#getGreen()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2
+getGreen()*
+25
+23*§
+28
+ñ6 ñ(>ãà
+
+ñ6 ñ(F
+%55boolean"mage.filter.FilterMana#isRed()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2isRed()*
+26*ä
+29
+ñ ñ($nl
+
+ñ ñ(-
+
+%54int"mage.Mana#getRed()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2getRed()*
+26
+28*®
+31
+ì8 ì(@èå
+
+ì8 ì(J
+%53boolean"!mage.filter.FilterMana#isBlack()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isBlack()*
+29*é
+32
+ì ì($rp
+
+ì ì(/
+
+%52int"mage.Mana#getBlack()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2
+getBlack()*
+29
+31*¶
+34
+ê7 ê(?çä
+
+ê7 ê(H
+%51boolean" mage.filter.FilterMana#isBlue()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2isBlue()*
+32*å
+35
+ê ê($pn
+
+ê ê(.
+
+%50int"mage.Mana#getBlue()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2	getBlue()*
+32
+34*®
+37
+ç8 ç(@èå
+
+ç8 ç(J
+%49boolean"!mage.filter.FilterMana#isWhite()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isWhite()*
+35*é
+38
+ç ç($rp
+
+ç ç(/
+
+%48int"mage.Mana#getWhite()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2
+getWhite()*
+35
+37*¨
+39
+å) å(-ìê
+
+å) å(7
+%47java.util.List")mage.cards.Card#getMana()Ljava/util/List;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getMana()*
+21*…
+40
+Ö& Ö(*µ≤
+
+Ö& Ö(=
+%46mage.filter.FilterMana":mage.cards.Card#getColorIdentity()Lmage/filter/FilterMana;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getColorIdentity()u
+s
+
+Ö Ö(>"
+manaCardmage.filter.FilterMana"__id*;
+
+__unknown_file (
+
+%46mage.filter.FilterMana*
+39
+20*Ö
+41
+Ç Ç(Ec
+a
+
+Ç Ç(E
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%43mage.cards.Card*
+2
+40
+44
+1*u
+42
+Ç@ Ç(D]
+[
+
+Ç@ Ç(D
+%43mage.cards.Card"__id*/
+
+__unknown_file (
+
+%45
+<nulltype>*
+41*¥
+43
+Ç+ Ç(3∑¥
+
+Ç+ Ç(=
+%44mage.cards.Card"9mage.cards.repository.CardInfo#getCard()Lmage/cards/Card;*H
+
+__unknown_file (,
+*
+cardInfomage.cards.repository.CardInfo2	getCard()b
+`
+
+Ç+ Ç(=
+%43mage.cards.Card"__id*4
+
+__unknown_file (
+
+%44mage.cards.Card*
+41*‹
+44
+Å  Å(%qo
+
+Å= Å(I
+
+%40int"java.util.List#size()I*5
+
+__unknown_file (
+
+cardsjava.util.List2size()ù
+ö
+
+Å* Å(J
+
+%41int" mage.util.RandomUtil#nextInt(I)I*4
+
+__unknown_file ("
+mage.util.RandomUtil*(
+
+__unknown_file (
+
+
+%40int£
+†
+
+Å  Å(K%
+%42mage.cards.repository.CardInfo"
+__arrayGet*5
+
+__unknown_file (
+
+cardsjava.util.List*(
+
+__unknown_file (
+
+
+%41intÜ
+É
+
+Å Å(L*
+cardInfomage.cards.repository.CardInfo"__id*C
+
+__unknown_file ('
+%
+%42mage.cards.repository.CardInfo*
+42
+43*Æ
+46} }(=;
+" (-
+%38java.util.ArrayList"java.util.ArrayListl
+j
+ (/
+%39"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%38java.util.ArrayListh
+f
+ (0
+cardPooljava.util.List"__id*8
+
+__unknown_file (
+
+%38java.util.ArrayList*
+44
+1*‰
+47z, z(c¶
+£
+z, z(s
+%35java.lang.String"__concat*E
+z, z(c97
+5Can't find cards for chosen colors to generate deck: *-
+zf z(s!
+
+allowedColorsjava.util.ListUS
+z z(+&
+%36java.lang.IllegalStateException"java.lang.IllegalStateExceptionŒ
+À
+z z(t
+%37";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*D
+
+__unknown_file ((
+&
+%36java.lang.IllegalStateException*5
+
+__unknown_file (
+
+%35java.lang.String*
+0*±
+48x x(-c
+a
+x x(6+
+%32$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""‘—
+x x(J
+%33java.util.List"dmage.cards.repository.CardRepository#findCards(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%32$mage.cards.repository.CardRepository*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2/findCards(Lmage/cards/repository/CardCriteria;)`
+^
+x x(K
+cardsjava.util.List"__id*3
+
+__unknown_file (
+
+%33java.util.Listyw
+y y(
+%34boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+46
+47*•
+49` `($a
+_
+` `($)
+color mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""ß
+§
+` `($)
+color mage.constants.ColoredManaSymbol"
+__arrayGet*=
+
+__unknown_file (!
+
+allowedColorsjava.util.List*"
+
+__unknown_file (
+""*
+48
+50*ç
+50a a(_
+]
+b b('
+%27 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""_
+]
+f f('
+%28 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""_
+]
+j j('
+%29 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""_
+]
+n n('
+%30 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""_
+]
+r r('
+%31 mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""*
+49
+51
+52
+53
+54
+55*Õ
+51r u(∞≠
+s s(+
+%25void"#mage.filter.FilterMana#setGreen(Z)V*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana* 
+
+__unknown_file (22setGreen(Z)ÉÄ
+t t(()
+%26"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#green(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22green(Z)*
+49*≈
+52n q(¨©
+o o()
+%23void"!mage.filter.FilterMana#setRed(Z)V*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana* 
+
+__unknown_file (22	setRed(Z)ˇ¸
+p p(&)
+%24"mage.cards.repository.CardCriteria"Mmage.cards.repository.CardCriteria#red(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22red(Z)*
+49*Õ
+53j m(∞≠
+k k(+
+%21void"#mage.filter.FilterMana#setBlack(Z)V*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana* 
+
+__unknown_file (22setBlack(Z)ÉÄ
+l l(()
+%22"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#black(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22black(Z)*
+49*…
+54f i(Æ´
+g g(*
+%19void""mage.filter.FilterMana#setBlue(Z)V*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana* 
+
+__unknown_file (22
+setBlue(Z)Å˛
+h h(')
+%20"mage.cards.repository.CardCriteria"Nmage.cards.repository.CardCriteria#blue(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22blue(Z)*
+49*£
+10
+¨- ¨(5ãà
+
+¨- ¨(=
+%66boolean"mage.filter.FilterMana#isRed()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2isRed()*
+8*Õ
+55b e(∞≠
+c c(+
+%17void"#mage.filter.FilterMana#setWhite(Z)V*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana* 
+
+__unknown_file (22setWhite(Z)ÉÄ
+d d(()
+%18"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#white(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22white(Z)*
+49*ß
+11
+¨ ¨( ãà
+
+¨ ¨((
+%65boolean"mage.filter.FilterMana#isRed()Z*@
+
+__unknown_file ($
+"
+manaCardmage.filter.FilterMana2isRed()*
+8
+10*¬
+57_ _(.CA
+_" _(,
+%15mage.filter.FilterMana"mage.filter.FilterManar
+p
+_ _(.
+%16" mage.filter.FilterMana#<init>()V*;
+
+__unknown_file (
+
+%15mage.filter.FilterManas
+q
+_ _(/"
+manaNeedmage.filter.FilterMana"__id*;
+
+__unknown_file (
+
+%15mage.filter.FilterMana*
+49*®
+13
+©/ ©(7èå
+
+©/ ©(A
+%64boolean"!mage.filter.FilterMana#isBlack()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isBlack()*
+11*Å
+58Z Z(P
+N
+Z Z(
+codejava.lang.String"__id*"
+
+__unknown_file (
+""î
+ë
+Z Z(
+codejava.lang.String"
+__arrayGet*;
+
+__unknown_file (
+
+allowedSetsjava.util.List*"
+
+__unknown_file (
+""*
+57
+59*¨
+14
+© ©( èå
+
+© ©(*
+%63boolean"!mage.filter.FilterMana#isBlack()Z*@
+
+__unknown_file ($
+"
+manaCardmage.filter.FilterMana2	isBlack()*
+13
+11*⁄
+59[ [(√¿
+[ [(')
+%14"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*6
+
+__unknown_file (
+
+codejava.lang.String2setCodes([Ljava/lang/String;)*
+58*¶
+16
+¶. ¶(6çä
+
+¶. ¶(?
+%62boolean" mage.filter.FilterMana#isBlue()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2isBlue()*
+14*™
+17
+¶ ¶( çä
+
+¶ ¶()
+%61boolean" mage.filter.FilterMana#isBlue()Z*@
+
+__unknown_file ($
+"
+manaCardmage.filter.FilterMana2isBlue()*
+14
+16*®
+19
+£/ £(7èå
+
+£/ £(A
+%60boolean"!mage.filter.FilterMana#isWhite()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isWhite()*
+17*(
+0 "!
+
+¡ ¡(
+implicit return*;
+1
+¿ ¿("*
+
+¿ ¿(
+
+cardPooljava.util.List*Ô
+2
+º0 º(g¨
+©
+
+º0 º(w
+%70java.lang.String"__concat*G
+
+º0 º(g97
+5Not enough cards for chosen colors to generate deck: */
+
+ºj º(w!
+
+allowedColorsjava.util.ListWU
+
+º º(/&
+%71java.lang.IllegalStateException"java.lang.IllegalStateException–
+Õ
+
+º º(x
+%72";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*D
+
+__unknown_file ((
+&
+%71java.lang.IllegalStateException*5
+
+__unknown_file (
+
+%70java.lang.String*
+0*⁄
+4
+µ µ(º
+π
+
+µ µ(&
+%69boolean"
+__arrayAdd*8
+
+__unknown_file (
+
+cardPooljava.util.List*
+
+__unknown_file (: *5
+
+__unknown_file (
+
+cardmage.cards.Card*
+
+2
+44
+1*∞
+7
+Ø/ Ø(7èå
+
+Ø/ Ø(A
+%68boolean"!mage.filter.FilterMana#isGreen()Z*@
+
+__unknown_file ($
+"
+manaNeedmage.filter.FilterMana2	isGreen()*
+2
+4
+44
+1*≥
+8
+Ø Ø( èå
+
+Ø Ø(*
+%67boolean"!mage.filter.FilterMana#isGreen()Z*@
+
+__unknown_file ($
+"
+manaCardmage.filter.FilterMana2	isGreen()*
+2
+4
+7
+44
+1*è
+61Y# Y(.us
+Y# Y(5
+
+%13int"java.util.List#size()I*;
+
+__unknown_file (
+
+allowedSetsjava.util.List2size()*
+57
+58*ﬁ
+63N N(U
+S
+N N(+
+%5mage.constants.CardType"__id*"
+
+__unknown_file (
+""’“
+N N(,(
+%6"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*;
+
+__unknown_file (
+
+%5mage.constants.CardType2$notTypes([Lmage/constants/CardType;)Ä˝
+Q Q(!(
+%7"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#white(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2white(Z)˛˚
+R R( (
+%8"mage.cards.repository.CardCriteria"Nmage.cards.repository.CardCriteria#blue(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2blue(Z)Ä˝
+S S(!(
+%9"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#black(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2black(Z)˝˙
+T T()
+%10"mage.cards.repository.CardCriteria"Mmage.cards.repository.CardCriteria#red(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2red(Z)Å˛
+U U(!)
+%11"mage.cards.repository.CardCriteria"Omage.cards.repository.CardCriteria#green(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2green(Z)âÜ
+V V(%)
+%12"mage.cards.repository.CardCriteria"Smage.cards.repository.CardCriteria#colorless(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*
+
+__unknown_file (2 2colorless(Z)*
+57
+61*Ã
+64J J(S
+Q
+J J()
+%2mage.constants.Rarity"__id*"
+
+__unknown_file (
+""œÃ
+J J(*(
+%3"mage.cards.repository.CardCriteria"image.cards.repository.CardCriteria#rarities([Lmage/constants/Rarity;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*9
+
+__unknown_file (
+
+%2mage.constants.Rarity2"rarities([Lmage/constants/Rarity;)äá
+K K($(
+%4"mage.cards.repository.CardCriteria"Smage.cards.repository.CardCriteria#colorless(Z)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria* 
+
+__unknown_file (22colorless(Z)*
+57
+61*¨
+20
+£ £( èå
+
+£ £(*
+%59boolean"!mage.filter.FilterMana#isWhite()Z*@
+
+__unknown_file ($
+"
+manaCardmage.filter.FilterMana2	isWhite()*
+17
+19*é
+65F  F(2ZX
+F$ F(0(
+%0"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaâ
+Ü
+F  F(2
+%1",mage.cards.repository.CardCriteria#<init>()V*F
+
+__unknown_file (*
+(
+%0"mage.cards.repository.CardCriteriaã
+à
+F F(3.
+criteria"mage.cards.repository.CardCriteria"__id*F
+
+__unknown_file (*
+(
+%0"mage.cards.repository.CardCriteria*
+63
+64*Ç
+21
+å å(&O
+M
+
+å å(&
+manaLand	mage.Mana"__id*"
+
+__unknown_file (
+""ã
+à
+
+å å(&
+manaLand	mage.Mana"
+__arrayGet*3
+
+__unknown_file (
+
+%47java.util.List*"
+
+__unknown_file (
+""*
+2
+4
+38
+44
+1*í
+23
+ú ú($zx
+
+ú ú(3
+
+%58int"mage.Mana#getColorless()I*3
+
+__unknown_file (
+
+manaLand	mage.Mana2getColorless()*
+21: 
+
+__unknown_file (
+"":+
+ED E(j
+allowedColorsjava.util.List: 
+
+__unknown_file (
+"":+
+
+EÉ E(õ
+allowedSetsjava.util.ListB"
+mage.cards.SetsH

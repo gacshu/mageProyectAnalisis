@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>FridayNightMagic2001 xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/FridayNightMagic2001.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * <a href="https://scryfall.com/sets/f01" target="alexandria_uri">https://scryfall.com/sets/f01</a></em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="FridayNightMagic2001" href="../../mage/sets/FridayNightMagic2001.html#FridayNightMagic2001">FridayNightMagic2001</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FridayNightMagic2001" href="../../mage/sets/FridayNightMagic2001.html#FridayNightMagic2001">FridayNightMagic2001</a> instance = <strong class="jxr_keyword">new</strong> <a name="FridayNightMagic2001" href="../../mage/sets/FridayNightMagic2001.html#FridayNightMagic2001">FridayNightMagic2001</a>();
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="FridayNightMagic2001" href="../../mage/sets/FridayNightMagic2001.html#FridayNightMagic2001">FridayNightMagic2001</a> getInstance() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      }
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <a name="FridayNightMagic2001" href="../../mage/sets/FridayNightMagic2001.html#FridayNightMagic2001">FridayNightMagic2001</a>() {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Friday Night Magic 2001"</span>, <span class="jxr_string">"F01"</span>, ExpansionSet.buildDate(2001, 1, 1), SetType.PROMOTIONAL);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = false;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Carnophage"</span>, 10, Rarity.RARE, mage.cards.c.Carnophage.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Fireblast"</span>, 12, Rarity.RARE, mage.cards.f.Fireblast.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Impulse"</span>, 11, Rarity.RARE, mage.cards.i.Impulse.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Jackal Pup"</span>, 8, Rarity.RARE, mage.cards.j.JackalPup.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ophidian"</span>, 7, Rarity.RARE, mage.cards.o.Ophidian.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Quirion Ranger"</span>, 9, Rarity.RARE, mage.cards.q.QuirionRanger.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Swords to Plowshares"</span>, 6, Rarity.RARE, mage.cards.s.SwordsToPlowshares.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>       }
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

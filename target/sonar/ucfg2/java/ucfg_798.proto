@@ -1,0 +1,416 @@
+
+:mage.player.ai.simulators.ActionSimulator#evaluateState()Iã
+ÄD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/simulators/ActionSimulator.java$ $("17*†
+13+$ +(,ÖÇ
++$ +(5
+%14boolean"mage.players.Player#hasWon()Z*=
+
+__unknown_file (!
+
+opponentmage.players.Player2hasWon()*
+11
+12*æ
+14+ +(ê
+ç
++ +($
+%12mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+playerêç
++ +( 
+%13boolean""mage.players.PlayerImpl#hasLost()Z*B
+
+__unknown_file (&
+$
+%12mage.player.ai.ComputerPlayer2	hasLost()*
+13
+12*¶
+15* *(~
+|
+* *(
+%10mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameåâ
+* *($
+%11boolean"#mage.game.Game#checkIfGameIsOver()Z*3
+
+__unknown_file (
+
+%10mage.game.Game2checkIfGameIsOver()*
+14
+8*e
+16' '(A
+?
+' '($	
+%9int"__id*"
+
+__unknown_file (
+"""
+' '(%
+""*≈
+17% %(}
+{
+% %(
+%0mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+game}
+{
+%) %(-
+%1mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameè
+å
+%; %(A#
+%2mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+player†ù
+%; %(I
+%3java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+%2mage.player.ai.ComputerPlayer2getId()ËÂ
+%) %(J
+%4java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*2
+
+__unknown_file (
+
+%1mage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getOpponents(Ljava/util/UUID;)°û
+%) %(S
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%4java.util.Set2stream()™ß
+%) %(_
+%6java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream2findFirst()‹Ÿ
+%) %(l
+%7java.util.UUID"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%6java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)ÓÎ
+% %(m
+%8mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*2
+
+__unknown_file (
+
+%0mage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+% %(n
+opponentmage.players.Player"__id*7
+
+__unknown_file (
+
+%8mage.players.Player*
+15
+16*Â
+1; ;(ê
+ç
+; ;($
+%39mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+player™ß
+; ;(!
+%40mage.cards.Cards"3mage.players.PlayerImpl#getHand()Lmage/cards/Cards;*B
+
+__unknown_file (&
+$
+%39mage.player.ai.ComputerPlayer2	getHand()nl
+; ;((
+
+%41int"java.util.Set#size()I*5
+
+__unknown_file (
+
+%40mage.cards.Cards2size()°û
+< <(#
+%42mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getHand()nl
+< <(*
+
+%43int"java.util.Set#size()I*5
+
+__unknown_file (
+
+%42mage.cards.Cards2size()"
+= =(
+""*ö
+28 8( b
+`
+8 8( *
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+8 8( *
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%36java.util.List*"
+
+__unknown_file (
+""*
+3
+1*î
+39 9(~
+|
+93 9(7
+%37mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameˇ¸
+9 9(8
+
+%38int"\mage.player.ai.PermanentEvaluator#evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)I*L
+
+__unknown_file (0
+.
+	evaluator!mage.player.ai.PermanentEvaluator*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%37mage.game.Game29evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)*
+2*±
+48" 8(&~
+|
+8" 8(&
+%32mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameæª
+8" 8(7&
+%33mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*3
+
+__unknown_file (
+
+%32mage.game.Game2getBattlefield()ê
+ç
+8O 8(U$
+%34mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+player¢ü
+8O 8(]
+%35java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*B
+
+__unknown_file (&
+$
+%34mage.player.ai.ComputerPlayer2getId()£†
+8" 8(^
+%36java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%33mage.game.permanent.Battlefield*3
+
+__unknown_file (
+
+%35java.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)*
+2*ö
+55 5( b
+`
+5 5( *
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+5 5( *
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%29java.util.List*"
+
+__unknown_file (
+""*
+4
+6*î
+66 6(~
+|
+63 6(7
+%30mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameˇ¸
+6 6(8
+
+%31int"\mage.player.ai.PermanentEvaluator#evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)I*L
+
+__unknown_file (0
+.
+	evaluator!mage.player.ai.PermanentEvaluator*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%30mage.game.Game29evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)*
+5*±
+75" 5(&~
+|
+5" 5(&
+%25mage.game.Game"__id*S
+
+__unknown_file (7*5+
+)mage.player.ai.simulators.ActionSimulator"
+gameæª
+5" 5(7&
+%26mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*3
+
+__unknown_file (
+
+%25mage.game.Game2getBattlefield()ê
+ç
+5O 5(U$
+%27mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+player¢ü
+5O 5(]
+%28java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*B
+
+__unknown_file (&
+$
+%27mage.player.ai.ComputerPlayer2getId()£†
+5" 5(^
+%29java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%26mage.game.permanent.Battlefield*3
+
+__unknown_file (
+
+%28java.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)*
+5*Ø
+82 2(ê
+ç
+2 2($
+%20mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+playeråâ
+2 2($
+
+%21int""mage.players.PlayerImpl#getLife()I*B
+
+__unknown_file (&
+$
+%20mage.player.ai.ComputerPlayer2	getLife()ÉÄ
+3 3(#
+
+%22int"mage.players.Player#getLife()I*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getLife()YW
+4+ 4(=(
+%23!mage.player.ai.PermanentEvaluator"!mage.player.ai.PermanentEvaluatorâ
+Ü
+4' 4(?
+%24"+mage.player.ai.PermanentEvaluator#<init>()V*F
+
+__unknown_file (*
+(
+%23!mage.player.ai.PermanentEvaluatorã
+à
+4 4(@.
+	evaluator!mage.player.ai.PermanentEvaluator"__id*F
+
+__unknown_file (*
+(
+%23!mage.player.ai.PermanentEvaluator*
+7*e
+9/ /(B
+@
+/ /((
+
+%19int"__id*"
+
+__unknown_file (
+"""
+/ /()
+""*∫
+10.& .(,ê
+ç
+.& .(,$
+%17mage.player.ai.ComputerPlayer"__id*U
+
+__unknown_file (9*7+
+)mage.player.ai.simulators.ActionSimulator"
+playeréã
+.& .(5
+%18boolean"!mage.players.PlayerImpl#hasWon()Z*B
+
+__unknown_file (&
+$
+%17mage.player.ai.ComputerPlayer2hasWon()*
+8
+9*°
+11. .(áÑ
+. .("
+%16boolean"mage.players.Player#hasLost()Z*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	hasLost()*
+9
+10*f
+12, ,(B
+@
+, ,((
+
+%15int"__id*"
+
+__unknown_file (
+"""
+, ,()
+""B-+
+)mage.player.ai.simulators.ActionSimulatorHP

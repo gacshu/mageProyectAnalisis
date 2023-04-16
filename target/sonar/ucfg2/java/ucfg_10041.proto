@@ -1,0 +1,340 @@
+
+àmage.abilities.common.PutIntoGraveFromAnywhereEffect#replaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z~
+tD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/PutIntoGraveFromAnywhereSourceAbility.javav v("startingBlock*∞
+2
+Ç Ç(a
+_
+
+Ç Ç('
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""≠
+™
+
+Ç Ç('
+effectmage.abilities.effects.Effect"
+__arrayGet*C
+
+__unknown_file ('
+%
+%14mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+3
+4
+6
+1*ô
+14x  x($∞≠
+x/ x(G
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+x  x(H
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+x x(I!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.PlayerÑÅ
+y  y(6
+%2mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)b
+`
+y y(7
+objectmage.MageObject"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*
+11
+12*Ù
+3
+ä ä(›⁄
+
+ä ä(*
+%19boolean"Nmage.abilities.effects.Effect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)*
+2*Ç
+startingBlockv v(Kó
+î
+u u(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+v* v(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%20î
+ë
+u u(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+v9 v(? 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21ä
+á
+u u(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+vF v(J
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22*
+14
+9*¶
+4
+à à(e
+c
+
+à$ à(=
+%16java.lang.String"__id*6
+
+__unknown_file (
+sourceCastSpellAbility «
+
+à? à(V"
+%17mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()€ÿ
+
+à à(W
+%18void"Mmage.abilities.effects.Effect#setValue(Ljava/lang/String;Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*5
+
+__unknown_file (
+
+%16java.lang.String*@
+
+__unknown_file ($
+"
+%17mage.abilities.SpellAbility2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+3*ú
+6
+Ñ Ñ(ÖÇ
+
+Ñ Ñ(A
+%15void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+2*∫
+8
+Ç Ç('£
+†
+
+Ç Ç('%
+%14mage.abilities.effects.Effects"__id*e
+
+__unknown_file (I*G6
+4mage.abilities.common.PutIntoGraveFromAnywhereEffect"
+baseEffects*
+2*˘
+9
+Å Å(´®
+
+Å Å(%!
+%11mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()≤Ø
+
+Å/ Å(B
+%12java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()çä
+
+Å Å(C
+%13mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*?
+
+__unknown_file (#
+!
+%11mage.game.stack.SpellStack*3
+
+__unknown_file (
+
+%12java.util.UUID2getSpell(Ljava/util/UUID;)p
+n
+
+Å Å(D
+spellmage.game.stack.Spell"__id*:
+
+__unknown_file (
+
+%13mage.game.stack.Spell*
+8*"
+10~ ~("
+~ ~(
+""*Ò
+11} }(î
+ë
+}& }(-
+%3mage.constants.Outcome"__id*a
+
+__unknown_file (E*C6
+4mage.abilities.common.PutIntoGraveFromAnywhereEffect"	
+outcomeDB
+}3 }(@
+%4java.lang.StringBuilder"java.lang.StringBuilderµ
+≤
+}/ }(R
+%5"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%4java.lang.StringBuilder*.
+
+__unknown_file (
+Use effect of úô
+}Z }(m
+%6java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLogName()àÖ
+}/ }(n
+%7java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%4java.lang.StringBuilder*4
+
+__unknown_file (
+
+%6java.lang.String2append(Ljava/lang/String;)”–
+}/ }(z
+%8java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%7java.lang.StringBuilder*!
+
+__unknown_file (
+?2	append(C)•¢
+	}/ }(Ö
+%9java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+%8java.lang.StringBuilder2
+toString()öó
+	} }(î
+%10boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%3mage.constants.Outcome*4
+
+__unknown_file (
+
+%9java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+9
+10*"
+12{ {("
+{ {(
+""*%
+1
+ç ç("
+
+ç ç(
+"":/
+v  v(0#
+eventmage.game.events.GameEvent:,
+v1 v(@ 
+sourcemage.abilities.Ability:"
+vA v(J
+gamemage.game.GameB86
+4mage.abilities.common.PutIntoGraveFromAnywhereEffectHP

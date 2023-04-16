@@ -1,0 +1,107 @@
+
+kmage.abilities.condition.common.SourceDealtDamageCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z}
+sD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/SourceDealtDamageCondition.java ("startingBlock*
+2" ()¨¥
+7 (K
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()¸µ
+M (v	
+%3int":mage.abilities.Ability#getSourceObjectZoneChangeCounter()I*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2"getSourceObjectZoneChangeCounter()†ƒ
+" (}	
+%4int"Wmage.watchers.common.DamageDoneWatcher#damageDoneBy(Ljava/util/UUID;ILmage/game/Game;)I*O
+
+__unknown_file (3
+1
+watcher&mage.watchers.common.DamageDoneWatcher*2
+
+__unknown_file (
+
+%2java.util.UUID*'
+
+__unknown_file (
+	
+%3int*4
+
+__unknown_file (
+
+gamemage.game.Game2/damageDoneBy(Ljava/util/UUID;ILmage/game/Game;)*
+1*Ë
+3$ ((š—
+$ (3
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()þ
+$ (W,
+%1&mage.watchers.common.DamageDoneWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%0mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)’
+
+ (X1
+watcher&mage.watchers.common.DamageDoneWatcher"__id*J
+
+__unknown_file (.
+,
+%1&mage.watchers.common.DamageDoneWatcher*
+2
+1*ú
+startingBlock (3‰
+†
+ (
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%5“
+
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+, (2 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%6*
+3*#
+1	 (‡"
+	 (‡
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB><
+:mage.abilities.condition.common.SourceDealtDamageConditionHP

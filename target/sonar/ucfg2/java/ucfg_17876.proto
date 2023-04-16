@@ -1,0 +1,706 @@
+
+¬mage.game.GameImpl#copyPermanent(Lmage/constants/Duration;Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/util/functions/CopyApplier;)Lmage/game/permanent/Permanent;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameImpl.java‚ ‚(""startingBlock*ä
+24
+Á5 Á(;î
+ë
+
+Á Á(<6
+
+copyEffect(mage.abilities.effects.common.CopyEffect"__id*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect“œ
+
+È È(,
+%3java.util.UUID"Fmage.abilities.effects.common.CopyEffect#getSourceId()Ljava/util/UUID;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getSourceId()∞≠
+
+È4 È(M
+%4java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2getId()ŒÀ
+
+È È(N
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+21
+23*”
+14
+ˇ ˇ( øº
+
+ˇB ˇ(b
+%16mage.cards.Card"4mage.cards.Card#getSecondCardFace()Lmage/cards/Card;*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent2getSecondCardFace()Ù
+Ò
+
+ˇ ˇ(q
+%17void"ïmage.abilities.keyword.TransformAbility#transformPermanent(Lmage/game/permanent/Permanent;Lmage/cards/Card;Lmage/game/Game;Lmage/abilities/Ability;)V*G
+
+__unknown_file (+")
+'mage.abilities.keyword.TransformAbility*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+%16mage.cards.Card*2
+
+__unknown_file (
+mage.game.GameImpl*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*
+11
+12*Ó
+15
+˝ ˝(òï
+
+˝ ˝(&
+%14void"mage.cards.Card#assignNewId()V*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent2assignNewId()≤Ø
+
+˛ ˛(1
+%15boolean".mage.game.permanent.Permanent#isTransformed()Z*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2isTransformed()*
+14
+11
+12*Õ
+26
+Â Â(%ûõ
+
+Â Â('
+%0mage.game.GameState"2mage.game.GameImpl#getState()Lmage/game/GameState;*2
+
+__unknown_file (
+mage.game.GameImpl2
+getState()Ê„
+
+Â Â(>.
+%1(mage.abilities.effects.ContinuousEffects"Tmage.game.GameState#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getContinuousEffects()™ß
+
+Â Â(V
+%2java.util.List"\mage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;)Ljava/util/List;*L
+
+__unknown_file (0
+.
+%1(mage.abilities.effects.ContinuousEffects*2
+
+__unknown_file (
+mage.game.GameImpl2#getLayeredEffects(Lmage/game/Game;)*
+21*„
+16
+˚ ˚( 
+«
+
+˚ ˚(O
+%13void"fmage.abilities.keyword.MorphAbility#setPermanentToFaceDownCreature(Lmage/MageObject;Lmage/game/Game;)V*C
+
+__unknown_file ('"%
+#mage.abilities.keyword.MorphAbility*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent*2
+
+__unknown_file (
+mage.game.GameImpl*
+15*
+27
+„! „(%g
+e
+
+„ „(&-
+newBluePrintmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""*
+26*è
+17
+˙ ˙((ÚÔ
+
+˙ ˙(9
+%12boolean"-mage.cards.Card#isFaceDown(Lmage/game/Game;)Z*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+mage.game.GameImpl2isFaceDown(Lmage/game/Game;)*
+15
+16*Õ
+18
+˘1 ˘(B∞≠
+
+˘1 ˘(Q
+%11boolean"-mage.game.permanent.Permanent#isManifested()Z*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2isManifested()*
+16
+17*ó
+19
+ı ı(,”–
+
+ı ı(3#
+%8mage.game.permanent.Permanent"Cmage.game.permanent.Permanent#copy()Lmage/game/permanent/Permanent;*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2copy()á
+Ñ
+
+ı ı(3-
+newBluePrintmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%8mage.game.permanent.PermanentÌÍ
+
+ˆ ˆ($
+
+%9void"6mage.game.permanent.Permanent#reset(Lmage/game/Game;)V*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent*2
+
+__unknown_file (
+mage.game.GameImpl2reset(Lmage/game/Game;)™ß
+
+˘ ˘(-
+%10boolean"*mage.game.permanent.Permanent#isMorphed()Z*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2isMorphed()*
+16
+18*‚
+1
+õ õ(o
+m
+
+õ õ(
+%38mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state†ù
+
+õ õ(.
+%39void"amage.game.GameState#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%38mage.game.GameState*S
+
+__unknown_file (7
+5
+	newEffect(mage.abilities.effects.common.CopyEffect*B
+
+__unknown_file (&
+$
+
+newAbilitymage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)"=
+
+ú ú(/
+-
+newBluePrintmage.game.permanent.Permanent*ù
+2
+ë ë(a
+_
+
+ë ë('
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""ù
+ö
+
+ë ë('
+effectmage.abilities.effects.Effect"
+__arrayGet*3
+
+__unknown_file (
+
+%32java.util.List*"
+
+__unknown_file (
+""*	
+2
+5
+1*Ã
+3
+ñ ñ("µ≤
+
+ñ ñ(,
+%37void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2	discard()*
+2*ﬁ
+
+startingBlock‚" ‚(èô
+ñ
+
+· ·(
+%40"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+durationmage.constants.Durationf
+d
+
+‚, ‚(4#
+durationmage.constants.Duration"__annotation*#
+
+__unknown_file (
+
+%40®
+•
+
+· ·(
+%41"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanentu
+s
+
+‚@ ‚(Q2
+copyFromPermanentmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%41ô
+ñ
+
+· ·(
+%42"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+copyToPermanentIdjava.util.UUIDf
+d
+
+‚X ‚(i#
+copyToPermanentIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%42ñ
+ì
+
+· ·(
+%43"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+‚s ‚(y 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%43†
+ù
+
+· ·(
+%44"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*H
+
+__unknown_file (,
+*
+appliermage.util.functions.CopyAppliero
+m
+‚á ‚(é*
+appliermage.util.functions.CopyApplier"__annotation*#
+
+__unknown_file (
+
+%44*
+27*‹
+4
+ïN ï(XËÂ
+
+ïN ï(f
+%35mage.constants.Duration"Rmage.abilities.effects.ContinuousEffectImpl#getDuration()Lmage/constants/Duration;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getDuration()X
+V
+
+ïj ï(y
+%36mage.constants.Duration"__id*"
+
+__unknown_file (
+""*
+2
+3*Ê
+5
+ì9 ì(?î
+ë
+
+ì ì(@6
+
+copyEffect(mage.abilities.effects.common.CopyEffect"__id*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect”–
+
+ï ï(0
+%33java.util.UUID"Fmage.abilities.effects.common.CopyEffect#getSourceId()Ljava/util/UUID;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getSourceId()ﬂ‹
+
+ï ï(J
+%34boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%33java.util.UUID*A
+
+__unknown_file (%
+#
+copyToPermanentIdjava.util.UUID2equals(Ljava/lang/Object;)*
+2
+4*–
+7
+ë! ë()üú
+
+ë! ë(+
+%30mage.game.GameState"2mage.game.GameImpl#getState()Lmage/game/GameState;*2
+
+__unknown_file (
+mage.game.GameImpl2
+getState()ËÂ
+
+ë! ë(B/
+%31(mage.abilities.effects.ContinuousEffects"Tmage.game.GameState#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*8
+
+__unknown_file (
+
+%30mage.game.GameState2getContinuousEffects()¨©
+
+ë! ë(Z
+%32java.util.List"\mage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;)Ljava/util/List;*M
+
+__unknown_file (1
+/
+%31(mage.abilities.effects.ContinuousEffects*2
+
+__unknown_file (
+mage.game.GameImpl2#getLayeredEffects(Lmage/game/Game;)*
+2*Ã
+8á á(Éçä
+á á(É
+%22void",mage.MageObject#setCopy(ZLmage/MageObject;)V*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+%20mage.MageObject2setCopy(ZLmage/MageObject;)ig
+
+â# â(-/
+%23(mage.abilities.effects.common.CopyEffect"(mage.abilities.effects.common.CopyEffect¶
+£
+
+â â(X
+%24"lmage.abilities.effects.common.CopyEffect#<init>(Lmage/constants/Duration;Lmage/MageObject;Ljava/util/UUID;)V*M
+
+__unknown_file (1
+/
+%23(mage.abilities.effects.common.CopyEffect*A
+
+__unknown_file (%
+#
+durationmage.constants.Duration*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent*A
+
+__unknown_file (%
+#
+copyToPermanentIdjava.util.UUIDõ
+ò
+
+â â(Y5
+	newEffect(mage.abilities.effects.common.CopyEffect"__id*M
+
+__unknown_file (1
+/
+%23(mage.abilities.effects.common.CopyEffect∞≠
+
+ä ä(
+%25void"4mage.abilities.effects.ContinuousEffectImpl#newId()V*S
+
+__unknown_file (7
+5
+	newEffect(mage.abilities.effects.common.CopyEffect2newId()√¿
+
+ã ã(%
+%26void"Wmage.abilities.effects.common.CopyEffect#setApplier(Lmage/util/functions/CopyApplier;)V*S
+
+__unknown_file (7
+5
+	newEffect(mage.abilities.effects.common.CopyEffect*H
+
+__unknown_file (,
+*
+appliermage.util.functions.CopyApplier2-setApplier(Lmage/util/functions/CopyApplier;)≠™
+
+å å(*
+%27mage.abilities.Ability"5mage.abilities.Ability#copy()Lmage/abilities/Ability;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2copy()w
+u
+
+å å(+$
+
+newAbilitymage.abilities.Ability"__id*;
+
+__unknown_file (
+
+%27mage.abilities.AbilityÛ
+
+ç ç((
+%28void"Xmage.abilities.effects.common.CopyEffect#init(Lmage/abilities/Ability;Lmage/game/Game;)V*S
+
+__unknown_file (7
+5
+	newEffect(mage.abilities.effects.common.CopyEffect*B
+
+__unknown_file (&
+$
+
+newAbilitymage.abilities.Ability*2
+
+__unknown_file (
+mage.game.GameImpl2.init(Lmage/abilities/Ability;Lmage/game/Game;)X
+V
+
+ê ê('
+%29mage.constants.Duration"__id*"
+
+__unknown_file (
+""*
+7
+1*ñ
+9áp á(Å
+}
+áp á(Å
+%20mage.MageObject"__id*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent*
+8*®
+21
+Â Â(a
+_
+
+Â Â('
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""ú
+ô
+
+Â Â('
+effectmage.abilities.effects.Effect"
+__arrayGet*2
+
+__unknown_file (
+
+%2java.util.List*"
+
+__unknown_file (
+""*
+24
+19
+21
+11
+12*¥
+10
+áN á(_~
+|
+
+áN á(_
+%20mage.MageObject"__id*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent∏µ
+
+áN á(m
+%21mage.MageObject".mage.MageObject#getCopyFrom()Lmage/MageObject;*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2getCopyFrom()b
+`
+
+áN á(m
+%20mage.MageObject"__id*4
+
+__unknown_file (
+
+%21mage.MageObject*
+8*„
+22
+Ì4 Ì(@¿Ω
+
+Ì' Ì(H#
+%7mage.game.permanent.Permanent"Cmage.game.permanent.Permanent#copy()Lmage/game/permanent/Permanent;*=
+
+__unknown_file (!
+
+oldBluePrintmage.MageObject2copy()á
+Ñ
+
+Ì Ì(H-
+newBluePrintmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%7mage.game.permanent.Permanent*
+21*‘
+11
+á á(∏µ
+
+á$ á(C
+%19mage.MageObject".mage.MageObject#getCopyFrom()Lmage/MageObject;*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent2getCopyFrom()*
+9
+10*À
+12
+É É(≤Ø
+
+É É(H
+%18boolean"qmage.util.functions.CopyApplier#apply(Lmage/game/Game;Lmage/MageObject;Lmage/abilities/Ability;Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+appliermage.util.functions.CopyApplier*2
+
+__unknown_file (
+mage.game.GameImpl*K
+
+__unknown_file (/
+-
+newBluePrintmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+copyToPermanentIdjava.util.UUID2Papply(Lmage/game/Game;Lmage/MageObject;Lmage/abilities/Ability;Ljava/util/UUID;)*
+11* 
+23
+Í< Í(B¡æ
+
+Í. Í(O
+%6mage.MageObject"Emage.abilities.effects.common.CopyEffect#getTarget()Lmage/MageObject;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect2getTarget()j
+h
+
+Í Í(P
+oldBluePrintmage.MageObject"__id*3
+
+__unknown_file (
+
+%6mage.MageObject*
+21
+22:1
+
+‚# ‚(5#
+durationmage.constants.Duration:@
+
+‚6 ‚(R2
+copyFromPermanentmage.game.permanent.Permanent:1
+
+‚S ‚(j#
+copyToPermanentIdjava.util.UUID:.
+
+‚k ‚(z 
+sourcemage.abilities.Ability:9
+‚{ ‚(é*
+appliermage.util.functions.CopyApplierB
+mage.game.GameImplH

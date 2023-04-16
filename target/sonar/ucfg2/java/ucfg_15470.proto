@@ -1,0 +1,93 @@
+
+zmage.abilities.effects.common.CreatureExploresTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CreatureExploresTriggeredAbility.java ("startingBlock*ğ
+2 (ÔÑ
++ (<
+%2java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.CreatureExploresTriggeredAbility2getControllerId()õò
+ (=
+%3boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%2java.util.UUID2 isControlledBy(Ljava/util/UUID;)"
+ (>
+""*÷
+3 (!¯¬
+? (R
+%0java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ª§
+ (S#
+%1mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)€
+~
+ (T)
+creaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+2
+1*€
+startingBlock (;–
+“
+ (
+%4"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+* (/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%4‰
+†
+ (
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+6 (:
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%5*
+3*!
+1   ("
+   (
+"":/
+  (0#
+eventmage.game.events.GameEvent:"
+1 (:
+gamemage.game.GameBB@
+>mage.abilities.effects.common.CreatureExploresTriggeredAbilityHP

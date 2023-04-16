@@ -1,0 +1,7988 @@
+
+mage.player.ai.ComputerPlayer#chooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z€
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaú ú("startingBlock*©
+210
+Ö Ö(Â¿
+
+Ö Ö(/'
+%188mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()Ú×
+
+Ö^ Ö(t
+%189mage.filter.Filter"Image.target.common.TargetCreatureOrPlayer#getFilter()Lmage/filter/Filter;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetCreatureOrPlayer2getFilter()şû
+ÖD Ö(‰2
+%190*mage.filter.common.FilterCreaturePermanent"image.filter.common.FilterCreatureOrPlayer#getCreatureFilter()Lmage/filter/common/FilterCreaturePermanent;*8
+
+__unknown_file (
+
+%189mage.filter.Filter2getCreatureFilter(){
+y
+Ö‹ Ö(“
+%191java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerId†ƒ
+Ö Ö(š
+%192java.util.List"‚mage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*E
+
+__unknown_file ()
+'
+%188mage.game.permanent.Battlefield*P
+
+__unknown_file (4
+2
+%190*mage.filter.common.FilterCreaturePermanent*4
+
+__unknown_file (
+
+%191java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)f
+d
+Ö Ö(š
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%192java.util.List*
+204*œ
+211
+Õ% Õ(+üù
+
+Õ% Õ(>
+%187boolean"8mage.target.Target#isRequired(Lmage/abilities/Ability;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2$isRequired(Lmage/abilities/Ability;)*
+
+204
+210*
+212
+Õ Õ(~|
+
+Õ Õ(!
+%186boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+211
+204*ø
+213
+Ñ Ñ('Î
+Ë
+
+Ñ Ñ(O
+%185boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Ñ Ñ(P
+""*·
+214
+Ğ Ğ(!—”
+
+Ğ Ğ(`
+%184boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+212
+213*û
+215
+Î Î(+Ñ
+Î
+
+Î Î(V
+%183boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Î Î(W
+""*º
+216
+Í Í(š—
+
+Í Í(`
+%182boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+212
+215*­
+217
+Ì Ì(Š
+
+Ì Ì($
+%181boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+214
+216*
+218
+Ë Ë(~|
+
+Ë Ë(!
+%180boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+212
+217*¾
+219
+È È(!Ú×
+
+ÈV È(l
+%176mage.filter.Filter"Image.target.common.TargetCreatureOrPlayer#getFilter()Lmage/filter/Filter;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetCreatureOrPlayer2getFilter()şû
+È< È(2
+%177*mage.filter.common.FilterCreaturePermanent"image.filter.common.FilterCreatureOrPlayer#getCreatureFilter()Lmage/filter/common/FilterCreaturePermanent;*8
+
+__unknown_file (
+
+%176mage.filter.Filter2getCreatureFilter()¤¡
+È‰ È(œ
+%178java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()¶³
+È È(
+%179java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*P
+
+__unknown_file (4
+2
+%177*mage.filter.common.FilterCreaturePermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%178java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+È È(
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%179java.util.List*
+218*Á
+220
+Æ Æ(!Ú×
+
+ÆY Æ(o
+%172mage.filter.Filter"Image.target.common.TargetCreatureOrPlayer#getFilter()Lmage/filter/Filter;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetCreatureOrPlayer2getFilter()şû
+Æ? Æ(„2
+%173*mage.filter.common.FilterCreaturePermanent"image.filter.common.FilterCreatureOrPlayer#getCreatureFilter()Lmage/filter/common/FilterCreaturePermanent;*8
+
+__unknown_file (
+
+%172mage.filter.Filter2getCreatureFilter()¤¡
+ÆŒ Æ(Ÿ
+%174java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()¹¶
+Æ Æ( 
+%175java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*P
+
+__unknown_file (4
+2
+%173*mage.filter.common.FilterCreaturePermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%174java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+Æ Æ( 
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%175java.util.List*
+218*È
+221
+Ã Ã($S
+Q
+
+Ã Ã($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""¸µ
+
+ÄJ Ä(d
+%170mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()ˆ
+…
+
+Ä Ä(f7
+
+origTarget)mage.target.common.TargetCreatureOrPlayer"__id*8
+
+__unknown_file (
+
+%170mage.target.TargetŠ
+
+Å Å( 
+%171boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+219
+220*Û
+100
+š š(¬©
+
+š š( "
+%347mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()‹
+
+š š(*
+%348boolean"java.util.ArrayDeque#isEmpty()Z*@
+
+__unknown_file ($
+"
+%347mage.game.stack.SpellStack2	isEmpty()*
+93
+99*Ø
+222
+Â Â(¸µ
+
+Â Â(&
+%169mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+197
+221*×
+101
+™ ™(¸µ
+
+™ ™(-
+%346mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*	
+92
+100*²
+223
+¿ ¿(ˆ…
+
+¿ ¿($
+%168boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+¿ ¿(%
+""*Ø
+102
+˜ ˜(¸µ
+
+˜ ˜(&
+%345mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+101
+100*ª
+224
+¸ ¸((d
+b
+
+¸ ¸((*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+¸ ¸((*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+badListjava.util.List*"
+
+__unknown_file (
+""*
+
+223
+227*²
+103
+• •(ˆ…
+
+• •($
+%344boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+• •(%
+""*ë
+225
+¼ ¼(ª§
+
+¼% ¼(6
+%166java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()£ 
+
+¼ ¼(E
+%167void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%166java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+224*¨
+104
+‘ ‘(‹
+
+‘% ‘(1
+%341java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()£ 
+
+‘ ‘(@
+%342void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%341java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÖÓ
+
+’ ’(&
+%343boolean"*java.util.List#remove(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+cardsjava.util.List*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Ljava/lang/Object;)*
+107*‘
+105
+ (&‹ˆ
+
+ (a
+%340mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+ (b
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%340mage.cards.Card*
+
+104
+107*Ö
+227
+¹ ¹(¢Ÿ
+
+¹ ¹(+
+%163java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()qo
+
+¹ ¹(2
+%164int"java.util.List#size()I*4
+
+__unknown_file (
+
+%163java.util.List2size()›
+
+¹6 ¹(T
+%165int"+mage.target.Target#getMinNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMinNumberOfTargets()*
+
+223
+225*›
+106
+* (/|z
+
+* (9
+%339boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+
+103
+105*¨
+107
+ (ˆ…
+
+ (%
+%338boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+
+103
+106*Í
+
+108
+/ (3…‚
+
+/ (R
+%332mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)°­
+
+/ (a
+%333mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*9
+
+__unknown_file (
+
+%332mage.players.Player2getGraveyard()©¦
+x (Š
+%334mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFilter()ŞÛ
+/ (‘
+%335java.util.Set"Vmage.cards.CardsImpl#getCards(Lmage/filter/FilterCard;Lmage/game/Game;)Ljava/util/Set;*9
+
+__unknown_file (
+
+%333mage.game.Graveyard*8
+
+__unknown_file (
+
+%334mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game22getCards(Lmage/filter/FilterCard;Lmage/game/Game;)@>
+
+# (.
+%336java.util.ArrayList"java.util.ArrayList½
+º
+ (’
+%337"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*9
+
+__unknown_file (
+
+%336java.util.ArrayList*3
+
+__unknown_file (
+
+%335java.util.Seti
+g
+ (“
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%336java.util.ArrayList*
+107*Ø
+109
+Œ Œ(¸µ
+
+Œ Œ(&
+%331mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+102
+108*°
+230
+­ ­($d
+b
+
+­ ­($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¥
+¢
+
+­ ­($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*8
+
+__unknown_file (
+
+goodListjava.util.List*"
+
+__unknown_file (
+""*
+234
+223
+224*ë
+231
+² ²(ª§
+
+²% ²(6
+%161java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()£ 
+
+² ²(E
+%162void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%161java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+230*'
+110
+‰ ‰("
+
+‰ ‰(
+""*ı
+111
+‡ ‡(#‹
+
+‡, ‡(8
+%329java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Â
+¿
+
+‡ ‡(G
+%330boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%329java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+‡ ‡(H
+""*Û
+233
+¯ ¯(¢Ÿ
+
+¯ ¯(+
+%158java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()qo
+
+¯ ¯(2
+%159int"java.util.List#size()I*4
+
+__unknown_file (
+
+%158java.util.List2size()›
+
+¯6 ¯(T
+%160int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()*
+223
+224
+231*¯
+112
+„/ „(3…‚
+
+„/ „(R
+%323mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)®«
+
+„/ „(_
+%324mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*9
+
+__unknown_file (
+
+%323mage.players.Player2getLibrary()öó
+
+„/ „(n
+%325java.util.List"?mage.players.Library#getCards(Lmage/game/Game;)Ljava/util/List;*:
+
+__unknown_file (
+
+%324mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)@>
+
+„# „(.
+%326java.util.ArrayList"java.util.ArrayList½
+º
+
+„ „(o
+%327"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*9
+
+__unknown_file (
+
+%326java.util.ArrayList*4
+
+__unknown_file (
+
+%325java.util.Listh
+f
+
+„ „(p
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%326java.util.ArrayList‹ˆ
+
+… …(]
+%328mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+… …(^
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%328mage.cards.Card*
+
+110
+111*Ø
+234
+® ®(ª§
+
+®: ®(K
+%156java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+® ®(Z
+%157boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%156java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+233
+230*Ø
+113
+ƒ ƒ(¸µ
+
+ƒ ƒ(&
+%322mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+112
+109*'
+114
+€ €("
+
+€ €(
+""*µ	
+236
+© ©($š	—	
+
+© ª(=
+%155void"úmage.player.ai.ComputerPlayer#findBestPermanentTargets(Lmage/constants/Outcome;Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Lmage/target/Target;Ljava/util/List;Ljava/util/List;Ljava/util/List;)V*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+targetmage.target.Target*8
+
+__unknown_file (
+
+goodListjava.util.List*7
+
+__unknown_file (
+
+badListjava.util.List*7
+
+__unknown_file (
+
+allListjava.util.List2ÛfindBestPermanentTargets(Lmage/constants/Outcome;Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Lmage/target/Target;Ljava/util/List;Ljava/util/List;Ljava/util/List;)*
+230*ı
+115
+ı ı(#‹
+
+ı, ı(8
+%320java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Â
+¿
+
+ı ı(G
+%321boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%320java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ı ı(H
+""*
+237
+¥0 ¥(r¸µ
+
+¦ ¦(4
+%149mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()œ™
+
+¦ ¦(?
+%150java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+%149mage.target.Target2
+getClass()ª§
+
+¦ ¦(R
+%151java.lang.String"4java.lang.Class#getCanonicalName()Ljava/lang/String;*5
+
+__unknown_file (
+
+%150java.lang.Class2getCanonicalName()±
+®
+
+¥0 ¦(R
+%152java.lang.String"__concat*R
+
+¥0 ¥(rDB
+@Unsupported permanent filter in computer's chooseTarget method: *(
+
+¦ ¦(R
+
+%151java.lang.StringXV
+
+¥ ¥(/'
+%153java.lang.IllegalStateException"java.lang.IllegalStateExceptionÓ
+Ğ
+
+¥ ¦(S
+%154";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*E
+
+__unknown_file ()
+'
+%153java.lang.IllegalStateException*6
+
+__unknown_file (
+
+%152java.lang.String*
+0*‘
+116
+û û("‹ˆ
+
+û û(]
+%319mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+û û(^
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%319mage.cards.Card*
+
+114
+115*“
+117
+ø ø(W
+U
+
+ø ø(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""š
+—
+
+ø ø(
+playermage.players.Player"
+__arrayGet*:
+
+__unknown_file (
+
+%315java.util.Collection*"
+
+__unknown_file (
+""*
+
+116
+118*ø
+239
+¢+ ¢(1¸µ
+
+¢+ ¢(E
+%147mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()¦£
+
+¢+ ¢(Q
+%148mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*8
+
+__unknown_file (
+
+%147mage.target.Target2getFilter()u
+s
+
+¢ ¢(Q%
+filtermage.filter.FilterPermanent"__id*8
+
+__unknown_file (
+
+%148mage.filter.Filter*
+
+236
+237*
+118
+ù ù(²¯
+
+ù ù(2
+%316mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()óğ
+
+ù ù(A
+%317java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*9
+
+__unknown_file (
+
+%316mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)»
+¸
+
+ù ù(B
+%318boolean"__arrayAddAll*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%317java.util.Set*
+117*í
+119
+ø! ø(%¤¡
+
+ø! ø(2
+%314mage.players.Players"1mage.game.Game#getPlayers()Lmage/players/Players;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPlayers()«¨
+
+ø! ø(;
+%315java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+%314mage.players.Players2values()*
+117*Œ
+10
+« «("‹ˆ
+
+« «(]
+%488mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+« «(^
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%488mage.cards.Card*
+8
+9*
+11
+§ §(W
+U
+
+§ §(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""š
+—
+
+§ §(
+playermage.players.Player"
+__arrayGet*:
+
+__unknown_file (
+
+%478java.util.Collection*"
+
+__unknown_file (
+""*
+10
+12*î
+12
+¨ ¨(²¯
+
+¨ ¨(2
+%479mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()óğ
+
+¨ ¨(A
+%480java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*9
+
+__unknown_file (
+
+%479mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)»
+¸
+
+¨ ¨(B
+%481boolean"__arrayAddAll*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%480java.util.SetÂ¿
+
+© ©(2'
+%482mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()PN
+
+©N ©(]#
+%483mage.filter.FilterPermanent"mage.filter.FilterPermanent€
+~
+
+©J ©(_
+%484"%mage.filter.FilterPermanent#<init>()V*A
+
+__unknown_file (%
+#
+%483mage.filter.FilterPermanent”‘
+
+©a ©(o
+%485java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()üù
+
+© ©(v
+%486java.util.List"…mage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*E
+
+__unknown_file ()
+'
+%482mage.game.permanent.Battlefield*A
+
+__unknown_file (%
+#
+%483mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+%485java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)¼
+¹
+
+© ©(w
+%487boolean"__arrayAddAll*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *4
+
+__unknown_file (
+
+%486java.util.List*
+11*ë
+13
+§! §(%¤¡
+
+§! §(2
+%477mage.players.Players"1mage.game.Game#getPlayers()Lmage/players/Players;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPlayers()«¨
+
+§! §(;
+%478java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+%477mage.players.Players2values()*
+11*´
+14
+¦ ¦(0@>
+
+¦# ¦(.
+%475java.util.ArrayList"java.util.ArrayListp
+n
+
+¦ ¦(0
+%476"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%475java.util.ArrayListh
+f
+
+¦ ¦(1
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%475java.util.ArrayList*
+13*Ô
+15
+¥ ¥(¸µ
+
+¥ ¥(&
+%474mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+14
+8*±
+16
+¢ ¢(ˆ…
+
+¢ ¢($
+%473boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+¢ ¢(%
+""*Ù
+17
+   (š—
+
+ !  (0
+%471java.util.UUID"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()£ 
+
+   (?
+%472void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%471java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+19*¥
+18
+Ÿ) Ÿ(1ˆ…
+
+Ÿ) Ÿ(;
+%470boolean"java.util.Iterator#hasNext()Z*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2	hasNext()*
+16
+17*¥
+19
+Ÿ Ÿ(ˆ…
+
+Ÿ Ÿ(%
+%469boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+16
+18*ç
+240
+ %  ()_
+]
+
+   (*%
+filtermage.filter.FilterPermanent"__id*"
+
+__unknown_file (
+""¸µ
+
+¡ ¡(*
+%145mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()¦£
+
+¡ ¡(6
+%146mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*8
+
+__unknown_file (
+
+%145mage.target.Target2getFilter()*
+236
+237
+239*Ø
+241
+ (¸µ
+
+ (&
+%144mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+222
+240*¶
+120
+÷ ÷(0@>
+
+÷# ÷(.
+%312java.util.ArrayList"java.util.ArrayListp
+n
+
+÷ ÷(0
+%313"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%312java.util.ArrayListh
+f
+
+÷ ÷(1
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%312java.util.ArrayList*
+119*²
+242
+• •(ˆ…
+
+• •($
+%143boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+• •(%
+""*(
+0 "!
+
+¿ ¿(
+implicit return*Ø
+121
+ö ö(¸µ
+
+ö ö(&
+%311mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+113
+120*ª
+243
+ ($d
+b
+
+ ($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+ ($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+
+248
+242*'
+122
+ó ó("
+
+ó ó(
+""*Ã
+1
+¾( ¾(c›
+
+¾f ¾(w
+%504java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*:
+
+__unknown_file (
+
+targetmage.target.Target2
+getClass()«¨
+¾f ¾(Š
+%505java.lang.String"4java.lang.Class#getCanonicalName()Ljava/lang/String;*5
+
+__unknown_file (
+
+%504java.lang.Class2getCanonicalName()¬
+©
+¾( ¾(Š
+%506java.lang.String"__concat*K
+
+¾( ¾(c=;
+9Target wasn't handled in computer's chooseTarget method: *)
+¾f ¾(Š
+
+%505java.lang.StringXV
+
+¾ ¾(''
+%507java.lang.IllegalStateException"java.lang.IllegalStateExceptionÔ
+Ñ
+¾ ¾(‹
+%508";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*E
+
+__unknown_file ()
+'
+%507java.lang.IllegalStateException*6
+
+__unknown_file (
+
+%506java.lang.String*
+0*'
+244
+‘ ‘(#"
+
+‘ ‘($
+""*û
+123
+ğ ğ(#Ñ
+Î
+
+ğ ğ(N
+%310boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ğ ğ(O
+""*°
+2
+» »(ˆ…
+
+» »($
+%503boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+» »(%
+""*Û
+245
+k (qŸœ
+k (‰
+%140int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()¤¡
+ ( 
+%141java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()sq
+ (§
+%142int"java.util.List#size()I*4
+
+__unknown_file (
+
+%141java.util.List2size()*
+
+244
+243*º
+124
+ï ï(š—
+
+ï ï(X
+%309boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+123
+122*¬
+3
+· ·(‹
+
+·% ·(1
+%500java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+pickmage.cards.Card2getId()£ 
+
+· ·(@
+%501void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%500java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ŞÛ
+
+¸ ¸(.
+%502boolean"*java.util.List#remove(Ljava/lang/Object;)Z*=
+
+__unknown_file (!
+
+possibleCardsjava.util.List*5
+
+__unknown_file (
+
+pickmage.cards.Card2remove(Ljava/lang/Object;)*
+6*­
+246
+W (^Š
+
+W (g
+%139boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+244
+245*Š
+125
+ê ê( V
+T
+
+ê ê( 
+
+opponentIdjava.util.UUID"__id*"
+
+__unknown_file (
+""’
+
+
+ê ê( 
+
+opponentIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%306java.util.Set*"
+
+__unknown_file (
+""*
+
+124
+127*“
+4
+µ µ(&“
+
+µ µ(i
+%499mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*=
+
+__unknown_file (!
+
+possibleCardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+µ µ(j
+pickmage.cards.Card"__id*5
+
+__unknown_file (
+
+%499mage.cards.Card*
+3
+6*£
+247
+ (ª§
+
+% (6
+%134java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()£ 
+
+ (E
+%135void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%134java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)˜•
+
+ (3
+%136int"(mage.target.Target#getNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getNumberOfTargets()¢Ÿ
+
+7 (J
+%137java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()qo
+
+7 (Q
+%138int"java.util.List#size()I*4
+
+__unknown_file (
+
+%137java.util.List2size()*
+
+246
+243*ò
+126
+ì ì('È
+Å
+
+ì ì(I
+%308boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*:
+
+__unknown_file (
+
+
+opponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ì ì(J
+""*Ÿ
+5
+´* ´(7…‚
+
+´* ´(A
+%498boolean"java.util.List#isEmpty()Z*=
+
+__unknown_file (!
+
+possibleCardsjava.util.List2	isEmpty()*
+2
+4*Ø
+248
+ (ª§
+
+: (K
+%132java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+ (Z
+%133boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%132java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+247
+243*±
+127
+ë ë(‘
+
+ë ë(S
+%307boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*:
+
+__unknown_file (
+
+
+opponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+125
+126*¢
+6
+´ ´(ˆ…
+
+´ ´(%
+%497boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+2
+5*š
+128
+ê# ê('ÿü
+
+ê# ê(I
+%306java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2getOpponents(Ljava/util/UUID;)*
+125*ô
+7
+²( ²(7B@
+
+² ²('
+%492mage.cards.CardsImpl"mage.cards.CardsImplÉ
+Æ
+
+² ²(8
+%493"4mage.cards.CardsImpl#<init>(Ljava/util/Collection;)V*:
+
+__unknown_file (
+
+%492mage.cards.CardsImpl*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Setk
+i
+
+² ²(9
+cardsmage.cards.Cards"__id*:
+
+__unknown_file (
+
+%492mage.cards.CardsImplíê
+
+³7 ³(K
+%494java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)@>
+
+³+ ³(6
+%495java.util.ArrayList"java.util.ArrayList¼
+¹
+
+³' ³(L
+%496"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*9
+
+__unknown_file (
+
+%495java.util.ArrayList*3
+
+__unknown_file (
+
+%494java.util.Setp
+n
+
+³ ³(M
+possibleCardsjava.util.List"__id*9
+
+__unknown_file (
+
+%495java.util.ArrayList*
+6*ø
+129
+æ æ(#Î
+Ë
+
+æ æ(K
+%305boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+æ æ(L
+""*Ò
+8
+± ±(¸µ
+
+± ±(&
+%491mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+7
+1*û
+9
+­ ­(#‹
+
+­, ­(8
+%489java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Â
+¿
+
+­ ­(G
+%490boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%489java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+­ ­(H
+""*£
+20
+& (,´±
+
+= (U
+%466java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÆÃ
+
+& (d
+%467java.util.Set"kmage.target.Target#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%466java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2IpossibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)š—
+
+& (o
+%468java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*3
+
+__unknown_file (
+
+%467java.util.Set2
+iterator()n
+l
+
+ (p
+iteratorjava.util.Iterator"__id*8
+
+__unknown_file (
+
+%468java.util.Iterator*
+19*Õ
+21
+ (¸µ
+
+ (-
+%465mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+15
+20*Õ
+22
+œ œ(¸µ
+
+œ œ(&
+%464mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+20
+21*±
+23
+™ ™(ˆ…
+
+™ ™($
+%463boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+™ ™(%
+""*†
+24
+• •(£ 
+
+•% •(1
+%460java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+pickmage.game.stack.StackObject2getId()£ 
+
+• •(@
+%461void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%460java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¡
+
+
+– –(*#
+%462mage.game.stack.StackObject"__arrayRemove*<
+
+__unknown_file ( 
+
+stackObjectsjava.util.List*
+
+__unknown_file (2 *
+27*¹
+25
+“# “(/
+›
+
+“# “(6#
+%459mage.game.stack.StackObject"
+__arrayGet*<
+
+__unknown_file ( 
+
+stackObjectsjava.util.List*
+
+__unknown_file (2 |
+z
+
+“ “(7#
+pickmage.game.stack.StackObject"__id*A
+
+__unknown_file (%
+#
+%459mage.game.stack.StackObject*
+24
+27*¡
+26
+’* ’(6„
+
+’* ’(@
+%458boolean"java.util.List#isEmpty()Z*<
+
+__unknown_file ( 
+
+stackObjectsjava.util.List2	isEmpty()*
+25
+23*¥
+27
+’ ’(ˆ…
+
+’ ’(%
+%457boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+26
+23*û
+28
+Œ Œ(P
+N
+
+Œ Œ(
+uuidjava.util.UUID"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+Œ Œ(
+uuidjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%453java.util.Set*"
+
+__unknown_file (
+""*
+27
+30*í
+29
+ ( Ô
+Ñ
+
+ (1
+%456boolean"
+__arrayAdd*<
+
+__unknown_file ( 
+
+stackObjectsjava.util.List*
+
+__unknown_file (: *H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*
+28*Ú
+250
+‹ ‹(¿
+¼
+
+‹ ‹(,
+%131void"0java.util.Collections#reverse(Ljava/util/List;)V*5
+
+__unknown_file ("
+java.util.Collections*7
+
+__unknown_file (
+
+targetsjava.util.List*
+243*ç
+251
+‡O ‡(U¸µ
+
+‡O ‡(i
+%126mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()‹
+ˆ
+
+‡ ‡(j:
+
+origTarget,mage.target.common.TargetControlledPermanent"__id*8
+
+__unknown_file (
+
+%126mage.target.TargetS
+Q
+
+ˆ ˆ($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""áŞ
+
+‰; ‰(Q#
+%127mage.filter.FilterPermanent"Dmage.target.TargetPermanent#getFilter()Lmage/filter/FilterPermanent;*X
+
+__unknown_file (<
+:
+
+origTarget,mage.target.common.TargetControlledPermanent2getFilter()¢Ÿ
+
+‰Y ‰(l
+%128java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()©¦
+
+‰ ‰(m
+%129java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%127mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%128java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)e
+c
+
+‰ ‰(m
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%129java.util.ListŠ
+
+Š Š(!
+%130boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+250
+243*·
+130
+å å(—”
+
+å å(\
+%304boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+128
+129*Ø
+252
+† †(¸µ
+
+† †(&
+%125mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+251
+241*û
+131
+ã ã('Ñ
+Î
+
+ã ã(R
+%303boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ã ã(S
+""*'
+253
+ƒ ƒ("
+
+ƒ ƒ(
+""*º
+132
+â â(š—
+
+â â(\
+%302boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+128
+131*€
+254
+ø ø("Q
+O
+
+ø ø("
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""
+Š
+
+ø ø("
+cardmage.cards.Card"
+__arrayGet*3
+
+__unknown_file (
+
+%117java.util.Set*"
+
+__unknown_file (
+""*
+
+258
+253*­
+133
+á á(Š
+
+á á( 
+%301boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+130
+132*'
+255
+ı' ı(+"
+
+ı  ı(,
+""*ª
+134
+× ×($d
+b
+
+× ×($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+× ×($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+
+138
+133*ß
+256
+û û("‹
+
+û- û(9
+%122java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()£ 
+
+û û(H
+%123void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%122java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ˆ…
+
+ü  ü(1
+%124boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+
+255
+254*™
+135
+Û Û(+ª§
+
+Û4 Û(E
+%299java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Â
+¿
+
+Û Û(T
+%300boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%299java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Û Û(U
+""*¼
+257
+ú# ú()‹
+
+úI ú(U
+%120java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‹ˆ
+
+ú# ú(d
+%121boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%120java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+256
+254*°
+136
+Ú4 Ú(Cª§
+
+ÚM Ú(^
+%297java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ãà
+
+Ú4 Ú(_
+%298boolean",java.util.List#contains(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+alreadyTargetedjava.util.List*4
+
+__unknown_file (
+
+%297java.util.UUID2contains(Ljava/lang/Object;)*
+
+134
+135*’
+258
+ù ù(+‹
+
+ù5 ù(A
+%118java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()áŞ
+
+ù ù(B
+%119boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Set*4
+
+__unknown_file (
+
+%118java.util.UUID2contains(Ljava/lang/Object;)*
+
+257
+254*€
+259
+ø% ø()w
+u
+
+ø% ø()
+%116mage.cards.Cards"__id*G
+
+__unknown_file (+*)
+mage.player.ai.ComputerPlayer"
+handìé
+
+ø% ø(8
+%117java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*6
+
+__unknown_file (
+
+%116mage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)*
+254*ì
+138
+Ø- Ø(3¢Ÿ
+
+Ø- Ø(@
+%294java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()m
+k
+
+Ø Ø(A!
+alreadyTargetedjava.util.List"__id*4
+
+__unknown_file (
+
+%294java.util.Listª§
+
+Ù: Ù(K
+%295java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+Ù Ù(Z
+%296boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%295java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+134
+136*û
+30
+* (.¬©
+
+* (9"
+%454mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¨¥
+
+* (N#
+%455mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*@
+
+__unknown_file ($
+"
+%454mage.game.stack.SpellStack*4
+
+__unknown_file (
+
+uuidjava.util.UUID2 getStackObject(Ljava/util/UUID;)„
+
+
+ (O*
+stackObjectmage.game.stack.StackObject"__id*A
+
+__unknown_file (%
+#
+%455mage.game.stack.StackObject*
+28
+29*–
+31
+Œ Œ(#´±
+
+Œ4 Œ(L
+%452java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÆÃ
+
+Œ Œ([
+%453java.util.Set"kmage.target.Target#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%452java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2IpossibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+28*»
+32
+‹- ‹(>@>
+
+‹1 ‹(<
+%450java.util.ArrayList"java.util.ArrayListp
+n
+
+‹- ‹(>
+%451"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%450java.util.ArrayListo
+m
+
+‹ ‹(?
+stackObjectsjava.util.List"__id*9
+
+__unknown_file (
+
+%450java.util.ArrayList*
+31*Õ
+33
+Š Š(¸µ
+
+Š Š(&
+%449mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+32
+22*±
+34
+‡ ‡(ˆ…
+
+‡ ‡($
+%448boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+‡ ‡(%
+""*¦
+35
+ƒ ƒ(‹
+
+ƒ% ƒ(1
+%445java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+pickmage.cards.Card2getId()£ 
+
+ƒ ƒ(@
+%446void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%445java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÖÓ
+
+„ „(&
+%447boolean"*java.util.List#remove(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+cardsjava.util.List*5
+
+__unknown_file (
+
+pickmage.cards.Card2remove(Ljava/lang/Object;)*
+38*
+36
+ (&‹ˆ
+
+ (a
+%444mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+ (b
+pickmage.cards.Card"__id*5
+
+__unknown_file (
+
+%444mage.cards.Card*
+35
+38*˜
+37
+€* €(/|z
+
+€* €(9
+%443boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+36
+34*¥
+38
+€ €(ˆ…
+
+€ €(%
+%442boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+37
+34*û
+39
+ú ú(P
+N
+
+ú ú(
+uuidjava.util.UUID"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+ú ú(
+uuidjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%435java.util.Set*"
+
+__unknown_file (
+""*
+38
+42*”
+260
+÷ ÷(w
+u
+
+÷ ÷(
+%114mage.cards.Cards"__id*G
+
+__unknown_file (+*)
+mage.player.ai.ComputerPlayer"
+hand|z
+
+÷ ÷(#
+%115boolean"java.util.Set#isEmpty()Z*6
+
+__unknown_file (
+
+%114mage.cards.Cards2	isEmpty()*
+
+259
+253*‡
+261
+î î(Q
+O
+
+î î(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""”
+‘
+
+î î(
+cardmage.cards.Card"
+__arrayGet*:
+
+__unknown_file (
+
+%106java.util.Collection*"
+
+__unknown_file (
+""*
+
+260
+265*»	
+140
+Ó Ó(Â¿
+
+Ó Ó(/'
+%290mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()€ı
+
+ÓD Ó(c#
+%291mage.filter.FilterPermanent"\mage.target.common.TargetPermanentOrPlayer#getFilterPermanent()Lmage/filter/FilterPermanent;*V
+
+__unknown_file (:
+8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer2getFilterPermanent()y
+w
+
+Óe Ó(m
+%292java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerIdöó
+
+Ó Ó(t
+%293java.util.List"‚mage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*E
+
+__unknown_file ()
+'
+%290mage.game.permanent.Battlefield*A
+
+__unknown_file (%
+#
+%291mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+%292java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)e
+c
+
+Ó Ó(t
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%293java.util.List*
+134*'
+262
+ó# ó('"
+
+ó ó((
+""*ß
+263
+ñ ñ(‹
+
+ñ) ñ(5
+%111java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()£ 
+
+ñ ñ(D
+%112void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%111java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ˆ…
+
+ò ò(-
+%113boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+
+261
+262*
+142
+Ò Ò(~|
+
+Ò Ò(!
+%289boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+134
+140*¼
+264
+ğ ğ(%‹
+
+ğE ğ(Q
+%109java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‹ˆ
+
+ğ ğ(`
+%110boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%109java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+261
+263*ø
+143
+Í Í('Î
+Ë
+
+Í Í(O
+%288boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Í Í(P
+""*’
+265
+ï ï('‹
+
+ï1 ï(=
+%107java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()áŞ
+
+ï ï(>
+%108boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Set*4
+
+__unknown_file (
+
+%107java.util.UUID2contains(Ljava/lang/Object;)*
+
+261
+264*·
+144
+Ì Ì(!—”
+
+Ì Ì(`
+%287boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+142
+143*±
+266
+î! î(+z
+x
+
+î! î(+
+%105java.util.Map"__id*M
+
+__unknown_file (1*/
+mage.player.ai.ComputerPlayer"
+
+unplayableš—
+
+î! î(4
+%106java.util.Collection",java.util.Map#values()Ljava/util/Collection;*3
+
+__unknown_file (
+
+%105java.util.Map2values()*
+261*û
+145
+Ê Ê(+Ñ
+Î
+
+Ê Ê(V
+%286boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Ê Ê(W
+""*
+267
+í í(óğ
+
+í í(#
+%104void">mage.player.ai.ComputerPlayer#findPlayables(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2findPlayables(Lmage/game/Game;)*
+266*º
+146
+É É(š—
+
+É É(`
+%285boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+145
+142*'
+268
+æ' æ(+"
+
+æ  æ(,
+""*­
+147
+È È(Š
+
+È È($
+%284boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+146
+144*¾
+269
+ã ã("‹
+
+ã- ã(9
+%100java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()£ 
+
+ã ã(H
+%101void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%100java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÜÙ
+
+ä ä(4
+%102boolean"*java.util.List#remove(Ljava/lang/Object;)Z*;
+
+__unknown_file (
+
+cardsInHandjava.util.List*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Ljava/lang/Object;)ˆ…
+
+å  å(1
+%103boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+
+268
+274*
+148
+Ç Ç(~|
+
+Ç Ç(!
+%283boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+147
+142*á
+
+149
+Ã Ã(!¨¥
+
+ÃW Ã(i
+%279mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFilter()âß
+
+Ã< Ã(#
+%280mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%279mage.filter.Filter2getPermanentFilter()¤¡
+Ã‡ Ã(š
+%281java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()§¤
+Ã Ã(›
+%282java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%280mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%281java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+Ã Ã(›
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%282java.util.List*
+148*Ó
+40
+ı ı(º
+·
+
+ı ı(#
+%441boolean"
+__arrayAdd*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *5
+
+__unknown_file (
+
+cardmage.cards.Card*
+39*¢
+41
+ü$ ü((›
+
+ü$ ü(3
+%437mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‹
+
+ü< ü(H
+%438java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()üù
+
+ü$ ü(I
+%439mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*9
+
+__unknown_file (
+
+%437mage.game.GameState*4
+
+__unknown_file (
+
+%438java.util.UUID2getZone(Ljava/util/UUID;)U
+S
+
+üM ü(X
+%440mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+39
+40*í
+42
+û û( êç
+
+û û(.
+%436mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+uuidjava.util.UUID2getCard(Ljava/util/UUID;)d
+b
+
+û û(/
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%436mage.cards.Card*
+39
+41*–
+43
+ú ú(#´±
+
+ú4 ú(L
+%434java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÆÃ
+
+ú ú([
+%435java.util.Set"kmage.target.Target#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%434java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2IpossibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+39*´
+44
+ù ù(0@>
+
+ù# ù(.
+%432java.util.ArrayList"java.util.ArrayListp
+n
+
+ù ù(0
+%433"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%432java.util.ArrayListh
+f
+
+ù ù(1
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%432java.util.ArrayList*
+43*ƒ
+45
+õ0 õ(u¸µ
+
+ö ö(4
+%426mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()œ™
+
+ö ö(?
+%427java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+%426mage.target.Target2
+getClass()ª§
+
+ö ö(R
+%428java.lang.String"4java.lang.Class#getCanonicalName()Ljava/lang/String;*5
+
+__unknown_file (
+
+%427java.lang.Class2getCanonicalName()´
+±
+
+õ0 ö(R
+%429java.lang.String"__concat*U
+
+õ0 õ(uGE
+CUnsupported exile target filter in computer's chooseTarget method: *(
+
+ö ö(R
+
+%428java.lang.StringXV
+
+õ õ(/'
+%430java.lang.IllegalStateException"java.lang.IllegalStateExceptionÓ
+Ğ
+
+õ ö(S
+%431";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*E
+
+__unknown_file ()
+'
+%430java.lang.IllegalStateException*6
+
+__unknown_file (
+
+%429java.lang.String*
+0*ğ
+47
+ò& ò(,¸µ
+
+ò& ò(@
+%424mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()¦£
+
+ò& ò(L
+%425mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*8
+
+__unknown_file (
+
+%424mage.target.Target2getFilter()p
+n
+
+ò ò(L 
+filtermage.filter.FilterCard"__id*8
+
+__unknown_file (
+
+%425mage.filter.Filter*
+44
+45*Ş
+48
+ğ  ğ($Z
+X
+
+ğ ğ(% 
+filtermage.filter.FilterCard"__id*"
+
+__unknown_file (
+""¸µ
+
+ñ ñ(*
+%422mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()¦£
+
+ñ ñ(6
+%423mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*8
+
+__unknown_file (
+
+%422mage.target.Target2getFilter()*
+47
+44
+45*Õ
+49
+î î(¸µ
+
+î î(&
+%421mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+48
+33*¹
+270
+â â("Š
+
+âB â(N
+%98java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‰†
+
+â â(]
+%99boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%98java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+269
+274*†
+271
+à  à(,ş
+
+à  à(U
+%97mage.cards.Card"™mage.player.ai.ComputerPlayer#pickBestCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+cardsInHandjava.util.List*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jpickBestCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)c
+a
+
+à à(V
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%97mage.cards.Card*
+
+270
+274*å
+
+150
+Á Á(!¨¥
+
+ÁZ Á(l
+%275mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFilter()ãà
+Á? Á(‚#
+%276mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%275mage.filter.Filter2getPermanentFilter()¤¡
+ÁŠ Á(
+%277java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()ª§
+Á Á(
+%278java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%276mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%277java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+Á Á(
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%278java.util.List*
+148*Ò
+272
+ß ß(!š
+
+ß ß(9
+
+%94int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()¡
+
+ß< ß(O
+%95java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+ß< ß(V
+
+%96int"java.util.List#size()I*3
+
+__unknown_file (
+
+%95java.util.List2size()*
+
+271
+253*É
+151
+¹ ¹($S
+Q
+
+¹ ¹($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""¸µ
+
+ºL º(f
+%273mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()‰
+†
+
+º º(h8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer"__id*8
+
+__unknown_file (
+
+%273mage.target.TargetŠ
+
+À À( 
+%274boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+149
+150*¡
+273
+Ş Ş('
+
+Ş Ş(1
+%93boolean"java.util.List#isEmpty()Z*;
+
+__unknown_file (
+
+cardsInHandjava.util.List2	isEmpty()*
+
+272
+253*Ø
+152
+¸ ¸(¸µ
+
+¸ ¸(-
+%272mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+151
+121*§
+274
+İ İ(‡„
+
+İ İ()
+%92boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+
+273
+253*Ø
+153
+· ·(¸µ
+
+· ·(&
+%271mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+151
+152*ì
+275
+Û, Û(;A?
+
+Û" Û(+
+%87mage.cards.CardsImpl"mage.cards.CardsImplÇ
+Ä
+
+Û Û(<
+%88"4mage.cards.CardsImpl#<init>(Ljava/util/Collection;)V*9
+
+__unknown_file (
+
+%87mage.cards.CardsImpl*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Setj
+h
+
+Û Û(=
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%87mage.cards.CardsImplìé
+
+Ü9 Ü(M
+%89java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)?=
+
+Ü- Ü(8
+%90java.util.ArrayList"java.util.ArrayList¹
+¶
+
+Ü) Ü(N
+%91"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%90java.util.ArrayList*2
+
+__unknown_file (
+
+%89java.util.Setm
+k
+
+Ü Ü(O
+cardsInHandjava.util.List"__id*8
+
+__unknown_file (
+
+%90java.util.ArrayList*
+274*ª
+154
+­ ­($d
+b
+
+­ ­($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+­ ­($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+
+158
+153*¬
+276
+Ù Ù(Œ‰
+
+Ù Ù( 
+%86boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+267
+275*™
+155
+± ±(+ª§
+
+±4 ±(E
+%269java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Â
+¿
+
+± ±(T
+%270boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%269java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+± ±(U
+""*×
+277
+Ø Ø(·´
+
+Ø Ø(-
+%85mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+252
+276*°
+156
+°4 °(Cª§
+
+°M °(^
+%267java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ãà
+
+°4 °(_
+%268boolean",java.util.List#contains(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+alreadyTargetedjava.util.List*4
+
+__unknown_file (
+
+%267java.util.UUID2contains(Ljava/lang/Object;)*
+
+154
+155*×
+278
+× ×(·´
+
+× ×(&
+%84mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+277
+276*±
+279
+Ô Ô(‡„
+
+Ô Ô($
+%83boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+Ô Ô(%
+""*ì
+158
+®- ®(3¢Ÿ
+
+®- ®(@
+%264java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()m
+k
+
+® ®(A!
+alreadyTargetedjava.util.List"__id*4
+
+__unknown_file (
+
+%264java.util.Listª§
+
+¯: ¯(K
+%265java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+¯ ¯(Z
+%266boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%265java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+156
+154*±
+50
+ë ë(ˆ…
+
+ë ë($
+%420boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+ë ë(%
+""*¦
+51
+ç ç(‹
+
+ç% ç(1
+%417java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+pickmage.cards.Card2getId()£ 
+
+ç ç(@
+%418void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%417java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÖÓ
+
+è è(&
+%419boolean"*java.util.List#remove(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+cardsjava.util.List*5
+
+__unknown_file (
+
+pickmage.cards.Card2remove(Ljava/lang/Object;)*
+54*
+52
+å å(&‹ˆ
+
+å å(a
+%416mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+å å(b
+pickmage.cards.Card"__id*5
+
+__unknown_file (
+
+%416mage.cards.Card*
+51
+54*˜
+53
+ä* ä(/|z
+
+ä* ä(9
+%415boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+50
+52*¥
+54
+ä ä(ˆ…
+
+ä ä(%
+%414boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()*
+50
+53*
+55
+á á(W
+U
+
+á á(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""š
+—
+
+á á(
+playermage.players.Player"
+__arrayGet*:
+
+__unknown_file (
+
+%410java.util.Collection*"
+
+__unknown_file (
+""*
+54
+56*ÿ
+56
+â â(²¯
+
+â â(2
+%411mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()óğ
+
+â â(A
+%412java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*9
+
+__unknown_file (
+
+%411mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)»
+¸
+
+â â(B
+%413boolean"__arrayAddAll*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%412java.util.Set*
+55*ë
+57
+á! á(%¤¡
+
+á! á(2
+%409mage.players.Players"1mage.game.Game#getPlayers()Lmage/players/Players;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPlayers()«¨
+
+á! á(;
+%410java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+%409mage.players.Players2values()*
+55*´
+58
+à à(0@>
+
+à# à(.
+%407java.util.ArrayList"java.util.ArrayListp
+n
+
+à à(0
+%408"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%407java.util.ArrayListh
+f
+
+à à(1
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%407java.util.ArrayList*
+57*Õ
+59
+ß ß(¸µ
+
+ß ß(&
+%406mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+58
+49*
+280
+§ §(Q
+O
+
+§ §(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""—
+”
+
+§ §(
+cardmage.cards.Card"
+__arrayGet*=
+
+__unknown_file (!
+
+possibleCardsjava.util.List*"
+
+__unknown_file (
+""*
+279
+305
+293*Ì
+281
+Ï Ï("Š
+
+Ï- Ï(9
+%81java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()¡
+
+Ï Ï(H
+%82void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*3
+
+__unknown_file (
+
+%81java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+280*
+160
+« «(Â¿
+
+« «(/'
+%259mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ÜÙ
+
+«_ «(u
+%260mage.filter.Filter"Jmage.target.common.TargetPermanentOrPlayer#getFilter()Lmage/filter/Filter;*V
+
+__unknown_file (:
+8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer2getFilter()ãà
+«D «(‹#
+%261mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%260mage.filter.Filter2getPermanentFilter(){
+y
+« «(•
+%262java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerId÷ô
+« «(œ
+%263java.util.List"‚mage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*E
+
+__unknown_file ()
+'
+%259mage.game.permanent.Battlefield*A
+
+__unknown_file (%
+#
+%261mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+%262java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)f
+d
+« «(œ
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%263java.util.List*
+154*œ
+161
+ª% ª(+üù
+
+ª% ª(>
+%258boolean"8mage.target.Target#isRequired(Lmage/abilities/Ability;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2$isRequired(Lmage/abilities/Ability;)*
+
+160
+154*Ò
+283
+Ì  Ì(&¡
+
+Ì  Ì(3
+%78java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+Ì  Ì(:
+
+%79int"java.util.List#size()I*3
+
+__unknown_file (
+
+%78java.util.List2size()š
+
+Ì> Ì(\
+
+%80int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()*
+
+279
+281*
+162
+ª ª(~|
+
+ª ª(!
+%257boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+161
+154*¹
+284
+Ë Ë("Š
+
+ËB Ë(N
+%76java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‰†
+
+Ë Ë(]
+%77boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%76java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+280
+283*ø
+163
+¦ ¦('Î
+Ë
+
+¦ ¦(O
+%256boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+¦ ¦(P
+""*†
+285
+Ê  Ê($æã
+
+Ê  Ê(C
+%75boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+
+280
+284*·
+164
+¥ ¥(!—”
+
+¥ ¥(`
+%255boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+162
+163*¬
+286
+É É( Œ‰
+
+É É()
+%74boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+280
+285*û
+165
+£ £(+Ñ
+Î
+
+£ £(V
+%254boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+£ £(W
+""*Ì
+287
+Æ Æ("Š
+
+Æ- Æ(9
+%72java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()¡
+
+Æ Æ(H
+%73void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*3
+
+__unknown_file (
+
+%72java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+286*º
+166
+¢ ¢(š—
+
+¢ ¢(`
+%253boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+162
+165*­
+167
+¡ ¡(Š
+
+¡ ¡($
+%252boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+164
+166*Ò
+289
+Ã  Ã(&¡
+
+Ã  Ã(3
+%69java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+Ã  Ã(:
+
+%70int"java.util.List#size()I*3
+
+__unknown_file (
+
+%69java.util.List2size()š
+
+Ã> Ã(\
+
+%71int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()*
+
+279
+287*
+168
+   (~|
+
+   (!
+%251boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+167
+162*–
+169
+ (!ÜÙ
+
+W (m
+%247mage.filter.Filter"Jmage.target.common.TargetPermanentOrPlayer#getFilter()Lmage/filter/Filter;*V
+
+__unknown_file (:
+8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer2getFilter()ãà
+< (ƒ#
+%248mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%247mage.filter.Filter2getPermanentFilter()¤¡
+‹ (
+%249java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()§¤
+ (Ÿ
+%250java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%248mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%249java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+ (Ÿ
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%250java.util.List*
+168*Ä
+60
+Ú" Ú(,ò
+ï
+
+Ú" Ú(R
+%403java.util.UUID"Smage.util.RandomUtil#randomFromCollection(Ljava/util/Collection;)Ljava/lang/Object;*4
+
+__unknown_file ("
+mage.util.RandomUtil*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Setl
+j
+
+Ú Ú(S 
+randomDefenderjava.util.UUID"__id*4
+
+__unknown_file (
+
+%403java.util.UUID­ª
+
+Û Û(:
+%404void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+randomDefenderjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ˆ…
+
+Ü Ü($
+%405boolean"mage.target.Target#isChosen()Z*:
+
+__unknown_file (
+
+targetmage.target.Target2
+isChosen()"
+
+Ü Ü(%
+""*Õ
+61
+Ù Ù(¸µ
+
+Ù Ù(&
+%402mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+59
+60*&
+62
+Ö Ö("
+
+Ö Ö(
+""*ü
+63
+Ó Ó(#‹
+
+Ó, Ó(8
+%400java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Â
+¿
+
+Ó Ó(G
+%401boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%400java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Ó Ó(H
+""*
+64
+Ñ Ñ("‹ˆ
+
+Ñ Ñ(]
+%399mage.cards.Card"¯mage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*5
+
+__unknown_file (
+
+cardsjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2€pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)d
+b
+
+Ñ Ñ(^
+cardmage.cards.Card"__id*5
+
+__unknown_file (
+
+%399mage.cards.Card*
+62
+63*û
+65
+Ë Ë(P
+N
+
+Ë Ë(
+uuidjava.util.UUID"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+Ë Ë(
+uuidjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%394java.util.Set*"
+
+__unknown_file (
+""*
+64
+67*ÿ
+66
+Î Î(²¯
+
+Î! Î(6
+%396mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()óğ
+
+Î! Î(E
+%397java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*9
+
+__unknown_file (
+
+%396mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)»
+¸
+
+Î Î(F
+%398boolean"__arrayAddAll*5
+
+__unknown_file (
+
+cardsjava.util.List*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%397java.util.Set*
+65*ƒ
+67
+Ì  Ì($öó
+
+Ì  Ì(4
+%395mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+uuidjava.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+
+Ì Ì(5
+playermage.players.Player"__id*9
+
+__unknown_file (
+
+%395mage.players.Player*
+65
+66*˜
+68
+Ë Ë(!ÿü
+
+Ë Ë(C
+%394java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2getOpponents(Ljava/util/UUID;)*
+65*´
+69
+Ê Ê(0@>
+
+Ê# Ê(.
+%392java.util.ArrayList"java.util.ArrayListp
+n
+
+Ê Ê(0
+%393"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%392java.util.ArrayListh
+f
+
+Ê Ê(1
+cardsjava.util.List"__id*9
+
+__unknown_file (
+
+%392java.util.ArrayList*
+68*¹
+290
+Â Â("Š
+
+ÂB Â(N
+%67java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()‰†
+
+Â Â(]
+%68boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%67java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+289
+286*†
+291
+Á Á(#æã
+
+Á Á(B
+%66boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+
+290
+286*™
+170
+› ›(!ÜÙ
+
+›Z ›(p
+%243mage.filter.Filter"Jmage.target.common.TargetPermanentOrPlayer#getFilter()Lmage/filter/Filter;*V
+
+__unknown_file (:
+8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer2getFilter()ãà
+›? ›(†#
+%244mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%243mage.filter.Filter2getPermanentFilter()¤¡
+› ›(¡
+%245java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()ª§
+› ›(¢
+%246java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%244mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%245java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+› ›(¢
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%246java.util.List*
+168*¬
+292
+À À(Œ‰
+
+À À((
+%65boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+291
+286*É
+171
+˜ ˜($S
+Q
+
+˜ ˜($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""¸µ
+
+™L ™(f
+%241mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()‰
+†
+
+™ ™(h8
+
+origTarget*mage.target.common.TargetPermanentOrPlayer"__id*8
+
+__unknown_file (
+
+%241mage.target.TargetŠ
+
+š š( 
+%242boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+169
+170*Ÿ
+293
+¿ ¿(š
+
+¿ ¿(#
+%61mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Š
+
+¿, ¿(8
+%62java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()ùö
+
+¿ ¿(9
+%63mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*8
+
+__unknown_file (
+
+%61mage.game.GameState*3
+
+__unknown_file (
+
+%62java.util.UUID2getZone(Ljava/util/UUID;)T
+R
+
+¿= ¿(K
+%64mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+
+280
+292*Ø
+172
+— —(¸µ
+
+— —(&
+%240mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+171
+153*à
+294
+º º("¡
+
+º- º(6
+%59java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2getId()¡
+
+º º(E
+%60void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*3
+
+__unknown_file (
+
+%59java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+293*'
+173
+” ”("
+
+” ”(
+""*ø
+174
+ (#Î
+Ë
+
+ (K
+%239boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ (L
+""*Ò
+296
+·  ·(&¡
+
+·  ·(3
+%56java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+·  ·(:
+
+%57int"java.util.List#size()I*3
+
+__unknown_file (
+
+%56java.util.List2size()š
+
+·> ·(\
+
+%58int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()*
+
+279
+294*·
+175
+ (—”
+
+ (\
+%238boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+173
+174*Í
+297
+¶ ¶("¡
+
+¶B ¶(K
+%54java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2getId()‰†
+
+¶ ¶(Z
+%55boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%54java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+293
+296*û
+176
+ ('Ñ
+Î
+
+ (R
+%237boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ (S
+""*¢
+298
+µ  µ(!‚ÿ
+
+µ  µ(E
+%53boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+
+293
+297*º
+177
+Œ Œ(š—
+
+Œ Œ(\
+%236boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+173
+176*¬
+299
+´ ´( Œ‰
+
+´ ´()
+%52boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+293
+298*­
+178
+‹ ‹(Š
+
+‹ ‹( 
+%235boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+175
+177*ª
+179
+‚ ‚($d
+b
+
+‚ ‚($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+‚ ‚($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+
+178
+183*Õ
+70
+É É(¸µ
+
+É É(&
+%391mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+69
+61*&
+71
+Æ Æ("
+
+Æ Æ(
+""*´
+72
+¾ ¾(,d
+b
+
+¾ ¾(,*
+stackObjectmage.game.stack.StackObject"__id*"
+
+__unknown_file (
+""­
+ª
+
+¾ ¾(,*
+stackObjectmage.game.stack.StackObject"
+__arrayGet*@
+
+__unknown_file ($
+"
+%382mage.game.stack.SpellStack*"
+
+__unknown_file (
+""*
+71
+72
+75*˜
+73
+Á# Á(/ª§
+
+Á8 Á(K
+%389java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getId()Â
+¿
+
+Á# Á(Z
+%390boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%389java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Á Á([
+""*Œ
+74
+À À("¨¥
+
+À À(.
+%387mage.filter.Filter"2mage.target.Target#getFilter()Lmage/filter/Filter;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFilter()ÄÁ
+
+À À(G
+%388boolean"=mage.filter.Filter#match(Ljava/lang/Object;Lmage/game/Game;)Z*8
+
+__unknown_file (
+
+%387mage.filter.Filter*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*4
+
+__unknown_file (
+
+gamemage.game.Game2)match(Ljava/lang/Object;Lmage/game/Game;)*
+72
+73*
+75
+¿K ¿(Q 
+
+¿K ¿(Y
+%383java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getId()ÓĞ
+
+¿a ¿(~
+%384mage.abilities.Ability"Emage.game.stack.StackObject#getStackAbility()Lmage/abilities/Ability;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getStackAbility()Ÿœ
+¿a ¿(†
+%385java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+%384mage.abilities.Ability2getId()ÕÒ
+¿K ¿(‡
+%386boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%383java.util.UUID*4
+
+__unknown_file (
+
+%385java.util.UUID2equals(Ljava/lang/Object;)*
+72
+74*Å
+78
+¾/ ¾(3¬©
+
+¾/ ¾(>"
+%382mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()*
+72*Ú
+79
+½ ½(¬©
+
+½ ½( "
+%380mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()‹
+
+½ ½(*
+%381boolean"java.util.ArrayDeque#isEmpty()Z*@
+
+__unknown_file ($
+"
+%380mage.game.stack.SpellStack2	isEmpty()*
+71
+78*Š
+180
+† †($ª§
+
+†- †(>
+%233java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Â
+¿
+
+† †(M
+%234boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%233java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+179*°
+181
+…4 …(Cª§
+
+…M …(^
+%231java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ãà
+
+…4 …(_
+%232boolean",java.util.List#contains(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+alreadyTargetedjava.util.List*4
+
+__unknown_file (
+
+%231java.util.UUID2contains(Ljava/lang/Object;)*
+
+179
+180*ì
+183
+ƒ- ƒ(3¢Ÿ
+
+ƒ- ƒ(@
+%228java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()m
+k
+
+ƒ ƒ(A!
+alreadyTargetedjava.util.List"__id*4
+
+__unknown_file (
+
+%228java.util.Listª§
+
+„: „(K
+%229java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+„ „(Z
+%230boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%229java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+179
+181*ò
+
+185
+€ €(Â¿
+
+€ €(/'
+%223mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ÍÊ
+€j €(€
+%224mage.filter.Filter"Bmage.target.common.TargetAnyTarget#getFilter()Lmage/filter/Filter;*N
+
+__unknown_file (2
+0
+
+origTarget"mage.target.common.TargetAnyTarget2getFilter()ãà
+€D €(–#
+%225mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%224mage.filter.Filter2getPermanentFilter(){
+y
+€˜ €( 
+%226java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerId÷ô
+€ €(§
+%227java.util.List"‚mage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*E
+
+__unknown_file ()
+'
+%223mage.game.permanent.Battlefield*A
+
+__unknown_file (%
+#
+%225mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+%226java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)f
+d
+€ €(§
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%227java.util.List*
+179*
+187
+ÿ ÿ(~|
+
+ÿ ÿ(!
+%222boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+179
+185*ø
+188
+û û('Î
+Ë
+
+û û(O
+%221boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+û û(P
+""*·
+189
+ú ú(!—”
+
+ú ú(`
+%220boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+187
+188*§
+80
+µ µ($d
+b
+
+µ µ($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+µ µ($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+79
+84*&
+81
+¹ ¹(#"
+
+¹ ¹($
+""*Ó
+82
+¸+ ¸(1›
+
+¸+ ¸(I
+%377int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()¢Ÿ
+
+¸M ¸(`
+%378java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()qo
+
+¸M ¸(g
+%379int"java.util.List#size()I*4
+
+__unknown_file (
+
+%378java.util.List2size()*
+80
+81*í
+83
+· ·(ª§
+
+·% ·(6
+%375java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()£ 
+
+· ·(E
+%376void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%375java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+81
+82*Õ
+84
+¶ ¶(ª§
+
+¶: ¶(K
+%373java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+¶ ¶(Z
+%374boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%373java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+80
+83*ğ
+
+86
+± ±(!şû
+
+±0 ±(O#
+%369mage.filter.FilterPermanent"[mage.target.common.TargetSpellOrPermanent#getPermanentFilter()Lmage/filter/FilterPermanent;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetSpellOrPermanent2getPermanentFilter()¢Ÿ
+
+±W ±(j
+%370java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()ˆ…
+
+± ±(k
+%371java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%369mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%370java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)e
+c
+
+± ±(k
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%371java.util.List¿
+¼
+
+² ²(,
+%372void"0java.util.Collections#reverse(Ljava/util/List;)V*5
+
+__unknown_file ("
+java.util.Collections*7
+
+__unknown_file (
+
+targetsjava.util.List*
+80*š
+88
+° °(~|
+
+° °(!
+%368boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+80
+86*Ì	
+89
+® ®(!şû
+
+®< ®([#
+%365mage.filter.FilterPermanent"[mage.target.common.TargetSpellOrPermanent#getPermanentFilter()Lmage/filter/FilterPermanent;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetSpellOrPermanent2getPermanentFilter()¢Ÿ
+
+®c ®(v
+%366java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()¦£
+
+® ®(w
+%367java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%365mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%366java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)e
+c
+
+® ®(w
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%367java.util.List*
+88*û
+190
+ø ø(+Ñ
+Î
+
+ø ø(V
+%219boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ø ø(W
+""*º
+191
+÷ ÷(š—
+
+÷ ÷(`
+%218boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+190
+187*­
+192
+ö ö(Š
+
+ö ö($
+%217boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+189
+191*
+193
+õ õ(~|
+
+õ õ(!
+%216boolean"java.util.List#isEmpty()Z*7
+
+__unknown_file (
+
+targetsjava.util.List2	isEmpty()*
+
+192
+187*†
+194
+ò ò(!ÌÉ
+
+òb ò(x
+%212mage.filter.Filter"Bmage.target.common.TargetAnyTarget#getFilter()Lmage/filter/Filter;*N
+
+__unknown_file (2
+0
+
+origTarget"mage.target.common.TargetAnyTarget2getFilter()ãà
+ò< ò(#
+%213mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%212mage.filter.Filter2getPermanentFilter()¤¡
+ò– ò(©
+%214java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()§¤
+ò ò(ª
+%215java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%213mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%214java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+ò ò(ª
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%215java.util.List*
+193*‰
+195
+ğ ğ(!ÌÉ
+
+ğe ğ({
+%208mage.filter.Filter"Bmage.target.common.TargetAnyTarget#getFilter()Lmage/filter/Filter;*N
+
+__unknown_file (2
+0
+
+origTarget"mage.target.common.TargetAnyTarget2getFilter()ãà
+ğ? ğ(‘#
+%209mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*8
+
+__unknown_file (
+
+%208mage.filter.Filter2getPermanentFilter()¤¡
+ğ™ ğ(¬
+%210java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()ª§
+ğ ğ(­
+%211java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%209mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%210java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)f
+d
+ğ ğ(­
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%211java.util.List*
+193*À
+196
+í í($S
+Q
+
+í í($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""¸µ
+
+î< î(V
+%206mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()€
+~
+
+î î(X0
+
+origTarget"mage.target.common.TargetAnyTarget"__id*8
+
+__unknown_file (
+
+%206mage.target.TargetŠ
+
+ï ï( 
+%207boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+194
+195*Ø
+197
+ì ì(¸µ
+
+ì ì(&
+%205mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+172
+196*'
+198
+é é("
+
+é é(
+""*ø
+199
+æ æ(#Î
+Ë
+
+æ æ(K
+%204boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+æ æ(L
+""*Ï	
+90
+¬ ¬(!şû
+
+¬? ¬(^#
+%362mage.filter.FilterPermanent"[mage.target.common.TargetSpellOrPermanent#getPermanentFilter()Lmage/filter/FilterPermanent;*U
+
+__unknown_file (9
+7
+
+origTarget)mage.target.common.TargetSpellOrPermanent2getPermanentFilter()¢Ÿ
+
+¬f ¬(y
+%363java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()©¦
+
+¬ ¬(z
+%364java.util.List"œmage.player.ai.ComputerPlayer#threats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)Ljava/util/List;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*A
+
+__unknown_file (%
+#
+%362mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%363java.util.List2nthreats(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/filter/FilterPermanent;Lmage/game/Game;Ljava/util/List;)e
+c
+
+¬ ¬(z
+targetsjava.util.List"__id*4
+
+__unknown_file (
+
+%364java.util.List*
+88*Å
+91
+¨I ¨(O¸µ
+
+¨I ¨(c
+%360mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()ˆ
+…
+
+¨ ¨(d7
+
+origTarget)mage.target.common.TargetSpellOrPermanent"__id*8
+
+__unknown_file (
+
+%360mage.target.TargetS
+Q
+
+© ©($
+targetsjava.util.List"__id*"
+
+__unknown_file (
+""Š
+
+« «( 
+%361boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+90
+89*Õ
+92
+¦ ¦(¸µ
+
+¦ ¦(&
+%359mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+91
+70*&
+93
+£ £("
+
+£ £(
+""* 
+94
+› ›("Z
+X
+
+› ›(" 
+omage.game.stack.StackObject"__id*"
+
+__unknown_file (
+""£
+ 
+
+› ›(" 
+omage.game.stack.StackObject"
+__arrayGet*@
+
+__unknown_file ($
+"
+%349mage.game.stack.SpellStack*"
+
+__unknown_file (
+""*
+93
+94
+97*
+95
+Ÿ Ÿ(+ 
+
+Ÿ4 Ÿ(=
+%357java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+omage.game.stack.StackObject2getId()Â
+¿
+
+Ÿ Ÿ(L
+%358boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%357java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Ÿ Ÿ(M
+""*•
+96
+ (%ÉÆ
+
+E (X
+%354mage.abilities.Ability"Emage.game.stack.StackObject#getStackAbility()Lmage/abilities/Ability;*>
+
+__unknown_file ("
+ 
+omage.game.stack.StackObject2getStackAbility()›
+
+E (`
+%355java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+%354mage.abilities.Ability2getId()‹ˆ
+
+ (o
+%356boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%355java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+94
+95*
+97
+  (& 
+
+  (.
+%350java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getId()ÉÆ
+
+6 (I
+%351mage.abilities.Ability"Emage.game.stack.StackObject#getStackAbility()Lmage/abilities/Ability;*>
+
+__unknown_file ("
+ 
+omage.game.stack.StackObject2getStackAbility()›
+
+6 (Q
+%352java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+%351mage.abilities.Ability2getId()ÔÑ
+
+  (R
+%353boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%350java.util.UUID*4
+
+__unknown_file (
+
+%352java.util.UUID2equals(Ljava/lang/Object;)*
+94
+96*Å
+99
+›% ›()¬©
+
+›% ›(4"
+%349mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()*
+94*à
+300
+± ±("¡
+
+±- ±(6
+%50java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2getId()¡
+
+± ±(E
+%51void"Wmage.target.Target#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*3
+
+__unknown_file (
+
+%50java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+299*Ò
+302
+®  ®(&¡
+
+®  ®(3
+%47java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+®  ®(:
+
+%48int"java.util.List#size()I*3
+
+__unknown_file (
+
+%47java.util.List2size()š
+
+®> ®(\
+
+%49int"+mage.target.Target#getMaxNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getMaxNumberOfTargets()*
+
+300
+279*Í
+303
+­ ­("¡
+
+­B ­(K
+%45java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2getId()‰†
+
+­ ­(Z
+%46boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%45java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+299
+302*¢
+304
+¬ ¬( ‚ÿ
+
+¬ ¬(D
+%44boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+
+299
+303*
+305
+ª/ ª(3o
+m
+
+ª ª(5"
+pmage.game.permanent.Permanent"__id*5
+
+__unknown_file (
+
+cardmage.cards.CardŒ‰
+
+« «((
+%43boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+299
+304*î
+308
+¥( ¥(7A?
+
+¥ ¥('
+%38mage.cards.CardsImpl"mage.cards.CardsImplÇ
+Ä
+
+¥ ¥(8
+%39"4mage.cards.CardsImpl#<init>(Ljava/util/Collection;)V*9
+
+__unknown_file (
+
+%38mage.cards.CardsImpl*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Setj
+h
+
+¥ ¥(9
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%38mage.cards.CardsImplìé
+
+¦7 ¦(K
+%40java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)?=
+
+¦+ ¦(6
+%41java.util.ArrayList"java.util.ArrayList¹
+¶
+
+¦' ¦(L
+%42"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%41java.util.ArrayList*2
+
+__unknown_file (
+
+%40java.util.Seto
+m
+
+¦ ¦(M
+possibleCardsjava.util.List"__id*8
+
+__unknown_file (
+
+%41java.util.ArrayList*
+280*×
+309
+¤ ¤(·´
+
+¤ ¤(&
+%37mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+278
+308*Î
+310
+   ("¤
+¡
+
+   (r
+%36boolean"¥mage.player.ai.ComputerPlayer#setTargetPlayer(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Ljava/util/UUID;Ljava/util/UUID;Lmage/game/Game;Z)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+"""
+
+   (s
+""*×
+311
+Ÿ Ÿ(·´
+
+Ÿ Ÿ(&
+%35mage.target.Target":mage.target.Target#getOriginalTarget()Lmage/target/Target;*:
+
+__unknown_file (
+
+targetmage.target.Target2getOriginalTarget()*
+
+310
+309*·
+312
+œ œ(0x
+v
+
+œ1 œ(9
+%33java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerId³
+°
+
+œ œ(@
+%34java.util.UUID"amage.player.ai.ComputerPlayer#getRandomOpponent(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*3
+
+__unknown_file (
+
+%33java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gamem
+k
+
+œ œ(@"
+randomOpponentIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%34java.util.UUID*
+311*ó
+313
+š š(0³°
+
+š1 š(I
+%31java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()³
+°
+
+š š(P
+%32java.util.UUID"amage.player.ai.ComputerPlayer#getRandomOpponent(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*3
+
+__unknown_file (
+
+%31java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gamem
+k
+
+š š(P"
+randomOpponentIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%32java.util.UUID*
+311*Ó
+314
+™% ™(+³°
+
+™% ™(=
+%30java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()*
+
+312
+313*ó
+316
+˜ ˜(0³°
+
+˜1 ˜(M
+%28java.util.UUID"8mage.target.Target#getTargetController()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargetController()³
+°
+
+˜ ˜(T
+%29java.util.UUID"amage.player.ai.ComputerPlayer#getRandomOpponent(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*3
+
+__unknown_file (
+
+%28java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gamem
+k
+
+˜ ˜(T"
+randomOpponentIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%29java.util.UUID*
+311*‹	
+317
+‘# ‘(4?=
+
+‘' ‘(2
+%21java.util.ArrayList"java.util.ArrayListn
+l
+
+‘# ‘(4
+%22"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%21java.util.ArrayListj
+h
+
+‘ ‘(5
+goodListjava.util.List"__id*8
+
+__unknown_file (
+
+%21java.util.ArrayList?=
+
+’& ’(1
+%23java.util.ArrayList"java.util.ArrayListn
+l
+
+’" ’(3
+%24"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%23java.util.ArrayListi
+g
+
+’ ’(4
+badListjava.util.List"__id*8
+
+__unknown_file (
+
+%23java.util.ArrayList?=
+
+“& “(1
+%25java.util.ArrayList"java.util.ArrayListn
+l
+
+“" “(3
+%26"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%25java.util.ArrayListi
+g
+
+“ “(4
+allListjava.util.List"__id*8
+
+__unknown_file (
+
+%25java.util.ArrayList\
+Z
+
+– –("
+randomOpponentIdjava.util.UUID"__id*"
+
+__unknown_file (
+""³°
+
+— —((
+%27java.util.UUID"8mage.target.Target#getTargetController()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargetController()*
+312
+314
+316*Ç
+319
+) (/¡
+
+) (<
+%18java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()om
+
+) (C
+
+%19int"java.util.List#size()I*3
+
+__unknown_file (
+
+%18java.util.List2size()—”
+
+G (b
+
+%20int"(mage.target.Target#getNumberOfTargets()I*:
+
+__unknown_file (
+
+targetmage.target.Target2getNumberOfTargets()*
+317*¥
+320
+‹ ‹(!»¸
+
+‹ ‹(<
+%15boolean"@mage.target.Target#isRequired(Ljava/util/UUID;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2,isRequired(Ljava/util/UUID;Lmage/game/Game;)ÔÑ
+
+Œ$ Œ(]
+%16java.util.Set"kmage.target.Target#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2IpossibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)j
+h
+
+Œ Œ(^ 
+possibleTargetsjava.util.Set"__id*2
+
+__unknown_file (
+
+%16java.util.Set„
+
+ (%
+%17boolean"java.util.Set#isEmpty()Z*>
+
+__unknown_file ("
+ 
+possibleTargetsjava.util.Set2	isEmpty()*
+
+317
+319*Â
+321
+ˆ" ˆ((µ²
+
+ˆ" ˆ(?
+%14java.util.UUID"9mage.target.Target#getAbilityController()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getAbilityController()p
+n
+
+ˆ ˆ(?%
+abilityControllerIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%14java.util.UUID*
+320*·
+200
+å å(—”
+
+å å(\
+%203boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*@
+
+__unknown_file ($
+"
+randomOpponentIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+198
+199*§
+322
+ƒ ƒ(Ed
+b
+
+ƒ ƒ(E
+sourceIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%9java.util.UUIDx
+v
+
+†# †(+
+%12java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerIdp
+n
+
+† †(,%
+abilityControllerIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%12java.util.UUIDµ²
+
+‡ ‡()
+%13java.util.UUID"9mage.target.Target#getAbilityController()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getAbilityController()*
+
+321
+320*û
+201
+ã ã('Ñ
+Î
+
+ã ã(R
+%202boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+ã ã(S
+""*ˆ
+startingBlock
+ú ú(Z˜
+•
+
+ù ù(
+%509"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcomee
+c
+
+ú( ú(/!
+outcomemage.constants.Outcome"__annotation*$
+
+__unknown_file (
+
+%509“
+
+
+ù ù(
+%510"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+targetmage.target.Target`
+^
+
+ú8 ú(>
+targetmage.target.Target"__annotation*$
+
+__unknown_file (
+
+%510—
+”
+
+ù ù(
+%511"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityd
+b
+
+úH ú(N 
+sourcemage.abilities.Ability"__annotation*$
+
+__unknown_file (
+
+%511
+Š
+
+ù ù(
+%512"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameZ
+X
+
+úU ú(Y
+gamemage.game.Game"__annotation*$
+
+__unknown_file (
+
+%512*
+327*u
+323
+ƒ@ ƒ(D[
+Y
+
+ƒ@ ƒ(D
+%9java.util.UUID"__id*/
+
+__unknown_file (
+
+%11
+<nulltype>*
+322*º
+202
+â â(š—
+
+â â(\
+%201boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+201
+198*§
+324
+ƒ) ƒ(/«¨
+
+ƒ) ƒ(=
+%10java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()_
+]
+
+ƒ) ƒ(=
+%9java.util.UUID"__id*3
+
+__unknown_file (
+
+%10java.util.UUID*
+322*­
+203
+á á(Š
+
+á á( 
+%200boolean" mage.constants.Outcome#isGood()Z*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2isGood()*
+
+200
+202*ª
+204
+Ø Ø($d
+b
+
+Ø Ø($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¤
+¡
+
+Ø Ø($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*7
+
+__unknown_file (
+
+targetsjava.util.List*"
+
+__unknown_file (
+""*
+
+203
+208*‹
+326
+ü ü(W
+U
+
+ü ü(
+%2org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¡
+
+ü) ü(;
+%3java.lang.String"+java.lang.Enum#toString()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome2
+toString()z
+x
+
+ü ü(;
+%4java.lang.String"__concat* 
+
+ü ü(&
+chooseTarget: *&
+
+ü) ü(;
+
+%3java.lang.Stringm
+k
+
+ü ü(A
+%5java.lang.String"__concat*&
+
+ü ü(;
+
+%4java.lang.String*
+
+ü> ü(A
+:›
+
+üD ü(U
+%6java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*:
+
+__unknown_file (
+
+targetmage.target.Target2
+toString()€
+~
+
+ü ü(U
+%7java.lang.String"__concat*&
+
+ü ü(A
+
+%5java.lang.String*&
+
+üD ü(U
+
+%6java.lang.StringßÜ
+
+ü ü(V
+
+%8void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%2org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%7java.lang.String2debug(Ljava/lang/Object;)*
+
+323
+324*™
+205
+Ü Ü(+ª§
+
+Ü4 Ü(E
+%198java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Â
+¿
+
+Ü Ü(T
+%199boolean"ymage.player.ai.ComputerPlayer#tryAddTarget(Lmage/target/Target;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*:
+
+__unknown_file (
+
+targetmage.target.Target*4
+
+__unknown_file (
+
+%198java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+
+Ü Ü(U
+""*˜
+327
+û û(W
+U
+
+û û(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""š—
+
+û û( 
+%1boolean"+org.apache.log4j.Category#isDebugEnabled()Z*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger2isDebugEnabled()*
+323
+324
+326*°
+206
+Û4 Û(Cª§
+
+ÛM Û(^
+%196java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ãà
+
+Û4 Û(_
+%197boolean",java.util.List#contains(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+alreadyTargetedjava.util.List*4
+
+__unknown_file (
+
+%196java.util.UUID2contains(Ljava/lang/Object;)*
+
+204
+205*ì
+208
+Ù- Ù(3¢Ÿ
+
+Ù- Ù(@
+%193java.util.List"/mage.target.Target#getTargets()Ljava/util/List;*:
+
+__unknown_file (
+
+targetmage.target.Target2getTargets()m
+k
+
+Ù Ù(A!
+alreadyTargetedjava.util.List"__id*4
+
+__unknown_file (
+
+%193java.util.Listª§
+
+Ú: Ú(K
+%194java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‹ˆ
+
+Ú Ú(Z
+%195boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+%194java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+204
+206:/
+
+ú  ú(0!
+outcomemage.constants.Outcome:*
+
+ú1 ú(?
+targetmage.target.Target:.
+
+ú@ ú(O 
+sourcemage.abilities.Ability:$
+
+úP ú(Y
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerHP

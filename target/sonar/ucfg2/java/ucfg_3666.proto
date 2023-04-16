@@ -1,0 +1,217 @@
+
+[mage.abilities.keyword.SetClassLevelEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zk
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ClassLevelAbility.javaN N("startingBlock*!
+2V V("
+V V(
+""*‹
+3T T( £ 
+T T(0	
+%2int".mage.game.permanent.Permanent#getClassLevel()I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getClassLevel()ÍÊ
+U U(+
+%3boolean"/mage.game.permanent.Permanent#setClassLevel(I)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2setClassLevel(I)*
+2
+1*þ
+startingBlockN N(3Š
+‡
+M M(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+N N("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%17”
+‘
+M M(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+N, N(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%18*
+6*!
+4Q Q("
+Q Q(
+""*¹
+5P" P(+¡ž
+P" P(8
+%1boolean"+mage.game.permanent.Permanent#isPhasedIn()Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2isPhasedIn()*
+3
+4*ä
+6O O($ÈÅ
+O O(L#
+%0mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)
+
+O O(M*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*
+4
+5*à
+1Y Y(­ª
+Y Y(1
+%4java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getLogName()x
+v
+Y Y(H
+%5java.lang.String"__concat*$
+Y Y(1
+
+%4java.lang.String*"
+Y4 Y(H
+ levelled up from h
+f
+Y Y(S
+%6java.lang.String"__concat*$
+Y Y(H
+
+%5java.lang.String*
+YK Y(S
+""j
+h
+Y Y(\
+%7java.lang.String"__concat*$
+Y Y(S
+
+%6java.lang.String*
+YV Y(\
+ to £ 
+Y_ Y(x	
+%8int".mage.game.permanent.Permanent#getClassLevel()I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getClassLevel()m
+k
+Y Y(x
+%9java.lang.String"__concat*$
+Y Y(\
+
+%7java.lang.String*
+Y_ Y(x
+	
+%8intÜÙ
+Y Y(y
+%10void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%9java.lang.String2!informPlayers(Ljava/lang/String;)c
+a
+\ \(#+
+%11$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
+\ \(5+
+%12$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""©¦
+\7 \(K
+%13java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()±®
+] ](0
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¨
+¥
+[ ^(	!
+%15mage.game.events.GameEvent" mage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;I)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%12$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%13java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%14java.util.UUID*"
+
+__unknown_file (
+""óð
+[ ^(
+
+%16void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%15mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+_ _(
+"":"
+N N(#
+gamemage.game.Game:,
+N$ N(2 
+sourcemage.abilities.AbilityB.,
+*mage.abilities.keyword.SetClassLevelEffectHP

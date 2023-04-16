@@ -1,0 +1,77 @@
+
+image.target.TargetCard#possibleTargets(Ljava/util/UUID;Lmage/cards/Cards;Lmage/game/Game;)Ljava/util/Set;[
+OD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/TargetCard.javaÖ Ö($"1*…
+1
+× ×(v
+t
+
+× ×($
+%0mage.filter.FilterCard"__id*B
+
+__unknown_file (&*$
+mage.target.TargetCard"
+filter×Ô
+
+× ×(+
+%1java.util.Set"Rmage.cards.Cards#getCards(Lmage/filter/FilterCard;Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*:
+
+__unknown_file (
+
+%0mage.filter.FilterCard*4
+
+__unknown_file (
+
+gamemage.game.Game22getCards(Lmage/filter/FilterCard;Lmage/game/Game;)£ 
+
+× ×(4
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%1java.util.Set2stream()ˆ…
+
+× ×(I
+%3java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¯
+¬
+
+×R ×(d 
+%4java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors™–
+
+× ×(e
+%5java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%4java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"#
+
+× ×(f
+
+%5java.util.Set:2
+
+Ö% Ö(=$
+sourceControllerIdjava.util.UUID:'
+
+Ö> Ö(J
+cardsmage.cards.Cards:$
+
+ÖK Ö(T
+gamemage.game.GameB
+mage.target.TargetCardH

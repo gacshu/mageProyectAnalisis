@@ -1,0 +1,262 @@
+
+Tmage.abilities.keyword.EvolveEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zi
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/EvolveAbility.javaä ä("startingBlock*%
+2
+í í("
+
+í í(
+""*¡
+3
+è è(Y
+W
+
+è+ è(;
+%6mage.counters.CounterType"__id*"
+
+__unknown_file (
+""¿Ω
+
+è+ è(L
+%7mage.counters.Counter"Amage.counters.CounterType#createInstance()Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%6mage.counters.CounterType2createInstance()≤Ø
+
+èN è(f
+%8java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()üú
+
+è è(u
+%9boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*M
+
+__unknown_file (1
+/
+sourceCreaturemage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%7mage.counters.Counter*2
+
+__unknown_file (
+
+%8java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)e
+c
+
+ê2 ê(E+
+%10$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+ê2 ê(V+
+%11$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""Æ´
+
+êX ê(n
+%12java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*M
+
+__unknown_file (1
+/
+sourceCreaturemage.game.permanent.Permanent2getId()¥±
+êx ê(ê
+%13java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ü
+É
+ê ê(ë!
+%14mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%11$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%12java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%13java.util.UUIDˆÛ
+ê ê(í
+%15void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%14mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)*
+2*à
+startingBlock
+ä ä(3å
+â
+
+â â(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ä ä("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16ñ
+ì
+
+â â(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+ä, ä(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17*
+6*£
+4
+é* é(7â
+Ü
+
+é* é(v
+%5boolean"Ämage.abilities.keyword.EvolveAbility#isPowerOrThoughnessGreater(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;)Z*D
+
+__unknown_file (("&
+$mage.abilities.keyword.EvolveAbility*M
+
+__unknown_file (1
+/
+sourceCreaturemage.game.permanent.Permanent*Q
+
+__unknown_file (5
+3
+triggeringCreaturemage.game.permanent.Permanent*
+2
+3*ﬂ
+5
+ç' ç(+™ß
+
+ç9 ç(M
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()åâ
+
+ç' ç(N#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)â
+Ü
+
+ç ç(O/
+sourceCreaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+2
+4*⁄
+6
+ã' ã(+ˆÛ
+
+ãI ã([-
+%0'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*C
+
+__unknown_file ('%
+#mage.abilities.keyword.EvolveEffect2getTargetPointer()àÖ
+
+ãI ã(r
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)¨©
+
+ã' ã(s#
+%2mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)ç
+ä
+
+ã ã(t3
+triggeringCreaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+5
+1*%
+1
+î î("
+
+î î(
+"":$
+
+ä ä(#
+gamemage.game.Game:.
+
+ä$ ä(2 
+sourcemage.abilities.AbilityB'%
+#mage.abilities.keyword.EvolveEffectHP

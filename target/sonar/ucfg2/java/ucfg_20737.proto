@@ -1,0 +1,687 @@
+
+@mage.client.dialog.AddLandDialog#addLands(Ljava/lang/String;IZ)Vl
+`D:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/dialog/AddLandDialog.javaè è("29*´
+13
+± ±(#≠™
+
+± ±(3
+%41mage.cards.FrameStyle"6mage.MageObject#getFrameStyle()Lmage/cards/FrameStyle;*5
+
+__unknown_file (
+
+landmage.cards.Card2getFrameStyle()V
+T
+
+±7 ±(T
+%42mage.cards.FrameStyle"__id*"
+
+__unknown_file (
+""*
+14
+6
+0
+12
+1*ó
+24
+ù ù(ò
+ï
+
+ù ù(5
+%14.mage.client.constants.Constants$DeckEditorMode"__id*J
+
+__unknown_file (.*,"
+ mage.client.dialog.AddLandDialog"
+modeo
+m
+
+ù ù("5
+%15.mage.client.constants.Constants$DeckEditorMode"__id*"
+
+__unknown_file (
+""o
+m
+
+ù ù(05
+%16.mage.client.constants.Constants$DeckEditorMode"__id*"
+
+__unknown_file (
+""*
+20
+22*˛
+14
+Ø Ø(qo
+
+Ø5 Ø(A
+
+%37int"java.util.List#size()I*5
+
+__unknown_file (
+
+cardsjava.util.List2size()ù
+ö
+
+Ø" Ø(B
+
+%38int" mage.util.RandomUtil#nextInt(I)I*4
+
+__unknown_file ("
+mage.util.RandomUtil*(
+
+__unknown_file (
+
+
+%37int£
+†
+
+Ø Ø(C%
+%39mage.cards.repository.CardInfo"
+__arrayGet*5
+
+__unknown_file (
+
+cardsjava.util.List*(
+
+__unknown_file (
+
+
+%38int∫∑
+
+Ø Ø(Q
+%40mage.cards.Card"=mage.cards.repository.CardInfo#getMockCard()Lmage/cards/Card;*C
+
+__unknown_file ('
+%
+%39mage.cards.repository.CardInfo2getMockCard()c
+a
+
+Ø Ø(R
+landmage.cards.Card"__id*4
+
+__unknown_file (
+
+%40mage.cards.Card*
+13
+14
+6
+0
+1*û
+25
+õ õ(ÖÇ
+
+õ õ(.)
+%13"mage.cards.repository.CardCriteria"`mage.cards.repository.CardCriteria#ignoreSetsWithSnowLands()Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2ignoreSetsWithSnowLands()*
+24*®
+26
+ô ô(»≈
+
+ô ô(5
+%11java.lang.String"?mage.cards.repository.ExpansionInfo#getCode()Ljava/lang/String;*R
+
+__unknown_file (6
+4
+expansionInfo#mage.cards.repository.ExpansionInfo2	getCode()ƒ¡
+
+ô ô(6)
+%12"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*5
+
+__unknown_file (
+
+%11java.lang.String2setCodes([Ljava/lang/String;)*
+24*∆
+27
+ó3 ó(AÅ
+
+
+ó3 ó(O
+%7java.lang.String"__concat*
+
+ó3 ó(A
+Code of Set */
+
+óD ó(O!
+
+landSetNamejava.lang.Stringv
+t
+
+ó3 ó(^
+%8java.lang.String"__concat*&
+
+ó3 ó(O
+
+%7java.lang.String*
+
+óR ó(^
+
+ not found\Z
+
+ó ó(2(
+%9"java.lang.IllegalArgumentException""java.lang.IllegalArgumentException‘
+—
+
+ó ó(_
+%10">java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V*F
+
+__unknown_file (*
+(
+%9"java.lang.IllegalArgumentException*4
+
+__unknown_file (
+
+%8java.lang.String*
+0*˙
+28
+ï ï(/i
+g
+
+ï ï(8/
+%5)mage.cards.repository.ExpansionRepository"__id*"
+
+__unknown_file (
+""€ÿ
+
+ï ï(R)
+%6#mage.cards.repository.ExpansionInfo"omage.cards.repository.ExpansionRepository#getSetByName(Ljava/lang/String;)Lmage/cards/repository/ExpansionInfo;*M
+
+__unknown_file (1
+/
+%5)mage.cards.repository.ExpansionRepository*=
+
+__unknown_file (!
+
+landSetNamejava.lang.String2 getSetByName(Ljava/lang/String;)î
+ë
+
+ï ï(R4
+expansionInfo#mage.cards.repository.ExpansionInfo"__id*G
+
+__unknown_file (+
+)
+%6#mage.cards.repository.ExpansionInfo*
+26
+27*∂
+18
+• •(X
+V
+
+• •(
+%26org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""î
+ë
+
+• •(F
+%27java.lang.String"__concat*/
+
+• •(8!
+No basic lands found in Set: */
+
+•; •(F!
+
+landSetNamejava.lang.String‚ﬂ
+
+• •(G
+%28void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%26org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%27java.lang.String2error(Ljava/lang/Object;)][
+
+¶ ¶(')
+%29"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaç
+ä
+
+¶ ¶()
+%30",mage.cards.repository.CardCriteria#<init>()V*G
+
+__unknown_file (+
+)
+%29"mage.cards.repository.CardCriteriaé
+ã
+
+¶ ¶().
+criteria"mage.cards.repository.CardCriteria"__id*G
+
+__unknown_file (+
+)
+%29"mage.cards.repository.CardCriteriaV
+T
+
+ß ß()
+%31mage.constants.Rarity"__id*"
+
+__unknown_file (
+""”–
+
+ß ß(*)
+%32"mage.cards.repository.CardCriteria"image.cards.repository.CardCriteria#rarities([Lmage/constants/Rarity;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+%31mage.constants.Rarity2"rarities([Lmage/constants/Rarity;)∫∑
+
+ß ß(9)
+%33"mage.cards.repository.CardCriteria"_mage.cards.repository.CardCriteria#name(Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*G
+
+__unknown_file (+
+)
+%32"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+landNamejava.lang.String2name(Ljava/lang/String;)≤Ø
+
+® ®($)
+%34"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*#
+
+__unknown_file (
+M152setCodes([Ljava/lang/String;)e
+c
+
+© ©(++
+%35$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""÷”
+
+© ©(?
+%36java.util.List"dmage.cards.repository.CardRepository#findCards(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%35$mage.cards.repository.CardRepository*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2/findCards(Lmage/cards/repository/CardCriteria;)b
+`
+
+© ©(?
+cardsjava.util.List"__id*3
+
+__unknown_file (
+
+%36java.util.List*
+
+14
+0
+1*Ü	
+29
+ê& ê(/É
+Ä
+
+ê& ê(/
+%0javax.swing.JComboBox"__id*O
+
+__unknown_file (3*1"
+ mage.client.dialog.AddLandDialog"
+	cbLandSet∞≠
+
+ê& ê(A
+%1java.lang.Object"9javax.swing.JComboBox#getSelectedItem()Ljava/lang/Object;*9
+
+__unknown_file (
+
+%0javax.swing.JComboBox2getSelectedItem()k
+i
+
+ê ê(B
+landSetNamejava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.Objectn
+l
+
+ë ë(+4
+expansionInfo#mage.cards.repository.ExpansionInfo"__id*"
+
+__unknown_file (
+""\Z
+
+ì$ ì(0(
+%2"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaã
+à
+
+ì  ì(2
+%3",mage.cards.repository.CardCriteria#<init>()V*F
+
+__unknown_file (*
+(
+%2"mage.cards.repository.CardCriteriaç
+ä
+
+ì ì(3.
+criteria"mage.cards.repository.CardCriteria"__id*F
+
+__unknown_file (*
+(
+%2"mage.cards.repository.CardCriteria◊‘
+
+î î(1
+%4boolean",java.lang.String#equals(Ljava/lang/Object;)Z*=
+
+__unknown_file (!
+
+landSetNamejava.lang.String*.
+
+__unknown_file (
+<Random lands>2equals(Ljava/lang/Object;)*
+25
+28*Ô
+19
+¢ ¢(V
+T
+
+¢ ¢(%
+%21mage.constants.Rarity"__id*"
+
+__unknown_file (
+""”–
+
+¢ ¢(&)
+%22"mage.cards.repository.CardCriteria"image.cards.repository.CardCriteria#rarities([Lmage/constants/Rarity;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+%21mage.constants.Rarity2"rarities([Lmage/constants/Rarity;)e
+c
+
+£ £(6+
+%23$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""÷”
+
+£ £(J
+%24java.util.List"dmage.cards.repository.CardRepository#findCards(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%23$mage.cards.repository.CardRepository*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2/findCards(Lmage/cards/repository/CardCriteria;)b
+`
+
+£ £(K
+cardsjava.util.List"__id*3
+
+__unknown_file (
+
+%24java.util.List{y
+
+§ §(
+%25boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+14
+18
+0
+1*(
+0 "!
+
+ƒ ƒ(
+implicit return*ë
+1
+¬ ¬(†
+ù
+
+¬ ¬(#
+%54mage.client.MageFrame":mage.client.MageFrame#getInstance()Lmage/client/MageFrame;*5
+
+__unknown_file ("
+mage.client.MageFrameâ
+Ü
+
+¬0 ¬(R
+%55java.lang.String"__concat*'
+
+¬0 ¬(G
+Unable to add enough *,
+
+¬J ¬(R
+
+landNamejava.lang.String◊
+‘
+¬0 ¬(Ω
+%56java.lang.String"__concat*'
+
+¬0 ¬(R
+
+%55java.lang.String*y
+¬U ¬(Ωjh
+fs.  You encountered an error in adding chosen lands.  Unable to find enough full art lands in the set ê
+ç
+¬0 ¬(À
+%57java.lang.String"__concat*(
+¬0 ¬(Ω
+
+%56java.lang.String*1
+¬¿ ¬(À!
+
+landSetNamejava.lang.Strings
+q
+¬0 ¬(—
+%58java.lang.String"__concat*(
+¬0 ¬(À
+
+%57java.lang.String*
+¬Œ ¬(—
+.ÈÊ
+¬ ¬(“
+%59void"6mage.client.MageFrame#showMessage(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%54mage.client.MageFrame*5
+
+__unknown_file (
+
+%58java.lang.String2showMessage(Ljava/lang/String;)*
+0*ı
+6
+π π(~
+|
+
+π π(
+%51mage.cards.decks.Deck"__id*J
+
+__unknown_file (.*,"
+ mage.client.dialog.AddLandDialog"
+deckûõ
+
+π π(
+%52java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*:
+
+__unknown_file (
+
+%51mage.cards.decks.Deck2
+getCards()∂
+≥
+
+π π()
+%53boolean"
+__arrayAdd*2
+
+__unknown_file (
+
+%52java.util.Set*
+
+__unknown_file (: *5
+
+__unknown_file (
+
+landmage.cards.Card*
+
+14
+0
+1*¶
+9
+µ µ(≠™
+
+µ µ(+
+%49mage.cards.FrameStyle"6mage.MageObject#getFrameStyle()Lmage/cards/FrameStyle;*5
+
+__unknown_file (
+
+landmage.cards.Card2getFrameStyle()V
+T
+
+µ/ µ(L
+%50mage.cards.FrameStyle"__id*"
+
+__unknown_file (
+""*
+14
+6
+0
+1*‚
+20
+† †(…∆
+
+† †(()
+%20"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#nameExact(Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+landNamejava.lang.String2nameExact(Ljava/lang/String;)*
+19*ÿ
+21
+û û(øº
+
+û û(#)
+%19"mage.cards.repository.CardCriteria"_mage.cards.repository.CardCriteria#name(Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+landNamejava.lang.String2name(Ljava/lang/String;)*
+19*™
+10
+¥ ¥(≠™
+
+¥ ¥(+
+%47mage.cards.FrameStyle"6mage.MageObject#getFrameStyle()Lmage/cards/FrameStyle;*5
+
+__unknown_file (
+
+landmage.cards.Card2getFrameStyle()V
+T
+
+¥/ ¥(L
+%48mage.cards.FrameStyle"__id*"
+
+__unknown_file (
+""*
+14
+6
+9
+0
+1*Î
+22
+ùM ù([…∆
+ùj ù(Å
+%17java.lang.String"?mage.cards.repository.ExpansionInfo#getCode()Ljava/lang/String;*R
+
+__unknown_file (6
+4
+expansionInfo#mage.cards.repository.ExpansionInfo2	getCode()Ç
+ˇ
+ùM ù(Ç
+%18java.lang.Boolean"Ymage.cards.repository.CardRepository#haveSnowLands(Ljava/lang/String;)Ljava/lang/Boolean;*D
+
+__unknown_file (("&
+$mage.cards.repository.CardRepository*5
+
+__unknown_file (
+
+%17java.lang.String*
+20
+21*´
+11
+≥ ≥(≠™
+
+≥ ≥(+
+%45mage.cards.FrameStyle"6mage.MageObject#getFrameStyle()Lmage/cards/FrameStyle;*5
+
+__unknown_file (
+
+landmage.cards.Card2getFrameStyle()V
+T
+
+≥/ ≥(L
+%46mage.cards.FrameStyle"__id*"
+
+__unknown_file (
+""*
+14
+6
+10
+0
+1*´
+12
+≤ ≤(≠™
+
+≤ ≤(+
+%43mage.cards.FrameStyle"6mage.MageObject#getFrameStyle()Lmage/cards/FrameStyle;*5
+
+__unknown_file (
+
+landmage.cards.Card2getFrameStyle()V
+T
+
+≤/ ≤(L
+%44mage.cards.FrameStyle"__id*"
+
+__unknown_file (
+""*
+14
+6
+11
+0
+1:*
+
+è è(*
+landNamejava.lang.String: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+""B$"
+ mage.client.dialog.AddLandDialog

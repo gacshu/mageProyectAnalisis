@@ -1,0 +1,1421 @@
+
+Zmage.abilities.effects.common.ClashEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zl
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ClashEffect.javaT T("startingBlock*÷
+24~ ~()?=
+~ ~('
+%45mage.cards.CardsImpl"mage.cards.CardsImpln
+l
+~ ~()
+%46"mage.cards.CardsImpl#<init>()V*9
+
+__unknown_file (
+
+%45mage.cards.CardsImplh
+f
+~ ~(*
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%45mage.cards.CardsImplØ¨
+ (0
+%47mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getLibrary()¯ı
+ (A
+%48mage.cards.Card"Bmage.players.Library#getFromTop(Lmage/game/Game;)Lmage/cards/Card;*9
+
+__unknown_file (
+
+%47mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game2getFromTop(Lmage/game/Game;)i
+g
+ (A
+cardOpponentmage.cards.Card"__id*4
+
+__unknown_file (
+
+%48mage.cards.Card÷”
+
+Ä Ä(#
+%49void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*=
+
+__unknown_file (!
+
+cardOpponentmage.cards.Card2add(Lmage/cards/Card;)£†
+
+Å! Å(9
+%50java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()~
+|
+
+Å! Å(N
+%51java.lang.String"__concat*'
+
+Å! Å(9
+
+%50java.lang.String*"
+
+Å< Å(N
+: Clash card of £†
+
+ÅQ Å(c
+%52java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getName()Ñ
+Å
+
+Å! Å(c
+%53java.lang.String"__concat*'
+
+Å! Å(N
+
+%51java.lang.String*'
+
+ÅQ Å(c
+
+%52java.lang.Stringúô
+
+Å Å(q
+%54void"Vmage.players.Player#revealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)V*=
+
+__unknown_file (!
+
+opponentmage.players.Player*5
+
+__unknown_file (
+
+%53java.lang.String*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2ArevealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)ãà
+
+Ç Ç(5
+
+%55int"mage.MageObject#getManaValue()I*=
+
+__unknown_file (!
+
+cardOpponentmage.cards.Card2getManaValue()˛˚
+
+É É( 
+%56java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*"
+
+__unknown_file (
+ (2append(Ljava/lang/String;)ÿ’
+
+É É(4
+%57java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%56java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)◊‘
+
+É É(@
+%58java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%57java.lang.StringBuilder*!
+
+__unknown_file (
+)2	append(C)*
+22*ç
+25| |(ˇ¸
+| |(
+%40java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*%
+
+__unknown_file (	
+ vs. 2append(Ljava/lang/String;)ß§
+|' |(<
+%41java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getLogName()ãà
+| |(=
+%42java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%40java.lang.StringBuilder*5
+
+__unknown_file (
+
+%41java.lang.String2append(Ljava/lang/String;)Ø¨
+} }(!
+%43mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getLibrary()ÜÉ
+} }(,
+%44boolean" mage.players.Library#hasCards()Z*9
+
+__unknown_file (
+
+%43mage.players.Library2
+hasCards()*
+24
+23*ô
+26z z(Çˇ
+z z(&
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*(
+
+__unknown_file (
+
+ no card2append(Ljava/lang/String;)*
+25*ƒ
+27s s()?=
+s s('
+%25mage.cards.CardsImpl"mage.cards.CardsImpln
+l
+s s()
+%26"mage.cards.CardsImpl#<init>()V*9
+
+__unknown_file (
+
+%25mage.cards.CardsImplh
+f
+s s(*
+cardsmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%25mage.cards.CardsImpl±Æ
+t t(4
+%27mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLibrary()¯ı
+t t(E
+%28mage.cards.Card"Bmage.players.Library#getFromTop(Lmage/game/Game;)Lmage/cards/Card;*9
+
+__unknown_file (
+
+%27mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game2getFromTop(Lmage/game/Game;)k
+i
+t t(E!
+cardControllermage.cards.Card"__id*4
+
+__unknown_file (
+
+%28mage.cards.Card÷”
+u u(%
+%29void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*?
+
+__unknown_file (#
+!
+cardControllermage.cards.Card2add(Lmage/cards/Card;)°û
+v# v(;
+%30java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()x
+v
+v# v(P
+%31java.lang.String"__concat*%
+v# v(;
+
+%30java.lang.String* 
+v> v(P
+: Clash card of £†
+vS v(g
+%32java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()}
+{
+v# v(g
+%33java.lang.String"__concat*%
+v# v(P
+
+%31java.lang.String*%
+vS v(g
+
+%32java.lang.Stringúô
+v v(u
+%34void"Vmage.players.Player#revealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+%33java.lang.String*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2ArevealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)ãà
+w w(9
+
+%35int"mage.MageObject#getManaValue()I*?
+
+__unknown_file (#
+!
+cardControllermage.cards.Card2getManaValue()¸˘
+x x( 
+%36java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*"
+
+__unknown_file (
+ (2append(Ljava/lang/String;)÷”
+x x(6
+%37java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%36java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)’“
+x x(B
+%38java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%37java.lang.StringBuilder*!
+
+__unknown_file (
+)2	append(C)*
+25*ø
+28i i(#B
+@
+i i(-
+
+%17int"__id*"
+
+__unknown_file (
+""Y
+W
+j j(#!
+cardControllermage.cards.Card"__id*"
+
+__unknown_file (
+""B
+@
+l l(+
+
+%18int"__id*"
+
+__unknown_file (
+""W
+U
+m m(!
+cardOpponentmage.cards.Card"__id*"
+
+__unknown_file (
+""EC
+p$ p(1
+%19java.lang.StringBuilder"java.lang.StringBuilder∞
+≠
+p  p(<
+%20"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%19java.lang.StringBuilder*'
+
+__unknown_file (	
+Clash: t
+r
+p p(="
+messagejava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%19java.lang.StringBuilder©¶
+q q(.
+%21java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()èå
+q q(/
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*5
+
+__unknown_file (
+
+%21java.lang.String2append(Ljava/lang/String;)±Æ
+r r(#
+%23mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLibrary()ÜÉ
+r r(.
+%24boolean" mage.players.Library#hasCards()Z*9
+
+__unknown_file (
+
+%23mage.players.Library2
+hasCards()*
+26
+27*"
+29g g("
+g g(
+""*¶
+30e e(ß§
+e) e(@
+%15java.util.UUID"3mage.target.Target#getFirstTarget()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFirstTarget()ÚÔ
+e e(A
+%16mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%15java.util.UUID2getPlayer(Ljava/util/UUID;)m
+k
+e e(B
+opponentmage.players.Player"__id*8
+
+__unknown_file (
+
+%16mage.players.Player*
+28
+29*"
+31c c("
+c c(
+""*∞
+32_+ _(/XV
+_ _(*'
+%9!mage.target.common.TargetOpponent"!mage.target.common.TargetOpponent´
+®
+_ _(0
+%10",mage.target.common.TargetOpponent#<init>(Z)V*E
+
+__unknown_file ()
+'
+%9!mage.target.common.TargetOpponent* 
+
+__unknown_file (2w
+u
+_ _(1
+targetmage.target.Target"__id*E
+
+__unknown_file ()
+'
+%9!mage.target.common.TargetOpponentÎË
+` `(9
+%11void"5mage.target.Target#setTargetName(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+targetmage.target.Target*9
+
+__unknown_file (
+an opponent to clash with2!setTargetName(Ljava/lang/String;)Æ´
+a a(!
+%12void"#mage.target.Target#setNotTarget(Z)V*:
+
+__unknown_file (
+
+targetmage.target.Target* 
+
+__unknown_file (22setNotTarget(Z)U
+S
+b b(.
+%13mage.constants.Outcome"__id*"
+
+__unknown_file (
+""ûõ
+b b(E
+%14boolean"qmage.players.Player#choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%13mage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*
+30
+31*õ
+10
+ù( ù(/îë
+
+ù( ù(7
+%88java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+currentmage.players.Player2getId()ïí
+
+ù? ù(O
+%89java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getId()—Œ
+
+ù( ù(P
+%90boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%88java.util.UUID*3
+
+__unknown_file (
+
+%89java.util.UUID2equals(Ljava/lang/Object;)*
+8
+9*"
+33\ \("
+\ \(
+""*ç
+
+34Y Y(b
+`
+Z Z(#*
+%3$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""b
+`
+Z Z()*
+%4$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""îë
+Z+ Z(=
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()îë
+ZG Z(Y
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()ˇ
+¸
+Y% [(	 
+%7mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*H
+
+__unknown_file (,
+*
+%4$mage.game.events.GameEvent$EventType*2
+
+__unknown_file (
+
+%5java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%6java.util.UUID˙˜
+Y [(
+
+%8boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+%7mage.game.events.GameEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+32
+33*›
+12
+õ  õ('W
+U
+
+õ2 õ(C
+%83mage.constants.Outcome"__id*"
+
+__unknown_file (
+""ß§
+
+õN õ(i
+%84java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+cardControllermage.cards.Card2getLogName()r
+p
+
+õE õ(i
+%85java.lang.String"__concat*
+
+õE õ(K
+Put *'
+
+õN õ(i
+
+%84java.lang.String¨
+©
+õE õ(©
+%86java.lang.String"__concat*'
+
+õE õ(i
+
+%85java.lang.String*N
+õl õ(©?=
+; back on top of your library? (otherwise it goes to bottom)õò
+õ  õ(∏
+%87boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+
+currentmage.players.Player*;
+
+__unknown_file (
+
+%83mage.constants.Outcome*5
+
+__unknown_file (
+
+%86java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+8
+10*¢
+13
+ö* ö(1îë
+
+ö* ö(9
+%80java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+currentmage.players.Player2getId()óî
+
+öA ö(S
+%81java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()—Œ
+
+ö* ö(T
+%82boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%80java.util.UUID*3
+
+__unknown_file (
+
+%81java.util.UUID2equals(Ljava/lang/Object;)*
+8
+10
+12*£
+36U U( ∞≠
+U+ U(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+U U(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+U U(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.PlayeràÖ
+V" V(>
+%2mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)h
+f
+V V(?
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*
+33
+34*ü
+14
+ô ô('èå
+
+ô ô(8
+%79mage.players.Player"Image.players.PlayerList#getCurrent(Lmage/game/Game;)Lmage/players/Player;*C
+
+__unknown_file ('
+%
+
+playerListmage.players.PlayerList*4
+
+__unknown_file (
+
+gamemage.game.Game2getCurrent(Lmage/game/Game;)n
+l
+
+ô ô(9
+currentmage.players.Player"__id*8
+
+__unknown_file (
+
+%79mage.players.Player*
+13
+8
+10*Ì
+15
+ï  ï($Ø¨
+
+ï  ï(4
+%75mage.players.PlayerList"7mage.game.Game#getPlayerList()Lmage/players/PlayerList;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPlayerList()Æ´
+
+ï  ï(;
+%76mage.players.PlayerList"7mage.players.PlayerList#copy()Lmage/players/PlayerList;*<
+
+__unknown_file ( 
+
+%75mage.players.PlayerList2copy()y
+w
+
+ï ï(<%
+
+playerListmage.players.PlayerList"__id*<
+
+__unknown_file ( 
+
+%76mage.players.PlayerList•¢
+
+ñ ñ(6
+%77java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()ÒÓ
+
+ñ ñ(7
+%78boolean"6mage.util.CircularList#setCurrent(Ljava/lang/Object;)Z*C
+
+__unknown_file ('
+%
+
+playerListmage.players.PlayerList*3
+
+__unknown_file (
+
+%77java.util.UUID2setCurrent(Ljava/lang/Object;)[
+Y
+
+ó ó(!
+
+nextPlayermage.players.Player"__id*"
+
+__unknown_file (
+""*
+14*ß
+16
+í í(¨©
+
+í í(1
+%73java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder2
+toString()ﬂ‹
+
+í í(2
+%74void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%73java.lang.String2!informPlayers(Ljava/lang/String;)*
+15*†
+17
+ê ê(áÑ
+
+ê ê(-
+%72java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*+
+
+__unknown_file (
+ no winner 2append(Ljava/lang/String;)*
+16*œ
+
+18
+ç ç(©¶
+
+ç ç(4
+%66java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getLogName()ëé
+
+ç ç(5
+%67java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*5
+
+__unknown_file (
+
+%66java.lang.String2append(Ljava/lang/String;)ÜÉ
+
+ç ç(N
+%68java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%67java.lang.StringBuilder*.
+
+__unknown_file (
+ won the clash2append(Ljava/lang/String;)£†
+
+é. é(@
+%69java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getName()}
+{
+
+é. é(T
+%70java.lang.String"__concat*'
+
+é. é(@
+
+%69java.lang.String*!
+
+éC é(T
+ won the clash!»≈
+
+é é(U
+%71void"Emage.game.Game#informPlayer(Lmage/players/Player;Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+%70java.lang.String25informPlayer(Lmage/players/Player;Ljava/lang/String;)*
+16*†
+1
+™ ™(f
+d
+
+´ ´(#,
+%104$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""f
+d
+
+´ ´(+,
+%105$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""òï
+
+´- ´(?
+%106java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()ñì
+
+¨ ¨( 
+%107java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getId()NL
+
+™ ™($"
+%108mage.game.events.GameEvent"mage.game.events.GameEventú
+ô
+
+™ ≠(	
+%109"Ñmage.game.events.GameEvent#<init>(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;IZ)V*@
+
+__unknown_file ($
+"
+%108mage.game.events.GameEvent*J
+
+__unknown_file (.
+,
+%105$mage.game.events.GameEvent$EventType*4
+
+__unknown_file (
+
+%106java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+%107java.util.UUID*
+
+__unknown_file (2 *"
+
+__unknown_file (
+""˜Ù
+
+™ ≠(
+
+%110void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*@
+
+__unknown_file ($
+"
+%108mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)f
+d
+
+Ø Ø(#,
+%111$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""f
+d
+
+Ø Ø(+,
+%112$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ñì
+
+Ø- Ø(=
+%113java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getId()òï
+
+∞ ∞("
+%114java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()NL
+
+Æ Æ($"
+%115mage.game.events.GameEvent"mage.game.events.GameEventú
+ô
+
+Æ ±(	
+%116"Ñmage.game.events.GameEvent#<init>(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;IZ)V*@
+
+__unknown_file ($
+"
+%115mage.game.events.GameEvent*J
+
+__unknown_file (.
+,
+%112$mage.game.events.GameEvent$EventType*4
+
+__unknown_file (
+
+%113java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+%114java.util.UUID*
+
+__unknown_file (2 *"
+
+__unknown_file (
+""˜Ù
+
+Æ ±(
+
+%117void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*@
+
+__unknown_file ($
+"
+%115mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;) «
+
+¥ ¥(&
+%118mage.abilities.effects.Effects"Cmage.abilities.Ability#getEffects()Lmage/abilities/effects/Effects;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getEffects()—Œ
+
+¥ ¥(?
+%119void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*D
+
+__unknown_file ((
+&
+%118mage.abilities.effects.Effects*-
+
+__unknown_file (
+clashOpponent*=
+
+__unknown_file (!
+
+opponentmage.players.Player2.setValue(Ljava/lang/String;Ljava/lang/Object;)"
+
+µ µ(+
+""*Û
+2
+ß ß(U
+S
+
+ßK ß(W
+%102mage.constants.Zone"__id*"
+
+__unknown_file (
+""ÖÇ
+
+ß ß(k
+%103boolean"Ämage.players.Player#moveCardToLibraryWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;ZZ)Z*=
+
+__unknown_file (!
+
+opponentmage.players.Player*=
+
+__unknown_file (!
+
+cardOpponentmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*9
+
+__unknown_file (
+
+%102mage.constants.Zone*"
+
+__unknown_file (
+""* 
+
+__unknown_file (22kmoveCardToLibraryWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;ZZ)*
+1*É
+startingBlockT T(3ã
+à
+S S(
+%120"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameX
+V
+T T("
+gamemage.game.Game"__annotation*$
+
+__unknown_file (
+
+%120ï
+í
+S S(
+%121"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityb
+`
+T, T(2 
+sourcemage.abilities.Ability"__annotation*$
+
+__unknown_file (
+
+%121*
+36*˙
+4
+§ §(U
+S
+
+§O §([
+%100mage.constants.Zone"__id*"
+
+__unknown_file (
+""âÜ
+
+§ §(q
+%101boolean"Ämage.players.Player#moveCardToLibraryWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;ZZ)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*?
+
+__unknown_file (#
+!
+cardControllermage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*9
+
+__unknown_file (
+
+%100mage.constants.Zone*"
+
+__unknown_file (
+""* 
+
+__unknown_file (22kmoveCardToLibraryWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;ZZ)*
+2
+1*¥
+6
+°( °(2óî
+
+°( °(:
+%97java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+nextPlayermage.players.Player2getId()•¢
+
+°B °(Z
+%98java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()—Œ
+
+°( °([
+%99boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%97java.util.UUID*3
+
+__unknown_file (
+
+%98java.util.UUID2equals(Ljava/lang/Object;)*
+2
+14
+4
+1*æ
+8
+† †(#´®
+
+† †(8
+%96mage.players.Player"Gmage.players.PlayerList#getNext(Lmage/game/Game;Z)Lmage/players/Player;*C
+
+__unknown_file ('
+%
+
+playerListmage.players.PlayerList*4
+
+__unknown_file (
+
+gamemage.game.Game*
+
+__unknown_file (2 2getNext(Lmage/game/Game;Z)q
+o
+
+† †(8!
+
+nextPlayermage.players.Player"__id*8
+
+__unknown_file (
+
+%96mage.players.Player*
+2
+4
+6
+1*÷
+9
+û û(%W
+U
+
+û0 û(A
+%91mage.constants.Outcome"__id*"
+
+__unknown_file (
+""•¢
+
+ûL û(e
+%92java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+cardOpponentmage.cards.Card2getLogName()r
+p
+
+ûC û(e
+%93java.lang.String"__concat*
+
+ûC û(I
+Put *'
+
+ûL û(e
+
+%92java.lang.String¨
+©
+ûC û(•
+%94java.lang.String"__concat*'
+
+ûC û(e
+
+%93java.lang.String*N
+ûh û(•?=
+; back on top of your library? (otherwise it goes to bottom)õò
+û û(¥
+%95boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+
+currentmage.players.Player*;
+
+__unknown_file (
+
+%91mage.constants.Outcome*5
+
+__unknown_file (
+
+%94java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+8*©
+20
+ä ä(´®
+
+ä ä(6
+%62java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()ëé
+
+ä ä(7
+%63java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*5
+
+__unknown_file (
+
+%62java.lang.String2append(Ljava/lang/String;)ÜÉ
+
+ä ä(P
+%64java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%63java.lang.StringBuilder*.
+
+__unknown_file (
+ won the clash2append(Ljava/lang/String;)≈¬
+
+ã ã(C
+%65void"Emage.game.Game#informPlayer(Lmage/players/Player;Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*2
+
+__unknown_file (
+You won the clash!25informPlayer(Lmage/players/Player;Ljava/lang/String;)*
+16*¨
+22
+á á(ˇ¸
+
+á á(
+%60java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*#
+
+__unknown_file (
+ - 2append(Ljava/lang/String;)ÖÇ
+
+à à( 
+%61boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+15
+17
+18
+20*ù
+23
+Ö Ö(ÑÅ
+
+Ö Ö(&
+%59java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*@
+
+__unknown_file ($
+"
+messagejava.lang.StringBuilder*(
+
+__unknown_file (
+
+ no card2append(Ljava/lang/String;)*
+22:"
+T T(#
+gamemage.game.Game:,
+T$ T(2 
+sourcemage.abilities.AbilityB-+
+)mage.abilities.effects.common.ClashEffectHP

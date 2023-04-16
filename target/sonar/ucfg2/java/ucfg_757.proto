@@ -1,0 +1,152 @@
+
+šmage.player.ai.ComputerPlayer#pickWorstCard(Ljava/util/List;Ljava/util/List;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;€
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaó ó("16*ı
+2
+ù ù(Q
+O
+
+ù ù(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""
+Œ
+
+ù ù(
+cardmage.cards.Card"
+__arrayGet*5
+
+__unknown_file (
+
+cardsjava.util.List*"
+
+__unknown_file (
+""*
+1
+12*²
+14
+÷ ÷(V
+T
+
+÷ ÷(
+	worstCardmage.cards.Card"__id*"
+
+__unknown_file (
+""C
+A
+
+ø ø((	
+%1int"__id*"
+
+__unknown_file (
+""*
+2*
+3
+‰ ‰( i
+g
+
+Š Š( 
+	worstCardmage.cards.Card"__id*5
+
+__unknown_file (
+
+cardmage.cards.Card*
+2*&
+15
+õ õ("
+
+õ õ(
+""*–
+16
+ô ô(zx
+
+ô ô(
+%0boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+14
+15*À
+6
+  (&›
+
+1 (8
+%3java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer2getId()Œ‰
+
+: (F
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()öó
+
+  (U
+%5boolean"gmage.target.Target#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+targetmage.target.Target*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ScanTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+3*®
+12
+ú ú( 
+
+
+ú ú(=	
+%2int"Emage.game.draft.RateCard#rateCard(Lmage/cards/Card;Ljava/util/List;)I*8
+
+__unknown_file ("
+mage.game.draft.RateCard*5
+
+__unknown_file (
+
+cardmage.cards.Card*<
+
+__unknown_file ( 
+
+chosenColorsjava.util.List*	
+2
+3
+6*=
+1
+ (",
+
+ (
+
+	worstCardmage.cards.Card:%
+
+ó ó(/
+cardsjava.util.List:,
+
+ó0 ó(U
+chosenColorsjava.util.List:*
+
+óV ó(d
+targetmage.target.Target:.
+
+óe ó(t 
+sourcemage.abilities.Ability:$
+
+óu ó(~
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerH

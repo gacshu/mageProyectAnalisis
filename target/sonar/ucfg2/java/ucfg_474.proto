@@ -1,0 +1,336 @@
+
+„mage.player.ai.util.CombatUtil#blockWithGoodTrade2(Lmage/game/Game;Ljava/util/List;Ljava/util/List;)Lmage/player/ai/util/CombatInfo;z
+nD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/util/CombatUtil.java¨ ¨(0"11*¤
+2
+² ²(c
+a
+
+² ²()
+attackermage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""¥
+¢
+
+² ²()
+attackermage.game.permanent.Permanent"
+__arrayGet*9
+
+__unknown_file (
+
+	attackersjava.util.List*"
+
+__unknown_file (
+""*
+6
+1*—
+4
+» »(~|
+
+» »("
+%21boolean"java.util.List#isEmpty()Z*8
+
+__unknown_file (
+
+blockersjava.util.List2	isEmpty()*
+2
+1*Ğ
+5
+·$ ·(4™
+–
+
+·$ ·(F$
+%18mage.game.permanent.Permanent"`mage.player.ai.util.CombatUtil#getWorstCreature(Ljava/util/List;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*@
+
+__unknown_file ($
+"
+survivedBlockersjava.util.Listƒ
+€
+
+· ·(G(
+blockermage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%18mage.game.permanent.Permanent«¨
+
+¸ ¸(5
+%19void"gmage.player.ai.util.CombatInfo#addPair(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;)V*J
+
+__unknown_file (.
+,
+
+combatInfomage.player.ai.util.CombatInfo*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent2GaddPair(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;)éæ
+
+¹ ¹((
+%20boolean"*java.util.List#remove(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+blockersjava.util.List*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent2remove(Ljava/lang/Object;)*
+4*ù
+
+6
+´/ ´(B¥
+¢
+
+´/ ´(\
+%15java.util.List"ƒmage.player.ai.util.CombatUtil#getPossibleBlockers(Lmage/game/Game;Lmage/game/permanent/Permanent;Ljava/util/List;)Ljava/util/List;*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*8
+
+__unknown_file (
+
+blockersjava.util.Listm
+k
+
+´ ´(]"
+possibleBlockersjava.util.List"__id*3
+
+__unknown_file (
+
+%15java.util.ListÎ
+Ë
+µ/ µ(„
+%16java.util.List"«mage.player.ai.util.CombatUtil#getBlockersThatWillSurvive2(Lmage/game/Game;Ljava/util/UUID;Ljava/util/UUID;Lmage/game/permanent/Permanent;Ljava/util/List;)Ljava/util/List;*>
+
+__unknown_file ("" 
+mage.player.ai.util.CombatUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+attackerIdjava.util.UUID*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*@
+
+__unknown_file ($
+"
+possibleBlockersjava.util.Listn
+l
+µ µ(…"
+survivedBlockersjava.util.List"__id*3
+
+__unknown_file (
+
+%16java.util.List‡„
+
+¶ ¶(+
+%17boolean"java.util.List#isEmpty()Z*@
+
+__unknown_file ($
+"
+survivedBlockersjava.util.List2	isEmpty()*
+4
+5*ş
+8
+±  ±(0US
+
+±$ ±(.%
+%13mage.player.ai.util.CombatInfo"mage.player.ai.util.CombatInfo…
+‚
+
+±  ±(0
+%14"(mage.player.ai.util.CombatInfo#<init>()V*C
+
+__unknown_file ('
+%
+%13mage.player.ai.util.CombatInfoˆ
+…
+
+± ±(1,
+
+combatInfomage.player.ai.util.CombatInfo"__id*C
+
+__unknown_file ('
+%
+%13mage.player.ai.util.CombatInfo*
+2*ò
+9
+­ ­(W
+U
+
+­ ­(
+%6org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""—
+”
+
+­ ­(H
+%7java.lang.String"__concat*6
+
+­ ­(;(&
+$Couldn't find attacker or defender: *,
+
+­> ­(H
+
+
+attackerIdjava.util.UUIDm
+k
+
+­ ­(N
+%8java.lang.String"__concat*&
+
+­ ­(H
+
+%7java.lang.String*
+
+­K ­(N
+ ‡
+„
+
+­ ­([
+%9java.lang.String"__concat*&
+
+­ ­(N
+
+%8java.lang.String*,
+
+­Q ­([
+
+
+defenderIdjava.util.UUIDŞÛ
+
+­ ­(\
+%10void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%6org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%9java.lang.String2warn(Ljava/lang/Object;)US
+
+® ®(!%
+%11mage.player.ai.util.CombatInfo"mage.player.ai.util.CombatInfo…
+‚
+
+® ®(#
+%12"(mage.player.ai.util.CombatInfo#<init>()V*C
+
+__unknown_file ('
+%
+%11mage.player.ai.util.CombatInfo"5
+
+® ®($'
+%
+%11mage.player.ai.util.CombatInfo*Ğ	
+11
+ª ª(¦£
+
+ª ª(*
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()º·
+
+ª ª(A
+%1java.util.UUID">mage.game.combat.Combat#getAttackingPlayerId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getAttackingPlayerId()f
+d
+
+ª ª(B
+
+attackerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%1java.util.UUID¦£
+
+« «(*
+%2mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¨¥
+
+« «(9
+%3java.util.Set"5mage.game.combat.Combat#getDefenders()Ljava/util/Set;*;
+
+__unknown_file (
+
+%2mage.game.combat.Combat2getDefenders()–“
+
+« «(D
+%4java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*1
+
+__unknown_file (
+
+%3java.util.Set2
+iterator()’
+
+« «(K
+%5java.util.UUID"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+%4java.util.Iterator2next()f
+d
+
+« «(L
+
+defenderIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID*
+8
+9*M
+1
+À À("<
+
+À À(.
+,
+
+combatInfomage.player.ai.util.CombatInfo:$
+
+¨1 ¨(;
+gamemage.game.Game:)
+
+¨< ¨(V
+	attackersjava.util.List:(
+
+¨W ¨(o
+blockersjava.util.ListB"" 
+mage.player.ai.util.CombatUtilH

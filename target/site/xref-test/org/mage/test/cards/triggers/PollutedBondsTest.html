@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>PollutedBondsTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/cards/triggers/PollutedBondsTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.triggers;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="PollutedBondsTest" href="../../../../../org/mage/test/cards/triggers/PollutedBondsTest.html#PollutedBondsTest">PollutedBondsTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>      <strong class="jxr_keyword">final</strong> String pollutedBonds = <span class="jxr_string">"Polluted Bonds"</span>;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      @Test
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> PollutedBondsSimple(){
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>          addCard(Zone.BATTLEFIELD, playerA, pollutedBonds);
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          addCard(Zone.HAND, playerB, <span class="jxr_string">"Forest"</span>);
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          playLand(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Forest"</span>);
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          setStopAt(2, PhaseStep.POSTCOMBAT_MAIN);
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          execute();
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          assertLife(playerA, 22);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          assertLife(playerB, 18);
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      }
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      @Test
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> PollutedBondsOwnLand(){
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          addCard(Zone.BATTLEFIELD, playerA, pollutedBonds);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Forest"</span>);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          playLand(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Forest"</span>);
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          setStopAt(1, PhaseStep.POSTCOMBAT_MAIN);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          execute();
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          assertLife(playerA, 20);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          assertLife(playerB, 20);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      }
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

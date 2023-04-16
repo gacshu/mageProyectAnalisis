@@ -1,0 +1,139 @@
+
+Amage.cards.ExpansionSet#validateUncommonColors(Ljava/util/List;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/ExpansionSet.javañ ñ(,"5*%
+2
+ú7 ú(;"
+
+ú0 ú(<
+""*Í
+3
+ú ú(P
+N
+
+ú$ ú(-
+%9mage.ObjectColor"__id*"
+
+__unknown_file (
+""áŞ
+
+ú ú(.
+%10boolean",java.util.List#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+uncommonColorsjava.util.List*4
+
+__unknown_file (
+
+%9mage.ObjectColor2contains(Ljava/lang/Object;)*
+2
+1*%
+4
+ø. ø(2"
+
+ø' ø(3
+""*Ë
+5
+ò+ ò(2©¦
+
+ò+ ò(;
+%0java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*7
+
+__unknown_file (
+
+boosterjava.util.List2stream()’
+
+
+ó ó(C"
+%1java.util.function.Predicate"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_144$mage.cards.ExpansionSet®«
+
+ò+ ó(D
+%4java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%0java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%1java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ˆ…
+
+ò+ ô(7
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)°
+­
+
+õ õ(, 
+%6java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+
+ò+ õ(-
+%7java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%6java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)j
+h
+
+ò õ(. 
+uncommonColorsjava.util.List"__id*2
+
+__unknown_file (
+
+%7java.util.Listyw
+
+ø ø(!	
+%8int"java.util.List#size()I*>
+
+__unknown_file ("
+ 
+uncommonColorsjava.util.List2size()*
+3
+4*
+1
+ü ü(,;9
+
+ü ü(
+%11java.util.HashSet"java.util.HashSetÁ
+¾
+
+ü ü(-
+%12"1java.util.HashSet#<init>(Ljava/util/Collection;)V*6
+
+__unknown_file (
+
+%11java.util.HashSet*>
+
+__unknown_file ("
+ 
+uncommonColorsjava.util.Listus
+
+ü ü(4
+
+%13int"java.util.HashSet#size()I*6
+
+__unknown_file (
+
+%11java.util.HashSet2size()"
+
+ü ü(:
+"":'
+
+ñ- ñ(?
+boosterjava.util.ListB
+mage.cards.ExpansionSetP

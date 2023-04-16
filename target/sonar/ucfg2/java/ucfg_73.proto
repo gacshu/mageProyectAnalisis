@@ -1,0 +1,131 @@
+
+Mmage.deck.FreeformCommander#checkCommander(Lmage/cards/Card;Ljava/util/Set;)Zy
+oD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/FreeformCommander.java% %($"startingBlock*é	
+2' '(e
+c
+' '(3-
+%3'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ôñ
+'5 '(H
+%4java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()õò
+
+'§ '(∑
+%5java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()¿
+Ω
+	'J '(∑
+%6java.lang.String"__concat*f
+	'J '(°YW
+UFor Freeform Commander, the commander must be a creature or be legendary. Yours was: *&
+
+'§ '(∑
+
+%5java.lang.StringÜÉ
+	' '(æ
+
+%7void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*;
+
+__unknown_file (
+mage.deck.FreeformCommander*K
+
+__unknown_file (/
+-
+%3'mage.cards.decks.DeckValidatorErrorType*4
+
+__unknown_file (
+
+%4java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)"
+( ((
+""*ü
+3&I &(RáÑ
+&I &(`
+%2boolean"mage.MageObject#isLegendary()Z*:
+
+__unknown_file (
+
+	commandermage.cards.Card2isLegendary()*
+2
+1*¸
+startingBlock%$ %(Jè
+å
+$ $(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+	commandermage.cards.Card\
+Z
+%* %(3
+	commandermage.cards.Card"__annotation*"
+
+__unknown_file (
+
+%8é
+ã
+$ $(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*9
+
+__unknown_file (
+
+
+commandersjava.util.Set[
+Y
+%? %(I
+
+commandersjava.util.Set"__annotation*"
+
+__unknown_file (
+
+%9*
+4*É
+4& &(U
+S
+&2 &(C
+%0mage.constants.CardType"__id*"
+
+__unknown_file (
+""îë
+& &(D
+%1boolean"Fmage.cards.Card#hasCardTypeForDeckbuilding(Lmage/constants/CardType;)Z*:
+
+__unknown_file (
+
+	commandermage.cards.Card*;
+
+__unknown_file (
+
+%0mage.constants.CardType25hasCardTypeForDeckbuilding(Lmage/constants/CardType;)*
+3
+1*!
+1* *("
+* *(
+"":(
+%% %(4
+	commandermage.cards.Card:'
+%5 %(I
+
+commandersjava.util.SetB
+mage.deck.FreeformCommanderP

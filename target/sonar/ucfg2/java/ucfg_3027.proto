@@ -1,0 +1,185 @@
+
+Œmage.target.common.TargetCardWithDifferentNameInLibrary#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zz
+pD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetCardWithDifferentNameInLibrary.java ("startingBlock*Ì	
+2$ $(¿¼
+$ $($
+%2java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*W
+
+__unknown_file (;9
+7mage.target.common.TargetCardWithDifferentNameInLibrary2getTargets()¢Ÿ
+$ %(
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%2java.util.List2stream()†ƒ
+$ &(#
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¯
+¬
+' '(?"
+%5java.util.function.Predicate"__declareFunction*i
+
+__unknown_file (MK
+I__sonar_lambda_46$mage.target.common.TargetCardWithDifferentNameInLibraryˆ
+…
+
+__unknown_file (,
+"
+%5java.util.function.Predicate"
+card"__id*5
+
+__unknown_file (
+
+cardmage.cards.CardŠ‡
+$ '(@
+%7boolean"Bjava.util.stream.Stream#noneMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%5java.util.function.Predicate2)noneMatch(Ljava/util/function/Predicate;)*
+1*Þ
+3" "(äá
+" "($
+%1mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+idjava.util.UUID2getCard(Ljava/util/UUID;)`
+^
+" "(%
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%1mage.cards.Card*
+2
+1*Ê
+startingBlock (O
+Š
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUIDZ
+X
+" (*
+playerIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%8‡
+„
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDT
+R
+1 (3
+idjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+= (C 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+J (N
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+5*!
+4   ("
+   (
+""*©
+5 (‘
+Ž
+ (8
+%0boolean"kmage.target.TargetCard#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+3
+4*!
+1# '(A"
+# '(A
+"":&
+ (+
+playerIdjava.util.UUID: 
+, (4
+idjava.util.UUID:,
+5 (D 
+sourcemage.abilities.Ability:"
+E (N
+gamemage.game.GameB;9
+7mage.target.common.TargetCardWithDifferentNameInLibraryHP

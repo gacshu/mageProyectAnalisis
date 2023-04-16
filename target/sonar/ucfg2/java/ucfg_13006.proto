@@ -1,0 +1,194 @@
+
+smage.abilities.condition.common.OpponentControlsPermanentCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z…
+{D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/OpponentControlsPermanentCondition.java3 3("startingBlock*ü
+25 5(T
+R
+5 5(
+
+opponentIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Ž
+‹
+5 5(
+
+opponentIdjava.util.UUID"
+__arrayGet*1
+
+__unknown_file (
+
+%1java.util.Set*"
+
+__unknown_file (
+""*
+4
+1*þ
+startingBlock3 3(3Š
+‡
+2 2(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+3 3("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+2 2(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+3, 3(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+5*Ò
+46* 6(0¦
+£
+6* 6(0!
+%2mage.filter.FilterPermanent"__id*n
+
+__unknown_file (R*PD
+Bmage.abilities.condition.common.OpponentControlsPermanentCondition"
+filterº·
+6* 6(7!
+%3mage.filter.FilterPermanent"?mage.filter.FilterPermanent#copy()Lmage/filter/FilterPermanent;*?
+
+__unknown_file (#
+!
+%2mage.filter.FilterPermanent2copy()
+}
+6 6(8*
+localFiltermage.filter.FilterPermanent"__id*?
+
+__unknown_file (#
+!
+%3mage.filter.FilterPermanent€~
+7  7(5;
+%45mage.filter.predicate.permanent.ControllerIdPredicate"5mage.filter.predicate.permanent.ControllerIdPredicateû
+ø
+7 7(A
+%5"Omage.filter.predicate.permanent.ControllerIdPredicate#<init>(Ljava/util/UUID;)V*Y
+
+__unknown_file (=
+;
+%45mage.filter.predicate.permanent.ControllerIdPredicate*:
+
+__unknown_file (
+
+
+opponentIdjava.util.UUIDÇÄ
+7 7(B
+%6mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*H
+
+__unknown_file (,
+*
+localFiltermage.filter.FilterPermanent*Y
+
+__unknown_file (=
+;
+%45mage.filter.predicate.permanent.ControllerIdPredicate2&add(Lmage/filter/predicate/Predicate;)¾»
+8' 8(<%
+%7mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()°­
+8P 8(h
+%8java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()®«
+8' 8(w	
+%9int"}mage.game.permanent.Battlefield#count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*C
+
+__unknown_file ('
+%
+%7mage.game.permanent.Battlefield*H
+
+__unknown_file (,
+*
+localFiltermage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%8java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)§
+¤
+8y 8(}$
+%10mage.constants.ComparisonType"__id*l
+
+__unknown_file (P*ND
+Bmage.abilities.condition.common.OpponentControlsPermanentCondition"
+type¹
+¶
+	8 8(Š
+%11boolean"Image.constants.ComparisonType#compare(ILmage/constants/ComparisonType;I)Z*=
+
+__unknown_file (!"
+mage.constants.ComparisonType*'
+
+__unknown_file (
+	
+%9int*B
+
+__unknown_file (&
+$
+%10mage.constants.ComparisonType*"
+
+__unknown_file (
+""*
+2
+1*²
+55 5(#°­
+51 5(I
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()êç
+5 5(J
+%1java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getOpponents(Ljava/util/UUID;)*
+2*!
+1? ?("
+? ?( 
+"":"
+3 3(#
+gamemage.game.Game:,
+3$ 3(2 
+sourcemage.abilities.AbilityBFD
+Bmage.abilities.condition.common.OpponentControlsPermanentConditionHP

@@ -1,0 +1,24 @@
+mage.game.match.MatchImpl#toProto()Lmage/game/result/ResultProtos$MatchProto;
+mage.game.result.ResultProtos$MatchProto$Builder#setDeckType(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;
+java.util.Date#<init>()V
+mage.game.result.ResultProtos$MatchProto$Builder#setDraws(I)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#setGames(I)Lmage/game/result/ResultProtos$MatchProto$Builder;
+java.util.Date#instance-init#
+mage.game.result.ResultProtos$MatchProto$Builder#addPlayersBuilder()Lmage/game/result/ResultProtos$MatchPlayerProto$Builder;
+mage.game.result.ResultProtos$MatchPlayerProto$Builder#setName(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchPlayerProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#setName(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchPlayerProto$Builder#setQuit(Lmage/game/result/ResultProtos$MatchQuitStatus;)Lmage/game/result/ResultProtos$MatchPlayerProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#setEndTimeMs(J)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#setGameType(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchProto#newBuilder()Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchPlayerProto$Builder#setHuman(Z)Lmage/game/result/ResultProtos$MatchPlayerProto$Builder;
+mage.game.result.ResultProtos$MatchProto$Builder#build()Lmage/game/result/ResultProtos$MatchProto;
+mage.game.result.ResultProtos$MatchProto$Builder#setMatchOptions(Lmage/game/result/ResultProtos$MatchOptionsProto;)Lmage/game/result/ResultProtos$MatchProto$Builder;
+mage.game.result.ResultProtos$MatchPlayerProto$Builder#setWins(I)Lmage/game/result/ResultProtos$MatchPlayerProto$Builder;
+==
+getOptions mage.game.match.MatchImpl#getOptions()Lmage/game/match/MatchOptions;
+getDraws mage.game.match.MatchImpl#getDraws()I
+getPlayers mage.game.match.MatchImpl#getPlayers()Ljava/util/List;
+getNumGames mage.game.match.MatchImpl#getNumGames()I
+getName mage.game.match.MatchImpl#getName()Ljava/lang/String;
+getEndTime mage.game.match.MatchImpl#getEndTime()Ljava/util/Date;

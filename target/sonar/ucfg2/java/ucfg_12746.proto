@@ -1,0 +1,233 @@
+
+mage.abilities.keyword.ReboundCastFromHandReplacementEffect#replaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Zh
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ReboundAbility.javae e("startingBlock*!
+2p p("
+p p(
+""*“
+3n n(œ™
+n' n(>
+%6java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+sourceCardmage.cards.Card2getOwnerId()ðí
+n n(?
+%7mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+n n(@
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Player*
+2
+1*þ
+startingBlocke e(K—
+”
+d d(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+e* e(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+d d(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+e9 e(? 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+d d(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+eF e(J
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+8*!
+4l l("
+l l(
+""*
+5j j(¨¥
+j' j(;
+%4java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+j j(<
+%5mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getCard(Ljava/util/UUID;)f
+d
+j j(=
+
+sourceCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%5mage.cards.Card*
+3
+4*!
+6h h("
+h h(
+""*£
+7g# g(.‹ˆ
+g# g(7
+%3boolean"mage.game.stack.Spell#isCopy()Z*B
+
+__unknown_file (&
+$
+sourceSpellmage.game.stack.Spell2isCopy()*
+5
+6*ë
+8f f( ¨¥
+f f(+ 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¨¥
+f5 f(I
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ˆ…
+f f(J
+%2mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%1java.util.UUID2getSpell(Ljava/util/UUID;)s
+q
+f f(K$
+sourceSpellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%2mage.game.stack.Spell*
+5
+7*å
+1s s(ñî
+s s(P
+%8boolean"ƒmage.players.Player#moveCardsToExile(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+
+sourceCardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2*"
+
+__unknown_file (
+""*'
+
+__unknown_file (	
+Rebound2nmoveCardsToExile(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)•’
+t, t(TE
+%9?mage.abilities.keyword.ReboundEffectCastFromExileDelayedTrigger"?mage.abilities.keyword.ReboundEffectCastFromExileDelayedTriggerØ
+Õ
+t( t(f
+%10"jmage.abilities.keyword.ReboundEffectCastFromExileDelayedTrigger#<init>(Lmage/cards/Card;Lmage/game/Game;)V*c
+
+__unknown_file (G
+E
+%9?mage.abilities.keyword.ReboundEffectCastFromExileDelayedTrigger*;
+
+__unknown_file (
+
+
+sourceCardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.GameÚ×
+t t(o
+%11java.util.UUID"{mage.game.Game#addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*c
+
+__unknown_file (G
+E
+%9?mage.abilities.keyword.ReboundEffectCastFromExileDelayedTrigger*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2\addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)"
+u u(
+"":/
+e  e(0#
+eventmage.game.events.GameEvent:,
+e1 e(@ 
+sourcemage.abilities.Ability:"
+eA e(J
+gamemage.game.GameB?=
+;mage.abilities.keyword.ReboundCastFromHandReplacementEffectHP

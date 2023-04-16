@@ -1,0 +1,155 @@
+
+¥mage.abilities.dynamicvalue.common.GreatestToughnessAmongControlledCreaturesValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I•
+ŠD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/GreatestToughnessAmongControlledCreaturesValue.java ("startingBlock*‰
+2 (Z
+X
+ ("
+pmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""•
+’
+ ("
+pmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%3java.util.List*"
+
+__unknown_file (
+""*
+3
+1*Ø
+3 (¡ž
+ (.
+%4mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2getToughness()om
+ (9	
+%5int"mage.MageInt#getValue()I*0
+
+__unknown_file (
+
+%4mage.MageInt2
+getValue()®
+«
+ (B	
+%6int"java.lang.Math#max(II)I*.
+
+__unknown_file ("
+java.lang.Math*'
+
+__unknown_file (
+	
+%5int*"
+
+__unknown_file (
+""*
+2*Ž
+startingBlock (I‰
+†
+ (
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7š
+—
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityg
+e
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8š
+—
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effectg
+e
+B (H'
+effectmage.abilities.effects.Effect"__annotation*"
+
+__unknown_file (
+
+%9*
+4*‰
+4 (¾»
+ (0%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()r
+p
+ (8:
+%14mage.filter.common.FilterControlledCreaturePermanent"__id*"
+
+__unknown_file (
+""·´
+: (Y
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()…‚
+ (	
+%3java.util.List"‚mage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*X
+
+__unknown_file (<
+:
+%14mage.filter.common.FilterControlledCreaturePermanent*2
+
+__unknown_file (
+
+%2java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)*
+2*!
+1 ("
+ (
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectBUS
+Qmage.abilities.dynamicvalue.common.GreatestToughnessAmongControlledCreaturesValueHP

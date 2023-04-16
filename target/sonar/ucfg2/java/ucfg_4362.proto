@@ -1,0 +1,263 @@
+
+wmage.abilities.hint.common.CardTypesInGraveyardHint#getText(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;v
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/hint/common/CardTypesInGraveyardHint.java   ("startingBlock*v
+2-N -(Pb
+`
+-N -(P
+%16java.lang.String"__id*5
+
+__unknown_file (
+
+%18java.lang.String*
+1*Ú
+3-& -(*Š
+‡
+-- -(E
+%19java.lang.String"Ujava.lang.String#join(Ljava/lang/CharSequence;Ljava/lang/Iterable;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*"
+
+__unknown_file (
+, *5
+
+__unknown_file (
+
+typesjava.util.Listj
+h
+-& -(E
+%20java.lang.String"__concat*
+-& -(*
+ (*%
+-- -(E
+
+%19java.lang.Stringi
+g
+-& -(K
+%17java.lang.String"__concat*%
+-& -(E
+
+%20java.lang.String*
+-H -(K
+)b
+`
+-& -(K
+%16java.lang.String"__id*5
+
+__unknown_file (
+
+%17java.lang.String*
+1*€
+startingBlock   (5Š
+‡
+ (
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   (#
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22•
+’
+ (
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+ -  (4!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%23*
+6*ë
+4% %(#ª
+§
+& &(3!
+%1java.util.function.Function"__declareFunction*e
+
+__unknown_file (IG
+E__sonar_lambda_85$mage.abilities.hint.common.CardTypesInGraveyardHint†
+ƒ
+
+__unknown_file (+
+!
+%1java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game§¤
+% &(4
+%3java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*?
+
+__unknown_file (#
+!
+streamjava.util.stream.Stream*?
+
+__unknown_file (#
+!
+%1java.util.function.Function2"map(Ljava/util/function/Function;)Ž‹
+% '(,
+%4java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)²¯
+% ((
+%5java.util.stream.Stream";java.util.stream.Stream#distinct()Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream2
+distinct()†ƒ
+% )((
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)®«
+% *(
+%7java.util.stream.Stream"9java.util.stream.Stream#sorted()Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream2sorted()®
+«
++ +(, 
+%8java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors˜•
+% +(-
+%9java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%8java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)_
+]
+% +(.
+typesjava.util.List"__id*2
+
+__unknown_file (
+
+%9java.util.ListŽ
+‹
+," ,(.
+%10java.lang.String"__id*`
+
+__unknown_file (D*B5
+3mage.abilities.hint.common.CardTypesInGraveyardHint"	
+messagev
+t
+, ,(.
+%11java.lang.String"__concat*
+, ,(
+Card types in *%
+," ,(.
+
+%10java.lang.Stringj
+h
+, ,(5
+%12java.lang.String"__concat*%
+, ,(.
+
+%11java.lang.String*
+,1 ,(5
+: om
+,8 ,(D
+
+%13int"java.util.List#size()I*5
+
+__unknown_file (
+
+typesjava.util.List2size()p
+n
+, ,(D
+%14java.lang.String"__concat*%
+, ,(5
+
+%12java.lang.String*
+,8 ,(D
+
+
+%13intom
+- -(
+
+%15int"java.util.List#size()I*5
+
+__unknown_file (
+
+typesjava.util.List2size()*
+2
+3*!
+5# #("
+# #(
+""*‡
+6! !('û
+ø
+! !(6
+%0java.util.stream.Stream"€mage.abilities.hint.common.CardTypesInGraveyardHint#getStream(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/stream/Stream;*S
+
+__unknown_file (75
+3mage.abilities.hint.common.CardTypesInGraveyardHint*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityr
+p
+! !(7!
+streamjava.util.stream.Stream"__id*;
+
+__unknown_file (
+
+%0java.util.stream.Stream*
+4
+5*³
+1, -(Q}
+{
+, -(Q
+%21java.lang.String"__concat*%
+, ,(D
+
+%14java.lang.String*%
+- -(Q
+
+%16java.lang.String"%
+, -(R
+
+%21java.lang.String:"
+   ($
+gamemage.game.Game:-
+ %  (4!
+abilitymage.abilities.AbilityB75
+3mage.abilities.hint.common.CardTypesInGraveyardHintH

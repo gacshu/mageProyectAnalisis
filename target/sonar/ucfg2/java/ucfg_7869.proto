@@ -1,0 +1,257 @@
+
+–mage.abilities.effects.common.asthought.CanPlayCardControllerEffect#applies(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Z†
+|D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/asthought/CanPlayCardControllerEffect.java< <("startingBlock*ç
+2HU H(]
+š
+HU H(]
+%13java.util.UUID"__id*q
+
+__unknown_file (U*SE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+
+playerIdàÝ
+HU H(z
+%12boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%13java.util.UUID*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2equals(Ljava/lang/Object;)P
+N
+HU H(z
+%10boolean"__id*,
+
+__unknown_file (
+
+%12boolean*
+1*æ
+3H' H(-ÿü
+H' H(R
+%11boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2 isControlledBy(Ljava/util/UUID;)P
+N
+H' H(R
+%10boolean"__id*,
+
+__unknown_file (
+
+%11boolean*
+1*ó
+startingBlock< <(_Ž
+‹
+; ;(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID[
+Y
+<  <((
+sourceIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%14”
+‘
+; ;(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+<2 <(8 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15š
+—
+; ;(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUIDg
+e
+<? <(S&
+affectedControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%16Š
+‡
+; ;(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+<Z <(^
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%17*
+10*´
+4H H(œ
+™
+H H(
+%9java.util.UUID"__id*q
+
+__unknown_file (U*SE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+
+playerId*
+2
+3*†
+5F F(&›
+˜
+F F(D
+%6java.util.UUID"Rmage.util.CardUtil#getMainCardId(Lmage/game/Game;Ljava/util/UUID;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+sourceIdjava.util.UUIDh
+f
+F F(E 
+objectIdToCastjava.util.UUID"__id*2
+
+__unknown_file (
+
+%6java.util.UUID¡
+ž
+G G(
+%7mage.MageObjectReference"__id*l
+
+__unknown_file (P*NE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+morÂ¿
+G G(1
+%8boolean"Dmage.MageObjectReference#refersTo(Ljava/util/UUID;Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+
+%7mage.MageObjectReference*>
+
+__unknown_file ("
+ 
+objectIdToCastjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2*refersTo(Ljava/util/UUID;Lmage/game/Game;)*
+4
+1*!
+6C C("
+C C(
+""*¬
+7B" B(+±
+®
+B" B(+(
+%4"mage.abilities.condition.Condition"__id*r
+
+__unknown_file (V*TE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+	conditionàÝ
+B" B(?
+%5boolean"Smage.abilities.condition.Condition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*F
+
+__unknown_file (*
+(
+%4"mage.abilities.condition.Condition*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)*
+5
+6*É
+8B B(±
+®
+B B((
+%3"mage.abilities.condition.Condition"__id*r
+
+__unknown_file (V*TE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+	condition*
+5
+7*å
+9> >(Á¾
+> >(
+
+%2void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*c
+
+__unknown_file (GE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect2	discard()"
+? ?(
+""*µ
+10= =(¡
+ž
+= =(
+%0mage.MageObjectReference"__id*l
+
+__unknown_file (P*NE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffect"
+morøõ
+= =(
+%1mage.cards.Card"Cmage.MageObjectReference#getCard(Lmage/game/Game;)Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+%0mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getCard(Lmage/game/Game;)*
+8
+9*!
+1G H(|"
+G H(|
+"":&
+< <()
+sourceIdjava.util.UUID:,
+<* <(9 
+sourcemage.abilities.Ability:2
+<: <(T&
+affectedControllerIdjava.util.UUID:"
+<U <(^
+gamemage.game.GameBGE
+Cmage.abilities.effects.common.asthought.CanPlayCardControllerEffectHP

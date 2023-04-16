@@ -1,0 +1,202 @@
+
+mage.abilities.effects.common.combat.CantAttackYouEffect#canAttack(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Z)Z{
+qD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/CantAttackYouEffect.java" "("startingBlock*î
+2) )(’
+) )(1#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID2getPermanent(Ljava/util/UUID;)³°
+) )(C
+%6java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent2getControllerId()°­
+)K )(c
+%7java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÌÉ
+) )(d
+%8boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%6java.util.UUID*2
+
+__unknown_file (
+
+%7java.util.UUID2equals(Ljava/lang/Object;)"
+) )(e
+""*ª
+3( ((’
+( (()#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID2getPermanent(Ljava/util/UUID;)*
+2
+1*ÿ
+startingBlock" "(y
+š
+! !(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanentj
+h
+"' "(/)
+attackermage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%11
+
+! !(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID]
+[
+"6 "(@
+
+defenderIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+! !(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+"J "(P 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+! !(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+"W "([
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+4
+5*!
+4% %("
+% %(
+""*Õ
+5$ $(š—
+$ $("
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¹¶
+$5 $(O
+%1java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent2getControllerId()æã
+$ $(V
+%2mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%0mage.game.GameState*2
+
+__unknown_file (
+
+%1java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)|z
+$ $(]	
+%3int"mage.util.CircularList#size()I*;
+
+__unknown_file (
+
+%2mage.players.PlayerList2size()*
+3
+4*¬
+1, ,(°­
+," ,(:
+%9java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÕÒ
+, ,(;
+%10boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+
+defenderIdjava.util.UUID*2
+
+__unknown_file (
+
+%9java.util.UUID2equals(Ljava/lang/Object;)"
+, ,(<
+"":5
+" "(0)
+attackermage.game.permanent.Permanent:(
+"1 "(A
+
+defenderIdjava.util.UUID:,
+"B "(Q 
+sourcemage.abilities.Ability:"
+"R "(\
+gamemage.game.Game: 
+
+__unknown_file (
+""B<:
+8mage.abilities.effects.common.combat.CantAttackYouEffectHP

@@ -1,0 +1,944 @@
+
+_mage.server.Session#connectUserHandling(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;_
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.java× ×(%"28*“
+24
+á' á(5òï
+
+á' á(\
+%6boolean"Tmage.server.AuthorizedUser#doCredentialsMatch(Ljava/lang/String;Ljava/lang/String;)Z*J
+
+__unknown_file (.
+,
+authorizedUsermage.server.AuthorizedUser*:
+
+__unknown_file (
+
+userNamejava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String28doCredentialsMatch(Ljava/lang/String;Ljava/lang/String;)*
+20
+21
+23*
+25
+á á(o
+m
+
+á á("
+%5boolean"mage.server.Main#isTestMode()Z*0
+
+__unknown_file ("
+mage.server.Main*
+24
+20
+21*>
+26
+Ş Ş(",
+
+Ş Ş( 
+
+errorMsgjava.lang.String*Ğ
+27
+Û Û(5Û
+Ø
+
+Û Û(C*
+%3$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository¶³
+
+Û Û(W 
+%4mage.server.AuthorizedUser"^mage.server.AuthorizedUserRepository#getByName(Ljava/lang/String;)Lmage/server/AuthorizedUser;*H
+
+__unknown_file (,
+*
+%3$mage.server.AuthorizedUserRepository*:
+
+__unknown_file (
+
+userNamejava.lang.String2getByName(Ljava/lang/String;)ƒ
+€
+
+Û Û(W,
+authorizedUsermage.server.AuthorizedUser"__id*>
+
+__unknown_file ("
+ 
+%4mage.server.AuthorizedUser–
+“
+
+Ü Ü(b
+errorMsgjava.lang.String"__id*a
+
+__unknown_file (EC
+AWrong username or password. You must register your account first.*
+25
+26*æ
+28
+Ø Ø(f
+d
+
+Ù Ù(-,
+authorizedUsermage.server.AuthorizedUser"__id*"
+
+__unknown_file (
+""‰
+†
+
+Ú Ú()
+%0#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryğí
+
+Ú Ú(+)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()âß
+
+Ú Ú(G
+%2java.lang.Boolean"Rmage.server.managers.ConfigSettings#isAuthenticationActivated()Ljava/lang/Boolean;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettings2isAuthenticationActivated()*
+16
+27*û
+10
+„ „(X
+V
+
+„ „(
+%46org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""™
+–
+
+„$ „(V
+%47java.lang.String"__concat*7
+
+„$ „(K)'
+%Disconnecting another user instance: *,
+
+„N „(V
+
+userNamejava.lang.Stringàİ
+
+„ „(W
+%48void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%46org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%47java.lang.String2info(Ljava/lang/Object;)Š
+‡
+
+… …(&*
+%49#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryòï
+
+… …(7*
+%50#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*H
+
+__unknown_file (,
+*
+%49#mage.server.managers.ManagerFactory2sessionManager()£ 
+
+…C …(V
+%51java.lang.String"1mage.server.User#getSessionId()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2getSessionId()^
+\
+…X …(€#
+%52mage.server.DisconnectReason"__id*"
+
+__unknown_file (
+""‚ÿ
+… …(
+%53void"amage.server.managers.SessionManager#disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)V*H
+
+__unknown_file (,
+*
+%50#mage.server.managers.SessionManager*5
+
+__unknown_file (
+
+%51java.lang.String*A
+
+__unknown_file (%
+#
+%52mage.server.DisconnectReason2<disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)*
+7*â
+11
+€ €(X
+V
+
+€ €(
+%43org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""
+Š
+
+€$ €(J
+%44java.lang.String"__concat*+
+
+€$ €(?
+Reconnecting session for *,
+
+€B €(J
+
+userNamejava.lang.Stringàİ
+
+€ €(K
+%45void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%43org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%44java.lang.String2info(Ljava/lang/Object;)*
+7*
+12
+ı ı(Ú×
+
+ı ı(1
+%39void"8mage.server.User#updateLastActivity(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+usermage.server.User*"
+
+__unknown_file (
+""2&updateLastActivity(Ljava/lang/String;)‘
+
+ş" ş(.
+%40java.util.UUID"(mage.server.User#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+usermage.server.User2getId()l
+j
+
+ş ş(.!
+mage.server.Session"
+userId"__id*3
+
+__unknown_file (
+
+%40java.util.UUID£ 
+
+ÿ ÿ(+
+%41java.lang.String"1mage.server.User#getSessionId()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2getSessionId()}{
+
+ÿ ÿ(5
+%42boolean"java.lang.String#isEmpty()Z*5
+
+__unknown_file (
+
+%41java.lang.String2	isEmpty()*
+10
+11*ı
+13
+üS ü(W™–
+
+üS ü(a
+%36java.lang.String",mage.server.User#getHost()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getHost()l
+j
+
+üi ü(m
+%37java.lang.String"__id*=
+
+__unknown_file (!*
+mage.server.Session"
+host×Ô
+
+üS ü(n
+%38boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%36java.lang.String*5
+
+__unknown_file (
+
+%37java.lang.String2equals(Ljava/lang/Object;)*
+9
+12*ˆ
+14
+ú ú(&›˜
+
+ú ú(,
+%32mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*>
+
+__unknown_file ("
+ 
+
+selectUserjava.util.Optional2get()e
+c
+
+ú ú(-
+usermage.server.User"__id*5
+
+__unknown_file (
+
+%32mage.server.UserŠ
+‡
+
+ü ü("*
+%33#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryòï
+
+ü ü(3*
+%34#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*H
+
+__unknown_file (,
+*
+%33#mage.server.managers.ManagerFactory2configSettings()äá
+
+ü ü(O
+%35java.lang.Boolean"Rmage.server.managers.ConfigSettings#isAuthenticationActivated()Ljava/lang/Boolean;*H
+
+__unknown_file (,
+*
+%34#mage.server.managers.ConfigSettings2isAuthenticationActivated()*
+13
+12*»
+15
+ø ø('Š
+‡
+
+ø ø('*
+%28#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+ø ø(5'
+%29 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%28#mage.server.managers.ManagerFactory2userManager()¨¥
+
+ø ø(M
+%30java.util.Optional"Vmage.server.managers.UserManager#getUserByName(Ljava/lang/String;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%29 mage.server.managers.UserManager*:
+
+__unknown_file (
+
+userNamejava.lang.String2!getUserByName(Ljava/lang/String;)o
+m
+
+ø ø(M 
+
+selectUserjava.util.Optional"__id*7
+
+__unknown_file (
+
+%30java.util.OptionalŠ
+
+ù ù(&
+%31boolean"java.util.Optional#isPresent()Z*>
+
+__unknown_file ("
+ 
+
+selectUserjava.util.Optional2isPresent()*
+14
+8*ƒ
+
+16
+ô$ ô(2Š
+‡
+
+ô$ ô(2*
+%23#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+ô$ ô(@'
+%24 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%23#mage.server.managers.ManagerFactory2userManager()l
+j
+
+ôV ô(Z
+%25java.lang.String"__id*=
+
+__unknown_file (!*
+mage.server.Session"
+host‚ÿ
+
+ô$ ô(k
+%26java.util.Optional"mage.server.managers.UserManager#createUser(Ljava/lang/String;Ljava/lang/String;Lmage/server/AuthorizedUser;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%24 mage.server.managers.UserManager*:
+
+__unknown_file (
+
+userNamejava.lang.String*5
+
+__unknown_file (
+
+%25java.lang.String*J
+
+__unknown_file (.
+,
+authorizedUsermage.server.AuthorizedUser2LcreateUser(Ljava/lang/String;Ljava/lang/String;Lmage/server/AuthorizedUser;)o
+m
+
+ô ô(l 
+
+selectUserjava.util.Optional"__id*7
+
+__unknown_file (
+
+%26java.util.OptionalŠ
+
+ö ö(#
+%27boolean"java.util.Optional#isPresent()Z*>
+
+__unknown_file ("
+ 
+
+selectUserjava.util.Optional2isPresent()*
+15
+7*’
+17
+í í("Š
+‡
+
+í í("*
+%16#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+í í(0'
+%17 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%16#mage.server.managers.ManagerFactory2userManager()l
+j
+
+íF í(J
+%18java.lang.String"__id*=
+
+__unknown_file (!*
+mage.server.Session"
+host‚ÿ
+
+í í([
+%19java.util.Optional"mage.server.managers.UserManager#createUser(Ljava/lang/String;Ljava/lang/String;Lmage/server/AuthorizedUser;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%17 mage.server.managers.UserManager*:
+
+__unknown_file (
+
+userNamejava.lang.String*5
+
+__unknown_file (
+
+%18java.lang.String*J
+
+__unknown_file (.
+,
+authorizedUsermage.server.AuthorizedUser2LcreateUser(Ljava/lang/String;Ljava/lang/String;Lmage/server/AuthorizedUser;)
+‹
+
+íf î(8"
+%20java.util.function.Consumer"__declareFunction*F
+
+__unknown_file (*(
+&__sonar_lambda_910$mage.server.Sessionÿü
+
+í ï(
+%22void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*7
+
+__unknown_file (
+
+%19java.util.Optional*@
+
+__unknown_file ($
+"
+%20java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)*
+16*º
+18
+ê ê(NU
+S
+
+êQ ê(f
+%12java.text.DateFormat"__id*"
+
+__unknown_file (
+""Š
+‡
+ên ê(ˆ
+%13java.util.Date"__id*[
+
+__unknown_file (?*=
+,
+authorizedUsermage.server.AuthorizedUser"
+lockedUntilôñ
+êQ ê(‰
+%14java.lang.String"?java.text.DateFormat#format(Ljava/util/Date;)Ljava/lang/String;*9
+
+__unknown_file (
+
+%12java.text.DateFormat*3
+
+__unknown_file (
+
+%13java.util.Date2format(Ljava/util/Date;)¢
+Ÿ
+ê ê(‰
+%15java.lang.String"__concat*C
+
+ê ê(N53
+1Your profile has need deactivated by admin until *(
+êQ ê(‰
+
+%14java.lang.String"(
+ê ê(Š
+
+%15java.lang.String*¦
+19
+é é("ˆ
+…
+
+é é(.
+%8java.util.Date"__id*[
+
+__unknown_file (?*=
+,
+authorizedUsermage.server.AuthorizedUser"
+lockedUntil“
+
+
+é9 é(O
+%9java.util.Calendar"4java.util.Calendar#getInstance()Ljava/util/Calendar;*2
+
+__unknown_file ("
+java.util.Calendar—”
+
+é9 é(Y
+%10java.util.Date",java.util.Calendar#getTime()Ljava/util/Date;*6
+
+__unknown_file (
+
+%9java.util.Calendar2	getTime()ÎË
+
+é é(Z
+
+%11int"+java.util.Date#compareTo(Ljava/util/Date;)I*2
+
+__unknown_file (
+
+%8java.util.Date*3
+
+__unknown_file (
+
+%10java.util.Date2compareTo(Ljava/util/Date;)*
+17
+18*%
+1
+ ("
+
+ (
+""*ú
+2
+š š(Š
+‡
+
+š š(*
+%74#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+š š(('
+%75 mage.server.managers.ChatManager"Smage.server.managers.ManagerFactory#chatManager()Lmage/server/managers/ChatManager;*H
+
+__unknown_file (,
+*
+%74#mage.server.managers.ManagerFactory2chatManager()Ÿœ
+
+š2 š(<!
+%76mage.server.game.GamesRoom"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+roomjava.util.Optional2get()¢Ÿ
+
+š2 š(H
+%77java.util.UUID",mage.server.Room#getChatId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+%76mage.server.game.GamesRoom2getChatId()l
+j
+
+šJ š(P
+%78java.util.UUID"__id*?
+
+__unknown_file (#*!
+mage.server.Session"
+userIdÇÄ
+
+š š(Q
+%79void"Lmage.server.managers.ChatManager#joinChat(Ljava/util/UUID;Ljava/util/UUID;)V*E
+
+__unknown_file ()
+'
+%75 mage.server.managers.ChatManager*3
+
+__unknown_file (
+
+%77java.util.UUID*3
+
+__unknown_file (
+
+%78java.util.UUID2*joinChat(Ljava/util/UUID;Ljava/util/UUID;)Š
+‡
+
+› ›(*
+%80#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+› ›(('
+%81 mage.server.managers.ChatManager"Smage.server.managers.ManagerFactory#chatManager()Lmage/server/managers/ChatManager;*H
+
+__unknown_file (,
+*
+%80#mage.server.managers.ManagerFactory2chatManager()l
+j
+
+›> ›(D
+%82java.util.UUID"__id*?
+
+__unknown_file (#*!
+mage.server.Session"
+userIdŠ‡
+
+› ›(E
+%83void"Hmage.server.managers.ChatManager#sendReconnectMessage(Ljava/util/UUID;)V*E
+
+__unknown_file ()
+'
+%81 mage.server.managers.ChatManager*3
+
+__unknown_file (
+
+%82java.util.UUID2&sendReconnectMessage(Ljava/util/UUID;)*
+1*à
+3
+— —(X
+V
+
+— —(
+%72org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ŞÛ
+
+— —(2
+%73void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%72org.apache.log4j.Logger*3
+
+__unknown_file (
+main room not found2warn(Ljava/lang/Object;)"
+
+˜ ˜(
+""*
+4
+•' •(5Š
+‡
+
+•' •(5*
+%65#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryú÷
+
+•' •(H,
+%66%mage.server.managers.GamesRoomManager"]mage.server.managers.ManagerFactory#gamesRoomManager()Lmage/server/managers/GamesRoomManager;*H
+
+__unknown_file (,
+*
+%65#mage.server.managers.ManagerFactory2gamesRoomManager()Š
+‡
+
+•Q •(_*
+%67#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryú÷
+
+•Q •(r,
+%68%mage.server.managers.GamesRoomManager"]mage.server.managers.ManagerFactory#gamesRoomManager()Lmage/server/managers/GamesRoomManager;*H
+
+__unknown_file (,
+*
+%67#mage.server.managers.ManagerFactory2gamesRoomManager()ËÈ
+•Q •(‚
+%69java.util.UUID"Emage.server.managers.GamesRoomManager#getMainRoomId()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+%68%mage.server.managers.GamesRoomManager2getMainRoomId()œ™
+•' •(ƒ
+%70java.util.Optional"Smage.server.managers.GamesRoomManager#getRoom(Ljava/util/UUID;)Ljava/util/Optional;*J
+
+__unknown_file (.
+,
+%66%mage.server.managers.GamesRoomManager*3
+
+__unknown_file (
+
+%69java.util.UUID2getRoom(Ljava/util/UUID;)j
+h
+• •(„
+roomjava.util.Optional"__id*7
+
+__unknown_file (
+
+%70java.util.Optional‡„
+
+– –(!
+%71boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+roomjava.util.Optional2isPresent()*
+2
+3*™
+5
+“ “(‘
+
+“ “("
+%64java.util.UUID"(mage.server.User#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+usermage.server.User2getId()l
+j
+
+“ “("!
+mage.server.Session"
+userId"__id*3
+
+__unknown_file (
+
+%64java.util.UUID*
+4
+1*À
+6
+‘ ‘(&…
+‚
+
+‘ ‘(1
+%63java.lang.String"__concat*#
+
+‘ ‘(&
+Error connecting *,
+
+‘) ‘(1
+
+userNamejava.lang.String"'
+
+‘ ‘(2
+
+%63java.lang.String*ü	
+7
+ (›˜
+
+ ($
+%57mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*>
+
+__unknown_file ("
+ 
+
+selectUserjava.util.Optional2get()e
+c
+
+ (%
+usermage.server.User"__id*5
+
+__unknown_file (
+
+%57mage.server.UserŠ
+‡
+
+ (*
+%58#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryæã
+
+ ()'
+%59 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%58#mage.server.managers.ManagerFactory2userManager()q
+o
+
+; (D
+%60java.lang.String"__id*B
+
+__unknown_file (&*$
+mage.server.Session"
+	sessionId‘
+
+F (R
+%61java.util.UUID"(mage.server.User#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+usermage.server.User2getId()àİ
+
+ (S
+%62boolean"Vmage.server.managers.UserManager#connectToSession(Ljava/lang/String;Ljava/util/UUID;)Z*E
+
+__unknown_file ()
+'
+%59 mage.server.managers.UserManager*5
+
+__unknown_file (
+
+%60java.lang.String*3
+
+__unknown_file (
+
+%61java.util.UUID24connectToSession(Ljava/lang/String;Ljava/util/UUID;)*
+5
+6*Î
+8
+Œ Œ(8“
+
+
+Œ Œ(C
+%56java.lang.String"__concat*1
+
+Œ Œ(8#!
+Can't find connected user name *,
+
+Œ; Œ(C
+
+userNamejava.lang.String"'
+
+Œ Œ(D
+
+%56java.lang.String*Õ
+9
+ˆ ˆ('}
+{
+
+ˆ ˆ(2
+%54java.lang.String"__concat*
+
+ˆ ˆ('
+
+User name *,
+
+ˆ* ˆ(2
+
+userNamejava.lang.String›
+˜
+
+ˆ ˆ(c
+%55java.lang.String"__concat*'
+
+ˆ ˆ(2
+
+%54java.lang.String*>
+
+ˆ5 ˆ(c0.
+, already in use (or your IP address changed)"'
+
+ˆ ˆ(d
+
+%55java.lang.String*¥
+20
+è è(ˆ
+…
+
+è è(*
+%7java.util.Date"__id*[
+
+__unknown_file (?*=
+,
+authorizedUsermage.server.AuthorizedUser"
+lockedUntil*
+16
+19*O
+21
+æ æ(D"=
+
+æ æ(E/-
++Your profile has been deactivated by admin.*>
+23
+â â(",
+
+â â( 
+
+errorMsgjava.lang.String:*
+
+×& ×(6
+userNamejava.lang.String:*
+
+×7 ×(F
+passwordjava.lang.StringB
+mage.server.SessionH

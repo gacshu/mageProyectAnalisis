@@ -1,0 +1,181 @@
+
+mage.abilities.dynamicvalue.common.CardsInAllGraveyardsCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I
+uD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/CardsInAllGraveyardsCount.java! !("startingBlock*”
+startingBlock! !(IŠ
+‡
+   (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+! !("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13›
+˜
+   (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+!, !(9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14›
+˜
+   (
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+!B !(H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%15*
+1*Á
+1" "(š—
+" "(
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()·´
+## #(B
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()æã
+" #(I
+%2mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%0mage.game.GameState*2
+
+__unknown_file (
+
+%1java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)«¨
+" $(
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2mage.players.PlayerList2stream()†ƒ
+" %(%
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+" &()
+%5java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)†ƒ
+" '(*
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¹
+¶
+( +(&
+%7 java.util.function.ToIntFunction"__declareFunction*o
+
+__unknown_file (SQ
+O__sonar_lambda_206$mage.abilities.dynamicvalue.common.CardsInAllGraveyardsCount¥
+¢
+
+__unknown_file (9
+&
+%7 java.util.function.ToIntFunction"
+sourceAbility"__id*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability‹
+ˆ
+
+__unknown_file (0
+&
+%7 java.util.function.ToIntFunction"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.GameÍ
+Ê
+
+__unknown_file (J
+&
+%7 java.util.function.ToIntFunction" 
+CardsInAllGraveyardsCount.this"__id*\
+
+__unknown_file (@>
+<mage.abilities.dynamicvalue.common.CardsInAllGraveyardsCountÃÀ
+" +(!
+%11java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*D
+
+__unknown_file ((
+&
+%7 java.util.function.ToIntFunction2,mapToInt(Ljava/util/function/ToIntFunction;)„
+" +(
+
+%12int"!java.util.stream.IntStream#sum()I*?
+
+__unknown_file (#
+!
+%11java.util.stream.IntStream2sum()"
+" +(
+"":"
+! !(#
+gamemage.game.Game:3
+!$ !(:'
+sourceAbilitymage.abilities.Ability:3
+!; !(H'
+effectmage.abilities.effects.EffectB@>
+<mage.abilities.dynamicvalue.common.CardsInAllGraveyardsCountHP

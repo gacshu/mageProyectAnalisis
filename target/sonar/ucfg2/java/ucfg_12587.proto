@@ -1,0 +1,333 @@
+
+¢mage.abilities.keyword.AssistAbility#getManaOptions(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)Lmage/abilities/mana/ManaOptions;g
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/AssistAbility.javaY Y(%"startingBlock*H
+13d d("8
+d d(,
+*
+optionsmage.abilities.mana.ManaOptions*©
+14c" c(,Ž‹
+c" c(9
+%6boolean"!mage.players.Player#isComputer()Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2isComputer()*
+13
+11*®
+15b b( °­
+b+ b(C
+%4java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+b b(D
+%5mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+b b(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%5mage.players.Player*
+14
+11*H
+16] ]("8
+] ](,
+*
+optionsmage.abilities.mana.ManaOptions*›
+17Z Z(/TR
+Z" Z(-%
+%0mage.abilities.mana.ManaOptions"mage.abilities.mana.ManaOptionsƒ
+€
+Z Z(/
+%1")mage.abilities.mana.ManaOptions#<init>()V*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptions„
+
+Z Z(0*
+optionsmage.abilities.mana.ManaOptions"__id*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptions®«
+[ [(
+%2	mage.Mana"7mage.abilities.costs.mana.ManaCost#getMana()Lmage/Mana;*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCost2	getMana()mk
+[ [()	
+%3int"mage.Mana#getGeneric()I*-
+
+__unknown_file (
+
+%2	mage.Mana2getGeneric()*
+15
+16*G
+1{ {("8
+{ {(,
+*
+optionsmage.abilities.mana.ManaOptions*è
+2x x(¯¬
+x6 x(F
+%14	mage.Mana"7mage.abilities.costs.mana.ManaCost#getMana()Lmage/Mana;*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCost2	getMana()om
+x6 x(S
+
+%15int"mage.Mana#getGeneric()I*.
+
+__unknown_file (
+
+%14	mage.Mana2getGeneric()°
+­
+x- x(g
+
+%16int"java.lang.Math#min(II)I*.
+
+__unknown_file ("
+java.lang.Math*(
+
+__unknown_file (
+
+
+%15int*"
+
+__unknown_file (
+""™
+–
+x x(h
+%17	mage.Mana"#mage.Mana#GenericMana(I)Lmage/Mana;*)
+
+__unknown_file ("
+	mage.Mana*(
+
+__unknown_file (
+
+
+%16intáÞ
+x x(i
+%18void"5mage.abilities.mana.ManaOptions#addMana(Lmage/Mana;)V*H
+
+__unknown_file (,
+*
+optionsmage.abilities.mana.ManaOptions*.
+
+__unknown_file (
+
+%17	mage.Mana2addMana(Lmage/Mana;)*
+1*‘
+startingBlockY% Y(Q”
+‘
+X X(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+Y. Y(4 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%19Š
+‡
+X X(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+Y; Y(?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20 
+
+X X(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCostm
+k
+YJ Y(P,
+unpaid"mage.abilities.costs.mana.ManaCost"__annotation*#
+
+__unknown_file (
+
+%21*
+17*€
+4i i(T
+R
+i i(
+
+opponentIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Ž
+‹
+i i(
+
+opponentIdjava.util.UUID"
+__arrayGet*1
+
+__unknown_file (
+
+%8java.util.Set*"
+
+__unknown_file (
+""*
+
+2
+10
+1*ƒ
+5o o(I
+G
+o o(
+mana	mage.Mana"__id*"
+
+__unknown_file (
+"" 
+
+o o(
+mana	mage.Mana"
+__arrayGet*N
+
+__unknown_file (2
+0
+availableManamage.abilities.mana.ManaOptions*"
+
+__unknown_file (
+""*
+4
+7*­
+6q, q(0fd
+qH q(T
+
+%12int"mage.Mana#count()I*/
+
+__unknown_file (
+
+mana	mage.Mana2count()°
+­
+q, q(U
+
+%13int"java.lang.Math#max(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%12int*
+5*}
+7p p(fd
+p p($
+
+%11int"mage.Mana#count()I*/
+
+__unknown_file (
+
+mana	mage.Mana2count()*
+5
+6*Ê
+9m, m(4§¤
+m, m(K&
+%10mage.abilities.mana.ManaOptions"Wmage.players.Player#getManaAvailable(Lmage/game/Game;)Lmage/abilities/mana/ManaOptions;*=
+
+__unknown_file (!
+
+opponentmage.players.Player*4
+
+__unknown_file (
+
+gamemage.game.Game2"getManaAvailable(Lmage/game/Game;)‹
+ˆ
+m m(L0
+availableManamage.abilities.mana.ManaOptions"__id*D
+
+__unknown_file ((
+&
+%10mage.abilities.mana.ManaOptions*
+5*ÿ
+10j j("øõ
+j j(8
+%9mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+opponentIdjava.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+j j(9
+opponentmage.players.Player"__id*7
+
+__unknown_file (
+
+%9mage.players.Player*
+4
+9*³
+11i i(#°­
+i1 i(I
+%7java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()êç
+i i(J
+%8java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getOpponents(Ljava/util/UUID;)*
+4:,
+Y& Y(5 
+sourcemage.abilities.Ability:"
+Y6 Y(@
+gamemage.game.Game:8
+YA Y(P,
+unpaid"mage.abilities.costs.mana.ManaCostB(&
+$mage.abilities.keyword.AssistAbilityH

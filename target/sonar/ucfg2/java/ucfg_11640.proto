@@ -1,0 +1,247 @@
+
+Ñmage.abilities.costs.common.PayLoyaltyCost#canPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Zm
+cD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/PayLoyaltyCost.java ("startingBlock*ù
+23b 3(nàÖ
+	3b 3(Ö
+%11boolean"Amage.game.permanent.Permanent#canLoyaltyBeUsed(Lmage/game/Game;)Z*K
+
+__unknown_file (/
+-
+planeswalkermage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2"canLoyaltyBeUsed(Lmage/game/Game;)*
+1*Ç
+33 3(îë
+3 3(-
+%8mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*K
+
+__unknown_file (/
+-
+planeswalkermage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)W
+U
+37 3(J
+%9mage.counters.CounterType"__id*"
+
+__unknown_file (
+""˙˜
+3 3(K
+
+%10int"=mage.counters.Counters#getCount(Lmage/counters/CounterType;)I*:
+
+__unknown_file (
+
+%8mage.counters.Counters*=
+
+__unknown_file (!
+
+%9mage.counters.CounterType2%getCount(Lmage/counters/CounterType;)*
+2
+1*Ò
+startingBlock (Xï
+í
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+" ()!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12î
+ë
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+3 (9 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13í
+è
+ (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+@ (L
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%14ä
+á
+ (
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+S (W
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+11*ñ
+4, ,(Y
+W
+, ,(!
+costmage.abilities.costs.Cost"__id*"
+
+__unknown_file (
+""†
+ù
+, ,(!
+costmage.abilities.costs.Cost"
+__arrayGet*>
+
+__unknown_file ("
+ 
+%6mage.abilities.costs.Costs*"
+
+__unknown_file (
+""*	
+3
+4
+5*¥
+5. .(üú
+.# .(F	
+%7int"7mage.abilities.costs.common.PayLoyaltyCost#getAmount()I*?
+
+__unknown_file (#
+!
+costmage.abilities.costs.Cost2getAmount()*
+4*·
+7, ,(*Ã…
+, ,(5 
+%6mage.abilities.costs.Costs"Amage.abilities.AbilityImpl#getCosts()Lmage/abilities/costs/Costs;*L
+
+__unknown_file (0
+.
+copiedAbilitymage.abilities.LoyaltyAbility2
+getCosts()*
+4*«	
+8(= ((D¿Ω
+(+ ((L#
+%2mage.abilities.LoyaltyAbility"Cmage.abilities.LoyaltyAbility#copy()Lmage/abilities/LoyaltyAbility;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2copy()Ü
+É
+( ((M.
+copiedAbilitymage.abilities.LoyaltyAbility"__id*A
+
+__unknown_file (%
+#
+%2mage.abilities.LoyaltyAbility˜Ù
+) )(+
+
+%3void"9mage.abilities.AbilityImpl#adjustCosts(Lmage/game/Game;)V*L
+
+__unknown_file (0
+.
+copiedAbilitymage.abilities.LoyaltyAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2adjustCosts(Lmage/game/Game;)‹Ÿ
+* *('.
+%4(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()çä
+* *(M
+
+%5void"dmage.abilities.effects.ContinuousEffects#costModification(Lmage/abilities/Ability;Lmage/game/Game;)V*L
+
+__unknown_file (0
+.
+%4(mage.abilities.effects.ContinuousEffects*L
+
+__unknown_file (0
+.
+copiedAbilitymage.abilities.LoyaltyAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2:costModification(Lmage/abilities/Ability;Lmage/game/Game;)*
+7*"
+10! !("
+! !(
+""*⁄
+11! (%®•
+3 (G
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+! (H#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)Ö
+Ç
+ (I-
+planeswalkermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+
+3
+8
+10*#
+1	3 3(Ü"
+	3 3(Ü
+"":-
+ (*!
+abilitymage.abilities.Ability:,
++ (: 
+sourcemage.abilities.Ability:*
+; (M
+controllerIdjava.util.UUID:"
+N (W
+gamemage.game.GameB.,
+*mage.abilities.costs.common.PayLoyaltyCostHP

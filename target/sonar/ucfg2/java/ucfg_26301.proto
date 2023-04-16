@@ -1,0 +1,189 @@
+
+0mage.server.User#getNumberOfNotFinishedTables()I\
+PD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/User.javañ ñ(+"9*Å
+2
+ò ò(R
+P
+
+ò ò(
+tablemage.game.Table"__id*"
+
+__unknown_file (
+""ì
+ê
+
+ò ò(
+tablemage.game.Table"
+__arrayGet*8
+
+__unknown_file (
+
+%1java.util.Collection*"
+
+__unknown_file (
+""*
+8
+1*≠
+4
+ü ü(*´®
+
+ü ü(0"
+%13mage.server.TableController"*java.util.Optional#get()Ljava/lang/Object;*C
+
+__unknown_file ('
+%
+tableControllerjava.util.Optional2get()i
+g
+
+üC ü(I
+%14java.util.UUID"__id*<
+
+__unknown_file ( *
+mage.server.User"
+userId˝˙
+
+ü ü(J
+%15boolean"@mage.server.TableController#isUserStillActive(Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+%13mage.server.TableController*3
+
+__unknown_file (
+
+%14java.util.UUID2#isUserStillActive(Ljava/util/UUID;)*
+2*‰
+5
+û û(W
+U
+
+û û(
+%9org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""êç
+
+û8 û(E
+%10java.util.UUID"'mage.game.Table#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+tablemage.game.Table2getId()~
+|
+
+û! û(E
+%11java.lang.String"__concat*$
+
+û! û(5
+table not found : *%
+
+û8 û(E
+
+%10java.util.UUID·ﬁ
+
+û û(F
+%12void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%9org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%11java.lang.String2error(Ljava/lang/Object;)*
+2*≈
+6
+ú< ú(JÜ
+É
+
+ú< ú(J)
+%4#mage.server.managers.ManagerFactory"__id*D
+
+__unknown_file ((*&
+mage.server.User"
+managerFactoryËÂ
+
+ú< ú(Y'
+%5!mage.server.managers.TableManager"Umage.server.managers.ManagerFactory#tableManager()Lmage/server/managers/TableManager;*G
+
+__unknown_file (+
+)
+%4#mage.server.managers.ManagerFactory2tableManager()èå
+
+úh ú(u
+%6java.util.UUID"'mage.game.Table#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+tablemage.game.Table2getId()úô
+
+ú< ú(v
+%7java.util.Optional"Umage.server.managers.TableManager#getController(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%5!mage.server.managers.TableManager*2
+
+__unknown_file (
+
+%6java.util.UUID2getController(Ljava/util/UUID;)s
+q
+
+ú ú(w%
+tableControllerjava.util.Optional"__id*6
+
+__unknown_file (
+
+%7java.util.Optionalëé
+
+ù ù(0
+%8boolean"java.util.Optional#isPresent()Z*C
+
+__unknown_file ('
+%
+tableControllerjava.util.Optional2isPresent()*
+4
+5*†
+8
+ô ô(´®
+
+ô ô( 
+%2mage.constants.TableState"5mage.game.Table#getState()Lmage/constants/TableState;*6
+
+__unknown_file (
+
+tablemage.game.Table2
+getState()Y
+W
+
+ô$ ô(7
+%3mage.constants.TableState"__id*"
+
+__unknown_file (
+""*
+2
+6*ñ
+9
+ò ò(!g
+e
+
+ò ò(!
+%0java.util.Map"__id*<
+
+__unknown_file ( *
+mage.server.User"
+tablesñì
+
+ò ò(*
+%1java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%0java.util.Map2values()*
+2*%
+1
+§ §("
+
+§ §(
+""B
+mage.server.UserHP

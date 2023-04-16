@@ -1,0 +1,184 @@
+
+ämage.abilities.dynamicvalue.common.CountersSourceCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Iy
+oD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/CountersSourceCount.java ("startingBlock*Á
+2! !(ëé
+! "("
+%7mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)°û
+! #(
+%8java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+%7mage.counters.Counters2values()®•
+! $(
+%9java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%8java.util.Collection2stream()°û
+! %(,!
+%10java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)ÉÄ
+! %(2	
+%4int"!java.util.stream.IntStream#sum()I*?
+
+__unknown_file (#
+!
+%10java.util.stream.IntStream2sum()F
+D
+! %(2	
+%2int"__id*'
+
+__unknown_file (
+	
+%4int*
+1*ä
+3 (ëé
+ ("
+%5mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)ù
+ö
+   (%
+%6mage.counters.CounterType"__id*g
+
+__unknown_file (K*I8
+6mage.abilities.dynamicvalue.common.CountersSourceCount"
+counterType˘ˆ
+  (&	
+%3int"=mage.counters.Counters#getCount(Lmage/counters/CounterType;)I*:
+
+__unknown_file (
+
+%5mage.counters.Counters*=
+
+__unknown_file (!
+
+%6mage.counters.CounterType2%getCount(Lmage/counters/CounterType;)F
+D
+  (&	
+%2int"__id*'
+
+__unknown_file (
+	
+%3int*
+1*î
+startingBlock (Iä
+á
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11õ
+ò
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12õ
+ò
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%13*
+6*µ
+4 (ù
+ö
+ (
+%1mage.counters.CounterType"__id*g
+
+__unknown_file (K*I8
+6mage.abilities.dynamicvalue.common.CountersSourceCount"
+counterType*
+2
+3*!
+5 ("
+ (
+""*◊
+6 (+ª∏
+ (I#
+%0mage.game.permanent.Permanent"_mage.abilities.Ability#getSourcePermanentOrLKI(Lmage/game/Game;)Lmage/game/permanent/Permanent;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2)getSourcePermanentOrLKI(Lmage/game/Game;)Å
+
+ (J*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*
+4
+5*!
+1 %(3"
+ %(3
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectB:8
+6mage.abilities.dynamicvalue.common.CountersSourceCountHP

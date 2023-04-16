@@ -1,0 +1,157 @@
+
+˜mage.abilities.effects.common.DontUntapInControllersUntapStepSourceEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z
+‚D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DontUntapInControllersUntapStepSourceEffect.java1 1("startingBlock*!
+26 6("
+6 6(
+""*³
+35% 5(.¢Ÿ
+5> 5(V
+%7java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()öó
+5% 5(W
+%8boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%7java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*ü
+startingBlock1 1(F–
+“
+0 0(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+1% 1(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+0 0(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+14 1(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+0 0(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+1A 1(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+6*Ñ
+44" 4(&¨¥
+44 4(H
+%5java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+4" 4(I#
+%6mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+4 4(J*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+3
+1*Á
+53 3(¯¬
+3 3(&
+%2java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()¨¥
+3. 3(B
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÌÉ
+3 3(C
+%4boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%2java.util.UUID*2
+
+__unknown_file (
+
+%3java.util.UUID2equals(Ljava/lang/Object;)*
+4
+1*¢
+62 2(²¯
+2 2("
+%0mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()V
+T
+2& 2(5
+%1mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+5
+1*!
+19 9("
+9 9(
+"":/
+1 1(+#
+eventmage.game.events.GameEvent:,
+1, 1(; 
+sourcemage.abilities.Ability:"
+1< 1(E
+gamemage.game.GameBMK
+Image.abilities.effects.common.DontUntapInControllersUntapStepSourceEffectHP

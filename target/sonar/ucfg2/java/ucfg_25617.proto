@@ -1,0 +1,501 @@
+
+`mage.server.tournament.TournamentController#isTournamentStillValid(Lmage/constants/TableState;)Zw
+kD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/tournament/TournamentController.javaä ä()"18*¿
+13
+í í("X
+V
+
+í í("
+%13org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""›
+˜
+íy í(ƒ&
+%14mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournament¯¬
+íy í(‹
+%15java.util.UUID"7mage.game.tournament.Tournament#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+%14mage.game.tournament.Tournament2getId()º
+·
+í) í(‹
+%16java.lang.String"__concat*]
+
+í) í(vOM
+KTournament user is missing but player active -> start quit - tournamentId: *&
+íy í(‹
+
+%15java.util.UUIDz
+x
+í) í(˜
+%17java.lang.String"__concat*(
+í) í(‹
+
+%16java.lang.String*
+íŽ í(˜
+
+ state: µ²
+í› í(°
+%18java.lang.String"6mage.constants.TableState#toString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+
+tableStatemage.constants.TableState2
+toString()ˆ
+…
+í) í(°
+%19java.lang.String"__concat*(
+í) í(˜
+
+%17java.lang.String*)
+í› í(°
+
+%18java.lang.Stringãà
+í í(±
+%20void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%13org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%19java.lang.String2debug(Ljava/lang/Object;)œ™
+
+ï! ï(/
+%21java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()ûø
+
+ï ï(0
+%22void"Cmage.server.tournament.TournamentController#quit(Ljava/util/UUID;)V*K
+
+__unknown_file (/-
++mage.server.tournament.TournamentController*3
+
+__unknown_file (
+
+%21java.util.UUID2quit(Ljava/util/UUID;)*
+10*Ì
+14
+ë. ë(<¡
+ž
+
+ë. ë(<)
+%8#mage.server.managers.ManagerFactory"__id*_
+
+__unknown_file (C*A-
++mage.server.tournament.TournamentController"
+managerFactoryäá
+
+ë. ë(J&
+%9 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%8#mage.server.managers.ManagerFactory2userManager()œ™
+
+ëS ë(a
+%10java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()
+
+ë. ë(b
+%11java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%9 mage.server.managers.UserManager*3
+
+__unknown_file (
+
+%10java.util.UUID2getUser(Ljava/util/UUID;)i
+g
+
+ë ë(c
+userjava.util.Optional"__id*7
+
+__unknown_file (
+
+%11java.util.Optional‡„
+
+ì ì(-
+%12boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+13
+10*ù
+15
+ê ê((ØÕ
+
+ê ê(4
+%6mage.players.Player"Fmage.game.tournament.TournamentPlayer#getPlayer()Lmage/players/Player;*W
+
+__unknown_file (;
+9
+tournamentPlayer%mage.game.tournament.TournamentPlayer2getPlayer()
+
+ê ê(>
+%7boolean"mage.players.Player#isHuman()Z*7
+
+__unknown_file (
+
+%6mage.players.Player2	isHuman()*
+14
+10*Ñ
+16
+é é(%´±
+
+é é(/
+%5boolean"0mage.game.tournament.TournamentPlayer#hasQuit()Z*W
+
+__unknown_file (;
+9
+tournamentPlayer%mage.game.tournament.TournamentPlayer2	hasQuit()*
+15
+10*¯
+17
+ç0 ç(:™
+–
+
+ç0 ç(:%
+%2mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournamentŸœ
+
+çE ç(U
+%3java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()¶³
+
+ç0 ç(V+
+%4%mage.game.tournament.TournamentPlayer"bmage.game.tournament.Tournament#getPlayer(Ljava/util/UUID;)Lmage/game/tournament/TournamentPlayer;*C
+
+__unknown_file ('
+%
+%2mage.game.tournament.Tournament*2
+
+__unknown_file (
+
+%3java.util.UUID2getPlayer(Ljava/util/UUID;)›
+˜
+
+ç ç(W9
+tournamentPlayer%mage.game.tournament.TournamentPlayer"__id*I
+
+__unknown_file (-
++
+%4%mage.game.tournament.TournamentPlayer*
+16
+11*Ü
+18
+æ' æ(4Ÿ
+œ
+
+æ' æ(4(
+%0"java.util.concurrent.ConcurrentMap"__id*^
+
+__unknown_file (B*@-
++mage.server.tournament.TournamentController"
+userPlayerMap¡ž
+
+æ' æ(?
+%1java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*F
+
+__unknown_file (*
+(
+%0"java.util.concurrent.ConcurrentMap2
+entrySet()*
+10*%
+1
+… …("
+
+… …(
+""*•
+
+2
+‚ ‚(X
+V
+
+‚ ‚(
+%37org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""š
+—
+
+‚X ‚(b&
+%38mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournament®«
+
+‚X ‚(j
+%39java.util.UUID"7mage.game.tournament.Tournament#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+%38mage.game.tournament.Tournament2getId()§
+¤
+
+‚ ‚(j
+%40java.lang.String"__concat*L
+
+‚ ‚(U><
+:Tournament has less than 2 active players - tournamentId: *%
+
+‚X ‚(j
+
+%39java.util.UUIDv
+t
+
+‚ ‚(w
+%41java.lang.String"__concat*'
+
+‚ ‚(j
+
+%40java.lang.String*
+
+‚m ‚(w
+
+ state: ´±
+‚z ‚(
+%42java.lang.String"6mage.constants.TableState#toString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+
+tableStatemage.constants.TableState2
+toString()†
+ƒ
+‚ ‚(
+%43java.lang.String"__concat*'
+
+‚ ‚(w
+
+%41java.lang.String*(
+‚z ‚(
+
+%42java.lang.Stringãà
+‚ ‚(
+%44void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%37org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%43java.lang.String2debug(Ljava/lang/Object;)"
+
+ƒ ƒ(
+""*s
+3
+! (+Z
+X
+
+/ (A 
+%36mage.constants.TableState"__id*"
+
+__unknown_file (
+""*
+2
+1*Ç
+5
+ú ú(.s
+q
+
+ú ú(.9
+tournamentPlayer%mage.game.tournament.TournamentPlayer"__id*"
+
+__unknown_file (
+""µ
+²
+
+ú ú(.9
+tournamentPlayer%mage.game.tournament.TournamentPlayer"
+__arrayGet*9
+
+__unknown_file (
+
+%32java.util.Collection*"
+
+__unknown_file (
+""*	
+3
+8
+1*Ì
+7
+ü ü(%µ²
+
+ü ü(/
+%35boolean"0mage.game.tournament.TournamentPlayer#hasQuit()Z*W
+
+__unknown_file (;
+9
+tournamentPlayer%mage.game.tournament.TournamentPlayer2	hasQuit()*
+5*ú
+8
+û û(!ÙÖ
+
+û û(-
+%33mage.players.Player"Fmage.game.tournament.TournamentPlayer#getPlayer()Lmage/players/Player;*W
+
+__unknown_file (;
+9
+tournamentPlayer%mage.game.tournament.TournamentPlayer2getPlayer()„
+
+û û(7
+%34boolean"mage.players.Player#isHuman()Z*8
+
+__unknown_file (
+
+%33mage.players.Player2	isHuman()*
+5
+7*ø
+9
+ú1 ú(;š
+—
+
+ú1 ú(;&
+%31mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournamentÄÁ
+
+ú1 ú(H
+%32java.util.Collection"Bmage.game.tournament.Tournament#getPlayers()Ljava/util/Collection;*D
+
+__unknown_file ((
+&
+%31mage.game.tournament.Tournament2getPlayers()*
+5*„
+10
+æ æ($V
+T
+
+æ æ($
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""
+
+
+æ æ($
+entryjava.util.Map$Entry"
+__arrayGet*1
+
+__unknown_file (
+
+%1java.util.Set*"
+
+__unknown_file (
+""*
+17
+9*ù	
+11
+÷ ÷(X
+V
+
+÷ ÷(
+%23org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""š
+—
+
+÷O ÷(Y&
+%24mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournament®«
+
+÷O ÷(a
+%25java.util.UUID"7mage.game.tournament.Tournament#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+%24mage.game.tournament.Tournament2getId()š
+—
+
+÷ ÷(a
+%26java.lang.String"__concat*?
+
+÷ ÷(L1/
+-Tournament player is missing - tournamentId: *%
+
+÷O ÷(a
+
+%25java.util.UUIDv
+t
+
+÷ ÷(n
+%27java.lang.String"__concat*'
+
+÷ ÷(a
+
+%26java.lang.String*
+
+÷d ÷(n
+
+ state: ´±
+÷q ÷(†
+%28java.lang.String"6mage.constants.TableState#toString()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+
+tableStatemage.constants.TableState2
+toString()†
+ƒ
+÷ ÷(†
+%29java.lang.String"__concat*'
+
+÷ ÷(n
+
+%27java.lang.String*(
+÷q ÷(†
+
+%28java.lang.Stringãà
+÷ ÷(‡
+%30void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%23org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%29java.lang.String2debug(Ljava/lang/Object;)*
+10:5
+
+ä* ä(?'
+
+tableStatemage.constants.TableStateB/-
++mage.server.tournament.TournamentControllerHP

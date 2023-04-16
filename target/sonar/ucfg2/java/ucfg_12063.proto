@@ -1,0 +1,371 @@
+
+omage.abilities.effects.common.continuous.BoostControlledEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BoostControlledEffect.javal l("startingBlock*·
+13n4 n(F¡
+ž
+n4 n(F
+%0java.util.List"__id*v
+
+__unknown_file (Z*X@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+affectedObjectList–“
+n4 n(Q
+%1java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%0java.util.List2
+iterator()d
+b
+n n(Q
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%1java.util.Iterator*
+12*
+2x x(]
+[
+x x(%
+permmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""™
+–
+x x(%
+permmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%15java.util.List*"
+
+__unknown_file (
+""*
+7
+1*²
+3{ {(¯
+¬
+{" {('/
+%21(mage.abilities.dynamicvalue.DynamicValue"__id*i
+
+__unknown_file (M*K@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+power
+{" {(E
+
+%22int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%21(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.continuous.BoostControlledEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Â¿
+{ {(F
+%23void"*mage.game.permanent.Permanent#addPower(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*(
+
+__unknown_file (
+
+
+%22int2addPower(I)³
+°
+|& |(//
+%24(mage.abilities.dynamicvalue.DynamicValue"__id*m
+
+__unknown_file (Q*O@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+	toughness
+|& |(M
+
+%25int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%24(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.continuous.BoostControlledEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)ÊÇ
+| |(N
+%26void".mage.game.permanent.Permanent#addToughness(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*(
+
+__unknown_file (
+
+
+%25int2addToughness(I)*
+2*‚
+startingBlockl l(3Š
+‡
+k k(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+l l("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%27”
+‘
+k k(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+l, l(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28*
+13
+8*¸
+5z/ z(3¢Ÿ
+z/ z(;
+%18java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getId()©¦
+zC z(W
+%19java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÏÌ
+z/ z(X
+%20boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%18java.util.UUID*3
+
+__unknown_file (
+
+%19java.util.UUID2equals(Ljava/lang/Object;)*
+2
+3*Â
+7y y(±®
+y( y(@
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()óð
+y y(A
+%17boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%16java.util.UUID2 isControlledBy(Ljava/util/UUID;)*	
+2
+3
+5*¯	
+8x" x(&¿¼
+x" x(7&
+%12mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()²
+¯
+xL x(R1
+%13*mage.filter.common.FilterCreaturePermanent"__id*j
+
+__unknown_file (N*L@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+filter±®
+xT x(l
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ïì
+x" x({
+%15java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%12mage.game.permanent.Battlefield*O
+
+__unknown_file (3
+1
+%13*mage.filter.common.FilterCreaturePermanent*3
+
+__unknown_file (
+
+%14java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*Ž
+9t t(yw
+t t(
+%11void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()*
+12*µ
+10q q(®
+«
+q' q(,.
+%5(mage.abilities.dynamicvalue.DynamicValue"__id*i
+
+__unknown_file (M*K@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+powerŽ‹
+q' q(J	
+%6int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%5(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.continuous.BoostControlledEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)ÅÂ
+q q(K
+
+%7void"*mage.game.permanent.Permanent#addPower(I)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*'
+
+__unknown_file (
+	
+%6int2addPower(I)²
+¯
+r+ r(4.
+%8(mage.abilities.dynamicvalue.DynamicValue"__id*m
+
+__unknown_file (Q*O@
+>mage.abilities.effects.common.continuous.BoostControlledEffect"
+	toughnessŽ‹
+r+ r(R	
+%9int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%8(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*^
+
+__unknown_file (B@
+>mage.abilities.effects.common.continuous.BoostControlledEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)ÎË
+r r(S
+%10void".mage.game.permanent.Permanent#addToughness(I)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*'
+
+__unknown_file (
+	
+%9int2addToughness(I)*
+12*Ù
+11o& o((š—
+o& o(/
+%3mage.MageObjectReference"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()ž›
+o& o(B#
+%4mage.game.permanent.Permanent"Vmage.MageObjectReference#getPermanent(Lmage/game/Game;)Lmage/game/permanent/Permanent;*<
+
+__unknown_file ( 
+
+%3mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanent(Lmage/game/Game;)
+
+o o(C*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+9
+10*–
+12nS n(U}{
+nS n(_
+%2boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+11
+1*%
+1
+€ €("
+
+€ €(
+"":"
+l l(#
+gamemage.game.Game:,
+l$ l(2 
+sourcemage.abilities.AbilityBB@
+>mage.abilities.effects.common.continuous.BoostControlledEffectHP

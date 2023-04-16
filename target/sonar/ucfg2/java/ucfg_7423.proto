@@ -1,0 +1,690 @@
+
+ùmage.util.trace.TraceUtil#traceForPermanent(Lmage/game/Game;Lmage/game/permanent/Permanent;Ljava/lang/String;Lmage/abilities/effects/ContinuousEffectsList;)V^
+RD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/util/trace/TraceUtil.javaπ π()"1*è
+2
+º º( [
+Y
+
+º º( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ï
+í
+
+º º( !
+abilitymage.abilities.Ability"
+__arrayGet*1
+
+__unknown_file (
+
+%9java.util.Set*"
+
+__unknown_file (
+""*	
+7
+8
+1*ú
+
+3
+À$ À((ùö
+
+À$ À(3
+%48mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¨©
+
+À< À(Q
+%49java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()˘ˆ
+
+À$ À(R
+%50mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*8
+
+__unknown_file (
+
+%48mage.game.GameState*3
+
+__unknown_file (
+
+%49java.util.UUID2getZone(Ljava/util/UUID;)k
+i
+
+À À(S
+testmage.constants.Zone"__id*8
+
+__unknown_file (
+
+%50mage.constants.ZoneX
+V
+
+Ã Ã(
+%51org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""É
+Ä
+
+Ã" Ã(<
+%52java.lang.String"__concat*(
+
+Ã" Ã(&
+
+uuidjava.lang.String*%
+
+Ã' Ã(<
+        test_zone: à
+Ö
+
+Ã" Ã(C
+%53java.lang.String"__concat*'
+
+Ã" Ã(<
+
+%52java.lang.String*+
+
+Ã? Ã(C
+
+testmage.constants.Zone‚ﬂ
+
+Ã Ã(D
+%54void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%51org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%53java.lang.String2error(Ljava/lang/Object;)*
+2*ñ
+4
+… …(X
+V
+
+… …(
+%42org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ä
+á
+
+…& …(I
+%43java.lang.String"__concat*(
+
+…& …(*
+
+uuidjava.lang.String*,
+
+…- …(I
+        contains ability: ≥∞
+
+…L …(a
+%44mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*7
+
+__unknown_file (
+
+objectmage.MageObject2getAbilities()Å˛
+
+…L …(s
+%45boolean"<mage.abilities.Abilities#contains(Lmage/abilities/Ability;)Z*=
+
+__unknown_file (!
+
+%44mage.abilities.Abilities*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2"contains(Lmage/abilities/Ability;)z
+x
+
+…& …(s
+%46java.lang.String"__concat*'
+
+…& …(I
+
+%43java.lang.String*
+
+…L …(s
+
+%45boolean‚ﬂ
+
+… …(t
+%47void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%42org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%46java.lang.String2error(Ljava/lang/Object;)*
+3*Ã
+5
+ƒ$ ƒ(+Æ´
+
+ƒ$ ƒ(5
+%31mage.constants.Zone"5mage.abilities.Ability#getZone()Lmage/constants/Zone;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2	getZone()k
+i
+
+ƒ ƒ(6
+zonemage.constants.Zone"__id*8
+
+__unknown_file (
+
+%31mage.constants.ZoneX
+V
+
+≈ ≈(
+%32org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""}
+{
+
+≈" ≈(7
+%33java.lang.String"__concat*(
+
+≈" ≈(&
+
+uuidjava.lang.String* 
+
+≈' ≈(7
+        zone: à
+Ö
+
+≈" ≈(>
+%34java.lang.String"__concat*'
+
+≈" ≈(7
+
+%33java.lang.String*+
+
+≈: ≈(>
+
+zonemage.constants.Zone‚ﬂ
+
+≈ ≈(?
+%35void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%32org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%34java.lang.String2error(Ljava/lang/Object;)¨©
+
+∆; ∆(P
+%36java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()ÏÈ
+
+∆, ∆(Q
+%37mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%36java.util.UUID2getObject(Ljava/util/UUID;)e
+c
+
+∆ ∆(R
+objectmage.MageObject"__id*4
+
+__unknown_file (
+
+%37mage.MageObjectX
+V
+
+« «(
+%38org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""
+}
+
+«" «(9
+%39java.lang.String"__concat*(
+
+«" «(&
+
+uuidjava.lang.String*"
+
+«' «(9
+        object: Ü
+É
+
+«" «(B
+%40java.lang.String"__concat*'
+
+«" «(9
+
+%39java.lang.String*)
+
+«< «(B
+
+objectmage.MageObject‚ﬂ
+
+« «(C
+%41void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%38org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%40java.lang.String2error(Ljava/lang/Object;)*
+3
+4*Ó
+6
+¿% ¿(,ºπ
+
+¿% ¿(S
+%18boolean"fmage.abilities.Ability#isInUseableZone(Lmage/game/Game;Lmage/MageObject;Lmage/game/events/GameEvent;)Z*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2NisInUseableZone(Lmage/game/Game;Lmage/MageObject;Lmage/game/events/GameEvent;)X
+V
+
+¡ ¡(
+%19org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""í
+è
+
+¡ ¡(G
+%20java.lang.String"__concat*(
+
+¡ ¡("
+
+uuidjava.lang.String*4
+
+¡# ¡(G&$
+"        instanceof StaticAbility: p
+n
+
+¡ ¡(l
+%21java.lang.String"__concat*'
+
+¡ ¡(G
+
+%20java.lang.String*
+
+¡J ¡(l
+""x
+v
+
+¡ ¡({
+%22java.lang.String"__concat*'
+
+¡ ¡(l
+
+%21java.lang.String*
+
+¡o ¡({
+
+, ability=ê
+ç
+¡ ¡(Ö
+%23java.lang.String"__concat*'
+
+¡ ¡({
+
+%22java.lang.String*2
+¡~ ¡(Ö#
+!
+abilitymage.abilities.Ability„‡
+¡ ¡(Ü
+%24void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%19org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%23java.lang.String2error(Ljava/lang/Object;)X
+V
+
+¬ ¬(
+%25org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ö
+Ç
+
+¬ ¬(:
+%26java.lang.String"__concat*(
+
+¬ ¬("
+
+uuidjava.lang.String*'
+
+¬# ¬(:
+        usable zone: p
+n
+
+¬ ¬(C
+%27java.lang.String"__concat*'
+
+¬ ¬(:
+
+%26java.lang.String*
+
+¬= ¬(C
+""x
+v
+
+¬ ¬(R
+%28java.lang.String"__concat*'
+
+¬ ¬(C
+
+%27java.lang.String*
+
+¬F ¬(R
+
+, ability=é
+ã
+
+¬ ¬(\
+%29java.lang.String"__concat*'
+
+¬ ¬(R
+
+%28java.lang.String*1
+
+¬U ¬(\#
+!
+abilitymage.abilities.Ability‚ﬂ
+
+¬ ¬(]
+%30void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%25org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%29java.lang.String2error(Ljava/lang/Object;)*
+2
+5*
+
+7
+æ æ(X
+V
+
+æ æ(
+%11org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""
+}
+
+æ æ(5
+%12java.lang.String"__concat*(
+
+æ æ("
+
+uuidjava.lang.String*"
+
+æ# æ(5
+        ability=é
+ã
+
+æ æ(?
+%13java.lang.String"__concat*'
+
+æ æ(5
+
+%12java.lang.String*1
+
+æ8 æ(?#
+!
+abilitymage.abilities.AbilityÖ
+Ç
+
+æ æ(Z
+%14java.lang.String"__concat*'
+
+æ æ(?
+
+%13java.lang.String*(
+
+æB æ(Z
+, applies_to_attacker=Å˛
+æ] æ(Ö
+%15boolean"zmage.abilities.effects.RestrictionEffect#applies(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Papplies(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)|
+z
+æ æ(Ö
+%16java.lang.String"__concat*'
+
+æ æ(Z
+
+%14java.lang.String*
+æ] æ(Ö
+
+%15boolean„‡
+æ æ(Ü
+%17void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%11org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%16java.lang.String2error(Ljava/lang/Object;)*
+2*÷
+8
+Ω; Ω(Bºπ
+
+Ω; Ω(i
+%10boolean"fmage.abilities.Ability#isInUseableZone(Lmage/game/Game;Lmage/MageObject;Lmage/game/events/GameEvent;)Z*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2NisInUseableZone(Lmage/game/Game;Lmage/MageObject;Lmage/game/events/GameEvent;)*
+6
+7*à
+10
+º# º(5ª∏
+
+ºA º(O
+%8java.util.UUID"9mage.abilities.effects.EffectImpl#getId()Ljava/util/UUID;*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect2getId()≤Ø
+
+º# º(P
+%9java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*`
+
+__unknown_file (D
+B
+restrictionEffects,mage.abilities.effects.ContinuousEffectsList*2
+
+__unknown_file (
+
+%8java.util.UUID2getAbility(Ljava/util/UUID;)*
+2*(
+0 "!
+
+— —(
+implicit return*∑	
+11
+ª ª(W
+U
+
+ª ª(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+ª ª()
+%1java.lang.String"__concat*(
+
+ª ª(
+
+uuidjava.lang.String*
+
+ª ª()
+     effect=¥±
+
+ª, ª(=
+%2java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect2
+toString()Ä
+~
+
+ª ª(=
+%3java.lang.String"__concat*&
+
+ª ª()
+
+%1java.lang.String*&
+
+ª, ª(=
+
+%2java.lang.Stringp
+n
+
+ª ª(F
+%4java.lang.String"__concat*&
+
+ª ª(=
+
+%3java.lang.String*
+
+ª@ ª(F
+ id=ª∏
+
+ªI ª(W
+%5java.util.UUID"9mage.abilities.effects.EffectImpl#getId()Ljava/util/UUID;*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect2getId()~
+|
+
+ª ª(W
+%6java.lang.String"__concat*&
+
+ª ª(F
+
+%4java.lang.String*$
+
+ªI ª(W
+
+%5java.util.UUIDﬂ‹
+
+ª ª(X
+
+%7void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%6java.lang.String2error(Ljava/lang/Object;)*
+10*ﬁ
+1
+∫ ∫(%l
+j
+
+∫ ∫(%2
+effect(mage.abilities.effects.RestrictionEffect"__id*"
+
+__unknown_file (
+""’
+“
+
+∫ ∫(%2
+effect(mage.abilities.effects.RestrictionEffect"
+__arrayGet*`
+
+__unknown_file (D
+B
+restrictionEffects,mage.abilities.effects.ContinuousEffectsList*"
+
+__unknown_file (
+""*
+0
+11:$
+
+π* π(4
+gamemage.game.Game:8
+
+π5 π(I*
+	permanentmage.game.permanent.Permanent:&
+
+πJ π(V
+uuidjava.lang.String:Q
+πW π(íB
+restrictionEffects,mage.abilities.effects.ContinuousEffectsListB"
+mage.util.trace.TraceUtil

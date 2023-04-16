@@ -1,0 +1,320 @@
+
+`mage.abilities.effects.common.DrawCardAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zr
+hD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DrawCardAllEffect.java7 7("startingBlock*±
+13;% ;()š—
+;% ;(4
+%5mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()”‘
+;G ;(Y
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()æã
+;% ;(`
+%7mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%5mage.game.GameState*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+10*‘
+28 8( °­
+8+ 8(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+8 8(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+8 8(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player¡
+ž
+9 9( %
+%2mage.constants.TargetController"__id*e
+
+__unknown_file (I*G1
+/mage.abilities.effects.common.DrawCardAllEffect"
+targetController]
+[
+: :(%
+%3mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+B B(%
+%4mage.constants.TargetController"__id*"
+
+__unknown_file (
+""*
+
+13
+7
+1*þ
+startingBlock7 7(3Š
+‡
+6 6(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+7 7("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18”
+‘
+6 6(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+7, 7(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%19*
+2*ù
+4C C("R
+P
+C C("
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""
+Š
+C C("
+playerIdjava.util.UUID"
+__arrayGet*2
+
+__unknown_file (
+
+%13java.util.Set*"
+
+__unknown_file (
+""*
+6
+1*´
+5F F(¡
+ž
+F) F(//
+%15(mage.abilities.dynamicvalue.DynamicValue"__id*[
+
+__unknown_file (?*=1
+/mage.abilities.effects.common.DrawCardAllEffect"
+amountþ
+F) F(M
+
+%16int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%15(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*O
+
+__unknown_file (31
+/mage.abilities.effects.common.DrawCardAllEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)÷ô
+F F(\
+
+%17int"Image.players.Player#drawCards(ILmage/abilities/Ability;Lmage/game/Game;)I*;
+
+__unknown_file (
+
+playermage.players.Player*(
+
+__unknown_file (
+
+
+%16int*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game24drawCards(ILmage/abilities/Ability;Lmage/game/Game;)*
+4*ü
+6D$ D((÷ô
+D$ D(<
+%14mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)k
+i
+D D(=
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%14mage.players.Player*
+4
+5*™
+7C% C()•’
+C7 C(I
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()ìé
+C% C(J
+%13java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%12java.util.UUID2getOpponents(Ljava/util/UUID;)*
+4*„
+10; ;("R
+P
+; ;("
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""–
+“
+; ;("
+playerIdjava.util.UUID"
+__arrayGet*;
+
+__unknown_file (
+
+%7mage.players.PlayerList*"
+
+__unknown_file (
+""*
+12
+1*´
+11> >( 
+
+>) >(/.
+%9(mage.abilities.dynamicvalue.DynamicValue"__id*[
+
+__unknown_file (?*=1
+/mage.abilities.effects.common.DrawCardAllEffect"
+amount€ý
+>) >(M
+
+%10int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%9(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*O
+
+__unknown_file (31
+/mage.abilities.effects.common.DrawCardAllEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)÷ô
+> >(\
+
+%11int"Image.players.Player#drawCards(ILmage/abilities/Ability;Lmage/game/Game;)I*;
+
+__unknown_file (
+
+playermage.players.Player*(
+
+__unknown_file (
+
+
+%10int*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game24drawCards(ILmage/abilities/Ability;Lmage/game/Game;)*
+10*ý
+12<$ <((öó
+<$ <(<
+%8mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+< <(=
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%8mage.players.Player*
+10
+11*!
+1K K("
+K K(
+"":"
+7 7(#
+gamemage.game.Game:,
+7$ 7(2 
+sourcemage.abilities.AbilityB31
+/mage.abilities.effects.common.DrawCardAllEffectHP

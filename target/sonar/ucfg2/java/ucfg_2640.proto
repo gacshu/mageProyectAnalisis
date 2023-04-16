@@ -1,0 +1,521 @@
+
+fmage.abilities.effects.common.CreateTokenTargetEffect#getText(Lmage/abilities/Mode;)Ljava/lang/String;x
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CreateTokenTargetEffect.javaH H("startingBlock*î
+24L L(.DB
+L L(,
+%4java.lang.StringBuilder"java.lang.StringBuilderr
+p
+L L(.
+%5"!java.lang.StringBuilder#<init>()V*;
+
+__unknown_file (
+
+%4java.lang.StringBuildern
+l
+L L(/
+sbjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%4java.lang.StringBuilder¨¥
+N N(
+%6mage.target.Targets"5mage.abilities.Mode#getTargets()Lmage/target/Targets;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getTargets()}
+N N('
+%7boolean"java.util.ArrayList#isEmpty()Z*7
+
+__unknown_file (
+
+%6mage.target.Targets2	isEmpty()*
+22
+23*É
+25J J(’
+
+J J(
+%3java.lang.String"__id*e
+
+__unknown_file (I*G7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+
+staticText"$
+J J(
+
+%3java.lang.String*¨
+26I# I(-’
+
+I# I(-
+%1java.lang.String"__id*e
+
+__unknown_file (I*G7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+
+staticTextyw
+I# I(7
+%2boolean"java.lang.String#isEmpty()Z*4
+
+__unknown_file (
+
+%1java.lang.String2	isEmpty()*
+24
+25*­
+27I I(’
+
+I I(
+%0java.lang.String"__id*e
+
+__unknown_file (I*G7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+
+staticText*
+24
+26*â
+10f f(ÉÆ
+f f(F
+%37java.lang.StringBuilder"Njava.lang.StringBuilder#replace(IILjava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*&
+
+__unknown_file (
+
+tokens2replace(IILjava/lang/String;)*
+5
+8*í
+11d  d("ÐÍ
+d  d(3
+
+%36int"4java.lang.StringBuilder#indexOf(Ljava/lang/String;)I*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*%
+
+__unknown_file (	
+token2indexOf(Ljava/lang/String;)*
+
+5
+8
+10*
+12b b(öó
+b b(
+%35java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+s2append(Ljava/lang/String;)*
+11*»	
+13` `(
+š
+` `(&
+%29mage.game.permanent.token.Token"__id*`
+
+__unknown_file (D*B7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+tokenÂ¿
+` `(,
+%30java.lang.String"Bmage.game.permanent.token.Token#getDescription()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+%29mage.game.permanent.token.Token2getDescription()Š‡
+` `(-
+%31java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%30java.lang.String2append(Ljava/lang/String;)
+š
+a a(&
+%32mage.game.permanent.token.Token"__id*`
+
+__unknown_file (D*B7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+tokenÂ¿
+a a(&
+%33java.lang.String"Bmage.game.permanent.token.Token#getDescription()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+%32mage.game.permanent.token.Token2getDescription()ÉÆ
+a a(8
+%34boolean".java.lang.String#endsWith(Ljava/lang/String;)Z*5
+
+__unknown_file (
+
+%33java.lang.String*%
+
+__unknown_file (	
+token2endsWith(Ljava/lang/String;)*
+11
+12*“
+14^ ^(üù
+^ ^($
+%28java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*'
+
+__unknown_file (	
+tapped 2append(Ljava/lang/String;)*
+13*µ
+16\ \(§
+¤
+\, \(2/
+%23(mage.abilities.dynamicvalue.DynamicValue"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+amount°­
+\, \(=
+%24java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+%23(mage.abilities.dynamicvalue.DynamicValue2
+toString()Ø
+Õ
+\ \(>
+%25java.lang.String"Emage.util.CardUtil#numberToText(Ljava/lang/String;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*5
+
+__unknown_file (
+
+%24java.lang.StringŠ‡
+\ \(?
+%26java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%25java.lang.String2append(Ljava/lang/String;)ÕÒ
+\ \(K
+%27java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%26java.lang.StringBuilder*!
+
+__unknown_file (
+ 2	append(C)*
+13
+14*ˆ
+17Z Z(
+š
+Z Z(&
+%20mage.game.permanent.token.Token"__id*`
+
+__unknown_file (D*B7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+tokenÂ¿
+Z Z(,
+%21java.lang.String"Bmage.game.permanent.token.Token#getDescription()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+%20mage.game.permanent.token.Token2getDescription()Š‡
+Z Z(-
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%21java.lang.String2append(Ljava/lang/String;)*
+5
+8*“
+18X X(üù
+X X($
+%19java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*'
+
+__unknown_file (	
+tapped 2append(Ljava/lang/String;)*
+17*í
+1x x(
+Ž‹
+x x(
+%49java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*9
+
+__unknown_file (
+
+messagejava.lang.String2append(Ljava/lang/String;)¥¢
+y y(
+%50java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2
+toString()"%
+y y(
+
+%50java.lang.String*”
+2u u(ÿü
+u u('
+%48java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder**
+
+__unknown_file (
+
+ for each 2append(Ljava/lang/String;)*
+1*—
+3s s(‚ÿ
+s s(*
+%47java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*-
+
+__unknown_file (
+, where X is 2append(Ljava/lang/String;)*
+1*
+startingBlockH H($
+Œ
+G G(
+%51"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*9
+
+__unknown_file (
+
+modemage.abilities.Mode\
+Z
+H H(#
+modemage.abilities.Mode"__annotation*#
+
+__unknown_file (
+
+%51*
+27*¶
+4r r(§
+¤
+r r(/
+%44(mage.abilities.dynamicvalue.DynamicValue"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+amount°­
+r r(!
+%45java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+%44(mage.abilities.dynamicvalue.DynamicValue2
+toString()Á¾
+r r(-
+%46boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%45java.lang.String*!
+
+__unknown_file (
+X2equals(Ljava/lang/Object;)*
+2
+3*÷
+5p p(§
+¤
+p p(/
+%41(mage.abilities.dynamicvalue.DynamicValue"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+amountÌÉ
+p p(,
+%42java.lang.String"Gmage.abilities.dynamicvalue.DynamicValue#getMessage()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+%41(mage.abilities.dynamicvalue.DynamicValue2getMessage()f
+d
+p p(-
+messagejava.lang.String"__id*5
+
+__unknown_file (
+
+%42java.lang.String}
+q q(
+%43boolean"java.lang.String#isEmpty()Z*9
+
+__unknown_file (
+
+messagejava.lang.String2	isEmpty()*
+4
+1*”
+6n n(ÿü
+n n(#
+%40java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder**
+
+__unknown_file (
+
+ attacking2append(Ljava/lang/String;)*
+5*•
+7l l(€ý
+l l((
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*+
+
+__unknown_file (
+ tapped and2append(Ljava/lang/String;)*
+6*–
+8j j(þû
+j j("
+%38java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*)
+
+__unknown_file (
+	 that are2append(Ljava/lang/String;)*
+6
+7*’
+20V V(÷ô
+V V(
+%18java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*"
+
+__unknown_file (
+a 2append(Ljava/lang/String;)*
+17
+18*º
+21T T(
+þû
+T T(
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*)
+
+__unknown_file (
+	 creates 2append(Ljava/lang/String;)§
+¤
+U U(/
+%15(mage.abilities.dynamicvalue.DynamicValue"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.CreateTokenTargetEffect"
+amount°­
+U U(
+%16java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*M
+
+__unknown_file (1
+/
+%15(mage.abilities.dynamicvalue.DynamicValue2
+toString()Á¾
+U U()
+%17boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%16java.lang.String*!
+
+__unknown_file (
+12equals(Ljava/lang/Object;)*
+16
+20*…
+22Q Q(ûø
+Q Q( 
+%9java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*'
+
+__unknown_file (	
+target 2append(Ljava/lang/String;)©¦
+Q( Q(9
+%10mage.target.Targets"5mage.abilities.Mode#getTargets()Lmage/target/Targets;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getTargets()Ž
+‹
+Q( Q(@
+%11mage.target.Target"
+__arrayGet*8
+
+__unknown_file (
+
+%10mage.target.Targets*
+
+__unknown_file (2 ¦£
+Q( Q(P
+%12java.lang.String"4mage.target.Target#getTargetName()Ljava/lang/String;*7
+
+__unknown_file (
+
+%11mage.target.Target2getTargetName()Š‡
+Q Q(Q
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%9java.lang.StringBuilder*5
+
+__unknown_file (
+
+%12java.lang.String2append(Ljava/lang/String;)*
+21*–
+23O O(ÿü
+O O($
+%8java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*+
+
+__unknown_file (
+that player2append(Ljava/lang/String;)*
+21:'
+H H(#
+modemage.abilities.ModeB97
+5mage.abilities.effects.common.CreateTokenTargetEffectH

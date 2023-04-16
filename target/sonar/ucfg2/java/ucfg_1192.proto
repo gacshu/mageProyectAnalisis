@@ -1,0 +1,275 @@
+
+omage.abilities.common.TapForManaAllTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zv
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/TapForManaAllTriggeredAbility.java- -("startingBlock*Š
+27 7(àÝ
+7 7(%
+%16mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility2getEffects()«¨
+7& 7(9
+%17	mage.Mana"/mage.game.events.ManaEvent#getMana()Lmage/Mana;*N
+
+__unknown_file (2
+0
+	manaEvent#mage.game.events.TappedForManaEvent2	getMana()µ²
+7 7(:
+%18void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%16mage.abilities.effects.Effects*$
+
+__unknown_file (
+mana*.
+
+__unknown_file (
+
+%17	mage.Mana2.setValue(Ljava/lang/String;Ljava/lang/Object;)àÝ
+8 8(%
+%19mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility2getEffects()Ú×
+8 8(;
+%20void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%19mage.abilities.effects.Effects*/
+
+__unknown_file (
+tappedPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2.setValue(Ljava/lang/String;Ljava/lang/Object;)¦
+£
+9 9( &
+%21mage.constants.SetTargetPointer"__id*i
+
+__unknown_file (M*K5
+3mage.abilities.common.TapForManaAllTriggeredAbility"
+setTargetPointer^
+\
+: :(&
+%22mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""^
+\
+= =(&
+%23mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""*	
+3
+4
+1*·
+3= ?(àÝ
+> >(%
+%11mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility2getEffects()»¸
+>> >(Y
+%12java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()a_
+>2 >(=,
+%13%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÖ
+Ó
+>. >(Z
+%14"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%13%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%12java.util.UUIDÅÂ
+> >([
+%15void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*C
+
+__unknown_file ('
+%
+%11mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%13%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*„
+startingBlock- -(;—
+”
+, ,(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+-* -(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%24Š
+‡
+, ,(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+-6 -(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25*
+9*Á
+
+4: <(ßÜ
+; ;($
+%5mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility2getEffects()¦£
+;> ;(O
+%6java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ùö
+;Q ;(u	
+%7int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)`^
+;2 ;(=+
+%8%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetý
+ú
+;. ;(v
+%9"@mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;I)V*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%6java.util.UUID*'
+
+__unknown_file (
+	
+%7intÃÀ
+; ;(w
+%10void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%5mage.abilities.effects.Effects*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*!
+55 5("
+5 5(
+""*Á
+64" 4((—
+”
+4" 4((!
+%2mage.filter.FilterPermanent"__id*_
+
+__unknown_file (C*A5
+3mage.abilities.common.TapForManaAllTriggeredAbility"
+filterÉÆ
+4: 4(K
+%3java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility2getControllerId()ÃÀ
+4" 4(X
+%4boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%2mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%3java.util.UUID*S
+
+__unknown_file (75
+3mage.abilities.common.TapForManaAllTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+5*Œ
+72= 2(Bˆ
+…
+2 2(D0
+	manaEvent#mage.game.events.TappedForManaEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventåâ
+3 3(6#
+%1mage.game.permanent.Permanent"Qmage.game.events.TappedForManaEvent#getPermanent()Lmage/game/permanent/Permanent;*N
+
+__unknown_file (2
+0
+	manaEvent#mage.game.events.TappedForManaEvent2getPermanent()
+
+3 3(7*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+5
+6*!
+80 0("
+0 0(
+""*ª
+9/ /(’
+/ /('
+%0boolean"&mage.game.Game#inCheckPlayableState()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2inCheckPlayableState()*
+7
+8*!
+1A A("
+A A(
+"":/
+-  -(0#
+eventmage.game.events.GameEvent:"
+-1 -(:
+gamemage.game.GameB75
+3mage.abilities.common.TapForManaAllTriggeredAbilityHP

@@ -1,0 +1,281 @@
+
+πmage.abilities.costs.common.ExileOpponentsCardFromExileToGraveyardCost#pay(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZLmage/abilities/costs/Cost;)Zâ
+D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/ExileOpponentsCardFromExileToGraveyardCost.java$ $("startingBlock*˙
+2- -(R
+P
+./ .(=
+%12mage.constants.Zone"__id*"
+
+__unknown_file (
+""ëé
+. .(M
+%13boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%12mage.constants.Zone*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ã
+3+ +( ß§
++) +(@
+%10java.util.UUID"3mage.target.Target#getFirstTarget()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFirstTarget()Ê„
++ +(A
+%11mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%10java.util.UUID2getCard(Ljava/util/UUID;)a
+_
++ +(B
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%11mage.cards.Card*
+2
+1*ˆ	
+startingBlock$ $(uï
+í
+# #(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+$ $(&!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14ä
+á
+# #(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+$- $(1
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15î
+ë
+# #(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+$; $(A 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%16í
+è
+# #(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+$H $(T
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%17ö
+ó
+# #(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Costg
+e
+$k $(t&
+	costToPaymage.abilities.costs.Cost"__annotation*#
+
+__unknown_file (
+
+%18*
+5*£
+4'  '(0B@
+'$ '(.
+%1mage.filter.FilterCard"mage.filter.FilterCardp
+n
+'  '(0
+%2" mage.filter.FilterCard#<init>()V*:
+
+__unknown_file (
+
+%1mage.filter.FilterCardp
+n
+' '(1 
+filtermage.filter.FilterCard"__id*:
+
+__unknown_file (
+
+%1mage.filter.FilterCard]
+[
+( ((0%
+%3mage.constants.TargetController"__id*"
+
+__unknown_file (
+""Çˇ
+( ((D4
+%4.mage.constants.TargetController$OwnerPredicate"cmage.constants.TargetController#getOwnerPredicate()Lmage/constants/TargetController$OwnerPredicate;*C
+
+__unknown_file ('
+%
+%3mage.constants.TargetController2getOwnerPredicate()π∂
+( ((E
+
+%5void"Pmage.filter.FilterCard#add(Lmage/filter/predicate/ObjectSourcePlayerPredicate;)V*>
+
+__unknown_file ("
+ 
+filtermage.filter.FilterCard*R
+
+__unknown_file (6
+4
+%4.mage.constants.TargetController$OwnerPredicate28add(Lmage/filter/predicate/ObjectSourcePlayerPredicate;)^\
+)  )(1*
+%6$mage.target.common.TargetCardInExile"$mage.target.common.TargetCardInExileÂ
+‚
+) )(9
+%7"Fmage.target.common.TargetCardInExile#<init>(Lmage/filter/FilterCard;)V*H
+
+__unknown_file (,
+*
+%6$mage.target.common.TargetCardInExile*>
+
+__unknown_file ("
+ 
+filtermage.filter.FilterCardz
+x
+) )(:
+targetmage.target.Target"__id*H
+
+__unknown_file (,
+*
+%6$mage.target.common.TargetCardInExileT
+R
+*( *(6
+%8mage.constants.Outcome"__id*"
+
+__unknown_file (
+""©¶
+* *(N
+%9boolean"wmage.players.Player#chooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%8mage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2bchooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*
+3
+1*Ç
+5% %( ˙˜
+% %(8
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+% %(9!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Player*
+4
+1*!
+12 2("
+2 2(
+"":-
+$ $('!
+abilitymage.abilities.Ability:"
+$( $(2
+gamemage.game.Game:,
+$3 $(B 
+sourcemage.abilities.Ability:*
+$C $(U
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"":2
+$f $(t&
+	costToPaymage.abilities.costs.CostBJH
+Fmage.abilities.costs.common.ExileOpponentsCardFromExileToGraveyardCostHP

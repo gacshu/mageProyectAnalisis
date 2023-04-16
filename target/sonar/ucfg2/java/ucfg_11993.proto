@@ -1,0 +1,184 @@
+
+ˆmage.abilities.effects.common.combat.ChooseBlockersEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/ChooseBlockersEffect.java0 0("startingBlock*”
+27 7(¤¡
+7 7(
+%8mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ÉÆ
+7 7(J
+
+%9void"fmage.game.combat.Combat#selectBlockers(Lmage/players/Player;Lmage/abilities/Ability;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+%8mage.game.combat.Combat*D
+
+__unknown_file ((
+&
+blockControllermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2MselectBlockers(Lmage/players/Player;Lmage/abilities/Ability;Lmage/game/Game;)"
+8 8(
+""*°
+35! 5(%°­
+50 5(H
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+5! 5(I
+%7mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getPlayer(Ljava/util/UUID;)s
+q
+5 5(J&
+blockControllermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Player*
+2
+1*þ
+startingBlock0 0(F—
+”
+/ /(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+0% 0(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%10”
+‘
+/ /(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+04 0(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11Š
+‡
+/ /(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+0A 0(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12*
+5*˜
+42 2(ˆ…
+2 2(;
+%2mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)–“
+2 2(G
+%3java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*3
+
+__unknown_file (
+
+%2mage.MageObject2getIdName()s
+q
+2 2(Y
+%4java.lang.String"__concat*$
+2 2(G
+
+%3java.lang.String*
+2J 2(Y
+ didn't applyÛØ
+2 2(Z
+
+%5void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%4java.lang.String2!informPlayers(Ljava/lang/String;)"
+3 3(
+""*–
+51 1(+°­
+1D 1(\
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ë
+È
+1 1(c
+%1boolean"nmage.watchers.common.ControlCombatRedundancyWatcher#checkBlockingController(Ljava/util/UUID;Lmage/game/Game;)Z*S
+
+__unknown_file (7"5
+3mage.watchers.common.ControlCombatRedundancyWatcher*2
+
+__unknown_file (
+
+%0java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game*
+3
+4*!
+1: :("
+: :(
+"":/
+0 0(+#
+eventmage.game.events.GameEvent:,
+0, 0(; 
+sourcemage.abilities.Ability:"
+0< 0(E
+gamemage.game.GameB=;
+9mage.abilities.effects.common.combat.ChooseBlockersEffectHP

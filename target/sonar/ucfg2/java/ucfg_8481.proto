@@ -1,0 +1,123 @@
+
+`mage.abilities.keyword.HeroicAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zg
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/HeroicAbility.java7 7("startingBlock*!
+2; ;("
+; ;(
+""* 
+39 9(¨¥
+9 9() 
+%3mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
+93 9(F
+%4java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ˆ…
+9 9(G
+%5mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%3mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%4java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+9 9(H
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%5mage.game.stack.Spell±
+®
+: :('
+%6boolean"Ymage.abilities.keyword.HeroicAbility#checkSpell(Lmage/game/stack/Spell;Lmage/game/Game;)Z*D
+
+__unknown_file ((&
+$mage.abilities.keyword.HeroicAbility*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game*
+2
+1*€
+startingBlock7 7(;–
+“
+6 6(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+7* 7(/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%7‰
+†
+6 6(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+76 7(:
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+4*Ó
+48 8(¯¬
+8 8(
+%0java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()º·
+8' 8(=
+%1java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((&
+$mage.abilities.keyword.HeroicAbility2getControllerId()ÌÉ
+8 8(>
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+3
+1*!
+1> >("
+> >(
+"":/
+7  7(0#
+eventmage.game.events.GameEvent:"
+71 7(:
+gamemage.game.GameB(&
+$mage.abilities.keyword.HeroicAbilityHP

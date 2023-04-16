@@ -1,0 +1,143 @@
+
+’mage.abilities.dynamicvalue.common.SacrificeCostCreaturesPower#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/SacrificeCostCreaturesPower.java ("startingBlock*–
+2 (Y
+W
+ (!
+costmage.abilities.costs.Cost"__id*"
+
+__unknown_file (
+"" 
+
+ (!
+costmage.abilities.costs.Cost"
+__arrayGet*>
+
+__unknown_file ("
+ 
+%0mage.abilities.costs.Costs*"
+
+__unknown_file (
+""*	
+2
+3
+1*Î	
+3J (N–
+“
+ (O@
+sacrificeCost/mage.abilities.costs.common.SacrificeTargetCost"__id*?
+
+__unknown_file (#
+!
+costmage.abilities.costs.Coståâ
+ (4
+%1java.util.List"Omage.abilities.costs.common.SacrificeTargetCost#getPermanents()Ljava/util/List;*^
+
+__unknown_file (B
+@
+sacrificeCost/mage.abilities.costs.common.SacrificeTargetCost2getPermanents()¢Ÿ
+ (!
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%1java.util.List2stream()»
+¸
++ (G&
+%3 java.util.function.ToIntFunction"__declareFunction*q
+
+__unknown_file (US
+Q__sonar_lambda_403$mage.abilities.dynamicvalue.common.SacrificeCostCreaturesPowerÂ¿
+ (H 
+%6java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*D
+
+__unknown_file ((
+&
+%3 java.util.function.ToIntFunction2,mapToInt(Ljava/util/function/ToIntFunction;)
+ (N	
+%7int"!java.util.stream.IntStream#sum()I*>
+
+__unknown_file ("
+ 
+%6java.util.stream.IntStream2sum()"
+ (O
+""*
+startingBlock (I‰
+†
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8š
+—
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityg
+e
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9›
+˜
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%10*
+5*Ö
+5 (&Á¾
+ (1 
+%0mage.abilities.costs.Costs"=mage.abilities.Ability#getCosts()Lmage/abilities/costs/Costs;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2
+getCosts()*
+2*!
+1 ("
+ (
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectBB@
+>mage.abilities.dynamicvalue.common.SacrificeCostCreaturesPowerHP

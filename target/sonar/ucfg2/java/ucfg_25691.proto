@@ -1,0 +1,145 @@
+
+Jmage.server.MageServerImpl#getRoomChatId(Ljava/util/UUID;)Ljava/util/UUID;f
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MageServerImpl.javaó ó("startingBlock*5
+3
+û û(*"$
+
+û û(*
+
+%8java.util.UUID*è
+startingBlock
+ó ó(*é
+ã
+
+ï ï(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+roomIdjava.util.UUID[
+Y
+
+ó# ó()
+roomIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%10*
+11*∑
+4
+û û()†ù
+
+û û()
+%8java.util.UUID",mage.server.Room#getChatId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+%7mage.server.game.GamesRoom2getChatId()*
+3*µ
+5
+û û(ûõ
+
+û û( 
+%7mage.server.game.GamesRoom"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+roomjava.util.Optional2get()*
+4*%
+6
+ú ú("
+
+ú ú(
+""*”
+7
+õ õ(W
+U
+
+õ õ(
+%4org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Å
+
+
+õ õ(;
+%5java.lang.String"__concat*%
+
+õ õ(2
+roomId not found : *(
+
+õ5 õ(;
+
+roomIdjava.util.UUIDﬂ‹
+
+õ õ(<
+
+%6void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%4org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%5java.lang.String2error(Ljava/lang/Object;)*
+6*ä
+9
+ô ô(Yh
+f
+
+ô ô(Y
+roomjava.util.Optional"__id*6
+
+__unknown_file (
+
+%2java.util.OptionalÜÉ
+
+ö ö(!
+%3boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+roomjava.util.Optional2isPresent()*
+5
+7*¥
+10
+ôQ ô(Wúô
+
+ô' ô(X
+%2java.util.Optional"Smage.server.managers.GamesRoomManager#getRoom(Ljava/util/UUID;)Ljava/util/Optional;*I
+
+__unknown_file (-
++
+%1%mage.server.managers.GamesRoomManager*6
+
+__unknown_file (
+
+roomIdjava.util.UUID2getRoom(Ljava/util/UUID;)*
+9*§
+11
+ô' ô(5ê
+ç
+
+ô' ô(5)
+%0#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactory¯ı
+
+ô' ô(H+
+%1%mage.server.managers.GamesRoomManager"]mage.server.managers.ManagerFactory#gamesRoomManager()Lmage/server/managers/GamesRoomManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2gamesRoomManager()*
+10:&
+
+ó ó()
+roomIdjava.util.UUIDB
+mage.server.MageServerImplH

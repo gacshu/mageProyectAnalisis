@@ -1,0 +1,318 @@
+
+•mage.abilities.effects.common.ruleModifying.PlayLandsFromGraveyardControllerEffect#applies(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Zñ
+ãD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ruleModifying/PlayLandsFromGraveyardControllerEffect.java2 2("startingBlock*Ó
+134 4(ÍÁ
+4 4(1
+%0mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getCard(Ljava/util/UUID;)g
+e
+4 4(2
+cardToCheckmage.cards.Card"__id*3
+
+__unknown_file (
+
+%0mage.cards.Card*
+11
+12*È
+1P P(≤
+Ø
+P P(
+%19mage.filter.FilterCard"__id*~
+
+__unknown_file (b*`T
+Rmage.abilities.effects.common.ruleModifying.PlayLandsFromGraveyardControllerEffect"
+filterêç
+P P(L
+%20boolean"hmage.filter.FilterCard#match(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+%19mage.filter.FilterCard*<
+
+__unknown_file ( 
+
+cardToCheckmage.cards.Card*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Pmatch(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+P P(M
+""*!
+2L L("
+L L(
+""*Ú
+3K) K(4 «
+K) K(B*
+%17#mage.abilities.costs.mana.ManaCosts"Bmage.MageObject#getManaCost()Lmage/abilities/costs/mana/ManaCosts;*<
+
+__unknown_file ( 
+
+cardToCheckmage.cards.Card2getManaCost()çä
+K) K(L
+%18boolean"java.util.List#isEmpty()Z*H
+
+__unknown_file (,
+*
+%17#mage.abilities.costs.mana.ManaCosts2	isEmpty()*
+2
+1*Û
+startingBlock2 2(_é
+ã
+1 1(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+objectIdjava.util.UUID[
+Y
+2  2((
+objectIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%21î
+ë
+1 1(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+22 2(8 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%22ö
+ó
+1 1(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUIDg
+e
+2? 2(S&
+affectedControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%23ä
+á
+1 1(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+2Z 2(^
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24*
+13*Ó
+4K K(÷”
+K K(%
+%16boolean")mage.MageObject#isLand(Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+
+cardToCheckmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2isLand(Lmage/game/Game;)*
+3
+1*!
+5G G("
+G G(
+""*È
+6E E(%°û
+E E(3
+%7mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+cardToCheckmage.cards.Card2getMainCard()àÖ
+E E(;
+%8java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%7mage.cards.Card2getId()d
+b
+E E(<
+
+needCardIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUIDÆ´
+F F(!
+%9mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()ÓÎ
+F F(0
+%10java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+%9mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)£†
+F F(9
+%11java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%10java.util.Set2stream()Õ
+ 
+FD F(e#
+%12java.util.function.Predicate"__declareFunction*Ö
+
+__unknown_file (ig
+e__sonar_lambda_376$mage.abilities.effects.common.ruleModifying.PlayLandsFromGraveyardControllerEffectî
+ë
+
+__unknown_file (3
+#
+%12java.util.function.Predicate"
+
+needCardId"__id*:
+
+__unknown_file (
+
+
+needCardIdjava.util.UUIDçä
+F F(f
+%15boolean"Bjava.util.stream.Stream#noneMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%11java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%12java.util.function.Predicate2)noneMatch(Ljava/util/function/Predicate;)*
+4
+5*!
+7A A("
+A A(
+""*â
+8@ @(%êç
+@ @(-
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()ﬁ€
+@ @(J
+%6boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%5java.util.UUID*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2equals(Ljava/lang/Object;)*
+6
+7*î
+9? ?(ùö
+?' ?(?
+%3java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+cardToCheckmage.cards.Card2getOwnerId()Ì
+? ?(@
+%4mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+? ?(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%4mage.players.Player*
+7
+8*"
+10; ;("
+; ;(
+""*´
+11: :(!∞≠
+:) :(A
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ﬁ€
+: :(B
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+9
+10*"
+126 6("
+6 6(
+"":&
+2 2()
+objectIdjava.util.UUID:,
+2* 2(9 
+sourcemage.abilities.Ability:2
+2: 2(T&
+affectedControllerIdjava.util.UUID:"
+2U 2(^
+gamemage.game.GameBVT
+Rmage.abilities.effects.common.ruleModifying.PlayLandsFromGraveyardControllerEffectHP

@@ -1,0 +1,223 @@
+
+Ämage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zá
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DestroyPlaneswalkerWhenDamagedTriggeredAbility.java* *("startingBlock*¥
+22 2(5yw
+2  2(38
+%101mage.abilities.effects.common.DestroyTargetEffect"1mage.abilities.effects.common.DestroyTargetEffect©
+¶
+2 2(5
+%11";mage.abilities.effects.common.DestroyTargetEffect#<init>()V*V
+
+__unknown_file (:
+8
+%101mage.abilities.effects.common.DestroyTargetEffectî
+ë
+2 2(6'
+effectmage.abilities.effects.Effect"__id*V
+
+__unknown_file (:
+8
+%101mage.abilities.effects.common.DestroyTargetEffect∞≠
+34 3(G
+%12java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()a_
+3( 3(3,
+%13%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetú
+ô
+3$ 3(N
+%14"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%13%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%12java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game˝˙
+3 3(O$
+%15mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%13%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)ÒÓ
+4 4(%
+%16mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*d
+
+__unknown_file (HF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility2getEffects()l
+j
+4 4(%
+%17void"__arrayClear*C
+
+__unknown_file ('
+%
+%16mage.abilities.effects.Effectsª∏
+5 5("
+%18void"Fmage.abilities.AbilityImpl#addEffect(Lmage/abilities/effects/Effect;)V*d
+
+__unknown_file (HF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect2*addEffect(Lmage/abilities/effects/Effect;)"
+6 6(
+""*Ñ
+startingBlock* *(;ó
+î
+) )(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+** *(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%19ä
+á
+) )(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+*6 *(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20*
+9*ª
+40R 0(WØ¨
+0R 0(e
+%8java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()“œ
+0m 0(z
+%9java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*d
+
+__unknown_file (HF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility2getSourceId()Ã…
+0R 0({
+%4boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%8java.util.UUID*2
+
+__unknown_file (
+
+%9java.util.UUID2equals(Ljava/lang/Object;)N
+L
+0R 0({
+%2boolean"__id*+
+
+__unknown_file (
+
+%4boolean*
+2
+1*é
+502 0(8®
+•
+02 0(8!
+%6mage.filter.FilterPermanent"__id*p
+
+__unknown_file (T*RF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility"
+filterÀ»
+02 0(O
+%7boolean"Amage.filter.FilterImpl#match(Ljava/lang/Object;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%6mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2)match(Ljava/lang/Object;Lmage/game/Game;)*
+2
+1*å
+60 0(ÒÓ
+0 0(.
+%5boolean"1mage.MageObject#isPlaneswalker(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2 isPlaneswalker(Lmage/game/Game;)*	
+2
+5
+1*¿
+7/ /( ®
+•
+/ /( !
+%1mage.filter.FilterPermanent"__id*p
+
+__unknown_file (T*RF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility"
+filter*
+4
+6*!
+8- -("
+- -(
+""*é
+9+ +(?ÚÔ
++ +(E#
+%0mage.game.permanent.Permanent"mmage.abilities.AbilityImpl#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*d
+
+__unknown_file (HF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)Å
+
++ +(F*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*
+7
+8*!
+18 8("
+8 8(
+"":/
+*  *(0#
+eventmage.game.events.GameEvent:"
+*1 *(:
+gamemage.game.GameBHF
+Dmage.abilities.common.DestroyPlaneswalkerWhenDamagedTriggeredAbilityHP

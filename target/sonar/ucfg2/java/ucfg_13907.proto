@@ -1,0 +1,695 @@
+
+◊mage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect#exileAndPlayFromExile(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/Set;Lmage/constants/TargetController;Lmage/constants/Duration;ZZZ)Zê
+ÉD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/asthought/PlayFromNotOwnHandZoneTargetEffect.java´ ´(/"16"17*&
+13
+≥ ≥("
+
+≥ ≥(
+""*Ø
+15
+∞ ∞( ≤Ø
+
+∞+ ∞(C
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÚÔ
+
+∞ ∞(D
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+
+∞ ∞(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Playeräá
+
+±" ±(>
+%3mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)j
+h
+
+± ±(?
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*
+13
+12*&
+16
+Æ Æ("
+
+Æ Æ(
+""*î
+17
+≠ ≠("xv
+
+≠ ≠(,
+%0boolean"java.util.Set#isEmpty()Z*4
+
+__unknown_file (
+
+cardsjava.util.Set2	isEmpty()*
+15
+16*%
+1
+” ”("
+
+” ”(
+""*Å
+2
+œ œ(Q
+O
+
+œ œ(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""î
+ë
+
+œ œ(
+cardmage.cards.Card"
+__arrayGet*:
+
+__unknown_file (
+
+cardsToPlayjava.util.Set*"
+
+__unknown_file (
+""*
+3
+1*ò
+3
+– –(¿Ω
+
+–# –(NZ
+%51Smage.abilities.effects.common.asthought.YouMaySpendManaAsAnyColorToCastTargetEffect"Smage.abilities.effects.common.asthought.YouMaySpendManaAsAnyColorToCastTargetEffectÀ
+»
+
+– –(X
+%52"vmage.abilities.effects.common.asthought.YouMaySpendManaAsAnyColorToCastTargetEffect#<init>(Lmage/constants/Duration;)V*x
+
+__unknown_file (\
+Z
+%51Smage.abilities.effects.common.asthought.YouMaySpendManaAsAnyColorToCastTargetEffect*A
+
+__unknown_file (%
+#
+durationmage.constants.Durationca
+
+–n –(y,
+%53%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¢
+ü
+–j –(Ö
+%54"Pmage.target.targetpointer.FixedTarget#<init>(Lmage/cards/Card;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%53%mage.target.targetpointer.FixedTarget*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game÷”
+– –(Ü.
+%55'mage.abilities.effects.ContinuousEffect"êmage.abilities.effects.ContinuousEffectImpl#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*x
+
+__unknown_file (\
+Z
+%51Smage.abilities.effects.common.asthought.YouMaySpendManaAsAnyColorToCastTargetEffect*J
+
+__unknown_file (.
+,
+%53%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)çä
+– –(è
+%56void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*L
+
+__unknown_file (0
+.
+%55'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+2*û
+5
+≈  ≈(%ß§
+
+≈  ∆(
+%33java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*4
+
+__unknown_file (
+
+cardsjava.util.Set2stream()äá
+
+≈  «('
+%34java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%33java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;){
+y
+
+» »(Y#
+%35java.util.function.Predicate"__declareFunction*3
+
+__unknown_file (
+__sonar_lambda_283$à
+Ö
+
+__unknown_file (-
+#
+%35java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game±Æ
+
+≈  »(Z
+%41java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%34java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%35java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)∞
+≠
+
+… …(+!
+%42java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsúô
+
+≈  …(,
+%43java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%41java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%42java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)f
+d
+
+≈ …(-
+cardsToPlayjava.util.Set"__id*2
+
+__unknown_file (
+
+%43java.util.SetT
+R
+
+ÀI À(T
+%44mage.constants.Zone"__id*"
+
+__unknown_file (
+""Æ´
+
+À& À(HQ
+%45Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect"Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect≈
+¬
+À" À(å
+%46"•mage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect#<init>(Lmage/constants/Zone;Lmage/constants/TargetController;Lmage/constants/Duration;ZZ)V*o
+
+__unknown_file (S
+Q
+%45Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect*8
+
+__unknown_file (
+
+%44mage.constants.Zone*N
+
+__unknown_file (2
+0
+allowedCastermage.constants.TargetController*A
+
+__unknown_file (%
+#
+durationmage.constants.Duration*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""∫
+∑
+À À(ç1
+effect'mage.abilities.effects.ContinuousEffect"__id*o
+
+__unknown_file (S
+Q
+%45Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffectec
+
+Ã$ Ã(0-
+%47&mage.target.targetpointer.FixedTargets"&mage.target.targetpointer.FixedTargets¶
+£
+
+Ã  Ã(C
+%48"Omage.target.targetpointer.FixedTargets#<init>(Ljava/util/Set;Lmage/game/Game;)V*K
+
+__unknown_file (/
+-
+%47&mage.target.targetpointer.FixedTargets*:
+
+__unknown_file (
+
+cardsToPlayjava.util.Set*4
+
+__unknown_file (
+
+gamemage.game.Game©¶
+
+Ã Ã(D.
+%49'mage.abilities.effects.ContinuousEffect"åmage.abilities.effects.ContinuousEffect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*K
+
+__unknown_file (/
+-
+%47&mage.target.targetpointer.FixedTargets2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)èå
+
+Õ Õ(&
+%50void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+2
+1*%
+6
+¡ ¡("
+
+¡ ¡(
+""*∞
+7
+¿ ¿(ñì
+
+¿ ¿(W
+%32boolean"Åmage.players.Player#moveCardsToExile(Ljava/util/Set;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*4
+
+__unknown_file (
+
+cardsjava.util.Set*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2*7
+
+__unknown_file (
+
+exileIdjava.util.UUID*;
+
+__unknown_file (
+
+	exileNamejava.lang.String2lmoveCardsToExile(Ljava/util/Set;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)*
+5
+6*À
+8
+æ æ(ïí
+
+æ æ(
+%29mage.game.Exile"*mage.game.Game#getExile()Lmage/game/Exile;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getExile()‹Ÿ
+
+æ æ(:
+%30mage.game.ExileZone"Smage.game.Exile#createZone(Ljava/util/UUID;Ljava/lang/String;)Lmage/game/ExileZone;*4
+
+__unknown_file (
+
+%29mage.game.Exile*7
+
+__unknown_file (
+
+exileIdjava.util.UUID*;
+
+__unknown_file (
+
+	exileNamejava.lang.String2.createZone(Ljava/util/UUID;Ljava/lang/String;)Ω∫
+
+æ æ(T
+%31void"+mage.game.ExileZone#setCleanupOnEndTurn(Z)V*8
+
+__unknown_file (
+
+%30mage.game.ExileZone* 
+
+__unknown_file (22setCleanupOnEndTurn(Z)*
+7*Û
+9
+∫ ª(iÑ
+Å
+
+∫ ª(i
+%23java.lang.String"__concat*'
+
+∫ ∫(B
+
+%15java.lang.String*'
+
+ª ª(i
+
+%18java.lang.Strings
+q
+
+∫ º(
+%24java.lang.String"__concat*'
+
+∫ ª(i
+
+%23java.lang.String*
+
+º º(	
+ for •¢
+
+º º(0
+%25java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()Ñ
+Å
+
+∫ º(0
+%26java.lang.String"__concat*'
+
+∫ º(
+
+%24java.lang.String*'
+
+º º(0
+
+%25java.lang.Stringj
+h
+
+∫ º(1
+	exileNamejava.lang.String"__id*5
+
+__unknown_file (
+
+%26java.lang.StringX
+V
+
+Ω Ω(
+%27mage.constants.Duration"__id*"
+
+__unknown_file (
+""ËÂ
+
+Ω Ω(/
+%28boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*<
+
+__unknown_file ( 
+
+%27mage.constants.Duration*A
+
+__unknown_file (%
+#
+durationmage.constants.Duration2equals(Ljava/lang/Object;)*
+7
+8*{
+10
+ªf ª(hd
+b
+
+ªf ª(h
+%18java.lang.String"__id*5
+
+__unknown_file (
+
+%20java.lang.String*
+9*ê
+11
+ª9 ª(Dùö
+
+ªG ª(V
+%21mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÜÉ
+
+ªG ª(c
+
+%22int"!mage.game.GameState#getTurnNum()I*8
+
+__unknown_file (
+
+%21mage.game.GameState2getTurnNum()j
+h
+
+ª9 ª(c
+%19java.lang.String"__concat*
+
+ª9 ª(D
+	 on turn *
+
+ªG ª(c
+
+
+%22intd
+b
+
+ª9 ª(c
+%18java.lang.String"__id*5
+
+__unknown_file (
+
+%19java.lang.String*
+9*›
+12
+µ µ(ñì
+
+∂ ∂("
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()îë
+
+∂ ∂(-
+%5java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*2
+
+__unknown_file (
+
+%4java.util.UUID2
+toString()m
+k
+
+∂ ∑(
+%6java.lang.String"__concat*&
+
+∂ ∂(-
+
+%5java.lang.String*
+
+∑ ∑(
+-úô
+
+∑  ∑(/
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÑÅ
+
+∑  ∑(<	
+%8int"!mage.game.GameState#getTurnNum()I*7
+
+__unknown_file (
+
+%7mage.game.GameState2getTurnNum()s
+q
+
+∂ ∑(<
+%9java.lang.String"__concat*&
+
+∂ ∑(
+
+%6java.lang.String*
+
+∑  ∑(<
+	
+%8intn
+l
+
+∂ ∏(
+%10java.lang.String"__concat*&
+
+∂ ∑(<
+
+%9java.lang.String*
+
+∏ ∏(
+-£†
+
+∏  ∏(8
+%11java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()Ñ
+Å
+
+∂ ∏(8
+%12java.lang.String"__concat*'
+
+∂ ∏(
+
+%10java.lang.String*'
+
+∏  ∏(8
+
+%11java.lang.Stringû
+õ
+
+µ π(	
+%13java.util.UUID"Umage.util.CardUtil#getExileZoneId(Ljava/lang/String;Lmage/game/Game;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*5
+
+__unknown_file (
+
+%12java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Gamed
+b
+
+µ π(
+
+exileIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%13java.util.UUID£†
+
+∫ ∫(3
+%14java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()x
+v
+
+∫ ∫(B
+%15java.lang.String"__concat*'
+
+∫ ∫(3
+
+%14java.lang.String*
+
+∫6 ∫(B
+
+ free playX
+V
+
+ª ª(%
+%16mage.constants.Duration"__id*"
+
+__unknown_file (
+""ËÂ
+
+ª ª(6
+%17boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*<
+
+__unknown_file ( 
+
+%16mage.constants.Duration*A
+
+__unknown_file (%
+#
+durationmage.constants.Duration2equals(Ljava/lang/Object;)*
+10
+11:$
+
+´0 ´(:
+gamemage.game.Game:.
+
+´; ´(J 
+sourcemage.abilities.Ability:$
+
+´K ´([
+cardsjava.util.Set:>
+
+´\ ´({0
+allowedCastermage.constants.TargetController:1
+
+¨0 ¨(B#
+durationmage.constants.Duration: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+""BN"L
+Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffectHP

@@ -1,0 +1,113 @@
+
+Smage.server.game.GamesRoomManagerImpl#getRoom(Ljava/util/UUID;)Ljava/util/Optional;o
+eD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GamesRoomManagerImpl.java4 4(&"startingBlock*Ë
+26 6(ì
+ê
+6 6($,
+%2&java.util.concurrent.ConcurrentHashMap"__id*P
+
+__unknown_file (4*2'
+%mage.server.game.GamesRoomManagerImpl"
+roomsΩ
+∫
+6 6(0 
+%3mage.server.game.GamesRoom"__mapGet*J
+
+__unknown_file (.
+,
+%2&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+roomIdjava.util.UUID⁄
+◊
+6 6(1
+%4java.util.Optional"=java.util.Optional#of(Ljava/lang/Object;)Ljava/util/Optional;*2
+
+__unknown_file ("
+java.util.Optional*>
+
+__unknown_file ("
+ 
+%3mage.server.game.GamesRoom"&
+6 6(2
+
+%4java.util.Optional*∏
+35 5(ì
+ê
+5 5(,
+%0&java.util.concurrent.ConcurrentHashMap"__id*P
+
+__unknown_file (4*2'
+%mage.server.game.GamesRoomManagerImpl"
+roomsäá
+5 5(%
+%1boolean"Gjava.util.concurrent.ConcurrentHashMap#containsKey(Ljava/lang/Object;)Z*J
+
+__unknown_file (.
+,
+%0&java.util.concurrent.ConcurrentHashMap*6
+
+__unknown_file (
+
+roomIdjava.util.UUID2containsKey(Ljava/lang/Object;)*
+2
+1*Ü
+startingBlock4& 4(3ã
+à
+3 3(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+roomIdjava.util.UUIDX
+V
+4, 4(2
+roomIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%9*
+3*Û
+18 8(U
+S
+8 8(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""y
+w
+8 8(0
+%6java.lang.String"__concat*!
+8 8('
+room not found : *&
+8* 8(0
+
+roomIdjava.util.UUID€ÿ
+8 8(1
+
+%7void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%6java.lang.String2warn(Ljava/lang/Object;)ã
+à
+9 9(
+%8java.util.Optional".java.util.Optional#empty()Ljava/util/Optional;*2
+
+__unknown_file ("
+java.util.Optional"&
+9 9( 
+
+%8java.util.Optional:$
+4' 4(2
+roomIdjava.util.UUIDB)'
+%mage.server.game.GamesRoomManagerImplH

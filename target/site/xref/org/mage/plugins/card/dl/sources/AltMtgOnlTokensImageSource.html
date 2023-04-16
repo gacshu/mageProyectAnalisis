@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>AltMtgOnlTokensImageSource xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/mage/plugins/card/dl/sources/AltMtgOnlTokensImageSource.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.plugins.card.dl.sources;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.dl.DownloadServiceInfo;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.images.CardDownloadData;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.HashMap;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> enum <a name="AltMtgOnlTokensImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/AltMtgOnlTokensImageSource.html#AltMtgOnlTokensImageSource">AltMtgOnlTokensImageSource</a> <strong class="jxr_keyword">implements</strong> <a name="CardImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageSource.html#CardImageSource">CardImageSource</a> {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      instance;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = Logger.getLogger(AltMtgOnlTokensImageSource.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> maxTimes = 0;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      @Override
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">public</strong> String getSourceName() {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"http://alternative.mtg.onl/tokens/"</span>;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      }
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      @Override
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">float</strong> getAverageSize() {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">return</strong> 26.7f;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      }
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      @Override
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">public</strong> String getNextHttpImageUrl() {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              setupLinks();
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          }
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">for</strong> (String key : copyUrlToImageDone.keySet()) {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              <strong class="jxr_keyword">if</strong> (copyUrlToImageDone.get(key) &lt; maxTimes) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                  copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                  <strong class="jxr_keyword">return</strong> key;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>              }
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">if</strong> (maxTimes &lt; 2) {
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>              maxTimes++;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          }
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">for</strong> (String key : copyUrlToImageDone.keySet()) {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              <strong class="jxr_keyword">if</strong> (copyUrlToImageDone.get(key) &lt; maxTimes) {
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>                  copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>                  <strong class="jxr_keyword">return</strong> key;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              }
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          }
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      @Override
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <strong class="jxr_keyword">public</strong> String getFileForHttpImage(String httpImageUrl) {
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">if</strong> (httpImageUrl != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>              <strong class="jxr_keyword">return</strong> copyUrlToImage.get(httpImageUrl);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      }
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      @Override
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> prepareDownloadList(<a name="DownloadServiceInfo" href="../../../../../../org/mage/plugins/card/dl/DownloadServiceInfo.html#DownloadServiceInfo">DownloadServiceInfo</a> downloadServiceInfo, List&lt;CardDownloadData&gt; downloadList) {
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      }
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      @Override
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateCardUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      Map&lt;String, String&gt; copyUrlToImage = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      Map&lt;String, String&gt; copyImageToUrl = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      Map&lt;String, Integer&gt; copyUrlToImageDone = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setupLinks() {
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <strong class="jxr_keyword">if</strong> (copyUrlToImage != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          }
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          copyUrlToImage = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          copyImageToUrl = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          copyUrlToImageDone = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_CC_002-Penguin.jpg"</span>, <span class="jxr_string">"BIRD.WU.BIRD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_CC_005-Vampire.jpg"</span>, <span class="jxr_string">"VAMPIRE.B.VAMPIRE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_CC_006-Panda.jpg"</span>, <span class="jxr_string">"BEAR.G.BEAR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_CC_008-Force-of-Squirrel.jpg"</span>, <span class="jxr_string">"SQUIRREL.G.SQUIRREL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_CC_013-Zombie.jpg"</span>, <span class="jxr_string">"ZOMBIE.B.ZOMBIE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_003-Ooze.jpg"</span>, <span class="jxr_string">"OOZE.G.OOZE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_005-Mammoth.jpg"</span>, <span class="jxr_string">"ELEPHANT.G.ELEPHANT.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_006-Wurm.jpg"</span>, <span class="jxr_string">"WURM.G.WURM.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_007-Rat.jpg"</span>, <span class="jxr_string">"RAT.B.RAT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_010-Wolf.jpg"</span>, <span class="jxr_string">"WOLF.G.WOLF.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_011-Bee.jpg"</span>, <span class="jxr_string">"INSECT.G.INSECT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_012-Bunny.jpg"</span>, <span class="jxr_string">"RABBIT.G.RABBIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_013-Piglet.jpg"</span>, <span class="jxr_string">"BOAR.G.BOAR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_014-Monkey.jpg"</span>, <span class="jxr_string">"APE.G.APE.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          copyUrlToImage.put(<span class="jxr_string">"SCG_GN_015-Kraken.jpg"</span>, <span class="jxr_string">"KRAKEN.U.KRAKEN.CREATURE.9.9.full.jpg"</span>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_GN_016-Hippo.jpg"</span>, <span class="jxr_string">"HIPPO.G.HIPPO.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_GN_019-Reindeer.jpg"</span>, <span class="jxr_string">"CARIBOU.W.CARIBOU.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_GN_020-Grizzlybrand.jpg"</span>, <span class="jxr_string">"DEMON.B.DEMON.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_002-Elemental.jpg"</span>, <span class="jxr_string">"ELEMENTAL.BR.ELEMENTAL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_003-Soldier.jpg"</span>, <span class="jxr_string">"SOLDIER.W.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_005-Spirit.jpg "</span>, <span class="jxr_string">"SPIRIT.W.SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_010-Golem.jpg"</span>, <span class="jxr_string">"GOLEM..GOLEM.ARTIFACTCREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_011-Pegasus.jpg"</span>, <span class="jxr_string">"PEGASUS.W.PEGASUS.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_012-Soldier.jpg"</span>, <span class="jxr_string">"SOLDIER.WR.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_016-Rhino.jpg"</span>, <span class="jxr_string">"RHINO.G.RHINO.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_IP_017-Spider.jpg"</span>, <span class="jxr_string">"SPIDER.B.SPIDER.CREATURE.1.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_PO_003-Spirit.jpg"</span>, <span class="jxr_string">"SPIRIT..SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_PO_007-Dragon.jpg"</span>, <span class="jxr_string">"DRAGON.R.DRAGON.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_PO_009-Faerie.jpg"</span>, <span class="jxr_string">"FAERIE.U.FAERIE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_PO_010-Goblin.jpg"</span>, <span class="jxr_string">"GOBLIN.R.GOBLIN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_P_001-Angel.jpg"</span>, <span class="jxr_string">"ANGEL.W.ANGEL.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_P_002-Penguin.jpg"</span>, <span class="jxr_string">"BIRD.W.BIRD.CREATURE.3.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_RC_001-Kitten.jpg"</span>, <span class="jxr_string">"CAT.B.CAT.CREATURE.2.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_RC_002-Penguin.jpg"</span>, <span class="jxr_string">"BIRD.U.BIRD.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_RC_009-Aia,-Ascended.jpg"</span>, <span class="jxr_string">"AVATAR.W.AVATAR.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_SC_001-Cyclops.jpg"</span>, <span class="jxr_string">"BEAST.G.BEAST.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         copyUrlToImage.put(<span class="jxr_string">"SCG_SC_002-Soldier.jpg"</span>, <span class="jxr_string">"SOLDIER.R.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L122" href="#L122">122</a> 
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> 
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         <strong class="jxr_keyword">for</strong> (String key : copyUrlToImage.keySet()) {
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>             copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>             copyImageToUrl.put(copyUrlToImage.get(key), key);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         }
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     }
+<a class="jxr_linenumber" name="L129" href="#L129">129</a> 
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>     @Override
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateTokenUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>             setupLinks();
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         }
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>     }
+<a class="jxr_linenumber" name="L137" href="#L137">137</a> 
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>     @Override
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getTotalImages() {
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>             setupLinks();
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         }
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>             <strong class="jxr_keyword">return</strong> copyImageToUrl.size();
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         }
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         <strong class="jxr_keyword">return</strong> -1;
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>     }
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> 
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>     @Override
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isTokenSource() {
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     }
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> 
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     @Override
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardSource() {
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>     }
+<a class="jxr_linenumber" name="L158" href="#L158">158</a> 
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>     @Override
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doPause(String httpImageUrl) {
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>     }
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> 
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     @Override
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardImageProvided(String setCode, String cardName) {
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <em class="jxr_comment">// no cards support, only tokens</em>
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>     }
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,648 @@
+
+|mage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zè
+ÑD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/PutCardFromOneOfTwoZonesOntoBattlefieldEffect.javaV V("startingBlock*Ä
+13n& n(2k
+i
+n& n(2
+%19mage.cards.Cards"__id*>
+
+__unknown_file ("
+ 
+cardsInZone1mage.cards.Cards*
+7*í
+24\ \(-¶
+£
+\@ \(E
+%2mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone1Ô
+Ï
+\ \(F
+%3mage.cards.Cards"™mage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect#getCardsFromZone(Lmage/game/Game;Lmage/players/Player;Lmage/constants/Zone;)Lmage/cards/Cards;*k
+
+__unknown_file (O"M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*7
+
+__unknown_file (
+
+%2mage.constants.Zonej
+h
+\ \(G 
+cardsInZone1mage.cards.Cards"__id*4
+
+__unknown_file (
+
+%3mage.cards.Cards¶
+£
+]@ ](E
+%4mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone2Ô
+Ï
+] ](F
+%5mage.cards.Cards"™mage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect#getCardsFromZone(Lmage/game/Game;Lmage/players/Player;Lmage/constants/Zone;)Lmage/cards/Cards;*k
+
+__unknown_file (O"M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*7
+
+__unknown_file (
+
+%4mage.constants.Zonej
+h
+] ](G 
+cardsInZone2mage.cards.Cards"__id*4
+
+__unknown_file (
+
+%5mage.cards.CardsÆ
+´
+_; _(E
+%6mage.filter.FilterCard"__id*{
+
+__unknown_file (_*]M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+
+filterCardæª
+_( _(L	
+%7int"Amage.cards.Cards#count(Lmage/filter/FilterCard;Lmage/game/Game;)I*>
+
+__unknown_file ("
+ 
+cardsInZone1mage.cards.Cards*:
+
+__unknown_file (
+
+%6mage.filter.FilterCard*4
+
+__unknown_file (
+
+gamemage.game.Game2/count(Lmage/filter/FilterCard;Lmage/game/Game;)Æ
+´
+`; `(E
+%8mage.filter.FilterCard"__id*{
+
+__unknown_file (_*]M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+
+filterCardæª
+`( `(L	
+%9int"Amage.cards.Cards#count(Lmage/filter/FilterCard;Lmage/game/Game;)I*>
+
+__unknown_file ("
+ 
+cardsInZone2mage.cards.Cards*:
+
+__unknown_file (
+
+%8mage.filter.FilterCard*4
+
+__unknown_file (
+
+gamemage.game.Game2/count(Lmage/filter/FilterCard;Lmage/game/Game;)*
+15
+16
+19
+22*É
+14m m(2i
+g
+m m(2
+zonemage.constants.Zone"__id*8
+
+__unknown_file (
+
+%16mage.constants.Zone*
+13
+12*"
+25Y Y("
+Y Y(
+""*®
+15m, m(1ß
+§
+m, m(1
+%18mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone2h
+f
+m, m(1
+%16mage.constants.Zone"__id*8
+
+__unknown_file (
+
+%18mage.constants.Zone*
+14*Æ
+26W W( ∞≠
+W+ W(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+W W(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+W W(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+24
+25*®
+16m$ m()ß
+§
+m$ m()
+%17mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone1h
+f
+m$ m()
+%16mage.constants.Zone"__id*8
+
+__unknown_file (
+
+%17mage.constants.Zone*
+14*ı
+19g g(&¨
+©
+g1 g(8
+%10mage.constants.Outcome"__id*x
+
+__unknown_file (\*ZM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"	
+outcomeß
+§
+h h(
+%11mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone1ëé
+h h(&
+%12java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*8
+
+__unknown_file (
+
+%11mage.constants.Zone2name()ß
+§
+h( h(-
+%13mage.constants.Zone"__id*v
+
+__unknown_file (Z*XM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+zone2ëé
+h( h(4
+%14java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*8
+
+__unknown_file (
+
+%13mage.constants.Zone2name()Ø¨
+g h(C
+%15boolean"®mage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%10mage.constants.Outcome*I
+
+__unknown_file (-+
+)Where do you want to chose the card from?*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+%12java.lang.String*5
+
+__unknown_file (
+
+%14java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ìchooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+15
+16*%
+1
+à à("
+
+à à(
+""*‘
+2
+Ö Ö($«
+ƒ
+
+Ö Ö($$
+%39mage.abilities.effects.Effect"__id*â
+
+__unknown_file (m*kM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+effectToApplyOnPermanentçä
+
+ÖF Ö(R
+%40java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()ca
+
+Ö: Ö(E,
+%41%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÿ
+’
+
+Ö6 Ö(S
+%42"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%41%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%40java.util.UUID¸˘
+
+Ö Ö(T$
+%43mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*B
+
+__unknown_file (&
+$
+%39mage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%41%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)«
+ƒ
+
+Ü Ü($$
+%44mage.abilities.effects.Effect"__id*â
+
+__unknown_file (m*kM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+effectToApplyOnPermanent⁄◊
+
+Ü Ü(8
+%45boolean"Nmage.abilities.effects.Effect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*B
+
+__unknown_file (&
+$
+%44mage.abilities.effects.Effect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)*
+1*·
+3
+Ñ Ñ($«
+ƒ
+
+Ñ Ñ($$
+%38mage.abilities.effects.Effect"__id*â
+
+__unknown_file (m*kM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+effectToApplyOnPermanent*
+2
+1*ˇ
+startingBlockV V(3ä
+á
+U U(
+%46"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+V V("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%46î
+ë
+U U(
+%47"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+V, V(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%47*
+26*%
+4
+Å Å("
+
+Å Å(
+""*±
+5
+Ä Ä('T
+R
+
+Ä8 Ä(H
+%36mage.constants.Zone"__id*"
+
+__unknown_file (
+""¡æ
+
+Ä Ä(s
+%37boolean"Åmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;ZZZLjava/util/List;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%36mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""*
+
+__unknown_file (2 *
+
+__unknown_file (2 *"
+
+__unknown_file (
+""2lmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;ZZZLjava/util/List;)*
+3
+4*‰	
+6~ ~(¨
+©
+~ ~(!
+%32mage.constants.Outcome"__id*x
+
+__unknown_file (\*ZM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"	
+outcomeõò
+~ ~(;
+%33boolean"omage.players.Player#choose(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%32mage.constants.Outcome*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*B
+
+__unknown_file (&
+$
+
+targetCardmage.target.TargetCard*4
+
+__unknown_file (
+
+gamemage.game.Game2Zchoose(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/game/Game;)≥∞
+! (<
+%34java.util.UUID"7mage.target.TargetImpl#getFirstTarget()Ljava/util/UUID;*B
+
+__unknown_file (&
+$
+
+targetCardmage.target.TargetCard2getFirstTarget()Ê„
+ (=
+%35mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%34java.util.UUID2getCard(Ljava/util/UUID;)a
+_
+ (>
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%35mage.cards.Card*
+4
+5*›
+7n n(Bd
+b
+n n(B
+cardsmage.cards.Cards"__id*5
+
+__unknown_file (
+
+%19mage.cards.Cards\
+Z
+o o($
+
+targetCardmage.target.TargetCard"__id*"
+
+__unknown_file (
+""R
+P
+r r(
+%29mage.constants.Zone"__id*"
+
+__unknown_file (
+""R
+P
+u u(
+%30mage.constants.Zone"__id*"
+
+__unknown_file (
+""R
+P
+x x(
+%31mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+8
+9
+10
+11*!
+8{ |("
+| |(
+""*±
+9x z(Ø
+¨
+y9 y(C
+%26mage.filter.FilterCard"__id*{
+
+__unknown_file (_*]M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+
+filterCardki
+y! y(81
+%27*mage.target.common.TargetCardInCommandZone"*mage.target.common.TargetCardInCommandZone
+Ì
+y y(D
+%28"Lmage.target.common.TargetCardInCommandZone#<init>(Lmage/filter/FilterCard;)V*O
+
+__unknown_file (3
+1
+%27*mage.target.common.TargetCardInCommandZone*;
+
+__unknown_file (
+
+%26mage.filter.FilterCardä
+á
+y y(D$
+
+targetCardmage.target.TargetCard"__id*O
+
+__unknown_file (3
+1
+%27*mage.target.common.TargetCardInCommandZone*
+6*®
+10u w(Ø
+¨
+v7 v(A
+%23mage.filter.FilterCard"__id*{
+
+__unknown_file (_*]M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+
+filterCardge
+v! v(6/
+%24(mage.target.common.TargetCardInGraveyard"(mage.target.common.TargetCardInGraveyardÏ
+È
+v v(B
+%25"Jmage.target.common.TargetCardInGraveyard#<init>(Lmage/filter/FilterCard;)V*M
+
+__unknown_file (1
+/
+%24(mage.target.common.TargetCardInGraveyard*;
+
+__unknown_file (
+
+%23mage.filter.FilterCardà
+Ö
+v v(B$
+
+targetCardmage.target.TargetCard"__id*M
+
+__unknown_file (1
+/
+%24(mage.target.common.TargetCardInGraveyard*
+6*"
+22b b("
+b b(
+""*è
+11r t(Ø
+¨
+s2 s(<
+%20mage.filter.FilterCard"__id*{
+
+__unknown_file (_*]M
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffect"
+
+filterCard][
+s! s(1*
+%21#mage.target.common.TargetCardInHand"#mage.target.common.TargetCardInHand‚
+ﬂ
+s s(=
+%22"Emage.target.common.TargetCardInHand#<init>(Lmage/filter/FilterCard;)V*H
+
+__unknown_file (,
+*
+%21#mage.target.common.TargetCardInHand*;
+
+__unknown_file (
+
+%20mage.filter.FilterCardÉ
+Ä
+s s(=$
+
+targetCardmage.target.TargetCard"__id*H
+
+__unknown_file (,
+*
+%21#mage.target.common.TargetCardInHand*
+6*Ä
+12n5 n(Ak
+i
+n5 n(A
+%19mage.cards.Cards"__id*>
+
+__unknown_file ("
+ 
+cardsInZone2mage.cards.Cards*
+7:"
+V V(#
+gamemage.game.Game:,
+V$ V(2 
+sourcemage.abilities.AbilityBOM
+Kmage.abilities.effects.common.PutCardFromOneOfTwoZonesOntoBattlefieldEffectHP

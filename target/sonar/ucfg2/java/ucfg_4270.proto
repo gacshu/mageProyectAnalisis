@@ -1,0 +1,283 @@
+
+nmage.abilities.effects.common.continuous.BoostOpponentsEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z€
+vD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BoostOpponentsEffect.java? ?("startingBlock*!
+1U U("
+U U(
+""*
+2N N(]
+[
+N N(%
+permmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""™
+–
+N N(%
+permmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%15java.util.List*"
+
+__unknown_file (
+""*
+4
+1*˜
+3P P(¼¹
+P P((
+%18void"*mage.game.permanent.Permanent#addPower(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addPower(I)ÄÁ
+Q Q(0
+%19void".mage.game.permanent.Permanent#addToughness(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addToughness(I)*
+2*ÿ
+startingBlock? ?(3Š
+‡
+> >(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+? ?("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20”
+‘
+> >(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+?, ?(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21*
+12*¨
+4O O(¶³
+O' O(=
+%16java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getControllerId()×Ô
+O O(>
+%17boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	opponentsjava.util.Set*3
+
+__unknown_file (
+
+%16java.util.UUID2contains(Ljava/lang/Object;)*
+2
+3*®	
+5N" N(&¿¼
+N" N(7&
+%12mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()±
+®
+NL N(R1
+%13*mage.filter.common.FilterCreaturePermanent"__id*i
+
+__unknown_file (M*K?
+=mage.abilities.effects.common.continuous.BoostOpponentsEffect"
+filter±®
+NT N(l
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ïì
+N" N({
+%15java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%12mage.game.permanent.Battlefield*O
+
+__unknown_file (3
+1
+%13*mage.filter.common.FilterCreaturePermanent*3
+
+__unknown_file (
+
+%14java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*Ž
+6J J(yw
+J J(
+%11void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()*
+10*˜
+7F F(»¸
+F F(,
+
+%9void"*mage.game.permanent.Permanent#addPower(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addPower(I)ÄÁ
+G G(4
+%10void".mage.game.permanent.Permanent#addToughness(I)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addToughness(I)*
+10*¦
+8E E(!µ²
+E+ E(A
+%7java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getControllerId()ÕÒ
+E E(B
+%8boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	opponentsjava.util.Set*2
+
+__unknown_file (
+
+%7java.util.UUID2contains(Ljava/lang/Object;)*
+7
+10*Ñ
+9C! C(#š—
+C! C(*
+%5mage.MageObjectReference"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()ž›
+C! C(=#
+%6mage.game.permanent.Permanent"Vmage.MageObjectReference#getPermanent(Lmage/game/Game;)Lmage/game/permanent/Permanent;*<
+
+__unknown_file ( 
+
+%5mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanent(Lmage/game/Game;)|
+z
+C C(>%
+permmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+6
+8*•
+10BS B(U}{
+BS B(_
+%4boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+9
+1*¶
+11B4 B(F 
+
+B4 B(F
+%2java.util.List"__id*u
+
+__unknown_file (Y*W?
+=mage.abilities.effects.common.continuous.BoostOpponentsEffect"
+affectedObjectList–“
+B4 B(Q
+%3java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%2java.util.List2
+iterator()d
+b
+B B(Q
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%3java.util.Iterator*
+10*š
+12@ @("°­
+@0 @(H
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()êç
+@ @(I
+%1java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getOpponents(Ljava/util/UUID;)a
+_
+@ @(J
+	opponentsjava.util.Set"__id*1
+
+__unknown_file (
+
+%1java.util.Set*
+5
+11:"
+? ?(#
+gamemage.game.Game:,
+?$ ?(2 
+sourcemage.abilities.AbilityBA?
+=mage.abilities.effects.common.continuous.BoostOpponentsEffectHP

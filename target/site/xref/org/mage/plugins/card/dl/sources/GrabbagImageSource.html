@@ -1,0 +1,550 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>GrabbagImageSource xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/mage/plugins/card/dl/sources/GrabbagImageSource.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.plugins.card.dl.sources;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.dl.DownloadServiceInfo;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.images.CardDownloadData;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeUnit;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> enum <a name="GrabbagImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/GrabbagImageSource.html#GrabbagImageSource">GrabbagImageSource</a> <strong class="jxr_keyword">implements</strong> <a name="CardImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageSource.html#CardImageSource">CardImageSource</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      instance;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger LOGGER = Logger.getLogger(GrabbagImageSource.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Set&lt;String&gt; supportedSets = <strong class="jxr_keyword">new</strong> LinkedHashSet&lt;String&gt;() {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          {
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>              add(<span class="jxr_string">"SWS"</span>);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          }
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      };
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      @Override
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <strong class="jxr_keyword">public</strong> String getSourceName() {
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Grabbag"</span>;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>      }
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      @Override
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">float</strong> getAverageSize() {
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">return</strong> 74.8f;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      }
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      @Override
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <strong class="jxr_keyword">public</strong> String getNextHttpImageUrl() {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      }
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      @Override
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      <strong class="jxr_keyword">public</strong> String getFileForHttpImage(String httpImageUrl) {
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      @Override
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> prepareDownloadList(<a name="DownloadServiceInfo" href="../../../../../../org/mage/plugins/card/dl/DownloadServiceInfo.html#DownloadServiceInfo">DownloadServiceInfo</a> downloadServiceInfo, List&lt;CardDownloadData&gt; downloadList) {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      @Override
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateCardUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">if</strong> (singleLinks == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>              setupLinks();
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          }
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <em class="jxr_comment">// multiple images card use special a,b,c,d versions</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          String url;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          String postfix = card.getCollectorIdPostfix();
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <strong class="jxr_keyword">if</strong> (postfix.isEmpty()) {
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>              url = singleLinks.get(card.getSet() + <span class="jxr_string">"/"</span> + card.getName());
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>              url = singleLinks.get(card.getSet() + <span class="jxr_string">"/"</span> + card.getName() + <span class="jxr_string">"-"</span> + postfix);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          }
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">if</strong> (url != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a>(getSourceName(card, url) + url);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          }
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      }
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      Map&lt;String, String&gt; singleLinks = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setupLinks() {
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">if</strong> (singleLinks != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          }
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          singleLinks = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          singleLinks.put(<span class="jxr_string">"SWS/AAT-1"</span>, <span class="jxr_string">"CqmDY8V.jpg"</span>);
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          singleLinks.put(<span class="jxr_string">"SWS/Acklay of the Arena"</span>, <span class="jxr_string">"ESVRm6F.jpg"</span>);
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          singleLinks.put(<span class="jxr_string">"SWS/Acquire Target"</span>, <span class="jxr_string">"FOskB4q.jpg"</span>);
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          singleLinks.put(<span class="jxr_string">"SWS/Admiral Ackbar"</span>, <span class="jxr_string">"JdGpP3p.jpg"</span>);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          singleLinks.put(<span class="jxr_string">"SWS/Adroit Hateflayer"</span>, <span class="jxr_string">"0gSIQ4K.jpg"</span>);
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          singleLinks.put(<span class="jxr_string">"SWS/Anakin Skywalker"</span>, <span class="jxr_string">"3pGvZZEg.png"</span>);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          singleLinks.put(<span class="jxr_string">"SWS/Ancient Holocron"</span>, <span class="jxr_string">"fH2dVP5.jpg"</span>);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          singleLinks.put(<span class="jxr_string">"SWS/Aqualish Bounty Hunter"</span>, <span class="jxr_string">"Wm2aKa2.jpg"</span>);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          singleLinks.put(<span class="jxr_string">"SWS/Armed Protocol Droid"</span>, <span class="jxr_string">"mywdKgN.jpg"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          singleLinks.put(<span class="jxr_string">"SWS/Arrest"</span>, <span class="jxr_string">"VXLnNUo.jpg"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          singleLinks.put(<span class="jxr_string">"SWS/Asajj Ventress"</span>, <span class="jxr_string">"rOXSIwO.jpg"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          singleLinks.put(<span class="jxr_string">"SWS/AT-ST"</span>, <span class="jxr_string">"9sMcy3C.jpg"</span>);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          singleLinks.put(<span class="jxr_string">"SWS/Aurra Sing, Bane of Jedi"</span>, <span class="jxr_string">"VgbndqZ.png"</span>);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          singleLinks.put(<span class="jxr_string">"SWS/A-Wing"</span>, <span class="jxr_string">"4TaYoRO.jpg"</span>);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          singleLinks.put(<span class="jxr_string">"SWS/Bantha Herd"</span>, <span class="jxr_string">"9rLPE2a.jpg"</span>);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          singleLinks.put(<span class="jxr_string">"SWS/Bathe in Bacta"</span>, <span class="jxr_string">"sPynQAZ.jpg"</span>);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          singleLinks.put(<span class="jxr_string">"SWS/Battle Tactics"</span>, <span class="jxr_string">"zoon1p4.jpg"</span>);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          singleLinks.put(<span class="jxr_string">"SWS/Bib Fortuna"</span>, <span class="jxr_string">"AqAmOEw.jpg"</span>);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          singleLinks.put(<span class="jxr_string">"SWS/Black Market Dealer"</span>, <span class="jxr_string">"EJpIxna.jpg"</span>);
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          singleLinks.put(<span class="jxr_string">"SWS/Blind Worship"</span>, <span class="jxr_string">"GonJyeF.jpg"</span>);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          singleLinks.put(<span class="jxr_string">"SWS/Boba Fett"</span>, <span class="jxr_string">"XE83Ks7.jpg"</span>);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          singleLinks.put(<span class="jxr_string">"SWS/Bossk"</span>, <span class="jxr_string">"m91vUdJ.jpg"</span>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         singleLinks.put(<span class="jxr_string">"SWS/Bounty Collector"</span>, <span class="jxr_string">"GHHxvb0.jpg"</span>);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         singleLinks.put(<span class="jxr_string">"SWS/Bounty Sniper"</span>, <span class="jxr_string">"ANTNrsS.jpg"</span>);
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         singleLinks.put(<span class="jxr_string">"SWS/Bounty Spotter"</span>, <span class="jxr_string">"aB6LAZs.jpg"</span>);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         singleLinks.put(<span class="jxr_string">"SWS/Bull Rancor"</span>, <span class="jxr_string">"eG4mJ7o.jpg"</span>);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         singleLinks.put(<span class="jxr_string">"SWS/C-3PO and R2D2"</span>, <span class="jxr_string">"RTv4ikx.jpg"</span>);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         singleLinks.put(<span class="jxr_string">"SWS/Cantina Band"</span>, <span class="jxr_string">"PqMQP0o.jpg"</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         singleLinks.put(<span class="jxr_string">"SWS/Capture"</span>, <span class="jxr_string">"jxoTOyC.jpg"</span>);
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         singleLinks.put(<span class="jxr_string">"SWS/Carbonite Chamber"</span>, <span class="jxr_string">"rqEr1gm.jpg"</span>);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         singleLinks.put(<span class="jxr_string">"SWS/Chewbacca"</span>, <span class="jxr_string">"D3D5T42.jpg"</span>);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         singleLinks.put(<span class="jxr_string">"SWS/Chief Chirpa"</span>, <span class="jxr_string">"Gx3hLsg.jpg"</span>);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         singleLinks.put(<span class="jxr_string">"SWS/Cloaking Device"</span>, <span class="jxr_string">"Vtz1NZU.jpg"</span>);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         singleLinks.put(<span class="jxr_string">"SWS/Commander Cody"</span>, <span class="jxr_string">"9PGV2pV.jpg"</span>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         singleLinks.put(<span class="jxr_string">"SWS/Condemn"</span>, <span class="jxr_string">"36yejT2.jpg"</span>);
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         singleLinks.put(<span class="jxr_string">"SWS/Corellian Corvette"</span>, <span class="jxr_string">"j8uPQDY.jpg"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         singleLinks.put(<span class="jxr_string">"SWS/Crossfire"</span>, <span class="jxr_string">"Iz9OdPh.jpg"</span>);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         singleLinks.put(<span class="jxr_string">"SWS/Cruelty of the Sith"</span>, <span class="jxr_string">"q3WIYAt.jpg"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         singleLinks.put(<span class="jxr_string">"SWS/Cunning Abduction"</span>, <span class="jxr_string">"CueTNo7.jpg"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         singleLinks.put(<span class="jxr_string">"SWS/Dagobah Maw Slug"</span>, <span class="jxr_string">"SqmdUMp.jpg"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         singleLinks.put(<span class="jxr_string">"SWS/Dark Apprenticeship"</span>, <span class="jxr_string">"yf5MthH.jpg"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         singleLinks.put(<span class="jxr_string">"SWS/Dark Decision"</span>, <span class="jxr_string">"2HB5lYN.jpg"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         singleLinks.put(<span class="jxr_string">"SWS/Dark Trooper"</span>, <span class="jxr_string">"atKdUTA.jpg"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         singleLinks.put(<span class="jxr_string">"SWS/Darth Maul"</span>, <span class="jxr_string">"EwC1e1Q.jpg"</span>);
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         singleLinks.put(<span class="jxr_string">"SWS/Darth Sidious, Sith Lord"</span>, <span class="jxr_string">"UYk3KnH.png"</span>);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         singleLinks.put(<span class="jxr_string">"SWS/Darth Tyranus, Count of Serenno"</span>, <span class="jxr_string">"AXUfNuO.png"</span>);
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         singleLinks.put(<span class="jxr_string">"SWS/Darth Vader"</span>, <span class="jxr_string">"3pGvZZE.png"</span>);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         singleLinks.put(<span class="jxr_string">"SWS/Death Trooper"</span>, <span class="jxr_string">"j7lWmPJ.jpg"</span>);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         singleLinks.put(<span class="jxr_string">"SWS/Deploy The Troops"</span>, <span class="jxr_string">"QtcN0qV.jpg"</span>);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         singleLinks.put(<span class="jxr_string">"SWS/Doom Blade"</span>, <span class="jxr_string">"cSuxWUr.jpg"</span>);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         singleLinks.put(<span class="jxr_string">"SWS/Droid Commando"</span>, <span class="jxr_string">"HkKiaBQ.jpg"</span>);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         singleLinks.put(<span class="jxr_string">"SWS/Droid Factory"</span>, <span class="jxr_string">"34L3ykD.jpg"</span>);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         singleLinks.put(<span class="jxr_string">"SWS/Droid Foundry"</span>, <span class="jxr_string">"qYijxSk.jpg"</span>);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>         singleLinks.put(<span class="jxr_string">"SWS/Droideka"</span>, <span class="jxr_string">"BXN7t1i.jpg"</span>);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         singleLinks.put(<span class="jxr_string">"SWS/Drone Holocron"</span>, <span class="jxr_string">"cHzqK4v.jpg"</span>);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>         singleLinks.put(<span class="jxr_string">"SWS/Echo Base Commando"</span>, <span class="jxr_string">"AdLjV4Y.jpg"</span>);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         singleLinks.put(<span class="jxr_string">"SWS/EMP Blast"</span>, <span class="jxr_string">"Y0JWgRO.jpg"</span>);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         singleLinks.put(<span class="jxr_string">"SWS/Escape Pod"</span>, <span class="jxr_string">"vj8gQ1u.jpg"</span>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         singleLinks.put(<span class="jxr_string">"SWS/Ewok Ambush"</span>, <span class="jxr_string">"219aufH.jpg"</span>);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         singleLinks.put(<span class="jxr_string">"SWS/Ewok Firedancers"</span>, <span class="jxr_string">"DFAB3h4.jpg"</span>);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         singleLinks.put(<span class="jxr_string">"SWS/Ewok Village"</span>, <span class="jxr_string">"rgQevhZ.jpg"</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         singleLinks.put(<span class="jxr_string">"SWS/Exogorth"</span>, <span class="jxr_string">"cS6fq3u.jpg"</span>);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         singleLinks.put(<span class="jxr_string">"SWS/Ferocity of the Underworld"</span>, <span class="jxr_string">"lTqtVab.jpg"</span>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         singleLinks.put(<span class="jxr_string">"SWS/Flames of Remembrance"</span>, <span class="jxr_string">"WAKhi9i.jpg"</span>);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Choke"</span>, <span class="jxr_string">"Uu1QUf9.jpg"</span>);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Denial"</span>, <span class="jxr_string">"qwYGiUg.jpg"</span>);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Drain"</span>, <span class="jxr_string">"prHdDXa.jpg"</span>);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Healing"</span>, <span class="jxr_string">"kDGRFoj.jpg"</span>);
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Lightning"</span>, <span class="jxr_string">"DhAE9lZ.jpg"</span>);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Mastery"</span>, <span class="jxr_string">"XPCWaP8.jpg"</span>);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Pull"</span>, <span class="jxr_string">"rWWfkhX.jpg"</span>);
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Push"</span>, <span class="jxr_string">"aN8n4sk.jpg"</span>);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Reflex"</span>, <span class="jxr_string">"RIlvXTz.jpg"</span>);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Scream"</span>, <span class="jxr_string">"EsagOnR.jpg"</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Spark"</span>, <span class="jxr_string">"14MOM1y.jpg"</span>);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         singleLinks.put(<span class="jxr_string">"SWS/Forest-a"</span>, <span class="jxr_string">"LIpeeP9.jpg"</span>);
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         singleLinks.put(<span class="jxr_string">"SWS/Forest-b"</span>, <span class="jxr_string">"jKwDwH7.jpg"</span>);
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         singleLinks.put(<span class="jxr_string">"SWS/Forest-c"</span>, <span class="jxr_string">"CVb3582.jpg"</span>);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         singleLinks.put(<span class="jxr_string">"SWS/Forest-d"</span>, <span class="jxr_string">"q09fMW0.jpg"</span>);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         singleLinks.put(<span class="jxr_string">"SWS/Fulfill Contract"</span>, <span class="jxr_string">"FtLMpHK.jpg"</span>);
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         singleLinks.put(<span class="jxr_string">"SWS/Gamorrean Prison Guard"</span>, <span class="jxr_string">"4dgOMPA.jpg"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         singleLinks.put(<span class="jxr_string">"SWS/General Grievous"</span>, <span class="jxr_string">"tRLM8Hz.jpg"</span>);
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         singleLinks.put(<span class="jxr_string">"SWS/Gifted Initiate"</span>, <span class="jxr_string">"NDePdLv.jpg"</span>);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         singleLinks.put(<span class="jxr_string">"SWS/Grand Moff Tarkin"</span>, <span class="jxr_string">"QXq1V40.jpg"</span>);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         singleLinks.put(<span class="jxr_string">"SWS/Greater Krayt Dragon"</span>, <span class="jxr_string">"dzIiXXg.jpg"</span>);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         singleLinks.put(<span class="jxr_string">"SWS/Greedo"</span>, <span class="jxr_string">"IRKwsX0.jpg"</span>);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         singleLinks.put(<span class="jxr_string">"SWS/Gundark"</span>, <span class="jxr_string">"zLxfLM8.jpg"</span>);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         singleLinks.put(<span class="jxr_string">"SWS/Gungan Captain"</span>, <span class="jxr_string">"1Q4DNWh.jpg"</span>);
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         singleLinks.put(<span class="jxr_string">"SWS/Han Solo"</span>, <span class="jxr_string">"G0Awota.jpg"</span>);
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         singleLinks.put(<span class="jxr_string">"SWS/Hazard Trooper"</span>, <span class="jxr_string">"ZOutamG.jpg"</span>);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         singleLinks.put(<span class="jxr_string">"SWS/Head Hunting"</span>, <span class="jxr_string">"7OT1bGZ.jpg"</span>);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         singleLinks.put(<span class="jxr_string">"SWS/Heavy Trooper"</span>, <span class="jxr_string">"HhZWs2N.jpg"</span>);
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         singleLinks.put(<span class="jxr_string">"SWS/Hot Pursuit"</span>, <span class="jxr_string">"ih1GT5Z.jpg"</span>);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         singleLinks.put(<span class="jxr_string">"SWS/Hungry Dragonsnake"</span>, <span class="jxr_string">"23v7RTm.jpg"</span>);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         singleLinks.put(<span class="jxr_string">"SWS/Hunt to Extinction"</span>, <span class="jxr_string">"3eJyfzZ.jpg"</span>);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         singleLinks.put(<span class="jxr_string">"SWS/Hutt Crime Lord"</span>, <span class="jxr_string">"NAzK7Hp.jpg"</span>);
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         singleLinks.put(<span class="jxr_string">"SWS/Hutt Palace"</span>, <span class="jxr_string">"HEb2JN5.jpg"</span>);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         singleLinks.put(<span class="jxr_string">"SWS/IG-88B"</span>, <span class="jxr_string">"YZUZJC8.jpg"</span>);
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         singleLinks.put(<span class="jxr_string">"SWS/Images of the Past"</span>, <span class="jxr_string">"sOXEk4Q.jpg"</span>);
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         singleLinks.put(<span class="jxr_string">"SWS/Imperial Gunner"</span>, <span class="jxr_string">"9KpZ8AX.jpg"</span>);
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         singleLinks.put(<span class="jxr_string">"SWS/Impulsive Wager"</span>, <span class="jxr_string">"lLutRRs.jpg"</span>);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         singleLinks.put(<span class="jxr_string">"SWS/Insatiable Rakghoul"</span>, <span class="jxr_string">"IYqBnTK.jpg"</span>);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         singleLinks.put(<span class="jxr_string">"SWS/Interrogation"</span>, <span class="jxr_string">"kI2bIbo.jpg"</span>);
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         singleLinks.put(<span class="jxr_string">"SWS/Ion Cannon"</span>, <span class="jxr_string">"Tb546IK.jpg"</span>);
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         singleLinks.put(<span class="jxr_string">"SWS/Iron Fist of the Empire"</span>, <span class="jxr_string">"9Ui7NRn.jpg"</span>);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         singleLinks.put(<span class="jxr_string">"SWS/Island-a"</span>, <span class="jxr_string">"GxITXBO.jpg"</span>);
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         singleLinks.put(<span class="jxr_string">"SWS/Island-b"</span>, <span class="jxr_string">"vKdg4fG.jpg"</span>);
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         singleLinks.put(<span class="jxr_string">"SWS/Island-c"</span>, <span class="jxr_string">"NPMxIew.jpg"</span>);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         singleLinks.put(<span class="jxr_string">"SWS/Island-d"</span>, <span class="jxr_string">"cnqFMa6.jpg"</span>);
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         singleLinks.put(<span class="jxr_string">"SWS/Ithorian Initiate"</span>, <span class="jxr_string">"2RYpp5o.jpg"</span>);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         singleLinks.put(<span class="jxr_string">"SWS/Jabba the Hutt"</span>, <span class="jxr_string">"QMz0sKa.jpg"</span>);
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         singleLinks.put(<span class="jxr_string">"SWS/Jango Fett"</span>, <span class="jxr_string">"nEnspQP.jpg"</span>);
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         singleLinks.put(<span class="jxr_string">"SWS/Jar Jar Binks"</span>, <span class="jxr_string">"GCnx72b.jpg"</span>);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         singleLinks.put(<span class="jxr_string">"SWS/Jar'Kai Battle Stance"</span>, <span class="jxr_string">"GLavgj7.jpg"</span>);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Battle Healer"</span>, <span class="jxr_string">"RyIJON5.jpg"</span>);
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Battle Mage"</span>, <span class="jxr_string">"V9qHRGq.jpg"</span>);
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Battle Sage"</span>, <span class="jxr_string">"sZVlGWE.jpg"</span>);
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Enclave"</span>, <span class="jxr_string">"FlibBhx.jpg"</span>);
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Holocron"</span>, <span class="jxr_string">"ojbt2av.jpg"</span>);
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Inquirer"</span>, <span class="jxr_string">"ghFQA76.jpg"</span>);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Instructor"</span>, <span class="jxr_string">"IwEpVkz.jpg"</span>);
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Knight"</span>, <span class="jxr_string">"VXNHpZs.jpg"</span>);
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Mind Trick"</span>, <span class="jxr_string">"aaVfgSA.jpg"</span>);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Sentinel"</span>, <span class="jxr_string">"cae3O1s.jpg"</span>);
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Starfighter"</span>, <span class="jxr_string">"Ta20jjD.jpg"</span>);
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Temple"</span>, <span class="jxr_string">"ZkOUJnM.jpg"</span>);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         singleLinks.put(<span class="jxr_string">"SWS/Jedi Training"</span>, <span class="jxr_string">"7L1LWie.jpg"</span>);
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         singleLinks.put(<span class="jxr_string">"SWS/Jump Trooper"</span>, <span class="jxr_string">"62Pg5r4.jpg"</span>);
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         singleLinks.put(<span class="jxr_string">"SWS/Jungle Village"</span>, <span class="jxr_string">"3a1KN8u.jpg"</span>);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         singleLinks.put(<span class="jxr_string">"SWS/Kamino Cloning Facility"</span>, <span class="jxr_string">"kwBudvf.jpg"</span>);
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         singleLinks.put(<span class="jxr_string">"SWS/Ki-Adi-Mundi"</span>, <span class="jxr_string">"atqNF3H.jpg"</span>);
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>         singleLinks.put(<span class="jxr_string">"SWS/LAAT Gunship"</span>, <span class="jxr_string">"DEMXleY.jpg"</span>);
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         singleLinks.put(<span class="jxr_string">"SWS/Lando Calrissian"</span>, <span class="jxr_string">"jcoTjGV.jpg"</span>);
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         singleLinks.put(<span class="jxr_string">"SWS/Legacy of the Beloved"</span>, <span class="jxr_string">"Y0ObvQg.jpg"</span>);
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         singleLinks.put(<span class="jxr_string">"SWS/Lightning Bolt"</span>, <span class="jxr_string">"XSNGQYi.jpg"</span>);
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         singleLinks.put(<span class="jxr_string">"SWS/Lightsaber"</span>, <span class="jxr_string">"YrpWygk.jpg"</span>);
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         singleLinks.put(<span class="jxr_string">"SWS/Loyal Tauntaun"</span>, <span class="jxr_string">"JKDV2WK.jpg"</span>);
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>         singleLinks.put(<span class="jxr_string">"SWS/Luke Skywalker"</span>, <span class="jxr_string">"9worW6q.jpg"</span>);
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         singleLinks.put(<span class="jxr_string">"SWS/Mace Windu"</span>, <span class="jxr_string">"rmTuBGT.jpg"</span>);
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         singleLinks.put(<span class="jxr_string">"SWS/Maintenance Droid"</span>, <span class="jxr_string">"A66IIC1.jpg"</span>);
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         singleLinks.put(<span class="jxr_string">"SWS/Maintenance Hangar"</span>, <span class="jxr_string">"DzCYnH3.jpg"</span>);
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         singleLinks.put(<span class="jxr_string">"SWS/Mantellian Savrip"</span>, <span class="jxr_string">"a9JIDEM.jpg"</span>);
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         singleLinks.put(<span class="jxr_string">"SWS/March of the Droids"</span>, <span class="jxr_string">"A4HIQ5V.jpg"</span>);
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         singleLinks.put(<span class="jxr_string">"SWS/Massiff Swarm"</span>, <span class="jxr_string">"0qRPfbC.jpg"</span>);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         singleLinks.put(<span class="jxr_string">"SWS/Might of the Wild"</span>, <span class="jxr_string">"eNXOdxp.jpg"</span>);
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         singleLinks.put(<span class="jxr_string">"SWS/Millennium Falcon"</span>, <span class="jxr_string">"aZ6sIn2.jpg"</span>);
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         singleLinks.put(<span class="jxr_string">"SWS/Miraculous Recovery"</span>, <span class="jxr_string">"DH6Cei8.jpg"</span>);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         singleLinks.put(<span class="jxr_string">"SWS/Moisture Farm"</span>, <span class="jxr_string">"S6kJHtL.jpg"</span>);
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         singleLinks.put(<span class="jxr_string">"SWS/Mon Calamari Cruiser"</span>, <span class="jxr_string">"ZHdTV7p.jpg"</span>);
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>         singleLinks.put(<span class="jxr_string">"SWS/Mon Calamari Initiate"</span>, <span class="jxr_string">"GBuXdGP.jpg"</span>);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         singleLinks.put(<span class="jxr_string">"SWS/Mountain-a"</span>, <span class="jxr_string">"MCii4g1.jpg"</span>);
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         singleLinks.put(<span class="jxr_string">"SWS/Mountain-b"</span>, <span class="jxr_string">"Tb0ic31.jpg"</span>);
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         singleLinks.put(<span class="jxr_string">"SWS/Mountain-c"</span>, <span class="jxr_string">"wqXTdsC.jpg"</span>);
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         singleLinks.put(<span class="jxr_string">"SWS/Mountain-d"</span>, <span class="jxr_string">"9oBNCHk.jpg"</span>);
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         singleLinks.put(<span class="jxr_string">"SWS/N-1 Starfighter"</span>, <span class="jxr_string">"UH3qd7x.jpg"</span>);
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>         singleLinks.put(<span class="jxr_string">"SWS/Nebulon-B Frigate"</span>, <span class="jxr_string">"F0yIR08.jpg"</span>);
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         singleLinks.put(<span class="jxr_string">"SWS/Neophyte Hateflayer"</span>, <span class="jxr_string">"Has2AIW.jpg"</span>);
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         singleLinks.put(<span class="jxr_string">"SWS/Nerf Herder"</span>, <span class="jxr_string">"VUX0LHV.jpg"</span>);
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         singleLinks.put(<span class="jxr_string">"SWS/Nexu Stalker"</span>, <span class="jxr_string">"E1xxHe1.jpg"</span>);
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         singleLinks.put(<span class="jxr_string">"SWS/Nightspider"</span>, <span class="jxr_string">"H1po0uV.jpg"</span>);
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         singleLinks.put(<span class="jxr_string">"SWS/No Contest"</span>, <span class="jxr_string">"6SwC9ri.jpg"</span>);
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         singleLinks.put(<span class="jxr_string">"SWS/Novice Bounty Hunter"</span>, <span class="jxr_string">"WfNSsLY.jpg"</span>);
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         singleLinks.put(<span class="jxr_string">"SWS/Nute Gunray"</span>, <span class="jxr_string">"UZg12DD.jpg"</span>);
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         singleLinks.put(<span class="jxr_string">"SWS/Obi-Wan Kenobi"</span>, <span class="jxr_string">"BHkbjdL.png"</span>);
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         singleLinks.put(<span class="jxr_string">"SWS/Open Season"</span>, <span class="jxr_string">"E4iM90K.jpg"</span>);
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         singleLinks.put(<span class="jxr_string">"SWS/Orbital Bombardment"</span>, <span class="jxr_string">"Ov1mB3A.jpg"</span>);
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         singleLinks.put(<span class="jxr_string">"SWS/Order 66"</span>, <span class="jxr_string">"jZituQQ.jpg"</span>);
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         singleLinks.put(<span class="jxr_string">"SWS/Ortolan Keyboardist"</span>, <span class="jxr_string">"dYDgEUB.jpg"</span>);
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         singleLinks.put(<span class="jxr_string">"SWS/Outer Rim Slaver"</span>, <span class="jxr_string">"xq8ozqq.jpg"</span>);
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         singleLinks.put(<span class="jxr_string">"SWS/Outlaw Holocron"</span>, <span class="jxr_string">"mWbyX78.jpg"</span>);
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         singleLinks.put(<span class="jxr_string">"SWS/Personal Energy Shield"</span>, <span class="jxr_string">"v6TGLne.jpg"</span>);
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         singleLinks.put(<span class="jxr_string">"SWS/Plains-a"</span>, <span class="jxr_string">"HgXaAKh.jpg"</span>);
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         singleLinks.put(<span class="jxr_string">"SWS/Plains-b"</span>, <span class="jxr_string">"Y0i7MBh.jpg"</span>);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         singleLinks.put(<span class="jxr_string">"SWS/Plains-c"</span>, <span class="jxr_string">"4grXQVd.jpg"</span>);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         singleLinks.put(<span class="jxr_string">"SWS/Plains-d"</span>, <span class="jxr_string">"kTmN8MM.jpg"</span>);
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         singleLinks.put(<span class="jxr_string">"SWS/Plo Koon"</span>, <span class="jxr_string">"dDNi8CV.jpg"</span>);
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         singleLinks.put(<span class="jxr_string">"SWS/Precipice of Mortis"</span>, <span class="jxr_string">"TRAPT86.jpg"</span>);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         singleLinks.put(<span class="jxr_string">"SWS/Predator's Strike"</span>, <span class="jxr_string">"pcBoUny.jpg"</span>);
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         singleLinks.put(<span class="jxr_string">"SWS/Preordain"</span>, <span class="jxr_string">"u8nSNQW.jpg"</span>);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         singleLinks.put(<span class="jxr_string">"SWS/Primal Instinct"</span>, <span class="jxr_string">"bInouYH.jpg"</span>);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         singleLinks.put(<span class="jxr_string">"SWS/Princess Leia"</span>, <span class="jxr_string">"pnHyPWg.jpg"</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         singleLinks.put(<span class="jxr_string">"SWS/Probe Droid"</span>, <span class="jxr_string">"0r84uUM.jpg"</span>);
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         singleLinks.put(<span class="jxr_string">"SWS/Qui-Gon Jinn"</span>, <span class="jxr_string">"7DdumG2.jpg"</span>);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         singleLinks.put(<span class="jxr_string">"SWS/Raging Reek"</span>, <span class="jxr_string">"9maXaMR.jpg"</span>);
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         singleLinks.put(<span class="jxr_string">"SWS/Rallying Fire"</span>, <span class="jxr_string">"wtaTlhd.jpg"</span>);
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         singleLinks.put(<span class="jxr_string">"SWS/Ravenous Wampa"</span>, <span class="jxr_string">"rHDaKDD.jpg"</span>);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         singleLinks.put(<span class="jxr_string">"SWS/Regression"</span>, <span class="jxr_string">"j5z0TOE.jpg"</span>);
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         singleLinks.put(<span class="jxr_string">"SWS/Republic Frigate"</span>, <span class="jxr_string">"LzNpjxP.jpg"</span>);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         singleLinks.put(<span class="jxr_string">"SWS/Repurpose"</span>, <span class="jxr_string">"BvRMy3f.jpg"</span>);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         singleLinks.put(<span class="jxr_string">"SWS/Revenge"</span>, <span class="jxr_string">"xkKzMRX.jpg"</span>);
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         singleLinks.put(<span class="jxr_string">"SWS/Riding Ronto"</span>, <span class="jxr_string">"xECBi7G.jpg"</span>);
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         singleLinks.put(<span class="jxr_string">"SWS/Rocket Trooper"</span>, <span class="jxr_string">"94wUTH5.jpg"</span>);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         singleLinks.put(<span class="jxr_string">"SWS/Rogue's Passage"</span>, <span class="jxr_string">"UunpJPZ.jpg"</span>);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         singleLinks.put(<span class="jxr_string">"SWS/Rule of two"</span>, <span class="jxr_string">"wNqZWLJ.jpg"</span>);
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         singleLinks.put(<span class="jxr_string">"SWS/Rumination"</span>, <span class="jxr_string">"nSD3UHQ.jpg"</span>);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         singleLinks.put(<span class="jxr_string">"SWS/Rumor Monger"</span>, <span class="jxr_string">"wSN6H6v.jpg"</span>);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         singleLinks.put(<span class="jxr_string">"SWS/Sabacc Game"</span>, <span class="jxr_string">"qIcFb3U.jpg"</span>);
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         singleLinks.put(<span class="jxr_string">"SWS/Salvage Squad"</span>, <span class="jxr_string">"ThYSxmD.jpg"</span>);
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>         singleLinks.put(<span class="jxr_string">"SWS/Sand Trooper"</span>, <span class="jxr_string">"ysfpyL8.jpg"</span>);
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         singleLinks.put(<span class="jxr_string">"SWS/Sarlacc Pit"</span>, <span class="jxr_string">"N4dcnln.png"</span>);
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>         singleLinks.put(<span class="jxr_string">"SWS/Scout the Perimeter"</span>, <span class="jxr_string">"2cObUbz.jpg"</span>);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         singleLinks.put(<span class="jxr_string">"SWS/Scout Trooper"</span>, <span class="jxr_string">"9RAY4U1.jpg"</span>);
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         singleLinks.put(<span class="jxr_string">"SWS/Security Droid"</span>, <span class="jxr_string">"dzy8m4v.jpg"</span>);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         singleLinks.put(<span class="jxr_string">"SWS/Senator Bail Organa"</span>, <span class="jxr_string">"BRkUuYU.jpg"</span>);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         singleLinks.put(<span class="jxr_string">"SWS/Senator Lott Dod"</span>, <span class="jxr_string">"yYQtXZo.jpg"</span>);
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         singleLinks.put(<span class="jxr_string">"SWS/Senator Onaconda Farr"</span>, <span class="jxr_string">"oPez77z.png"</span>);
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>         singleLinks.put(<span class="jxr_string">"SWS/Senator Padme Amidala"</span>, <span class="jxr_string">"287deD9.jpg"</span>);
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         singleLinks.put(<span class="jxr_string">"SWS/Senator Passel Argente"</span>, <span class="jxr_string">"51qpnaE.jpg"</span>);
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         singleLinks.put(<span class="jxr_string">"SWS/Shaak Herd"</span>, <span class="jxr_string">"PtnZD0I.jpg"</span>);
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         singleLinks.put(<span class="jxr_string">"SWS/Shadow Trooper"</span>, <span class="jxr_string">"09NAiGa.jpg"</span>);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         singleLinks.put(<span class="jxr_string">"SWS/Shock Trooper"</span>, <span class="jxr_string">"UVNOxMR.jpg"</span>);
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         singleLinks.put(<span class="jxr_string">"SWS/Show of Dominance"</span>, <span class="jxr_string">"ru2D3Qp.jpg"</span>);
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Assassin"</span>, <span class="jxr_string">"Nt8WUCj.jpg"</span>);
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Citadel"</span>, <span class="jxr_string">"bBCbK30.jpg"</span>);
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Evoker"</span>, <span class="jxr_string">"jwRzCEB.jpg"</span>);
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Holocron"</span>, <span class="jxr_string">"07Ufx5X.jpg"</span>);
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Inquisitor"</span>, <span class="jxr_string">"NivI1E5.jpg"</span>);
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Lord"</span>, <span class="jxr_string">"lWBfQoA.jpg"</span>);
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Magic"</span>, <span class="jxr_string">"cDPFeve.jpg"</span>);
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Manipulator"</span>, <span class="jxr_string">"Q7CIvyz.jpg"</span>);
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Marauder"</span>, <span class="jxr_string">"9zZUSJW.jpg"</span>);
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Mindseer"</span>, <span class="jxr_string">"Lmps3oO.jpg"</span>);
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Ravager"</span>, <span class="jxr_string">"nl9Dp41.jpg"</span>);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Ruins"</span>, <span class="jxr_string">"oSqiYyO.jpg"</span>);
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Sorcerer"</span>, <span class="jxr_string">"Pq37iop.jpg"</span>);
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Thoughtseeker"</span>, <span class="jxr_string">"YzIY1di.jpg"</span>);
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         singleLinks.put(<span class="jxr_string">"SWS/Slave I"</span>, <span class="jxr_string">"QUGpxlb.jpg"</span>);
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         singleLinks.put(<span class="jxr_string">"SWS/Smash to Smithereens"</span>, <span class="jxr_string">"UlzDZWp.jpg"</span>);
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         singleLinks.put(<span class="jxr_string">"SWS/Snow Trooper"</span>, <span class="jxr_string">"28Jp5JL.jpg"</span>);
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>         singleLinks.put(<span class="jxr_string">"SWS/Speeder Trooper"</span>, <span class="jxr_string">"BIEnTDL.jpg"</span>);
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>         singleLinks.put(<span class="jxr_string">"SWS/Star Destroyer"</span>, <span class="jxr_string">"DYUMXHZ.jpg"</span>);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>         singleLinks.put(<span class="jxr_string">"SWS/Strike Team Commando"</span>, <span class="jxr_string">"783ZFsF.jpg"</span>);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         singleLinks.put(<span class="jxr_string">"SWS/Super Battle Droid"</span>, <span class="jxr_string">"T8IjrKD.jpg"</span>);
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>         singleLinks.put(<span class="jxr_string">"SWS/Surprise Maneuver"</span>, <span class="jxr_string">"uaAmzz8.jpg"</span>);
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         singleLinks.put(<span class="jxr_string">"SWS/Swamp-a"</span>, <span class="jxr_string">"kBGj6vk.jpg"</span>);
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         singleLinks.put(<span class="jxr_string">"SWS/Swamp-b"</span>, <span class="jxr_string">"BLJl2lf.jpg"</span>);
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         singleLinks.put(<span class="jxr_string">"SWS/Swamp-c"</span>, <span class="jxr_string">"MLH5o2u.jpg"</span>);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         singleLinks.put(<span class="jxr_string">"SWS/Swamp-d"</span>, <span class="jxr_string">"Rmrv9tC.jpg"</span>);
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         singleLinks.put(<span class="jxr_string">"SWS/Swarm the Skies"</span>, <span class="jxr_string">"Ti1McaV.jpg"</span>);
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         singleLinks.put(<span class="jxr_string">"SWS/Syndicate Enforcer"</span>, <span class="jxr_string">"xZ0g2Sx.jpg"</span>);
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>         singleLinks.put(<span class="jxr_string">"SWS/Tank Droid"</span>, <span class="jxr_string">"N4YyMje.jpg"</span>);
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         singleLinks.put(<span class="jxr_string">"SWS/Terentatek Cub"</span>, <span class="jxr_string">"nbmBxst.jpg"</span>);
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         singleLinks.put(<span class="jxr_string">"SWS/The Battle of Endor"</span>, <span class="jxr_string">"vhL6gdI.jpg"</span>);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>         singleLinks.put(<span class="jxr_string">"SWS/The Battle of Geonosis"</span>, <span class="jxr_string">"7Fnr2MD.jpg"</span>);
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         singleLinks.put(<span class="jxr_string">"SWS/The Battle of Hoth"</span>, <span class="jxr_string">"wcVJwKP.jpg"</span>);
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         singleLinks.put(<span class="jxr_string">"SWS/The Battle of Naboo"</span>, <span class="jxr_string">"aesSN9E.jpg"</span>);
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         singleLinks.put(<span class="jxr_string">"SWS/The Battle of Yavin"</span>, <span class="jxr_string">"AtGE49k.jpg"</span>);
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         singleLinks.put(<span class="jxr_string">"SWS/The Death Star"</span>, <span class="jxr_string">"2LjSXa9.jpg"</span>);
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         singleLinks.put(<span class="jxr_string">"SWS/TIE Bomber"</span>, <span class="jxr_string">"R2l7ZXQ.jpg"</span>);
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>         singleLinks.put(<span class="jxr_string">"SWS/TIE Interceptor"</span>, <span class="jxr_string">"fYY4PUR.jpg"</span>);
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>         singleLinks.put(<span class="jxr_string">"SWS/Trade Federation Battleship"</span>, <span class="jxr_string">"sKN9Gzv.jpg"</span>);
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         singleLinks.put(<span class="jxr_string">"SWS/Tri-Fighter"</span>, <span class="jxr_string">"IhwHzqT.jpg"</span>);
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         singleLinks.put(<span class="jxr_string">"SWS/Trooper Armor"</span>, <span class="jxr_string">"nqnFj9f.jpg"</span>);
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         singleLinks.put(<span class="jxr_string">"SWS/Trooper Commando"</span>, <span class="jxr_string">"PiAYXJv.jpg"</span>);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         singleLinks.put(<span class="jxr_string">"SWS/Twi'lek Seductress"</span>, <span class="jxr_string">"iPhUxUV.jpg"</span>);
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         singleLinks.put(<span class="jxr_string">"SWS/Ugnaught Scrap Worker"</span>, <span class="jxr_string">"fuuNN3n.jpg"</span>);
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>         singleLinks.put(<span class="jxr_string">"SWS/Underworld Slums"</span>, <span class="jxr_string">"o4CFq3x.jpg"</span>);
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>         singleLinks.put(<span class="jxr_string">"SWS/Unity of the Droids"</span>, <span class="jxr_string">"WFAIRy3.jpg"</span>);
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>         singleLinks.put(<span class="jxr_string">"SWS/Unruly Sureshot"</span>, <span class="jxr_string">"AHymfLc.jpg"</span>);
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>         singleLinks.put(<span class="jxr_string">"SWS/Vapor Snag"</span>, <span class="jxr_string">"8g3q0ny.jpg"</span>);
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>         singleLinks.put(<span class="jxr_string">"SWS/V-Wing"</span>, <span class="jxr_string">"7eThuU9.jpg"</span>);
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>         singleLinks.put(<span class="jxr_string">"SWS/Weequay Beastmaster"</span>, <span class="jxr_string">"metAs1p.jpg"</span>);
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>         singleLinks.put(<span class="jxr_string">"SWS/Wild Holocron"</span>, <span class="jxr_string">"adw7dFO.jpg"</span>);
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>         singleLinks.put(<span class="jxr_string">"SWS/Wisdom of the Jedi"</span>, <span class="jxr_string">"TgTj2Dd.jpg"</span>);
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>         singleLinks.put(<span class="jxr_string">"SWS/Womp Rat"</span>, <span class="jxr_string">"XKF79Hr.jpg"</span>);
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         singleLinks.put(<span class="jxr_string">"SWS/Wookiee Bounty Hunter"</span>, <span class="jxr_string">"A76UGTJ.jpg"</span>);
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>         singleLinks.put(<span class="jxr_string">"SWS/Wookiee Mystic"</span>, <span class="jxr_string">"8DCkOVe.jpg"</span>);
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         singleLinks.put(<span class="jxr_string">"SWS/Wookiee Raidleader"</span>, <span class="jxr_string">"ZZTduL5.jpg"</span>);
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         singleLinks.put(<span class="jxr_string">"SWS/X-Wing"</span>, <span class="jxr_string">"AV1LPuZ.jpg"</span>);
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>         singleLinks.put(<span class="jxr_string">"SWS/Yoda, Jedi Master"</span>, <span class="jxr_string">"6arN1Hl.png"</span>);
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>         singleLinks.put(<span class="jxr_string">"SWS/Y-Wing"</span>, <span class="jxr_string">"aQQ5zwA.jpg"</span>);
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         singleLinks.put(<span class="jxr_string">"SWS/Zam Wesell"</span>, <span class="jxr_string">"ToG0C1r.jpg"</span>);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>         singleLinks.put(<span class="jxr_string">"SWS/Astromech Droid"</span>, <span class="jxr_string">"v0TpHMh.jpg"</span>);
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>         singleLinks.put(<span class="jxr_string">"SWS/Buried Ruin"</span>, <span class="jxr_string">"QkmIWYg.png"</span>);
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>         singleLinks.put(<span class="jxr_string">"SWS/Flame Trooper"</span>, <span class="jxr_string">"RkY7KFJ.jpg"</span>);
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Stasis"</span>, <span class="jxr_string">"FavLrcY.jpg"</span>);
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         singleLinks.put(<span class="jxr_string">"SWS/Salvage Trader"</span>, <span class="jxr_string">"qGwk7Bn.jpg"</span>);
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>         singleLinks.put(<span class="jxr_string">"SWS/Outer Rim Gang"</span>, <span class="jxr_string">"kEjKQGy.png"</span>);
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>         singleLinks.put(<span class="jxr_string">"SWS/Rathtar"</span>, <span class="jxr_string">"CYhHRqF.png"</span>);
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>         singleLinks.put(<span class="jxr_string">"SWS/Riot Trooper"</span>, <span class="jxr_string">"PusvaQB.jpg"</span>);
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         singleLinks.put(<span class="jxr_string">"SWS/Sins of the Father"</span>, <span class="jxr_string">"32YHTPB.jpg"</span>);
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>         singleLinks.put(<span class="jxr_string">"SWS/Upsilon-class Shuttle"</span>, <span class="jxr_string">"Le3F3oW.jpg"</span>);
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>         singleLinks.put(<span class="jxr_string">"SWS/Finn"</span>, <span class="jxr_string">"TU2LI2q.jpg"</span>);
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>         singleLinks.put(<span class="jxr_string">"SWS/General Hux"</span>, <span class="jxr_string">"UpWfcV6.png"</span>);
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>         singleLinks.put(<span class="jxr_string">"SWS/Poe Dameron"</span>, <span class="jxr_string">"v8i21dn.png"</span>);
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>         singleLinks.put(<span class="jxr_string">"SWS/Rey"</span>, <span class="jxr_string">"7n5ZZFA.png"</span>);
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         singleLinks.put(<span class="jxr_string">"SWS/Kylo Ren"</span>, <span class="jxr_string">"fFzDMTz.png"</span>);
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>         singleLinks.put(<span class="jxr_string">"SWS/TIE Striker"</span>, <span class="jxr_string">"6b5GDUQ.jpg"</span>);
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>         singleLinks.put(<span class="jxr_string">"SWS/Bludgeoning Pain"</span>, <span class="jxr_string">"ap5k3Wl.jpg"</span>);
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Protection"</span>, <span class="jxr_string">"GrOQLHO.jpg"</span>);
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>         singleLinks.put(<span class="jxr_string">"SWS/Gerrera's Revolutionary"</span>, <span class="jxr_string">"FQFE1Jt.jpg"</span>);
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>         singleLinks.put(<span class="jxr_string">"SWS/Thermal Detonator"</span>, <span class="jxr_string">"gTPLM83.jpg"</span>);
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>         singleLinks.put(<span class="jxr_string">"SWS/Hammerhead Corvette"</span>, <span class="jxr_string">"IlhOAGv.jpg"</span>);
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>         singleLinks.put(<span class="jxr_string">"SWS/U-Wing"</span>, <span class="jxr_string">"FmoRCmG.jpg"</span>);
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>         singleLinks.put(<span class="jxr_string">"SWS/Bor Gullet"</span>, <span class="jxr_string">"jXafYHX.jpg"</span>);
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>         singleLinks.put(<span class="jxr_string">"SWS/Imperial Hovertank"</span>, <span class="jxr_string">"6X1wL4d.jpg"</span>);
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>         singleLinks.put(<span class="jxr_string">"SWS/Occupation"</span>, <span class="jxr_string">"h4mmkA5.jpg"</span>);
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>         singleLinks.put(<span class="jxr_string">"SWS/Resistance"</span>, <span class="jxr_string">"lbNhA59.jpg"</span>);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>         singleLinks.put(<span class="jxr_string">"SWS/Jyn Erso and Cassian Andor"</span>, <span class="jxr_string">"o0SCGiJ.jpg"</span>);
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>         singleLinks.put(<span class="jxr_string">"SWS/Chirrut Imwe"</span>, <span class="jxr_string">"wgtXfUF.jpg"</span>);
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>         singleLinks.put(<span class="jxr_string">"SWS/Director Krennic"</span>, <span class="jxr_string">"52PGsH5.jpg"</span>);
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>         singleLinks.put(<span class="jxr_string">"SWS/Vader's Command"</span>, <span class="jxr_string">"7Lql6UT.jpg"</span>);
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>         singleLinks.put(<span class="jxr_string">"SWS/Delay Tactic"</span>, <span class="jxr_string">"ubmzD1m.jpg"</span>);
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>         singleLinks.put(<span class="jxr_string">"SWS/Resistance Bomber"</span>, <span class="jxr_string">"Sudfkd7.jpg"</span>);
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>         singleLinks.put(<span class="jxr_string">"SWS/Mouse Droid"</span>, <span class="jxr_string">"oO0p8QE.jpg"</span>);
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>         singleLinks.put(<span class="jxr_string">"SWS/First Order Dreadnought"</span>, <span class="jxr_string">"80pO9Cc.jpg"</span>);
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>         singleLinks.put(<span class="jxr_string">"SWS/TIE Silencer"</span>, <span class="jxr_string">"7yeYIjX.jpg"</span>);
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>         singleLinks.put(<span class="jxr_string">"SWS/Canto Bight Enforcer"</span>, <span class="jxr_string">"VKPQVsn.jpg"</span>);
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>         singleLinks.put(<span class="jxr_string">"SWS/Cantonica Casino"</span>, <span class="jxr_string">"7LiSvy6.jpg"</span>);
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>         singleLinks.put(<span class="jxr_string">"SWS/Fathier"</span>, <span class="jxr_string">"0oKquQp.jpg"</span>);
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>         singleLinks.put(<span class="jxr_string">"SWS/Code Slice"</span>, <span class="jxr_string">"7uNASji.jpg"</span>);
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>         singleLinks.put(<span class="jxr_string">"SWS/Captain Phasma"</span>, <span class="jxr_string">"LWujx1B.jpg"</span>);
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Telepathy"</span>, <span class="jxr_string">"e90hswX.jpg"</span>);
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         singleLinks.put(<span class="jxr_string">"SWS/Praetorian Trooper"</span>, <span class="jxr_string">"pjS1wyS.jpg"</span>);
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         singleLinks.put(<span class="jxr_string">"SWS/Supreme Leader Snoke"</span>, <span class="jxr_string">"eewWiKE.jpg"</span>);
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>         singleLinks.put(<span class="jxr_string">"SWS/Sai Tok"</span>, <span class="jxr_string">"FVn29tT.jpg"</span>);
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>         singleLinks.put(<span class="jxr_string">"SWS/Porg Nest"</span>, <span class="jxr_string">"8DnNZKc.jpg"</span>);
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>         singleLinks.put(<span class="jxr_string">"SWS/Inspire"</span>, <span class="jxr_string">"7lIXhtd.jpg"</span>);
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Projection"</span>, <span class="jxr_string">"5EfOwyn.jpg"</span>);
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>         singleLinks.put(<span class="jxr_string">"SWS/Luke Skywalker, the Last Jedi"</span>, <span class="jxr_string">"WMmQcyD.jpg"</span>);
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>         singleLinks.put(<span class="jxr_string">"SWS/Vulptex"</span>, <span class="jxr_string">"30WeCkw.jpg"</span>);
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>         singleLinks.put(<span class="jxr_string">"SWS/Glorious Charge"</span>, <span class="jxr_string">"yJwvKzk.jpg"</span>);
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         singleLinks.put(<span class="jxr_string">"SWS/Plains-520b"</span>, <span class="jxr_string">"Fx59r9J.jpg"</span>);
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         singleLinks.put(<span class="jxr_string">"SWS/Island-520a"</span>, <span class="jxr_string">"jIPpWp5.jpg"</span>);
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>         singleLinks.put(<span class="jxr_string">"SWS/Conscription"</span>, <span class="jxr_string">"An01yAe.jpg"</span>);
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         singleLinks.put(<span class="jxr_string">"SWS/Afterburn"</span>, <span class="jxr_string">"2ydqSvT.jpg"</span>);
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         singleLinks.put(<span class="jxr_string">"SWS/Corellian Gunship"</span>, <span class="jxr_string">"mZdDQWH.jpg"</span>);
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         singleLinks.put(<span class="jxr_string">"SWS/Despair"</span>, <span class="jxr_string">"TLTddMI.jpg"</span>);
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>         singleLinks.put(<span class="jxr_string">"SWS/Dryden Vos"</span>, <span class="jxr_string">"6LbtUzN.jpg"</span>);
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>         singleLinks.put(<span class="jxr_string">"SWS/Droid Uprising"</span>, <span class="jxr_string">"aWuoxho.jpg"</span>);
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         singleLinks.put(<span class="jxr_string">"SWS/Gamble"</span>, <span class="jxr_string">"Hwzr60O.jpg"</span>);
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         singleLinks.put(<span class="jxr_string">"SWS/Han Solo, Scrumrat"</span>, <span class="jxr_string">"Hqj39dG.jpg"</span>);
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         singleLinks.put(<span class="jxr_string">"SWS/Mud Trooper"</span>, <span class="jxr_string">"af8JaDy.jpg"</span>);
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>         singleLinks.put(<span class="jxr_string">"SWS/Enfys Nest"</span>, <span class="jxr_string">"pstVfQg.jpg"</span>);
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         singleLinks.put(<span class="jxr_string">"SWS/Kalevan Star Yacht"</span>, <span class="jxr_string">"nHmSizp.jpg"</span>);
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>         singleLinks.put(<span class="jxr_string">"SWS/Maelstrom Blockade"</span>, <span class="jxr_string">"sUYT0pc.jpg"</span>);
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>         singleLinks.put(<span class="jxr_string">"SWS/Range Trooper"</span>, <span class="jxr_string">"kXGvTkE.jpg"</span>);
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>         singleLinks.put(<span class="jxr_string">"SWS/Tobias Beckett"</span>, <span class="jxr_string">"hzm6ilE.jpg"</span>);
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>         singleLinks.put(<span class="jxr_string">"SWS/Underground Forum"</span>, <span class="jxr_string">"FH2pRfU.jpg"</span>);
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>         singleLinks.put(<span class="jxr_string">"SWS/Chewbacca, the Beast"</span>, <span class="jxr_string">"Zb5TitZ.jpg"</span>);
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>         singleLinks.put(<span class="jxr_string">"SWS/A Jedi's Fervor"</span>, <span class="jxr_string">"5MjPOpE.jpg"</span>);
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>         singleLinks.put(<span class="jxr_string">"SWS/Allegiant General Pryde"</span>, <span class="jxr_string">"Ucithhc.jpg"</span>);
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         singleLinks.put(<span class="jxr_string">"SWS/Balance"</span>, <span class="jxr_string">"EMdbTBj.jpg"</span>);
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>         singleLinks.put(<span class="jxr_string">"SWS/Band Together"</span>, <span class="jxr_string">"xc9dQaZ.jpg"</span>);
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>         singleLinks.put(<span class="jxr_string">"SWS/Ben Solo"</span>, <span class="jxr_string">"4GXbkI3.jpg"</span>);
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>         singleLinks.put(<span class="jxr_string">"SWS/Betray"</span>, <span class="jxr_string">"SjyF6Nq.jpg"</span>);
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         singleLinks.put(<span class="jxr_string">"SWS/Brave the Elements"</span>, <span class="jxr_string">"z2etu3V.jpg"</span>);
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>         singleLinks.put(<span class="jxr_string">"SWS/Culling Dais"</span>, <span class="jxr_string">"NHRMrmo.jpg"</span>);
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         singleLinks.put(<span class="jxr_string">"SWS/Droidsmith"</span>, <span class="jxr_string">"HYyiEI7.jpg"</span>);
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>         singleLinks.put(<span class="jxr_string">"SWS/Dyad Force Transfer"</span>, <span class="jxr_string">"dmyQ7Jm.jpg"</span>);
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         singleLinks.put(<span class="jxr_string">"SWS/Festival of the Ancestors"</span>, <span class="jxr_string">"JUPnIEr.jpg"</span>);
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>         singleLinks.put(<span class="jxr_string">"SWS/First Order Jet Trooper"</span>, <span class="jxr_string">"wVqmWMK.jpg"</span>);
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>         singleLinks.put(<span class="jxr_string">"SWS/Force Lift"</span>, <span class="jxr_string">"46eGWAq.jpg"</span>);
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>         singleLinks.put(<span class="jxr_string">"SWS/General Organa"</span>, <span class="jxr_string">"YSv61yR.jpg"</span>);
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>         singleLinks.put(<span class="jxr_string">"SWS/Hidden Base"</span>, <span class="jxr_string">"M6BR6aH.jpg"</span>);
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>         singleLinks.put(<span class="jxr_string">"SWS/Hold Captive"</span>, <span class="jxr_string">"3dR542o.jpg"</span>);
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>         singleLinks.put(<span class="jxr_string">"SWS/Holochess"</span>, <span class="jxr_string">"lPS1mR6.jpg"</span>);
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         singleLinks.put(<span class="jxr_string">"SWS/Knights of Ren"</span>, <span class="jxr_string">"vdXyRpy.jpg"</span>);
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>         singleLinks.put(<span class="jxr_string">"SWS/Lightspeed Skipping"</span>, <span class="jxr_string">"VRquVqA.jpg"</span>);
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>         singleLinks.put(<span class="jxr_string">"SWS/Luke's Lightsaber"</span>, <span class="jxr_string">"Ty3j9y3.jpg"</span>);
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>         singleLinks.put(<span class="jxr_string">"SWS/Mimic Vat"</span>, <span class="jxr_string">"9bAK1LC.jpg"</span>);
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         singleLinks.put(<span class="jxr_string">"SWS/Orbak"</span>, <span class="jxr_string">"8RvSbhX.jpg"</span>);
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>         singleLinks.put(<span class="jxr_string">"SWS/Propaganda"</span>, <span class="jxr_string">"TBNlxqj.jpg"</span>);
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>         singleLinks.put(<span class="jxr_string">"SWS/Rey Skywalker"</span>, <span class="jxr_string">"dOyjNXc.jpg"</span>);
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>         singleLinks.put(<span class="jxr_string">"SWS/Rey's Lightsaber"</span>, <span class="jxr_string">"eMzKXAP.jpg"</span>);
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Eternal Lightning"</span>, <span class="jxr_string">"oaFkj3N.jpg"</span>);
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>         singleLinks.put(<span class="jxr_string">"SWS/Sith Wayfinder"</span>, <span class="jxr_string">"AznLRt0.jpg"</span>);
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         singleLinks.put(<span class="jxr_string">"SWS/Swamp-e"</span>, <span class="jxr_string">"LrbqB3U.jpg"</span>);
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>         singleLinks.put(<span class="jxr_string">"SWS/Training Droid"</span>, <span class="jxr_string">"JCY9KOM.jpg"</span>);
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>         singleLinks.put(<span class="jxr_string">"SWS/Unpleasant Discovery"</span>, <span class="jxr_string">"lDKoeAu.jpg"</span>);
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>         singleLinks.put(<span class="jxr_string">"SWS/Vexis"</span>, <span class="jxr_string">"cNQX9Ue.jpg"</span>);
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>         singleLinks.put(<span class="jxr_string">"SWS/War Room"</span>, <span class="jxr_string">"pqQ9kzt.jpg"</span>);
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>         singleLinks.put(<span class="jxr_string">"SWS/Xyston Star Destroyer"</span>, <span class="jxr_string">"oqbHtUC.jpg"</span>);
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>         singleLinks.put(<span class="jxr_string">"SWS/Zorii Bliss"</span>, <span class="jxr_string">"vOyNE39.jpg"</span>);
+<a class="jxr_linenumber" name="L452" href="#L452">452</a> 
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>         <em class="jxr_comment">// Emblems</em>
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>         singleLinks.put(<span class="jxr_string">"SWS/Emblem Obi-Wan Kenobi"</span>, <span class="jxr_string">"Qyc10aT.png"</span>);
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>         singleLinks.put(<span class="jxr_string">"SWS/Aurra Sing"</span>, <span class="jxr_string">"BLWbVJC.png"</span>);
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>         singleLinks.put(<span class="jxr_string">"SWS/Yoda"</span>, <span class="jxr_string">"zH0sYxg.png"</span>);
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>         singleLinks.put(<span class="jxr_string">"SWS/Emblem Luke Skywalker"</span>, <span class="jxr_string">"kHELZDJ.jpg"</span>);
+<a class="jxr_linenumber" name="L458" href="#L458">458</a> 
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>         <em class="jxr_comment">// Tokens</em>
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>         singleLinks.put(<span class="jxr_string">"SWS/Ewok"</span>, <span class="jxr_string">"N2MvJyr.png"</span>);
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>         singleLinks.put(<span class="jxr_string">"SWS/B-Wing"</span>, <span class="jxr_string">"oH62AUD.png"</span>);
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>         singleLinks.put(<span class="jxr_string">"SWS/Hunter"</span>, <span class="jxr_string">"oJiawFA.png"</span>);
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>         singleLinks.put(<span class="jxr_string">"SWS/TIE Fighter"</span>, <span class="jxr_string">"CLOuJ05.png"</span>);
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>         singleLinks.put(<span class="jxr_string">"SWS/Trooper"</span>, <span class="jxr_string">"2XKqdX5.png"</span>);
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>         singleLinks.put(<span class="jxr_string">"SWS/AT-AT"</span>, <span class="jxr_string">"Tv5b7h1.png"</span>);
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>         singleLinks.put(<span class="jxr_string">"SWS/Rebel"</span>, <span class="jxr_string">"pVoShnF.png"</span>);
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>         singleLinks.put(<span class="jxr_string">"SWS/Royal Guard"</span>, <span class="jxr_string">"9tqE8vL.png"</span>);
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>         singleLinks.put(<span class="jxr_string">"SWS/Tusken Raider"</span>, <span class="jxr_string">"gPMiSmP.png"</span>);
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>         singleLinks.put(<span class="jxr_string">"SWS/Droid"</span>, <span class="jxr_string">"4PRrWFF.png"</span>);
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>         singleLinks.put(<span class="jxr_string">"SWS/Trooper 2"</span>, <span class="jxr_string">"tcxvGOn.jpg"</span>);
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>         singleLinks.put(<span class="jxr_string">"SWS/Porg"</span>, <span class="jxr_string">"HBjt1A3.jpg"</span>);
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>     }
+<a class="jxr_linenumber" name="L473" href="#L473">473</a> 
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>     @Override
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>     <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateTokenUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>             <strong class="jxr_keyword">return</strong> generateCardUrl(card);
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>             LOGGER.error(ex.getMessage(), ex);
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>         }
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>     }
+<a class="jxr_linenumber" name="L483" href="#L483">483</a> 
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>     @Override
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getTotalImages() {
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>         <strong class="jxr_keyword">if</strong> (singleLinks == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>             setupLinks();
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>         }
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>         <strong class="jxr_keyword">if</strong> (singleLinks != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>             <strong class="jxr_keyword">return</strong> singleLinks.size();
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>         }
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>         <strong class="jxr_keyword">return</strong> -1;
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>     }
+<a class="jxr_linenumber" name="L494" href="#L494">494</a> 
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>     @Override
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isTokenSource() {
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>     }
+<a class="jxr_linenumber" name="L499" href="#L499">499</a> 
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>     @Override
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardSource() {
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>     }
+<a class="jxr_linenumber" name="L504" href="#L504">504</a> 
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>     <strong class="jxr_keyword">private</strong> String getSourceName(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card, String httpImageUrl) {
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>         <strong class="jxr_keyword">if</strong> (card.getSet().equals(<span class="jxr_string">"MTG"</span>)) {
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>             <strong class="jxr_keyword">return</strong> <span class="jxr_string">"http://static.starcitygames.com/sales/cardscans/"</span>;
+<a class="jxr_linenumber" name="L508" href="#L508">508</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (card.getSet().equals(<span class="jxr_string">"SWS"</span>)) {
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>             <strong class="jxr_keyword">return</strong> <span class="jxr_string">"https://i.imgur.com/"</span>;
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>             <strong class="jxr_keyword">return</strong> <span class="jxr_string">"http://magiccards.info/scans/en/"</span>;
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>         }
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>     }
+<a class="jxr_linenumber" name="L514" href="#L514">514</a> 
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>     @Override
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>     <strong class="jxr_keyword">public</strong> List&lt;String&gt; getSupportedSets() {
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(supportedSets);
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>     }
+<a class="jxr_linenumber" name="L519" href="#L519">519</a> 
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>     @Override
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doPause(String httpImageUrl) {
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>         <strong class="jxr_keyword">if</strong> (!httpImageUrl.startsWith(<span class="jxr_string">"/MTG"</span>)) {
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L524" href="#L524">524</a>                 TimeUnit.SECONDS.sleep(2);
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>             } <strong class="jxr_keyword">catch</strong> (InterruptedException ignored) {
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>             }
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>         }
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>     }
+<a class="jxr_linenumber" name="L529" href="#L529">529</a> 
+<a class="jxr_linenumber" name="L530" href="#L530">530</a>     @Override
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardImageProvided(String setCode, String cardName) {
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>         <strong class="jxr_keyword">if</strong> (singleLinks == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>             setupLinks();
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>         }
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>         <strong class="jxr_keyword">return</strong> singleLinks.containsKey(setCode + <span class="jxr_string">"/"</span> + cardName) || singleLinks.containsKey(setCode + <span class="jxr_string">"/"</span> + cardName + <span class="jxr_string">"-a"</span>);
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>     }
+<a class="jxr_linenumber" name="L537" href="#L537">537</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

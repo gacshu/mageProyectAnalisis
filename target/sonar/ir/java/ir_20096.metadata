@@ -1,0 +1,35 @@
+mage.game.GameImpl#init(Ljava/util/UUID;)V
+mage.game.command.Plane#createRandomPlane()Lmage/game/command/Plane;
+java.util.HashSet#<init>(Ljava/util/Collection;)V
+mage.target.TargetPlayer#<init>()V
+mage.filter.FilterCard#<init>(Ljava/lang/String;)V
+mage.abilities.keyword.CompanionAbility#isLegal(Ljava/util/Set;I)Z
+mage.abilities.effects.keyword.StunCounterEffect#<init>()V
+mage.abilities.common.SimpleStaticAbility#instance-init#
+java.util.HashSet#instance-init#
+mage.target.TargetCard#<init>(ILmage/constants/Zone;Lmage/filter/FilterCard;)V
+mage.abilities.effects.keyword.ShieldCounterEffect#<init>()V
+java.util.HashSet#<init>()V
+java.util.HashMap#<init>()V
+mage.cards.CardsImpl#instance-init#
+mage.filter.FilterCard#instance-init#
+mage.cards.CardsImpl#<init>()V
+java.lang.String#isEmpty()Z
+java.util.HashMap#instance-init#
+mage.abilities.effects.keyword.StunCounterEffect#instance-init#
+mage.target.TargetPlayer#instance-init#
+mage.abilities.effects.keyword.ShieldCounterEffect#instance-init#
+mage.abilities.common.SimpleStaticAbility#<init>(Lmage/constants/Zone;Lmage/abilities/effects/Effect;)V
+mage.target.TargetCard#instance-init#
+==
+pickChoosingPlayer mage.game.GameImpl#pickChoosingPlayer()Ljava/util/UUID;
+initTimer mage.game.GameImpl#initTimer(Ljava/util/UUID;)V
+sendStartMessage mage.game.GameImpl#sendStartMessage(Lmage/players/Player;Lmage/players/Player;)V
+getCard mage.game.GameImpl#getCard(Ljava/util/UUID;)Lmage/cards/Card;
+fireStatusEvent mage.game.GameImpl#fireStatusEvent(Ljava/lang/String;ZZ)V
+saveState mage.game.GameImpl#saveState(Z)V
+getPlayer mage.game.GameImpl#getPlayer(Ljava/util/UUID;)Lmage/players/Player;
+checkIfGameIsOver mage.game.GameImpl#checkIfGameIsOver()Z
+getState mage.game.GameImpl#getState()Lmage/game/GameState;
+getStartingLife mage.game.GameImpl#getStartingLife()I
+addPlane mage.game.GameImpl#addPlane(Lmage/game/command/Plane;Lmage/MageObject;Ljava/util/UUID;)Z

@@ -1,0 +1,144 @@
+
+šmage.abilities.effects.common.replacement.DealtDamageToCreatureBySourceDies#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z
+„D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/replacement/DealtDamageToCreatureBySourceDies.java8 8("startingBlock*€
+2= =(ÓÐ
+=* =(9#
+%4mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*E
+
+__unknown_file ()
+'
+zce mage.game.events.ZoneChangeEvent2getTarget()†ƒ
+= =(@
+%5boolean"bmage.watchers.common.DamagedByWatcher#wasDamaged(Lmage/game/permanent/Permanent;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+watcher%mage.watchers.common.DamagedByWatcher*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2;wasDamaged(Lmage/game/permanent/Permanent;Lmage/game/Game;)"
+= =(A
+""*Ç
+3;' ;(+š—
+;' ;(6
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¨¥
+;Z ;(n
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÔÑ
+;' ;(o+
+%3%mage.watchers.common.DamagedByWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%1mage.game.GameState*"
+
+__unknown_file (
+""*2
+
+__unknown_file (
+
+%2java.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)
+
+; ;(p0
+watcher%mage.watchers.common.DamagedByWatcher"__id*I
+
+__unknown_file (-
++
+%3%mage.watchers.common.DamagedByWatcher*
+2
+1*ø
+startingBlock8 8(F–
+“
+7 7(
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+8% 8(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%6“
+
+7 7(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+84 8(: 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%7‰
+†
+7 7(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+8A 8(E
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+4*»
+490 9(5~
+|
+9 9(6'
+zce mage.game.events.ZoneChangeEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent£ 
+: :(
+%0boolean"/mage.game.events.ZoneChangeEvent#isDiesEvent()Z*E
+
+__unknown_file ()
+'
+zce mage.game.events.ZoneChangeEvent2isDiesEvent()*
+3
+1*!
+1@ @("
+@ @(
+"":/
+8 8(+#
+eventmage.game.events.GameEvent:,
+8, 8(; 
+sourcemage.abilities.Ability:"
+8< 8(E
+gamemage.game.GameBOM
+Kmage.abilities.effects.common.replacement.DealtDamageToCreatureBySourceDiesHP

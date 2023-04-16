@@ -1,0 +1,230 @@
+
+Émage.abilities.common.CantFlashUnlessConditionEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)ZÅ
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/CastAsThoughItHadFlashIfConditionAbility.javaG G("startingBlock*!
+2U U("
+U U(
+""*É
+3T T(O
+M
+T T(
+%9java.lang.Boolean"__id*"
+
+__unknown_file (
+""õò
+T  T(/
+%10mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()©¶
+TT T(h
+%11java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()|
+z
+T9 T(h
+%12java.lang.String"__concat*&
+T9 T(Q
+PlayFromNotOwnHandZone*#
+TT T(h
+
+%11java.util.UUID˘ˆ
+T  T(i
+%13java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*8
+
+__unknown_file (
+
+%10mage.game.GameState*5
+
+__unknown_file (
+
+%12java.lang.String2getValue(Ljava/lang/String;)÷”
+T T(j
+%14boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%9java.lang.Boolean*5
+
+__unknown_file (
+
+%13java.lang.Object2equals(Ljava/lang/Object;)*
+2
+1*ˇ
+startingBlockG G(Fó
+î
+F F(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+G% G(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%17î
+ë
+F F(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+G4 G(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%18ä
+á
+F F(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+GA G(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19*
+11*!
+4Q Q("
+Q Q(
+""*ø
+5PN P(R®•
+PN P(] 
+%7mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()}{
+PN P(d	
+%8int"java.util.ArrayDeque#size()I*>
+
+__unknown_file ("
+ 
+%7mage.game.stack.SpellStack2size()*
+3
+4*§
+6P" P(&Ø¨
+P6 P(I
+%5java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()⁄◊
+P" P(J
+%6boolean"0mage.game.Game#isActivePlayer(Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2 isActivePlayer(Ljava/util/UUID;)*
+3
+5*ñ
+7P P(}
+P P(
+%4boolean"mage.game.Game#isMainPhase()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isMainPhase()*
+3
+6*!
+8M M("
+M M(
+""*™
+9L L(íè
+L L('
+%3boolean"&mage.game.Game#inCheckPlayableState()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2inCheckPlayableState()*
+7
+8*"
+10I I("
+I I(
+""*√
+11H H(Ø¨
+H H( 
+%0java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()®•
+H( H(<
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Ã…
+H H(=
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+9
+10*¨
+1W W(£
+†
+W W()
+%15"mage.abilities.condition.Condition"__id*c
+
+__unknown_file (G*E6
+4mage.abilities.common.CantFlashUnlessConditionEffect"
+	condition‚ﬂ
+W W(-
+%16boolean"Smage.abilities.condition.Condition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*G
+
+__unknown_file (+
+)
+%15"mage.abilities.condition.Condition*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)"
+W W(.
+"":/
+G G(+#
+eventmage.game.events.GameEvent:,
+G, G(; 
+sourcemage.abilities.Ability:"
+G< G(E
+gamemage.game.GameB86
+4mage.abilities.common.CantFlashUnlessConditionEffectHP

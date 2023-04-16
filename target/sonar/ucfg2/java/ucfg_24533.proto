@@ -1,0 +1,369 @@
+
+emage.verify.mtgjson.MtgJsonService#readFromZip(Ljava/lang/String;Ljava/lang/Class;)Ljava/lang/Object;l
+bD:/eclipse-workspace/mage-master/Mage.Verify/src/main/java/mage/verify/mtgjson/MtgJsonService.java& &($"12*à
+2:N :(SËÈ
+: :(T
+%36T"Rcom.google.gson.Gson#fromJson(Ljava/io/Reader;Ljava/lang/Class;)Ljava/lang/Object;*9
+
+__unknown_file (
+
+%32com.google.gson.Gson*>
+
+__unknown_file ("
+ 
+%34java.io.InputStreamReader*6
+
+__unknown_file (
+
+clazzjava.lang.Class2+fromJson(Ljava/io/Reader;Ljava/lang/Class;)*
+1*¼
+3:= :(KIG
+:+ :(< 
+%34java.io.InputStreamReader"java.io.InputStreamReaderÜ
+Ù
+:' :(L
+%35"8java.io.InputStreamReader#<init>(Ljava/io/InputStream;)V*>
+
+__unknown_file ("
+ 
+%34java.io.InputStreamReader*L
+
+__unknown_file (0
+.
+zipInputStreamjava.util.zip.ZipInputStream*
+2*Ã
+4: :(?=
+: :(
+%32com.google.gson.Gson"com.google.gson.Gsonn
+l
+: :(
+%33"com.google.gson.Gson#<init>()V*9
+
+__unknown_file (
+
+%32com.google.gson.Gson*
+3*í
+58 8(G†
+ƒ
+8 8(G.
+zipInputStreamjava.util.zip.ZipInputStream"__id*A
+
+__unknown_file (%
+#
+%29java.util.zip.ZipInputStreamÏÌ
+9 9()
+%31java.util.zip.ZipEntry"Cjava.util.zip.ZipInputStream#getNextEntry()Ljava/util/zip/ZipEntry;*L
+
+__unknown_file (0
+.
+zipInputStreamjava.util.zip.ZipInputStream2getNextEntry()*
+4*·
+68@ 8(FOM
+81 8(?#
+%29java.util.zip.ZipInputStream"java.util.zip.ZipInputStreamÑ
+Î
+8- 8(G
+%30";java.util.zip.ZipInputStream#<init>(Ljava/io/InputStream;)V*A
+
+__unknown_file (%
+#
+%29java.util.zip.ZipInputStream*;
+
+__unknown_file (
+
+streamjava.io.InputStream*
+5*„
+85) 5(-EC
+5 5((
+%27java.io.FileInputStream"java.io.FileInputStream·
+´
+5 5(.
+%28"/java.io.FileInputStream#<init>(Ljava/io/File;)V*<
+
+__unknown_file ( 
+
+%27java.io.FileInputStream*2
+
+__unknown_file (
+
+filejava.io.Fileo
+m
+5 5(.
+streamjava.io.InputStream"__id*<
+
+__unknown_file ( 
+
+%27java.io.FileInputStream*
+6*Î
+93 3(R
+P
+3 3(
+%21java.io.PrintStream"__id*"
+
+__unknown_file (
+""x
+v
+3# 3(;
+%22java.lang.String"__concat*
+3# 3(0
+Found file **
+33 3(;
+
+filenamejava.lang.Stringn
+l
+3# 3(F
+%23java.lang.String"__concat*%
+3# 3(;
+
+%22java.lang.String*
+3> 3(F
+
+ from Ÿœ
+3I 3(_
+%24java.lang.String"0java.io.File#getAbsolutePath()Ljava/lang/String;*2
+
+__unknown_file (
+
+filejava.io.File2getAbsolutePath()}
+{
+3# 3(_
+%25java.lang.String"__concat*%
+3# 3(F
+
+%23java.lang.String*%
+3I 3(_
+
+%24java.lang.StringÚ×
+3 3(`
+%26void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
+
+__unknown_file (
+
+%21java.io.PrintStream*5
+
+__unknown_file (
+
+%25java.lang.String2println(Ljava/lang/String;)*
+8*­
+10+ +(:ˆ
+…
++ +(E
+%4java.lang.String"__concat*+
++ +(:
+https://mtgjson.com/api/v5/**
++= +(E
+
+filenamejava.lang.Stringa
+_
++ +(F
+urljava.lang.String"__id*4
+
+__unknown_file (
+
+%4java.lang.StringQ
+O
+, ,(
+%5java.io.PrintStream"__id*"
+
+__unknown_file (
+""s
+q
+,# ,(7
+%6java.lang.String"__concat*
+,# ,(1
+Downloading *%
+,4 ,(7
+
+urljava.lang.Stringj
+h
+,# ,(@
+%7java.lang.String"__concat*$
+,# ,(7
+
+%6java.lang.String*
+,: ,(@
+ to ž›
+,C ,(Y
+%8java.lang.String"0java.io.File#getAbsolutePath()Ljava/lang/String;*2
+
+__unknown_file (
+
+filejava.io.File2getAbsolutePath()z
+x
+,# ,(Y
+%9java.lang.String"__concat*$
+,# ,(@
+
+%7java.lang.String*$
+,C ,(Y
+
+%8java.lang.StringØÕ
+, ,(Z
+%10void"0java.io.PrintStream#println(Ljava/lang/String;)V*7
+
+__unknown_file (
+
+%5java.io.PrintStream*4
+
+__unknown_file (
+
+%9java.lang.String2println(Ljava/lang/String;)/-
+-/ -(2
+%11java.net.URL"java.net.URL¨
+¥
+-+ -(7
+%12"(java.net.URL#<init>(Ljava/lang/String;)V*1
+
+__unknown_file (
+
+%11java.net.URL*5
+
+__unknown_file (
+
+urljava.lang.String¨¥
+-+ -(H
+%13java.net.URLConnection"5java.net.URL#openConnection()Ljava/net/URLConnection;*1
+
+__unknown_file (
+
+%11java.net.URL2openConnection()u
+s
+- -(I$
+
+connectionjava.net.URLConnection"__id*;
+
+__unknown_file (
+
+%13java.net.URLConnection½º
+. .(D
+%14void"Pjava.net.URLConnection#setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V*B
+
+__unknown_file (&
+$
+
+connectionjava.net.URLConnection**
+
+__unknown_file (
+
+user-agent*%
+
+__unknown_file (	
+xmage28setRequestProperty(Ljava/lang/String;Ljava/lang/String;)½º
+/' /(B
+%15java.io.InputStream"<java.net.URLConnection#getInputStream()Ljava/io/InputStream;*B
+
+__unknown_file (&
+$
+
+connectionjava.net.URLConnection2getInputStream()m
+k
+/ /(C
+downloadjava.io.InputStream"__id*8
+
+__unknown_file (
+
+%15java.io.InputStream‘Ž
+0% 0(2
+%16java.nio.file.Path")java.io.File#toPath()Ljava/nio/file/Path;*2
+
+__unknown_file (
+
+filejava.io.File2toPath()_
+]
+04 0(W'
+%17 java.nio.file.StandardCopyOption"__id*"
+
+__unknown_file (
+""ï
+ì
+0 0(X
+%18long"_java.nio.file.Files#copy(Ljava/io/InputStream;Ljava/nio/file/Path;[Ljava/nio/file/CopyOption;)J*3
+
+__unknown_file ("
+java.nio.file.Files*=
+
+__unknown_file (!
+
+downloadjava.io.InputStream*7
+
+__unknown_file (
+
+%16java.nio.file.Path*E
+
+__unknown_file ()
+'
+%17 java.nio.file.StandardCopyOptionR
+P
+1 1(
+%19java.io.PrintStream"__id*"
+
+__unknown_file (
+""ÕÒ
+1 1(6
+%20void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
+
+__unknown_file (
+
+%19java.io.PrintStream*0
+
+__unknown_file (
+Downloading DONE2println(Ljava/lang/String;)*
+8*Ä
+11)! )().,
+) )( 
+%1java.io.File"java.io.File«
+¨
+) )(*
+%2"(java.io.File#<init>(Ljava/lang/String;)V*0
+
+__unknown_file (
+
+%1java.io.File*:
+
+__unknown_file (
+
+filenamejava.lang.StringZ
+X
+) )(+
+filejava.io.File"__id*0
+
+__unknown_file (
+
+%1java.io.Fileqo
+* *(
+%3boolean"java.io.File#exists()Z*2
+
+__unknown_file (
+
+filejava.io.File2exists()*
+9
+10*…
+12' '(1ÿü
+' '(O
+%0java.io.InputStream"Ljava.lang.Class#getResourceAsStream(Ljava/lang/String;)Ljava/io/InputStream;*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+filenamejava.lang.String2'getResourceAsStream(Ljava/lang/String;)j
+h
+' '(P
+streamjava.io.InputStream"__id*7
+
+__unknown_file (
+
+%0java.io.InputStream*
+6
+11*%
+1: :(U"
+: :(U
+
+
+%36T:(
+&% &(5
+filenamejava.lang.String:$
+&6 &(D
+clazzjava.lang.ClassB&"$
+"mage.verify.mtgjson.MtgJsonService

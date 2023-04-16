@@ -1,0 +1,206 @@
+
+umage.abilities.effects.common.ExileAndGainLifeEqualPowerTargetEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z‡
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileAndGainLifeEqualPowerTargetEffect.java   ("startingBlock*!
+2( (("
+( ((
+""*þ
+startingBlock   (3Š
+‡
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+ ,  (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+6*Ç
+4% %( °­
+%+ %(C
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+% %(D
+%4mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+% %(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%4mage.players.Playerº·
+&' &(B
+%5java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()ðí
+& &(C
+%6mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+& &(D
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%6mage.players.Player*
+2
+1*!
+5# #("
+# #(
+""*ç
+6! !("•’
+!@ !(R-
+%0'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.ExileAndGainLifeEqualPowerTargetEffect2getTargetPointer()†ƒ
+!@ !(i
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ª§
+! !(j#
+%2mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)
+
+! !(k*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+4
+5* 
+
+1* *(%¡ž
+* *(0
+%7mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()om
+* *(;	
+%8int"mage.MageInt#getValue()I*0
+
+__unknown_file (
+
+%7mage.MageInt2
+getValue()Q
+O
++( +(3
+%9mage.constants.Zone"__id*"
+
+__unknown_file (
+""¢Ÿ
++ +(B
+%10boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*7
+
+__unknown_file (
+
+%9mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)ïì
+, ,(4
+
+%11int"Hmage.players.Player#gainLife(ILmage/game/Game;Lmage/abilities/Ability;)I*;
+
+__unknown_file (
+
+playermage.players.Player*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability23gainLife(ILmage/game/Game;Lmage/abilities/Ability;)"
+- -(
+"":"
+   (#
+gamemage.game.Game:,
+ $  (2 
+sourcemage.abilities.AbilityBHF
+Dmage.abilities.effects.common.ExileAndGainLifeEqualPowerTargetEffectHP

@@ -1,0 +1,256 @@
+
+Fmage.player.human.HumanPlayer#pullResponseFromQueue(Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.java¢ ¢(+"13*Ê
+13
+£ £(ó
+î
+
+£ £(0
+%0*java.util.concurrent.ConcurrentLinkedQueue"__id*N
+
+__unknown_file (2*0
+mage.player.human.HumanPlayer"
+actionQueue∞≠
+
+£ £(!
+%1boolean"5java.util.concurrent.ConcurrentLinkedQueue#isEmpty()Z*N
+
+__unknown_file (2
+0
+%0*java.util.concurrent.ConcurrentLinkedQueue2	isEmpty()*
+9
+11*˘
+2
+¥ ¥(ã
+à
+
+¥ ¥('
+%17 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response£†
+
+¥ ¥(%
+%18void"Jmage.player.human.PlayerResponse#copy(Lmage/player/human/PlayerResponse;)V*E
+
+__unknown_file ()
+'
+%17 mage.player.human.PlayerResponse*H
+
+__unknown_file (,
+*
+action mage.player.human.PlayerResponse2(copy(Lmage/player/human/PlayerResponse;)ã
+à
+
+µ µ('
+%19 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+responseèå
+
+µ µ($
+%20void"java.lang.Object#notifyAll()V*E
+
+__unknown_file ()
+'
+%19 mage.player.human.PlayerResponse2notifyAll()"
+
+∑ ∑(
+""*¢
+3
+≥ ≥("ã
+à
+
+≥ ≥("'
+%16 mage.player.human.PlayerResponse"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+response*
+2*±
+4
+∞ ∞( \
+Z
+
+∞! ∞(P"
+%14mage.constants.PlayerAction"__id*"
+
+__unknown_file (
+""ºπ
+
+∞ ∞(]
+%15void"pmage.player.human.HumanPlayer#sendPlayerAction(Lmage/constants/PlayerAction;Lmage/game/Game;Ljava/lang/Object;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*@
+
+__unknown_file ($
+"
+%14mage.constants.PlayerAction*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2QsendPlayerAction(Lmage/constants/PlayerAction;Lmage/game/Game;Ljava/lang/Object;)*
+3*%
+5
+Æ Æ( "
+
+Æ Æ(!
+""*ñ
+6
+¨ ¨($ò
+ï
+
+¨ ¨($1
+%12*java.util.concurrent.ConcurrentLinkedQueue"__id*N
+
+__unknown_file (2*0
+mage.player.human.HumanPlayer"
+actionQueue÷”
+
+¨ ¨(+'
+%13 mage.player.human.PlayerResponse"Cjava.util.concurrent.ConcurrentLinkedQueue#poll()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+%12*java.util.concurrent.ConcurrentLinkedQueue2poll()à
+Ö
+
+¨ ¨(+*
+action mage.player.human.PlayerResponse"__id*E
+
+__unknown_file ()
+'
+%13 mage.player.human.PlayerResponse*
+4
+5*™
+7
+´ ´(øº
+
+´ ´()
+%10java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+action mage.player.human.PlayerResponse2getString()ŒÀ
+
+´ ´(@
+%11boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%10java.lang.String*,
+
+__unknown_file (
+resolveStack2equals(Ljava/lang/Object;)*
+3
+6*ÿ
+8
+™ ™(æª
+
+™ ™("
+%9java.lang.String">mage.player.human.PlayerResponse#getString()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+action mage.player.human.PlayerResponse2getString()*
+3
+7*í
+9
+®  ®(+ó
+î
+
+®  ®(+0
+%7*java.util.concurrent.ConcurrentLinkedQueue"__id*N
+
+__unknown_file (2*0
+mage.player.human.HumanPlayer"
+actionQueue‘—
+
+®  ®(2&
+%8 mage.player.human.PlayerResponse"Cjava.util.concurrent.ConcurrentLinkedQueue#poll()Ljava/lang/Object;*N
+
+__unknown_file (2
+0
+%7*java.util.concurrent.ConcurrentLinkedQueue2poll()á
+Ñ
+
+® ®(3*
+action mage.player.human.PlayerResponse"__id*D
+
+__unknown_file ((
+&
+%8 mage.player.human.PlayerResponse*
+8
+1*¿
+10
+§6 §(Fú
+ô
+
+§6 §(F0
+%4*java.util.concurrent.ConcurrentLinkedQueue"__id*S
+
+__unknown_file (7*5
+mage.player.human.HumanPlayer"
+actionQueueSavedlj
+
+§ §(50
+%5*java.util.concurrent.ConcurrentLinkedQueue"*java.util.concurrent.ConcurrentLinkedQueueÅ
+˛
+
+§ §(G
+%6"Jjava.util.concurrent.ConcurrentLinkedQueue#<init>(Ljava/util/Collection;)V*N
+
+__unknown_file (2
+0
+%5*java.util.concurrent.ConcurrentLinkedQueue*N
+
+__unknown_file (2
+0
+%4*java.util.concurrent.ConcurrentLinkedQueueó
+î
+
+§ §(G0
+mage.player.human.HumanPlayer"
+actionQueue"__id*N
+
+__unknown_file (2
+0
+%5*java.util.concurrent.ConcurrentLinkedQueue*
+9*Î
+11
+£> £(Nú
+ô
+
+£> £(N0
+%2*java.util.concurrent.ConcurrentLinkedQueue"__id*S
+
+__unknown_file (7*5
+mage.player.human.HumanPlayer"
+actionQueueSaved∞≠
+
+£> £(X
+%3boolean"5java.util.concurrent.ConcurrentLinkedQueue#isEmpty()Z*N
+
+__unknown_file (2
+0
+%2*java.util.concurrent.ConcurrentLinkedQueue2	isEmpty()*
+9
+10*%
+1
+∫ ∫("
+
+∫ ∫(
+"":$
+
+¢, ¢(5
+gamemage.game.GameB!
+mage.player.human.HumanPlayerP

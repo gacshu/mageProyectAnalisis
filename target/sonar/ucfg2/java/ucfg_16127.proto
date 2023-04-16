@@ -1,0 +1,731 @@
+
+“mage.players.PlayerImpl#getCastableSpellAbilities(Lmage/game/Game;Ljava/util/UUID;Lmage/MageObject;Lmage/constants/Zone;Z)Ljava/util/LinkedHashMap;\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.java†4 †(M"28*¾	
+25
+) (5¸µ
+
+) ‘(
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*F
+
+__unknown_file (*
+(
+allAbilitiesmage.abilities.Abilities2stream()
+
+) ’(7
+%5java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)ˆ…
+
+) “(.
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)°
+­
+
+” ”(, 
+%7java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+
+) ”(-
+%8java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)*
+2*É
+26
+Ž Ž(!²¯
+
+Ž Ž(0
+%3mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*7
+
+__unknown_file (
+
+objectmage.MageObject2getAbilities()|
+z
+
+Ž Ž(0(
+allAbilitiesmage.abilities.Abilities"__id*<
+
+__unknown_file ( 
+
+%3mage.abilities.Abilities*
+25*Ÿ
+27
+Œ# Œ()ˆ…
+
+Œ Œ(=
+%2mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*7
+
+__unknown_file (
+
+objectmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)|
+z
+
+Œ Œ(=(
+allAbilitiesmage.abilities.Abilities"__id*<
+
+__unknown_file ( 
+
+%2mage.abilities.Abilities*
+25*³
+28
+‰4 ‰(IFD
+
+‰8 ‰(G
+%0java.util.LinkedHashMap"java.util.LinkedHashMapt
+r
+
+‰4 ‰(I
+%1"!java.util.LinkedHashMap#<init>()V*;
+
+__unknown_file (
+
+%0java.util.LinkedHashMapu
+s
+
+‰ ‰(J"
+useablejava.util.LinkedHashMap"__id*;
+
+__unknown_file (
+
+%0java.util.LinkedHashMapb
+`
+
+Š Š(((
+allAbilitiesmage.abilities.Abilities"__id*"
+
+__unknown_file (
+""*
+26
+27*ú
+10
+¼) ¼(/À½
+
+¼ ¼(C
+%35mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+¼ ¼(U"
+%36mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%35mage.cards.SplitCardHalf2getSpellAbility()ÔÑ
+
+¼ ¼(u
+%37boolean"Nmage.abilities.SpellAbility#canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+%36mage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID21canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)*
+6
+9*o
+11
+º Æ(#T
+R
+
+»  »(.
+%34mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+8
+10*D
+12
+¹ ¹(""2
+
+¹ ¹(#$
+"
+useablejava.util.LinkedHashMap*Í	
+13
+´ ´(À½
+
+µ  µ(G
+%28mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+µ  µ(Y"
+%29mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%28mage.cards.SplitCardHalf2getSpellAbility()¥¢
+
+µ  µ(a
+%30java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%29mage.abilities.SpellAbility2getId()À½
+
+¶  ¶(G
+%31mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+¶  ¶(Y"
+%32mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%31mage.cards.SplitCardHalf2getSpellAbility()ö
+ó
+
+´ ·("
+%33mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%30java.util.UUID*@
+
+__unknown_file ($
+"
+%32mage.abilities.SpellAbility*
+12*ü
+14
+³% ³(+À½
+
+³ ³(?
+%25mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+³ ³(Q"
+%26mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%25mage.cards.SplitCardHalf2getSpellAbility()ÔÑ
+
+³ ³(q
+%27boolean"Nmage.abilities.SpellAbility#canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+%26mage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID21canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)*
+13
+12*É	
+15
+® ®(¾»
+
+¯  ¯(F
+%19mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+¯  ¯(X"
+%20mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%19mage.cards.SplitCardHalf2getSpellAbility()¥¢
+
+¯  ¯(`
+%21java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%20mage.abilities.SpellAbility2getId()¾»
+
+°  °(F
+%22mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+°  °(X"
+%23mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%22mage.cards.SplitCardHalf2getSpellAbility()ö
+ó
+
+® ±("
+%24mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%21java.util.UUID*@
+
+__unknown_file ($
+"
+%23mage.abilities.SpellAbility*
+14*ú
+16
+¬ ¹(#¾»
+
+­ ­(>
+%16mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+­ ­(P"
+%17mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%16mage.cards.SplitCardHalf2getSpellAbility()ÔÑ
+
+­ ­(p
+%18boolean"Nmage.abilities.SpellAbility#canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+%17mage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID21canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)*
+14
+15*É
+17
+© ©(#®«
+
+©( ©(<
+%14java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2getId()ÿ
+ü
+
+© ©(K"
+%15mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%14java.util.UUID*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*
+16*ú
+18
+¨ ¨((ÝÚ
+
+¨ ¨(H
+%13boolean"Nmage.abilities.SpellAbility#canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)Z*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID21canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)*
+16
+17*p
+19
+£ «(T
+R
+
+§  §()
+%12mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+16
+18*C
+1
+Í Í("2
+
+Í Í($
+"
+useablejava.util.LinkedHashMap*¡
+2
+ (&e
+c
+
+ (&+
+spellAbilitymage.abilities.SpellAbility"__id*"
+
+__unknown_file (
+"" 
+
+
+ (&+
+spellAbilitymage.abilities.SpellAbility"
+__arrayGet*2
+
+__unknown_file (
+
+%8java.util.List*"
+
+__unknown_file (
+""*
+3
+1*Ÿ
+3
+• •( íê
+
+• •(6&
+%56mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2getSpellAbilityType()`
+^
+
+– –(#&
+%57mage.constants.SpellAbilityType"__id*"
+
+__unknown_file (
+""`
+^
+
+£ £( &
+%58mage.constants.SpellAbilityType"__id*"
+
+__unknown_file (
+""`
+^
+
+¬ ¬(&
+%59mage.constants.SpellAbilityType"__id*"
+
+__unknown_file (
+""`
+^
+
+º º($&
+%60mage.constants.SpellAbilityType"__id*"
+
+__unknown_file (
+""*
+2
+5
+16
+19
+11
+23*Ç
+4
+É É(®«
+
+É$ É(8
+%54java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2getId()ÿ
+ü
+
+É É(G"
+%55mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%54java.util.UUID*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*
+2*—
+5
+Ç Ê(ýú
+
+È È(T
+%53boolean"^mage.abilities.SpellAbility#spellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)Z*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2AspellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)*
+2
+4*C
+6
+Æ Æ(""2
+
+Æ Æ(#$
+"
+useablejava.util.LinkedHashMap*Ç	
+7
+Â Â(#¾»
+
+Â( Â(N
+%47mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+Â( Â(`"
+%48mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%47mage.cards.SplitCardHalf2getSpellAbility()¥¢
+
+Â( Â(h
+%49java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%48mage.abilities.SpellAbility2getId()¾»
+
+Ã$ Ã(J
+%50mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+Ã$ Ã(\"
+%51mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%50mage.cards.SplitCardHalf2getSpellAbility()ö
+ó
+
+Â Ã(]"
+%52mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%49java.util.UUID*@
+
+__unknown_file ($
+"
+%51mage.abilities.SpellAbility*
+6*÷
+8
+Á) Á(/¾»
+
+Á Á(B
+%44mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getLeftHalfCard()ÅÂ
+
+Á Á(T"
+%45mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%44mage.cards.SplitCardHalf2getSpellAbility()ÔÑ
+
+Á Á(t
+%46boolean"Nmage.abilities.SpellAbility#canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)Z*@
+
+__unknown_file ($
+"
+%45mage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID21canChooseTarget(Lmage/game/Game;Ljava/util/UUID;)*
+6
+7*Ë	
+9
+½ ½(#À½
+
+½( ½(O
+%38mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+½( ½(a"
+%39mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%38mage.cards.SplitCardHalf2getSpellAbility()¥¢
+
+½( ½(i
+%40java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%39mage.abilities.SpellAbility2getId()À½
+
+¾$ ¾(K
+%41mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*7
+
+__unknown_file (
+
+objectmage.MageObject2getRightHalfCard()ÅÂ
+
+¾$ ¾(]"
+%42mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+%41mage.cards.SplitCardHalf2getSpellAbility()ö
+ó
+
+½ ¾(^"
+%43mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%40java.util.UUID*@
+
+__unknown_file ($
+"
+%42mage.abilities.SpellAbility*
+6*D
+21
+   (&"2
+
+   ('$
+"
+useablejava.util.LinkedHashMap*É
+22
+ž ž(#®«
+
+ž( ž(<
+%10java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2getId()ÿ
+ü
+
+ž ž(K"
+%11mage.abilities.SpellAbility"__mapSet*@
+
+__unknown_file ($
+"
+useablejava.util.LinkedHashMap*3
+
+__unknown_file (
+
+%10java.util.UUID*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*
+21*™
+23
+ ((üù
+
+ (X
+%9boolean"^mage.abilities.SpellAbility#spellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)Z*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2AspellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)*
+21
+22:$
+
+†N †(X
+gamemage.game.Game:(
+
+†Y †(g
+playerIdjava.util.UUID:'
+
+†h †(z
+objectmage.MageObject:*
+†{ †(…
+zonemage.constants.Zone: 
+
+__unknown_file (
+""B"
+mage.players.PlayerImplH

@@ -1,0 +1,188 @@
+
+bmage.abilities.keyword.FlankingAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zi
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/FlankingAbility.java   ("startingBlock*!
+2+ +("
++ +( 
+""*£
+3( ((&_
+]
+( ((&'
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""ª
+§
+( ((&'
+effectmage.abilities.effects.Effect"
+__arrayGet*B
+
+__unknown_file (&
+$
+%8mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+2
+4*„
+startingBlock   (;—
+”
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+ *  (/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+ (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ 6  (:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+8*Å
+4) )(¯¬
+)@ )(S
+%9java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()a_
+)4 )(?,
+%10%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget›
+˜
+)0 )(Z
+%11"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%9java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gameýú
+) )([$
+%12mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+3*ç
+5() ((-ÒÏ
+() ((:$
+%8mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*F
+
+__unknown_file (*(
+&mage.abilities.keyword.FlankingAbility2getEffects()*
+3*õ
+6% %(#Á¾
+% %(2
+%5mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getAbilities()¬©
+% %(;
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%5mage.abilities.Abilities2stream()êç
+% %(g
+%7boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)*
+5
+1*Ø
+7"" "(&¯¬
+"4 "(G
+%3java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()Š‡
+"" "(H#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+" "(I*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+6
+1*Í
+8! !(¯¬
+! !(
+%0java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()´±
+!' !(9
+%1java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*F
+
+__unknown_file (*(
+&mage.abilities.keyword.FlankingAbility2getSourceId()ÌÉ
+! !(:
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+7
+1*!
+1/ /("
+/ /(
+"":/
+    (0#
+eventmage.game.events.GameEvent:"
+ 1  (:
+gamemage.game.GameB*(
+&mage.abilities.keyword.FlankingAbilityHP

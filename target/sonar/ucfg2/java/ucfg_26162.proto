@@ -1,0 +1,245 @@
+
+Emage.server.game.GameController#getPlayerNameList()Ljava/lang/String;k
+_D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GameController.javaÝ Ý(#"10*…
+2
+ß ß(T
+R
+
+ß ß(
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""•
+’
+
+ß ß(
+playerIdjava.util.UUID"
+__arrayGet*8
+
+__unknown_file (
+
+%3java.util.Collection*"
+
+__unknown_file (
+""*
+8
+1*‹
+3
+ä ä(‡„
+
+ä ä(-
+%15java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*0
+
+__unknown_file (
+player missing: 2append(Ljava/lang/String;)
+
+ä ä(>
+%16java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%15java.lang.StringBuilder*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2append(Ljava/lang/Object;)×Ô
+
+ä ä(J
+%17java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%16java.lang.StringBuilder*!
+
+__unknown_file (
+ 2	append(C)*
+2* 
+4
+â â(aŒ‰
+
+â â(a
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%8java.lang.StringBuilder*5
+
+__unknown_file (
+
+%10java.lang.String2append(Ljava/lang/String;)ú÷
+
+â â(n
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%13java.lang.StringBuilder*"
+
+__unknown_file (
+) 2append(Ljava/lang/String;)*
+2*z
+5
+â] â(`d
+b
+
+â] â(`
+%10java.lang.String"__id*5
+
+__unknown_file (
+
+%12java.lang.String*
+4*z
+6
+âW â(Zd
+b
+
+âW â(Z
+%10java.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+4*Ï
+7
+â â( 
+
+â â(*
+%6java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+playermage.players.Player2	getName()Š‡
+
+â â(+
+%7java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*4
+
+__unknown_file (
+
+%6java.lang.String2append(Ljava/lang/String;)üù
+
+â â(<
+%8java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%7java.lang.StringBuilder*&
+
+__unknown_file (
+
+(Left=2append(Ljava/lang/String;)†ƒ
+
+âD â(T
+%9boolean"mage.players.Player#hasLeft()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	hasLeft()*
+5
+6*õ
+8
+à à( u
+s
+
+à à( 
+%4mage.game.Game"__id*I
+
+__unknown_file (-*+!
+mage.server.game.GameController"
+gameöó
+
+à à(4
+%5mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*2
+
+__unknown_file (
+
+%4mage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+à à(5
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%5mage.players.Player*
+3
+7*Ø
+9
+ß ß(*“
+
+
+ß ß(*(
+%2"java.util.concurrent.ConcurrentMap"__id*R
+
+__unknown_file (6*4!
+mage.server.game.GameController"
+userPlayerMap«¨
+
+ß ß(3
+%3java.util.Collection",java.util.Map#values()Ljava/util/Collection;*F
+
+__unknown_file (*
+(
+%2"java.util.concurrent.ConcurrentMap2values()*
+2*ý
+10
+Þ- Þ(1FD
+
+Þ Þ(,
+%0java.lang.StringBuilder"java.lang.StringBuilder«
+¨
+
+Þ Þ(2
+%1"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%0java.lang.StringBuilder*"
+
+__unknown_file (
+ [p
+n
+
+Þ Þ(3
+sbjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%0java.lang.StringBuilder*
+9*¼
+1
+ç ç(ÖÓ
+
+ç ç(
+%18java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+]2	append(C)¨¥
+
+ç ç((
+%19java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%18java.lang.StringBuilder2
+toString()"'
+
+ç ç()
+
+%19java.lang.StringB#!
+mage.server.game.GameControllerH

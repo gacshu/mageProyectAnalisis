@@ -1,0 +1,1107 @@
+
+Ymage.client.dialog.ConnectDialog#btnConnectActionPerformed(Ljava/awt/event/ActionEvent;)Vl
+`D:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/dialog/ConnectDialog.javaÒ Ò(*"51*∑
+24
+çR ç(`û
+õ
+
+çR ç(r
+%57boolean"7mage.cards.repository.RepositoryUtil#isDatabaseEmpty()Z*D
+
+__unknown_file (("&
+$mage.cards.repository.RepositoryUtil*
+23*«
+26
+ç ç(Ü
+É
+
+ç ç(
+%54mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionã
+à
+
+ç, ç(A
+%55javax.swing.JCheckBox"__id*V
+
+__unknown_file (:*8"
+ mage.client.dialog.ConnectDialog"
+chkForceUpdateDBìê
+
+ç, ç(N
+%56boolean"(javax.swing.AbstractButton#isSelected()Z*:
+
+__unknown_file (
+
+%55javax.swing.JCheckBox2isSelected()*
+24
+23*É
+27
+å å(YÍÁ
+
+å å(Y
+%53void"7mage.remote.Connection#setPassword(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%48mage.remote.Connection*5
+
+__unknown_file (
+
+%52java.lang.String2setPassword(Ljava/lang/String;)*
+26*´
+28
+å# å(Xíè
+
+å# å(X
+%52java.lang.String")java.lang.String#trim()Ljava/lang/String;*5
+
+__unknown_file (
+
+%51java.lang.String2trim()*
+27*–
+29
+å# å(Q∑
+¥
+
+å# å(Q
+%51java.lang.String".java.lang.String#valueOf([C)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*+
+
+__unknown_file (
+
+%50char[]*
+28* 
+30
+å å(Ü
+É
+
+å å(
+%48mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionã
+à
+
+å2 å(B!
+%49javax.swing.JPasswordField"__id*Q
+
+__unknown_file (5*3"
+ mage.client.dialog.ConnectDialog"
+txtPasswordöó
+
+å2 å(P
+%50char[]"*javax.swing.JPasswordField#getPassword()[C*?
+
+__unknown_file (#
+!
+%49javax.swing.JPasswordField2getPassword()*
+29*É
+31
+ã ã(EÍÁ
+
+ã ã(E
+%47void"7mage.remote.Connection#setUsername(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%43mage.remote.Connection*5
+
+__unknown_file (
+
+%46java.lang.String2setUsername(Ljava/lang/String;)*
+30*´
+32
+ã# ã(Díè
+
+ã# ã(D
+%46java.lang.String")java.lang.String#trim()Ljava/lang/String;*5
+
+__unknown_file (
+
+%45java.lang.String2trim()*
+31*Ÿ
+33
+ã ã(Ü
+É
+
+ã ã(
+%43mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectioná
+Ñ
+
+ã# ã(3
+%44javax.swing.JTextField"__id*Q
+
+__unknown_file (5*3"
+ mage.client.dialog.ConnectDialog"
+txtUserName≠™
+
+ã# ã(=
+%45java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%44javax.swing.JTextField2	getText()*
+32*Ã
+34
+ä ä(O≥∞
+
+ä ä(O
+%42void""mage.remote.Connection#setPort(I)V*;
+
+__unknown_file (
+
+%37mage.remote.Connection*(
+
+__unknown_file (
+
+
+%41int2
+setPort(I)*
+33*œ
+35
+ä ä(N∂
+≥
+
+ä ä(N
+
+%41int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*1
+
+__unknown_file ("
+java.lang.Integer*5
+
+__unknown_file (
+
+%40java.lang.String*
+34*´
+36
+ä0 ä(Míè
+
+ä0 ä(M
+%40java.lang.String")java.lang.String#trim()Ljava/lang/String;*5
+
+__unknown_file (
+
+%39java.lang.String2trim()*
+35*’
+37
+ä ä(Ü
+É
+
+ä ä(
+%37mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionÉ
+Ä
+
+ä0 ä(<
+%38javax.swing.JTextField"__id*M
+
+__unknown_file (1*/"
+ mage.client.dialog.ConnectDialog"	
+txtPort≠™
+
+ä0 ä(F
+%39java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%38javax.swing.JTextField2	getText()*
+36*˚
+38
+â â(?‚ﬂ
+
+â â(?
+%36void"3mage.remote.Connection#setHost(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%32mage.remote.Connection*5
+
+__unknown_file (
+
+%35java.lang.String2setHost(Ljava/lang/String;)*
+37*´
+39
+â â(>íè
+
+â â(>
+%35java.lang.String")java.lang.String#trim()Ljava/lang/String;*5
+
+__unknown_file (
+
+%34java.lang.String2trim()*
+38*‡
+40
+à à()Ü
+É
+
+à à()2"
+ mage.client.dialog.ConnectDialog"
+
+connection"__id*;
+
+__unknown_file (
+
+%30mage.remote.ConnectionÜ
+É
+
+â â(
+%32mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionÖ
+Ç
+
+â â(-
+%33javax.swing.JTextField"__id*O
+
+__unknown_file (3*1"
+ mage.client.dialog.ConnectDialog"
+	txtServer≠™
+
+â â(7
+%34java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%33javax.swing.JTextField2	getText()*
+39*”
+41
+à à()EC
+
+à à('
+%30mage.remote.Connection"mage.remote.Connectiont
+r
+
+à à()
+%31" mage.remote.Connection#<init>()V*;
+
+__unknown_file (
+
+%30mage.remote.Connection*
+40*a
+42
+Ü  Ü(!I
+G
+
+Ü Ü(#
+inputchar[]"__id*"
+
+__unknown_file (
+""*
+41*ë
+
+43
+Å Å(É
+Ä
+
+Å* Å(2
+%23javax.swing.JRootPane"__id*N
+
+__unknown_file (2*0"
+ mage.client.dialog.ConnectDialog"
+
+rootPaneö
+ó
+
+Å Å(J
+%24void"Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V*7
+
+__unknown_file ("
+javax.swing.JOptionPane*:
+
+__unknown_file (
+
+%23javax.swing.JRootPane*3
+
+__unknown_file (
+Invalid port numberÉ
+Ä
+
+Ç Ç(
+%25javax.swing.JTextField"__id*M
+
+__unknown_file (1*/"
+ mage.client.dialog.ConnectDialog"	
+txtPortD
+B
+
+ÇV Ç(p
+
+%26int"__id*"
+
+__unknown_file (
+""“
+œ
+
+Ç- Ç(q
+
+%27int"Cmage.client.preference.MagePreferences#getServerPortWithDefault(I)I*F
+
+__unknown_file (*"(
+&mage.client.preference.MagePreferences*(
+
+__unknown_file (
+
+
+%26int∂
+≥
+
+Ç Ç(r
+%28java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%27intÎË
+
+Ç Ç(s
+%29void"<javax.swing.text.JTextComponent#setText(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%25javax.swing.JTextField*5
+
+__unknown_file (
+
+%28java.lang.String2setText(Ljava/lang/String;)"
+
+É É(
+""*â
+44
+Ä7 Ä(>É
+Ä
+
+ÄH Ä(O
+%20javax.swing.JTextField"__id*M
+
+__unknown_file (1*/"
+ mage.client.dialog.ConnectDialog"	
+txtPort≠™
+
+ÄH Ä(Y
+%21java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%20javax.swing.JTextField2	getText()∂
+≥
+
+Ä7 Ä(Z
+
+%22int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*1
+
+__unknown_file ("
+java.lang.Integer*5
+
+__unknown_file (
+
+%21java.lang.String*
+42
+43*â
+45
+Ä Ä(É
+Ä
+
+Ä Ä($
+%17javax.swing.JTextField"__id*M
+
+__unknown_file (1*/"
+ mage.client.dialog.ConnectDialog"	
+txtPort≠™
+
+Ä Ä(.
+%18java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%17javax.swing.JTextField2	getText()∂
+≥
+
+Ä Ä(/
+
+%19int"/java.lang.Integer#parseInt(Ljava/lang/String;)I*1
+
+__unknown_file ("
+java.lang.Integer*5
+
+__unknown_file (
+
+%18java.lang.String*
+43
+44*–
+46
+¸ ¸(É
+Ä
+
+¸* ¸(2
+%15javax.swing.JRootPane"__id*N
+
+__unknown_file (2*0"
+ mage.client.dialog.ConnectDialog"
+
+rootPane°
+û
+
+¸ ¸(Q
+%16void"Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V*7
+
+__unknown_file ("
+javax.swing.JOptionPane*:
+
+__unknown_file (
+
+%15javax.swing.JRootPane*:
+
+__unknown_file (
+Please provide a user name"
+
+˝ ˝(
+""*”
+47
+˚ ˚(á
+Ñ
+
+˚ ˚(
+%12javax.swing.JTextField"__id*Q
+
+__unknown_file (5*3"
+ mage.client.dialog.ConnectDialog"
+txtUserName≠™
+
+˚ ˚(!
+%13java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*;
+
+__unknown_file (
+
+%12javax.swing.JTextField2	getText()}{
+
+˚ ˚(+
+%14boolean"java.lang.String#isEmpty()Z*5
+
+__unknown_file (
+
+%13java.lang.String2	isEmpty()*
+46
+45*“
+48
+¯ ¯(É
+Ä
+
+¯* ¯(2
+%10javax.swing.JRootPane"__id*N
+
+__unknown_file (2*0"
+ mage.client.dialog.ConnectDialog"
+
+rootPane£
+†
+
+¯ ¯(S
+%11void"Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V*7
+
+__unknown_file ("
+javax.swing.JOptionPane*:
+
+__unknown_file (
+
+%10javax.swing.JRootPane*<
+
+__unknown_file ( 
+Please provide a port number"
+
+˘ ˘(
+""*‹
+49
+˜ ˜(Å
+
+
+˜ ˜(
+%6javax.swing.JTextField"__id*M
+
+__unknown_file (1*/"
+ mage.client.dialog.ConnectDialog"	
+txtPort´®
+
+˜ ˜(
+%7java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*:
+
+__unknown_file (
+
+%6javax.swing.JTextField2	getText()êç
+
+˜ ˜($
+%8java.lang.String")java.lang.String#trim()Ljava/lang/String;*4
+
+__unknown_file (
+
+%7java.lang.String2trim(){y
+
+˜ ˜(.
+%9boolean"java.lang.String#isEmpty()Z*4
+
+__unknown_file (
+
+%8java.lang.String2	isEmpty()*
+47
+48*—
+50
+Ù Ù(Å
+
+
+Ù* Ù(2
+%4javax.swing.JRootPane"__id*N
+
+__unknown_file (2*0"
+ mage.client.dialog.ConnectDialog"
+
+rootPane§
+°
+
+Ù Ù(V
+
+%5void"Rjavax.swing.JOptionPane#showMessageDialog(Ljava/awt/Component;Ljava/lang/Object;)V*7
+
+__unknown_file ("
+javax.swing.JOptionPane*9
+
+__unknown_file (
+
+%4javax.swing.JRootPane*?
+
+__unknown_file (#!
+Please provide a server address"
+
+ı ı(
+""*ﬂ
+51
+Û Û(Ñ
+Å
+
+Û Û(
+%0javax.swing.JTextField"__id*O
+
+__unknown_file (3*1"
+ mage.client.dialog.ConnectDialog"
+	txtServer´®
+
+Û Û(
+%1java.lang.String";javax.swing.text.JTextComponent#getText()Ljava/lang/String;*:
+
+__unknown_file (
+
+%0javax.swing.JTextField2	getText()êç
+
+Û Û(&
+%2java.lang.String")java.lang.String#trim()Ljava/lang/String;*4
+
+__unknown_file (
+
+%1java.lang.String2trim(){y
+
+Û Û(0
+%3boolean"java.lang.String#isEmpty()Z*4
+
+__unknown_file (
+
+%2java.lang.String2	isEmpty()*
+49
+50*ï
+10
+ï ï(Ü
+É
+
+ï2 ï(<
+%77mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionÙ
+Ò
+
+ï ï(=
+%78void"Smage.client.dialog.PreferencesDialog#setProxyInformation(Lmage/remote/Connection;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*;
+
+__unknown_file (
+
+%77mage.remote.Connection*
+9*ÿ
+11
+î î(uøº
+
+î î(u
+%76void"Fjava.util.prefs.Preferences#put(Ljava/lang/String;Ljava/lang/String;)V*@
+
+__unknown_file ($
+"
+%71java.util.prefs.Preferences*5
+
+__unknown_file (
+
+%72java.lang.String*5
+
+__unknown_file (
+
+%75java.lang.String2)put(Ljava/lang/String;Ljava/lang/String;)*
+10*Ê
+12
+î> î(dÕ 
+
+î= î(t
+%75java.lang.String"Rmage.client.util.gui.countryBox.CountryItemEditor#getImageItem()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%74javax.swing.ComboBoxEditor2getImageItem()*
+11*Á
+13
+î+ î(;Z
+X
+
+î+ î(;
+%72java.lang.String"__id*+
+
+__unknown_file (
+connectFlagõ
+ò
+
+îR î(X6
+%73/mage.client.util.gui.countryBox.CountryComboBox"__id*L
+
+__unknown_file (0*."
+ mage.client.dialog.ConnectDialog"
+cbFlag‘—
+
+îR î(d!
+%74javax.swing.ComboBoxEditor"=javax.swing.JComboBox#getEditor()Ljavax/swing/ComboBoxEditor;*T
+
+__unknown_file (8
+6
+%73/mage.client.util.gui.countryBox.CountryComboBox2getEditor()*
+12*»
+14
+î î(Ø
+¨
+
+î î(&"
+%71java.util.prefs.Preferences"Cmage.client.MageFrame#getPreferences()Ljava/util/prefs/Preferences;*5
+
+__unknown_file ("
+mage.client.MageFrame*
+13*ì
+15ì$ ì(êÜ
+É
+ì$ ì(ê
+%67java.lang.String"__concat*'
+
+ì$ ì(o
+
+%65java.lang.String*(
+ìr ì(ê
+
+%66java.lang.Strings
+q
+ì$ ì(ñ
+%68java.lang.String"__concat*(
+ì$ ì(ê
+
+%67java.lang.String*
+ìì ì(ñ
+:ã
+à
+ì$ ì(ü
+%69java.lang.String"__concat*(
+ì$ ì(ñ
+
+%68java.lang.String*,
+ìô ì(ü
+
+allMACjava.lang.StringÌÍ
+ì ì(†
+%70void"8mage.remote.Connection#setUserIdStr(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%60mage.remote.Connection*5
+
+__unknown_file (
+
+%69java.lang.String2 setUserIdStr(Ljava/lang/String;)*
+14*À
+16
+ì$ ì(iÑ
+Å
+
+ì$ ì(i
+%64java.lang.String"__concat*'
+
+ì$ ì(I
+
+%62java.lang.String*'
+
+ìL ì(i
+
+%63java.lang.Stringo
+m
+
+ì$ ì(o
+%65java.lang.String"__concat*'
+
+ì$ ì(i
+
+%64java.lang.String*
+
+ìl ì(o
+:∫
+∑
+ìr ì(ê
+%66java.lang.String"Gmage.client.preference.MagePreferences#getUserNames()Ljava/lang/String;*F
+
+__unknown_file (*"(
+&mage.client.preference.MagePreferences*
+15*—
+17
+ìF ì(Io
+m
+
+ì$ ì(I
+%62java.lang.String"__concat*'
+
+ì$ ì(C
+
+%61java.lang.String*
+
+ìF ì(I
+:«
+ƒ
+
+ìL ì(i
+%63java.lang.String"Bjava.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*'
+
+__unknown_file (	
+os.name*
+16*Î
+18
+ì ì(Ü
+É
+
+ì ì(
+%60mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connection…
+∆
+
+ì$ ì(C
+%61java.lang.String"Bjava.lang.System#getProperty(Ljava/lang/String;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.System*)
+
+__unknown_file (
+	user.name*
+17*
+19
+ê ê(,g
+e
+
+ê ê(,
+allMACjava.lang.String"__id*5
+
+__unknown_file (
+
+%59java.lang.String*
+18*(
+0 "!
+
+° °(
+implicit return*‘
+1
+û û(Ω
+∫
+
+û û(#
+%99void"java.util.Arrays#fill([CC)V*0
+
+__unknown_file ("
+java.util.Arrays*-
+
+__unknown_file (
+
+inputchar[]*!
+
+__unknown_file (
+0*
+0*Á
+2
+õ õ($ñ
+ì
+
+õ õ($,"
+ mage.client.dialog.ConnectDialog"
+task"__id*Q
+
+__unknown_file (5
+3
+%95,mage.client.dialog.ConnectDialog$ConnectTaskñ
+ì
+
+ú ú(3
+%97,mage.client.dialog.ConnectDialog$ConnectTask"__id*J
+
+__unknown_file (.*,"
+ mage.client.dialog.ConnectDialog"
+taskûõ
+
+ú ú(
+%98void""javax.swing.SwingWorker#execute()V*Q
+
+__unknown_file (5
+3
+%97,mage.client.dialog.ConnectDialog$ConnectTask2	execute()*
+1*Õ
+3
+õ õ($qo
+
+õ õ("3
+%95,mage.client.dialog.ConnectDialog$ConnectTask",mage.client.dialog.ConnectDialog$ConnectTask√
+¿
+
+õ õ($
+%96"Xmage.client.dialog.ConnectDialog$ConnectTask#<init>(Lmage/client/dialog/ConnectDialog;)V*Q
+
+__unknown_file (5
+3
+%95,mage.client.dialog.ConnectDialog$ConnectTask*
+2*ı
+4ö ö(áx
+v
+ö ö(á
+%93java.lang.String"__concat*'
+
+ö ö(k
+
+%90java.lang.String*
+ön ö(á
+
+
+%92int„‡
+ö ö(à
+%94void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%82org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%93java.lang.String2debug(Ljava/lang/Object;)*
+3*©
+5
+ö ö(eÑ
+Å
+
+ö ö(e
+%89java.lang.String"__concat*'
+
+ö ö(I
+
+%86java.lang.String*'
+
+öL ö(e
+
+%88java.lang.Stringo
+m
+
+ö ö(k
+%90java.lang.String"__concat*'
+
+ö ö(e
+
+%89java.lang.String*
+
+öh ö(k
+ Ü
+É
+
+ön ö(x
+%91mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionëé
+ön ö(á
+
+%92int"&mage.remote.Connection#getProxyPort()I*;
+
+__unknown_file (
+
+%91mage.remote.Connection2getProxyPort()*
+4*Õ
+6
+ö ö(Cã
+à
+
+ö ö(C
+%85java.lang.String"__concat*
+
+ö ö('
+connecting: *7
+
+ö* ö(C)
+'
+%84 mage.remote.Connection$ProxyTypeo
+m
+
+ö ö(I
+%86java.lang.String"__concat*'
+
+ö ö(C
+
+%85java.lang.String*
+
+öF ö(I
+ Ü
+É
+
+öL ö(V
+%87mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionÆ´
+
+öL ö(e
+%88java.lang.String"7mage.remote.Connection#getProxyHost()Ljava/lang/String;*;
+
+__unknown_file (
+
+%87mage.remote.Connection2getProxyHost()*
+5*»
+7
+ö ö(X
+V
+
+ö ö(
+%82org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ü
+É
+
+ö* ö(4
+%83mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionŒÀ
+
+ö* ö(C'
+%84 mage.remote.Connection$ProxyType"Gmage.remote.Connection#getProxyType()Lmage/remote/Connection$ProxyType;*;
+
+__unknown_file (
+
+%83mage.remote.Connection2getProxyType()*
+6*¥
+8
+ò= ò(GÜ
+É
+
+ò= ò(G
+%80mage.remote.Connection"__id*P
+
+__unknown_file (4*2"
+ mage.client.dialog.ConnectDialog"
+
+connectionîë
+
+ò ò(H
+%81void"Image.client.MageFrame#setUserPrefsToConnection(Lmage/remote/Connection;)V*:
+
+__unknown_file (
+
+%79mage.client.MageFrame*;
+
+__unknown_file (
+
+%80mage.remote.Connection22setUserPrefsToConnection(Lmage/remote/Connection;)*
+7*∑
+9
+ò ò(†
+ù
+
+ò ò(#
+%79mage.client.MageFrame":mage.client.MageFrame#getInstance()Lmage/client/MageFrame;*5
+
+__unknown_file ("
+mage.client.MageFrame*
+8*¨
+21
+ê ê(#ì
+ê
+
+ê ê(,
+%59java.lang.String"1mage.remote.Connection#getMAC()Ljava/lang/String;*6
+
+__unknown_file ("
+mage.remote.Connection*
+19*h
+22
+é é(P
+N
+
+é é(
+allMACjava.lang.String"__id*
+
+__unknown_file ( *
+21*‡
+23
+ç ç(s«ƒ
+
+ç ç(s
+%58void"/mage.remote.Connection#setForceDBComparison(Z)V*;
+
+__unknown_file (
+
+%54mage.remote.Connection*"
+
+__unknown_file (
+""2setForceDBComparison(Z)*
+22:/
+
+Ò+ Ò(I!
+evtjava.awt.event.ActionEventB$"
+ mage.client.dialog.ConnectDialog

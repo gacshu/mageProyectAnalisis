@@ -1,0 +1,310 @@
+
+\mage.client.deck.generator.DeckGenerator#generateBasicLands(Ljava/util/List;)Ljava/util/Map;t
+hD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/deck/generator/DeckGenerator.javaò/ ò(A"9*™
+2
+§ §( _
+]
+
+§ §( %
+c mage.constants.ColoredManaSymbol"__id*"
+
+__unknown_file (
+""Ø
+¨
+
+§ §( %
+c mage.constants.ColoredManaSymbol"
+__arrayGet*G
+
+__unknown_file (+
+)
+%11"mage.constants.ColoredManaSymbol[]*"
+
+__unknown_file (
+""*
+5
+1*˜
+3
+¨ ¨(‡
+›
+
+¨ ¨(-
+%23java.util.List"__mapSet*;
+
+__unknown_file (
+
+basicLandMapjava.util.Map*:
+
+__unknown_file (
+
+landNamejava.lang.String*5
+
+__unknown_file (
+
+cardsjava.util.List*
+2*Ì
+4
+© ©(≤Ø
+
+© ©(()
+%20"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*#
+
+__unknown_file (
+M152setCodes([Ljava/lang/String;)e
+c
+
+™ ™(/+
+%21$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""÷”
+
+™ ™(C
+%22java.util.List"dmage.cards.repository.CardRepository#findCards(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%21$mage.cards.repository.CardRepository*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2/findCards(Lmage/cards/repository/CardCriteria;)b
+`
+
+™ ™(C
+cardsjava.util.List"__id*3
+
+__unknown_file (
+
+%22java.util.List*
+3*Ë
+5
+• •(/∏µ
+
+•A •(M
+%12java.lang.String"=mage.constants.ColoredManaSymbol#toString()Ljava/lang/String;*C
+
+__unknown_file ('
+%
+c mage.constants.ColoredManaSymbol2
+toString()í
+è
+
+• •(N
+%13java.lang.String"cmage.client.deck.generator.DeckGeneratorPool#getBasicLandName(Ljava/lang/String;)Ljava/lang/String;*L
+
+__unknown_file (0".
+,mage.client.deck.generator.DeckGeneratorPool*5
+
+__unknown_file (
+
+%12java.lang.Stringi
+g
+
+• •(O
+landNamejava.lang.String"__id*5
+
+__unknown_file (
+
+%13java.lang.StringV
+T
+
+¶ ¶()
+%14mage.constants.Rarity"__id*"
+
+__unknown_file (
+""”–
+
+¶ ¶(*)
+%15"mage.cards.repository.CardCriteria"image.cards.repository.CardCriteria#rarities([Lmage/constants/Rarity;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+%14mage.constants.Rarity2"rarities([Lmage/constants/Rarity;)ƒ¡
+
+¶ ¶(>)
+%16"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#nameExact(Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*G
+
+__unknown_file (+
+)
+%15"mage.cards.repository.CardCriteria*:
+
+__unknown_file (
+
+landNamejava.lang.String2nameExact(Ljava/lang/String;)e
+c
+
+ß# ß(:+
+%17$mage.cards.repository.CardRepository"__id*"
+
+__unknown_file (
+""÷”
+
+ß# ß(N
+%18java.util.List"dmage.cards.repository.CardRepository#findCards(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*I
+
+__unknown_file (-
++
+%17$mage.cards.repository.CardRepository*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2/findCards(Lmage/cards/repository/CardCriteria;)b
+`
+
+ß ß(O
+cardsjava.util.List"__id*3
+
+__unknown_file (
+
+%18java.util.List{y
+
+® ®(
+%19boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+cardsjava.util.List2	isEmpty()*
+3
+4*·
+6
+§# §(4 
+«
+
+§# §(=)
+%11"mage.constants.ColoredManaSymbol[]"Lmage.constants.ColoredManaSymbol#values()[Lmage/constants/ColoredManaSymbol;*@
+
+__unknown_file ($""
+ mage.constants.ColoredManaSymbol*
+2*Æ
+7
+† †(ÑÅ
+
+† †(*(
+%8"mage.cards.repository.CardCriteria"`mage.cards.repository.CardCriteria#ignoreSetsWithSnowLands()Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria2ignoreSetsWithSnowLands():8
+
+¢7 ¢(@
+%9java.util.HashMap"java.util.HashMapi
+g
+
+¢3 ¢(B
+%10"java.util.HashMap#<init>()V*5
+
+__unknown_file (
+
+%9java.util.HashMapj
+h
+
+¢ ¢(C
+basicLandMapjava.util.Map"__id*5
+
+__unknown_file (
+
+%9java.util.HashMap*
+6*Ü
+8
+û û(qo
+
+û: û(I	
+%4int"java.util.Set#size()I*7
+
+__unknown_file (
+
+landSetsjava.util.Set2size()<:
+
+û/ û(J
+%5java.lang.String[]"java.lang.String[]˜Ù
+
+û û(K
+%6java.lang.String[]"=java.util.Set#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*7
+
+__unknown_file (
+
+landSetsjava.util.Set*6
+
+__unknown_file (
+
+%5java.lang.String[]2toArray([Ljava/lang/Object;)ƒ¡
+
+û û(L(
+%7"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*L
+
+__unknown_file (0
+.
+criteria"mage.cards.repository.CardCriteria*6
+
+__unknown_file (
+
+%6java.lang.String[]2setCodes([Ljava/lang/String;)*
+7*Î
+9
+ö ö(-Ù
+Ò
+
+ö ö(R
+%0java.util.Set"Ymage.util.TournamentUtil#getLandSetCodeForDeckSets(Ljava/util/Collection;)Ljava/util/Set;*8
+
+__unknown_file ("
+mage.util.TournamentUtil*9
+
+__unknown_file (
+
+	setsToUsejava.util.Listb
+`
+
+ö ö(S
+landSetsjava.util.Set"__id*1
+
+__unknown_file (
+
+%0java.util.Set\Z
+
+ú$ ú(0(
+%1"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaã
+à
+
+ú  ú(2
+%2",mage.cards.repository.CardCriteria#<init>()V*F
+
+__unknown_file (*
+(
+%1"mage.cards.repository.CardCriteriaç
+ä
+
+ú ú(3.
+criteria"mage.cards.repository.CardCriteria"__id*F
+
+__unknown_file (*
+(
+%1"mage.cards.repository.CardCriteria{y
+
+ù ù(
+%3boolean"java.util.Set#isEmpty()Z*7
+
+__unknown_file (
+
+landSetsjava.util.Set2	isEmpty()*
+7
+8*>
+1
+Æ Æ("-
+
+Æ Æ(
+
+basicLandMapjava.util.Map:)
+
+òB ò(X
+	setsToUsejava.util.ListB,"*
+(mage.client.deck.generator.DeckGenerator

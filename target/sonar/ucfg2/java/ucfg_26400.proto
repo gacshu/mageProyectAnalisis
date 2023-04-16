@@ -1,0 +1,243 @@
+
+\mage.server.Session#validatePassword(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;_
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.javaß ß(#"10*{
+2
+µ µ(m"j
+
+µ µ(n\Z
+XPassword has to include at least one alphabet (a-zA-Z) and also at least one digit (0-9)*™
+3
+¥) ¥(6êç
+
+¥) ¥(=
+%18boolean"java.util.regex.Matcher#find()Z*F
+
+__unknown_file (*
+(
+digitsMatcherjava.util.regex.Matcher2find()*
+2
+1*¶	
+4
+≤# ≤(3X
+V
+
+≤# ≤(3
+%13java.util.regex.Pattern"__id*"
+
+__unknown_file (
+""†ù
+
+≤# ≤(E
+%14java.util.regex.Matcher"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*<
+
+__unknown_file ( 
+
+%13java.util.regex.Pattern*:
+
+__unknown_file (
+
+passwordjava.lang.String2!matcher(Ljava/lang/CharSequence;)
+}
+
+≤ ≤(F+
+alphabetsMatcherjava.util.regex.Matcher"__id*<
+
+__unknown_file ( 
+
+%14java.util.regex.MatcherX
+V
+
+≥  ≥(-
+%15java.util.regex.Pattern"__id*"
+
+__unknown_file (
+""†ù
+
+≥  ≥(?
+%16java.util.regex.Matcher"Rjava.util.regex.Pattern#matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;*<
+
+__unknown_file ( 
+
+%15java.util.regex.Pattern*:
+
+__unknown_file (
+
+passwordjava.lang.String2!matcher(Ljava/lang/CharSequence;)|
+z
+
+≥ ≥(@(
+digitsMatcherjava.util.regex.Matcher"__id*<
+
+__unknown_file ( 
+
+%16java.util.regex.Matcherìê
+
+¥ ¥($
+%17boolean"java.util.regex.Matcher#find()Z*I
+
+__unknown_file (-
++
+alphabetsMatcherjava.util.regex.Matcher2find()*
+2
+3*P
+5
+∞ ∞(B"?
+
+∞ ∞(C1/
+-Password may not be the same as your username*˚
+6
+Ø Ø(·ﬁ
+
+Ø Ø(%
+%12boolean",java.lang.String#equals(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+passwordjava.lang.String*:
+
+__unknown_file (
+
+userNamejava.lang.String2equals(Ljava/lang/Object;)*
+4
+5*ı
+7
+≠ ≠(5ºπ
+
+≠8 ≠(U	
+%9int";mage.server.managers.ConfigSettings#getMaxPasswordLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMaxPasswordLength()Ä
+~
+
+≠ ≠(U
+%10java.lang.String"__concat*2
+
+≠ ≠(5$"
+ Password may not be longer than *
+
+≠8 ≠(U
+	
+%9inty
+w
+
+≠ ≠(e
+%11java.lang.String"__concat*'
+
+≠ ≠(U
+
+%10java.lang.String*
+
+≠X ≠(e
+ characters"'
+
+≠ ≠(f
+
+%11java.lang.String*”
+8
+¨ ¨({y
+
+¨ ¨(	
+%7int"java.lang.String#length()I*:
+
+__unknown_file (
+
+passwordjava.lang.String2length()ºπ
+
+¨  ¨(=	
+%8int";mage.server.managers.ConfigSettings#getMaxPasswordLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMaxPasswordLength()*
+6
+7*Ú
+9
+™ ™(6ºπ
+
+™9 ™(V	
+%4int";mage.server.managers.ConfigSettings#getMinPasswordLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMinPasswordLength()Ä
+~
+
+™ ™(V
+%5java.lang.String"__concat*3
+
+™ ™(6%#
+!Password may not be shorter than *
+
+™9 ™(V
+	
+%4intw
+u
+
+™ ™(f
+%6java.lang.String"__concat*&
+
+™ ™(V
+
+%5java.lang.String*
+
+™Y ™(f
+ characters"&
+
+™ ™(g
+
+%6java.lang.String*„
+10
+®  ®(.â
+Ü
+
+®  ®(.)
+%0#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactoryÌ
+
+®  ®(?)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()ç
+ä
+
+® ®(@-
+config#mage.server.managers.ConfigSettings"__id*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettings{y
+
+© ©(	
+%2int"java.lang.String#length()I*:
+
+__unknown_file (
+
+passwordjava.lang.String2length()ºπ
+
+©  ©(=	
+%3int";mage.server.managers.ConfigSettings#getMinPasswordLength()I*K
+
+__unknown_file (/
+-
+config#mage.server.managers.ConfigSettings2getMinPasswordLength()*
+8
+9*%
+1
+∑ ∑("
+
+∑ ∑(
+"":*
+
+ß$ ß(4
+passwordjava.lang.String:*
+
+ß5 ß(D
+userNamejava.lang.StringB
+mage.server.Session

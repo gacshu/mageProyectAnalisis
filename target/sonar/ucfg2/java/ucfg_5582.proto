@@ -1,0 +1,195 @@
+
+nmage.designations.InitiativeDamageTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z_
+UD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/designations/Initiative.java@ @("startingBlock*!
+2N N("
+N N(
+""*§
+3AC A(Hä
+á
+A A(I2
+dEvent(mage.game.events.DamagedPlayerBatchEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent¿Ω
+B C(
+%0java.util.Set"=mage.game.events.DamagedBatchEvent#getEvents()Ljava/util/Set;*P
+
+__unknown_file (4
+2
+dEvent(mage.game.events.DamagedPlayerBatchEvent2getEvents()°û
+B D(
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%0java.util.Set2stream()éã
+B E(5
+%2java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)™
+ß
+F F(K"
+%3java.util.function.Predicate"__declareFunction*d
+
+__unknown_file (HF
+D__sonar_lambda_98$mage.designations.InitiativeDamageTriggeredAbilityá
+Ñ
+
+__unknown_file (,
+"
+%3java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¨©
+B F(L
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%3java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ÜÉ
+B G(,
+%8java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ÜÉ
+B H((
+%9java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)èå
+B I()
+%10java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)àÖ
+B J(3
+%11java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%10java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¨©
+B K(
+%12java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*<
+
+__unknown_file ( 
+
+%11java.util.stream.Stream2findFirst()ﬁ€
+B L(
+%13java.util.UUID"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%12java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)c
+a
+B L(
+playerIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%13java.util.UUID*
+2
+1*Ñ
+startingBlock@ @(;ó
+î
+? ?(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+@* @(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%18ä
+á
+? ?(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+@6 @(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19*
+3*å
+1P P(ﬂ‹
+P P(%
+%14mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*R
+
+__unknown_file (64
+2mage.designations.InitiativeDamageTriggeredAbility2getEffects()a_
+P/ P(:,
+%15%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget€
+ÿ
+P+ P(D
+%16"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%15%mage.target.targetpointer.FixedTarget*8
+
+__unknown_file (
+
+playerIdjava.util.UUID≈¬
+P P(E
+%17void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*C
+
+__unknown_file ('
+%
+%14mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%15%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)"
+Q Q(
+"":/
+@  @(0#
+eventmage.game.events.GameEvent:"
+@1 @(:
+gamemage.game.GameB64
+2mage.designations.InitiativeDamageTriggeredAbilityHP

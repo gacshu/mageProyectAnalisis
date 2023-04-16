@@ -1,0 +1,105 @@
+
+|mage.filter.predicate.permanent.AnotherEnchantedPredicate#apply(Lmage/filter/predicate/ObjectSourcePlayer;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/AnotherEnchantedPredicate.java ("startingBlock*†
+2' (,ÿ’
+' (8#
+%2mage.game.permanent.Permanent"Fmage.filter.predicate.ObjectSourcePlayer#getObject()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getObject()üú
+' (@
+%3java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent2getId()øº
+H (c
+%4java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()Ã…
+' (d
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+1*Ω
+3  (%◊‘
+  (1
+%0mage.abilities.Ability"Lmage.filter.predicate.ObjectSourcePlayer#getSource()Lmage/abilities/Ability;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getSource()ƒ¡
+  (Y#
+%1mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*:
+
+__unknown_file (
+
+%0mage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)Ñ
+Å
+ (Z,
+enchantmentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+2
+1*ú
+startingBlock (H§
+°
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayerq
+o
+7 (<1
+input(mage.filter.predicate.ObjectSourcePlayer"__annotation*"
+
+__unknown_file (
+
+%6â
+Ü
+ (
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+C (G
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7*
+3*!
+1 (e"
+ (e
+"":=
+ (=1
+input(mage.filter.predicate.ObjectSourcePlayer:"
+> (G
+gamemage.game.GameB=;
+9mage.filter.predicate.permanent.AnotherEnchantedPredicateHP

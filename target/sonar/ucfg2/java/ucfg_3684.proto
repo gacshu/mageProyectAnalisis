@@ -1,0 +1,128 @@
+
+rmage.abilities.common.DrawCardOpponentTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zy
+oD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DrawCardOpponentTriggeredAbility.java' '("startingBlock*¦
+2, ,(âß
+, ,($
+%4mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*V
+
+__unknown_file (:8
+6mage.abilities.common.DrawCardOpponentTriggeredAbility2getEffects()¯¬
+,? ,(R
+%5java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()`^
+,3 ,(>+
+%6%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÓ
+Ð
+,/ ,(S
+%7"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*I
+
+__unknown_file (-
++
+%6%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%5java.util.UUIDÂ¿
+, ,(T
+
+%8void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%4mage.abilities.effects.Effects*I
+
+__unknown_file (-
++
+%6%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*‚
+startingBlock' '(;–
+“
+& &(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+'* '(/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%9Š
+‡
+& &(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+'6 '(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+5*!
+4) )("
+) )(
+""*Á
+5( ((ÌÉ
+( ((2
+%0java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*V
+
+__unknown_file (:8
+6mage.abilities.common.DrawCardOpponentTriggeredAbility2getControllerId()ðí
+( ((3
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)¯¬
+(@ ((S
+%2java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()²¯
+( ((Z
+%3boolean"Bmage.players.Player#hasOpponent(Ljava/util/UUID;Lmage/game/Game;)Z*7
+
+__unknown_file (
+
+%1mage.players.Player*2
+
+__unknown_file (
+
+%2java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2-hasOpponent(Ljava/util/UUID;Lmage/game/Game;)*	
+2
+4
+1*!
+1. .("
+. .(
+"":/
+'  '(0#
+eventmage.game.events.GameEvent:"
+'1 '(:
+gamemage.game.GameB:8
+6mage.abilities.common.DrawCardOpponentTriggeredAbilityHP

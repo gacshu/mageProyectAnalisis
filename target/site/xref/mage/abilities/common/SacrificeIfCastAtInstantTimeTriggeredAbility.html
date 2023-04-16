@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>SacrificeIfCastAtInstantTimeTriggeredAbility xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">package</strong> mage.abilities.common;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.TriggeredAbilityImpl;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.delayed.AtTheBeginOfNextCleanupDelayedTriggeredAbility;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.CreateDelayedTriggeredAbilityEffect;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.SacrificeSourceEffect;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.game.Game;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.game.events.GameEvent.EventType;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.game.events.GameEvent;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.game.stack.Spell;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * @author Lonefox</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a> <strong class="jxr_keyword">extends</strong> <a name="TriggeredAbilityImpl" href="../../../mage/abilities/TriggeredAbilityImpl.html#TriggeredAbilityImpl">TriggeredAbilityImpl</a> {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">public</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a>() {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">super</strong>(Zone.STACK, <strong class="jxr_keyword">new</strong> <a name="CreateDelayedTriggeredAbilityEffect" href="../../../mage/abilities/effects/common/CreateDelayedTriggeredAbilityEffect.html#CreateDelayedTriggeredAbilityEffect">CreateDelayedTriggeredAbilityEffect</a>(<strong class="jxr_keyword">new</strong> <a name="AtTheBeginOfNextCleanupDelayedTriggeredAbility" href="../../../mage/abilities/common/delayed/AtTheBeginOfNextCleanupDelayedTriggeredAbility.html#AtTheBeginOfNextCleanupDelayedTriggeredAbility">AtTheBeginOfNextCleanupDelayedTriggeredAbility</a>(<strong class="jxr_keyword">new</strong> <a name="SacrificeSourceEffect" href="../../../mage/abilities/effects/common/SacrificeSourceEffect.html#SacrificeSourceEffect">SacrificeSourceEffect</a>())));
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      }
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">public</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a>(<strong class="jxr_keyword">final</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a> ability) {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <strong class="jxr_keyword">super</strong>(ability);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      }
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      @Override
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      <strong class="jxr_keyword">public</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a> copy() {
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="SacrificeIfCastAtInstantTimeTriggeredAbility" href="../../../mage/abilities/common/SacrificeIfCastAtInstantTimeTriggeredAbility.html#SacrificeIfCastAtInstantTimeTriggeredAbility">SacrificeIfCastAtInstantTimeTriggeredAbility</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      }
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      @Override
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkEventType(<a name="GameEvent" href="../../../mage/game/events/GameEvent.html#GameEvent">GameEvent</a> event, <a name="Game" href="../../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <strong class="jxr_keyword">return</strong> event.getType() == GameEvent.EventType.SPELL_CAST;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      }
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      @Override
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checkTrigger(<a name="GameEvent" href="../../../mage/game/events/GameEvent.html#GameEvent">GameEvent</a> event, <a name="Game" href="../../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <em class="jxr_comment">// TODO: The sacrifice should occur only if you cast it using its own ability. If you cast it using some</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <em class="jxr_comment">// other effect (for instance, if it gained flash from Vedalken Orrery), then it shouldn't be sacrificed.</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <em class="jxr_comment">// see https://github.com/magefree/mage/issues/9512</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          <a name="Spell" href="../../../mage/game/stack/Spell.html#Spell">Spell</a> spell = game.getStack().getSpell(event.getTargetId());
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <strong class="jxr_keyword">if</strong> (spell == <strong class="jxr_keyword">null</strong> || !spell.getSourceId().equals(getSourceId())) {
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          }
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          <em class="jxr_comment">// TODO: this is a hack and doesn't handle all other ways a spell could be cast as though it had flash</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          <strong class="jxr_keyword">if</strong> (Boolean.TRUE.equals(game.getState().getValue(<span class="jxr_string">"PlayFromNotOwnHandZone"</span> + getSourceId()))) {
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          }
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">return</strong> !(game.isMainPhase() &amp;&amp; game.isActivePlayer(event.getPlayerId()) &amp;&amp; game.getStack().size() == 1);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      @Override
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <strong class="jxr_keyword">public</strong> String getRule() {
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"If you cast it any time a sorcery couldn't have been cast, the controller of the permanent it becomes sacrifices it at the beginning of the next cleanup step."</span>;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      }
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

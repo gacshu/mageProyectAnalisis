@@ -1,0 +1,417 @@
+
+vmage.game.stack.SpellStack#counter(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/PutCards;)Z]
+SD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/stack/SpellStack.javaA A("17*»
+13J# J('∑¥
+J2 J(K
+%4java.util.UUID"9mage.game.stack.StackObject#getSourceId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getSourceId()ËÂ
+J# J(L
+%5mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getObject(Ljava/util/UUID;)òï
+J# J(Y
+%6java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*3
+
+__unknown_file (
+
+%5mage.MageObject2getLogName()n
+l
+J J(Y$
+targetSourceNamejava.lang.String"__id*4
+
+__unknown_file (
+
+%6java.lang.String*
+10
+11*Ü
+14H# H(7l
+j
+H H(7$
+targetSourceNamejava.lang.String"__id*2
+
+__unknown_file (
+[Object not found]*
+10
+11*Ï
+15E, E(0∑¥
+E; E(T
+%2java.util.UUID"9mage.game.stack.StackObject#getSourceId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getSourceId()ËÂ
+E, E(U
+%3mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getObject(Ljava/util/UUID;)n
+l
+E E(V%
+targetSourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject_
+]
+F F(''
+counteredObjectNamejava.lang.String"__id*"
+
+__unknown_file (
+""\
+Z
+F F(9$
+targetSourceNamejava.lang.String"__id*"
+
+__unknown_file (
+""*
+13
+14*Æ
+17B" B(0¢ü
+B" B(:!
+%0mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*:
+
+__unknown_file (
+mage.game.stack.SpellStack*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2 getStackObject(Ljava/util/UUID;)
+}
+B B(;*
+stackObjectmage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%0mage.game.stack.StackObjectÑÅ
+C" C(8
+%1mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)h
+f
+C C(9
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%1mage.MageObject*
+15
+1*!
+1_ _("
+_ _(
+""*Æ
+2\ \(î
+ë
+\# \(V
+%30java.lang.String"__concat*5
+\# \(6)
+'
+counteredObjectNamejava.lang.String*+
+\9 \(V
+ could not be countered by £†
+\Y \(r
+%31java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getLogName()}
+{
+\# \(r
+%32java.lang.String"__concat*%
+\# \(V
+
+%30java.lang.String*%
+\Y \(r
+
+%31java.lang.String›⁄
+\ \(s
+%33void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%32java.lang.String2!informPlayers(Ljava/lang/String;)*
+1*õ
+3[ [(ÉÄ
+[ [(+
+%29boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+2
+1*≠	
+4Y Y(c
+a
+Y2 Y(E+
+%24$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
+Y2 Y(O+
+%25$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ºπ
+	Yc Y(Ä
+%26java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getControllerId()â
+Ü
+	Y Y(Å!
+%27mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%25$mage.game.events.GameEvent$EventType*8
+
+__unknown_file (
+
+objectIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%26java.util.UUIDÙÒ
+	Y Y(Ç
+%28void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%27mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+Z Z(
+""*§
+5W W(ä
+á
+W' W(P
+%20java.lang.String"__concat*5
+W' W(:)
+'
+counteredObjectNamejava.lang.String*!
+W= W(P
+ is countered by £†
+WS W(l
+%21java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getLogName()}
+{
+W' W(l
+%22java.lang.String"__concat*%
+W' W(P
+
+%20java.lang.String*%
+WS W(l
+
+%21java.lang.String›⁄
+W W(m
+%23void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%22java.lang.String2!informPlayers(Ljava/lang/String;)*
+4*Ô
+6U U(—Œ
+U U(:
+%18void"gmage.game.stack.StackObject#counter(Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/PutCards;)V*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*@
+
+__unknown_file ($
+"
+putCardmage.constants.PutCards2Jcounter(Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/PutCards;)ÉÄ
+V V((
+%19boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+4
+5*¯
+7S S(„‡
+S S(2
+%17boolean"Qmage.game.stack.SpellStack#remove(Lmage/game/stack/StackObject;Lmage/game/Game;)Z*:
+
+__unknown_file (
+mage.game.stack.SpellStack*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*4
+
+__unknown_file (
+
+gamemage.game.Game25remove(Lmage/game/stack/StackObject;Lmage/game/Game;)*
+6*≠	
+9Q Q(c
+a
+Q6 Q(I+
+%12$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
+Q6 Q(Q+
+%13$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ºπ
+	Qe Q(Ç
+%14java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getControllerId()â
+Ü
+	Q# Q(É!
+%15mage.game.events.GameEvent"ümage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%13$mage.game.events.GameEvent$EventType*8
+
+__unknown_file (
+
+objectIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%14java.util.UUID˝˙
+	Q Q(Ñ
+%16boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%15mage.game.events.GameEvent2*replaceEvent(Lmage/game/events/GameEvent;)*	
+3
+6
+7*‘
+10O& O(1œÃ
+O4 O(Q
+%7mage.abilities.Ability"Emage.game.stack.StackObject#getStackAbility()Lmage/abilities/Ability;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getStackAbility()àÖ
+O4 O(k
+%8java.lang.String"Dmage.abilities.Ability#getRule(Ljava/lang/String;)Ljava/lang/String;*:
+
+__unknown_file (
+
+%7mage.abilities.Ability*B
+
+__unknown_file (&
+$
+targetSourceNamejava.lang.String2getRule(Ljava/lang/String;)o
+m
+O& O(k
+%9java.lang.String"__concat*
+O& O(1
+	Ability (*$
+O4 O(k
+
+%8java.lang.Stringl
+j
+O& O(u
+%10java.lang.String"__concat*$
+O& O(k
+
+%9java.lang.String*
+On O(u	
+) of ç
+ä
+	O& O(à
+%11java.lang.String"__concat*%
+O& O(u
+
+%10java.lang.String*3
+	Ox O(à&
+$
+targetSourceNamejava.lang.Strings
+q
+	O O(à'
+counteredObjectNamejava.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+9*î
+11M& M(6
+}
+M M(6'
+counteredObjectNamejava.lang.String"__id*B
+
+__unknown_file (&
+$
+targetSourceNamejava.lang.String*
+9:&
+A A()
+objectIdjava.util.UUID:,
+A* A(9 
+sourcemage.abilities.Ability:"
+A: A(D
+gamemage.game.Game:.
+AE A(U"
+putCardmage.constants.PutCardsB
+mage.game.stack.SpellStackHP

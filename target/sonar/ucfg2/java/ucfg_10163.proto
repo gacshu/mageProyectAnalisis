@@ -1,0 +1,627 @@
+
+pmage.game.combat.Combat#checkBlockRestrictionsAfter(Lmage/players/Player;Lmage/players/Player;Lmage/game/Game;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/combat/Combat.java∂	 ∂	(."30*ß
+24
+ø	  ø	(*äá
+
+ø	  ø	(4
+%8boolean"mage.players.Player#isHuman()Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	isHuman()*
+22
+23*Œ
+25
+æ	 æ	(#±Æ
+
+æ	 æ	(K
+%7boolean"gmage.abilities.effects.RestrictionEffect#canBlockCheckAfter(Lmage/abilities/Ability;Lmage/game/Game;Z)Z*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22=canBlockCheckAfter(Lmage/abilities/Ability;Lmage/game/Game;Z)*
+24
+21*∑
+26
+Ω	+ Ω	(0ûõ
+
+Ω	+ Ω	(;
+%6java.util.Set"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+21*Ë
+27
+º	/ º	(4µ≤
+
+º	/ º	(=.
+%5(mage.abilities.effects.RestrictionEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()ó
+î
+
+º	 º	(>2
+effect(mage.abilities.effects.RestrictionEffect"__id*L
+
+__unknown_file (0
+.
+%5(mage.abilities.effects.RestrictionEffect*
+26*·
+28
+ª	H ª	(Lﬁ€
+
+ª	H ª	(c.
+%2(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()◊‘
+ª	H ª	(õ
+%3java.util.Map"àmage.abilities.effects.ContinuousEffects#getApplicableRestrictionEffects(Lmage/game/permanent/Permanent;Lmage/game/Game;)Ljava/util/Map;*L
+
+__unknown_file (0
+.
+%2(mage.abilities.effects.ContinuousEffects*O
+
+__unknown_file (3
+1
+blockingCreaturemage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2PgetApplicableRestrictionEffects(Lmage/game/permanent/Permanent;Lmage/game/Game;)çä
+ª	H ª	(¶
+%4java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*1
+
+__unknown_file (
+
+%3java.util.Map2
+entrySet()*
+20*«
+29
+π	) π	(-úô
+
+π	) π	(N#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*B
+
+__unknown_file (&
+$
+blockingCreatureIdjava.util.UUID2getPermanent(Ljava/util/UUID;)ã
+à
+
+π	 π	(O1
+blockingCreaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+28
+19*ª
+30
+∏	' ∏	(+¢ü
+
+∏	' ∏	(9
+%0java.util.Set"4mage.game.combat.Combat#getBlockers()Ljava/util/Set;*7
+
+__unknown_file (
+mage.game.combat.Combat2getBlockers()*
+19*π
+10
+⁄	? ⁄	(C°û
+
+⁄	? ⁄	(O
+%27java.util.List"3mage.game.combat.Combat#getGroups()Ljava/util/List;*7
+
+__unknown_file (
+mage.game.combat.Combat2getGroups()*
+5*Ê
+11
+’	  ’	(*™ß
+
+’	  ’	(E
+%23void"/mage.players.Player#resetPlayerPassedActions()V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2resetPlayerPassedActions()∏µ
+
+÷	> ÷	(\
+%24java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*P
+
+__unknown_file (4
+2
+attackingCreaturemage.game.permanent.Permanent2getLogName()ä
+á
+
+÷	> ÷	(|
+%25java.lang.String"__concat*'
+
+÷	> ÷	(\
+
+%24java.lang.String*-
+
+÷	_ ÷	(|
+ can't be blocked this way.»≈
+
+÷	  ÷	(}
+%26void"Emage.game.Game#informPlayer(Lmage/players/Player;Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+%25java.lang.String25informPlayer(Lmage/players/Player;Ljava/lang/String;)"
+
+◊	  ◊	(-
+""*®
+12
+‘	  ‘	(*ãà
+
+‘	  ‘	(4
+%22boolean"mage.players.Player#isHuman()Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	isHuman()*
+10
+11*Á
+13
+”	 ”	(#À»
+
+”	 ”	(b
+%21boolean"ämage.abilities.effects.RestrictionEffect#canBeBlockedCheckAfter(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;Z)Z*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.RestrictionEffect*P
+
+__unknown_file (4
+2
+attackingCreaturemage.game.permanent.Permanent*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22`canBeBlockedCheckAfter(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;Z)*
+4
+12*∑
+14
+“	+ “	(0üú
+
+“	+ “	(;
+%20java.util.Set"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+4*Í
+15
+—	/ —	(4∂≥
+
+—	/ —	(=/
+%19(mage.abilities.effects.RestrictionEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()ò
+ï
+
+—	 —	(>2
+effect(mage.abilities.effects.RestrictionEffect"__id*M
+
+__unknown_file (1
+/
+%19(mage.abilities.effects.RestrictionEffect*
+14*Ê
+16
+–	H –	(Lﬂ‹
+
+–	H –	(c/
+%16(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()⁄◊
+–	H –	(ú
+%17java.util.Map"àmage.abilities.effects.ContinuousEffects#getApplicableRestrictionEffects(Lmage/game/permanent/Permanent;Lmage/game/Game;)Ljava/util/Map;*M
+
+__unknown_file (1
+/
+%16(mage.abilities.effects.ContinuousEffects*P
+
+__unknown_file (4
+2
+attackingCreaturemage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2PgetApplicableRestrictionEffects(Lmage/game/permanent/Permanent;Lmage/game/Game;)èå
+–	H –	(ß
+%18java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%17java.util.Map2
+entrySet()*
+3* 
+17
+Œ	* Œ	(.ûõ
+
+Œ	* Œ	(P$
+%15mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*C
+
+__unknown_file ('
+%
+attackingCreatureIdjava.util.UUID2getPermanent(Ljava/util/UUID;)ç
+ä
+
+Œ	 Œ	(Q2
+attackingCreaturemage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%15mage.game.permanent.Permanent*
+2
+16*Ω
+18
+Õ	( Õ	(,•¢
+
+Õ	( Õ	(;
+%14java.util.Set"5mage.game.combat.Combat#getAttackers()Ljava/util/Set;*7
+
+__unknown_file (
+mage.game.combat.Combat2getAttackers()*
+2*ï
+19
+∏	 ∏	($^
+\
+
+∏	 ∏	($$
+blockingCreatureIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ò
+ï
+
+∏	 ∏	($$
+blockingCreatureIdjava.util.UUID"
+__arrayGet*1
+
+__unknown_file (
+
+%0java.util.Set*"
+
+__unknown_file (
+""*
+18
+29*%
+1
+Á	 Á	("
+
+Á	 Á	(
+""*ñ
+2
+Õ	 Õ	(%_
+]
+
+Õ	 Õ	(%%
+attackingCreatureIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ö
+ó
+
+Õ	 Õ	(%%
+attackingCreatureIdjava.util.UUID"
+__arrayGet*2
+
+__unknown_file (
+
+%14java.util.Set*"
+
+__unknown_file (
+""*
+17
+1*Ñ
+3
+–	 –	(EV
+T
+
+–	 –	(E
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ë
+é
+
+–	 –	(E
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%18java.util.Set*"
+
+__unknown_file (
+""*
+2
+15*é
+4
+“	 “	(([
+Y
+
+“	 “	((!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+“	 “	((!
+abilitymage.abilities.Ability"
+__arrayGet*2
+
+__unknown_file (
+
+%20java.util.Set*"
+
+__unknown_file (
+""*
+13
+3*¢
+5
+⁄	% ⁄	(<e
+c
+
+⁄	% ⁄	(<+
+combatGroupmage.game.combat.CombatGroup"__id*"
+
+__unknown_file (
+""°
+û
+
+⁄	% ⁄	(<+
+combatGroupmage.game.combat.CombatGroup"
+__arrayGet*3
+
+__unknown_file (
+
+%27java.util.List*"
+
+__unknown_file (
+""*
+4
+9*Ç
+6
+‹	- ‹	(;U
+S
+
+‹	- ‹	(;
+	blockerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ë
+é
+
+‹	- ‹	(;
+	blockerIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%30java.util.List*"
+
+__unknown_file (
+""*
+5
+7*ÿ
+7
+›	, ›	(9¡æ
+
+›	, ›	(J
+%31void"Hmage.game.combat.Combat#removeBlocker(Ljava/util/UUID;Lmage/game/Game;)V*7
+
+__unknown_file (
+mage.game.combat.Combat*9
+
+__unknown_file (
+
+	blockerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2/removeBlocker(Ljava/util/UUID;Lmage/game/Game;)*
+6*”
+8
+‹	> ‹	(Iºπ
+
+‹	> ‹	(W
+%30java.util.List":mage.game.combat.CombatGroup#getBlockers()Ljava/util/List;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getBlockers()*
+6*¿
+9
+€	( €	(3æª
+
+€	( €	(B
+%28java.util.List";mage.game.combat.CombatGroup#getAttackers()Ljava/util/List;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getAttackers()Â‚
+
+€	( €	(`
+%29boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%28java.util.List*C
+
+__unknown_file ('
+%
+attackingCreatureIdjava.util.UUID2contains(Ljava/lang/Object;)*
+5
+8*Ö
+20
+ª	 ª	(EV
+T
+
+ª	 ª	(E
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ê
+ç
+
+ª	 ª	(E
+entryjava.util.Map$Entry"
+__arrayGet*1
+
+__unknown_file (
+
+%4java.util.Set*"
+
+__unknown_file (
+""*
+27
+19*è
+21
+Ω	 Ω	(([
+Y
+
+Ω	 Ω	((!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ï
+í
+
+Ω	 Ω	((!
+abilitymage.abilities.Ability"
+__arrayGet*1
+
+__unknown_file (
+
+%6java.util.Set*"
+
+__unknown_file (
+""*
+25
+20*„
+22
+≈	  ≈	(- «
+
+≈	  ≈	(G
+%13void"Hmage.game.combat.Combat#removeBlocker(Ljava/util/UUID;Lmage/game/Game;)V*7
+
+__unknown_file (
+mage.game.combat.Combat*B
+
+__unknown_file (&
+$
+blockingCreatureIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2/removeBlocker(Ljava/util/UUID;Lmage/game/Game;)*
+21*ﬂ
+23
+¿	  ¿	(*©¶
+
+¿	  ¿	(E
+
+%9void"/mage.players.Player#resetPlayerPassedActions()V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2resetPlayerPassedActions()∑¥
+
+¡	> ¡	([
+%10java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*O
+
+__unknown_file (3
+1
+blockingCreaturemage.game.permanent.Permanent2getLogName()Ö
+Ç
+
+¡	> ¡	(v
+%11java.lang.String"__concat*'
+
+¡	> ¡	([
+
+%10java.lang.String*(
+
+¡	^ ¡	(v
+ can't block this way.»≈
+
+¡	  ¡	(w
+%12void"Emage.game.Game#informPlayer(Lmage/players/Player;Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+%11java.lang.String25informPlayer(Lmage/players/Player;Ljava/lang/String;)"
+
+¬	  ¬	(-
+"":+
+
+∂	/ ∂	(=
+playermage.players.Player:/
+
+∂	> ∂	(P!
+
+controllermage.players.Player:$
+
+∂	Q ∂	(Z
+gamemage.game.GameB
+mage.game.combat.CombatHP

@@ -1,0 +1,164 @@
+
+Jmage.player.human.HumanPlayer#gameInCheckPlayableState(Lmage/game/Game;Z)Zy
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaø ø(,"5*%
+2
+ ("
+
+ (
+""* 
+3
+û û(W
+U
+
+û û(
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ª§
+
+ü ü(' 
+%2mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()}
+
+ü ü(.	
+%3int"java.util.ArrayDeque#size()I*>
+
+__unknown_file ("
+ 
+%2mage.game.stack.SpellStack2size()ª§
+
+ý ý(' 
+%4mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()°­
+
+ý ý(0
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*>
+
+__unknown_file ("
+ 
+%4mage.game.stack.SpellStack2stream()ˆ…
+
+ý ý(F
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)í
+ê
+
+ýO ý(g 
+%7java.util.stream.Collector"Yjava.util.stream.Collectors#joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*"
+
+__unknown_file (
+, œ™
+
+ý ý(h
+%8java.lang.String"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)Â
+¿
+
+û þ(
+%9java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*6
+
+__unknown_file (
+Current stack: %d - %s*'
+
+__unknown_file (
+	
+%3int*4
+
+__unknown_file (
+
+%8java.lang.StringÞÛ
+
+û þ(
+%10void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%9java.lang.String2warn(Ljava/lang/Object;)X
+V
+
+ÿ ÿ(
+%11org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""?=
+
+ÿL ÿ(U
+%12java.lang.Throwable"java.lang.Throwablen
+l
+
+ÿH ÿ(W
+%13"java.lang.Throwable#<init>()V*8
+
+__unknown_file (
+
+%12java.lang.Throwable×Ô
+
+ÿ ÿ(X
+%14void"Horg.apache.log4j.Category#warn(Ljava/lang/Object;Ljava/lang/Throwable;)V*<
+
+__unknown_file ( 
+
+%11org.apache.log4j.Logger*H
+
+__unknown_file (,*
+(Player interaction in checkPlayableState*8
+
+__unknown_file (
+
+%12java.lang.Throwable2-warn(Ljava/lang/Object;Ljava/lang/Throwable;)*
+2*±
+5
+ù ù(”‘
+
+ù ù('
+%0boolean"&mage.game.Game#inCheckPlayableState()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2inCheckPlayableState()*	
+2
+3
+1*%
+1
+ƒ ƒ("
+
+ƒ ƒ(
+"":$
+
+ø- ø(7
+gamemage.game.Game: 
+
+__unknown_file (
+""B!
+mage.player.human.HumanPlayerP

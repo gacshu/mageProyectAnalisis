@@ -1,0 +1,820 @@
+
+Ömage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;|
+rD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/GameStateEvaluator2.java& (."53*û
+46( ((ÉÄ
+( ((&
+%16boolean"mage.players.Player#hasWon()Z*;
+
+__unknown_file (
+
+playermage.players.Player2hasWon()*
+44
+45*ç
+24F F(V
+T
+F F(
+%40org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""öó
+F F('
+%41boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%40org.apache.log4j.Logger2isDebugEnabled()*
+19
+22*¢
+47' '(áÑ
+' '("
+%15boolean"mage.players.Player#hasLost()Z*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	hasLost()*
+46
+45*ù
+25? ?($b
+`
+? ?($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+? ?($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%31java.util.List*"
+
+__unknown_file (
+""*
+24
+33*á
+48%/ %(>B
+@
+%/ %(>
+
+%12int"__id*"
+
+__unknown_file (
+""ÑÅ
+% %(.=
+%136mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"6mage.player.ai.GameStateEvaluator2$PlayerEvaluateScoreﬁ
+€
+% %(?
+%14"Amage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#<init>(I)V*[
+
+__unknown_file (?
+=
+%136mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*(
+
+__unknown_file (
+
+
+%12int"K
+% %(@?
+=
+%136mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*è
+26Ca C(e¯ı
+C C(f
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%38java.lang.StringBuilder*"
+
+__unknown_file (
+] 2append(Ljava/lang/String;)*
+25*†
+49$ $(ÖÇ
+$ $((
+%11boolean"mage.players.Player#hasWon()Z*=
+
+__unknown_file (!
+
+opponentmage.players.Player2hasWon()*
+47
+48*Ì
+27CL C(X÷”
+C C(Y
+%38java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%37java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)*
+26*Ï
+28C@ C(C’“
+C C(D
+%37java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%36java.lang.StringBuilder*!
+
+__unknown_file (
+[2	append(C)*
+27*ß
+29C C(8êç
+C C(8
+%36java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+sbPlayerjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%35java.lang.String2append(Ljava/lang/String;)*
+28*†
+50# #(ÖÇ
+# #( 
+%10boolean"mage.players.Player#hasLost()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	hasLost()*
+48
+49*ß
+51" "(åâ
+" "($
+%9boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+50
+44*Å
+52+ (9A
+?
++ (9	
+%6int"__id*"
+
+__unknown_file (
+""ÉÄ
+ (*<
+%76mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"6mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore€
+ÿ
+ (:
+%8"Amage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#<init>(I)V*Z
+
+__unknown_file (>
+<
+%76mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*'
+
+__unknown_file (
+	
+%6int"J
+ (;>
+<
+%76mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*ø
+30C C(®•
+C$ C(7
+%35java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2	getName()*
+29*Å
+53 (ˆÛ
+ (0
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+ (1
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.PlayerÌ
+) (D
+%1java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getOpponents(Ljava/util/UUID;)°û
+) (M
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%1java.util.Set2stream()™ß
+) (Y
+%3java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream2findFirst()‹Ÿ
+) (f
+%4java.util.UUID"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%3java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)Ì
+ (g
+%5mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+ (h
+opponentmage.players.Player"__id*7
+
+__unknown_file (
+
+%5mage.players.Player*
+51
+52*Ï
+10QN Q(Z÷”
+Q Q([
+%56java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%55java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)*
+9*ç
+32@ @(FV
+T
+B B(
+%33org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""öó
+B B(+
+%34boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%33org.apache.log4j.Logger2isDebugEnabled()*
+25
+30*Ï
+11QB Q(E’“
+Q Q(F
+%55java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%54java.lang.StringBuilder*!
+
+__unknown_file (
+[2	append(C)*
+10*‹
+33@# @(4≈
+¬
+@# @(E
+
+%32int"fmage.player.ai.GameStateEvaluator2#evaluatePermanent(Lmage/game/permanent/Permanent;Lmage/game/Game;)I*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*
+32*ø
+34?T ?(\®•
+?' ?(]
+%31java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%30mage.game.permanent.Battlefield*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)*
+25*©
+12Q Q(:íè
+Q Q(:
+%54java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*C
+
+__unknown_file ('
+%
+
+sbOpponentjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%53java.lang.String2append(Ljava/lang/String;)*
+11*÷
+35?' ?(+øº
+?' ?(<&
+%30mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()*
+34*ø
+13Q Q(®•
+Q& Q(9
+%53java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2	getName()*
+12*ç
+36< <(;w
+u
+< <(;%
+
+sbOpponentjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%28java.lang.StringBuilder*
+35*»
+37; ;(9u
+s
+; ;(9#
+sbPlayerjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%26java.lang.StringBuilderEC
+<+ <(8
+%28java.lang.StringBuilder"java.lang.StringBuildert
+r
+<' <(:
+%29"!java.lang.StringBuilder#<init>()V*<
+
+__unknown_file ( 
+
+%28java.lang.StringBuilder*
+36*å
+15N N(FV
+T
+P P(
+%51org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""öó
+P P(+
+%52boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%51org.apache.log4j.Logger2isDebugEnabled()*
+13
+8*—
+38;% ;(8EC
+;) ;(6
+%26java.lang.StringBuilder"java.lang.StringBuildert
+r
+;% ;(8
+%27"!java.lang.StringBuilder#<init>()V*<
+
+__unknown_file ( 
+
+%26java.lang.StringBuilder*
+37*‹
+16N# N(4≈
+¬
+N# N(E
+
+%50int"fmage.player.ai.GameStateEvaluator2#evaluatePermanent(Lmage/game/permanent/Permanent;Lmage/game/Game;)I*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*
+15*π
+17M' M(e£†
+M' M(e
+%49java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%47mage.game.permanent.Battlefield*3
+
+__unknown_file (
+
+%48java.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)*
+8*™
+18MT M(\ìê
+MT M(d
+%48java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2getId()*
+17*÷
+19M' M(+øº
+M' M(<&
+%47mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()*
+18*’
+1\ \($üú
+\ \(.
+%65mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*;
+
+__unknown_file (
+
+playermage.players.Player2	getHand()nl
+\ \(5
+
+%66int"java.util.Set#size()I*5
+
+__unknown_file (
+
+%65mage.cards.Cards2size()°û
+]  ](2
+%67mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getHand()nl
+]  ](9
+
+%68int"java.util.Set#size()I*5
+
+__unknown_file (
+
+%67mage.cards.Cards2size()V
+T
+b b(
+%69org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""h
+f
+b c('
+%70java.lang.String"__concat*
+b b(
+""*#
+c c('
+ total Score (life:j
+h
+b c(O
+%71java.lang.String"__concat*%
+b c('
+
+%70java.lang.String*
+c* c(O
+""t
+r
+b d( 
+%72java.lang.String"__concat*%
+b c(O
+
+%71java.lang.String*
+d d( 
+ permanents:j
+h
+b d(T
+%73java.lang.String"__concat*%
+b d( 
+
+%72java.lang.String*
+d# d(T
+""n
+l
+b e(
+%74java.lang.String"__concat*%
+b d(T
+
+%73java.lang.String*
+e e(
+
+ hand:j
+h
+b e(B
+%75java.lang.String"__concat*%
+b e(
+
+%74java.lang.String*
+e e(B
+""i
+g
+b e(H
+%76java.lang.String"__concat*%
+b e(B
+
+%75java.lang.String*
+eE e(H
+)‡›
+b e(I
+%77void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%69org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%76java.lang.String2debug(Ljava/lang/Object;)ÑÅ
+f f(&=
+%786mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"6mage.player.ai.GameStateEvaluator2$PlayerEvaluateScoreë
+é
+f h(N
+%79"Fmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#<init>(IIIIII)V*[
+
+__unknown_file (?
+=
+%786mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+"""K
+f h(O?
+=
+%786mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*€
+3W W(V
+T
+W W(
+%63org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÓÎ
+W W((
+%64void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%63org.apache.log4j.Logger*C
+
+__unknown_file ('
+%
+
+sbOpponentjava.lang.StringBuilder2debug(Ljava/lang/Object;)*
+1*æ
+4V V(©¶
+V V(2
+%62java.lang.StringBuilder"Ljava.lang.StringBuilder#insert(ILjava/lang/String;)Ljava/lang/StringBuilder;*C
+
+__unknown_file ('
+%
+
+sbOpponentjava.lang.StringBuilder*
+
+__unknown_file (2 **
+
+__unknown_file (
+
+Opponent: 2insert(ILjava/lang/String;)*
+3*£
+5U U(X
+V
+U% U(D
+%60java.lang.String"__concat*
+U% U(<
+""*
+U? U(D
+ - ¥±
+U U(E
+%61java.lang.StringBuilder"Ljava.lang.StringBuilder#insert(ILjava/lang/String;)Ljava/lang/StringBuilder;*C
+
+__unknown_file ('
+%
+
+sbOpponentjava.lang.StringBuilder*
+
+__unknown_file (2 *5
+
+__unknown_file (
+
+%60java.lang.String2insert(ILjava/lang/String;)*
+4*ä
+7T T(V
+T
+T T(
+%58org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""öó
+T T('
+%59boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%58org.apache.log4j.Logger2isDebugEnabled()*
+5
+1*õ
+8M M($b
+`
+M M($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+M M($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%49java.util.List*"
+
+__unknown_file (
+""*
+16
+7*ç
+9Qc Q(g¯ı
+Q Q(h
+%57java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%56java.lang.StringBuilder*"
+
+__unknown_file (
+] 2append(Ljava/lang/String;)*
+8*∑
+404 4(5Ä~
+4C 4(S
+
+%22int"mage.players.Player#getLife()I*;
+
+__unknown_file (
+
+playermage.players.Player2	getLife() 
+«
+4 4(T
+
+%23int":mage.player.ai.ma.ArtificialScoringSystem#getLifeScore(I)I*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*(
+
+__unknown_file (
+
+
+%22intÉÄ
+5E 5(W
+
+%24int"mage.players.Player#getLife()I*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getLife() 
+«
+5  5(X
+
+%25int":mage.player.ai.ma.ArtificialScoringSystem#getLifeScore(I)I*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*(
+
+__unknown_file (
+
+
+%24int*
+38*û
+421 1(ÉÄ
+1 1(%
+
+%21int"mage.players.Player#getLife()I*=
+
+__unknown_file (!
+
+opponentmage.players.Player2	getLife()*
+38
+40*€
+20I I(V
+T
+I I(
+%45org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÏÈ
+I I(&
+%46void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%45org.apache.log4j.Logger*A
+
+__unknown_file (%
+#
+sbPlayerjava.lang.StringBuilder2debug(Ljava/lang/Object;)*
+19*æ
+21H H(ß§
+H H(0
+%44java.lang.StringBuilder"Ljava.lang.StringBuilder#insert(ILjava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+sbPlayerjava.lang.StringBuilder*
+
+__unknown_file (2 **
+
+__unknown_file (
+
+Player..: 2insert(ILjava/lang/String;)*
+20*õ
+44- -(Ä~
+/ /(
+
+%20int"mage.players.Player#getLife()I*;
+
+__unknown_file (
+
+playermage.players.Player2	getLife()*
+38
+42*£
+22G G(X
+V
+G# G(@
+%42java.lang.String"__concat*
+G# G(8
+""*
+G; G(@
+ - ≤Ø
+G G(A
+%43java.lang.StringBuilder"Ljava.lang.StringBuilder#insert(ILjava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+sbPlayerjava.lang.StringBuilder*
+
+__unknown_file (2 *5
+
+__unknown_file (
+
+%42java.lang.String2insert(ILjava/lang/String;)*
+21*á
+45)/ )(=B
+@
+)/ )(=
+
+%17int"__id*"
+
+__unknown_file (
+""ÑÅ
+) )(.=
+%186mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"6mage.player.ai.GameStateEvaluator2$PlayerEvaluateScoreﬁ
+€
+) )(>
+%19"Amage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#<init>(I)V*[
+
+__unknown_file (?
+=
+%186mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore*(
+
+__unknown_file (
+
+
+%17int"K
+) )(??
+=
+%186mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore:&
+/ (=
+playerIdjava.util.UUID:"
+> (G
+gamemage.game.GameB&"$
+"mage.player.ai.GameStateEvaluator2H

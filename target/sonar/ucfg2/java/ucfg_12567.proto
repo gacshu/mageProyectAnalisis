@@ -1,0 +1,238 @@
+
+jmage.filter.predicate.permanent.UnblockedPredicate#apply(Lmage/game/permanent/Permanent;Lmage/game/Game;)Zu
+kD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/UnblockedPredicate.java ("startingBlock*∆
+2 ('¢ü
+ (4
+%24boolean"*mage.game.combat.CombatGroup#getBlocked()Z*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getBlocked()"
+ (5
+""*Å
+3* (.•¢
+* (:
+%21mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()£†
+E (R
+%22java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getId()ïí
+* (S#
+%23mage.game.combat.CombatGroup"Qmage.game.combat.Combat#findGroup(Ljava/util/UUID;)Lmage/game/combat/CombatGroup;*<
+
+__unknown_file ( 
+
+%21mage.game.combat.Combat*3
+
+__unknown_file (
+
+%22java.util.UUID2findGroup(Ljava/util/UUID;)É
+Ä
+ (T+
+combatGroupmage.game.combat.CombatGroup"__id*A
+
+__unknown_file (%
+#
+%23mage.game.combat.CombatGroup*
+2
+1*ä
+startingBlock (4ö
+ó
+ (
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanentg
+e
+# ((&
+inputmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%25ä
+á
+ (
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+/ (3
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%26*
+9*‰
+4 (ùö
+ (&
+%17mage.game.turn.Phase"/mage.game.Game#getPhase()Lmage/game/turn/Phase;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getPhase()§°
+ (0
+%18mage.game.turn.Step"3mage.game.turn.Phase#getStep()Lmage/game/turn/Step;*9
+
+__unknown_file (
+
+%17mage.game.turn.Phase2	getStep()¨©
+ (:
+%19mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*8
+
+__unknown_file (
+
+%18mage.game.turn.Step2	getType()W
+U
+> (R
+%20mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+3
+1*‰
+5 (ùö
+ (&
+%13mage.game.turn.Phase"/mage.game.Game#getPhase()Lmage/game/turn/Phase;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getPhase()§°
+ (0
+%14mage.game.turn.Step"3mage.game.turn.Phase#getStep()Lmage/game/turn/Step;*9
+
+__unknown_file (
+
+%13mage.game.turn.Phase2	getStep()¨©
+ (:
+%15mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*8
+
+__unknown_file (
+
+%14mage.game.turn.Step2	getType()W
+U
+> (U
+%16mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+3
+4*‚
+6 (úô
+ (&
+%9mage.game.turn.Phase"/mage.game.Game#getPhase()Lmage/game/turn/Phase;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getPhase()£†
+ (0
+%10mage.game.turn.Step"3mage.game.turn.Phase#getStep()Lmage/game/turn/Step;*8
+
+__unknown_file (
+
+%9mage.game.turn.Phase2	getStep()¨©
+ (:
+%11mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*8
+
+__unknown_file (
+
+%10mage.game.turn.Step2	getType()W
+U
+> ([
+%12mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+3
+5*•
+7 (òï
+ (%
+%5mage.game.turn.Step"-mage.game.Game#getStep()Lmage/game/turn/Step;*4
+
+__unknown_file (
+
+gamemage.game.Game2	getStep()∫∑
+ (3"
+%6mage.game.turn.Step$StepPart"?mage.game.turn.Step#getStepPart()Lmage/game/turn/Step$StepPart;*7
+
+__unknown_file (
+
+%5mage.game.turn.Step2getStepPart()Z
+X
+7 (D"
+%7mage.game.turn.Step$StepPart"__id*"
+
+__unknown_file (
+""Z
+X
+7 (M"
+%8mage.game.turn.Step$StepPart"__id*"
+
+__unknown_file (
+""*
+3
+6*ﬁ
+8 (úô
+ ( 
+%1mage.game.turn.Phase"/mage.game.Game#getPhase()Lmage/game/turn/Phase;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getPhase()¢ü
+ (*
+%2mage.game.turn.Step"3mage.game.turn.Phase#getStep()Lmage/game/turn/Step;*8
+
+__unknown_file (
+
+%1mage.game.turn.Phase2	getStep()™ß
+ (4
+%3mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*7
+
+__unknown_file (
+
+%2mage.game.turn.Step2	getType()V
+T
+8 (R
+%4mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+6
+7*∑
+9 (üú
+ (
+%0boolean",mage.game.permanent.Permanent#isAttacking()Z*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2isAttacking()*
+8
+1*!
+1! !("
+! !(
+"":2
+ ()&
+inputmage.game.permanent.Permanent:"
+* (3
+gamemage.game.GameB64
+2mage.filter.predicate.permanent.UnblockedPredicateHP

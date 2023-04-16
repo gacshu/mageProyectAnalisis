@@ -1,0 +1,285 @@
+
+qmage.abilities.effects.keyword.ProtectionChosenColorSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zƒ
+yD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/keyword/ProtectionChosenColorSourceEffect.java/ /("startingBlock*Ù
+2: :(½
+º
+:% :(6/
+%20(mage.abilities.keyword.ProtectionAbility"__id*w
+
+__unknown_file ([*YB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+protectionAbility©¦
+:8 :(L
+%21java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÉÆ
+: :(S
+%22void"cmage.game.permanent.Permanent#addAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*M
+
+__unknown_file (1
+/
+%20(mage.abilities.keyword.ProtectionAbility*3
+
+__unknown_file (
+
+%21java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2DaddAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)"
+; ;(
+""*Õ
+39 9(!½
+º
+9 9(!/
+%19(mage.abilities.keyword.ProtectionAbility"__id*w
+
+__unknown_file ([*YB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+protectionAbility*
+2
+1*þ
+startingBlock/ /(3Š
+‡
+. .(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+/ /("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%23”
+‘
+. .(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+/, /(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%24*
+8*ÿ
+44 4(#¡
+ž
+4 4(#SB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+chosenColor"__id*7
+
+__unknown_file (
+
+colormage.ObjectColorž
+›
+5A 5(L
+%9mage.ObjectColor"__id*q
+
+__unknown_file (U*SB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+chosenColor£ 
+5A 5(]
+%10java.lang.String"3mage.ObjectColor#getDescription()Ljava/lang/String;*4
+
+__unknown_file (
+
+%9mage.ObjectColor2getDescription()GE
+54 5(@
+%11mage.filter.FilterObject"mage.filter.FilterObjectÀ
+½
+50 5(^
+%12"4mage.filter.FilterObject#<init>(Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%11mage.filter.FilterObject*5
+
+__unknown_file (
+
+%10java.lang.String
+}
+5 5(_,
+protectionFiltermage.filter.FilterObject"__id*=
+
+__unknown_file (!
+
+%11mage.filter.FilterObjectŸ
+œ
+68 6(C
+%13mage.ObjectColor"__id*q
+
+__unknown_file (U*SB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+chosenColorus
+6) 6(76
+%14/mage.filter.predicate.mageobject.ColorPredicate"/mage.filter.predicate.mageobject.ColorPredicateî
+ë
+6% 6(D
+%15"Kmage.filter.predicate.mageobject.ColorPredicate#<init>(Lmage/ObjectColor;)V*T
+
+__unknown_file (8
+6
+%14/mage.filter.predicate.mageobject.ColorPredicate*5
+
+__unknown_file (
+
+%13mage.ObjectColorÅÂ
+6 6(E
+%16mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*J
+
+__unknown_file (.
+,
+protectionFiltermage.filter.FilterObject*T
+
+__unknown_file (8
+6
+%14/mage.filter.predicate.mageobject.ColorPredicate2&add(Lmage/filter/predicate/Predicate;)ge
+7( 7(9/
+%17(mage.abilities.keyword.ProtectionAbility"(mage.abilities.keyword.ProtectionAbility÷
+ô
+7$ 7(K
+%18"Fmage.abilities.keyword.ProtectionAbility#<init>(Lmage/filter/Filter;)V*M
+
+__unknown_file (1
+/
+%17(mage.abilities.keyword.ProtectionAbility*J
+
+__unknown_file (.
+,
+protectionFiltermage.filter.FilterObject½
+º
+7 7(KYB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+protectionAbility"__id*M
+
+__unknown_file (1
+/
+%17(mage.abilities.keyword.ProtectionAbility*
+3*Ž
+53@ 3(Ež
+›
+3M 3(X
+%7mage.ObjectColor"__id*q
+
+__unknown_file (U*SB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+chosenColorÕÒ
+3@ 3(Y
+%8boolean",mage.ObjectColor#equals(Ljava/lang/Object;)Z*7
+
+__unknown_file (
+
+colormage.ObjectColor*4
+
+__unknown_file (
+
+%7mage.ObjectColor2equals(Ljava/lang/Object;)*
+3
+4*Ô
+63" 3(3¼
+¹
+3" 3(3.
+%6(mage.abilities.keyword.ProtectionAbility"__id*w
+
+__unknown_file ([*YB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffect"
+protectionAbility*
+4
+5*¥
+72. 2(2š—
+2. 2(=
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¦£
+2G 2(X
+%3java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()j
+h
+2G 2(c
+%4java.lang.String"__concat*"
+2G 2(X
+
+%3java.util.UUID*
+2[ 2(c
+
+_coloröó
+2. 2(d
+%5java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%2mage.game.GameState*4
+
+__unknown_file (
+
+%4java.lang.String2getValue(Ljava/lang/String;)c
+a
+2 2(e
+colormage.ObjectColor"__id*4
+
+__unknown_file (
+
+%5java.lang.Object*
+3
+6*Ñ
+80 0("¨¥
+00 0(D
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+0 0(E#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+0 0(F*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+7
+1*!
+1> >("
+> >(
+"":"
+/ /(#
+gamemage.game.Game:,
+/$ /(2 
+sourcemage.abilities.AbilityBDB
+@mage.abilities.effects.keyword.ProtectionChosenColorSourceEffectHP

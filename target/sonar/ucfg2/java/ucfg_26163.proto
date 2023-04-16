@@ -1,0 +1,104 @@
+
+Cmage.server.game.GameController#isAllowedToWatch(Ljava/util/UUID;)Zk
+_D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GameController.javaÍ Í(#"3*®
+2
+Ì Ì(Ñ
+Å
+
+Ì Ì(
+%4mage.game.GameOptions"__id*P
+
+__unknown_file (4*2!
+mage.server.game.GameController"
+gameOptionsu
+s
+
+Ì Ì(+
+%5java.util.Set"__id*J
+
+__unknown_file (.*,
+
+%4mage.game.GameOptions"
+bannedUsersîë
+
+Ì5 Ì(?
+%6mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()ñì
+
+Ì5 Ì(I
+%7java.lang.String",mage.server.User#getName()Ljava/lang/String;*4
+
+__unknown_file (
+
+%6mage.server.User2	getName()“œ
+
+Ì Ì(J
+%8boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Set*4
+
+__unknown_file (
+
+%7java.lang.String2contains(Ljava/lang/Object;)"
+
+Ì Ì(K
+""*û
+3
+Î Î(,ï
+í
+
+Î Î(,)
+%0#mage.server.managers.ManagerFactory"__id*S
+
+__unknown_file (7*5!
+mage.server.game.GameController"
+managerFactory‰·
+
+Î Î(:&
+%1 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2userManager()íè
+
+Î Î(J
+%2java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%1 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2getUser(Ljava/util/UUID;)h
+f
+
+Î Î(K
+userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%2java.util.OptionalÜÉ
+
+Ï Ï(
+%3boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+2
+1*%
+1
+Ô Ô("
+
+Ô Ô(
+"":&
+
+Í$ Í(/
+userIdjava.util.UUIDB#!
+mage.server.game.GameControllerHP

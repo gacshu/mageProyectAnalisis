@@ -1,0 +1,189 @@
+
+‹org.mage.card.arcane.CardRendererUtils#scaleFont(Ljava/awt/Graphics2D;Ljava/lang/String;Ljava/awt/Rectangle;Ljava/awt/Font;)Ljava/awt/Font;r
+fD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/org/mage/card/arcane/CardRendererUtils.java¼ ¼(!"8*Ì
+6
+É É(#¾»
+
+É É(>
+%4java.awt.Font"*java.awt.Font#deriveFont(F)Ljava/awt/Font;*9
+
+__unknown_file (
+
+
+scaledFontjava.awt.Font*"
+
+__unknown_file (
+""2deriveFont(F)d
+b
+
+É É(>
+
+scaledFontjava.awt.Font"__id*1
+
+__unknown_file (
+
+%4java.awt.FontHF
+
+Ë$ Ë(.
+%5java.awt.font.TextLayout"java.awt.font.TextLayoutò
+ï
+
+Ë  Ë(E
+%6"djava.awt.font.TextLayout#<init>(Ljava/lang/String;Ljava/awt/Font;Ljava/awt/font/FontRenderContext;)V*<
+
+__unknown_file ( 
+
+%5java.awt.font.TextLayout*6
+
+__unknown_file (
+
+textjava.lang.String*9
+
+__unknown_file (
+
+
+scaledFontjava.awt.Font*D
+
+__unknown_file ((
+&
+frcjava.awt.font.FontRenderContextv
+t
+
+Ë Ë(F"
+layoutjava.awt.font.TextLayout"__id*<
+
+__unknown_file ( 
+
+%5java.awt.font.TextLayout¢Ÿ
+
+Ì! Ì(;
+%7float"-java.awt.font.TextLayout#getVisibleAdvance()F*@
+
+__unknown_file ($
+"
+layoutjava.awt.font.TextLayout2getVisibleAdvance()œ™
+
+Í" Í(F
+%8java.awt.font.LineMetrics"ljava.awt.Font#getLineMetrics(Ljava/lang/String;Ljava/awt/font/FontRenderContext;)Ljava/awt/font/LineMetrics;*9
+
+__unknown_file (
+
+
+scaledFontjava.awt.Font*6
+
+__unknown_file (
+
+textjava.lang.String*D
+
+__unknown_file ((
+&
+frcjava.awt.font.FontRenderContext2CgetLineMetrics(Ljava/lang/String;Ljava/awt/font/FontRenderContext;)y
+w
+
+Í Í(G$
+metricsjava.awt.font.LineMetrics"__id*=
+
+__unknown_file (!
+
+%8java.awt.font.LineMetrics•’
+
+Î" Î(5
+%9float"&java.awt.font.LineMetrics#getHeight()F*B
+
+__unknown_file (&
+$
+metricsjava.awt.font.LineMetrics2getHeight()*
+6
+1*ä
+8
+¾  ¾(#ÕÒ
+
+¾  ¾(:%
+%0java.awt.font.FontRenderContext"Kjava.awt.Graphics2D#getFontRenderContext()Ljava/awt/font/FontRenderContext;*8
+
+__unknown_file (
+
+g2djava.awt.Graphics2D2getFontRenderContext()
+
+
+¾ ¾(;&
+frcjava.awt.font.FontRenderContext"__id*C
+
+__unknown_file ('
+%
+%0java.awt.font.FontRenderContextƒ€
+
+À À(*
+%1double"java.awt.Rectangle#getWidth()D*8
+
+__unknown_file (
+
+rectjava.awt.Rectangle2
+getWidth()…‚
+
+Á Á(,
+%2double"java.awt.Rectangle#getHeight()D*8
+
+__unknown_file (
+
+rectjava.awt.Rectangle2getHeight()f
+d
+
+Å Å(
+
+scaledFontjava.awt.Font"__id*3
+
+__unknown_file (
+
+fontjava.awt.Fontyw
+
+Æ Æ(3	
+%3int"java.awt.Font#getSize()I*9
+
+__unknown_file (
+
+
+scaledFontjava.awt.Font2	getSize()*
+6
+1*
+1
+Ø Ø(Œ
+‰
+
+Ø- Ø(G
+%10double"java.lang.Math#floor(D)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""ÈÅ
+
+Ø Ø(H
+%11java.awt.Font"*java.awt.Font#deriveFont(F)Ljava/awt/Font;*9
+
+__unknown_file (
+
+
+scaledFontjava.awt.Font*+
+
+__unknown_file (
+
+%10double2deriveFont(F)"$
+
+Ø Ø(I
+
+%11java.awt.Font:(
+
+¼" ¼(1
+g2djava.awt.Graphics2D:&
+
+¼2 ¼(>
+textjava.lang.String:(
+
+¼? ¼(N
+rectjava.awt.Rectangle:#
+
+¼O ¼(X
+fontjava.awt.FontB*"(
+&org.mage.card.arcane.CardRendererUtils

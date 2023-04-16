@@ -1,0 +1,910 @@
+
+emage.client.cards.Cards#loadCards(Lmage/view/CardsView;Lmage/client/cards/BigCard;Ljava/util/UUID;Z)Zc
+WD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/cards/Cards.javaÜ Ü("38*∫
+24
+¶0 ¶(A?=
+
+¶4 ¶(?
+%29java.util.ArrayList"java.util.ArrayListn
+l
+
+¶0 ¶(A
+%30"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%29java.util.ArrayListm
+k
+
+¶	 ¶(B
+orderedListjava.util.List"__id*8
+
+__unknown_file (
+
+%29java.util.ArrayList*
+20
+23*ç
+25
+õ õ( T
+R
+
+õ õ( 
+compjava.awt.Component"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+õ õ( 
+compjava.awt.Component"
+__arrayGet*9
+
+__unknown_file (
+
+%11java.awt.Component[]*"
+
+__unknown_file (
+""*
+24
+27
+28*
+26
+¢ ¢(v
+t
+
+¢ ¢(
+%27javax.swing.JPanel"__id*E
+
+__unknown_file ()*'
+mage.client.cards.Cards"
+
+cardAreaﬂ‹
+
+¢ ¢(&
+%28void"0java.awt.Container#remove(Ljava/awt/Component;)V*7
+
+__unknown_file (
+
+%27javax.swing.JPanel*8
+
+__unknown_file (
+
+compjava.awt.Component2remove(Ljava/awt/Component;)*
+25*≠	
+27
+† †(X
+V
+
+† †(
+%19org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ùö
+
+†6 †(D
+%20java.lang.String".java.awt.Component#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+compjava.awt.Component2	getName()}
+{
+
+†" †(D
+%21java.lang.String"__concat*!
+
+†" †(3
+Unknown object:*'
+
+†6 †(D
+
+%20java.lang.Stringy
+w
+
+†" †(T
+%22java.lang.String"__concat*'
+
+†" †(D
+
+%21java.lang.String*
+
+†G †(T
+ className:õò
+
+†W †(f
+%23java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*8
+
+__unknown_file (
+
+compjava.awt.Component2
+getClass()ñì
+
+†W †(p
+%24java.lang.String"+java.lang.Class#getName()Ljava/lang/String;*4
+
+__unknown_file (
+
+%23java.lang.Class2	getName()Ñ
+Å
+
+†" †(p
+%25java.lang.String"__concat*'
+
+†" †(T
+
+%22java.lang.String*'
+
+†W †(p
+
+%24java.lang.String‚ﬂ
+
+† †(q
+%26void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%19org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%25java.lang.String2fatal(Ljava/lang/Object;)*
+26*§	
+28
+ù4 ù(8o
+m
+
+ù ù(9
+mageCardmage.cards.MageCard"__id*8
+
+__unknown_file (
+
+compjava.awt.ComponentX
+V
+
+û û(
+%12org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¢ü
+
+û5 û(G
+%13java.lang.String".java.awt.Component#getName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+mageCardmage.cards.MageCard2	getName()|
+z
+
+û" û(G
+%14java.lang.String"__concat* 
+
+û" û(2
+MageCard name:*'
+
+û5 û(G
+
+%13java.lang.String{
+y
+
+û" û(Y
+%15java.lang.String"__concat*'
+
+û" û(G
+
+%14java.lang.String*
+
+ûJ û(Y
+ toolTiptext:¥±
+
+û\ û(u
+%16java.lang.String"9javax.swing.JComponent#getToolTipText()Ljava/lang/String;*=
+
+__unknown_file (!
+
+mageCardmage.cards.MageCard2getToolTipText()Ñ
+Å
+
+û" û(u
+%17java.lang.String"__concat*'
+
+û" û(Y
+
+%15java.lang.String*'
+
+û\ û(u
+
+%16java.lang.String‚ﬂ
+
+û û(v
+%18void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%12org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%17java.lang.String2fatal(Ljava/lang/Object;)*
+26*¿
+30
+õ# õ(+v
+t
+
+õ# õ(+
+%10javax.swing.JPanel"__id*E
+
+__unknown_file ()*'
+mage.client.cards.Cards"
+
+cardAreaØ¨
+
+õ# õ(;
+%11java.awt.Component[]"7java.awt.Container#getComponents()[Ljava/awt/Component;*7
+
+__unknown_file (
+
+%10javax.swing.JPanel2getComponents()*
+25*Î
+31
+ö ö(W
+U
+
+ö ö(
+%8org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""˘ˆ
+
+ö ö(K
+
+%9void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%8org.apache.log4j.Logger*N
+
+__unknown_file (20
+.Card object on the cards panel was not removed2fatal(Ljava/lang/Object;)*
+30*ï
+32
+ò$ ò(.y
+w
+
+ò$ ò(0	
+%7int"%mage.client.cards.Cards#countCards()I*7
+
+__unknown_file (
+mage.client.cards.Cards*
+24
+31*¢
+10
+Œ Œ(n
+l
+
+Œ Œ(
+%63java.util.Map"__id*B
+
+__unknown_file (&*$
+mage.client.cards.Cards"
+cardsïí
+
+Œ Œ(#
+%64java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getId()û
+õ
+
+Œ Œ($
+%65mage.cards.MageCard"__mapGet*2
+
+__unknown_file (
+
+%63java.util.Map*3
+
+__unknown_file (
+
+%64java.util.UUID·ﬁ
+
+Œ Œ(1
+%66void"1mage.cards.MageCard#update(Lmage/view/CardView;)V*8
+
+__unknown_file (
+
+%65mage.cards.MageCard*8
+
+__unknown_file (
+
+cardmage.view.CardView2update(Lmage/view/CardView;)*
+9*Å
+33
+í% í(.|z
+
+í% í(5	
+%4int"java.util.HashMap#size()I*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2size()‹
+Ÿ
+
+ï ï(1
+%5boolean"Cmage.client.cards.Cards#removeOutdatedCards(Lmage/view/CardsView;)Z*7
+
+__unknown_file (
+mage.client.cards.Cards*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsViewáÑ
+
+ò ò( 
+%6boolean"java.util.HashMap#isEmpty()Z*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2	isEmpty()*
+24
+32*á
+11
+À À(Ó
+Î
+
+À À(/
+%62void"amage.client.cards.Cards#addCard(Lmage/view/CardView;Lmage/client/cards/BigCard;Ljava/util/UUID;)V*7
+
+__unknown_file (
+mage.client.cards.Cards*8
+
+__unknown_file (
+
+cardmage.view.CardView*B
+
+__unknown_file (&
+$
+bigCardmage.client.cards.BigCard*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*
+10*î
+34
+ê ê(&|z
+
+ê ê(-	
+%3int"java.util.HashMap#size()I*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2size()*
+33*˛
+12
+   (n
+l
+
+   (
+%59java.util.Map"__id*B
+
+__unknown_file (&*$
+mage.client.cards.Cards"
+cardsïí
+
+ $  (0
+%60java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getId()Ÿ÷
+
+   (1
+%61boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%59java.util.Map*3
+
+__unknown_file (
+
+%60java.util.UUID2containsKey(Ljava/lang/Object;)*
+10
+11*É
+13
+» »(ÍÁ
+
+» »(*
+%58void"@mage.view.CardView#setAbilityType(Lmage/constants/AbilityType;)V*8
+
+__unknown_file (
+
+cardmage.view.CardView*"
+
+__unknown_file (
+""2,setAbilityType(Lmage/constants/AbilityType;)*
+12*î
+36
+ç: ç(C|z
+
+ç: ç(J	
+%2int"java.util.HashMap#size()I*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2size()*
+33*¢"
+14
+π4 π(8µ≤
+
+π  π(I
+%36mage.view.CardView">mage.view.StackAbilityView#getSourceCard()Lmage/view/CardView;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getSourceCard()h
+f
+
+π π(J
+tmpmage.view.CardView"__id*7
+
+__unknown_file (
+
+%36mage.view.CardViewõò
+
+ª# ª(2
+%37java.util.List"-mage.view.CardView#getRules()Ljava/util/List;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getRules()‡›
+
+ª ª(3
+%38void"3mage.view.CardView#overrideRules(Ljava/util/List;)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*3
+
+__unknown_file (
+
+%37java.util.List2overrideRules(Ljava/util/List;)ëé
+
+º" º(4
+%39boolean"'mage.view.SimpleCardView#isChoosable()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isChoosable()øº
+
+º º(5
+%40void")mage.view.SimpleCardView#setChoosable(Z)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*,
+
+__unknown_file (
+
+%39boolean2setChoosable(Z)’“
+
+Ω& Ω(='
+%41 mage.players.PlayableObjectStats"Mmage.view.SimpleCardView#getPlayableStats()Lmage/players/PlayableObjectStats;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getPlayableStats()“œ
+
+Ω& Ω(D'
+%42 mage.players.PlayableObjectStats"Image.players.PlayableObjectStats#copy()Lmage/players/PlayableObjectStats;*E
+
+__unknown_file ()
+'
+%41 mage.players.PlayableObjectStats2copy()¢ü
+
+Ω Ω(E
+%43void"Nmage.view.SimpleCardView#setPlayableStats(Lmage/players/PlayableObjectStats;)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*E
+
+__unknown_file ()
+'
+%42 mage.players.PlayableObjectStats24setPlayableStats(Lmage/players/PlayableObjectStats;)èå
+
+æ! æ(2
+%44boolean"&mage.view.SimpleCardView#isSelected()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isSelected()Ω∫
+
+æ æ(3
+%45void"(mage.view.SimpleCardView#setSelected(Z)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*,
+
+__unknown_file (
+
+%44boolean2setSelected(Z)≠™
+
+ø ø('
+%46void"#mage.view.CardView#setIsAbility(Z)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView* 
+
+__unknown_file (22setIsAbility(Z)üú
+
+¿% ¿(6
+%47java.util.List"/mage.view.CardView#getTargets()Ljava/util/List;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getTargets()‰·
+
+¿ ¿(7
+%48void"5mage.view.CardView#overrideTargets(Ljava/util/List;)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*3
+
+__unknown_file (
+
+%47java.util.List2!overrideTargets(Ljava/util/List;)ïí
+
+¡  ¡(,
+%49java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getId()⁄◊
+
+¡ ¡(-
+%50void"0mage.view.CardView#overrideId(Ljava/util/UUID;)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*3
+
+__unknown_file (
+
+%49java.util.UUID2overrideId(Ljava/util/UUID;)øº
+
+¬$ ¬(9!
+%51mage.constants.AbilityType"?mage.view.CardView#getAbilityType()Lmage/constants/AbilityType;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getAbilityType()ÜÉ
+
+¬ ¬(:
+%52void"@mage.view.CardView#setAbilityType(Lmage/constants/AbilityType;)V*7
+
+__unknown_file (
+
+tmpmage.view.CardView*?
+
+__unknown_file (#
+!
+%51mage.constants.AbilityType2,setAbilityType(Lmage/constants/AbilityType;)¢ü
+
+ƒ ƒ(#
+%53java.util.List"1mage.view.CardView#getCardIcons()Ljava/util/List;*7
+
+__unknown_file (
+
+tmpmage.view.CardView2getCardIcons()^
+\
+
+ƒ ƒ(+
+%54void"__arrayClear*3
+
+__unknown_file (
+
+%53java.util.List¢ü
+
+≈ ≈(#
+%55java.util.List"1mage.view.CardView#getCardIcons()Ljava/util/List;*7
+
+__unknown_file (
+
+tmpmage.view.CardView2getCardIcons()£†
+
+≈+ ≈(>
+%56java.util.List"1mage.view.CardView#getCardIcons()Ljava/util/List;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getCardIcons()∏
+µ
+
+≈ ≈(?
+%57boolean"__arrayAddAll*3
+
+__unknown_file (
+
+%55java.util.List*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%56java.util.Listi
+g
+
+∆ ∆(
+cardmage.view.CardView"__id*7
+
+__unknown_file (
+
+tmpmage.view.CardView*
+12*Á
+38
+á á( r
+p
+
+ã ã(
+%0mage.constants.Zone"__id*A
+
+__unknown_file (%*#
+mage.client.cards.Cards"
+zoneS
+Q
+
+ã ã(
+%1mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+36
+33
+34*“
+16
+¥& ¥(*µ≤
+
+¥ ¥(A
+%35void"*mage.view.PermanentView#overrideTapped(Z)V*8
+
+__unknown_file (
+
+cardmage.view.CardView*
+
+__unknown_file (2 2overrideTapped(Z)*
+13
+14*%
+1
+È È("
+
+È	 È(
+""*˝
+2
+ﬂ ﬂ(â
+Ü
+
+ﬂ( Ê(
+%76java.lang.Runnable"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_417$mage.client.cards.Cardsá
+Ñ
+
+__unknown_file ()
+
+%76java.lang.Runnable"
+
+Cards.this"__id*7
+
+__unknown_file (
+mage.client.cards.Cards–
+Õ
+
+ﬂ Ê(
+%91void"=javax.swing.SwingUtilities#invokeLater(Ljava/lang/Runnable;)V*:
+
+__unknown_file ("
+javax.swing.SwingUtilities*7
+
+__unknown_file (
+
+%76java.lang.Runnable*
+1*µ
+4
+Ÿ	 Ÿ(£
+†
+
+Ÿ Ÿ(%
+%72java.awt.Dimension">mage.client.cards.Cards#getCardDimension()Ljava/awt/Dimension;*7
+
+__unknown_file (
+mage.client.cards.CardsÈÊ
+
+Ÿ	 Ÿ(&
+%73void"8mage.client.cards.Cards#sizeCards(Ljava/awt/Dimension;)V*7
+
+__unknown_file (
+mage.client.cards.Cards*7
+
+__unknown_file (
+
+%72java.awt.Dimension2sizeCards(Ljava/awt/Dimension;)âÜ
+
+⁄	 ⁄(
+%74void"$javax.swing.JComponent#revalidate()V*7
+
+__unknown_file (
+mage.client.cards.Cards2revalidate()~|
+
+€	 €(
+%75void"java.awt.Component#repaint()V*7
+
+__unknown_file (
+mage.client.cards.Cards2	repaint()*
+2
+1*ß
+5
+÷ ÷(v
+t
+
+÷ ÷(
+%68javax.swing.JPanel"__id*E
+
+__unknown_file ()*'
+mage.client.cards.Cards"
+
+cardArean
+l
+
+÷" ÷('
+%69java.util.Map"__id*B
+
+__unknown_file (&*$
+mage.client.cards.Cards"
+cardswu
+
+÷" ÷(1
+%70boolean"java.util.Map#isEmpty()Z*2
+
+__unknown_file (
+
+%69java.util.Map2	isEmpty()Ø¨
+
+÷ ÷(2
+%71void"%javax.swing.JComponent#setVisible(Z)V*7
+
+__unknown_file (
+
+%68javax.swing.JPanel*"
+
+__unknown_file (
+""2setVisible(Z)*
+4*ï
+7
+“ “(|
+z
+
+“ “(
+%67void"&mage.client.cards.Cards#layoutCards()V*7
+
+__unknown_file (
+mage.client.cards.Cards*
+4
+5*ó
+9
+± ±(T
+R
+
+± ±(
+cardmage.view.CardView"__id*"
+
+__unknown_file (
+""ò
+ï
+
+± ±(
+cardmage.view.CardView"
+__arrayGet*;
+
+__unknown_file (
+
+orderedListjava.util.List*"
+
+__unknown_file (
+""*
+13
+14
+4
+16
+5
+7*è
+20
+≠ ≠(Æ´
+
+≠  ≠(2
+%33java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2values()∆
+√
+
+≠ ≠(3
+%34boolean"__arrayAddAll*;
+
+__unknown_file (
+
+orderedListjava.util.List*
+
+__unknown_file (: *9
+
+__unknown_file (
+
+%33java.util.Collection*
+9*à
+21
+© ©(T
+R
+
+© ©(
+cardmage.view.CardView"__id*"
+
+__unknown_file (
+""ñ
+ì
+
+© ©(
+cardmage.view.CardView"
+__arrayGet*9
+
+__unknown_file (
+
+%31java.util.Collection*"
+
+__unknown_file (
+""*
+9
+22*ÿ
+22
+™ ™(ø
+º
+
+™ ™()
+%32void"
+__arrayAdd*;
+
+__unknown_file (
+
+orderedListjava.util.List*
+
+__unknown_file (2 *8
+
+__unknown_file (
+
+cardmage.view.CardView*
+21*«
+23
+©" ©(+Æ´
+
+©" ©(4
+%31java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsView2values()*
+21:.
+
+Ü Ü(2 
+	cardsViewmage.view.CardsView:2
+
+Ü3 Ü(C$
+bigCardmage.client.cards.BigCard:&
+
+ÜD Ü(P
+gameIdjava.util.UUID: 
+
+__unknown_file (
+""B
+mage.client.cards.CardsHP

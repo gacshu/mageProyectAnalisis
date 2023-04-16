@@ -1,0 +1,295 @@
+
+–mage.abilities.effects.common.continuous.CantCastMoreThanOneSpellEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z‹
+€D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/CantCastMoreThanOneSpellEffect.java0 0("startingBlock*Ì
+137 ;(¯¬
+8 8('
+%8java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()°­
+8/ 8(G
+%9java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÍÊ
+8 8(H
+%10boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%8java.util.UUID*2
+
+__unknown_file (
+
+%9java.util.UUID2equals(Ljava/lang/Object;)*
+3
+12*"
+154 4( "
+4 4(!
+""*Ë
+162 6(¯¬
+3 3((
+%5java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()°­
+30 3(H
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÌÉ
+3 3(I
+%7boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%5java.util.UUID*2
+
+__unknown_file (
+
+%6java.util.UUID2equals(Ljava/lang/Object;)*
+3
+15*!
+1H H(l"
+H H(l
+""*•
+2H" H()°­
+HS H(f
+%21java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()ÍÊ
+H" H(g
+
+%22int"image.watchers.common.CastSpellLastTurnWatcher#getAmountOfSpellsPlayerCastOnCurrentTurn(Ljava/util/UUID;)I*V
+
+__unknown_file (:
+8
+watcher-mage.watchers.common.CastSpellLastTurnWatcher*3
+
+__unknown_file (
+
+%21java.util.UUID2:getAmountOfSpellsPlayerCastOnCurrentTurn(Ljava/util/UUID;)*
+1*ä
+3G+ G(/›˜
+G+ G(:
+%19mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Š‡
+G+ G(e4
+%20-mage.watchers.common.CastSpellLastTurnWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%19mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)¡
+ž
+G G(f8
+watcher-mage.watchers.common.CastSpellLastTurnWatcher"__id*R
+
+__unknown_file (6
+4
+%20-mage.watchers.common.CastSpellLastTurnWatcher*
+2
+1*þ
+startingBlock0 0(F—
+”
+/ /(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+0% 0(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%23”
+‘
+/ /(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+04 0(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%24Š
+‡
+/ /(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+0A 0(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25*
+4*Ù
+41 1( ¹
+¶
+1 1( %
+%0mage.constants.TargetController"__id*}
+
+__unknown_file (a*_I
+Gmage.abilities.effects.common.continuous.CantCastMoreThanOneSpellEffect"
+targetController]
+[
+2 2(%
+%1mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+7 7(%
+%2mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+< <(%
+%3mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+A A('%
+%4mage.constants.TargetController"__id*"
+
+__unknown_file (
+""*
+13
+3
+16
+7
+10*!
+5D D( "
+D D(!
+""*Ç
+6C+ C(5°­
+CC C(V
+%17java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()üù
+C+ C(W
+%18boolean"=mage.game.permanent.Permanent#isAttachedTo(Ljava/util/UUID;)Z*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%17java.util.UUID2isAttachedTo(Ljava/util/UUID;)*
+3
+5*×
+7A E(©¦
+B9 B(M
+%15java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Œ‰
+B' B(N$
+%16mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%15java.util.UUID2getPermanent(Ljava/util/UUID;)„
+
+B B(O+
+
+attachmentmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%16mage.game.permanent.Permanent*
+5
+6*!
+9> >( "
+> >(!
+""*À
+10< @(±®
+=' =(?
+%11java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ìé
+= =(@
+%12java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%11java.util.UUID2getOpponents(Ljava/util/UUID;)°­
+=J =(]
+%13java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()ÑÎ
+= =(^
+%14boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%12java.util.Set*3
+
+__unknown_file (
+
+%13java.util.UUID2contains(Ljava/lang/Object;)*
+3
+9*"
+129 9( "
+9 9(!
+"":/
+0 0(+#
+eventmage.game.events.GameEvent:,
+0, 0(; 
+sourcemage.abilities.Ability:"
+0< 0(E
+gamemage.game.GameBKI
+Gmage.abilities.effects.common.continuous.CantCastMoreThanOneSpellEffectHP

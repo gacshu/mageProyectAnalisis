@@ -1,0 +1,352 @@
+
+kmage.abilities.effects.common.counter.AddCountersAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z}
+sD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/counter/AddCountersAllEffect.java# #("startingBlock*!
+20 0("
+0 0(
+""*™
+3( (((b
+`
+( (((*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""
+š
+( (((*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%7java.util.List*"
+
+__unknown_file (
+""*
+2
+5*þ
+startingBlock# #(3Š
+‡
+" "(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+# #("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%29”
+‘
+" "(
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+#, #(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%30*
+9*–
+4+ +(£ 
+++ +(D
+%13java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getLogName()j
+h
+++ +(K
+%14java.lang.String"__concat*%
+++ +(D
+
+%13java.lang.String*
++G +(K
+: ©¦
++N +(e
+%15java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()}
+{
+++ +(e
+%16java.lang.String"__concat*%
+++ +(K
+
+%14java.lang.String*%
++N +(e
+
+%15java.lang.Stringn
+l
+++ +(p
+%17java.lang.String"__concat*%
+++ +(e
+
+%16java.lang.String*
++h +(p
+
+ puts š
+—
++s +(z
+%18mage.counters.Counter"__id*g
+
+__unknown_file (K*I<
+:mage.abilities.effects.common.counter.AddCountersAllEffect"	
+counter…‚
+	+s +(…
+
+%19int"!mage.counters.Counter#getCount()I*:
+
+__unknown_file (
+
+%18mage.counters.Counter2
+getCount()r
+p
+	++ +(…
+%20java.lang.String"__concat*%
+++ +(p
+
+%17java.lang.String*
+	+s +(…
+
+
+%19intm
+k
+	++ +(‹
+%21java.lang.String"__concat*&
+	++ +(…
+
+%20java.lang.String*
+
++ˆ +(‹
+ œ
+™
+
++Ž +(•
+%22mage.counters.Counter"__id*g
+
+__unknown_file (K*I<
+:mage.abilities.effects.common.counter.AddCountersAllEffect"	
+counter¢Ÿ
+
++Ž +(Ÿ
+%23java.lang.String"1mage.counters.Counter#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+%22mage.counters.Counter2	getName()
+
+	++ +(Ÿ
+%24java.lang.String"__concat*&
+	++ +(‹
+
+%21java.lang.String*'
+
++Ž +(Ÿ
+
+%23java.lang.Stringu
+s
+++ ,(0
+%25java.lang.String"__concat*&
+	++ +(Ÿ
+
+%24java.lang.String*
+," ,(0
+ counter on ®«
+,3 ,(I
+%26java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getLogName()}
+{
+++ ,(I
+%27java.lang.String"__concat*%
+++ ,(0
+
+%25java.lang.String*%
+,3 ,(I
+
+%26java.lang.StringÝÚ
++ ,(J
+%28void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%27java.lang.String2!informPlayers(Ljava/lang/String;)*
+3*­	
+5) )(™
+–
+)* )(1
+%8mage.counters.Counter"__id*g
+
+__unknown_file (K*I<
+:mage.abilities.effects.common.counter.AddCountersAllEffect"	
+counter¢Ÿ
+)* )(8
+%9mage.counters.Counter"3mage.counters.Counter#copy()Lmage/counters/Counter;*9
+
+__unknown_file (
+
+%8mage.counters.Counter2copy()±®
+): )(R
+%10java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()š—
+) )(a
+%11boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%9mage.counters.Counter*3
+
+__unknown_file (
+
+%10java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ƒ€
+* *(,
+%12boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+3
+4*‡	
+6(+ ((/¾»
+(+ ((@%
+%4mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ž
+›
+(U (([!
+%5mage.filter.FilterPermanent"__id*f
+
+__unknown_file (J*H<
+:mage.abilities.effects.common.counter.AddCountersAllEffect"
+filter°­
+(] ((u
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÝÚ
+	(+ ((„
+%7java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%4mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%5mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%6java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+3*±
+7' '(™
+–
+' '(
+%3mage.counters.Counter"__id*g
+
+__unknown_file (K*I<
+:mage.abilities.effects.common.counter.AddCountersAllEffect"	
+counter*
+2
+6*œ
+9$ $( °­
+$+ $(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+$ $(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+$ $(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player„
+%" %(8
+%2mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)h
+f
+% %(9
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*
+7
+1*!
+12 2("
+2 2(
+"":"
+# #(#
+gamemage.game.Game:,
+#$ #(2 
+sourcemage.abilities.AbilityB><
+:mage.abilities.effects.common.counter.AddCountersAllEffectHP

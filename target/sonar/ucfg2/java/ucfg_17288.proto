@@ -1,0 +1,388 @@
+
+image.abilities.condition.common.MostCommonColorCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z{
+qD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/MostCommonColorCondition.java! !("startingBlock*Æ
+24% %(LJ
+%" %(1!
+%2mage.filter.FilterPermanent"mage.filter.FilterPermanentz
+x
+% %(3
+%3"%mage.filter.FilterPermanent#<init>()V*?
+
+__unknown_file (#
+!
+%2mage.filter.FilterPermanent—
+Œ
+% %(3
+%4"
+__arraySet*K
+
+__unknown_file (/
+-
+colorFiltersmage.filter.FilterPermanent[]*"
+
+__unknown_file (
+""*?
+
+__unknown_file (#
+!
+%2mage.filter.FilterPermanent≠
+™
+& &(!
+%5mage.filter.FilterPermanent"
+__arrayGet*K
+
+__unknown_file (/
+-
+colorFiltersmage.filter.FilterPermanent[]*"
+
+__unknown_file (
+""tr
+&$ &(25
+%6/mage.filter.predicate.mageobject.ColorPredicate"/mage.filter.predicate.mageobject.ColorPredicateÓ
+Î
+&  &(9
+%7"Kmage.filter.predicate.mageobject.ColorPredicate#<init>(Lmage/ObjectColor;)V*S
+
+__unknown_file (7
+5
+%6/mage.filter.predicate.mageobject.ColorPredicate*7
+
+__unknown_file (
+
+colormage.ObjectColor∏µ
+& &(:
+%8mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*?
+
+__unknown_file (#
+!
+%5mage.filter.FilterPermanent*S
+
+__unknown_file (7
+5
+%6/mage.filter.predicate.mageobject.ColorPredicate2&add(Lmage/filter/predicate/Predicate;)£
+†
+' '(%
+%9mage.filter.predicate.Predicate"__id*g
+
+__unknown_file (K*I:
+8mage.abilities.condition.common.MostCommonColorCondition"
+	predicate*
+21
+23*ù
+25$! $(,Ü
+É
+$! $(;
+%1java.util.List"/mage.ObjectColor#getAllColors()Ljava/util/List;*0
+
+__unknown_file ("
+mage.ObjectColor*
+21*Ó
+26"= "(>PN
+") "(?#
+%0mage.filter.FilterPermanent[]"mage.filter.FilterPermanent[]Ö
+Ç
+" "(@-
+colorFiltersmage.filter.FilterPermanent[]"__id*A
+
+__unknown_file (%
+#
+%0mage.filter.FilterPermanent[]*
+25*˚
+17. .(Q
+O
+. .(
+colormage.ObjectColor"__id*"
+
+__unknown_file (
+""ç
+ä
+. .(
+colormage.ObjectColor"
+__arrayGet*3
+
+__unknown_file (
+
+%13java.util.List*"
+
+__unknown_file (
+""*
+18
+11*¿
+18/ /(Æ
+´
+/ /("
+%14mage.filter.FilterPermanent"
+__arrayGet*K
+
+__unknown_file (/
+-
+colorFiltersmage.filter.FilterPermanent[]*"
+
+__unknown_file (
+""us
+/$ /(26
+%15/mage.filter.predicate.mageobject.ColorPredicate"/mage.filter.predicate.mageobject.ColorPredicate
+Ì
+/  /(9
+%16"Kmage.filter.predicate.mageobject.ColorPredicate#<init>(Lmage/ObjectColor;)V*T
+
+__unknown_file (8
+6
+%15/mage.filter.predicate.mageobject.ColorPredicate*7
+
+__unknown_file (
+
+colormage.ObjectColorª∏
+/ /(:
+%17mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*@
+
+__unknown_file ($
+"
+%14mage.filter.FilterPermanent*T
+
+__unknown_file (8
+6
+%15/mage.filter.predicate.mageobject.ColorPredicate2&add(Lmage/filter/predicate/Predicate;)øº
+0 0(2&
+%18mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()Æ
+´
+09 0(H"
+%19mage.filter.FilterPermanent"
+__arrayGet*K
+
+__unknown_file (/
+-
+colorFiltersmage.filter.FilterPermanent[]*"
+
+__unknown_file (
+""±Æ
+0J 0(b
+%20java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()©¶
+0 0(q
+
+%21int"}mage.game.permanent.Battlefield#count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*D
+
+__unknown_file ((
+&
+%18mage.game.permanent.Battlefield*@
+
+__unknown_file ($
+"
+%19mage.filter.FilterPermanent*3
+
+__unknown_file (
+
+%20java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+17*û
+19.! .(,á
+Ñ
+.! .(;
+%13java.util.List"/mage.ObjectColor#getAllColors()Ljava/util/List;*0
+
+__unknown_file ("
+mage.ObjectColor*
+17*!
+1H H("
+H H(
+""*!
+2E E("
+E E(
+""*¥
+3C C(!êç
+C C(2
+%28boolean""mage.ObjectColor#isMulticolored()Z*;
+
+__unknown_file (
+
+	commonestmage.ObjectColor2isMulticolored()"
+C C(3
+""*ˇ
+startingBlock! !(3ä
+á
+   (
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+! !("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%29î
+ë
+   (
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+!, !(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%30*
+26*ë
+5A A(ò
+ï
+A A(
+%26mage.ObjectColor"__id*j
+
+__unknown_file (N*L:
+8mage.abilities.condition.common.MostCommonColorCondition"
+compareColor€ÿ
+A A(*
+%27boolean",mage.ObjectColor#shares(Lmage/ObjectColor;)Z*5
+
+__unknown_file (
+
+%26mage.ObjectColor*;
+
+__unknown_file (
+
+	commonestmage.ObjectColor2shares(Lmage/ObjectColor;)*	
+2
+3
+1*˚
+6; ;(Q
+O
+; ;(
+colormage.ObjectColor"__id*"
+
+__unknown_file (
+""ç
+ä
+; ;(
+colormage.ObjectColor"
+__arrayGet*3
+
+__unknown_file (
+
+%24java.util.List*"
+
+__unknown_file (
+""*	
+5
+6
+8*Û
+8= =(ﬁ€
+= =()
+%25void".mage.ObjectColor#addColor(Lmage/ObjectColor;)V*;
+
+__unknown_file (
+
+	commonestmage.ObjectColor*7
+
+__unknown_file (
+
+colormage.ObjectColor2addColor(Lmage/ObjectColor;)*
+6*˙
+21$ $(Q
+O
+$ $(
+colormage.ObjectColor"__id*"
+
+__unknown_file (
+""å
+â
+$ $(
+colormage.ObjectColor"
+__arrayGet*2
+
+__unknown_file (
+
+%1java.util.List*"
+
+__unknown_file (
+""*
+24
+19*ù
+10;! ;(,á
+Ñ
+;! ;(;
+%24java.util.List"/mage.ObjectColor#getAllColors()Ljava/util/List;*0
+
+__unknown_file ("
+mage.ObjectColor*
+6*ü
+119 9(75
+:$ :(/
+%22mage.ObjectColor"mage.ObjectColorf
+d
+:  :(1
+%23"mage.ObjectColor#<init>()V*5
+
+__unknown_file (
+
+%22mage.ObjectColorh
+f
+: :(2
+	commonestmage.ObjectColor"__id*5
+
+__unknown_file (
+
+%22mage.ObjectColor*
+10*ö
+23( ((Æ
+´
+( (("
+%10mage.filter.FilterPermanent"
+__arrayGet*K
+
+__unknown_file (/
+-
+colorFiltersmage.filter.FilterPermanent[]*"
+
+__unknown_file (
+""§
+°
+($ ((-&
+%11mage.filter.predicate.Predicate"__id*g
+
+__unknown_file (K*I:
+8mage.abilities.condition.common.MostCommonColorCondition"
+	predicate´®
+( ((.
+%12mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*@
+
+__unknown_file ($
+"
+%10mage.filter.FilterPermanent*D
+
+__unknown_file ((
+&
+%11mage.filter.predicate.Predicate2&add(Lmage/filter/predicate/Predicate;)*
+21:"
+! !(#
+gamemage.game.Game:,
+!$ !(2 
+sourcemage.abilities.AbilityB<:
+8mage.abilities.condition.common.MostCommonColorConditionHP

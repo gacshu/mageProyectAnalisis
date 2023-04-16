@@ -1,0 +1,169 @@
+
+fmage.abilities.condition.common.ManaWasSpentCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/ManaWasSpentCondition.java ("startingBlock*Ì
+2& &(ª
+§
+&( &(9'
+%10 mage.constants.ColoredManaSymbol"__id*l
+
+__unknown_file (P*N7
+5mage.abilities.condition.common.ManaWasSpentCondition"
+coloredManaSymbolûø
+& &(:
+
+%11int"7mage.Mana#getColor(Lmage/constants/ColoredManaSymbol;)I*2
+
+__unknown_file (
+
+payment	mage.Mana*E
+
+__unknown_file ()
+'
+%10 mage.constants.ColoredManaSymbol2,getColor(Lmage/constants/ColoredManaSymbol;)"
+& &(?
+""*Ç
+3$ $("¨¥
+$6 $(J
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()«¨
+$ $(K
+%9	mage.Mana"[mage.watchers.common.ManaSpentToCastWatcher#getLastManaPayment(Ljava/util/UUID;)Lmage/Mana;*T
+
+__unknown_file (8
+6
+watcher+mage.watchers.common.ManaSpentToCastWatcher*2
+
+__unknown_file (
+
+%8java.util.UUID2$getLastManaPayment(Ljava/util/UUID;)W
+U
+$ $(L
+payment	mage.Mana"__id*-
+
+__unknown_file (
+
+%9	mage.Mana*
+2
+1*þ
+startingBlock (3Š
+‡
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+6*Ú
+4") "(-š—
+") "(8
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()†ƒ
+") "(a1
+%7+mage.watchers.common.ManaSpentToCastWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%6mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)œ
+™
+" "(b6
+watcher+mage.watchers.common.ManaSpentToCastWatcher"__id*O
+
+__unknown_file (3
+1
+%7+mage.watchers.common.ManaSpentToCastWatcher*
+3
+1*å
+5   (ÞÛ
+   (-)
+%2#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()½º
+   (@
+%3	mage.Mana"@mage.abilities.costs.mana.ManaCost#getUsedManaToPay()Lmage/Mana;*G
+
+__unknown_file (+
+)
+%2#mage.abilities.costs.mana.ManaCosts2getUsedManaToPay()©
+¦
+ J  ([&
+%4 mage.constants.ColoredManaSymbol"__id*l
+
+__unknown_file (P*N7
+5mage.abilities.condition.common.ManaWasSpentCondition"
+coloredManaSymbolôñ
+   (\	
+%5int"7mage.Mana#getColor(Lmage/constants/ColoredManaSymbol;)I*-
+
+__unknown_file (
+
+%3	mage.Mana*D
+
+__unknown_file ((
+&
+%4 mage.constants.ColoredManaSymbol2,getColor(Lmage/constants/ColoredManaSymbol;)"
+   (a
+""*¸
+6 (ÆÃ
+ (# 
+%0mage.constants.AbilityType"Cmage.abilities.Ability#getAbilityType()Lmage/constants/AbilityType;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getAbilityType()X
+V
+' (8 
+%1mage.constants.AbilityType"__id*"
+
+__unknown_file (
+""*
+4
+5*!
+1) )("
+) )(
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB97
+5mage.abilities.condition.common.ManaWasSpentConditionHP

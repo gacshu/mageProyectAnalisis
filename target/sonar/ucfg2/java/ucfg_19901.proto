@@ -1,0 +1,295 @@
+
+xmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zã
+ÄD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/SetBasePowerToughnessAllEffect.javaK K("startingBlock*ö
+2Y Y($b
+`
+Y Y($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+Y Y($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%17java.util.List*"
+
+__unknown_file (
+""*
+3
+1*Ã
+3Z Z(¢ü
+Z Z($
+%18mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()±Æ
+Z Z(C
+%19void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%18mage.MageInt*"
+
+__unknown_file (
+""2setModifiedBaseValue(I)™ß
+[ [((
+%20mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()±Æ
+[ [(K
+%21void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%20mage.MageInt*"
+
+__unknown_file (
+""2setModifiedBaseValue(I)*
+2*ˇ
+startingBlockK K(3ä
+á
+J J(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+K K("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22î
+ë
+J J(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+K, K(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%23*
+10*õ	
+4Y' Y(+øº
+Y' Y(<&
+%14mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¨
+©
+YQ Y(W"
+%15mage.filter.FilterPermanent"__id*s
+
+__unknown_file (W*UI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect"
+filter±Æ
+YY Y(q
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()·ﬁ
+	Y' Y(Ä
+%17java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%14mage.game.permanent.Battlefield*@
+
+__unknown_file ($
+"
+%15mage.filter.FilterPermanent*3
+
+__unknown_file (
+
+%16java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*ç
+5U U(yw
+U U(
+%13void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()*
+8* 
+6R R(°û
+R R((
+%9mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()∞≠
+R R(G
+%10void"%mage.MageInt#setModifiedBaseValue(I)V*0
+
+__unknown_file (
+
+%9mage.MageInt*"
+
+__unknown_file (
+""2setModifiedBaseValue(I)™ß
+S S(,
+%11mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()±Æ
+S S(O
+%12void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%11mage.MageInt*"
+
+__unknown_file (
+""2setModifiedBaseValue(I)*
+8*◊
+7P& P((öó
+P& P(/
+%7mage.MageObjectReference"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()ûõ
+P& P(B#
+%8mage.game.permanent.Permanent"Vmage.MageObjectReference#getPermanent(Lmage/game/Game;)Lmage/game/permanent/Permanent;*<
+
+__unknown_file ( 
+
+%7mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanent(Lmage/game/Game;)Å
+
+P P(C*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%8mage.game.permanent.Permanent*
+5
+6*î
+8OS O(U}{
+OS O(_
+%6boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+7
+1*æ
+9O4 O(F™
+ß
+O4 O(F
+%4java.util.List"__id*
+
+__unknown_file (c*aI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect"
+affectedObjectListñì
+O4 O(Q
+%5java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%4java.util.List2
+iterator()d
+b
+O O(Q
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%5java.util.Iterator*
+8*¬
+10L L(∑
+¥
+L L(.
+%0(mage.abilities.dynamicvalue.DynamicValue"__id*r
+
+__unknown_file (V*TI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect"
+poweróî
+L L(:	
+%1int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%0(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*g
+
+__unknown_file (KI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)ª
+∏
+M M($.
+%2(mage.abilities.dynamicvalue.DynamicValue"__id*v
+
+__unknown_file (Z*XI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect"
+	toughnessóî
+M M(B	
+%3int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%2(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*g
+
+__unknown_file (KI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)*
+4
+9*!
+1^ ^("
+^ ^(
+"":"
+K K(#
+gamemage.game.Game:,
+K$ K(2 
+sourcemage.abilities.AbilityBKI
+Gmage.abilities.effects.common.continuous.SetBasePowerToughnessAllEffectHP

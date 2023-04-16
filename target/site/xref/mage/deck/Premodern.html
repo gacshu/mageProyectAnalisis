@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Premodern xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/deck/Premodern.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.deck;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.Constructed;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <em class="jxr_javadoccomment"> * @author jmharmon</em>
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="Premodern" href="../../mage/deck/Premodern.html#Premodern">Premodern</a> <strong class="jxr_keyword">extends</strong> <a name="Constructed" href="../../mage/cards/decks/Constructed.html#Constructed">Constructed</a> {
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>      <strong class="jxr_keyword">public</strong> <a name="Premodern" href="../../mage/deck/Premodern.html#Premodern">Premodern</a>() {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Constructed - Premodern"</span>);
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>          <em class="jxr_comment">// Legal sets</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          setCodes.add(mage.sets.FourthEdition.getInstance().getCode());
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          setCodes.add(mage.sets.IceAge.getInstance().getCode());
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          setCodes.add(mage.sets.Chronicles.getInstance().getCode());
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          setCodes.add(mage.sets.Homelands.getInstance().getCode());
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          setCodes.add(mage.sets.Alliances.getInstance().getCode());
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          setCodes.add(mage.sets.Mirage.getInstance().getCode());
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          setCodes.add(mage.sets.Visions.getInstance().getCode());
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          setCodes.add(mage.sets.FifthEdition.getInstance().getCode());
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          setCodes.add(mage.sets.Weatherlight.getInstance().getCode());
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          setCodes.add(mage.sets.Tempest.getInstance().getCode());
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          setCodes.add(mage.sets.Stronghold.getInstance().getCode());
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          setCodes.add(mage.sets.Exodus.getInstance().getCode());
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          setCodes.add(mage.sets.UrzasSaga.getInstance().getCode());
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          setCodes.add(mage.sets.UrzasLegacy.getInstance().getCode());
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          setCodes.add(mage.sets.ClassicSixthEdition.getInstance().getCode());
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          setCodes.add(mage.sets.UrzasDestiny.getInstance().getCode());
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          setCodes.add(mage.sets.MercadianMasques.getInstance().getCode());
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          setCodes.add(mage.sets.Nemesis.getInstance().getCode());
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          setCodes.add(mage.sets.Prophecy.getInstance().getCode());
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          setCodes.add(mage.sets.Invasion.getInstance().getCode());
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          setCodes.add(mage.sets.Planeshift.getInstance().getCode());
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          setCodes.add(mage.sets.SeventhEdition.getInstance().getCode());
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          setCodes.add(mage.sets.Apocalypse.getInstance().getCode());
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          setCodes.add(mage.sets.Odyssey.getInstance().getCode());
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          setCodes.add(mage.sets.Torment.getInstance().getCode());
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          setCodes.add(mage.sets.Judgment.getInstance().getCode());
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          setCodes.add(mage.sets.Onslaught.getInstance().getCode());
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          setCodes.add(mage.sets.Legions.getInstance().getCode());
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          setCodes.add(mage.sets.Scourge.getInstance().getCode());
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <em class="jxr_comment">// Ban List</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          banned.add(<span class="jxr_string">"Balance"</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          banned.add(<span class="jxr_string">"Brainstorm"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          banned.add(<span class="jxr_string">"Channel"</span>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          banned.add(<span class="jxr_string">"Demonic Consultation"</span>);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          banned.add(<span class="jxr_string">"Earthcraft"</span>);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          banned.add(<span class="jxr_string">"Entomb"</span>);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          banned.add(<span class="jxr_string">"Flash"</span>);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          banned.add(<span class="jxr_string">"Force of Will"</span>);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          banned.add(<span class="jxr_string">"Goblin Recruiter"</span>);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          banned.add(<span class="jxr_string">"Grim Monolith"</span>);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          banned.add(<span class="jxr_string">"Mana Vault"</span>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          banned.add(<span class="jxr_string">"Memory Jar"</span>);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          banned.add(<span class="jxr_string">"Mind's Desire"</span>);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          banned.add(<span class="jxr_string">"Mind Twist"</span>);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          banned.add(<span class="jxr_string">"Mystical Tutor"</span>);
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          banned.add(<span class="jxr_string">"Necropotence"</span>);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          banned.add(<span class="jxr_string">"Strip Mine"</span>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          banned.add(<span class="jxr_string">"Tendrils of Agony"</span>);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          banned.add(<span class="jxr_string">"Time Spiral"</span>);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          banned.add(<span class="jxr_string">"Tolarian Academy"</span>);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          banned.add(<span class="jxr_string">"Vampiric Tutor"</span>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          banned.add(<span class="jxr_string">"Windfall"</span>);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          banned.add(<span class="jxr_string">"Worldgorger Dragon"</span>);
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          banned.add(<span class="jxr_string">"Yawgmoth's Bargain"</span>);
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          banned.add(<span class="jxr_string">"Yawgmoth's Will"</span>);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

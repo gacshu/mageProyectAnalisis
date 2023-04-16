@@ -1,0 +1,179 @@
+
+Cmage.client.cards.Cards#removeOutdatedCards(Lmage/view/CardsView;)Zc
+WD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/cards/Cards.java© ©(("8*ˆ
+2
+° °(T
+R
+
+° °(
+compjava.awt.Component"__id*"
+
+__unknown_file (
+""•
+’
+
+° °(
+compjava.awt.Component"
+__arrayGet*8
+
+__unknown_file (
+
+%6java.awt.Component[]*"
+
+__unknown_file (
+""*	
+3
+5
+1*ù
+3
+· ·(X
+V
+
+· ·(
+%11org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""£
+ 
+
+· ·(X
+%12java.lang.String"__concat*C
+
+· ·(Q53
+1Unknown card conponent in cards panel to remove: **
+
+·T ·(X
+
+compjava.awt.Componentâß
+
+· ·(Y
+%13void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%11org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%12java.lang.String2error(Ljava/lang/Object;)*
+2*ì
+4
+³ ³(u
+s
+
+³ ³(
+%9javax.swing.JPanel"__id*E
+
+__unknown_file ()*'
+mage.client.cards.Cards"
+
+cardAreaÞÛ
+
+³ ³(*
+%10void"0java.awt.Container#remove(Ljava/awt/Component;)V*6
+
+__unknown_file (
+
+%9javax.swing.JPanel*8
+
+__unknown_file (
+
+compjava.awt.Component2remove(Ljava/awt/Component;)*
+2*é
+5
+² ²(m
+k
+
+² ²(
+%7java.util.Map"__id*B
+
+__unknown_file (&*$
+mage.client.cards.Cards"
+cardsàÝ
+
+² ²(/
+%8boolean"0java.util.Map#containsValue(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%7java.util.Map*8
+
+__unknown_file (
+
+compjava.awt.Component2!containsValue(Ljava/lang/Object;)*
+2
+4*»
+7
+° °('u
+s
+
+° °('
+%5javax.swing.JPanel"__id*E
+
+__unknown_file ()*'
+mage.client.cards.Cards"
+
+cardArea­ª
+
+° °(7
+%6java.awt.Component[]"7java.awt.Container#getComponents()[Ljava/awt/Component;*6
+
+__unknown_file (
+
+%5javax.swing.JPanel2getComponents()*
+2*¼
+8
+ª ª( m
+k
+
+­	 ­(
+%0java.util.Map"__id*B
+
+__unknown_file (&*$
+mage.client.cards.Cards"
+cardsˆ…
+
+­	 ­(
+%1java.util.Set"%java.util.Map#keySet()Ljava/util/Set;*1
+
+__unknown_file (
+
+%0java.util.Map2keySet()’
+
+
+­! ­(A"
+%2java.util.function.Predicate"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_418$mage.client.cards.Cards–
+“
+
+__unknown_file (1
+"
+%2java.util.function.Predicate"
+	cardsView"__id*>
+
+__unknown_file ("
+ 
+	cardsViewmage.view.CardsViewýú
+
+­	 ­(B
+%4boolean">java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z*1
+
+__unknown_file (
+
+%1java.util.Set*@
+
+__unknown_file ($
+"
+%2java.util.function.Predicate2(removeIf(Ljava/util/function/Predicate;)*
+7*%
+1
+» »("
+
+»	 »(
+"":.
+
+©) ©(< 
+	cardsViewmage.view.CardsViewB
+mage.client.cards.CardsP

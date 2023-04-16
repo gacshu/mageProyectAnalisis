@@ -1,0 +1,136 @@
+
+_mage.abilities.condition.common.CovenCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zq
+gD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/CovenCondition.java ("startingBlock*þ
+startingBlock (3Š
+‡
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10”
+‘
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11*
+1*®
+1 (¾»
+ (!%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()r
+p
+ (@:
+%14mage.filter.common.FilterControlledCreaturePermanent"__id*"
+
+__unknown_file (
+""°­
+ (0
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()õò
+ (
+%3java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*X
+
+__unknown_file (<
+:
+%14mage.filter.common.FilterControlledCreaturePermanent*2
+
+__unknown_file (
+
+%2java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¢Ÿ
+ (
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%3java.util.List2stream()Ž‹
+ ()
+%5java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)†ƒ
+ (*
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;) 
+ (, 
+%7java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)¾»
+ ( 
+%8java.util.stream.IntStream"Ajava.util.stream.IntStream#distinct()Ljava/util/stream/IntStream;*>
+
+__unknown_file ("
+ 
+%7java.util.stream.IntStream2
+distinct()‡„
+ (
+
+%9long"#java.util.stream.IntStream#count()J*>
+
+__unknown_file ("
+ 
+%8java.util.stream.IntStream2count()"
+ (
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB20
+.mage.abilities.condition.common.CovenConditionHP

@@ -1,0 +1,163 @@
+
+image.abilities.common.AttacksTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zp
+fD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/AttacksTriggeredAbility.java4 4("startingBlock*ÿ
+2; ;(ÙÖ
+; ;($
+%9mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*M
+
+__unknown_file (1/
+-mage.abilities.common.AttacksTriggeredAbility2getEffects()a_
+;2 ;(=,
+%10%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetä
+á
+;. ;(P
+%11"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget*A
+
+__unknown_file (%
+#
+defendingPlayerIdjava.util.UUIDÄÁ
+; ;(Q
+%12void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%9mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*Ì
+39% 9()¤¡
+9% 9(5
+%6mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()»¸
+9K 9(X
+%7java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*M
+
+__unknown_file (1/
+-mage.abilities.common.AttacksTriggeredAbility2getSourceId()âß
+9% 9(_
+%8java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%6mage.game.combat.Combat*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)k
+i
+9 9(`#
+defendingPlayerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUID*
+2
+1*„
+startingBlock4 4(;—
+”
+3 3(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+4* 4(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+3 3(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+46 4(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+6*–
+48 8(Ÿ
+œ
+8 8(%
+%4mage.constants.SetTargetPointer"__id*c
+
+__unknown_file (G*E/
+-mage.abilities.common.AttacksTriggeredAbility"
+setTargetPointer]
+[
+8  8(7%
+%5mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""*
+3
+1*!
+56 6("
+6 6(
+""*ô
+65 5(¤¡
+5 5(
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¦£
+5 5(,
+%1java.util.Set"5mage.game.combat.Combat#getAttackers()Ljava/util/Set;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getAttackers()»¸
+56 5(H
+%2java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*M
+
+__unknown_file (1/
+-mage.abilities.common.AttacksTriggeredAbility2getSourceId()ÎË
+5 5(I
+%3boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%1java.util.Set*2
+
+__unknown_file (
+
+%2java.util.UUID2contains(Ljava/lang/Object;)*
+4
+5*!
+1> >("
+> >(
+"":/
+4  4(0#
+eventmage.game.events.GameEvent:"
+41 4(:
+gamemage.game.GameB1/
+-mage.abilities.common.AttacksTriggeredAbilityHP

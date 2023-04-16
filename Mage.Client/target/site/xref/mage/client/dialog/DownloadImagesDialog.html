@@ -1,0 +1,510 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>DownloadImagesDialog xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/mage/client/dialog/DownloadImagesDialog.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.client.dialog;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.client.MageFrame;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.client.util.gui.FastSearchUtil;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.client.util.gui.MageDialogState;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> javax.swing.*;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.awt.*;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.awt.event.ActionEvent;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.awt.event.KeyEvent;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> java.util.HashMap;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> * App GUI: download card images window</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="DownloadImagesDialog" href="../../../mage/client/dialog/DownloadImagesDialog.html#DownloadImagesDialog">DownloadImagesDialog</a> <strong class="jxr_keyword">extends</strong> <a name="MageDialog" href="../../../mage/client/dialog/MageDialog.html#MageDialog">MageDialog</a> {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> RET_CANCEL = 0;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> RET_OK = 1;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Dimension sizeModeMessageOnly;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Dimension sizeModeMessageAndControls;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;Component, Boolean&gt; actionsControlStates = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <em class="jxr_javadoccomment">     * Creates new form DownloadImagesDialog</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">public</strong> <a name="DownloadImagesDialog" href="../../../mage/client/dialog/DownloadImagesDialog.html#DownloadImagesDialog">DownloadImagesDialog</a>() {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          initComponents();
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          <strong class="jxr_keyword">this</strong>.setModal(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <em class="jxr_comment">// fix for panelInfo (it's resets aligmentX after netbeans designer opened)</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          panelInfo.setAlignmentX(CENTER_ALIGNMENT);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <em class="jxr_comment">// save default sizes (WARNING, you must sync it manually with designer sizes)</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          <em class="jxr_comment">//</em>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <strong class="jxr_keyword">this</strong>.sizeModeMessageAndControls = <strong class="jxr_keyword">new</strong> Dimension(716, 329); <em class="jxr_comment">// dialog -&gt; properties -&gt; code tab -&gt; designer size</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <em class="jxr_comment">//</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">this</strong>.sizeModeMessageOnly = <strong class="jxr_keyword">new</strong> Dimension(<strong class="jxr_keyword">this</strong>.sizeModeMessageAndControls.getSize());
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          sizeModeMessageOnly.height = 25 * 4;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          sizeModeMessageOnly.width = sizeModeMessageOnly.width / 2;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <em class="jxr_comment">// Close the dialog when Esc is pressed</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          String cancelName = <span class="jxr_string">"cancel"</span>;
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          InputMap inputMap = getRootPane().getInputMap(JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          inputMap.put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), cancelName);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          ActionMap actionMap = getRootPane().getActionMap();
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          actionMap.put(cancelName, <strong class="jxr_keyword">new</strong> AbstractAction() {
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>              <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(ActionEvent e) {
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>                  doClose(RET_CANCEL);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>              }
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          });
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      }
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setWindowSize(<strong class="jxr_keyword">int</strong> width, <strong class="jxr_keyword">int</strong> heigth) {
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <strong class="jxr_keyword">this</strong>.setSize(<strong class="jxr_keyword">new</strong> Dimension(width, heigth));
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      }
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showDialog() {
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          showDialog(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      }
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showDialog(<a name="MageDialogState" href="../../../mage/client/util/gui/MageDialogState.html#MageDialogState">MageDialogState</a> mageDialogState) {
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <em class="jxr_comment">// window settings</em>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          MageFrame.getDesktop().remove(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          <strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong>.isModal()) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>              MageFrame.getDesktop().add(<strong class="jxr_keyword">this</strong>, JLayeredPane.MODAL_LAYER);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>              MageFrame.getDesktop().add(<strong class="jxr_keyword">this</strong>, JLayeredPane.PALETTE_LAYER);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          }
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <strong class="jxr_keyword">if</strong> (mageDialogState != <strong class="jxr_keyword">null</strong>) mageDialogState.setStateToDialog(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">this</strong>.makeWindowCentered();
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          showDownloadControls(false); <em class="jxr_comment">// call to change window size</em>
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>  
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">this</strong>.setVisible(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>      }
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setGlobalInfo(String info) {
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <strong class="jxr_keyword">this</strong>.labelGlobal.setText(info);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      }
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>  
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setCurrentInfo(String info) {
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          <strong class="jxr_keyword">this</strong>.labelInfo.setText(info);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      }
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>      <strong class="jxr_keyword">public</strong> JComboBox getSourcesCombo() {
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.comboSource;
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>      }
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>  
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>      <strong class="jxr_keyword">public</strong> JComboBox getLaunguagesCombo() {
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.comboLanguage;
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      }
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>  
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>     <strong class="jxr_keyword">public</strong> JComboBox getDownloadThreadsCombo() {
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.comboDownloadThreads;
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     }
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     <strong class="jxr_keyword">public</strong> JComboBox getSetsCombo() {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.comboSets;
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>     }
+<a class="jxr_linenumber" name="L107" href="#L107">107</a> 
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     <strong class="jxr_keyword">public</strong> JButton getStartButton() {
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.buttonOK;
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     }
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> 
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     <strong class="jxr_keyword">public</strong> JButton getCancelButton() {
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.buttonCancel;
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     }
+<a class="jxr_linenumber" name="L115" href="#L115">115</a> 
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>     <strong class="jxr_keyword">public</strong> JButton getStopButton() {
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.buttonStop;
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>     }
+<a class="jxr_linenumber" name="L119" href="#L119">119</a> 
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>     <strong class="jxr_keyword">public</strong> JProgressBar getProgressBar() {
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.progress;
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>     }
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> 
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>     <strong class="jxr_keyword">public</strong> JCheckBox getRedownloadCheckbox() {
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.checkboxRedownload;
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>     }
+<a class="jxr_linenumber" name="L127" href="#L127">127</a> 
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showLanguagesSupport(<strong class="jxr_keyword">boolean</strong> haveSupport) {
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         labelLanguage.setEnabled(haveSupport);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         comboLanguage.setEnabled(haveSupport);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     }
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> enableActionControl(<strong class="jxr_keyword">boolean</strong> enable, Component comp) {
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         <strong class="jxr_keyword">if</strong> (enable) {
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>             <em class="jxr_comment">// restore last enable state</em>
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>             comp.setEnabled(actionsControlStates.getOrDefault(comp, <strong class="jxr_keyword">true</strong>));
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>             <em class="jxr_comment">// save enable state and disable it</em>
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>             actionsControlStates.putIfAbsent(comp, comp.isEnabled());
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>             comp.setEnabled(false);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         }
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>     }
+<a class="jxr_linenumber" name="L143" href="#L143">143</a> 
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> enableActionControls(<strong class="jxr_keyword">boolean</strong> enable) {
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <em class="jxr_comment">// restrict user actions while downloading/processing (all buttons, comboboxes and edits)</em>
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         enableActionControl(enable, tabsList);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         enableActionControl(enable, comboSource);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         enableActionControl(enable, comboSets);
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         enableActionControl(enable, buttonSearchSet);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         enableActionControl(enable, comboLanguage);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         enableActionControl(enable, comboDownloadThreads);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         enableActionControl(enable, checkboxRedownload);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>     }
+<a class="jxr_linenumber" name="L154" href="#L154">154</a> 
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setTabTitle(<strong class="jxr_keyword">int</strong> tabIndex, String title, String iconResourceName) {
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         <em class="jxr_comment">// tab caption with left sided icon</em>
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         <em class="jxr_comment">// https://stackoverflow.com/questions/1782224/jtabbedpane-icon-on-left-side-of-tabs</em>
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         JLabel lbl = <strong class="jxr_keyword">new</strong> JLabel(title);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         Icon icon = <strong class="jxr_keyword">new</strong> ImageIcon(getClass().getResource(iconResourceName));
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         lbl.setIcon(icon);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         lbl.setIconTextGap(5);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         lbl.setHorizontalTextPosition(SwingConstants.RIGHT);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         tabsList.setTabComponentAt(tabIndex, lbl);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     }
+<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showDownloadControls(<strong class="jxr_keyword">boolean</strong> needToShow) {
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         <em class="jxr_comment">// 2 modes:</em>
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         <em class="jxr_comment">//  - only message;</em>
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <em class="jxr_comment">//  - message + download controls and buttons        </em>
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         <strong class="jxr_keyword">this</strong>.panelGlobal.setVisible(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         <strong class="jxr_keyword">this</strong>.buttonStop.setVisible(!needToShow); <em class="jxr_comment">// stop button only for loading mode</em>
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         <strong class="jxr_keyword">this</strong>.tabsList.setVisible(needToShow);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         <strong class="jxr_keyword">this</strong>.panelCommands.setVisible(needToShow);
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         <em class="jxr_comment">// auto-size form</em>
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         <strong class="jxr_keyword">if</strong> (needToShow) {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>             <strong class="jxr_keyword">this</strong>.setWindowSize(<strong class="jxr_keyword">this</strong>.sizeModeMessageAndControls.width, <strong class="jxr_keyword">this</strong>.sizeModeMessageAndControls.height);
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>             <strong class="jxr_keyword">this</strong>.setWindowSize(<strong class="jxr_keyword">this</strong>.sizeModeMessageOnly.width, <strong class="jxr_keyword">this</strong>.sizeModeMessageOnly.height);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         }
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         <strong class="jxr_keyword">this</strong>.makeWindowCentered();
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <em class="jxr_comment">//this.setLocationRelativeTo(null); // center screen //FIX</em>
+<a class="jxr_linenumber" name="L183" href="#L183">183</a> 
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         <em class="jxr_comment">// icons on tabs left side</em>
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         setTabTitle(0, <span class="jxr_string">"Standard download"</span>, <span class="jxr_string">"/buttons/card_panel.png"</span>);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         setTabTitle(1, <span class="jxr_string">"Custom download"</span>, <span class="jxr_string">"/buttons/list_panel.png"</span>);
+<a class="jxr_linenumber" name="L187" href="#L187">187</a> 
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         <em class="jxr_comment">// TODO: add manual mode as tab</em>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         <strong class="jxr_keyword">this</strong>.tabsList.getTabComponentAt(1).setEnabled(false);
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         <strong class="jxr_keyword">this</strong>.tabsList.setEnabledAt(1, false);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>     }
+<a class="jxr_linenumber" name="L192" href="#L192">192</a> 
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L194" href="#L194">194</a> <em class="jxr_javadoccomment">     * @return the return status of this dialog - one of RET_OK or RET_CANCEL</em>
+<a class="jxr_linenumber" name="L195" href="#L195">195</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getReturnStatus() {
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         <strong class="jxr_keyword">return</strong> returnStatus;
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>     }
+<a class="jxr_linenumber" name="L199" href="#L199">199</a> 
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> <em class="jxr_javadoccomment">     * This method is called from within the constructor to initialize the form.</em>
+<a class="jxr_linenumber" name="L202" href="#L202">202</a> <em class="jxr_javadoccomment">     * WARNING: Do NOT modify this code. The content of this method is always</em>
+<a class="jxr_linenumber" name="L203" href="#L203">203</a> <em class="jxr_javadoccomment">     * regenerated by the Form Editor.</em>
+<a class="jxr_linenumber" name="L204" href="#L204">204</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>     <em class="jxr_comment">// &lt;editor-fold defaultstate="collapsed" desc="Generated Code"&gt;//GEN-BEGIN:initComponents</em>
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> initComponents() {
+<a class="jxr_linenumber" name="L208" href="#L208">208</a> 
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>         panelGlobal = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         fillerGlobal1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 5));
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         labelGlobal = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         buttonStop = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         fillerglobal2 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 5));
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         tabsList = <strong class="jxr_keyword">new</strong> javax.swing.JTabbedPane();
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>         tabMain = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         panelInfo = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         fillerInfo1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 5));
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         labelInfo = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         fillerInfo2 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 5));
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         panelSource = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         panelSourceLeft = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         labelSource = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         comboSource = <strong class="jxr_keyword">new</strong> javax.swing.JComboBox&lt;&gt;();
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         panelSourceCenter = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         labelLanguage = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         comboLanguage = <strong class="jxr_keyword">new</strong> javax.swing.JComboBox&lt;&gt;();
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>         panelSourceRight = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         labelDownloadThreads = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         comboDownloadThreads = <strong class="jxr_keyword">new</strong> javax.swing.JComboBox&lt;&gt;();
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         panelMode = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         panelModeInner = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         labelMode = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>         panelModeSelect = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         comboSets = <strong class="jxr_keyword">new</strong> javax.swing.JComboBox&lt;&gt;();
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         fillerMode1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 32767));
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         buttonSearchSet = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         panelRedownload = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         checkboxRedownload = <strong class="jxr_keyword">new</strong> javax.swing.JCheckBox();
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         filler1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 5), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 3), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 5));
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         fillerMain1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 10), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 10), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 10));
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         panelProgress = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         fillerProgress1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 32767));
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         progress = <strong class="jxr_keyword">new</strong> javax.swing.JProgressBar();
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         fillerProgress2 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 32767));
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         fillerMain2 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 32767));
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         tabCustom = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         panelCommands = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         buttonOK = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         buttonCancel = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L250" href="#L250">250</a> 
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         setTitle(<span class="jxr_string">"Downloading images"</span>);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(600, 400));
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         getContentPane().setLayout(<strong class="jxr_keyword">new</strong> java.awt.BorderLayout());
+<a class="jxr_linenumber" name="L254" href="#L254">254</a> 
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         panelGlobal.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelGlobal, javax.swing.BoxLayout.Y_AXIS));
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         panelGlobal.add(fillerGlobal1);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a> 
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         labelGlobal.setText(<span class="jxr_string">"Initializing image download..."</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         labelGlobal.setAlignmentX(0.5F);
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         panelGlobal.add(labelGlobal);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a> 
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         buttonStop.setText(<span class="jxr_string">"Cancel"</span>);
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         buttonStop.setAlignmentX(0.5F);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         buttonStop.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(65, 30));
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         buttonStop.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>                 buttonStopActionPerformed(evt);
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>             }
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         });
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         panelGlobal.add(buttonStop);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         panelGlobal.add(fillerglobal2);
+<a class="jxr_linenumber" name="L272" href="#L272">272</a> 
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         getContentPane().add(panelGlobal, java.awt.BorderLayout.NORTH);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a> 
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         tabsList.setTabLayoutPolicy(javax.swing.JTabbedPane.SCROLL_TAB_LAYOUT);
+<a class="jxr_linenumber" name="L276" href="#L276">276</a> 
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         tabMain.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(tabMain, javax.swing.BoxLayout.Y_AXIS));
+<a class="jxr_linenumber" name="L278" href="#L278">278</a> 
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         panelInfo.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelInfo, javax.swing.BoxLayout.Y_AXIS));
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         panelInfo.add(fillerInfo1);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a> 
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         labelInfo.setText(<span class="jxr_string">"Missing stats: 12345 card images / 789 token images"</span>);
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         labelInfo.setBorder(javax.swing.BorderFactory.createEmptyBorder(0, 7, 0, 0));
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>         panelInfo.add(labelInfo);
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         panelInfo.add(fillerInfo2);
+<a class="jxr_linenumber" name="L286" href="#L286">286</a> 
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         tabMain.add(panelInfo);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a> 
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         panelSource.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(65536, 55));
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         panelSource.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(352, 55));
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         panelSource.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(593, 55));
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         panelSource.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelSource, javax.swing.BoxLayout.X_AXIS));
+<a class="jxr_linenumber" name="L293" href="#L293">293</a> 
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         panelSourceLeft.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(430, 30));
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         panelSourceLeft.setLayout(<strong class="jxr_keyword">new</strong> java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+<a class="jxr_linenumber" name="L296" href="#L296">296</a> 
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         labelSource.setText(<span class="jxr_string">"Images source to download:"</span>);
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         panelSourceLeft.add(labelSource);
+<a class="jxr_linenumber" name="L299" href="#L299">299</a> 
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         comboSource.setMaximumRowCount(15);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         comboSource.setModel(<strong class="jxr_keyword">new</strong> javax.swing.DefaultComboBoxModel&lt;&gt;(<strong class="jxr_keyword">new</strong> String[]{<span class="jxr_string">"Item 1"</span>, <span class="jxr_string">"Item 2"</span>, <span class="jxr_string">"Item 3"</span>, <span class="jxr_string">"Item 4"</span>}));
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         comboSource.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(300, 20));
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         comboSource.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(400, 25));
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         panelSourceLeft.add(comboSource);
+<a class="jxr_linenumber" name="L305" href="#L305">305</a> 
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         panelSource.add(panelSourceLeft);
+<a class="jxr_linenumber" name="L307" href="#L307">307</a> 
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>         panelSourceCenter.setAlignmentX(0.0F);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>         panelSourceCenter.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(130, 32767));
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         panelSourceCenter.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(130, 10));
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>         panelSourceCenter.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(130, 100));
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         panelSourceCenter.setLayout(<strong class="jxr_keyword">new</strong> java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+<a class="jxr_linenumber" name="L313" href="#L313">313</a> 
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         labelLanguage.setText(<span class="jxr_string">"Language:"</span>);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         panelSourceCenter.add(labelLanguage);
+<a class="jxr_linenumber" name="L316" href="#L316">316</a> 
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         comboLanguage.setMaximumRowCount(15);
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>         comboLanguage.setModel(<strong class="jxr_keyword">new</strong> javax.swing.DefaultComboBoxModel&lt;&gt;(<strong class="jxr_keyword">new</strong> String[]{<span class="jxr_string">"Item 1"</span>, <span class="jxr_string">"Item 2"</span>, <span class="jxr_string">"Item 3"</span>, <span class="jxr_string">"Item 4"</span>}));
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         comboLanguage.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(110, 25));
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         panelSourceCenter.add(comboLanguage);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         panelSource.add(panelSourceCenter);
+<a class="jxr_linenumber" name="L323" href="#L323">323</a> 
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         panelSourceRight.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(150, 30));
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         panelSourceRight.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(150, 35));
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         panelSourceRight.setLayout(<strong class="jxr_keyword">new</strong> java.awt.FlowLayout(java.awt.FlowLayout.LEADING));
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>         labelDownloadThreads.setText(<span class="jxr_string">"Download threads:"</span>);
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         panelSourceRight.add(labelDownloadThreads);
+<a class="jxr_linenumber" name="L330" href="#L330">330</a> 
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         comboDownloadThreads.setMaximumRowCount(15);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         comboDownloadThreads.setModel(<strong class="jxr_keyword">new</strong> javax.swing.DefaultComboBoxModel&lt;&gt;(<strong class="jxr_keyword">new</strong> String[]{<span class="jxr_string">"Item 1"</span>, <span class="jxr_string">"Item 2"</span>, <span class="jxr_string">"Item 3"</span>, <span class="jxr_string">"Item 4"</span>}));
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         comboDownloadThreads.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(110, 25));
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>         panelSourceRight.add(comboDownloadThreads);
+<a class="jxr_linenumber" name="L335" href="#L335">335</a> 
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>         panelSource.add(panelSourceRight);
+<a class="jxr_linenumber" name="L337" href="#L337">337</a> 
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>         tabMain.add(panelSource);
+<a class="jxr_linenumber" name="L339" href="#L339">339</a> 
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>         panelMode.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(32869, 55));
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>         panelMode.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(322, 55));
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>         panelMode.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(100, 55));
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         panelMode.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelMode, javax.swing.BoxLayout.LINE_AXIS));
+<a class="jxr_linenumber" name="L344" href="#L344">344</a> 
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         panelModeInner.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(430, 43));
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         panelModeInner.setLayout(<strong class="jxr_keyword">new</strong> java.awt.FlowLayout(java.awt.FlowLayout.LEFT));
+<a class="jxr_linenumber" name="L347" href="#L347">347</a> 
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>         labelMode.setText(<span class="jxr_string">"Sets to download:"</span>);
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         labelMode.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>         panelModeInner.add(labelMode);
+<a class="jxr_linenumber" name="L351" href="#L351">351</a> 
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>         panelModeSelect.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelModeSelect, javax.swing.BoxLayout.X_AXIS));
+<a class="jxr_linenumber" name="L353" href="#L353">353</a> 
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         comboSets.setMaximumRowCount(15);
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>         comboSets.setModel(<strong class="jxr_keyword">new</strong> javax.swing.DefaultComboBoxModel&lt;&gt;(<strong class="jxr_keyword">new</strong> String[]{<span class="jxr_string">"Item 1"</span>, <span class="jxr_string">"Item 2"</span>, <span class="jxr_string">"Item 3"</span>, <span class="jxr_string">"Item 4"</span>}));
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>         comboSets.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(373, 25));
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>         panelModeSelect.add(comboSets);
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         panelModeSelect.add(fillerMode1);
+<a class="jxr_linenumber" name="L359" href="#L359">359</a> 
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>         buttonSearchSet.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/buttons/search_24.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>         buttonSearchSet.setToolTipText(<span class="jxr_string">"Fast search your flag"</span>);
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>         buttonSearchSet.setAlignmentX(1.0F);
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>         buttonSearchSet.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(25, 25));
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         buttonSearchSet.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>                 buttonSearchSetActionPerformed(evt);
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>             }
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>         });
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>         panelModeSelect.add(buttonSearchSet);
+<a class="jxr_linenumber" name="L370" href="#L370">370</a> 
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>         panelModeInner.add(panelModeSelect);
+<a class="jxr_linenumber" name="L372" href="#L372">372</a> 
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>         panelMode.add(panelModeInner);
+<a class="jxr_linenumber" name="L374" href="#L374">374</a> 
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>         panelRedownload.setAlignmentX(0.0F);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>         panelRedownload.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(130, 32767));
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>         panelRedownload.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(280, 30));
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>         panelRedownload.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(280, 100));
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>         panelRedownload.setLayout(<strong class="jxr_keyword">new</strong> java.awt.BorderLayout());
+<a class="jxr_linenumber" name="L380" href="#L380">380</a> 
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>         checkboxRedownload.setText(<span class="jxr_string">"&lt;html&gt;Re-download all images"</span>);
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>         checkboxRedownload.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>         panelRedownload.add(checkboxRedownload, java.awt.BorderLayout.CENTER);
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>         panelRedownload.add(filler1, java.awt.BorderLayout.PAGE_END);
+<a class="jxr_linenumber" name="L385" href="#L385">385</a> 
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>         panelMode.add(panelRedownload);
+<a class="jxr_linenumber" name="L387" href="#L387">387</a> 
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>         tabMain.add(panelMode);
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>         tabMain.add(fillerMain1);
+<a class="jxr_linenumber" name="L390" href="#L390">390</a> 
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         panelProgress.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(32777, 30));
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         panelProgress.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(20, 30));
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>         panelProgress.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(564, 30));
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>         panelProgress.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelProgress, javax.swing.BoxLayout.X_AXIS));
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>         panelProgress.add(fillerProgress1);
+<a class="jxr_linenumber" name="L396" href="#L396">396</a> 
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>         progress.setValue(75);
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>         progress.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 25));
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>         progress.setString(<span class="jxr_string">"123 of 12313 (120 cards/546 tokens) image downloads finished! Please wait! [123 Mb]"</span>);
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         progress.setStringPainted(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         panelProgress.add(progress);
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>         panelProgress.add(fillerProgress2);
+<a class="jxr_linenumber" name="L403" href="#L403">403</a> 
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         tabMain.add(panelProgress);
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         tabMain.add(fillerMain2);
+<a class="jxr_linenumber" name="L406" href="#L406">406</a> 
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>         tabsList.addTab(<span class="jxr_string">"Standard download"</span>, <strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/buttons/card_panel.png"</span>)), tabMain); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L408" href="#L408">408</a> 
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         tabCustom.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(tabCustom, javax.swing.BoxLayout.Y_AXIS));
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         tabsList.addTab(<span class="jxr_string">"Custom download"</span>, <strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/buttons/list_panel.png"</span>)), tabCustom); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L411" href="#L411">411</a> 
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         getContentPane().add(tabsList, java.awt.BorderLayout.CENTER);
+<a class="jxr_linenumber" name="L413" href="#L413">413</a> 
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>         panelCommands.setAlignmentX(0.0F);
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>         panelCommands.setLayout(<strong class="jxr_keyword">new</strong> java.awt.FlowLayout(java.awt.FlowLayout.TRAILING));
+<a class="jxr_linenumber" name="L416" href="#L416">416</a> 
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>         buttonOK.setText(<span class="jxr_string">"Start download"</span>);
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>         buttonOK.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(120, 30));
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>         panelCommands.add(buttonOK);
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         getRootPane().setDefaultButton(buttonOK);
+<a class="jxr_linenumber" name="L421" href="#L421">421</a> 
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>         buttonCancel.setText(<span class="jxr_string">"Cancel"</span>);
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>         buttonCancel.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(80, 30));
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         panelCommands.add(buttonCancel);
+<a class="jxr_linenumber" name="L425" href="#L425">425</a> 
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         getContentPane().add(panelCommands, java.awt.BorderLayout.SOUTH);
+<a class="jxr_linenumber" name="L427" href="#L427">427</a> 
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         pack();
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>     }<em class="jxr_comment">// &lt;/editor-fold&gt;//GEN-END:initComponents</em>
+<a class="jxr_linenumber" name="L430" href="#L430">430</a> 
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L432" href="#L432">432</a> <em class="jxr_javadoccomment">     * Closes the dialog</em>
+<a class="jxr_linenumber" name="L433" href="#L433">433</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> closeDialog(java.awt.event.WindowEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_closeDialog</em>
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         doClose(RET_CANCEL);
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>     }<em class="jxr_comment">//GEN-LAST:event_closeDialog</em>
+<a class="jxr_linenumber" name="L437" href="#L437">437</a> 
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> buttonSearchSetActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_buttonSearchSetActionPerformed</em>
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         FastSearchUtil.showFastSearchForStringComboBox(comboSets, FastSearchUtil.DEFAULT_EXPANSION_SEARCH_MESSAGE, 400, 500);
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>     }<em class="jxr_comment">//GEN-LAST:event_buttonSearchSetActionPerformed</em>
+<a class="jxr_linenumber" name="L441" href="#L441">441</a> 
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> buttonStopActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_buttonStopActionPerformed</em>
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>     }<em class="jxr_comment">//GEN-LAST:event_buttonStopActionPerformed</em>
+<a class="jxr_linenumber" name="L445" href="#L445">445</a> 
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> doClose(<strong class="jxr_keyword">int</strong> retStatus) {
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>         returnStatus = retStatus;
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>         setVisible(false);
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>         dispose();
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>     }
+<a class="jxr_linenumber" name="L451" href="#L451">451</a> 
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>     <em class="jxr_comment">// Variables declaration - do not modify//GEN-BEGIN:variables</em>
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton buttonCancel;
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton buttonOK;
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton buttonSearchSet;
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton buttonStop;
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>     <strong class="jxr_keyword">private</strong> javax.swing.JCheckBox checkboxRedownload;
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>     <strong class="jxr_keyword">private</strong> javax.swing.JComboBox&lt;String&gt; comboDownloadThreads;
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>     <strong class="jxr_keyword">private</strong> javax.swing.JComboBox&lt;String&gt; comboLanguage;
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>     <strong class="jxr_keyword">private</strong> javax.swing.JComboBox&lt;String&gt; comboSets;
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>     <strong class="jxr_keyword">private</strong> javax.swing.JComboBox&lt;String&gt; comboSource;
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler filler1;
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerGlobal1;
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerInfo1;
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerInfo2;
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerMain1;
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerMain2;
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerMode1;
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerProgress1;
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerProgress2;
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler fillerglobal2;
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelDownloadThreads;
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelGlobal;
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelInfo;
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelLanguage;
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelMode;
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel labelSource;
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelCommands;
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelGlobal;
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelInfo;
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelMode;
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelModeInner;
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelModeSelect;
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelProgress;
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelRedownload;
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelSource;
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelSourceCenter;
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelSourceLeft;
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelSourceRight;
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>     <strong class="jxr_keyword">private</strong> javax.swing.JProgressBar progress;
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel tabCustom;
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel tabMain;
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>     <strong class="jxr_keyword">private</strong> javax.swing.JTabbedPane tabsList;
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>     <em class="jxr_comment">// End of variables declaration//GEN-END:variables</em>
+<a class="jxr_linenumber" name="L495" href="#L495">495</a> 
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> returnStatus = RET_CANCEL;
+<a class="jxr_linenumber" name="L497" href="#L497">497</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

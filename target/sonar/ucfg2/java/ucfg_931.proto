@@ -1,0 +1,380 @@
+
+nmage.abilities.effects.common.continuous.LoseAbilityAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)ZÄ
+vD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/LoseAbilityAllEffect.javaO O("startingBlock*∂
+13Q4 Q(F†
+ù
+Q4 Q(F
+%0java.util.List"__id*u
+
+__unknown_file (Y*W?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect"
+affectedObjectListñì
+Q4 Q(Q
+%1java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%0java.util.List2
+iterator()d
+b
+Q Q(Q
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%1java.util.Iterator*
+12*ñ
+2] ](]
+[
+] ](%
+permmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ô
+ñ
+] ](%
+permmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%15java.util.List*"
+
+__unknown_file (
+""*
+2
+3
+5
+1*ï
+3_ _(R
+P
+_ _(
+%19java.io.PrintStream"__id*"
+
+__unknown_file (
+""ôñ
+_' _(5
+%20mage.game.turn.Turn"-mage.game.Game#getTurn()Lmage/game/turn/Turn;*4
+
+__unknown_file (
+
+gamemage.game.Game2	getTurn()m
+k
+_' _(<
+%21java.lang.String"__concat*(
+_' _(5
+
+%20mage.game.turn.Turn*
+_8 _(<
+, ùö
+_? _(N
+%22mage.game.turn.Phase"/mage.game.Game#getPhase()Lmage/game/turn/Phase;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getPhase()Å
+
+_' _(N
+%23java.lang.String"__concat*%
+_' _(<
+
+%21java.lang.String*)
+_? _(N
+
+%22mage.game.turn.Phasej
+h
+_' _(U
+%24java.lang.String"__concat*%
+_' _(N
+
+%23java.lang.String*
+_Q _(U
+: y
+w
+_' _(k
+%25java.lang.String"__concat*%
+_' _(U
+
+%24java.lang.String*!
+_X _(k
+remove from size æª
+	_n _(Å
+%26mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getAbilities()xv
+	_n _(à
+
+%27int"java.util.List#size()I*=
+
+__unknown_file (!
+
+%26mage.abilities.Abilities2size()r
+p
+	_' _(à
+%28java.lang.String"__concat*%
+_' _(k
+
+%25java.lang.String*
+	_n _(à
+
+
+%27int€ÿ
+	_ _(â
+%29void"0java.io.PrintStream#println(Ljava/lang/String;)V*8
+
+__unknown_file (
+
+%19java.io.PrintStream*5
+
+__unknown_file (
+
+%28java.lang.String2println(Ljava/lang/String;)¶
+£
+`) `(0%
+%30mage.abilities.CompoundAbility"__id*j
+
+__unknown_file (N*L?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect"	
+ability©¶
+`2 `(F
+%31java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()¥±
+` `(M
+%32void"`mage.game.permanent.Permanent#removeAbilities(Ljava/util/List;Ljava/util/UUID;Lmage/game/Game;)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*C
+
+__unknown_file ('
+%
+%30mage.abilities.CompoundAbility*3
+
+__unknown_file (
+
+%31java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2AremoveAbilities(Ljava/util/List;Ljava/util/UUID;Lmage/game/Game;)*
+2*Ç
+startingBlockO O(3ä
+á
+N N(
+%33"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+O O("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%33î
+ë
+N N(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+O, O(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%34*
+13
+7*∏
+5^' ^(+¢ü
+^' ^(3
+%16java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getId()©¶
+^; ^(O
+%17java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()œÃ
+^' ^(P
+%18boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%16java.util.UUID*3
+
+__unknown_file (
+
+%17java.util.UUID2equals(Ljava/lang/Object;)*
+2
+3*ê	
+7]" ](&øº
+]" ](7&
+%12mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¢
+ü
+]L ](R"
+%13mage.filter.FilterPermanent"__id*i
+
+__unknown_file (M*K?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect"
+filter±Æ
+]T ](l
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()‡›
+]" ]({
+%15java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%12mage.game.permanent.Battlefield*@
+
+__unknown_file ($
+"
+%13mage.filter.FilterPermanent*3
+
+__unknown_file (
+
+%14java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*“
+8X X(ºπ
+X X(!
+%11void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*]
+
+__unknown_file (A?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect2	discard()*
+12*´
+9V V(xv
+V V(
+
+%8void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()†
+ù
+W W(*
+%9java.util.List"__id*u
+
+__unknown_file (Y*W?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect"
+affectedObjectListvt
+W W(4
+%10boolean"java.util.List#isEmpty()Z*2
+
+__unknown_file (
+
+%9java.util.List2	isEmpty()*
+8
+12*õ
+10T T(•
+¢
+T) T(0$
+%5mage.abilities.CompoundAbility"__id*j
+
+__unknown_file (N*L?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffect"	
+ability®•
+T2 T(F
+%6java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()±Æ
+T T(M
+
+%7void"`mage.game.permanent.Permanent#removeAbilities(Ljava/util/List;Ljava/util/UUID;Lmage/game/Game;)V*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent*B
+
+__unknown_file (&
+$
+%5mage.abilities.CompoundAbility*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2AremoveAbilities(Ljava/util/List;Ljava/util/UUID;Lmage/game/Game;)*
+12*Û
+11R! R(#öó
+R! R(*
+%3mage.MageObjectReference"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()æª
+R! R(M#
+%4mage.game.permanent.Permanent"fmage.MageObjectReference#getPermanentOrLKIBattlefield(Lmage/game/Game;)Lmage/game/permanent/Permanent;*<
+
+__unknown_file ( 
+
+%3mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2.getPermanentOrLKIBattlefield(Lmage/game/Game;)|
+z
+R R(N%
+permmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+9
+10*ñ
+12QS Q(U}{
+QS Q(_
+%2boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+11
+1*!
+1d d("
+d d(
+"":"
+O O(#
+gamemage.game.Game:,
+O$ O(2 
+sourcemage.abilities.AbilityBA?
+=mage.abilities.effects.common.continuous.LoseAbilityAllEffectHP

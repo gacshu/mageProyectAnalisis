@@ -1,0 +1,107 @@
+
+pmage.util.DeckUtil#writeTextToTempFile(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;U
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/util/DeckUtil.java (,"10*3
+4% %(""$
+% %("
+
+%6java.lang.String*£
+5% %(Ž‹
+% %(!
+%6java.lang.String"(java.io.File#getPath()Ljava/lang/String;*2
+
+__unknown_file (
+
+tempjava.io.File2	getPath()*
+4*Ö
+6# #(9l
+j
+# #(9
+bwjava.io.BufferedWriter"__id*:
+
+__unknown_file (
+
+%3java.io.BufferedWriterÓÐ
+$ $(
+
+%5void")java.io.Writer#write(Ljava/lang/String;)V*:
+
+__unknown_file (
+
+bwjava.io.BufferedWriter*6
+
+__unknown_file (
+
+textjava.lang.String2write(Ljava/lang/String;)*
+5*’
+7# #(9B@
+# #(#
+%3java.io.BufferedWriter"java.io.BufferedWriter¹
+¶
+# #(9
+%4"0java.io.BufferedWriter#<init>(Ljava/io/Writer;)V*:
+
+__unknown_file (
+
+%3java.io.BufferedWriter*6
+
+__unknown_file (
+
+%1java.io.FileWriter*
+6*Ø
+8" "(DZ
+X
+" "(D
+tempjava.io.File"__id*0
+
+__unknown_file (
+
+%0java.io.File:8
+#( #(2
+%1java.io.FileWriter"java.io.FileWriter«
+¨
+#$ #(8
+%2"*java.io.FileWriter#<init>(Ljava/io/File;)V*6
+
+__unknown_file (
+
+%1java.io.FileWriter*2
+
+__unknown_file (
+
+tempjava.io.File*
+7*±
+9" "(œ
+™
+" "(C
+%0java.io.File"Ojava.io.File#createTempFile(Ljava/lang/String;Ljava/lang/String;)Ljava/io/File;*,
+
+__unknown_file ("
+java.io.File*<
+
+__unknown_file ( 
+
+
+filePrefixjava.lang.String*<
+
+__unknown_file ( 
+
+
+fileSuffixjava.lang.String*
+8*i
+10   ( T
+R
+   (!
+bwjava.io.BufferedWriter"__id*"
+
+__unknown_file (
+""*
+9:*
+- (?
+
+filePrefixjava.lang.String:*
+@ (R
+
+fileSuffixjava.lang.String:$
+S (^
+textjava.lang.StringB"
+mage.util.DeckUtilH

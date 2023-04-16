@@ -1,0 +1,328 @@
+
+bmage.server.MailgunClientImpl#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Zg
+]D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MailgunClientImpl.java ("5*Û
+2) )(V
+T
+) )(
+%26org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ñ
+Å
+) )(<
+%27java.lang.String"__concat*)
+) )(4
+Error sending message to *'
+)7 )(<
+
+emailjava.lang.Stringw
+u
+) )(P
+%28java.lang.String"__concat*%
+) )(<
+
+%27java.lang.String*
+)? )(P
+. Status code: ±Æ
+)S )(g
+
+%29int"5com.sun.jersey.api.client.ClientResponse#getStatus()I*R
+
+__unknown_file (6
+4
+response(com.sun.jersey.api.client.ClientResponse2getStatus()p
+n
+) )(g
+%30java.lang.String"__concat*%
+) )(P
+
+%28java.lang.String*
+)S )(g
+
+
+%29int‡›
+) )(h
+%31void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%26org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%30java.lang.String2error(Ljava/lang/Object;)*
+1*ü.
+3 (ƒ
+¡
+ ('&
+%3 com.sun.jersey.api.client.Client"Kcom.sun.jersey.api.client.Client#create()Lcom/sun/jersey/api/client/Client;*@
+
+__unknown_file ($""
+ com.sun.jersey.api.client.ClientÖ
+Ç
+ ((*
+client com.sun.jersey.api.client.Client"__id*D
+
+__unknown_file ((
+&
+%3 com.sun.jersey.api.client.Clientâ
+Ü
+8 (>)
+%4#mage.server.managers.ConfigSettings"__id*I
+
+__unknown_file (-*+
+mage.server.MailgunClientImpl"
+configÃ…
+8 (Q
+%5java.lang.String"Hmage.server.managers.ConfigSettings#getMailgunApiKey()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%4#mage.server.managers.ConfigSettings2getMailgunApiKey()~|
+ (0:
+%64com.sun.jersey.api.client.filter.HTTPBasicAuthFilter"4com.sun.jersey.api.client.filter.HTTPBasicAuthFilter¨
+©
+ (R
+%7"bcom.sun.jersey.api.client.filter.HTTPBasicAuthFilter#<init>(Ljava/lang/String;Ljava/lang/String;)V*X
+
+__unknown_file (<
+:
+%64com.sun.jersey.api.client.filter.HTTPBasicAuthFilter*#
+
+__unknown_file (
+api*4
+
+__unknown_file (
+
+%5java.lang.String‚ﬂ
+ (S
+
+%8void"gcom.sun.jersey.api.client.filter.Filterable#addFilter(Lcom/sun/jersey/api/client/filter/ClientFilter;)V*H
+
+__unknown_file (,
+*
+client com.sun.jersey.api.client.Client*X
+
+__unknown_file (<
+:
+%64com.sun.jersey.api.client.filter.HTTPBasicAuthFilter2:addFilter(Lcom/sun/jersey/api/client/filter/ClientFilter;)â
+Ü
+ ()
+%9#mage.server.managers.ConfigSettings"__id*I
+
+__unknown_file (-*+
+mage.server.MailgunClientImpl"
+configÕ 
+ (1
+%10java.lang.String"Hmage.server.managers.ConfigSettings#getMailgunDomain()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%9#mage.server.managers.ConfigSettings2getMailgunDomain()e
+c
+ (2
+domainjava.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.Stringá
+Ñ
+ 2  (X
+%11java.lang.String"__concat*+
+ 2  (O
+https://api.mailgun.net/v3/*(
+ R  (X
+
+domainjava.lang.Stringq
+o
+ 2  (f
+%12java.lang.String"__concat*%
+ 2  (X
+
+%11java.lang.String*
+ [  (f
+	/messages¿Ω
+ "  (g,
+%13%com.sun.jersey.api.client.WebResource"dcom.sun.jersey.api.client.Client#resource(Ljava/lang/String;)Lcom/sun/jersey/api/client/WebResource;*H
+
+__unknown_file (,
+*
+client com.sun.jersey.api.client.Client*5
+
+__unknown_file (
+
+%12java.lang.String2resource(Ljava/lang/String;)ï
+í
+   (h4
+webResource%com.sun.jersey.api.client.WebResource"__id*J
+
+__unknown_file (.
+,
+%13%com.sun.jersey.api.client.WebResourcemk
+!* !(<2
+%14+com.sun.jersey.core.util.MultivaluedMapImpl"+com.sun.jersey.core.util.MultivaluedMapImplù
+ö
+!& !(>
+%15"5com.sun.jersey.core.util.MultivaluedMapImpl#<init>()V*P
+
+__unknown_file (4
+2
+%14+com.sun.jersey.core.util.MultivaluedMapImplû
+õ
+! !(?7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl"__id*P
+
+__unknown_file (4
+2
+%14+com.sun.jersey.core.util.MultivaluedMapImpl}
+{
+" "(:
+%16java.lang.String"__concat*"
+" "(1
+XMage <postmaster@*(
+"4 "(:
+
+domainjava.lang.Stringi
+g
+" "(@
+%17java.lang.String"__concat*%
+" "(:
+
+%16java.lang.String*
+"= "(@
+>—Œ
+" "(A
+%18void"Vcom.sun.jersey.core.util.MultivaluedMapImpl#add(Ljava/lang/String;Ljava/lang/String;)V*U
+
+__unknown_file (9
+7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl*$
+
+__unknown_file (
+from*5
+
+__unknown_file (
+
+%17java.lang.String2)add(Ljava/lang/String;Ljava/lang/String;)—Œ
+# #(!
+%19void"Vcom.sun.jersey.core.util.MultivaluedMapImpl#add(Ljava/lang/String;Ljava/lang/String;)V*U
+
+__unknown_file (9
+7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl*"
+
+__unknown_file (
+to*7
+
+__unknown_file (
+
+emailjava.lang.String2)add(Ljava/lang/String;Ljava/lang/String;)ÿ’
+$ $((
+%20void"Vcom.sun.jersey.core.util.MultivaluedMapImpl#add(Ljava/lang/String;Ljava/lang/String;)V*U
+
+__unknown_file (9
+7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl*'
+
+__unknown_file (	
+subject*9
+
+__unknown_file (
+
+subjectjava.lang.String2)add(Ljava/lang/String;Ljava/lang/String;)“œ
+% %("
+%21void"Vcom.sun.jersey.core.util.MultivaluedMapImpl#add(Ljava/lang/String;Ljava/lang/String;)V*U
+
+__unknown_file (9
+7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl*$
+
+__unknown_file (
+text*6
+
+__unknown_file (
+
+textjava.lang.String2)add(Ljava/lang/String;Ljava/lang/String;)n
+l
+&3 &(X
+%22java.lang.String"__id*A
+
+__unknown_file (%#
+!application/x-www-form-urlencoded◊‘
+&" &(Y4
+%23-com.sun.jersey.api.client.WebResource$Builder"mcom.sun.jersey.api.client.WebResource#type(Ljava/lang/String;)Lcom/sun/jersey/api/client/WebResource$Builder;*R
+
+__unknown_file (6
+4
+webResource%com.sun.jersey.api.client.WebResource*5
+
+__unknown_file (
+
+%22java.lang.String2type(Ljava/lang/String;)£†
+&" &(~/
+%24(com.sun.jersey.api.client.ClientResponse"icom.sun.jersey.api.client.WebResource$Builder#post(Ljava/lang/Class;Ljava/lang/Object;)Ljava/lang/Object;*R
+
+__unknown_file (6
+4
+%23-com.sun.jersey.api.client.WebResource$Builder*"
+
+__unknown_file (
+""*U
+
+__unknown_file (9
+7
+formData+com.sun.jersey.core.util.MultivaluedMapImpl2)post(Ljava/lang/Class;Ljava/lang/Object;)ò
+ï
+& &(4
+response(com.sun.jersey.api.client.ClientResponse"__id*M
+
+__unknown_file (1
+/
+%24(com.sun.jersey.api.client.ClientResponse±Æ
+' '(0
+
+%25int"5com.sun.jersey.api.client.ClientResponse#getStatus()I*R
+
+__unknown_file (6
+4
+response(com.sun.jersey.api.client.ClientResponse2getStatus()*
+2
+1*
+4 (U
+S
+ (
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ıÚ
+ (I
+
+%2void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*N
+
+__unknown_file (20
+.Email is not sent because the address is empty2info(Ljava/lang/Object;)"
+ (
+""*ì
+5 (|z
+ (
+%0boolean"java.lang.String#isEmpty()Z*7
+
+__unknown_file (
+
+emailjava.lang.String2	isEmpty()*
+3
+4*!
+1+ +("
++ +(
+"":%
+ (,
+emailjava.lang.String:'
+- (<
+subjectjava.lang.String:$
+= (H
+textjava.lang.StringB!
+mage.server.MailgunClientImplHP

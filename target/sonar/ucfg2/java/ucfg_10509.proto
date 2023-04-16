@@ -1,0 +1,289 @@
+
+lmage.abilities.keyword.ReplicateTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zl
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ReplicateAbility.javaö ö("startingBlock*&
+13
+† †("
+
+† †(
+""*˜
+14
+û û( ™ß
+
+û û(+ 
+%3mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()ã
+à
+
+û; û(H
+%4java.util.UUID"__id*^
+
+__unknown_file (B*@2
+0mage.abilities.keyword.ReplicateTriggeredAbility"
+
+sourceId¢ü
+
+û û(I!
+%5mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*>
+
+__unknown_file ("
+ 
+%3mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%4java.util.UUID2 getStackObject(Ljava/util/UUID;){
+y
+
+û û(J$
+spellmage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%5mage.game.stack.StackObject*
+13
+12*&
+15
+ú ú("
+
+ú ú(
+""*≠
+16
+õ õ(±Æ
+
+õ õ( 
+%0java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()ã
+à
+
+õ( õ(5
+%1java.util.UUID"__id*^
+
+__unknown_file (B*@2
+0mage.abilities.keyword.ReplicateTriggeredAbility"
+
+sourceIdŒÀ
+
+õ õ(6
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+14
+15*%
+1
+∞ ∞("
+
+∞ ∞(
+""*ö
+2
+¶ ¶([
+Y
+
+¶ ¶(!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""†
+ù
+
+¶ ¶(!
+abilitymage.abilities.Ability"
+__arrayGet*<
+
+__unknown_file ( 
+
+%7mage.abilities.Abilities*"
+
+__unknown_file (
+""*	
+2
+8
+1*%
+3
+Æ Æ("
+
+Æ Æ(
+""*è
+startingBlock
+ö ö(;ô
+ñ
+
+ô ô(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventf
+d
+
+ö* ö(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%13å
+â
+
+ô ô(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ö6 ö(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+16*©
+4
+™ ™(a
+_
+
+™ ™('
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""¨
+©
+
+™ ™('
+effectmage.abilities.effects.Effect"
+__arrayGet*B
+
+__unknown_file (&
+$
+%9mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+3
+5*‹
+5
+´ ´(÷”
+
+´ ´(8
+%10void"Mmage.abilities.effects.Effect#setValue(Ljava/lang/String;Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*.
+
+__unknown_file (
+ReplicateSpell*B
+
+__unknown_file (&
+$
+spellmage.game.stack.StackObject2.setValue(Ljava/lang/String;Ljava/lang/Object;)≠™
+
+¨2 ¨(a
+
+%11int";mage.abilities.keyword.ReplicateAbility#getActivateCount()I*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getActivateCount()ºπ
+
+¨ ¨(b
+%12void"Mmage.abilities.effects.Effect#setValue(Ljava/lang/String;Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*.
+
+__unknown_file (
+ReplicateCount*(
+
+__unknown_file (
+
+
+%11int2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+4*ı
+6
+™! ™(%ﬁ€
+
+™! ™(2$
+%9mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*P
+
+__unknown_file (42
+0mage.abilities.keyword.ReplicateTriggeredAbility2getEffects()*
+4*Ø
+8
+ß; ß(Bïí
+
+ß; ß(P
+%8boolean"%mage.abilities.Ability#isActivated()Z*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2isActivated()*
+2
+6*û
+10
+¶ ¶(#ÜÉ
+
+¶ ¶(6
+%7mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)*
+2*&
+11
+§ §("
+
+§ §(
+""*®
+12
+¢ ¢("ß§
+
+¢ ¢(-
+%6mage.cards.Card"0mage.game.stack.Spell#getCard()Lmage/cards/Card;*B
+
+__unknown_file (&
+$
+spellmage.game.stack.StackObject2	getCard()b
+`
+
+¢ ¢(.
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%6mage.cards.Card*
+10
+11:1
+
+ö  ö(0#
+eventmage.game.events.GameEvent:$
+
+ö1 ö(:
+gamemage.game.GameB42
+0mage.abilities.keyword.ReplicateTriggeredAbilityHP

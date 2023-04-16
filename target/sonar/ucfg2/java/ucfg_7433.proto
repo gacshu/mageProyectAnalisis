@@ -1,0 +1,191 @@
+
+jmage.game.command.emblems.LolthSpiderQueenEmblemCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zs
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/emblems/LolthSpiderQueenEmblem.java) )("startingBlock*¶
+244 4(;‘Ž
+4H 4(V
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()Š
+44 4(W
+
+%13int"Image.watchers.common.PlayerLostLifeWatcher#getLifeLost(Ljava/util/UUID;)I*S
+
+__unknown_file (7
+5
+watcher*mage.watchers.common.PlayerLostLifeWatcher*3
+
+__unknown_file (
+
+%12java.util.UUID2getLifeLost(Ljava/util/UUID;)*
+1*þ
+startingBlock) )(3Š
+‡
+( ((
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+) )("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14”
+‘
+( ((
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+), )(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15*
+5*ñ
+5* *(ÆÃ
+* +($
+%0mage.abilities.effects.Effects"Cmage.abilities.Ability#getEffects()Lmage/abilities/effects/Effects;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getEffects()²¯
+* ,(
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+%0mage.abilities.effects.Effects2stream()†ƒ
+* -(.
+%2java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)±
+®
+. .(4!
+%3java.util.function.Function"__declareFunction*l
+
+__unknown_file (PN
+L__sonar_lambda_135$mage.game.command.emblems.LolthSpiderQueenEmblemCondition†
+ƒ
+
+__unknown_file (+
+!
+%3java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game’
+
+
+__unknown_file (-
+!
+%3java.util.function.Function"
+source"__id*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability£ 
+* .(5
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%3java.util.function.Function2"map(Ljava/util/function/Function;)†ƒ
+* /(%
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+* 0()
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)ª§
+* 1(
+%8java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream2findFirst()áÞ
+* 2(
+%9mage.players.Player"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%8java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)j
+h
+* 2(
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%9mage.players.Player›˜
+3( 3(7
+%10mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‡„
+3( 3(_1
+%11*mage.watchers.common.PlayerLostLifeWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%10mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)›
+˜
+3 3(`5
+watcher*mage.watchers.common.PlayerLostLifeWatcher"__id*O
+
+__unknown_file (3
+1
+%11*mage.watchers.common.PlayerLostLifeWatcher*
+2
+1*!
+14 4(\"
+4 4(\
+"":"
+) )(#
+gamemage.game.Game:,
+)$ )(2 
+sourcemage.abilities.AbilityB=;
+9mage.game.command.emblems.LolthSpiderQueenEmblemConditionHP

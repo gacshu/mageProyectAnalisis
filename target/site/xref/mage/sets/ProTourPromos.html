@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ProTourPromos xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/ProTourPromos.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> * <a href="https://scryfall.com/sets/ppro" target="alexandria_uri">https://scryfall.com/sets/ppro</a></em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * <a href="https://mtg.gamepedia.com/Promotional_cards" target="alexandria_uri">https://mtg.gamepedia.com/Promotional_cards</a>#Pro_tour_cards</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * @author JayDi85</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="ProTourPromos" href="../../mage/sets/ProTourPromos.html#ProTourPromos">ProTourPromos</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="ProTourPromos" href="../../mage/sets/ProTourPromos.html#ProTourPromos">ProTourPromos</a> instance = <strong class="jxr_keyword">new</strong> <a name="ProTourPromos" href="../../mage/sets/ProTourPromos.html#ProTourPromos">ProTourPromos</a>();
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="ProTourPromos" href="../../mage/sets/ProTourPromos.html#ProTourPromos">ProTourPromos</a> getInstance() {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      }
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">private</strong> <a name="ProTourPromos" href="../../mage/sets/ProTourPromos.html#ProTourPromos">ProTourPromos</a>() {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Pro Tour Promos"</span>, <span class="jxr_string">"PPRO"</span>, ExpansionSet.buildDate(2007, 2, 9), SetType.PROMOTIONAL);
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = false;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          <em class="jxr_comment">/* Commented cards are Japanese-only printings.</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <em class="jxr_comment">         * Stance on non-english cards:</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_comment">         * <a href="https://github.com/magefree/mage/pull/6190" target="alexandria_uri">https://github.com/magefree/mage/pull/6190</a>#issuecomment-582353697</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <em class="jxr_comment">         * <a href="https://github.com/magefree/mage/pull/6190" target="alexandria_uri">https://github.com/magefree/mage/pull/6190</a>#issuecomment-582354790</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <em class="jxr_comment">         */</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Aether Vial"</span>, <span class="jxr_string">"2020-3"</span>, Rarity.RARE, mage.cards.a.AetherVial.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ajani Goldmane"</span>, 2011, Rarity.MYTHIC, mage.cards.a.AjaniGoldmane.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Arcbound Ravager"</span>, 2019, Rarity.RARE, mage.cards.a.ArcboundRavager.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Avatar of Woe"</span>, 2010, Rarity.RARE, mage.cards.a.AvatarOfWoe.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Cryptic Command"</span>, <span class="jxr_string">"2020-1"</span>, Rarity.RARE, mage.cards.c.CrypticCommand.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Emrakul, the Aeons Torn"</span>, 2017, Rarity.MYTHIC, mage.cards.e.EmrakulTheAeonsTorn.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Eternal Dragon"</span>, 2007, Rarity.RARE, mage.cards.e.EternalDragon.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <em class="jxr_comment">//cards.add(new SetCardInfo("Experimental Frenzy", "2019-2", Rarity.RARE, mage.cards.e.ExperimentalFrenzy.class));</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Liliana of the Veil"</span>, 2015, Rarity.MYTHIC, mage.cards.l.LilianaOfTheVeil.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mirari's Wake"</span>, 2008, Rarity.RARE, mage.cards.m.MirarisWake.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Noble Hierarch"</span>, 2018, Rarity.RARE, mage.cards.n.NobleHierarch.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <em class="jxr_comment">//cards.add(new SetCardInfo("Pteramander", "2019-1", Rarity.UNCOMMON, mage.cards.p.Pteramander.class));</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Snapcaster Mage"</span>, 2016, Rarity.MYTHIC, mage.cards.s.SnapcasterMage.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Surgical Extraction"</span>, <span class="jxr_string">"2020-2"</span>, Rarity.RARE, mage.cards.s.SurgicalExtraction.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Treva, the Renewer"</span>, 2009, Rarity.RARE, mage.cards.t.TrevaTheRenewer.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <em class="jxr_comment">//cards.add(new SetCardInfo("Vraska, Golgari Queen", "2019-3", Rarity.MYTHIC, mage.cards.v.VraskaGolgariQueen.class));</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      }
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,134 @@
+
+wmage.filter.predicate.permanent.AttackingSameNotBandedPredicate#apply(Lmage/game/permanent/Permanent;Lmage/game/Game;)ZÇ
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/AttackingSameNotBandedPredicate.java ("startingBlock*æ
+2 ("Ω∫
+ (2
+%6java.util.UUID"<mage.game.combat.CombatGroup#getDefenderId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroup2getDefenderId()ö
+ó
+: (D
+%7java.util.UUID"__id*o
+
+__unknown_file (S*QA
+?mage.filter.predicate.permanent.AttackingSameNotBandedPredicate"
+
+defenderIdÃ…
+ (E
+%8boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%6java.util.UUID*2
+
+__unknown_file (
+
+%7java.util.UUID2equals(Ljava/lang/Object;)*
+1*à
+startingBlock (4ô
+ñ
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanentf
+d
+# ((&
+inputmage.game.permanent.Permanent"__annotation*"
+
+__unknown_file (
+
+%9ä
+á
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+/ (3
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+7* 
+4 (ª∏
+ (-
+%4java.util.List">mage.game.permanent.Permanent#getBandedCards()Ljava/util/List;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getBandedCards()us
+ (7
+%5boolean"java.util.List#isEmpty()Z*2
+
+__unknown_file (
+
+%4java.util.List2	isEmpty()*
+2
+1*∫
+6 (üú
+ (*
+%3boolean",mage.game.permanent.Permanent#isAttacking()Z*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2isAttacking()*	
+2
+4
+1*Ä
+7" (&§°
+" (2
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¢ü
+= (J
+%1java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getId()íè
+" (K"
+%2mage.game.combat.CombatGroup"Qmage.game.combat.Combat#findGroup(Ljava/util/UUID;)Lmage/game/combat/CombatGroup;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat*2
+
+__unknown_file (
+
+%1java.util.UUID2findGroup(Ljava/util/UUID;)Å
+
+ (L+
+combatGroupmage.game.combat.CombatGroup"__id*@
+
+__unknown_file ($
+"
+%2mage.game.combat.CombatGroup*
+2
+4
+6
+1*!
+1 (F"
+ (F
+"":2
+ ()&
+inputmage.game.permanent.Permanent:"
+* (3
+gamemage.game.GameBCA
+?mage.filter.predicate.permanent.AttackingSameNotBandedPredicateHP

@@ -1,0 +1,475 @@
+
+=mage.player.ai.ComputerPlayerMCTS#priority(Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AIMCTS/src/mage/player/ai/ComputerPlayerMCTS.java? ?("startingBlock*!
+2S S("
+S S(
+""*
+3Q Q(øõ
+Q Q(9
+%40boolean"[mage.players.PlayerImpl#activateAbility(Lmage/abilities/ActivatedAbility;Lmage/game/Game;)Z*A
+
+__unknown_file (%#
+!mage.player.ai.ComputerPlayerMCTS*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2BactivateAbility(Lmage/abilities/ActivatedAbility;Lmage/game/Game;)*
+2
+1*…
+startingBlock? ?(&Š
+‡
+> >(
+%51"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+?! ?(%
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%51*
+10*Ä
+4P P(V
+T
+P P(
+%38org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""×Ô
+P P((
+%39void"4org.apache.log4j.Category#fatal(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%38org.apache.log4j.Logger*,
+
+__unknown_file (
+null ability2fatal(Ljava/lang/Object;)*
+3*„
+5K K(›˜
+K K(
+%28mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()z
+x
+K, K(4
+%29java.util.UUID"__id*O
+
+__unknown_file (3*1#
+!mage.player.ai.ComputerPlayerMCTS"
+
+playerIdìé
+K K(5
+%30void":mage.game.GameState#setPriorityPlayerId(Ljava/util/UUID;)V*8
+
+__unknown_file (
+
+%28mage.game.GameState*3
+
+__unknown_file (
+
+%29java.util.UUID2%setPriorityPlayerId(Ljava/util/UUID;)z
+x
+L L('
+%31java.util.UUID"__id*O
+
+__unknown_file (3*1#
+!mage.player.ai.ComputerPlayerMCTS"
+
+playerIdßÜ
+L L((
+%32void"3mage.game.Game#firePriorityEvent(Ljava/util/UUID;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%31java.util.UUID2#firePriorityEvent(Ljava/util/UUID;)c
+a
+M M(&+
+%33$mage.player.ai.MCTSPlayer$NextAction"__id*"
+
+__unknown_file (
+""c
+a
+M M(/+
+%34$mage.player.ai.MCTSPlayer$NextAction"__id*"
+
+__unknown_file (
+""Œ
+M M(0
+%35void"hmage.player.ai.ComputerPlayerMCTS#getNextAction(Lmage/game/Game;Lmage/player/ai/MCTSPlayer$NextAction;)V*A
+
+__unknown_file (%#
+!mage.player.ai.ComputerPlayerMCTS*4
+
+__unknown_file (
+
+gamemage.game.Game*I
+
+__unknown_file (-
++
+%34$mage.player.ai.MCTSPlayer$NextAction2EgetNextAction(Lmage/game/Game;Lmage/player/ai/MCTSPlayer$NextAction;)
+}
+N N(
+%36mage.player.ai.MCTSNode"__id*K
+
+__unknown_file (/*-#
+!mage.player.ai.ComputerPlayerMCTS"
+root´±
+N N(*
+%37mage.abilities.Ability";mage.player.ai.MCTSNode#getAction()Lmage/abilities/Ability;*<
+
+__unknown_file ( 
+
+%36mage.player.ai.MCTSNode2getAction()r
+p
+N N(+!
+abilitymage.abilities.Ability"__id*;
+
+__unknown_file (
+
+%37mage.abilities.Ability*
+3
+4*¢
+6G G(V
+T
+G G(
+%24org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""]
+[
+G$ G(6
+%25java.lang.String"__concat*
+G$ G(.
+
+Removed *
+G1 G(6
+""v
+t
+G$ G(I
+%26java.lang.String"__concat*%
+G$ G(6
+
+%25java.lang.String*
+G9 G(I
+ cache entriesÞÛ
+G G(J
+%27void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%24org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%26java.lang.String2info(Ljava/lang/Object;)*
+5*º
+7E  E((zx
+E6 E(G
+
+%22int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()¦
+£
+E  E(H
+
+%23int"(mage.player.ai.MCTSNode#cleanupCache(I)I*7
+
+__unknown_file ("
+mage.player.ai.MCTSNode*(
+
+__unknown_file (
+
+
+%22int*
+5
+6*²
+8B B(˜•
+B B(&
+%7mage.game.turn.Turn"-mage.game.Game#getTurn()Lmage/game/turn/Turn;*4
+
+__unknown_file (
+
+gamemage.game.Game2	getTurn()yw
+B0 B(A	
+%8int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()ÇÄ
+B B(B
+%9java.lang.String"1mage.game.turn.Turn#getValue(I)Ljava/lang/String;*7
+
+__unknown_file (
+
+%7mage.game.turn.Turn*'
+
+__unknown_file (
+	
+%8int2getValue(I)x
+v
+BE B(I
+%10java.lang.String"__id*K
+
+__unknown_file (/*-#
+!mage.player.ai.ComputerPlayerMCTS"
+name|
+z
+B B(I
+%11java.lang.String"__concat*$
+B B(B
+
+%9java.lang.String*%
+BE B(I
+
+%10java.lang.Stringo
+m
+B B(U
+%12java.lang.String"__concat*%
+B B(I
+
+%11java.lang.String*
+BL B(U	
+ hand: x
+v
+Be B(i
+%13mage.cards.Cards"__id*K
+
+__unknown_file (/*-#
+!mage.player.ai.ComputerPlayerMCTS"
+handèå
+Be B(x
+%14java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*5
+
+__unknown_file (
+
+%13mage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)=;
+B[ B(d
+%15java.util.ArrayList"java.util.ArrayList·
+´
+BW B(y
+%16"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%15java.util.ArrayList*2
+
+__unknown_file (
+
+%14java.util.SetÇÄ
+B B(z
+%17void"Jmage.player.ai.ComputerPlayer#logList(Ljava/lang/String;Ljava/util/List;)V*A
+
+__unknown_file (%#
+!mage.player.ai.ComputerPlayerMCTS*5
+
+__unknown_file (
+
+%12java.lang.String*8
+
+__unknown_file (
+
+%15java.util.ArrayList2+logList(Ljava/lang/String;Ljava/util/List;)™–
+C C(*
+%18mage.game.turn.Turn"-mage.game.Game#getTurn()Lmage/game/turn/Turn;*4
+
+__unknown_file (
+
+gamemage.game.Game2	getTurn()zx
+C4 C(E
+
+%19int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()ÊÇ
+C C(F
+%20java.lang.String"1mage.game.turn.Turn#getValue(I)Ljava/lang/String;*8
+
+__unknown_file (
+
+%18mage.game.turn.Turn*(
+
+__unknown_file (
+
+
+%19int2getValue(I)}
+{
+C C(F2#
+!mage.player.ai.ComputerPlayerMCTS"
+	lastPhase"__id*5
+
+__unknown_file (
+
+%20java.lang.StringF
+D
+D D(-
+%21boolean"__id*"
+
+__unknown_file (
+""*
+5
+7*È
+9A A(|
+z
+A A(
+%2java.lang.String"__id*P
+
+__unknown_file (4*2#
+!mage.player.ai.ComputerPlayerMCTS"
+	lastPhase˜•
+A" A(0
+%3mage.game.turn.Turn"-mage.game.Game#getTurn()Lmage/game/turn/Turn;*4
+
+__unknown_file (
+
+gamemage.game.Game2	getTurn()yw
+A: A(K	
+%4int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()ÇÄ
+A" A(L
+%5java.lang.String"1mage.game.turn.Turn#getValue(I)Ljava/lang/String;*7
+
+__unknown_file (
+
+%3mage.game.turn.Turn*'
+
+__unknown_file (
+	
+%4int2getValue(I)ÒÏ
+A A(M
+%6boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%2java.lang.String*4
+
+__unknown_file (
+
+%5java.lang.String2equals(Ljava/lang/Object;)*
+5
+8*£
+10@ @(²¯
+@ @("
+%0mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()V
+T
+@& @(6
+%1mage.constants.PhaseStep"__id*"
+
+__unknown_file (
+""*
+5
+9*ƒ
+1T T(ìé
+T T(
+%41void"<mage.player.ai.ComputerPlayerMCTS#logLife(Lmage/game/Game;)V*A
+
+__unknown_file (%#
+!mage.player.ai.ComputerPlayerMCTS*4
+
+__unknown_file (
+
+gamemage.game.Game2logLife(Lmage/game/Game;)V
+T
+U U(
+%42org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""
+}
+U' U(+
+%43mage.player.ai.MCTSNode"__id*K
+
+__unknown_file (/*-#
+!mage.player.ai.ComputerPlayerMCTS"
+root´±
+U' U(7
+%44mage.abilities.Ability";mage.player.ai.MCTSNode#getAction()Lmage/abilities/Ability;*<
+
+__unknown_file ( 
+
+%43mage.player.ai.MCTSNode2getAction()|
+z
+U U(7
+%45java.lang.String"__concat*
+U U($
+choose action:*+
+U' U(7
+
+%44mage.abilities.Abilityx
+v
+U U(L
+%46java.lang.String"__concat*%
+U U(7
+
+%45java.lang.String* 
+U: U(L
+ success ratio: 
+}
+UO U(S
+%47mage.player.ai.MCTSNode"__id*K
+
+__unknown_file (/*-#
+!mage.player.ai.ComputerPlayerMCTS"
+root‘Ž
+UO U(a
+%48double"&mage.player.ai.MCTSNode#getWinRatio()D*<
+
+__unknown_file ( 
+
+%47mage.player.ai.MCTSNode2getWinRatio()s
+q
+U U(a
+%49java.lang.String"__concat*%
+U U(L
+
+%46java.lang.String*
+UO U(a
+
+%48doubleÞÛ
+U U(b
+%50void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%42org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%49java.lang.String2info(Ljava/lang/Object;)"
+V V(
+"":"
+? ?(%
+gamemage.game.GameB%#
+!mage.player.ai.ComputerPlayerMCTSHP

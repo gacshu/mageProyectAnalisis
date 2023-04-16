@@ -1,0 +1,353 @@
+
+jmage.remote.SessionImpl#sendPlayerAction(Lmage/constants/PlayerAction;Ljava/util/UUID;Ljava/lang/Object;)Zc
+WD:/eclipse-workspace/mage-master/Mage.Common/src/main/java/mage/remote/SessionImpl.javaë
+ ë
+(#"startingBlock*ª
+14
+í
+ í
+(‹
+
+í
+ í
+(
+%0boolean"&mage.remote.SessionImpl#isConnected()Z*7
+
+__unknown_file (
+mage.remote.SessionImpl2isConnected()*
+12
+1*
+startingBlock
+ë
+# ë
+(^§
+¤
+
+ê
+ ê
+(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+passPriorityActionmage.constants.PlayerActiont
+r
+
+ë
+1 ë
+(C1
+passPriorityActionmage.constants.PlayerAction"__annotation*#
+
+__unknown_file (
+
+%15
+‹
+
+ê
+ ê
+(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+gameIdjava.util.UUID[
+Y
+
+ë
+J ë
+(P
+gameIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%16
+‹
+
+ê
+ ê
+(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+datajava.lang.Object[
+Y
+
+ë
+Y ë
+(]
+datajava.lang.Object"__annotation*#
+
+__unknown_file (
+
+%17*
+14*%
+4
+ô
+ ô
+("
+
+ô
+ ô
+(
+""*Ç
+5
+ó
+ ó
+(|
+z
+
+ó
+ ó
+(!
+%10mage.interfaces.MageServer"__id*C
+
+__unknown_file ('*%
+mage.remote.SessionImpl"
+serveru
+s
+
+ó
+D ó
+(M
+%11java.lang.String"__id*F
+
+__unknown_file (**(
+mage.remote.SessionImpl"
+	sessionId»¸
+
+ó
+ ó
+(T
+%12void"mage.interfaces.MageServer#sendPlayerAction(Lmage/constants/PlayerAction;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/Object;)V*?
+
+__unknown_file (#
+!
+%10mage.interfaces.MageServer*O
+
+__unknown_file (3
+1
+passPriorityActionmage.constants.PlayerAction*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*5
+
+__unknown_file (
+
+%11java.lang.String*6
+
+__unknown_file (
+
+datajava.lang.Object2csendPlayerAction(Lmage/constants/PlayerAction;Ljava/util/UUID;Ljava/lang/String;Ljava/lang/Object;)*
+4*¶
+6
+ğ
+# ğ
+(cœ
+™
+
+ğ
+# ğ
+(c
+%8java.lang.String"__concat*A
+
+ğ
+# ğ
+(53
+1
+passPriorityActionmage.constants.PlayerAction*&
+
+ğ
+8 ğ
+(c
+
+%4java.lang.String{
+y
+
+ğ
+ ğ
+(c/
+$
+
+actionDatamage.remote.ActionData"
+value"__id*4
+
+__unknown_file (
+
+%8java.lang.Stringƒ€
+
+ñ
+ ñ
+()
+
+%9void"@mage.remote.SessionImpl#appendJsonLog(Lmage/remote/ActionData;)V*7
+
+__unknown_file (
+mage.remote.SessionImpl*B
+
+__unknown_file (&
+$
+
+actionDatamage.remote.ActionData2'appendJsonLog(Lmage/remote/ActionData;)*
+5*x
+7
+ğ
+` ğ
+(bb
+`
+
+ğ
+` ğ
+(b
+%4java.lang.String"__id*4
+
+__unknown_file (
+
+%6java.lang.String*
+6*ç
+8
+ğ
+H ğ
+(]m
+k
+
+ğ
+H ğ
+(]
+%5java.lang.String"__concat*
+
+ğ
+H ğ
+(K
+ *&
+
+ğ
+N ğ
+(]
+
+%7java.lang.Stringb
+`
+
+ğ
+H ğ
+(]
+%4java.lang.String"__id*4
+
+__unknown_file (
+
+%5java.lang.String*
+6*±
+9
+ğ
+H ğ
+(Kš—
+
+ğ
+N ğ
+(]
+%7java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*6
+
+__unknown_file (
+
+datajava.lang.Object2
+toString()*
+8*
+10
+î
+ î
+(ev
+t
+
+î
+ î
+(e$
+
+actionDatamage.remote.ActionData"__id*:
+
+__unknown_file (
+
+%2mage.remote.ActionData*
+7
+9*¨
+11
+î
+( î
+(dDB
+
+î
+, î
+(6
+%2mage.remote.ActionData"mage.remote.ActionDataÉ
+Æ
+
+î
+( î
+(d
+%3"Tmage.remote.ActionData#<init>(Ljava/lang/String;Ljava/util/UUID;Ljava/lang/String;)V*:
+
+__unknown_file (
+
+%2mage.remote.ActionData*2
+
+__unknown_file (
+SEND_PLAYER_ACTION*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*4
+
+__unknown_file (
+
+%1java.lang.String*
+10*Ã
+12
+î
+7 î
+(Kª§
+
+î
+U î
+(c
+%1java.lang.String"8mage.remote.SessionImpl#getSessionId()Ljava/lang/String;*7
+
+__unknown_file (
+mage.remote.SessionImpl2getSessionId()*
+11*%
+1
+û
+ û
+("
+
+û
+ û
+(
+"":?
+
+ë
+$ ë
+(D1
+passPriorityActionmage.constants.PlayerAction:&
+
+ë
+E ë
+(Q
+gameIdjava.util.UUID:&
+
+ë
+R ë
+(]
+datajava.lang.ObjectB
+mage.remote.SessionImplHP

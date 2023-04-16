@@ -1,0 +1,388 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>MtgOnlTokensImageSource xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/mage/plugins/card/dl/sources/MtgOnlTokensImageSource.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.plugins.card.dl.sources;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.dl.DownloadServiceInfo;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.images.CardDownloadData;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> java.util.HashMap;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.util.Map;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> enum <a name="MtgOnlTokensImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/MtgOnlTokensImageSource.html#MtgOnlTokensImageSource">MtgOnlTokensImageSource</a> <strong class="jxr_keyword">implements</strong> <a name="CardImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageSource.html#CardImageSource">CardImageSource</a> {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      instance;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = Logger.getLogger(MtgOnlTokensImageSource.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> maxTimes = 0;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      @Override
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">public</strong> String getSourceName() {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"http://mtg.onl/token-list/tokens/"</span>;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      }
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      @Override
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">float</strong> getAverageSize() {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">return</strong> 26.7f;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      }
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      @Override
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">public</strong> String getNextHttpImageUrl() {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              setupLinks();
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          }
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          <strong class="jxr_keyword">for</strong> (String key : copyUrlToImageDone.keySet()) {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              <strong class="jxr_keyword">if</strong> (copyUrlToImageDone.get(key) &lt; maxTimes) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                  copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                  <strong class="jxr_keyword">return</strong> key;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>              }
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">if</strong> (maxTimes &lt; 2) {
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>              maxTimes++;
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          }
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">for</strong> (String key : copyUrlToImageDone.keySet()) {
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              <strong class="jxr_keyword">if</strong> (copyUrlToImageDone.get(key) &lt; maxTimes) {
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>                  copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>                  <strong class="jxr_keyword">return</strong> key;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              }
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          }
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      @Override
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <strong class="jxr_keyword">public</strong> String getFileForHttpImage(String httpImageUrl) {
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">if</strong> (httpImageUrl != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>              <strong class="jxr_keyword">return</strong> copyUrlToImage.get(httpImageUrl);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      }
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      @Override
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> prepareDownloadList(<a name="DownloadServiceInfo" href="../../../../../../org/mage/plugins/card/dl/DownloadServiceInfo.html#DownloadServiceInfo">DownloadServiceInfo</a> downloadServiceInfo, List&lt;CardDownloadData&gt; downloadList) {
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      }
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      @Override
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateCardUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      Map&lt;String, String&gt; copyUrlToImage = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      Map&lt;String, String&gt; copyImageToUrl = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      Map&lt;String, Integer&gt; copyUrlToImageDone = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setupLinks() {
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <strong class="jxr_keyword">if</strong> (copyUrlToImage != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          }
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          copyUrlToImage = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          copyImageToUrl = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          copyUrlToImageDone = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          copyUrlToImage.put(<span class="jxr_string">"Angel_B_3_3.jpg"</span>, <span class="jxr_string">"ANGEL.B.ANGEL.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          copyUrlToImage.put(<span class="jxr_string">"Angel_W_3_3.jpg"</span>, <span class="jxr_string">"ANGEL.W.ANGEL.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          copyUrlToImage.put(<span class="jxr_string">"Angel_W_4_4.jpg"</span>, <span class="jxr_string">"ANGEL.W.ANGEL.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          copyUrlToImage.put(<span class="jxr_string">"Ape_G_2_2.jpg"</span>, <span class="jxr_string">"APE.G.APE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          copyUrlToImage.put(<span class="jxr_string">"Ape_G_3_3.jpg"</span>, <span class="jxr_string">"APE.G.APE.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          copyUrlToImage.put(<span class="jxr_string">"Ashaya_the_Awoken_World_G_4_4.jpg"</span>, <span class="jxr_string">"ASHAYATHEAWOKENWORLD.G.ELEMENTAL.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          copyUrlToImage.put(<span class="jxr_string">"Assassin_B_1_1.jpg"</span>, <span class="jxr_string">"ASSASSIN.B.ASSASSIN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          copyUrlToImage.put(<span class="jxr_string">"Assembly-Worker_2_2.jpg"</span>, <span class="jxr_string">"ASSEMBLYWORKER..ASSEMBLYWORKER.ARTIFACTCREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          copyUrlToImage.put(<span class="jxr_string">"Avatar_W_y_y.jpg"</span>, <span class="jxr_string">"AVATAR.W.AVATAR.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          copyUrlToImage.put(<span class="jxr_string">"Bat_B_1_1.jpg"</span>, <span class="jxr_string">"BAT.B.BAT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          copyUrlToImage.put(<span class="jxr_string">"Bat_B_1_2.jpg"</span>, <span class="jxr_string">"BAT.B.BAT.CREATURE.1.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          copyUrlToImage.put(<span class="jxr_string">"Bear_G_2_2.jpg"</span>, <span class="jxr_string">"BEAR.G.BEAR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          copyUrlToImage.put(<span class="jxr_string">"Bear_G_4_4.jpg"</span>, <span class="jxr_string">"BEAR.G.BEAR.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          copyUrlToImage.put(<span class="jxr_string">"Beast_B_3_3.jpg"</span>, <span class="jxr_string">"BEAST.B.BEAST.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          copyUrlToImage.put(<span class="jxr_string">"Beast_G_3_3.jpg"</span>, <span class="jxr_string">"BEAST.G.BEAST.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          copyUrlToImage.put(<span class="jxr_string">"Beast_G_2_2.jpg"</span>, <span class="jxr_string">"BEAST.G.BEAST.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         copyUrlToImage.put(<span class="jxr_string">"Beast_G_4_4.jpg"</span>, <span class="jxr_string">"BEAST.G.BEAST.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         copyUrlToImage.put(<span class="jxr_string">"Beast_G_5_5.jpg"</span>, <span class="jxr_string">"BEAST.G.BEAST.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         copyUrlToImage.put(<span class="jxr_string">"Beast_RGW_8_8.jpg"</span>, <span class="jxr_string">"BEAST.WRG.BEAST.CREATURE.8.8.full.jpg"</span>);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"BIRDSOLDIER.W.BIRD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_U_1_1.jpg"</span>, <span class="jxr_string">"BIRD.U.BIRD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_U_2_2.jpg"</span>, <span class="jxr_string">"BIRD.U.BIRD.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_U_2_2_Enchantment.jpg"</span>, <span class="jxr_string">"BIRD.U.BIRD.ENCHANTMENTCREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_WU_1_1.jpg"</span>, <span class="jxr_string">"BIRD.WU.BIRD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_W_1_1.jpg"</span>, <span class="jxr_string">"BIRD.W.BIRD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_W_3_3.jpg"</span>, <span class="jxr_string">"BIRD.W.BIRD.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         copyUrlToImage.put(<span class="jxr_string">"Bird_W_3_4.jpg"</span>, <span class="jxr_string">"BIRD.W.BIRD.CREATURE.3.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         copyUrlToImage.put(<span class="jxr_string">"Boar_G_2_2.jpg"</span>, <span class="jxr_string">"BOAR.G.BOAR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         copyUrlToImage.put(<span class="jxr_string">"Boar_G_3_3.jpg"</span>, <span class="jxr_string">"BOAR.G.BOAR.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         copyUrlToImage.put(<span class="jxr_string">"Butterfly_G_1_1.jpg"</span>, <span class="jxr_string">"BUTTERFLY.G.INSECT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         copyUrlToImage.put(<span class="jxr_string">"Camarid_U_1_1.jpg"</span>, <span class="jxr_string">"CAMARID.U.CAMARID.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         copyUrlToImage.put(<span class="jxr_string">"Caribou_W_0_1.jpg"</span>, <span class="jxr_string">"CARIBOU.W.CARIBOU.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         copyUrlToImage.put(<span class="jxr_string">"Carnivore_R_3_1.jpg"</span>, <span class="jxr_string">"CARNIVORE.R.BEAST.CREATURE.3.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_B_2_1.jpg"</span>, <span class="jxr_string">"CAT.B.CAT.CREATURE.2.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_G_1_1.jpg"</span>, <span class="jxr_string">"CAT.G.CAT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_R_1_1.jpg"</span>, <span class="jxr_string">"CAT.R.CAT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"CATSOLDIER.W.CATSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_W_2_2.jpg"</span>, <span class="jxr_string">"CAT.W.CAT.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         copyUrlToImage.put(<span class="jxr_string">"Cat_Warrior_G_2_2.jpg"</span>, <span class="jxr_string">"CATWARRIOR.G.CATWARRIOR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         copyUrlToImage.put(<span class="jxr_string">"Centaur_G_3_3.jpg"</span>, <span class="jxr_string">"CENTAUR.G.CENTAUR.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         copyUrlToImage.put(<span class="jxr_string">"Centaur_G_3_3_Enchantment.jpg"</span>, <span class="jxr_string">"CENTAUR.G.CENTAUR.ENCHANTMENTCREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         copyUrlToImage.put(<span class="jxr_string">"Centaur_G_3_3_protection.jpg"</span>, <span class="jxr_string">"CENTAUR.G.CENTAUR.CREATURE.3.3a.full.jpg"</span>);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         copyUrlToImage.put(<span class="jxr_string">"Citizen_W_1_1.jpg"</span>, <span class="jxr_string">"CITIZEN.W.CITIZEN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         copyUrlToImage.put(<span class="jxr_string">"Cleric_WB_1_1.jpg"</span>, <span class="jxr_string">"CLERIC.WB.CLERIC.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         copyUrlToImage.put(<span class="jxr_string">"Cleric_W_2_1.jpg"</span>, <span class="jxr_string">"CLERIC.W.CLERIC.CREATUREENCHANTMENT.2.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         copyUrlToImage.put(<span class="jxr_string">"Cloud_Sprite_U_1_1.jpg"</span>, <span class="jxr_string">"CLOUDSPRITE.U.FAERIE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         copyUrlToImage.put(<span class="jxr_string">"Clue.jpg"</span>, <span class="jxr_string">"CLUE..CLUE.ARTIFACT.0.0.full.jpg"</span>);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>         copyUrlToImage.put(<span class="jxr_string">"Construct_1_1.jpg"</span>, <span class="jxr_string">"CONSTRUCT..CONSTRUCT.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         copyUrlToImage.put(<span class="jxr_string">"Construct_6_12.jpg"</span>, <span class="jxr_string">"CONSTRUCT..CONSTRUCT.CREATUREARTIFACT.6.12.full.jpg"</span>);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>         copyUrlToImage.put(<span class="jxr_string">"Demon_B_5_5.jpg"</span>, <span class="jxr_string">"DEMON.B.DEMON.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         copyUrlToImage.put(<span class="jxr_string">"Demon_B_y_y.jpg"</span>, <span class="jxr_string">"DEMON.B.DEMON.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         copyUrlToImage.put(<span class="jxr_string">"Devil_R_1_1.jpg"</span>, <span class="jxr_string">"DEVIL.R.DEVIL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         copyUrlToImage.put(<span class="jxr_string">"Djinn_5_5.jpg"</span>, <span class="jxr_string">"DJINN..DJINN.ARTIFACTCREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         copyUrlToImage.put(<span class="jxr_string">"Djinn_Monk_U_2_2.jpg"</span>, <span class="jxr_string">"DJINNMONK.U.DJINNMONK.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_RG_1_1.jpg"</span>, <span class="jxr_string">"DRAGON.RG.DRAGON.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_R_2_2.jpg"</span>, <span class="jxr_string">"DRAGON.R.DRAGON.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_R_4_4.jpg"</span>, <span class="jxr_string">"DRAGON.R.DRAGON.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_R_5_5.jpg"</span>, <span class="jxr_string">"DRAGON.R.DRAGON.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_R_6_6.jpg"</span>, <span class="jxr_string">"DRAGON.R.DRAGON.CREATURE.6.6.full.jpg"</span>);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         copyUrlToImage.put(<span class="jxr_string">"Dragon_Spirit_U_5_5.jpg"</span>, <span class="jxr_string">"DRAGONSPIRIT.U.DRAGONSPIRIT.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         copyUrlToImage.put(<span class="jxr_string">"Drake_UG_2_2.jpg"</span>, <span class="jxr_string">"DRAKE.UG.DRAKE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         copyUrlToImage.put(<span class="jxr_string">"Drake_U_2_2.jpg"</span>, <span class="jxr_string">"DRAKE.U.DRAKE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         copyUrlToImage.put(<span class="jxr_string">"Eldrazi_10_10.jpg"</span>, <span class="jxr_string">"ELDRAZI..ELDRAZI.CREATURE.10.10.full.jpg"</span>);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         copyUrlToImage.put(<span class="jxr_string">"Eldrazi_Scion_1_1.jpg"</span>, <span class="jxr_string">"ELDRAZISCION..ELDRAZISCION.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         copyUrlToImage.put(<span class="jxr_string">"Eldrazi_Spawn_0_1.jpg"</span>, <span class="jxr_string">"ELDRAZISPAWN..ELDRAZISPAWN.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_BR_5_5.jpg"</span>, <span class="jxr_string">"ELEMENTAL.BR.ELEMENTAL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_GW_y_y.jpg"</span>, <span class="jxr_string">"ELEMENTAL.WG.ELEMENTAL.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_G_2_2.jpg"</span>, <span class="jxr_string">"ELEMENTAL.G.ELEMENTAL.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_R_3_1.jpg"</span>, <span class="jxr_string">"ELEMENTAL.R.ELEMENTAL.CREATURE.3.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_G_4_4.jpg"</span>, <span class="jxr_string">"ELEMENTAL.G.ELEMENTAL.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_G_5_3.jpg"</span>, <span class="jxr_string">"ELEMENTAL.G.ELEMENTAL.CREATURE.5.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_G_7_7.jpg"</span>, <span class="jxr_string">"ELEMENTAL.G.ELEMENTAL.CREATURE.7.7.full.jpg"</span>);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_R_7_1.jpg"</span>, <span class="jxr_string">"ELEMENTAL.R.ELEMENTAL.CREATURE.7.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         copyUrlToImage.put(<span class="jxr_string">"Elemental_Shaman_R_3_1.jpg"</span>, <span class="jxr_string">"ELEMENTALSHAMAN.R.ELEMENTALSHAMAN.CREATURE.3.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         copyUrlToImage.put(<span class="jxr_string">"Elephant_G_3_3.jpg"</span>, <span class="jxr_string">"ELEPHANT.G.ELEPHANT.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         copyUrlToImage.put(<span class="jxr_string">"Elf_Druid_G_1_1.jpg"</span>, <span class="jxr_string">"ELFDRUID.G.ELFDRUID.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         copyUrlToImage.put(<span class="jxr_string">"Elf_G_1_1.jpg"</span>, <span class="jxr_string">"ELFWARRIOR.G.ELFWARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         copyUrlToImage.put(<span class="jxr_string">"Elf_Warrior_GW_1_1.jpg"</span>, <span class="jxr_string">"ELFWARRIOR.WG.ELFWARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         copyUrlToImage.put(<span class="jxr_string">"Elf_Warrior_G_1_1.jpg"</span>, <span class="jxr_string">"ELFWARRIOR.G.ELFWARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         copyUrlToImage.put(<span class="jxr_string">"Faerie_Rogue_B_1_1.jpg"</span>, <span class="jxr_string">"FAERIEROGUE.B.FAERIEROGUE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>         copyUrlToImage.put(<span class="jxr_string">"Faerie_Rogue_UB_1_1.jpg"</span>, <span class="jxr_string">"FAERIEROGUE.UB.FAERIEROGUE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         copyUrlToImage.put(<span class="jxr_string">"Faerie_U_1_1.jpg"</span>, <span class="jxr_string">"FAERIE.U.FAERIE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         copyUrlToImage.put(<span class="jxr_string">"Festering_Goblin_B_1_1.jpg"</span>, <span class="jxr_string">"FESTERINGGOBLIN.B.ZOMBIEGOBLIN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         copyUrlToImage.put(<span class="jxr_string">"Fish_U_3_3.jpg"</span>, <span class="jxr_string">"FISH.U.FISH.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         copyUrlToImage.put(<span class="jxr_string">"Frog_Lizard_G_3_3.jpg"</span>, <span class="jxr_string">"FROGLIZARD.G.FROGLIZARD.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         copyUrlToImage.put(<span class="jxr_string">"Gargoyle_3_4.jpg"</span>, <span class="jxr_string">"GARGOYLE..GARGOYLE.CREATUREARTIFACT.3.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         copyUrlToImage.put(<span class="jxr_string">"Germ_B_0_0.jpg"</span>, <span class="jxr_string">"GERM.B.GERM.CREATURE.0.0.full.jpg"</span>);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         copyUrlToImage.put(<span class="jxr_string">"Giant_R_4_4.jpg"</span>, <span class="jxr_string">"GIANT.R.GIANT.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         copyUrlToImage.put(<span class="jxr_string">"Giant_Warrior_RG_4_4.jpg"</span>, <span class="jxr_string">"GIANTWARRIOR.RG.GIANTWARRIOR.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         copyUrlToImage.put(<span class="jxr_string">"Giant_Warrior_W_5_5.jpg"</span>, <span class="jxr_string">"GIANTWARRIOR.W.GIANTWARRIOR.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         copyUrlToImage.put(<span class="jxr_string">"Gnome_1_1.jpg"</span>, <span class="jxr_string">"GNOME..GNOME.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         copyUrlToImage.put(<span class="jxr_string">"Goat_W_0_1.jpg"</span>, <span class="jxr_string">"GOAT.W.GOAT.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_R_1_1.jpg"</span>, <span class="jxr_string">"GOBLIN.R.GOBLIN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_R_2_1.jpg"</span>, <span class="jxr_string">"GOBLIN.R.GOBLIN.CREATURE.2.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_Rogue_B_1_1.jpg"</span>, <span class="jxr_string">"GOBLINROGUE.B.GOBLINROGUE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_Scout_R_1_1.jpg"</span>, <span class="jxr_string">"GOBLINSCOUT.R.GOBLINSCOUT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_Soldier_RW_1_1.jpg"</span>, <span class="jxr_string">"GOBLINSOLDIER.WR.GOBLINSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         copyUrlToImage.put(<span class="jxr_string">"Goblin_Warrior_RG_1_1.jpg"</span>, <span class="jxr_string">"GOBLINWARRIOR.RG.GOBLINWARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         copyUrlToImage.put(<span class="jxr_string">"Gold_.jpg"</span>, <span class="jxr_string">"GOLD...ARTIFACT.0.0.full.jpg"</span>);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         copyUrlToImage.put(<span class="jxr_string">"Goldmeadow_Harrier_W_1_1.jpg"</span>, <span class="jxr_string">"GOLDMEADOWHARRIER.W.KITHKINSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         copyUrlToImage.put(<span class="jxr_string">"Golem_3_3.jpg"</span>, <span class="jxr_string">"GOLEM..GOLEM.ARTIFACTCREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         copyUrlToImage.put(<span class="jxr_string">"Golem_3_3_Enchantment.jpg"</span>, <span class="jxr_string">"GOLEM..GOLEM.ENCHANTMENTARTIFACTCREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         copyUrlToImage.put(<span class="jxr_string">"Golem_9_9.jpg"</span>, <span class="jxr_string">"GOLEM..GOLEM.ARTIFACTCREATURE.9.9.full.jpg"</span>);
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         copyUrlToImage.put(<span class="jxr_string">"Graveborn_BR_3_1.jpg"</span>, <span class="jxr_string">"GRAVEBORN.BR.GRAVEBORN.CREATURE.3.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         copyUrlToImage.put(<span class="jxr_string">"Griffin_W_2_2.jpg"</span>, <span class="jxr_string">"GRIFFIN.W.GRIFFIN.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         copyUrlToImage.put(<span class="jxr_string">"Harpy_B_1_1.jpg"</span>, <span class="jxr_string">"HARPY.B.HARPY.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         copyUrlToImage.put(<span class="jxr_string">"Hellion_R_4_4.jpg"</span>, <span class="jxr_string">"HELLION.R.HELLION.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         copyUrlToImage.put(<span class="jxr_string">"Hippo_G_1_1.jpg"</span>, <span class="jxr_string">"HIPPO.G.HIPPO.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         copyUrlToImage.put(<span class="jxr_string">"Homunculus_U_0_1.jpg"</span>, <span class="jxr_string">"HOMUNCULUS.U.HOMUNCULUS.CREATUREARTIFACT.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         copyUrlToImage.put(<span class="jxr_string">"Homunculus_U_2_2.jpg"</span>, <span class="jxr_string">"HOMUNCULUS.U.HOMUNCULUS.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>         copyUrlToImage.put(<span class="jxr_string">"Hornet_1_1.jpg"</span>, <span class="jxr_string">"HORNET..INSECT.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         copyUrlToImage.put(<span class="jxr_string">"Horror_B_4_4.jpg"</span>, <span class="jxr_string">"HORROR.B.HORROR.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         copyUrlToImage.put(<span class="jxr_string">"Horror_B_X_X.jpg"</span>, <span class="jxr_string">"HORROR.B.HORROR.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         copyUrlToImage.put(<span class="jxr_string">"Horror_UB_1_1.jpg"</span>, <span class="jxr_string">"HORROR.UB.HORROR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         copyUrlToImage.put(<span class="jxr_string">"Horror_X_X.jpg"</span>, <span class="jxr_string">"HORROR..HORROR.ARTIFACTCREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         copyUrlToImage.put(<span class="jxr_string">"Hound_G_1_1.jpg"</span>, <span class="jxr_string">"HOUND.G.HOUND.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         copyUrlToImage.put(<span class="jxr_string">"Human_Cleric_WB_1_1.jpg"</span>, <span class="jxr_string">"HUMANCLERIC.WB.HUMANCLERIC.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>         copyUrlToImage.put(<span class="jxr_string">"Human_R_1_1.jpg"</span>, <span class="jxr_string">"HUMAN.R.HUMAN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         copyUrlToImage.put(<span class="jxr_string">"Human_Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"HUMANSOLDIER.W.HUMANSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         copyUrlToImage.put(<span class="jxr_string">"Human_W_1_1.jpg"</span>, <span class="jxr_string">"HUMAN.W.HUMAN.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         copyUrlToImage.put(<span class="jxr_string">"Hydra_G_X_X.jpg"</span>, <span class="jxr_string">"HYDRA.G.HYDRA.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>         copyUrlToImage.put(<span class="jxr_string">"Illusion_U_1_1.jpg"</span>, <span class="jxr_string">"ILLUSION.U.ILLUSION.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         copyUrlToImage.put(<span class="jxr_string">"Illusion_U_2_2.jpg"</span>, <span class="jxr_string">"ILLUSION.U.ILLUSION.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         copyUrlToImage.put(<span class="jxr_string">"Insect_G_1_1.jpg"</span>, <span class="jxr_string">"INSECT.G.INSECT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         copyUrlToImage.put(<span class="jxr_string">"Insect_G_6_1.jpg"</span>, <span class="jxr_string">"INSECT.G.INSECT.CREATURE.6.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>         copyUrlToImage.put(<span class="jxr_string">"Kaldra_4_4.jpg"</span>, <span class="jxr_string">"KALDRA..AVATAR.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         copyUrlToImage.put(<span class="jxr_string">"Kavu_B_3_3.jpg"</span>, <span class="jxr_string">"KAVU.B.KAVU.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         copyUrlToImage.put(<span class="jxr_string">"Kelp_U_0_1.jpg"</span>, <span class="jxr_string">"KELP.U.PLANTWALL.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         copyUrlToImage.put(<span class="jxr_string">"Kithkin_Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"KITHKINSOLDIER.W.KITHKINSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         copyUrlToImage.put(<span class="jxr_string">"Knight_Ally_W_2_2.jpg"</span>, <span class="jxr_string">"KNIGHTALLY.W.KNIGHTALLY.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         copyUrlToImage.put(<span class="jxr_string">"Knight_B_2_2.jpg"</span>, <span class="jxr_string">"KNIGHT.B.KNIGHT.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>         copyUrlToImage.put(<span class="jxr_string">"Knight_W_1_1.jpg"</span>, <span class="jxr_string">"KNIGHT.W.KNIGHT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         copyUrlToImage.put(<span class="jxr_string">"Knight_W_2_2.jpg"</span>, <span class="jxr_string">"KNIGHT.W.KNIGHT.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         copyUrlToImage.put(<span class="jxr_string">"Kobolds_of_Kher_Keep_R_0_1.jpg"</span>, <span class="jxr_string">"KOBOLDSOFKHERKEEP.R.KOBOLD.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         copyUrlToImage.put(<span class="jxr_string">"Kor_Ally_W_1_1.jpg"</span>, <span class="jxr_string">"KORALLY.W.KORALLY.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         copyUrlToImage.put(<span class="jxr_string">"Kor_Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"KORSOLDIER.W.KORSOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         copyUrlToImage.put(<span class="jxr_string">"Kraken_U_9_9.jpg"</span>, <span class="jxr_string">"KRAKEN.U.KRAKEN.CREATURE.9.9.full.jpg"</span>);
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         copyUrlToImage.put(<span class="jxr_string">"Landmine_.jpg"</span>, <span class="jxr_string">"LANDMINE...ARTIFACT.0.0.full.jpg"</span>);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         copyUrlToImage.put(<span class="jxr_string">"Lightning_Ranger_R_5_1.jpg"</span>, <span class="jxr_string">"LIGHTNINGRAGER.R.ELEMENTAL.CREATURE.5.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         copyUrlToImage.put(<span class="jxr_string">"Lizard_G_2_2.jpg"</span>, <span class="jxr_string">"LIZARD.G.LIZARD.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         copyUrlToImage.put(<span class="jxr_string">"Llanowar_Elves_G_1_1.jpg"</span>, <span class="jxr_string">"LLANOWARELVES.G.ELFDRUID.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         copyUrlToImage.put(<span class="jxr_string">"Manifest_2_2.jpg"</span>, <span class="jxr_string">"MANIFEST.....full.jpg"</span>);
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         copyUrlToImage.put(<span class="jxr_string">"Marit_Lage_B_20_20.jpg"</span>, <span class="jxr_string">"MARITLAGE.B.AVATAR.CREATURE.20.20.full.jpg"</span>);
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>         copyUrlToImage.put(<span class="jxr_string">"Merfolk_U_1_1.jpg"</span>, <span class="jxr_string">"MERFOLK.U.MERFOLK.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         copyUrlToImage.put(<span class="jxr_string">"Merfolk_Wizard_U_1_1.jpg"</span>, <span class="jxr_string">"MERFOLKWIZARD.U.MERFOLKWIZARD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         copyUrlToImage.put(<span class="jxr_string">"Metallic_Sliver_1_1.jpg"</span>, <span class="jxr_string">"METALLICSLIVER..SLIVER.CREATUREARTIFACT.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         copyUrlToImage.put(<span class="jxr_string">"Minion_B_1_1.jpg"</span>, <span class="jxr_string">"MINION.B.MINION.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         copyUrlToImage.put(<span class="jxr_string">"Minion_B_X_X.jpg"</span>, <span class="jxr_string">"MINION.B.MINION.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         copyUrlToImage.put(<span class="jxr_string">"Minor_Demon_BR_1_1.jpg"</span>, <span class="jxr_string">"MINORDEMON.BR.DEMON.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>         copyUrlToImage.put(<span class="jxr_string">"Minotaur_R_2_3.jpg"</span>, <span class="jxr_string">"MINOTAUR.R.MINOTAUR.CREATURE.2.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         copyUrlToImage.put(<span class="jxr_string">"Monk_W_1_1.jpg"</span>, <span class="jxr_string">"MONK.W.MONK.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         copyUrlToImage.put(<span class="jxr_string">"Morph_2_2.jpg"</span>, <span class="jxr_string">"MORPH.....full.jpg"</span>);
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         copyUrlToImage.put(<span class="jxr_string">"Myr_1_1.jpg"</span>, <span class="jxr_string">"MYR..MYR.CREATUREARTIFACT.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         copyUrlToImage.put(<span class="jxr_string">"Octopus_U_8_8.jpg"</span>, <span class="jxr_string">"OCTOPUS.U.OCTOPUS.CREATURE.8.8.full.jpg"</span>);
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         copyUrlToImage.put(<span class="jxr_string">"Ogre_R_3_3.jpg"</span>, <span class="jxr_string">"OGRE.R.OGRE.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         copyUrlToImage.put(<span class="jxr_string">"Ogre_R_4_4.jpg"</span>, <span class="jxr_string">"OGRE.R.OGRE.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         copyUrlToImage.put(<span class="jxr_string">"Ooze_G_1_1.jpg"</span>, <span class="jxr_string">"OOZE.G.OOZE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         copyUrlToImage.put(<span class="jxr_string">"Ooze_G_2_2.jpg"</span>, <span class="jxr_string">"OOZE.G.OOZE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         copyUrlToImage.put(<span class="jxr_string">"Ooze_G_3_3.jpg"</span>, <span class="jxr_string">"OOZE.G.OOZE.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         copyUrlToImage.put(<span class="jxr_string">"Orb_U_X_X.jpg"</span>, <span class="jxr_string">"ORB.U.ORB.CREATURE.X.X.jpg.full.jpg"</span>);
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         copyUrlToImage.put(<span class="jxr_string">"Pegasus_W_1_1.jpg"</span>, <span class="jxr_string">"PEGASUS.W.PEGASUS.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         copyUrlToImage.put(<span class="jxr_string">"Pentavite_1_1.jpg"</span>, <span class="jxr_string">"PENTAVITE..PENTAVITE.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         copyUrlToImage.put(<span class="jxr_string">"Pest_0_1.jpg"</span>, <span class="jxr_string">"PEST..PEST.ARTIFACTCREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         copyUrlToImage.put(<span class="jxr_string">"Pincher_2_2.jpg"</span>, <span class="jxr_string">"PINCHER..PINCHER.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         copyUrlToImage.put(<span class="jxr_string">"Plant_G_0_1.jpg"</span>, <span class="jxr_string">"PLANT.G.PLANT.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         copyUrlToImage.put(<span class="jxr_string">"Plant_G_1_1.jpg"</span>, <span class="jxr_string">"PLANT.G.PLANT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         copyUrlToImage.put(<span class="jxr_string">"Rat_B_1_1.jpg"</span>, <span class="jxr_string">"RAT.B.RAT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         copyUrlToImage.put(<span class="jxr_string">"Reflection_W_2_2.jpg"</span>, <span class="jxr_string">"REFLECTION.W.REFLECTION.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         copyUrlToImage.put(<span class="jxr_string">"Rhino_G_4_4.jpg"</span>, <span class="jxr_string">"RHINO.G.RHINO.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         copyUrlToImage.put(<span class="jxr_string">"Rukh_R_4_4.jpg"</span>, <span class="jxr_string">"BIRD.R.BIRD.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         copyUrlToImage.put(<span class="jxr_string">"Sand_1_1.jpg"</span>, <span class="jxr_string">"SAND..SAND.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         copyUrlToImage.put(<span class="jxr_string">"Sand_Warrior_RGW_1_1.jpg"</span>, <span class="jxr_string">"SANDWARRIOR.WRG.SANDWARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         copyUrlToImage.put(<span class="jxr_string">"Saporling_G_1_1.jpg"</span>, <span class="jxr_string">"SAPROLING.G.SAPROLING.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         copyUrlToImage.put(<span class="jxr_string">"Satyr_RG_2_2.jpg"</span>, <span class="jxr_string">"SATYR.RG.SATYR.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         copyUrlToImage.put(<span class="jxr_string">"Serf_B_0_1.jpg"</span>, <span class="jxr_string">"SERF.B.SERF.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         copyUrlToImage.put(<span class="jxr_string">"Shapeshifter_1_1.jpg"</span>, <span class="jxr_string">"SHAPESHIFTER..SHAPESHIFTER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         copyUrlToImage.put(<span class="jxr_string">"Skeleton_B_1_1.jpg"</span>, <span class="jxr_string">"SKELETON.B.SKELETON.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         copyUrlToImage.put(<span class="jxr_string">"Sliver_1_1.jpg"</span>, <span class="jxr_string">"SLIVER..SLIVER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         copyUrlToImage.put(<span class="jxr_string">"Snake_1_1.jpg"</span>, <span class="jxr_string">"SNAKE..SNAKE.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         copyUrlToImage.put(<span class="jxr_string">"Snake_B_1_1.jpg"</span>, <span class="jxr_string">"SNAKE.B.SNAKE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         copyUrlToImage.put(<span class="jxr_string">"Snake_GB_1_1.jpg"</span>, <span class="jxr_string">"SNAKE.BG.SNAKE.ENCHANTMENTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         copyUrlToImage.put(<span class="jxr_string">"Snake_GU_1_1.jpg"</span>, <span class="jxr_string">"SNAKE.UG.SNAKE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         copyUrlToImage.put(<span class="jxr_string">"Snake_G_1_1.jpg"</span>, <span class="jxr_string">"SNAKE.G.SNAKE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         copyUrlToImage.put(<span class="jxr_string">"Soldier_Ally_W_1_1.jpg"</span>, <span class="jxr_string">"SOLDIERALLY.W.SOLDIERALLY.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         copyUrlToImage.put(<span class="jxr_string">"Soldier_RW_1_1.jpg"</span>, <span class="jxr_string">"SOLDIER.WR.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         copyUrlToImage.put(<span class="jxr_string">"Soldier_R_1_1.jpg"</span>, <span class="jxr_string">"SOLDIER.R.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         copyUrlToImage.put(<span class="jxr_string">"Soldier_W_1_1.jpg"</span>, <span class="jxr_string">"SOLDIER.W.SOLDIER.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         copyUrlToImage.put(<span class="jxr_string">"Soldier_W_1_1_Enchantment.jpg"</span>, <span class="jxr_string">"SOLDIER.W.SOLDIER.ENCHANTMENTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         copyUrlToImage.put(<span class="jxr_string">"Spark_Elemental_R_3_1.jpg"</span>, <span class="jxr_string">"SPARKELEMENTAL.R.ELEMENTAL.CREATURE.3.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         copyUrlToImage.put(<span class="jxr_string">"Spawn_2_2.jpg"</span>, <span class="jxr_string">"SPAWN..SPAWN.ARTIFACTCREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         copyUrlToImage.put(<span class="jxr_string">"Sphinx_U_4_4.jpg"</span>, <span class="jxr_string">"SPHINX.U.SPHINX.CREATURE.4.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         copyUrlToImage.put(<span class="jxr_string">"Spider_B_2_4.jpg"</span>, <span class="jxr_string">"SPIDER.B.SPIDER.CREATURE.2.4.full.jpg"</span>);
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>         copyUrlToImage.put(<span class="jxr_string">"Spider_G_1_2.jpg"</span>, <span class="jxr_string">"SPIDER.G.SPIDER.CREATURE.1.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         copyUrlToImage.put(<span class="jxr_string">"Spider_G_1_3.jpg"</span>, <span class="jxr_string">"SPIDER.G.SPIDER.ENCHANTMENTCREATURE.1.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>         copyUrlToImage.put(<span class="jxr_string">"Spike_G_1_1.jpg"</span>, <span class="jxr_string">"SPIKE.G.SPIKE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_1_1.jpg"</span>, <span class="jxr_string">"SPIRIT..SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_U_1_1.jpg"</span>, <span class="jxr_string">"SPIRIT.U.SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_WB_1_1.jpg"</span>, <span class="jxr_string">"SPIRIT.WB.SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_WB_y_y.jpg"</span>, <span class="jxr_string">"SPIRIT.WB.SPIRIT.ENCHANTMENTCREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_W_1_1.jpg"</span>, <span class="jxr_string">"SPIRIT.W.SPIRIT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_W_3_3.jpg"</span>, <span class="jxr_string">"SPIRIT.W.SPIRIT.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         copyUrlToImage.put(<span class="jxr_string">"Spirit_Warror_BG_y_y.jpg"</span>, <span class="jxr_string">"SPIRITWARRIOR.BG.SPIRITWARRIOR.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         copyUrlToImage.put(<span class="jxr_string">"Squid_U_1_1.jpg"</span>, <span class="jxr_string">"SQUID.U.SQUID.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         copyUrlToImage.put(<span class="jxr_string">"Squirrel_G_1_1.jpg"</span>, <span class="jxr_string">"SQUIRREL.G.SQUIRREL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         copyUrlToImage.put(<span class="jxr_string">"Stoneforged_Blade_.jpg"</span>, <span class="jxr_string">"STONEFORGEDBLADE..EQUIPMENT.ARTIFACT.0.0.full.jpg"</span>);
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         copyUrlToImage.put(<span class="jxr_string">"Tetravite_1_1.jpg"</span>, <span class="jxr_string">"TETRAVITE..TETRAVITE.CREATUREARTIFACT.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>         copyUrlToImage.put(<span class="jxr_string">"Thopter_1_1.jpg"</span>, <span class="jxr_string">"THOPTER..THOPTER.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         copyUrlToImage.put(<span class="jxr_string">"Thopter_U_1_1.jpg"</span>, <span class="jxr_string">"THOPTER.U.THOPTER.CREATUREARTIFACT.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         copyUrlToImage.put(<span class="jxr_string">"Thrull_B_0_1.jpg"</span>, <span class="jxr_string">"THRULL.B.THRULL.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         copyUrlToImage.put(<span class="jxr_string">"Thrull_B_1_1.jpg"</span>, <span class="jxr_string">"THRULL.B.THRULL.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>         copyUrlToImage.put(<span class="jxr_string">"Treefolk_G_X_X.jpg"</span>, <span class="jxr_string">"TREEFOLK.G.TREEFOLK.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         copyUrlToImage.put(<span class="jxr_string">"Treefolk_Shaman_G_2_5.jpg"</span>, <span class="jxr_string">"TREEFOLKSHAMAN.G.TREEFOLKSHAMAN.CREATURE.2.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>         copyUrlToImage.put(<span class="jxr_string">"Treefolk_Warrior_G_y_y.jpg"</span>, <span class="jxr_string">"TREEFOLKWARRIOR.G.TREEFOLKWARRIOR.CREATURE.S.S.full.jpg"</span>);
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         copyUrlToImage.put(<span class="jxr_string">"Triskelavite_1_1.jpg"</span>, <span class="jxr_string">"TRISKELAVITE..TRISKELAVITE.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         copyUrlToImage.put(<span class="jxr_string">"Tuktuk_the_Returned_5_5.jpg"</span>, <span class="jxr_string">"TUKTUKTHERETURNED..GOBLIN.ARTIFACTCREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>         copyUrlToImage.put(<span class="jxr_string">"Urami_B_5_5.jpg"</span>, <span class="jxr_string">"URAMI.B.DEMONSPIRIT.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         copyUrlToImage.put(<span class="jxr_string">"Vampire_B_1_1.jpg"</span>, <span class="jxr_string">"VAMPIRE.B.VAMPIRE.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         copyUrlToImage.put(<span class="jxr_string">"Vampire_B_2_2.jpg"</span>, <span class="jxr_string">"VAMPIRE.B.VAMPIRE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         copyUrlToImage.put(<span class="jxr_string">"Vampire_B_X_X.jpg"</span>, <span class="jxr_string">"VAMPIRE.B.VAMPIRE.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>         copyUrlToImage.put(<span class="jxr_string">"Vampire_Knight_B_1_1.jpg"</span>, <span class="jxr_string">"VAMPIREKNIGHT.B.VAMPIREKNIGHT.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         copyUrlToImage.put(<span class="jxr_string">"Voja_GW_2_2.jpg"</span>, <span class="jxr_string">"VOJA.WG.WOLF.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         copyUrlToImage.put(<span class="jxr_string">"Wall_U_5_5.jpg"</span>, <span class="jxr_string">"WALL.U.WALL.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         copyUrlToImage.put(<span class="jxr_string">"Warrior_B_2_1.jpg"</span>, <span class="jxr_string">"WARRIOR.B.WARRIOR.CREATURE.2.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>         copyUrlToImage.put(<span class="jxr_string">"Warrior_R_1_1.jpg"</span>, <span class="jxr_string">"WARRIOR.R.WARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>         copyUrlToImage.put(<span class="jxr_string">"Warrior_W_1_1.jpg"</span>, <span class="jxr_string">"WARRIOR.W.WARRIOR.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>         copyUrlToImage.put(<span class="jxr_string">"Wasp_1_1.jpg"</span>, <span class="jxr_string">"WASP..INSECT.ARTIFACTCREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         copyUrlToImage.put(<span class="jxr_string">"Weird_U_3_3.jpg"</span>, <span class="jxr_string">"WEIRD.U.WEIRD.CREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>         copyUrlToImage.put(<span class="jxr_string">"Whale_U_6_6.jpg"</span>, <span class="jxr_string">"WHALE.U.WHALE.CREATURE.6.6.full.jpg"</span>);
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         copyUrlToImage.put(<span class="jxr_string">"Wirefly_2_2.jpg"</span>, <span class="jxr_string">"WIREFLY..INSECT.ARTIFACTCREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         copyUrlToImage.put(<span class="jxr_string">"Wolf_G_2_2.jpg"</span>, <span class="jxr_string">"WOLF.G.WOLF.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         copyUrlToImage.put(<span class="jxr_string">"Wood_G_0_1.jpg"</span>, <span class="jxr_string">"WOOD.G.WALL.CREATURE.0.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         copyUrlToImage.put(<span class="jxr_string">"Worm_BG_1_1.jpg"</span>, <span class="jxr_string">"WORM.BG.WORM.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         copyUrlToImage.put(<span class="jxr_string">"Wurm_3_3.jpg"</span>, <span class="jxr_string">"WURM..WURM.ARTIFACTCREATURE.3.3.full.jpg"</span>);
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>         copyUrlToImage.put(<span class="jxr_string">"Wurm_B_6_6.jpg"</span>, <span class="jxr_string">"WURM.B.WURM.CREATURE.6.6.full.jpg"</span>);
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>         copyUrlToImage.put(<span class="jxr_string">"Wurm_G_6_6.jpg"</span>, <span class="jxr_string">"WURM.G.WURM.CREATURE.6.6.full.jpg"</span>);
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_B_2_2.jpg"</span>, <span class="jxr_string">"ZOMBIE.B.ZOMBIE.CREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_B_2_2_Enchantment.jpg"</span>, <span class="jxr_string">"ZOMBIE.B.ZOMBIE.ENCHANTMENTCREATURE.2.2.full.jpg"</span>);
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_B_5_5.jpg"</span>, <span class="jxr_string">"ZOMBIEGIANT.B.ZOMBIEGIANT.CREATURE.5.5.full.jpg"</span>);
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_B_X_X.jpg"</span>, <span class="jxr_string">"ZOMBIE.B.ZOMBIE.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_Horror_B_X_X.jpg"</span>, <span class="jxr_string">"ZOMBIEHORROR.B.ZOMBIEHORROR.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_U_X_X.jpg"</span>, <span class="jxr_string">"ZOMBIE.U.ZOMBIE.CREATURE.X.X.full.jpg"</span>);
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         copyUrlToImage.put(<span class="jxr_string">"Zombie_Wizard_UB_1_1.jpg"</span>, <span class="jxr_string">"ZOMBIEWIZARD.UB.ZOMBIEWIZARD.CREATURE.1.1.full.jpg"</span>);
+<a class="jxr_linenumber" name="L326" href="#L326">326</a> 
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>         <strong class="jxr_keyword">for</strong> (String key : copyUrlToImage.keySet()) {
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>             copyUrlToImageDone.put(key, maxTimes);
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>             copyImageToUrl.put(copyUrlToImage.get(key), key);
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         }
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>     }
+<a class="jxr_linenumber" name="L332" href="#L332">332</a> 
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>     @Override
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>     <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateTokenUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>             setupLinks();
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>         }
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>     }
+<a class="jxr_linenumber" name="L340" href="#L340">340</a> 
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>     @Override
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getTotalImages() {
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>             setupLinks();
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         }
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>         <strong class="jxr_keyword">if</strong> (copyUrlToImage != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>             <strong class="jxr_keyword">return</strong> copyImageToUrl.size();
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>         }
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         <strong class="jxr_keyword">return</strong> -1;
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>     }
+<a class="jxr_linenumber" name="L351" href="#L351">351</a> 
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>     @Override
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isTokenSource() {
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>     }
+<a class="jxr_linenumber" name="L356" href="#L356">356</a> 
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>     @Override
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardSource() {
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>     }
+<a class="jxr_linenumber" name="L361" href="#L361">361</a> 
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>     @Override
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doPause(String httpImageUrl) {
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>     }
+<a class="jxr_linenumber" name="L365" href="#L365">365</a> 
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>     @Override
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardImageProvided(String setCode, String cardName) {
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>     }
+<a class="jxr_linenumber" name="L370" href="#L370">370</a> 
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>     @Override
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isTokenImageProvided(String setCode, String cardName, Integer tokenNumber) {
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>     }
+<a class="jxr_linenumber" name="L375" href="#L375">375</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

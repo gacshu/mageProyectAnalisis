@@ -1,0 +1,166 @@
+
+‰mage.target.common.TargetActivatedOrTriggeredAbilityOrLegendarySpell#canTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z‡
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetActivatedOrTriggeredAbilityOrLegendarySpell.java( (("startingBlock*¥
+2/_ /(eª
+§
+/_ /(e#
+%5mage.filter.FilterStackObject"__id*p
+
+__unknown_file (T*RF
+Dmage.target.common.TargetActivatedOrTriggeredAbilityOrLegendarySpell"
+filter±®
+	/y /(‘
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¯¬
+	/_ /( 
+%7boolean"{mage.filter.FilterStackObject#match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*A
+
+__unknown_file (%
+#
+%5mage.filter.FilterStackObject*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*2
+
+__unknown_file (
+
+%6java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ß
+startingBlock( ((@‡
+„
+' '(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDT
+R
+(" (($
+idjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%8“
+
+' '(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+(. ((4 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9Š
+‡
+' '(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+(; ((?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+5
+7*È
+5." .(&¨¥
+." .(1 
+%2mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack() 
+." .(D!
+%3mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*>
+
+__unknown_file ("
+ 
+%2mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+idjava.util.UUID2 getStackObject(Ljava/util/UUID;)
+}
+. .(E*
+stackObjectmage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%3mage.game.stack.StackObjectá
+Þ
+/ /(I
+%4boolean"’mage.target.common.TargetActivatedOrTriggeredAbilityOrLegendarySpell#isActivatedOrTriggeredAbilityOrLegendarySpell(Lmage/game/stack/StackObject;)Z*d
+
+__unknown_file (H"F
+Dmage.target.common.TargetActivatedOrTriggeredAbilityOrLegendarySpell*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject*
+2
+1*!
+6+ +("
++ +(
+""*ƒ
+7* *($œ™
+* *(,
+%0java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getId()ÌÉ
+* *(7
+%1boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID2equals(Ljava/lang/Object;)*
+5
+6*#
+1	/ /(¡"
+	/ /(¡
+"": 
+( ((%
+idjava.util.UUID:,
+(& ((5 
+sourcemage.abilities.Ability:"
+(6 ((?
+gamemage.game.GameBHF
+Dmage.target.common.TargetActivatedOrTriggeredAbilityOrLegendarySpellHP

@@ -1,0 +1,452 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ZonesHandler xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/game/ZonesHandler.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.game;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.abilities.Ability;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.keyword.TransformAbility;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.cards.*;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.constants.Outcome;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.filter.FilterCard;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.game.command.Commander;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.game.events.ZoneChangeEvent;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.game.events.ZoneChangeGroupEvent;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.Permanent;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.PermanentCard;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.PermanentMeld;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.PermanentToken;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> mage.game.stack.Spell;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> mage.players.Player;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> mage.target.TargetCard;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <em class="jxr_javadoccomment"> * Created by samuelsandeen on 9/6/16.</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="ZonesHandler" href="../../mage/game/ZonesHandler.html#ZonesHandler">ZonesHandler</a> {
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> <strong class="jxr_keyword">cast</strong>(<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">if</strong> (maybeRemoveFromSourceZone(info, game, source)) {
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>              placeInDestinationZone(info, game, 0);
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              <em class="jxr_comment">// create a group zone change event if a card is moved to stack for casting (it's always only one card, but some effects check for group events (one or more xxx))</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>              Set&lt;Card&gt; cards = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>              Set&lt;PermanentToken&gt; tokens = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> targetCard = getTargetCard(game, info.event.getTargetId());
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              <strong class="jxr_keyword">if</strong> (targetCard instanceof <a name="PermanentToken" href="../../mage/game/permanent/PermanentToken.html#PermanentToken">PermanentToken</a>) {
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>                  tokens.add((<a name="PermanentToken" href="../../mage/game/permanent/PermanentToken.html#PermanentToken">PermanentToken</a>) targetCard);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>              } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>                  cards.add(targetCard);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              }
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>              game.fireEvent(<strong class="jxr_keyword">new</strong> <a name="ZoneChangeGroupEvent" href="../../mage/game/events/ZoneChangeGroupEvent.html#ZoneChangeGroupEvent">ZoneChangeGroupEvent</a>(
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                      cards, 
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                      tokens, 
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>                      info.event.getSourceId(), 
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                      info.event.getSource(), 
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>                      info.event.getPlayerId(), 
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>                      info.event.getFromZone(), 
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>                      info.event.getToZone()));
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>              <em class="jxr_comment">// normal movement</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              game.fireEvent(info.event);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          }
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> moveCard(<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          List&lt;ZoneChangeInfo&gt; list = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          list.add(info);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          <strong class="jxr_keyword">return</strong> !moveCards(list, game, source).isEmpty();
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      }
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;ZoneChangeInfo&gt; moveCards(List&lt;ZoneChangeInfo&gt; zoneChangeInfos, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          <em class="jxr_comment">// Handle Unmelded Meld Cards</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <strong class="jxr_keyword">for</strong> (ListIterator&lt;ZoneChangeInfo&gt; itr = zoneChangeInfos.listIterator(); itr.hasNext(); ) {
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>              <a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info = itr.next();
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>              <a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a> card = game.getMeldCard(info.event.getTargetId());
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>              <em class="jxr_comment">// Copies should be handled as normal cards.</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>              <strong class="jxr_keyword">if</strong> (card != <strong class="jxr_keyword">null</strong> &amp;&amp; !card.isMelded(game) &amp;&amp; !card.isCopy()) {
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>                  ZoneChangeInfo.Unmelded unmelded = <strong class="jxr_keyword">new</strong> ZoneChangeInfo.Unmelded(info, game);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>                  <strong class="jxr_keyword">if</strong> (unmelded.subInfo.isEmpty()) {
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>                      itr.remove();
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>                  } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>                      itr.set(unmelded);
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>                  }
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>              }
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          }
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <em class="jxr_comment">// process Modal Double Faces cards (e.g. put card from hand)</em>
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <em class="jxr_comment">// rules:</em>
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <em class="jxr_comment">// If an effect puts a double-faced card onto the battlefield, it enters with its front face up.</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <em class="jxr_comment">// If that front face can’t be put onto the battlefield, it doesn’t enter the battlefield.</em>
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          <em class="jxr_comment">// For example, if an effect exiles Sejiri Glacier and returns it to the battlefield,</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <em class="jxr_comment">// it remains in exile because an instant can’t be put onto the battlefield.</em>
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">for</strong> (ListIterator&lt;ZoneChangeInfo&gt; itr = zoneChangeInfos.listIterator(); itr.hasNext(); ) {
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>              <a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info = itr.next();
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>              <strong class="jxr_keyword">if</strong> (info.event.getToZone().equals(Zone.BATTLEFIELD)) {
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>                  <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card = game.getCard(info.event.getTargetId());
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>                  <strong class="jxr_keyword">if</strong> (card instanceof <a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a> || card instanceof <a name="ModalDoubleFacesCardHalf" href="../../mage/cards/ModalDoubleFacesCardHalf.html#ModalDoubleFacesCardHalf">ModalDoubleFacesCardHalf</a>) {
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>                      <strong class="jxr_keyword">boolean</strong> forceToMainSide = false;
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>                      <em class="jxr_comment">// if effect put half mdf card to battlefield then it must be the main side only (example: return targeted half card to battle)</em>
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>                      <strong class="jxr_keyword">if</strong> (card instanceof <a name="ModalDoubleFacesCardHalf" href="../../mage/cards/ModalDoubleFacesCardHalf.html#ModalDoubleFacesCardHalf">ModalDoubleFacesCardHalf</a> &amp;&amp; !source.getAbilityType().isPlayCardAbility()) {
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>                          forceToMainSide = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>                      }
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>                      <em class="jxr_comment">// if effect put mdf card to battlefield then it must be main side only</em>
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>                      <strong class="jxr_keyword">if</strong> (card instanceof <a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a>) {
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>                          forceToMainSide = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>                      }
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>  
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>                      <strong class="jxr_keyword">if</strong> (forceToMainSide) {
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>                         info.event.setTargetId(((<a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a>) card.getMainCard()).getLeftHalfCard().getId());
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>                     }
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>                 }
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>             }
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         }
+<a class="jxr_linenumber" name="L105" href="#L105">105</a> 
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         zoneChangeInfos.removeIf(zoneChangeInfo -&gt; !maybeRemoveFromSourceZone(zoneChangeInfo, game, source));
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         <strong class="jxr_keyword">int</strong> createOrder = 0;
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         <strong class="jxr_keyword">for</strong> (<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> zoneChangeInfo : zoneChangeInfos) {
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>             <strong class="jxr_keyword">if</strong> (createOrder == 0 &amp;&amp; Zone.BATTLEFIELD.equals(zoneChangeInfo.event.getToZone())) {
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>                 <em class="jxr_comment">// All permanents go to battlefield at the same time (=create order)</em>
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>                 createOrder = game.getState().getNextPermanentOrderNumber();
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>             }
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>             placeInDestinationZone(zoneChangeInfo, game, createOrder);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             <strong class="jxr_keyword">if</strong> (game.getPhase() != <strong class="jxr_keyword">null</strong>) { <em class="jxr_comment">// moving cards to zones before game started does not need events</em>
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>                 game.addSimultaneousEvent(zoneChangeInfo.event);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>             }
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         }
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         <strong class="jxr_keyword">return</strong> zoneChangeInfos;
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     }
+<a class="jxr_linenumber" name="L120" href="#L120">120</a> 
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> placeInDestinationZone(<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, <strong class="jxr_keyword">int</strong> createOrder) {
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         <em class="jxr_comment">// Handle unmelded cards</em>
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         <strong class="jxr_keyword">if</strong> (info instanceof ZoneChangeInfo.Unmelded) {
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>             ZoneChangeInfo.Unmelded unmelded = (ZoneChangeInfo.Unmelded) info;
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>             <a name="Zone" href="../../mage/constants/Zone.html#Zone">Zone</a> toZone = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>             <strong class="jxr_keyword">for</strong> (<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> subInfo : unmelded.subInfo) {
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>                 toZone = subInfo.event.getToZone();
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>                 placeInDestinationZone(subInfo, game, createOrder);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>             }
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>             <em class="jxr_comment">// We arbitrarily prefer the bottom half card. This should never be relevant.</em>
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>             <strong class="jxr_keyword">if</strong> (toZone != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>                 game.setZone(unmelded.event.getTargetId(), toZone);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>             }
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         }
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         <em class="jxr_comment">// Handle normal cases</em>
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         <a name="ZoneChangeEvent" href="../../mage/game/events/ZoneChangeEvent.html#ZoneChangeEvent">ZoneChangeEvent</a> event = info.event;
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         <a name="Zone" href="../../mage/constants/Zone.html#Zone">Zone</a> toZone = event.getToZone();
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> targetCard = getTargetCard(game, event.getTargetId());
+<a class="jxr_linenumber" name="L140" href="#L140">140</a> 
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         <a name="Cards" href="../../mage/cards/Cards.html#Cards">Cards</a> cardsToMove = <strong class="jxr_keyword">null</strong>; <em class="jxr_comment">// moving real cards</em>
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         Map&lt;Zone, Cards&gt; cardsToUpdate = <strong class="jxr_keyword">new</strong> LinkedHashMap&lt;&gt;(); <em class="jxr_comment">// updating all card's parts (must be ordered LinkedHashMap)</em>
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         cardsToUpdate.put(toZone, <strong class="jxr_keyword">new</strong> <a name="CardsImpl" href="../../mage/cards/CardsImpl.html#CardsImpl">CardsImpl</a>());
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         cardsToUpdate.put(Zone.OUTSIDE, <strong class="jxr_keyword">new</strong> <a name="CardsImpl" href="../../mage/cards/CardsImpl.html#CardsImpl">CardsImpl</a>());
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         <em class="jxr_comment">// if we're moving a token it shouldn't be put into any zone as an object.</em>
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         <strong class="jxr_keyword">if</strong> (!(targetCard instanceof <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a>) &amp;&amp; targetCard != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>             <strong class="jxr_keyword">if</strong> (targetCard instanceof <a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a>) {
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>                 <em class="jxr_comment">// meld/group cards must be independent (use can choose order)</em>
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>                 cardsToMove = ((<a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a>) targetCard).getHalves();
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>                 cardsToUpdate.get(toZone).addAll(cardsToMove);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (targetCard instanceof <a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a>
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>                     || targetCard instanceof <a name="ModalDoubleFacesCardHalf" href="../../mage/cards/ModalDoubleFacesCardHalf.html#ModalDoubleFacesCardHalf">ModalDoubleFacesCardHalf</a>) {
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>                 <em class="jxr_comment">// mdf cards must be moved as single object, but each half must be updated separately</em>
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>                 <a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a> mdfCard = (<a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a>) targetCard.getMainCard();
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>                 cardsToMove = <strong class="jxr_keyword">new</strong> <a name="CardsImpl" href="../../mage/cards/CardsImpl.html#CardsImpl">CardsImpl</a>(mdfCard);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>                 cardsToUpdate.get(toZone).add(mdfCard);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>                 <em class="jxr_comment">// example: cast left side</em>
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>                 <em class="jxr_comment">// result:</em>
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>                 <em class="jxr_comment">// * main to battlefield</em>
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>                 <em class="jxr_comment">// * left to battlefield</em>
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>                 <em class="jxr_comment">// * right to outside (it helps to ignore all triggers and other effects from that card)</em>
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>                 <strong class="jxr_keyword">switch</strong> (toZone) {
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>                     <strong class="jxr_keyword">case</strong> STACK:
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>                     <strong class="jxr_keyword">case</strong> BATTLEFIELD:
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>                         <strong class="jxr_keyword">if</strong> (targetCard.getId().equals(mdfCard.getLeftHalfCard().getId())) {
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>                             <em class="jxr_comment">// play left</em>
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>                             cardsToUpdate.get(toZone).add(mdfCard.getLeftHalfCard());
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>                             cardsToUpdate.get(Zone.OUTSIDE).add(mdfCard.getRightHalfCard());
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>                         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (targetCard.getId().equals(mdfCard.getRightHalfCard().getId())) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>                             <em class="jxr_comment">// play right</em>
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>                             cardsToUpdate.get(toZone).add(mdfCard.getRightHalfCard());
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>                             cardsToUpdate.get(Zone.OUTSIDE).add(mdfCard.getLeftHalfCard());
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>                         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>                             <em class="jxr_comment">// cast mdf (only on stack)</em>
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>                             <strong class="jxr_keyword">if</strong> (!toZone.equals(Zone.STACK)) {
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>                                 <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Wrong mdf card move to "</span> + toZone + <span class="jxr_string">" in placeInDestinationZone"</span>);
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>                             }
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>                             cardsToUpdate.get(toZone).add(mdfCard.getLeftHalfCard());
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>                             cardsToUpdate.get(toZone).add(mdfCard.getRightHalfCard());
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>                         }
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>                         <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>                     <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>                         <em class="jxr_comment">// move all parts</em>
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>                         cardsToUpdate.get(toZone).add(mdfCard.getLeftHalfCard());
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>                         cardsToUpdate.get(toZone).add(mdfCard.getRightHalfCard());
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>                         <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>                 }
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>                 cardsToMove = <strong class="jxr_keyword">new</strong> <a name="CardsImpl" href="../../mage/cards/CardsImpl.html#CardsImpl">CardsImpl</a>(targetCard);
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>                 cardsToUpdate.get(toZone).addAll(cardsToMove);
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>             }
+<a class="jxr_linenumber" name="L192" href="#L192">192</a> 
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>             <a name="Player" href="../../mage/players/Player.html#Player">Player</a> owner = game.getPlayer(targetCard.getOwnerId());
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>             <strong class="jxr_keyword">switch</strong> (toZone) {
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>                 <strong class="jxr_keyword">case</strong> HAND:
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>                     <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : cardsToMove.getCards(game)) {
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>                         game.getPlayer(card.getOwnerId()).getHand().add(card);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>                     }
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>                 <strong class="jxr_keyword">case</strong> GRAVEYARD:
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>                     <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : chooseOrder(
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>                             <span class="jxr_string">"order to put in graveyard (last chosen will be on top)"</span>, cardsToMove, owner, game)) {
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>                         game.getPlayer(card.getOwnerId()).getGraveyard().add(card);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>                     }
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>                 <strong class="jxr_keyword">case</strong> LIBRARY:
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>                     <strong class="jxr_keyword">if</strong> (info instanceof ZoneChangeInfo.Library &amp;&amp; ((ZoneChangeInfo.Library) info).top) {
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>                         <em class="jxr_comment">// on top</em>
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>                         <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : chooseOrder(
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>                                 <span class="jxr_string">"order to put on top of library (last chosen will be topmost)"</span>, cardsToMove, owner, game)) {
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>                             game.getPlayer(card.getOwnerId()).getLibrary().putOnTop(card, game);
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>                         }
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>                     } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>                         <em class="jxr_comment">// on bottom</em>
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>                         <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : chooseOrder(
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>                                 <span class="jxr_string">"order to put on bottom of library (last chosen will be bottommost)"</span>, cardsToMove, owner, game)) {
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>                             game.getPlayer(card.getOwnerId()).getLibrary().putOnBottom(card, game);
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>                         }
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>                     }
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>                 <strong class="jxr_keyword">case</strong> EXILED:
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>                     <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : cardsToMove.getCards(game)) {
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>                         <strong class="jxr_keyword">if</strong> (info instanceof ZoneChangeInfo.Exile &amp;&amp; ((ZoneChangeInfo.Exile) info).id != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>                             ZoneChangeInfo.Exile exileInfo = (ZoneChangeInfo.Exile) info;
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>                             game.getExile().createZone(exileInfo.id, exileInfo.name).add(card);
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>                         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>                             game.getExile().getPermanentExile().add(card);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>                         }
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>                     }
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>                 <strong class="jxr_keyword">case</strong> COMMAND:
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>                     <em class="jxr_comment">// There should never be more than one card here.</em>
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>                     <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : cardsToMove.getCards(game)) {
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>                         game.addCommander(<strong class="jxr_keyword">new</strong> <a name="Commander" href="../../mage/game/command/Commander.html#Commander">Commander</a>(card));
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>                     }
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>                 <strong class="jxr_keyword">case</strong> STACK:
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>                     <em class="jxr_comment">// There should never be more than one card here.</em>
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>                     <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : cardsToMove.getCards(game)) {
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>                         <a name="Spell" href="../../mage/game/stack/Spell.html#Spell">Spell</a> spell;
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>                         <strong class="jxr_keyword">if</strong> (info instanceof ZoneChangeInfo.Stack &amp;&amp; ((ZoneChangeInfo.Stack) info).spell != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>                             spell = ((ZoneChangeInfo.Stack) info).spell;
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>                         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>                             spell = <strong class="jxr_keyword">new</strong> <a name="Spell" href="../../mage/game/stack/Spell.html#Spell">Spell</a>(card, card.getSpellAbility().copy(), card.getOwnerId(), event.getFromZone(), game);
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>                         }
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>                         spell.syncZoneChangeCounterOnStack(card, game);
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>                         game.getStack().push(spell);
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>                         game.getState().setZone(spell.getId(), Zone.STACK);
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>                         game.getState().setZone(card.getId(), Zone.STACK);
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>                     }
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>                 <strong class="jxr_keyword">case</strong> BATTLEFIELD:
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>                     <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> permanent = event.getTarget();
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>                     game.addPermanent(permanent, createOrder);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>                     game.getPermanentsEntering().remove(permanent.getId());
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>                 <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> UnsupportedOperationException(<span class="jxr_string">"to Zone "</span> + toZone.toString() + <span class="jxr_string">" not supported yet"</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>             }
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         }
+<a class="jxr_linenumber" name="L261" href="#L261">261</a> 
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         <em class="jxr_comment">// update zone in main</em>
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         game.setZone(event.getTargetId(), event.getToZone());
+<a class="jxr_linenumber" name="L264" href="#L264">264</a> 
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         <em class="jxr_comment">// update zone in other parts (meld cards, mdf half cards)</em>
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         cardsToUpdate.entrySet().forEach(entry -&gt; {
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>             <strong class="jxr_keyword">for</strong> (<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card : entry.getValue().getCards(game)) {
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>                 <strong class="jxr_keyword">if</strong> (!card.getId().equals(event.getTargetId())) {
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>                     game.setZone(card.getId(), entry.getKey());
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>                 }
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>             }
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         });
+<a class="jxr_linenumber" name="L273" href="#L273">273</a> 
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         <em class="jxr_comment">// reset meld status</em>
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         <strong class="jxr_keyword">if</strong> (targetCard instanceof <a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a>) {
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>             <strong class="jxr_keyword">if</strong> (event.getToZone() != Zone.BATTLEFIELD) {
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>                 ((<a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a>) targetCard).setMelded(false, game);
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>             }
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         }
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>     }
+<a class="jxr_linenumber" name="L281" href="#L281">281</a> 
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> getTargetCard(<a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, UUID targetId) {
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card = game.getCard(targetId);
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>         <strong class="jxr_keyword">if</strong> (card != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>             <strong class="jxr_keyword">return</strong> card;
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         }
+<a class="jxr_linenumber" name="L287" href="#L287">287</a> 
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         card = game.getMeldCard(targetId);
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         <strong class="jxr_keyword">if</strong> (card != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>             <strong class="jxr_keyword">return</strong> card;
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         }
+<a class="jxr_linenumber" name="L292" href="#L292">292</a> 
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         <strong class="jxr_keyword">return</strong> game.getPermanent(targetId);
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>     }
+<a class="jxr_linenumber" name="L295" href="#L295">295</a> 
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">boolean</strong> maybeRemoveFromSourceZone(<a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> info, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         <a name="ZoneChangeEvent" href="../../mage/game/events/ZoneChangeEvent.html#ZoneChangeEvent">ZoneChangeEvent</a> event = info.event;
+<a class="jxr_linenumber" name="L298" href="#L298">298</a> 
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>         <em class="jxr_comment">// Handle Unmelded Cards</em>
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         <strong class="jxr_keyword">if</strong> (info instanceof ZoneChangeInfo.Unmelded) {
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>             ZoneChangeInfo.Unmelded unmelded = (ZoneChangeInfo.Unmelded) info;
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>             <a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a> meld = game.getMeldCard(event.getTargetId());
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>             <strong class="jxr_keyword">for</strong> (Iterator&lt;ZoneChangeInfo&gt; itr = unmelded.subInfo.iterator(); itr.hasNext(); ) {
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>                 <a name="ZoneChangeInfo" href="../../mage/game/ZoneChangeInfo.html#ZoneChangeInfo">ZoneChangeInfo</a> subInfo = itr.next();
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>                 <strong class="jxr_keyword">if</strong> (!maybeRemoveFromSourceZone(subInfo, game, source)) {
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>                     itr.remove();
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (Objects.equals(subInfo.event.getTargetId(), meld.getTopHalfCard().getId())) {
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>                     meld.setTopLastZoneChangeCounter(meld.getTopHalfCard().getZoneChangeCounter(game));
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (Objects.equals(subInfo.event.getTargetId(), meld.getBottomHalfCard().getId())) {
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>                     meld.setBottomLastZoneChangeCounter(meld.getBottomHalfCard().getZoneChangeCounter(game));
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>                 }
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>             }
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>             <strong class="jxr_keyword">if</strong> (unmelded.subInfo.isEmpty()) {
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>                 <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>             }
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>             <em class="jxr_comment">// We arbitrarily prefer the bottom half card. This should never be relevant.</em>
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>             meld.updateZoneChangeCounter(game, unmelded.subInfo.get(unmelded.subInfo.size() - 1).event);
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>         }
+<a class="jxr_linenumber" name="L320" href="#L320">320</a> 
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>         <em class="jxr_comment">// Handle all normal cases</em>
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card = getTargetCard(game, event.getTargetId());
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         <strong class="jxr_keyword">if</strong> (card == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>             <em class="jxr_comment">// If we can't find the card we can't remove it.</em>
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>             <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         }
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>         <strong class="jxr_keyword">boolean</strong> success = false;
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         <strong class="jxr_keyword">if</strong> (info.faceDown) {
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>             card.setFaceDown(<strong class="jxr_keyword">true</strong>, game);
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (event.getToZone().equals(Zone.BATTLEFIELD)) {
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>             <strong class="jxr_keyword">if</strong> (!card.isPermanent(game)
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>                     &amp;&amp; (!card.isTransformable() || Boolean.FALSE.equals(game.getState().getValue(TransformAbility.VALUE_KEY_ENTER_TRANSFORMED + card.getId())))) {
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>                 <em class="jxr_comment">// Non permanents (Instants, Sorceries, ... stay in the zone they are if an abilty/effect tries to move it to the battlefield</em>
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>                 <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>             }
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>         }
+<a class="jxr_linenumber" name="L338" href="#L338">338</a> 
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>         <strong class="jxr_keyword">if</strong> (!game.replaceEvent(event)) {
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>             <a name="Zone" href="../../mage/constants/Zone.html#Zone">Zone</a> fromZone = event.getFromZone();
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>             <strong class="jxr_keyword">if</strong> (event.getToZone() == Zone.BATTLEFIELD) {
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>                 <em class="jxr_comment">// prepare card and permanent</em>
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>                 <em class="jxr_comment">// If needed take attributes from the spell (e.g. color of spell was changed)</em>
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>                 card = takeAttributesFromSpell(card, event, game);
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>                 <em class="jxr_comment">// controlling player can be replaced so use event player now</em>
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>                 <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> permanent;
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>                 <strong class="jxr_keyword">if</strong> (card instanceof <a name="MeldCard" href="../../mage/cards/MeldCard.html#MeldCard">MeldCard</a>) {
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>                     permanent = <strong class="jxr_keyword">new</strong> <a name="PermanentMeld" href="../../mage/game/permanent/PermanentMeld.html#PermanentMeld">PermanentMeld</a>(card, event.getPlayerId(), game);
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (card instanceof <a name="ModalDoubleFacesCard" href="../../mage/cards/ModalDoubleFacesCard.html#ModalDoubleFacesCard">ModalDoubleFacesCard</a>) {
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>                     <em class="jxr_comment">// main mdf card must be processed before that call (e.g. only halfes can be moved to battlefield)</em>
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Unexpected trying of move mdf card to battlefield instead half"</span>);
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (card instanceof <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a>) {
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> IllegalStateException(<span class="jxr_string">"Unexpected trying of move permanent to battlefield instead card"</span>);
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>                     permanent = <strong class="jxr_keyword">new</strong> <a name="PermanentCard" href="../../mage/game/permanent/PermanentCard.html#PermanentCard">PermanentCard</a>(card, event.getPlayerId(), game);
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>                 }
+<a class="jxr_linenumber" name="L357" href="#L357">357</a> 
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>                 <em class="jxr_comment">// put onto battlefield with possible counters</em>
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>                 game.getPermanentsEntering().put(permanent.getId(), permanent);
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>                 card.checkForCountersToAdd(permanent, source, game);
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>                 permanent.setTapped(info instanceof ZoneChangeInfo.Battlefield
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>                         &amp;&amp; ((ZoneChangeInfo.Battlefield) info).tapped);
+<a class="jxr_linenumber" name="L363" href="#L363">363</a> 
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>                 permanent.setFaceDown(info.faceDown, game);
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>                 <strong class="jxr_keyword">if</strong> (info.faceDown) {
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>                     card.setFaceDown(false, game);
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>                 }
+<a class="jxr_linenumber" name="L368" href="#L368">368</a> 
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>                 <em class="jxr_comment">// make sure the controller of all continuous effects of this card are switched to the current controller</em>
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>                 game.setScopeRelevant(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>                 game.getContinuousEffects().setController(permanent.getId(), permanent.getControllerId());
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>                 <strong class="jxr_keyword">if</strong> (permanent.entersBattlefield(source, game, fromZone, <strong class="jxr_keyword">true</strong>)
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>                         &amp;&amp; card.removeFromZone(game, fromZone, source)) {
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>                     success = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>                     event.setTarget(permanent);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>                     <em class="jxr_comment">// revert controller to owner if permanent does not enter</em>
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>                     game.getContinuousEffects().setController(permanent.getId(), permanent.getOwnerId());
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>                     game.getPermanentsEntering().remove(permanent.getId());
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>                 }
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>                 game.setScopeRelevant(false);
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (event.getTarget() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>                 card.setFaceDown(info.faceDown, game);
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>                 <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> target = event.getTarget();
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>                 success = target.removeFromZone(game, fromZone, source)
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>                         &amp;&amp; game.getPlayer(target.getControllerId()).removeFromBattlefield(target, source, game);
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>                 card.setFaceDown(info.faceDown, game);
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>                 success = card.removeFromZone(game, fromZone, source);
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>             }
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         }
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         <strong class="jxr_keyword">if</strong> (success) {
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>             <em class="jxr_comment">// change ZCC on real enter</em>
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>             <em class="jxr_comment">// warning, tokens creation code uses same zcc logic as cards (+1 zcc on enter to battlefield)</em>
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>             <em class="jxr_comment">// so if you want to change zcc logic here (but I know you don't) then change token code</em>
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>             <em class="jxr_comment">// too in TokenImpl.putOntoBattlefieldHelper</em>
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>             <em class="jxr_comment">// KickerTest do many tests for token's zcc</em>
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>             <strong class="jxr_keyword">if</strong> (event.getToZone() == Zone.BATTLEFIELD &amp;&amp; event.getTarget() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>                 event.getTarget().updateZoneChangeCounter(game, event);
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (!(card instanceof <a name="Permanent" href="../../mage/game/permanent/Permanent.html#Permanent">Permanent</a>)) {
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>                 card.updateZoneChangeCounter(game, event);
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>             }
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         }
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         <strong class="jxr_keyword">return</strong> success;
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>     }
+<a class="jxr_linenumber" name="L406" href="#L406">406</a> 
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> List&lt;Card&gt; chooseOrder(String message, <a name="Cards" href="../../mage/cards/Cards.html#Cards">Cards</a> cards, <a name="Player" href="../../mage/players/Player.html#Player">Player</a> player, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         List&lt;Card&gt; order = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         <strong class="jxr_keyword">if</strong> (cards.isEmpty()) {
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>             <strong class="jxr_keyword">return</strong> order;
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>         }
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         <a name="TargetCard" href="../../mage/target/TargetCard.html#TargetCard">TargetCard</a> target = <strong class="jxr_keyword">new</strong> <a name="TargetCard" href="../../mage/target/TargetCard.html#TargetCard">TargetCard</a>(Zone.ALL, <strong class="jxr_keyword">new</strong> <a name="FilterCard" href="../../mage/filter/FilterCard.html#FilterCard">FilterCard</a>(message));
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>         target.setRequired(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>         <strong class="jxr_keyword">while</strong> (player.canRespond() &amp;&amp; cards.size() &gt; 1) {
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>             player.choose(Outcome.Neutral, cards, target, game);
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>             UUID targetObjectId = target.getFirstTarget();
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>             order.add(cards.get(targetObjectId, game));
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>             cards.remove(targetObjectId);
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>             target.clearChosen();
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         }
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>         order.add(cards.getCards(game).iterator().next());
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>         <strong class="jxr_keyword">return</strong> order;
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>     }
+<a class="jxr_linenumber" name="L424" href="#L424">424</a> 
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <a name="Card" href="../../mage/cards/Card.html#Card">Card</a> takeAttributesFromSpell(<a name="Card" href="../../mage/cards/Card.html#Card">Card</a> card, <a name="ZoneChangeEvent" href="../../mage/game/events/ZoneChangeEvent.html#ZoneChangeEvent">ZoneChangeEvent</a> event, <a name="Game" href="../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>         card = card.copy();
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>         <strong class="jxr_keyword">if</strong> (Zone.STACK == event.getFromZone()) {
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>             <a name="Spell" href="../../mage/game/stack/Spell.html#Spell">Spell</a> spell = game.getStack().getSpell(event.getTargetId());
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>             <strong class="jxr_keyword">if</strong> (spell != <strong class="jxr_keyword">null</strong> &amp;&amp; !spell.isFaceDown(game)) {
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>                 <strong class="jxr_keyword">if</strong> (!card.getColor(game).equals(spell.getColor(game))) {
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>                     <em class="jxr_comment">// the card that is referenced to in the permanent is copied and the spell attributes are set to this copied card</em>
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>                     card.getColor(game).setColor(spell.getColor(game));
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>                 }
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>             }
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         }
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>         <strong class="jxr_keyword">return</strong> card;
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>     }
+<a class="jxr_linenumber" name="L438" href="#L438">438</a> 
+<a class="jxr_linenumber" name="L439" href="#L439">439</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

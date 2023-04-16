@@ -1,0 +1,241 @@
+
+≤mage.abilities.costs.common.ExileTopCreatureCardOfGraveyardCost#pay(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZLmage/abilities/costs/Cost;)ZÇ
+xD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/ExileTopCreatureCardOfGraveyardCost.java( (("startingBlock*˙
+25 5(Q
+O
+5* 5(5
+%9mage.constants.Zone"__id*"
+
+__unknown_file (
+""íè
+5 5(D
+%10boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*8
+
+__unknown_file (
+
+topCardmage.cards.Card*7
+
+__unknown_file (
+
+%9mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ƒ
+3- -(!≤Ø
+- .(
+%1mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getGraveyard()ÌÍ
+- /(
+%2java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+%1mage.game.Graveyard*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)°û
+- 0(
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%2java.util.Set2stream()∏
+µ
+1 1(5"
+%4java.util.function.Predicate"__declareFunction*r
+
+__unknown_file (VT
+R__sonar_lambda_201$mage.abilities.costs.common.ExileTopCreatureCardOfGraveyardCostá
+Ñ
+
+__unknown_file (,
+"
+%4java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¨©
+- 1(6
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%4java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)™ß
+- 2(
+%7java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream2findFirst()›⁄
+- 3(
+%8mage.cards.Card"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%7java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)c
+a
+- 3(
+topCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%8mage.cards.Card*
+2
+1*ˆ	
+startingBlock( ((uï
+í
+' '(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+( ((&!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11ä
+á
+' '(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+(- ((1
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12î
+ë
+' '(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+(; ((A 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13í
+è
+' '(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+(H ((T
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%14ö
+ó
+' '(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Costg
+e
+(k ((t&
+	costToPaymage.abilities.costs.Cost"__annotation*#
+
+__unknown_file (
+
+%15*
+5*!
+4+ +("
++ +(
+""*Ç
+5) )( ˙˜
+) )(8
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+) )(9!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Player*
+3
+4*!
+18 8("
+8 8(
+"":-
+( (('!
+abilitymage.abilities.Ability:"
+(( ((2
+gamemage.game.Game:,
+(3 ((B 
+sourcemage.abilities.Ability:*
+(C ((U
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"":2
+(f ((t&
+	costToPaymage.abilities.costs.CostBCA
+?mage.abilities.costs.common.ExileTopCreatureCardOfGraveyardCostHP

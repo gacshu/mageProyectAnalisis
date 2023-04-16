@@ -1,0 +1,940 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>ConnectDialog xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/mage/client/dialog/ConnectDialog.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.client.dialog;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.repository.RepositoryUtil;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.choices.Choice;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.choices.ChoiceImpl;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.client.MageFrame;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.client.SessionHandler;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.client.preference.MagePreferences;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.client.util.ClientDefaultSettings;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.client.util.gui.countryBox.CountryItemEditor;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.client.util.sets.ConstructedFormats;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.remote.Connection;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.utils.StreamUtils;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> javax.swing.*;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> java.awt.*;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> java.awt.event.ActionListener;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> java.io.*;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> java.net.*;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.CancellationException;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.ExecutionException;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeUnit;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeoutException;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> mage.client.dialog.PreferencesDialog.*;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <em class="jxr_javadoccomment"> * App GUI: connection windows</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <em class="jxr_javadoccomment"> * @author BetaSteward_at_googlemail.com</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="ConnectDialog" href="../../../mage/client/dialog/ConnectDialog.html#ConnectDialog">ConnectDialog</a> <strong class="jxr_keyword">extends</strong> <a name="MageDialog" href="../../../mage/client/dialog/MageDialog.html#MageDialog">MageDialog</a> {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = Logger.getLogger(ConnectDialog.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      <strong class="jxr_keyword">private</strong> Connection connection;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      <strong class="jxr_keyword">private</strong> ConnectTask task;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a name="RegisterUserDialog" href="../../../mage/client/dialog/RegisterUserDialog.html#RegisterUserDialog">RegisterUserDialog</a> registerUserDialog;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a name="ResetPasswordDialog" href="../../../mage/client/dialog/ResetPasswordDialog.html#ResetPasswordDialog">ResetPasswordDialog</a> resetPasswordDialog;
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> ActionListener connectAction = evt -&gt; btnConnectActionPerformed(evt);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_javadoccomment">     * Creates new form ConnectDialog</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      <strong class="jxr_keyword">public</strong> <a name="ConnectDialog" href="../../../mage/client/dialog/ConnectDialog.html#ConnectDialog">ConnectDialog</a>() {
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          initComponents();
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <strong class="jxr_keyword">this</strong>.txtServer.addActionListener(connectAction);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">this</strong>.txtPort.addActionListener(connectAction);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <strong class="jxr_keyword">this</strong>.txtUserName.addActionListener(connectAction);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <strong class="jxr_keyword">this</strong>.txtPassword.addActionListener(connectAction);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          registerUserDialog = <strong class="jxr_keyword">new</strong> <a name="RegisterUserDialog" href="../../../mage/client/dialog/RegisterUserDialog.html#RegisterUserDialog">RegisterUserDialog</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          MageFrame.getDesktop().add(registerUserDialog, JLayeredPane.MODAL_LAYER);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          resetPasswordDialog = <strong class="jxr_keyword">new</strong> <a name="ResetPasswordDialog" href="../../../mage/client/dialog/ResetPasswordDialog.html#ResetPasswordDialog">ResetPasswordDialog</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          MageFrame.getDesktop().add(resetPasswordDialog, JLayeredPane.MODAL_LAYER);
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      }
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showDialog() {
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          String serverAddress = MagePreferences.getServerAddressWithDefault(ClientDefaultSettings.serverName);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <strong class="jxr_keyword">this</strong>.txtServer.setText(serverAddress);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <strong class="jxr_keyword">this</strong>.txtPort.setText(Integer.toString(MagePreferences.getServerPortWithDefault(ClientDefaultSettings.port)));
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(serverAddress));
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(serverAddress));
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          <strong class="jxr_keyword">this</strong>.chkAutoConnect.setSelected(Boolean.parseBoolean(MageFrame.getPreferences().get(KEY_CONNECT_AUTO_CONNECT, <span class="jxr_string">"false"</span>)));
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          <strong class="jxr_keyword">this</strong>.chkForceUpdateDB.setSelected(false); <em class="jxr_comment">// has always to be set manually to force comparison</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          String selectedFlag = MageFrame.getPreferences().get(KEY_CONNECT_FLAG, <span class="jxr_string">"world"</span>);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <em class="jxr_comment">// set the selected country/flag</em>
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; cbFlag.getItemCount(); i++) {
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>              String[] name = (String[]) cbFlag.getItemAt(i);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>              <strong class="jxr_keyword">if</strong> (name[1].equals(selectedFlag)) {
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>                  cbFlag.setSelectedIndex(i);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>                  <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>              }
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          }
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">this</strong>.setModal(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">this</strong>.setLocation(50, 50);
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          <strong class="jxr_keyword">this</strong>.setVisible(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>      }
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>  
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> saveSettings() {
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          String serverAddress = txtServer.getText().trim();
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          MagePreferences.setServerAddress(serverAddress);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          MagePreferences.setServerPort(Integer.parseInt(txtPort.getText().trim()));
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          MagePreferences.setUserName(serverAddress, txtUserName.getText().trim());
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          MagePreferences.setPassword(serverAddress, String.valueOf(txtPassword.getPassword()).trim());
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          MageFrame.getPreferences().put(KEY_CONNECT_AUTO_CONNECT, Boolean.toString(chkAutoConnect.isSelected()));
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>  
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          <em class="jxr_comment">// last settings for reconnect</em>
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          MagePreferences.saveLastServer();
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>      }
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>      
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setServerSettings(String address, String port, <strong class="jxr_keyword">boolean</strong> needRegistration) {
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          <strong class="jxr_keyword">this</strong>.txtServer.setText(address);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         <strong class="jxr_keyword">this</strong>.txtPort.setText(port);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(address));
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         <strong class="jxr_keyword">if</strong> (needRegistration) {
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>             <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(address));
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>             <strong class="jxr_keyword">this</strong>.txtPassword.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         }
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     }
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> chooseAndSetServerSettingsFromOther() {
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         BufferedReader in = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         Writer output = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>             String serverUrl = PreferencesDialog.getCachedValue(KEY_CONNECTION_URL_SERVER_LIST, <span class="jxr_string">"http://xmage.de/files/server-list.txt"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>             <strong class="jxr_keyword">if</strong> (serverUrl.contains(<span class="jxr_string">"xmage.info/files/"</span>)) {
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>                 serverUrl = serverUrl.replace(<span class="jxr_string">"xmage.info/files/"</span>, <span class="jxr_string">"xmage.de/files/"</span>); <em class="jxr_comment">// replace old URL if still saved</em>
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>                 PreferencesDialog.saveValue(KEY_CONNECTION_URL_SERVER_LIST, serverUrl);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>             }
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>             URL serverListURL = <strong class="jxr_keyword">new</strong> URL(serverUrl);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a> 
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>             Connection.ProxyType configProxyType = Connection.ProxyType.valueByText(PreferencesDialog.getCachedValue(PreferencesDialog.KEY_PROXY_TYPE, <span class="jxr_string">"None"</span>));
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>             Proxy p = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>             Proxy.Type type = Proxy.Type.DIRECT;
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>             <strong class="jxr_keyword">switch</strong> (configProxyType) {
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>                 <strong class="jxr_keyword">case</strong> HTTP:
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>                     type = Proxy.Type.HTTP;
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>                 <strong class="jxr_keyword">case</strong> SOCKS:
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>                     type = Proxy.Type.SOCKS;
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>                 <strong class="jxr_keyword">case</strong> NONE:
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>                 <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>                     p = Proxy.NO_PROXY;
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>                     <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>             }
+<a class="jxr_linenumber" name="L135" href="#L135">135</a> 
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>             <strong class="jxr_keyword">if</strong> (p == <strong class="jxr_keyword">null</strong> || !p.equals(Proxy.NO_PROXY)) {
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>                 <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>                     String address = PreferencesDialog.getCachedValue(PreferencesDialog.KEY_PROXY_ADDRESS, <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>                     Integer port = Integer.parseInt(PreferencesDialog.getCachedValue(PreferencesDialog.KEY_PROXY_PORT, <span class="jxr_string">"80"</span>));
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>                     p = <strong class="jxr_keyword">new</strong> Proxy(type, <strong class="jxr_keyword">new</strong> InetSocketAddress(address, port));
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>                 } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>                     <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> RuntimeException(<span class="jxr_string">"Gui_DownloadPictures : error 1 - "</span> + ex);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>                 }
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>             }
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> 
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>             <strong class="jxr_keyword">if</strong> (p == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>                 JOptionPane.showMessageDialog(<strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Couldn't configure Proxy object!"</span>, <span class="jxr_string">"Error"</span>, JOptionPane.ERROR_MESSAGE);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>                 <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>             }
+<a class="jxr_linenumber" name="L150" href="#L150">150</a> 
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>             <strong class="jxr_keyword">boolean</strong> URLNotFound = false;
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>                 in = <strong class="jxr_keyword">new</strong> BufferedReader(<strong class="jxr_keyword">new</strong> InputStreamReader(serverListURL.openConnection(p).getInputStream()));
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>             } <strong class="jxr_keyword">catch</strong> (SocketTimeoutException | FileNotFoundException | UnknownHostException ex) {
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>                 logger.warn(<span class="jxr_string">"Could not read serverlist from: "</span> + serverListURL.toString());
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>                 File f = <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">"serverlist.txt"</span>);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>                 <strong class="jxr_keyword">if</strong> (f.exists() &amp;&amp; !f.isDirectory()) {
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>                     logger.info(<span class="jxr_string">"Using buffered serverlist: serverlist.txt"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>                     URLNotFound = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>                     in = <strong class="jxr_keyword">new</strong> BufferedReader(<strong class="jxr_keyword">new</strong> FileReader(<span class="jxr_string">"serverlist.txt"</span>));
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>                 }
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>             }
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>             List&lt;String&gt; servers = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>             <strong class="jxr_keyword">if</strong> (in != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>                 <strong class="jxr_keyword">if</strong> (!URLNotFound) {
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>                     <em class="jxr_comment">// write serverlist to be able to read if URL is not available</em>
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>                     File file = <strong class="jxr_keyword">new</strong> File(<span class="jxr_string">"serverlist.txt"</span>);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>                     <strong class="jxr_keyword">if</strong> (file.exists() &amp;&amp; !file.isDirectory()) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>                         file.delete();
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>                     }
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>                     output = <strong class="jxr_keyword">new</strong> BufferedWriter(<strong class="jxr_keyword">new</strong> FileWriter(file));
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>                 }
+<a class="jxr_linenumber" name="L174" href="#L174">174</a> 
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>                 String inputLine;
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>                 <strong class="jxr_keyword">while</strong> ((inputLine = in.readLine()) != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>                     logger.debug(<span class="jxr_string">"Found server: "</span> + inputLine);
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>                     servers.add(inputLine);
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>                     <strong class="jxr_keyword">if</strong> (output != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>                         output.append(inputLine).append('\n');
+<a class="jxr_linenumber" name="L181" href="#L181">181</a> 
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>                     }
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>                 }
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>             }
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>             <strong class="jxr_keyword">if</strong> (servers.isEmpty()) {
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>                 JOptionPane.showMessageDialog(<strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Couldn't find any server."</span>);
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>                 <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>             }
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> 
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>             String selectedServer = (String) JOptionPane.showInputDialog(<strong class="jxr_keyword">null</strong>,
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>                     <span class="jxr_string">"Choose XMage Public Server:"</span>, <span class="jxr_string">"Input"</span>,
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>                     JOptionPane.INFORMATION_MESSAGE, <strong class="jxr_keyword">null</strong>, servers.toArray(),
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>                     servers.get(0));
+<a class="jxr_linenumber" name="L194" href="#L194">194</a>             <strong class="jxr_keyword">if</strong> (selectedServer != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>                 String[] params = selectedServer.split(<span class="jxr_string">":"</span>);
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>                 <strong class="jxr_keyword">if</strong> (params.length == 3) {
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>                     setServerSettings(params[1], params[2], <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>                     JOptionPane.showMessageDialog(<strong class="jxr_keyword">null</strong>, <span class="jxr_string">"Wrong server data format."</span>);
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>                 }
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>             }
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>             logger.error(ex, ex);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>             StreamUtils.closeQuietly(in);
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>             StreamUtils.closeQuietly(output);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         }
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>     }
+<a class="jxr_linenumber" name="L209" href="#L209">209</a> 
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>     <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L211" href="#L211">211</a> <em class="jxr_javadoccomment">     * This method is called from within the constructor to initialize the form.</em>
+<a class="jxr_linenumber" name="L212" href="#L212">212</a> <em class="jxr_javadoccomment">     * WARNING: Do NOT modify this code. The content of this method is always</em>
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> <em class="jxr_javadoccomment">     * regenerated by the Form Editor.</em>
+<a class="jxr_linenumber" name="L214" href="#L214">214</a> <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>     @SuppressWarnings(<span class="jxr_string">"unchecked"</span>)
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>     <em class="jxr_comment">// &lt;editor-fold defaultstate="collapsed" desc="Generated Code"&gt;//GEN-BEGIN:initComponents</em>
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> initComponents() {
+<a class="jxr_linenumber" name="L218" href="#L218">218</a> 
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         lblServer = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         lblUserName = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         txtUserName = <strong class="jxr_keyword">new</strong> javax.swing.JTextField();
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         lblPassword = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         txtPassword = <strong class="jxr_keyword">new</strong> javax.swing.JPasswordField();
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         lblFlag = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         chkAutoConnect = <strong class="jxr_keyword">new</strong> javax.swing.JCheckBox();
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         chkForceUpdateDB = <strong class="jxr_keyword">new</strong> javax.swing.JCheckBox();
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>         jProxySettingsButton = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         btnConnect = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         btnCancel = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         lblStatus = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         btnRegister = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>         btnForgotPassword = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>         lblFastConnect = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         panelFlag = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         cbFlag = <strong class="jxr_keyword">new</strong> mage.client.util.gui.countryBox.CountryComboBox();
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         filler1 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(4, 0), <strong class="jxr_keyword">new</strong> java.awt.Dimension(5, 32767));
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         btnFlagSearch = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         panelFast = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         btnFindMain = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         btnFindLocal = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         btnFindBeta = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         btnFindUs = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         btnFindOther = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         btnFindEU = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         panelServer = <strong class="jxr_keyword">new</strong> javax.swing.JPanel();
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         txtServer = <strong class="jxr_keyword">new</strong> javax.swing.JTextField();
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         txtPort = <strong class="jxr_keyword">new</strong> javax.swing.JTextField();
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         lblPort = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         btnCheckStatus = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         filler2 = <strong class="jxr_keyword">new</strong> javax.swing.Box.Filler(<strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 50), <strong class="jxr_keyword">new</strong> java.awt.Dimension(0, 50), <strong class="jxr_keyword">new</strong> java.awt.Dimension(32767, 50));
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         btnWhatsNew = <strong class="jxr_keyword">new</strong> javax.swing.JButton();
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         jLabel1 = <strong class="jxr_keyword">new</strong> javax.swing.JLabel();
+<a class="jxr_linenumber" name="L253" href="#L253">253</a> 
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         setTitle(<span class="jxr_string">"Connect to server"</span>);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a> 
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         lblServer.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         lblServer.setLabelFor(txtServer);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         lblServer.setText(<span class="jxr_string">"Server name:"</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a> 
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         lblUserName.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         lblUserName.setLabelFor(txtUserName);
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         lblUserName.setText(<span class="jxr_string">"Username:"</span>);
+<a class="jxr_linenumber" name="L263" href="#L263">263</a> 
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         lblPassword.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         lblPassword.setLabelFor(txtPassword);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         lblPassword.setText(<span class="jxr_string">"Password:"</span>);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a> 
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         lblFlag.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         lblFlag.setLabelFor(txtUserName);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         lblFlag.setText(<span class="jxr_string">"User's flag:"</span>);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a> 
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         chkAutoConnect.setText(<span class="jxr_string">"Automatically connect to this server next time"</span>);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         chkAutoConnect.setToolTipText(<span class="jxr_string">"&lt;HTML&gt;If active this connect dialog will not be shown if you choose to connect.&lt;br&gt;\nInstead XMage tries to connect to the last server you were connected to."</span>);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>         chkAutoConnect.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>                 chkAutoConnectActionPerformed(evt);
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>             }
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>         });
+<a class="jxr_linenumber" name="L279" href="#L279">279</a> 
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         chkForceUpdateDB.setText(<span class="jxr_string">"Force update of card database"</span>);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         chkForceUpdateDB.setToolTipText(<span class="jxr_string">"&lt;HTML&gt;If active the comparison of the server cards database to the client database will be enforced.&lt;br&gt;If not, the comparison will only done if the database version of the client is lower than the version of the server."</span>);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         chkForceUpdateDB.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>                 chkForceUpdateDBActionPerformed(evt);
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>             }
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         });
+<a class="jxr_linenumber" name="L287" href="#L287">287</a> 
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         jProxySettingsButton.setText(<span class="jxr_string">"Proxy Settings..."</span>);
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         jProxySettingsButton.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>                 jProxySettingsButtonActionPerformed(evt);
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>             }
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         });
+<a class="jxr_linenumber" name="L294" href="#L294">294</a> 
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         btnConnect.setFont(<strong class="jxr_keyword">new</strong> java.awt.Font(<span class="jxr_string">"Tahoma"</span>, 1, 11)); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>         btnConnect.setText(<span class="jxr_string">"Connect to server"</span>);
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>         btnConnect.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>         btnConnect.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>                 btnConnectActionPerformed(evt);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>             }
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         });
+<a class="jxr_linenumber" name="L303" href="#L303">303</a> 
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>         btnCancel.setText(<span class="jxr_string">"Cancel"</span>);
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         btnCancel.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         btnCancel.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>         btnCancel.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>                 btnCancelActionPerformed(evt);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>             }
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>         });
+<a class="jxr_linenumber" name="L312" href="#L312">312</a> 
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>         btnRegister.setText(<span class="jxr_string">"Register new user..."</span>);
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>         btnRegister.setToolTipText(<span class="jxr_string">"&lt;html&gt;XMage now supports user authentication.&lt;br&gt;Register your account before you log in.&lt;html&gt;"</span>);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         btnRegister.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         btnRegister.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>                 btnRegisterActionPerformed(evt);
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>             }
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         });
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         btnForgotPassword.setText(<span class="jxr_string">"Forgot password..."</span>);
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         btnForgotPassword.setToolTipText(<span class="jxr_string">"&lt;html&gt;You can reset your password if you have registered&lt;br&gt;your account with an email address.&lt;/html&gt;"</span>);
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         btnForgotPassword.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         btnForgotPassword.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>                 btnForgotPasswordActionPerformed(evt);
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>             }
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         });
+<a class="jxr_linenumber" name="L330" href="#L330">330</a> 
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         lblFastConnect.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         lblFastConnect.setLabelFor(btnFindMain);
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         lblFastConnect.setText(<span class="jxr_string">"Connect to:"</span>);
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>         lblFastConnect.setName(<span class="jxr_string">""</span>); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L335" href="#L335">335</a> 
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>         panelFlag.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(50, 33));
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>         panelFlag.setLayout(<strong class="jxr_keyword">new</strong> javax.swing.BoxLayout(panelFlag, javax.swing.BoxLayout.LINE_AXIS));
+<a class="jxr_linenumber" name="L338" href="#L338">338</a> 
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>         cbFlag.setEditable(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>         cbFlag.setMaximumRowCount(16);
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>         cbFlag.setAlignmentX(0.0F);
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>         cbFlag.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(50, 18));
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         cbFlag.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(278, 15));
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>         panelFlag.add(cbFlag);
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>         panelFlag.add(filler1);
+<a class="jxr_linenumber" name="L346" href="#L346">346</a> 
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>         btnFlagSearch.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/buttons/search_24.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>         btnFlagSearch.setToolTipText(<span class="jxr_string">"Fast search your flag"</span>);
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>         btnFlagSearch.setAlignmentX(1.0F);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>         btnFlagSearch.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>         btnFlagSearch.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>                 btnFlagSearchActionPerformed(evt);
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>             }
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>         });
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>         panelFlag.add(btnFlagSearch);
+<a class="jxr_linenumber" name="L357" href="#L357">357</a> 
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         btnFindMain.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/flags/de.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>         btnFindMain.setText(<span class="jxr_string">"X"</span>);
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>         btnFindMain.setToolTipText(<span class="jxr_string">"Connect to xmage.de (first Europe server, most popular, registration needs)"</span>);
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>         btnFindMain.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>         btnFindMain.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>         btnFindMain.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(42, 23));
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         btnFindMain.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(42, 23));
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>         btnFindMain.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>         btnFindMain.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>                 btnFindMainActionPerformed(evt);
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>             }
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>         });
+<a class="jxr_linenumber" name="L371" href="#L371">371</a> 
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>         btnFindLocal.setText(<span class="jxr_string">"LOCAL, AI"</span>);
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>         btnFindLocal.setToolTipText(<span class="jxr_string">"Connect to localhost, AI enabled (run local server from launcher)"</span>);
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>         btnFindLocal.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>         btnFindLocal.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>         btnFindLocal.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>         btnFindLocal.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>         btnFindLocal.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>                 btnFindLocalActionPerformed(evt);
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>             }
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>         });
+<a class="jxr_linenumber" name="L383" href="#L383">383</a> 
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>         btnFindBeta.setText(<span class="jxr_string">"BETA, AI"</span>);
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>         btnFindBeta.setToolTipText(<span class="jxr_string">"Connect to BETA server, AI enabled (use any username without registration)"</span>);
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>         btnFindBeta.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>         btnFindBeta.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>         btnFindBeta.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>         btnFindBeta.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>         btnFindBeta.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>                 btnFindBetaActionPerformed(evt);
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>             }
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>         });
+<a class="jxr_linenumber" name="L395" href="#L395">395</a> 
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>         btnFindUs.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/flags/us.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>         btnFindUs.setText(<span class="jxr_string">"US"</span>);
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>         btnFindUs.setToolTipText(<span class="jxr_string">"Connect to us.xmage.today (USA, use any username without registration)"</span>);
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>         btnFindUs.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         btnFindUs.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         btnFindUs.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>         btnFindUs.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>                 btnFindUsActionPerformed(evt);
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>             }
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>         });
+<a class="jxr_linenumber" name="L407" href="#L407">407</a> 
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         btnFindOther.setText(<span class="jxr_string">"Other..."</span>);
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>         btnFindOther.setToolTipText(<span class="jxr_string">"Choose server from full servers list"</span>);
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>         btnFindOther.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>         btnFindOther.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>                 btnFindOtherActionPerformed(evt);
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>             }
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>         });
+<a class="jxr_linenumber" name="L416" href="#L416">416</a> 
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>         btnFindEU.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/flags/europeanunion.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>         btnFindEU.setText(<span class="jxr_string">"EU"</span>);
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>         btnFindEU.setToolTipText(<span class="jxr_string">"Connect to eu.xmage.today (second Europe server, use any username without registration)"</span>);
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         btnFindEU.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>         btnFindEU.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L422" href="#L422">422</a>         btnFindEU.setMaximumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(42, 23));
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>         btnFindEU.setMinimumSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(42, 23));
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         btnFindEU.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>         btnFindEU.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>                 btnFindEUActionPerformed(evt);
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>             }
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>         });
+<a class="jxr_linenumber" name="L430" href="#L430">430</a> 
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>         javax.swing.GroupLayout panelFastLayout = <strong class="jxr_keyword">new</strong> javax.swing.GroupLayout(panelFast);
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>         panelFast.setLayout(panelFastLayout);
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>         panelFastLayout.setHorizontalGroup(
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>             panelFastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>             .addGroup(panelFastLayout.createSequentialGroup()
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>                 .addGap(0, 0, 0)
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>                 .addComponent(btnFindMain, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>                 .addComponent(btnFindEU, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>                 .addComponent(btnFindUs, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>                 .addComponent(btnFindBeta, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>                 .addComponent(btnFindLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>                 .addComponent(btnFindOther, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>                 .addGap(0, 0, 0))
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>         );
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>         panelFastLayout.setVerticalGroup(
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>             panelFastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>             .addGroup(panelFastLayout.createSequentialGroup()
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>                 .addGap(0, 0, 0)
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>                 .addGroup(panelFastLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>                     .addComponent(btnFindMain, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>                     .addComponent(btnFindLocal, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>                     .addComponent(btnFindUs, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>                     .addComponent(btnFindBeta, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>                     .addComponent(btnFindOther, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>                     .addComponent(btnFindEU, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>                 .addGap(0, 0, 0))
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>         );
+<a class="jxr_linenumber" name="L463" href="#L463">463</a> 
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>         txtPort.addKeyListener(<strong class="jxr_keyword">new</strong> java.awt.event.KeyAdapter() {
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> keyTyped(java.awt.event.KeyEvent evt) {
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>                 ConnectDialog.<strong class="jxr_keyword">this</strong>.keyTyped(evt);
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>             }
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>         });
+<a class="jxr_linenumber" name="L469" href="#L469">469</a> 
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>         lblPort.setLabelFor(txtPort);
+<a class="jxr_linenumber" name="L471" href="#L471">471</a>         lblPort.setText(<span class="jxr_string">"Port:"</span>);
+<a class="jxr_linenumber" name="L472" href="#L472">472</a> 
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>         btnCheckStatus.setIcon(<strong class="jxr_keyword">new</strong> javax.swing.ImageIcon(getClass().getResource(<span class="jxr_string">"/flags/world.png"</span>))); <em class="jxr_comment">// NOI18N</em>
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>         btnCheckStatus.setText(<span class="jxr_string">"Check online status"</span>);
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>         btnCheckStatus.setToolTipText(<span class="jxr_string">"Go to servers online statuses page"</span>);
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>         btnCheckStatus.setAlignmentY(0.0F);
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>         btnCheckStatus.setMargin(<strong class="jxr_keyword">new</strong> java.awt.Insets(2, 2, 2, 2));
+<a class="jxr_linenumber" name="L478" href="#L478">478</a>         btnCheckStatus.setPreferredSize(<strong class="jxr_keyword">new</strong> java.awt.Dimension(23, 23));
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>         btnCheckStatus.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L481" href="#L481">481</a>                 btnCheckStatusActionPerformed(evt);
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>             }
+<a class="jxr_linenumber" name="L483" href="#L483">483</a>         });
+<a class="jxr_linenumber" name="L484" href="#L484">484</a> 
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>         javax.swing.GroupLayout panelServerLayout = <strong class="jxr_keyword">new</strong> javax.swing.GroupLayout(panelServer);
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>         panelServer.setLayout(panelServerLayout);
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>         panelServerLayout.setHorizontalGroup(
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>             panelServerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>             .addGroup(panelServerLayout.createSequentialGroup()
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>                 .addComponent(txtServer, javax.swing.GroupLayout.PREFERRED_SIZE, 212, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>                 .addComponent(lblPort)
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>                 .addComponent(txtPort, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>                 .addComponent(btnCheckStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>                 .addGap(0, 0, 0))
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>         );
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>         panelServerLayout.setVerticalGroup(
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>             panelServerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>             .addGroup(panelServerLayout.createSequentialGroup()
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>                 .addGap(0, 0, 0)
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>                 .addGroup(panelServerLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<a class="jxr_linenumber" name="L504" href="#L504">504</a>                     .addComponent(txtServer, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>                     .addComponent(txtPort, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>                     .addComponent(lblPort)
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>                     .addComponent(btnCheckStatus, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+<a class="jxr_linenumber" name="L508" href="#L508">508</a>         );
+<a class="jxr_linenumber" name="L509" href="#L509">509</a> 
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>         btnWhatsNew.setText(<span class="jxr_string">"Show what's new"</span>);
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>         btnWhatsNew.addActionListener(<strong class="jxr_keyword">new</strong> java.awt.event.ActionListener() {
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>             <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> actionPerformed(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>                 btnWhatsNewActionPerformed(evt);
+<a class="jxr_linenumber" name="L514" href="#L514">514</a>             }
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>         });
+<a class="jxr_linenumber" name="L516" href="#L516">516</a> 
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>         jLabel1.setText(<span class="jxr_string">"(use empty password for servers without registration)"</span>);
+<a class="jxr_linenumber" name="L518" href="#L518">518</a> 
+<a class="jxr_linenumber" name="L519" href="#L519">519</a>         javax.swing.GroupLayout layout = <strong class="jxr_keyword">new</strong> javax.swing.GroupLayout(getContentPane());
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>         getContentPane().setLayout(layout);
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>         layout.setHorizontalGroup(
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>             .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L524" href="#L524">524</a>                 .addContainerGap()
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>                     .addComponent(lblUserName, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>                     .addComponent(lblServer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>                     .addComponent(lblFastConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L529" href="#L529">529</a>                     .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L530" href="#L530">530</a>                     .addComponent(lblFlag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>                 .addGap(18, 18, 18)
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>                     .addComponent(lblStatus, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>                     .addComponent(chkForceUpdateDB, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>                     .addComponent(chkAutoConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>                     .addComponent(txtUserName)
+<a class="jxr_linenumber" name="L537" href="#L537">537</a>                     .addComponent(panelFlag, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>                     .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>                         .addComponent(btnConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L541" href="#L541">541</a>                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>                             .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>                             .addComponent(btnForgotPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L544" href="#L544">544</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L545" href="#L545">545</a>                         .addComponent(btnCancel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE))
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>                     .addComponent(panelFast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>                     .addComponent(panelServer, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>                     .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L549" href="#L549">549</a>                         .addComponent(jProxySettingsButton)
+<a class="jxr_linenumber" name="L550" href="#L550">550</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L551" href="#L551">551</a>                         .addComponent(btnWhatsNew)
+<a class="jxr_linenumber" name="L552" href="#L552">552</a>                         .addGap(0, 0, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>                     .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L554" href="#L554">554</a>                         .addComponent(txtPassword)
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L556" href="#L556">556</a>                         .addComponent(jLabel1)))
+<a class="jxr_linenumber" name="L557" href="#L557">557</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>                 .addComponent(filler2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>                 .addContainerGap())
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>         );
+<a class="jxr_linenumber" name="L561" href="#L561">561</a>         layout.setVerticalGroup(
+<a class="jxr_linenumber" name="L562" href="#L562">562</a>             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>                 .addContainerGap()
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>                     .addComponent(panelFast, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>                     .addComponent(lblFastConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L569" href="#L569">569</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>                     .addComponent(panelServer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>                     .addComponent(lblServer, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>                     .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L575" href="#L575">575</a>                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L576" href="#L576">576</a>                             .addComponent(txtUserName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L577" href="#L577">577</a>                             .addComponent(lblUserName, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE))
+<a class="jxr_linenumber" name="L578" href="#L578">578</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L579" href="#L579">579</a>                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+<a class="jxr_linenumber" name="L580" href="#L580">580</a>                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<a class="jxr_linenumber" name="L581" href="#L581">581</a>                                 .addComponent(txtPassword)
+<a class="jxr_linenumber" name="L582" href="#L582">582</a>                                 .addComponent(jLabel1))
+<a class="jxr_linenumber" name="L583" href="#L583">583</a>                             .addComponent(lblPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+<a class="jxr_linenumber" name="L584" href="#L584">584</a>                     .addComponent(filler2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L585" href="#L585">585</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L586" href="#L586">586</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<a class="jxr_linenumber" name="L587" href="#L587">587</a>                     .addComponent(panelFlag, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L588" href="#L588">588</a>                     .addComponent(lblFlag, javax.swing.GroupLayout.PREFERRED_SIZE, 18, javax.swing.GroupLayout.PREFERRED_SIZE))
+<a class="jxr_linenumber" name="L589" href="#L589">589</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+<a class="jxr_linenumber" name="L590" href="#L590">590</a>                 .addComponent(chkAutoConnect)
+<a class="jxr_linenumber" name="L591" href="#L591">591</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L592" href="#L592">592</a>                 .addComponent(chkForceUpdateDB)
+<a class="jxr_linenumber" name="L593" href="#L593">593</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L594" href="#L594">594</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+<a class="jxr_linenumber" name="L595" href="#L595">595</a>                     .addComponent(jProxySettingsButton, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L596" href="#L596">596</a>                     .addComponent(btnWhatsNew, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+<a class="jxr_linenumber" name="L597" href="#L597">597</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+<a class="jxr_linenumber" name="L598" href="#L598">598</a>                 .addComponent(lblStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+<a class="jxr_linenumber" name="L599" href="#L599">599</a>                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+<a class="jxr_linenumber" name="L600" href="#L600">600</a>                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+<a class="jxr_linenumber" name="L601" href="#L601">601</a>                     .addGroup(layout.createSequentialGroup()
+<a class="jxr_linenumber" name="L602" href="#L602">602</a>                         .addComponent(btnRegister, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L603" href="#L603">603</a>                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+<a class="jxr_linenumber" name="L604" href="#L604">604</a>                         .addComponent(btnForgotPassword, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L605" href="#L605">605</a>                     .addComponent(btnConnect, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+<a class="jxr_linenumber" name="L606" href="#L606">606</a>                     .addComponent(btnCancel, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+<a class="jxr_linenumber" name="L607" href="#L607">607</a>                 .addGap(23, 23, 23))
+<a class="jxr_linenumber" name="L608" href="#L608">608</a>         );
+<a class="jxr_linenumber" name="L609" href="#L609">609</a> 
+<a class="jxr_linenumber" name="L610" href="#L610">610</a>         lblFastConnect.getAccessibleContext().setAccessibleName(<span class="jxr_string">"Fast connect to:"</span>);
+<a class="jxr_linenumber" name="L611" href="#L611">611</a> 
+<a class="jxr_linenumber" name="L612" href="#L612">612</a>         pack();
+<a class="jxr_linenumber" name="L613" href="#L613">613</a>     }<em class="jxr_comment">// &lt;/editor-fold&gt;//GEN-END:initComponents</em>
+<a class="jxr_linenumber" name="L614" href="#L614">614</a> 
+<a class="jxr_linenumber" name="L615" href="#L615">615</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnCancelActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnCancelActionPerformed</em>
+<a class="jxr_linenumber" name="L616" href="#L616">616</a>         MageFrame.getPreferences().put(<span class="jxr_string">"autoConnect"</span>, Boolean.toString(chkAutoConnect.isSelected()));
+<a class="jxr_linenumber" name="L617" href="#L617">617</a>         MageFrame.getPreferences().put(KEY_CONNECT_FLAG, ((<a name="CountryItemEditor" href="../../../mage/client/util/gui/countryBox/CountryItemEditor.html#CountryItemEditor">CountryItemEditor</a>) cbFlag.getEditor()).getImageItem());
+<a class="jxr_linenumber" name="L618" href="#L618">618</a>         <strong class="jxr_keyword">if</strong> (task != <strong class="jxr_keyword">null</strong> &amp;&amp; !task.isDone()) {
+<a class="jxr_linenumber" name="L619" href="#L619">619</a>             task.cancel(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L620" href="#L620">620</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L621" href="#L621">621</a>             <strong class="jxr_keyword">this</strong>.hideDialog();
+<a class="jxr_linenumber" name="L622" href="#L622">622</a>         }
+<a class="jxr_linenumber" name="L623" href="#L623">623</a>     }<em class="jxr_comment">//GEN-LAST:event_btnCancelActionPerformed</em>
+<a class="jxr_linenumber" name="L624" href="#L624">624</a> 
+<a class="jxr_linenumber" name="L625" href="#L625">625</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnConnectActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnConnectActionPerformed</em>
+<a class="jxr_linenumber" name="L626" href="#L626">626</a> 
+<a class="jxr_linenumber" name="L627" href="#L627">627</a>         <strong class="jxr_keyword">if</strong> (txtServer.getText().trim().isEmpty()) {
+<a class="jxr_linenumber" name="L628" href="#L628">628</a>             JOptionPane.showMessageDialog(rootPane, <span class="jxr_string">"Please provide a server address"</span>);
+<a class="jxr_linenumber" name="L629" href="#L629">629</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L630" href="#L630">630</a>         }
+<a class="jxr_linenumber" name="L631" href="#L631">631</a>         <strong class="jxr_keyword">if</strong> (txtPort.getText().trim().isEmpty()) {
+<a class="jxr_linenumber" name="L632" href="#L632">632</a>             JOptionPane.showMessageDialog(rootPane, <span class="jxr_string">"Please provide a port number"</span>);
+<a class="jxr_linenumber" name="L633" href="#L633">633</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L634" href="#L634">634</a>         }
+<a class="jxr_linenumber" name="L635" href="#L635">635</a>         <strong class="jxr_keyword">if</strong> (txtUserName.getText().isEmpty()) {
+<a class="jxr_linenumber" name="L636" href="#L636">636</a>             JOptionPane.showMessageDialog(rootPane, <span class="jxr_string">"Please provide a user name"</span>);
+<a class="jxr_linenumber" name="L637" href="#L637">637</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L638" href="#L638">638</a>         }
+<a class="jxr_linenumber" name="L639" href="#L639">639</a>         <em class="jxr_comment">// txtPassword is not checked here, because authentication might be disabled by the server config.</em>
+<a class="jxr_linenumber" name="L640" href="#L640">640</a>         <strong class="jxr_keyword">if</strong> (Integer.parseInt(txtPort.getText()) &lt; 1 || Integer.parseInt(txtPort.getText()) &gt; 65535) {
+<a class="jxr_linenumber" name="L641" href="#L641">641</a>             JOptionPane.showMessageDialog(rootPane, <span class="jxr_string">"Invalid port number"</span>);
+<a class="jxr_linenumber" name="L642" href="#L642">642</a>             txtPort.setText(Integer.toString(MagePreferences.getServerPortWithDefault(ClientDefaultSettings.port)));
+<a class="jxr_linenumber" name="L643" href="#L643">643</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L644" href="#L644">644</a>         }
+<a class="jxr_linenumber" name="L645" href="#L645">645</a> 
+<a class="jxr_linenumber" name="L646" href="#L646">646</a>         <strong class="jxr_keyword">char</strong>[] input = <strong class="jxr_keyword">new</strong> <strong class="jxr_keyword">char</strong>[0];
+<a class="jxr_linenumber" name="L647" href="#L647">647</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L648" href="#L648">648</a>             connection = <strong class="jxr_keyword">new</strong> Connection();
+<a class="jxr_linenumber" name="L649" href="#L649">649</a>             connection.setHost(<strong class="jxr_keyword">this</strong>.txtServer.getText().trim());
+<a class="jxr_linenumber" name="L650" href="#L650">650</a>             connection.setPort(Integer.parseInt(<strong class="jxr_keyword">this</strong>.txtPort.getText().trim()));
+<a class="jxr_linenumber" name="L651" href="#L651">651</a>             connection.setUsername(<strong class="jxr_keyword">this</strong>.txtUserName.getText().trim());
+<a class="jxr_linenumber" name="L652" href="#L652">652</a>             connection.setPassword(String.valueOf(<strong class="jxr_keyword">this</strong>.txtPassword.getPassword()).trim());
+<a class="jxr_linenumber" name="L653" href="#L653">653</a>             connection.setForceDBComparison(<strong class="jxr_keyword">this</strong>.chkForceUpdateDB.isSelected() || RepositoryUtil.isDatabaseEmpty());
+<a class="jxr_linenumber" name="L654" href="#L654">654</a>             String allMAC = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L655" href="#L655">655</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L656" href="#L656">656</a>                 allMAC = Connection.getMAC();
+<a class="jxr_linenumber" name="L657" href="#L657">657</a>             } <strong class="jxr_keyword">catch</strong> (SocketException ex) {
+<a class="jxr_linenumber" name="L658" href="#L658">658</a>             }
+<a class="jxr_linenumber" name="L659" href="#L659">659</a>             connection.setUserIdStr(System.getProperty(<span class="jxr_string">"user.name"</span>) + <span class="jxr_string">":"</span> + System.getProperty(<span class="jxr_string">"os.name"</span>) + <span class="jxr_string">":"</span> + MagePreferences.getUserNames() + <span class="jxr_string">":"</span> + allMAC);
+<a class="jxr_linenumber" name="L660" href="#L660">660</a>             MageFrame.getPreferences().put(KEY_CONNECT_FLAG, ((<a name="CountryItemEditor" href="../../../mage/client/util/gui/countryBox/CountryItemEditor.html#CountryItemEditor">CountryItemEditor</a>) cbFlag.getEditor()).getImageItem());
+<a class="jxr_linenumber" name="L661" href="#L661">661</a>             PreferencesDialog.setProxyInformation(connection);
+<a class="jxr_linenumber" name="L662" href="#L662">662</a> 
+<a class="jxr_linenumber" name="L663" href="#L663">663</a>             <em class="jxr_comment">// pref settings</em>
+<a class="jxr_linenumber" name="L664" href="#L664">664</a>             MageFrame.getInstance().setUserPrefsToConnection(connection);
+<a class="jxr_linenumber" name="L665" href="#L665">665</a> 
+<a class="jxr_linenumber" name="L666" href="#L666">666</a>             logger.debug(<span class="jxr_string">"connecting: "</span> + connection.getProxyType() + ' ' + connection.getProxyHost() + ' ' + connection.getProxyPort());
+<a class="jxr_linenumber" name="L667" href="#L667">667</a>             task = <strong class="jxr_keyword">new</strong> ConnectTask();
+<a class="jxr_linenumber" name="L668" href="#L668">668</a>             task.execute();
+<a class="jxr_linenumber" name="L669" href="#L669">669</a>         } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="L670" href="#L670">670</a>             Arrays.fill(input, '0');
+<a class="jxr_linenumber" name="L671" href="#L671">671</a>         }
+<a class="jxr_linenumber" name="L672" href="#L672">672</a> 
+<a class="jxr_linenumber" name="L673" href="#L673">673</a>     }<em class="jxr_comment">//GEN-LAST:event_btnConnectActionPerformed</em>
+<a class="jxr_linenumber" name="L674" href="#L674">674</a> 
+<a class="jxr_linenumber" name="L675" href="#L675">675</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setConnectButtonsState(<strong class="jxr_keyword">boolean</strong> enable) {
+<a class="jxr_linenumber" name="L676" href="#L676">676</a>         btnConnect.setEnabled(enable);
+<a class="jxr_linenumber" name="L677" href="#L677">677</a>         btnRegister.setEnabled(enable);
+<a class="jxr_linenumber" name="L678" href="#L678">678</a>         btnForgotPassword.setEnabled(enable);
+<a class="jxr_linenumber" name="L679" href="#L679">679</a>     }
+<a class="jxr_linenumber" name="L680" href="#L680">680</a> 
+<a class="jxr_linenumber" name="L681" href="#L681">681</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">class</strong> ConnectTask <strong class="jxr_keyword">extends</strong> SwingWorker&lt;Boolean, Void&gt; {
+<a class="jxr_linenumber" name="L682" href="#L682">682</a> 
+<a class="jxr_linenumber" name="L683" href="#L683">683</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> result = false;
+<a class="jxr_linenumber" name="L684" href="#L684">684</a>         <strong class="jxr_keyword">private</strong> String lastConnectError = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L685" href="#L685">685</a> 
+<a class="jxr_linenumber" name="L686" href="#L686">686</a>         <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> CONNECTION_TIMEOUT_MS = 2100;
+<a class="jxr_linenumber" name="L687" href="#L687">687</a> 
+<a class="jxr_linenumber" name="L688" href="#L688">688</a>         @Override
+<a class="jxr_linenumber" name="L689" href="#L689">689</a>         <strong class="jxr_keyword">protected</strong> Boolean doInBackground() <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L690" href="#L690">690</a>             lblStatus.setText(<span class="jxr_string">"Connecting..."</span>);
+<a class="jxr_linenumber" name="L691" href="#L691">691</a>             setConnectButtonsState(false);
+<a class="jxr_linenumber" name="L692" href="#L692">692</a>             result = MageFrame.connect(connection);
+<a class="jxr_linenumber" name="L693" href="#L693">693</a>             lastConnectError = SessionHandler.getLastConnectError();
+<a class="jxr_linenumber" name="L694" href="#L694">694</a>             <strong class="jxr_keyword">return</strong> result;
+<a class="jxr_linenumber" name="L695" href="#L695">695</a>         }
+<a class="jxr_linenumber" name="L696" href="#L696">696</a> 
+<a class="jxr_linenumber" name="L697" href="#L697">697</a>         @Override
+<a class="jxr_linenumber" name="L698" href="#L698">698</a>         <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> done() {
+<a class="jxr_linenumber" name="L699" href="#L699">699</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L700" href="#L700">700</a>                 get(CONNECTION_TIMEOUT_MS, TimeUnit.MILLISECONDS);
+<a class="jxr_linenumber" name="L701" href="#L701">701</a>                 <strong class="jxr_keyword">if</strong> (result) {
+<a class="jxr_linenumber" name="L702" href="#L702">702</a>                     lblStatus.setText(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L703" href="#L703">703</a>                     connected();
+<a class="jxr_linenumber" name="L704" href="#L704">704</a>                     MageFrame.getInstance().prepareAndShowTablesPane();
+<a class="jxr_linenumber" name="L705" href="#L705">705</a>                 } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L706" href="#L706">706</a>                     lblStatus.setText(<span class="jxr_string">"Could not connect: "</span> + lastConnectError);
+<a class="jxr_linenumber" name="L707" href="#L707">707</a>                 }
+<a class="jxr_linenumber" name="L708" href="#L708">708</a>             } <strong class="jxr_keyword">catch</strong> (InterruptedException | ExecutionException ex) {
+<a class="jxr_linenumber" name="L709" href="#L709">709</a>                 logger.fatal(<span class="jxr_string">"Update Players Task error"</span>, ex);
+<a class="jxr_linenumber" name="L710" href="#L710">710</a>             } <strong class="jxr_keyword">catch</strong> (CancellationException ex) {
+<a class="jxr_linenumber" name="L711" href="#L711">711</a>                 logger.info(<span class="jxr_string">"Connect: canceled"</span>);
+<a class="jxr_linenumber" name="L712" href="#L712">712</a>                 lblStatus.setText(<span class="jxr_string">"Connect was canceled"</span>);
+<a class="jxr_linenumber" name="L713" href="#L713">713</a>             } <strong class="jxr_keyword">catch</strong> (TimeoutException ex) {
+<a class="jxr_linenumber" name="L714" href="#L714">714</a>                 logger.fatal(<span class="jxr_string">"Connection timeout: "</span>, ex);
+<a class="jxr_linenumber" name="L715" href="#L715">715</a>             } <strong class="jxr_keyword">finally</strong> {
+<a class="jxr_linenumber" name="L716" href="#L716">716</a>                 MageFrame.stopConnecting();
+<a class="jxr_linenumber" name="L717" href="#L717">717</a>                 setConnectButtonsState(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L718" href="#L718">718</a>             }
+<a class="jxr_linenumber" name="L719" href="#L719">719</a>         }
+<a class="jxr_linenumber" name="L720" href="#L720">720</a>     }
+<a class="jxr_linenumber" name="L721" href="#L721">721</a> 
+<a class="jxr_linenumber" name="L722" href="#L722">722</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> connected() {
+<a class="jxr_linenumber" name="L723" href="#L723">723</a>         <strong class="jxr_keyword">this</strong>.saveSettings();
+<a class="jxr_linenumber" name="L724" href="#L724">724</a>         <strong class="jxr_keyword">this</strong>.hideDialog();
+<a class="jxr_linenumber" name="L725" href="#L725">725</a>         ConstructedFormats.ensureLists();
+<a class="jxr_linenumber" name="L726" href="#L726">726</a>     }
+<a class="jxr_linenumber" name="L727" href="#L727">727</a> 
+<a class="jxr_linenumber" name="L728" href="#L728">728</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> keyTyped(java.awt.event.KeyEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_keyTyped</em>
+<a class="jxr_linenumber" name="L729" href="#L729">729</a>         <strong class="jxr_keyword">char</strong> c = evt.getKeyChar();
+<a class="jxr_linenumber" name="L730" href="#L730">730</a>         <strong class="jxr_keyword">if</strong> (!Character.isDigit(c)) {
+<a class="jxr_linenumber" name="L731" href="#L731">731</a>             evt.consume();
+<a class="jxr_linenumber" name="L732" href="#L732">732</a>         }
+<a class="jxr_linenumber" name="L733" href="#L733">733</a>     }<em class="jxr_comment">//GEN-LAST:event_keyTyped</em>
+<a class="jxr_linenumber" name="L734" href="#L734">734</a> 
+<a class="jxr_linenumber" name="L735" href="#L735">735</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> chkAutoConnectActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_chkAutoConnectActionPerformed</em>
+<a class="jxr_linenumber" name="L736" href="#L736">736</a> 
+<a class="jxr_linenumber" name="L737" href="#L737">737</a>         <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L738" href="#L738">738</a>     }<em class="jxr_comment">//GEN-LAST:event_chkAutoConnectActionPerformed</em>
+<a class="jxr_linenumber" name="L739" href="#L739">739</a> 
+<a class="jxr_linenumber" name="L740" href="#L740">740</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> findPublicServerActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_jButton1ActionPerformed</em>
+<a class="jxr_linenumber" name="L741" href="#L741">741</a>         
+<a class="jxr_linenumber" name="L742" href="#L742">742</a>     }<em class="jxr_comment">//GEN-LAST:event_jButton1ActionPerformed</em>
+<a class="jxr_linenumber" name="L743" href="#L743">743</a> 
+<a class="jxr_linenumber" name="L744" href="#L744">744</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> jProxySettingsButtonActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_jProxySettingsButtonActionPerformed</em>
+<a class="jxr_linenumber" name="L745" href="#L745">745</a>         PreferencesDialog.main(<strong class="jxr_keyword">new</strong> String[]{PreferencesDialog.OPEN_CONNECTION_TAB});
+<a class="jxr_linenumber" name="L746" href="#L746">746</a>     }<em class="jxr_comment">//GEN-LAST:event_jProxySettingsButtonActionPerformed</em>
+<a class="jxr_linenumber" name="L747" href="#L747">747</a> 
+<a class="jxr_linenumber" name="L748" href="#L748">748</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> chkForceUpdateDBActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_chkForceUpdateDBActionPerformed</em>
+<a class="jxr_linenumber" name="L749" href="#L749">749</a>         <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L750" href="#L750">750</a>     }<em class="jxr_comment">//GEN-LAST:event_chkForceUpdateDBActionPerformed</em>
+<a class="jxr_linenumber" name="L751" href="#L751">751</a> 
+<a class="jxr_linenumber" name="L752" href="#L752">752</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> txtUserNameActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_txtUserNameActionPerformed</em>
+<a class="jxr_linenumber" name="L753" href="#L753">753</a>         <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L754" href="#L754">754</a>     }<em class="jxr_comment">//GEN-LAST:event_txtUserNameActionPerformed</em>
+<a class="jxr_linenumber" name="L755" href="#L755">755</a> 
+<a class="jxr_linenumber" name="L756" href="#L756">756</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> txtPasswordActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_txtPasswordActionPerformed</em>
+<a class="jxr_linenumber" name="L757" href="#L757">757</a>         <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L758" href="#L758">758</a>     }<em class="jxr_comment">//GEN-LAST:event_txtPasswordActionPerformed</em>
+<a class="jxr_linenumber" name="L759" href="#L759">759</a> 
+<a class="jxr_linenumber" name="L760" href="#L760">760</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnRegisterActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnRegisterActionPerformed</em>
+<a class="jxr_linenumber" name="L761" href="#L761">761</a>         registerUserDialog.showDialog();
+<a class="jxr_linenumber" name="L762" href="#L762">762</a>     }<em class="jxr_comment">//GEN-LAST:event_btnRegisterActionPerformed</em>
+<a class="jxr_linenumber" name="L763" href="#L763">763</a> 
+<a class="jxr_linenumber" name="L764" href="#L764">764</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnForgotPasswordActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnForgotPasswordActionPerformed</em>
+<a class="jxr_linenumber" name="L765" href="#L765">765</a>         resetPasswordDialog.showDialog();
+<a class="jxr_linenumber" name="L766" href="#L766">766</a>     }<em class="jxr_comment">//GEN-LAST:event_btnForgotPasswordActionPerformed</em>
+<a class="jxr_linenumber" name="L767" href="#L767">767</a> 
+<a class="jxr_linenumber" name="L768" href="#L768">768</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> connectXmageDe(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFind1findPublicServerActionPerformed</em>
+<a class="jxr_linenumber" name="L769" href="#L769">769</a>         String serverAddress = <span class="jxr_string">"xmage.de"</span>;
+<a class="jxr_linenumber" name="L770" href="#L770">770</a>         <strong class="jxr_keyword">this</strong>.txtServer.setText(serverAddress);
+<a class="jxr_linenumber" name="L771" href="#L771">771</a>         <strong class="jxr_keyword">this</strong>.txtPort.setText(<span class="jxr_string">"17171"</span>);
+<a class="jxr_linenumber" name="L772" href="#L772">772</a>         <em class="jxr_comment">// Update userName and password according to the chosen server.</em>
+<a class="jxr_linenumber" name="L773" href="#L773">773</a>         <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(serverAddress));
+<a class="jxr_linenumber" name="L774" href="#L774">774</a>         <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(serverAddress));        <em class="jxr_comment">// TODO add your handling code here:</em>
+<a class="jxr_linenumber" name="L775" href="#L775">775</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFind1findPublicServerActionPerformed</em>
+<a class="jxr_linenumber" name="L776" href="#L776">776</a> 
+<a class="jxr_linenumber" name="L777" href="#L777">777</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> connectLocalhost(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFind2findPublicServerActionPerformed</em>
+<a class="jxr_linenumber" name="L778" href="#L778">778</a>         String serverAddress = <span class="jxr_string">"localhost"</span>;
+<a class="jxr_linenumber" name="L779" href="#L779">779</a>         <strong class="jxr_keyword">this</strong>.txtServer.setText(serverAddress);
+<a class="jxr_linenumber" name="L780" href="#L780">780</a>         <strong class="jxr_keyword">this</strong>.txtPort.setText(<span class="jxr_string">"17171"</span>);
+<a class="jxr_linenumber" name="L781" href="#L781">781</a>         <em class="jxr_comment">// Update userName and password according to the chosen server.</em>
+<a class="jxr_linenumber" name="L782" href="#L782">782</a>         <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(serverAddress));
+<a class="jxr_linenumber" name="L783" href="#L783">783</a>         <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(serverAddress));
+<a class="jxr_linenumber" name="L784" href="#L784">784</a> 
+<a class="jxr_linenumber" name="L785" href="#L785">785</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFind2findPublicServerActionPerformed</em>
+<a class="jxr_linenumber" name="L786" href="#L786">786</a> 
+<a class="jxr_linenumber" name="L787" href="#L787">787</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> connectXmageus(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L788" href="#L788">788</a>         String serverAddress = <span class="jxr_string">"us.xmage.today"</span>;
+<a class="jxr_linenumber" name="L789" href="#L789">789</a>         <strong class="jxr_keyword">this</strong>.txtServer.setText(serverAddress);
+<a class="jxr_linenumber" name="L790" href="#L790">790</a>         <strong class="jxr_keyword">this</strong>.txtPort.setText(<span class="jxr_string">"17171"</span>);
+<a class="jxr_linenumber" name="L791" href="#L791">791</a>         <em class="jxr_comment">// Update userName and password according to the chosen server.</em>
+<a class="jxr_linenumber" name="L792" href="#L792">792</a>         <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(serverAddress));
+<a class="jxr_linenumber" name="L793" href="#L793">793</a>         <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(serverAddress));
+<a class="jxr_linenumber" name="L794" href="#L794">794</a>     }
+<a class="jxr_linenumber" name="L795" href="#L795">795</a> 
+<a class="jxr_linenumber" name="L796" href="#L796">796</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> connectBeta(java.awt.event.ActionEvent evt) {
+<a class="jxr_linenumber" name="L797" href="#L797">797</a>         String serverAddress = <span class="jxr_string">"beta.xmage.today"</span>;
+<a class="jxr_linenumber" name="L798" href="#L798">798</a>         <strong class="jxr_keyword">this</strong>.txtServer.setText(serverAddress);
+<a class="jxr_linenumber" name="L799" href="#L799">799</a>         <strong class="jxr_keyword">this</strong>.txtPort.setText(<span class="jxr_string">"17171"</span>);
+<a class="jxr_linenumber" name="L800" href="#L800">800</a>         <em class="jxr_comment">// Update userName and password according to the chosen server.</em>
+<a class="jxr_linenumber" name="L801" href="#L801">801</a>         <strong class="jxr_keyword">this</strong>.txtUserName.setText(MagePreferences.getUserName(serverAddress));
+<a class="jxr_linenumber" name="L802" href="#L802">802</a>         <strong class="jxr_keyword">this</strong>.txtPassword.setText(MagePreferences.getPassword(serverAddress));
+<a class="jxr_linenumber" name="L803" href="#L803">803</a>     }
+<a class="jxr_linenumber" name="L804" href="#L804">804</a> 
+<a class="jxr_linenumber" name="L805" href="#L805">805</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFlagSearchActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFlagSearchActionPerformed</em>
+<a class="jxr_linenumber" name="L806" href="#L806">806</a>         doFastFlagSearch();
+<a class="jxr_linenumber" name="L807" href="#L807">807</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFlagSearchActionPerformed</em>
+<a class="jxr_linenumber" name="L808" href="#L808">808</a> 
+<a class="jxr_linenumber" name="L809" href="#L809">809</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnCheckStatusActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnCheckStatusActionPerformed</em>
+<a class="jxr_linenumber" name="L810" href="#L810">810</a>         <strong class="jxr_keyword">if</strong> (Desktop.isDesktopSupported() &amp;&amp; Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+<a class="jxr_linenumber" name="L811" href="#L811">811</a>             <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L812" href="#L812">812</a>                 Desktop.getDesktop().browse(<strong class="jxr_keyword">new</strong> URI(<span class="jxr_string">"http://xmage.today/servers/"</span>));
+<a class="jxr_linenumber" name="L813" href="#L813">813</a>             } <strong class="jxr_keyword">catch</strong> (Exception e) {
+<a class="jxr_linenumber" name="L814" href="#L814">814</a>                 <em class="jxr_comment">//</em>
+<a class="jxr_linenumber" name="L815" href="#L815">815</a>             }
+<a class="jxr_linenumber" name="L816" href="#L816">816</a>         }
+<a class="jxr_linenumber" name="L817" href="#L817">817</a>     }<em class="jxr_comment">//GEN-LAST:event_btnCheckStatusActionPerformed</em>
+<a class="jxr_linenumber" name="L818" href="#L818">818</a> 
+<a class="jxr_linenumber" name="L819" href="#L819">819</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnWhatsNewActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnWhatsNewActionPerformed</em>
+<a class="jxr_linenumber" name="L820" href="#L820">820</a>         MageFrame.showWhatsNewDialog();
+<a class="jxr_linenumber" name="L821" href="#L821">821</a>     }<em class="jxr_comment">//GEN-LAST:event_btnWhatsNewActionPerformed</em>
+<a class="jxr_linenumber" name="L822" href="#L822">822</a> 
+<a class="jxr_linenumber" name="L823" href="#L823">823</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindMainActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindMainActionPerformed</em>
+<a class="jxr_linenumber" name="L824" href="#L824">824</a>         setServerSettings(<span class="jxr_string">"xmage.de"</span>, <span class="jxr_string">"17171"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L825" href="#L825">825</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindMainActionPerformed</em>
+<a class="jxr_linenumber" name="L826" href="#L826">826</a> 
+<a class="jxr_linenumber" name="L827" href="#L827">827</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindEUActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindEUActionPerformed</em>
+<a class="jxr_linenumber" name="L828" href="#L828">828</a>         setServerSettings(<span class="jxr_string">"eu.xmage.today"</span>, <span class="jxr_string">"17171"</span>, false);
+<a class="jxr_linenumber" name="L829" href="#L829">829</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindEUActionPerformed</em>
+<a class="jxr_linenumber" name="L830" href="#L830">830</a> 
+<a class="jxr_linenumber" name="L831" href="#L831">831</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindUsActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindUsActionPerformed</em>
+<a class="jxr_linenumber" name="L832" href="#L832">832</a>         setServerSettings(<span class="jxr_string">"us.xmage.today"</span>, <span class="jxr_string">"17171"</span>, false);
+<a class="jxr_linenumber" name="L833" href="#L833">833</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindUsActionPerformed</em>
+<a class="jxr_linenumber" name="L834" href="#L834">834</a> 
+<a class="jxr_linenumber" name="L835" href="#L835">835</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindBetaActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindBetaActionPerformed</em>
+<a class="jxr_linenumber" name="L836" href="#L836">836</a>         setServerSettings(<span class="jxr_string">"beta.xmage.today"</span>, <span class="jxr_string">"17171"</span>, false);
+<a class="jxr_linenumber" name="L837" href="#L837">837</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindBetaActionPerformed</em>
+<a class="jxr_linenumber" name="L838" href="#L838">838</a> 
+<a class="jxr_linenumber" name="L839" href="#L839">839</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindLocalActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindLocalActionPerformed</em>
+<a class="jxr_linenumber" name="L840" href="#L840">840</a>         setServerSettings(<span class="jxr_string">"localhost"</span>, <span class="jxr_string">"17171"</span>, false);
+<a class="jxr_linenumber" name="L841" href="#L841">841</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindLocalActionPerformed</em>
+<a class="jxr_linenumber" name="L842" href="#L842">842</a> 
+<a class="jxr_linenumber" name="L843" href="#L843">843</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> btnFindOtherActionPerformed(java.awt.event.ActionEvent evt) {<em class="jxr_comment">//GEN-FIRST:event_btnFindOtherActionPerformed</em>
+<a class="jxr_linenumber" name="L844" href="#L844">844</a>         chooseAndSetServerSettingsFromOther();
+<a class="jxr_linenumber" name="L845" href="#L845">845</a>     }<em class="jxr_comment">//GEN-LAST:event_btnFindOtherActionPerformed</em>
+<a class="jxr_linenumber" name="L846" href="#L846">846</a> 
+<a class="jxr_linenumber" name="L847" href="#L847">847</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> doFastFlagSearch() {
+<a class="jxr_linenumber" name="L848" href="#L848">848</a>         Choice choice = <strong class="jxr_keyword">new</strong> ChoiceImpl(false);
+<a class="jxr_linenumber" name="L849" href="#L849">849</a> 
+<a class="jxr_linenumber" name="L850" href="#L850">850</a>         <em class="jxr_comment">// collect data from country combobox String[name][code]</em>
+<a class="jxr_linenumber" name="L851" href="#L851">851</a>         Map&lt;String, String&gt; choiceItems = <strong class="jxr_keyword">new</strong> LinkedHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L852" href="#L852">852</a>         DefaultComboBoxModel flagModel = (DefaultComboBoxModel) cbFlag.getModel();
+<a class="jxr_linenumber" name="L853" href="#L853">853</a>         String[] flagItem;
+<a class="jxr_linenumber" name="L854" href="#L854">854</a> 
+<a class="jxr_linenumber" name="L855" href="#L855">855</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; flagModel.getSize(); i++) {
+<a class="jxr_linenumber" name="L856" href="#L856">856</a>             flagItem = (String[]) flagModel.getElementAt(i);
+<a class="jxr_linenumber" name="L857" href="#L857">857</a>             choiceItems.put(flagItem[1], flagItem[0]);
+<a class="jxr_linenumber" name="L858" href="#L858">858</a>         }
+<a class="jxr_linenumber" name="L859" href="#L859">859</a> 
+<a class="jxr_linenumber" name="L860" href="#L860">860</a>         choice.setKeyChoices(choiceItems);
+<a class="jxr_linenumber" name="L861" href="#L861">861</a>         choice.setMessage(<span class="jxr_string">"Select your country"</span>);
+<a class="jxr_linenumber" name="L862" href="#L862">862</a> 
+<a class="jxr_linenumber" name="L863" href="#L863">863</a>         <em class="jxr_comment">// current selection value restore</em>
+<a class="jxr_linenumber" name="L864" href="#L864">864</a>         String needSelectValue = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L865" href="#L865">865</a>         flagItem = (String[]) flagModel.getSelectedItem();
+<a class="jxr_linenumber" name="L866" href="#L866">866</a>         <strong class="jxr_keyword">if</strong> (flagItem != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L867" href="#L867">867</a>             needSelectValue = flagItem[1];
+<a class="jxr_linenumber" name="L868" href="#L868">868</a>         }
+<a class="jxr_linenumber" name="L869" href="#L869">869</a> 
+<a class="jxr_linenumber" name="L870" href="#L870">870</a>         <em class="jxr_comment">// ask for new value</em>
+<a class="jxr_linenumber" name="L871" href="#L871">871</a>         <a name="PickChoiceDialog" href="../../../mage/client/dialog/PickChoiceDialog.html#PickChoiceDialog">PickChoiceDialog</a> dlg = <strong class="jxr_keyword">new</strong> <a name="PickChoiceDialog" href="../../../mage/client/dialog/PickChoiceDialog.html#PickChoiceDialog">PickChoiceDialog</a>();
+<a class="jxr_linenumber" name="L872" href="#L872">872</a>         dlg.setWindowSize(300, 500);
+<a class="jxr_linenumber" name="L873" href="#L873">873</a>         dlg.showDialog(choice, needSelectValue);
+<a class="jxr_linenumber" name="L874" href="#L874">874</a>         <strong class="jxr_keyword">if</strong> (choice.isChosen()) {
+<a class="jxr_linenumber" name="L875" href="#L875">875</a>             flagItem = <strong class="jxr_keyword">new</strong> String[2];
+<a class="jxr_linenumber" name="L876" href="#L876">876</a>             flagItem[0] = choice.getChoiceValue();
+<a class="jxr_linenumber" name="L877" href="#L877">877</a>             flagItem[1] = choice.getChoiceKey();
+<a class="jxr_linenumber" name="L878" href="#L878">878</a>             flagModel.setSelectedItem(flagItem);
+<a class="jxr_linenumber" name="L879" href="#L879">879</a>         }
+<a class="jxr_linenumber" name="L880" href="#L880">880</a>     }
+<a class="jxr_linenumber" name="L881" href="#L881">881</a> 
+<a class="jxr_linenumber" name="L882" href="#L882">882</a>     <strong class="jxr_keyword">public</strong> String getServer() {
+<a class="jxr_linenumber" name="L883" href="#L883">883</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.txtServer.getText();
+<a class="jxr_linenumber" name="L884" href="#L884">884</a>     }
+<a class="jxr_linenumber" name="L885" href="#L885">885</a> 
+<a class="jxr_linenumber" name="L886" href="#L886">886</a>     <strong class="jxr_keyword">public</strong> String getPort() {
+<a class="jxr_linenumber" name="L887" href="#L887">887</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.txtPort.getText();
+<a class="jxr_linenumber" name="L888" href="#L888">888</a>     }
+<a class="jxr_linenumber" name="L889" href="#L889">889</a> 
+<a class="jxr_linenumber" name="L890" href="#L890">890</a>     <em class="jxr_comment">// Variables declaration - do not modify//GEN-BEGIN:variables</em>
+<a class="jxr_linenumber" name="L891" href="#L891">891</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnCancel;
+<a class="jxr_linenumber" name="L892" href="#L892">892</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnCheckStatus;
+<a class="jxr_linenumber" name="L893" href="#L893">893</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnConnect;
+<a class="jxr_linenumber" name="L894" href="#L894">894</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindBeta;
+<a class="jxr_linenumber" name="L895" href="#L895">895</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindEU;
+<a class="jxr_linenumber" name="L896" href="#L896">896</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindLocal;
+<a class="jxr_linenumber" name="L897" href="#L897">897</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindMain;
+<a class="jxr_linenumber" name="L898" href="#L898">898</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindOther;
+<a class="jxr_linenumber" name="L899" href="#L899">899</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFindUs;
+<a class="jxr_linenumber" name="L900" href="#L900">900</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnFlagSearch;
+<a class="jxr_linenumber" name="L901" href="#L901">901</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnForgotPassword;
+<a class="jxr_linenumber" name="L902" href="#L902">902</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnRegister;
+<a class="jxr_linenumber" name="L903" href="#L903">903</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton btnWhatsNew;
+<a class="jxr_linenumber" name="L904" href="#L904">904</a>     <strong class="jxr_keyword">private</strong> mage.client.util.gui.countryBox.CountryComboBox cbFlag;
+<a class="jxr_linenumber" name="L905" href="#L905">905</a>     <strong class="jxr_keyword">private</strong> javax.swing.JCheckBox chkAutoConnect;
+<a class="jxr_linenumber" name="L906" href="#L906">906</a>     <strong class="jxr_keyword">private</strong> javax.swing.JCheckBox chkForceUpdateDB;
+<a class="jxr_linenumber" name="L907" href="#L907">907</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler filler1;
+<a class="jxr_linenumber" name="L908" href="#L908">908</a>     <strong class="jxr_keyword">private</strong> javax.swing.Box.Filler filler2;
+<a class="jxr_linenumber" name="L909" href="#L909">909</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel jLabel1;
+<a class="jxr_linenumber" name="L910" href="#L910">910</a>     <strong class="jxr_keyword">private</strong> javax.swing.JButton jProxySettingsButton;
+<a class="jxr_linenumber" name="L911" href="#L911">911</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblFastConnect;
+<a class="jxr_linenumber" name="L912" href="#L912">912</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblFlag;
+<a class="jxr_linenumber" name="L913" href="#L913">913</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblPassword;
+<a class="jxr_linenumber" name="L914" href="#L914">914</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblPort;
+<a class="jxr_linenumber" name="L915" href="#L915">915</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblServer;
+<a class="jxr_linenumber" name="L916" href="#L916">916</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblStatus;
+<a class="jxr_linenumber" name="L917" href="#L917">917</a>     <strong class="jxr_keyword">private</strong> javax.swing.JLabel lblUserName;
+<a class="jxr_linenumber" name="L918" href="#L918">918</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelFast;
+<a class="jxr_linenumber" name="L919" href="#L919">919</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelFlag;
+<a class="jxr_linenumber" name="L920" href="#L920">920</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPanel panelServer;
+<a class="jxr_linenumber" name="L921" href="#L921">921</a>     <strong class="jxr_keyword">private</strong> javax.swing.JPasswordField txtPassword;
+<a class="jxr_linenumber" name="L922" href="#L922">922</a>     <strong class="jxr_keyword">private</strong> javax.swing.JTextField txtPort;
+<a class="jxr_linenumber" name="L923" href="#L923">923</a>     <strong class="jxr_keyword">private</strong> javax.swing.JTextField txtServer;
+<a class="jxr_linenumber" name="L924" href="#L924">924</a>     <strong class="jxr_keyword">private</strong> javax.swing.JTextField txtUserName;
+<a class="jxr_linenumber" name="L925" href="#L925">925</a>     <em class="jxr_comment">// End of variables declaration//GEN-END:variables</em>
+<a class="jxr_linenumber" name="L926" href="#L926">926</a> 
+<a class="jxr_linenumber" name="L927" href="#L927">927</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

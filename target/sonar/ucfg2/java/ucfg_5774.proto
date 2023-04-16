@@ -1,0 +1,145 @@
+
+¯mage.abilities.effects.common.replacement.YouControlYourOpponentsWhileSearchingReplacementEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z¤
+™D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/replacement/YouControlYourOpponentsWhileSearchingReplacementEffect.java' '("startingBlock*Å
+2, ,(¯¬
+, ,(&
+%4java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()¯¬
+,. ,(A
+%5java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()ÌÉ
+, ,(B
+%6boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%4java.util.UUID*2
+
+__unknown_file (
+
+%5java.util.UUID2equals(Ljava/lang/Object;)*
+1*ø
+startingBlock' '(F–
+“
+& &(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+'% '(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%7“
+
+& &(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+'4 '(: 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8‰
+†
+& &(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+'A '(E
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9*
+5*‡
+4* *(¯¬
+*/ *(B
+%2java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getPlayerId()½º
+* *(C
+%3boolean"Amage.game.Game#isOpponent(Lmage/players/Player;Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*2
+
+__unknown_file (
+
+%2java.util.UUID21isOpponent(Lmage/players/Player;Ljava/util/UUID;)*
+2
+1*®
+5( (( °­
+(+ ((C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+( ((D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+( ((E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*	
+2
+4
+1*!
+1) ,(C"
+) ,(C
+"":/
+' '(+#
+eventmage.game.events.GameEvent:,
+', '(; 
+sourcemage.abilities.Ability:"
+'< '(E
+gamemage.game.GameBdb
+`mage.abilities.effects.common.replacement.YouControlYourOpponentsWhileSearchingReplacementEffectHP

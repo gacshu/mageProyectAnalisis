@@ -1,0 +1,56 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>TxtDeckImporterTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/decks/importer/TxtDeckImporterTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.decks.importer;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckCardInfo;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckCardLists;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.importer.TxtDeckImporter;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.cards.repository.CardInfo;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.cards.repository.CardRepository;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.junit.Assert;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="TxtDeckImporterTest" href="../../../../../org/mage/test/decks/importer/TxtDeckImporterTest.html#TxtDeckImporterTest">TxtDeckImporterTest</a> {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      @Test
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testImportWithBlankLineAboveSideboard() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          TxtDeckImporter importer = <strong class="jxr_keyword">new</strong> TxtDeckImporter(false);
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          CardInfo card;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          DeckCardLists deck = <strong class="jxr_keyword">new</strong> DeckCardLists();
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          String[] cards = {<span class="jxr_string">"Plains"</span>, <span class="jxr_string">"Forest"</span>, <span class="jxr_string">"Island"</span>};
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          String[] sideboard = {<span class="jxr_string">"Swamp"</span>, <span class="jxr_string">"Mountain"</span>};
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">for</strong> (String c : cards) {
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>              card = CardRepository.instance.findPreferredCoreExpansionCard(c);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>              Assert.assertNotNull(String.format(<span class="jxr_string">"Card %s was null"</span>, c), card);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>              deck.getCards().add(<strong class="jxr_keyword">new</strong> DeckCardInfo(card.getName(), card.getCardNumber(), card.getSetCode()));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          }
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">for</strong> (String s : sideboard) {
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>              card = CardRepository.instance.findPreferredCoreExpansionCard(s);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>              Assert.assertNotNull(String.format(<span class="jxr_string">"Card %s was null"</span>, s), card);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>              deck.getSideboard().add(<strong class="jxr_keyword">new</strong> DeckCardInfo(card.getName(), card.getCardNumber(), card.getSetCode()));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          }
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          Assert.assertEquals(<span class="jxr_string">"Deck does not contain 3 cards, found "</span> + deck.getCards().size(), 3, deck.getCards().size());
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          Assert.assertEquals(<span class="jxr_string">"Sideboard does not contain 2 cards, found "</span> + deck.getSideboard().size(), 2, deck.getSideboard().size());
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          DeckCardLists imported = importer.importDeck(<span class="jxr_string">"JustLands.txt"</span>, false);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          Assert.assertEquals(<span class="jxr_string">"Imported deck does not contain 3 cards, found "</span> + imported.getCards().size(), 3, imported.getCards().size());
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          Assert.assertEquals(<span class="jxr_string">"Imported sideboard does not contain 2 cards, found "</span> + imported.getSideboard().size(), 2, imported.getSideboard().size());
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

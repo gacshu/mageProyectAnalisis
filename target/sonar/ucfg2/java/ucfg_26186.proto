@@ -1,0 +1,406 @@
+
+_mage.server.MailClientImpl#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Zd
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MailClientImpl.java ("21*¬
+13+ +(V•’
++ +(V
+%28void"Xjavax.mail.Message#addRecipient(Ljavax/mail/Message$RecipientType;Ljavax/mail/Address;)V*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage*E
+
+__unknown_file ()
+'
+%25 javax.mail.Message$RecipientType*H
+
+__unknown_file (,
+*
+%26#javax.mail.internet.InternetAddress2DaddRecipient(Ljavax/mail/Message$RecipientType;Ljavax/mail/Address;)*
+12*¯
+14+ +(_
+]
++! +(9'
+%25 javax.mail.Message$RecipientType"__id*"
+
+__unknown_file (
+""][
++? +(N*
+%26#javax.mail.internet.InternetAddress"#javax.mail.internet.InternetAddressØ
+Õ
++; +(U
+%27"?javax.mail.internet.InternetAddress#<init>(Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+%26#javax.mail.internet.InternetAddress*7
+
+__unknown_file (
+
+emailjava.lang.String*
+13*¤
+15* *(MŠ
+* *(M
+%24void">javax.mail.internet.MimeMessage#setFrom(Ljavax/mail/Address;)V*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage*H
+
+__unknown_file (,
+*
+%22#javax.mail.internet.InternetAddress2setFrom(Ljavax/mail/Address;)*
+14*Ì
+16* *(L][
+*  *(/*
+%22#javax.mail.internet.InternetAddress"#javax.mail.internet.InternetAddressÖ
+Ó
+* *(L
+%23"?javax.mail.internet.InternetAddress#<init>(Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+%22#javax.mail.internet.InternetAddress*5
+
+__unknown_file (
+
+%21java.lang.String*
+15*û
+17) )(;…
+‚
+) )(;*
+messagejavax.mail.internet.MimeMessage"__id*D
+
+__unknown_file ((
+&
+%18javax.mail.internet.MimeMessage‡
+„
+*0 *(6*
+%20#mage.server.managers.ConfigSettings"__id*F
+
+__unknown_file (**(
+mage.server.MailClientImpl"
+configÒÏ
+*0 *(K
+%21java.lang.String"Jmage.server.managers.ConfigSettings#getMailFromAddress()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+%20#mage.server.managers.ConfigSettings2getMailFromAddress()*
+16*Ä
+18)2 )(9US
+)& )(1&
+%18javax.mail.internet.MimeMessage"javax.mail.internet.MimeMessageÖ
+Ó
+)" )(:
+%19"=javax.mail.internet.MimeMessage#<init>(Ljavax/mail/Session;)V*D
+
+__unknown_file ((
+&
+%18javax.mail.internet.MimeMessage*;
+
+__unknown_file (
+
+sessionjavax.mail.Session*
+17*•
+19  (&“
+
+  (6
+%3java.util.Properties"6java.lang.System#getProperties()Ljava/util/Properties;*0
+
+__unknown_file ("
+java.lang.Systemp
+n
+ (7"
+
+propertiesjava.util.Properties"__id*8
+
+__unknown_file (
+
+%3java.util.Properties†
+ƒ
+ 2  (8)
+%4#mage.server.managers.ConfigSettings"__id*F
+
+__unknown_file (**(
+mage.server.MailClientImpl"
+configÊÇ
+ 2  (J
+%5java.lang.String"Gmage.server.managers.ConfigSettings#getMailSmtpHost()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%4#mage.server.managers.ConfigSettings2getMailSmtpHost()ÛØ
+   (K
+%6java.lang.Object"Xjava.util.Properties#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*/
+
+__unknown_file (
+mail.smtps.host*4
+
+__unknown_file (
+
+%5java.lang.String21setProperty(Ljava/lang/String;Ljava/lang/String;)†
+ƒ
+!2 !(8)
+%7#mage.server.managers.ConfigSettings"__id*F
+
+__unknown_file (**(
+mage.server.MailClientImpl"
+configÊÇ
+!2 !(J
+%8java.lang.String"Gmage.server.managers.ConfigSettings#getMailSmtpPort()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%7#mage.server.managers.ConfigSettings2getMailSmtpPort()ÛØ
+! !(K
+%9java.lang.Object"Xjava.util.Properties#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*/
+
+__unknown_file (
+mail.smtps.port*4
+
+__unknown_file (
+
+%8java.lang.String21setProperty(Ljava/lang/String;Ljava/lang/String;)ÌÉ
+" "(9
+%10java.lang.Object"Xjava.util.Properties#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*/
+
+__unknown_file (
+mail.smtps.auth*$
+
+__unknown_file (
+true21setProperty(Ljava/lang/String;Ljava/lang/String;)‡
+„
+#, #(2*
+%11#mage.server.managers.ConfigSettings"__id*F
+
+__unknown_file (**(
+mage.server.MailClientImpl"
+configÄÁ
+#, #(@
+%12java.lang.String"Cmage.server.managers.ConfigSettings#getMailUser()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+%11#mage.server.managers.ConfigSettings2getMailUser()×Ô
+# #(A
+%13java.lang.Object"Xjava.util.Properties#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*)
+
+__unknown_file (
+	mail.user*5
+
+__unknown_file (
+
+%12java.lang.String21setProperty(Ljava/lang/String;Ljava/lang/String;)‡
+„
+$0 $(6*
+%14#mage.server.managers.ConfigSettings"__id*F
+
+__unknown_file (**(
+mage.server.MailClientImpl"
+configÌÉ
+$0 $(H
+%15java.lang.String"Gmage.server.managers.ConfigSettings#getMailPassword()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+%14#mage.server.managers.ConfigSettings2getMailPassword()ÛØ
+$ $(I
+%16java.lang.Object"Xjava.util.Properties#setProperty(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*-
+
+__unknown_file (
+mail.password*5
+
+__unknown_file (
+
+%15java.lang.String21setProperty(Ljava/lang/String;Ljava/lang/String;)ñ
+î
+& &(@
+%17javax.mail.Session"Qjavax.mail.Session#getDefaultInstance(Ljava/util/Properties;)Ljavax/mail/Session;*2
+
+__unknown_file ("
+javax.mail.Session*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Propertiesj
+h
+& &(A
+sessionjavax.mail.Session"__id*7
+
+__unknown_file (
+
+%17javax.mail.Session*
+18*!
+35 5("
+5 5(
+""*“
+43 3(}
+3 3(
+%37void"javax.mail.Service#close()V*>
+
+__unknown_file ("
+ 
+trnsportjavax.mail.Transport2close()*
+3*ú
+52 2(Eåâ
+2 2(E
+%36void"Ljavax.mail.Transport#sendMessage(Ljavax/mail/Message;[Ljavax/mail/Address;)V*>
+
+__unknown_file ("
+ 
+trnsportjavax.mail.Transport*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage*9
+
+__unknown_file (
+
+%35javax.mail.Address[]26sendMessage(Ljavax/mail/Message;[Ljavax/mail/Address;)*
+4*æ
+62 2(ÑÎ
+2* 2(D
+%35javax.mail.Address[]"Gjavax.mail.internet.MimeMessage#getAllRecipients()[Ljavax/mail/Address;*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage2getAllRecipients()*
+5*¸
+71 1(£ 
+1 1(!
+%34void".javax.mail.internet.MimeMessage#saveChanges()V*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage2saveChanges()*
+6*¼
+80 0(K§¤
+0 0(K
+%33void"Ajavax.mail.Service#connect(Ljava/lang/String;Ljava/lang/String;)V*>
+
+__unknown_file ("
+ 
+trnsportjavax.mail.Transport*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+%32java.lang.String2-connect(Ljava/lang/String;Ljava/lang/String;)*
+7*†
+9/ /(?o
+m
+/ /(? 
+trnsportjavax.mail.Transport"__id*9
+
+__unknown_file (
+
+%31javax.mail.Transport€ı
+0# 0(J
+%32java.lang.String"Fjava.util.Properties#getProperty(Ljava/lang/String;)Ljava/lang/String;*@
+
+__unknown_file ($
+"
+
+propertiesjava.util.Properties*-
+
+__unknown_file (
+mail.password2getProperty(Ljava/lang/String;)*
+8*ñ
+20 (U
+S
+ (
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""õò
+ (I
+
+%2void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*N
+
+__unknown_file (20
+.Email is not sent because the address is empty2info(Ljava/lang/Object;)"
+ (
+""*–
+21 (|z
+ (
+%0boolean"java.lang.String#isEmpty()Z*7
+
+__unknown_file (
+
+emailjava.lang.String2	isEmpty()*
+19
+20*‘
+10/! /((ûø
+/! /(>
+%31javax.mail.Transport"Ijavax.mail.Session#getTransport(Ljava/lang/String;)Ljavax/mail/Transport;*;
+
+__unknown_file (
+
+sessionjavax.mail.Session*%
+
+__unknown_file (	
+smtps2 getTransport(Ljava/lang/String;)*
+9*
+11- -(÷ô
+- -(!
+%30void"<javax.mail.internet.MimeMessage#setText(Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage*6
+
+__unknown_file (
+
+textjava.lang.String2setText(Ljava/lang/String;)*
+10*—
+12, ,(€ı
+, ,('
+%29void"?javax.mail.internet.MimeMessage#setSubject(Ljava/lang/String;)V*H
+
+__unknown_file (,
+*
+messagejavax.mail.internet.MimeMessage*9
+
+__unknown_file (
+
+subjectjava.lang.String2setSubject(Ljava/lang/String;)*
+11:%
+ (,
+emailjava.lang.String:'
+- (<
+subjectjava.lang.String:$
+= (H
+textjava.lang.StringB
+mage.server.MailClientImplHP

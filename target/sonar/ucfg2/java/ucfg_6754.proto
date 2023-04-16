@@ -1,0 +1,210 @@
+
+[mage.util.ExileUtil#returnCardsFromExile(Ljava/util/Set;Lmage/game/Game;)Lmage/cards/Cards;V
+LD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/util/ExileUtil.java (*"11*ü
+2	 (Q
+O
+	 (
+exiledmage.cards.Card"__id*"
+
+__unknown_file (
+""Ž
+‹
+	 (
+exiledmage.cards.Card"
+__arrayGet*4
+
+__unknown_file (
+
+cardsjava.util.Set*"
+
+__unknown_file (
+""*	
+4
+8
+1*ë
+3 (ÖÓ
+ (!
+%15void"(mage.cards.Cards#add(Lmage/cards/Card;)V*?
+
+__unknown_file (#
+!
+cardsToReturnmage.cards.Cards*7
+
+__unknown_file (
+
+exiledmage.cards.Card2add(Lmage/cards/Card;)*
+2*Ÿ
+4 (éæ
+ (2
+
+%11int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*7
+
+__unknown_file (
+
+exiledmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)›˜
+6 (E
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Š
+[ (i
+%13java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+
+exiledmage.cards.Card2getId()íê
+6 (j
+
+%14int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*8
+
+__unknown_file (
+
+%12mage.game.GameState*3
+
+__unknown_file (
+
+%13java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)*
+2
+3*ï
+5
+ (Ú×
+
+ ('
+%10void"(mage.cards.Cards#add(Lmage/cards/Card;)V*?
+
+__unknown_file (#
+!
+cardsToReturnmage.cards.Cards*;
+
+__unknown_file (
+
+
+bottomCardmage.cards.Card2add(Lmage/cards/Card;)*
+2*·
+6 (ìé
+ (1	
+%8int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*;
+
+__unknown_file (
+
+
+bottomCardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)°­
+5 (^	
+%9int"5mage.cards.MeldCard#getBottomLastZoneChangeCounter()I*=
+
+__unknown_file (!
+
+meldCardmage.cards.MeldCard2 getBottomLastZoneChangeCounter()*
+2
+5*ë
+7
+ (ÖÓ
+
+ ($
+
+%7void"(mage.cards.Cards#add(Lmage/cards/Card;)V*?
+
+__unknown_file (#
+!
+cardsToReturnmage.cards.Cards*8
+
+__unknown_file (
+
+topCardmage.cards.Card2add(Lmage/cards/Card;)*
+6*ò	
+88 (>¦£
+' (I
+%2mage.cards.Card"<mage.game.permanent.PermanentCard#getCard()Lmage/cards/Card;*7
+
+__unknown_file (
+
+exiledmage.cards.Card2	getCard()h
+f
+ (J
+meldCardmage.cards.MeldCard"__id*3
+
+__unknown_file (
+
+%2mage.cards.Card¬©
+ (0
+%3mage.cards.Card"5mage.cards.MeldCard#getTopHalfCard()Lmage/cards/Card;*=
+
+__unknown_file (!
+
+meldCardmage.cards.MeldCard2getTopHalfCard()c
+a
+ (1
+topCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card²¯
+ (6
+%4mage.cards.Card"8mage.cards.MeldCard#getBottomHalfCard()Lmage/cards/Card;*=
+
+__unknown_file (!
+
+meldCardmage.cards.MeldCard2getBottomHalfCard()f
+d
+ (7
+
+bottomCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%4mage.cards.Cardéæ
+ (.	
+%5int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*8
+
+__unknown_file (
+
+topCardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)ª§
+2 (X	
+%6int"2mage.cards.MeldCard#getTopLastZoneChangeCounter()I*=
+
+__unknown_file (!
+
+meldCardmage.cards.MeldCard2getTopLastZoneChangeCounter()*
+6
+7*²
+11 ()><
+ ('
+%0mage.cards.CardsImpl"mage.cards.CardsImpll
+j
+ ()
+%1"mage.cards.CardsImpl#<init>()V*8
+
+__unknown_file (
+
+%0mage.cards.CardsImplo
+m
+ (*!
+cardsToReturnmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%0mage.cards.CardsImpl*
+2*>
+1   ("/
+   (#
+!
+cardsToReturnmage.cards.Cards:"
++ (;
+cardsjava.util.Set:"
+< (E
+gamemage.game.GameB"
+mage.util.ExileUtilH

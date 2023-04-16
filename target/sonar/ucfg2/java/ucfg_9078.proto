@@ -1,0 +1,1351 @@
+
+jmage.abilities.effects.common.CreateTokenCopyTargetEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z~
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CreateTokenCopyTargetEffect.javaú ú("startingBlock*±
+24
+ (î
+ë
+
+ (
+%55mage.ObjectColor"__id*d
+
+__unknown_file (H*F;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+color*
+22
+23*«
+25
+Ó Ó(¶
+£
+
+Ó Ó(.
+%53mage.constants.SubType"__id*p
+
+__unknown_file (T*R;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+additionalSubTypeÖÇ
+
+Ó Ó(/
+%54void"6mage.MageObject#addSubType([Lmage/constants/SubType;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*;
+
+__unknown_file (
+
+%53mage.constants.SubType2%addSubType([Lmage/constants/SubType;)*
+24*√
+26
+Ì Ì(¶
+£
+
+Ì Ì(
+%52mage.constants.SubType"__id*p
+
+__unknown_file (T*R;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+additionalSubType*
+24
+25*Ú
+27
+Í Í(Æ´
+
+Í Í(*
+%49void")mage.MageObject#removeAllCreatureTypes()V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2removeAllCreatureTypes()†
+ù
+
+Î Î((
+%50mage.constants.SubType"__id*j
+
+__unknown_file (N*L;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+onlySubTypeÖÇ
+
+Î Î()
+%51void"6mage.MageObject#addSubType([Lmage/constants/SubType;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*;
+
+__unknown_file (
+
+%50mage.constants.SubType2%addSubType([Lmage/constants/SubType;)*
+26*Ω
+28
+È È(†
+ù
+
+È È(
+%48mage.constants.SubType"__id*j
+
+__unknown_file (N*L;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+onlySubType*
+26
+27*å
+29
+Ê Ê(úô
+
+Ê Ê(
+%46void""mage.MageObjectImpl#removePTCDA()V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2removePTCDA()‘—
+
+Á Á(.
+%47void"4mage.game.permanent.token.TokenImpl#setToughness(I)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*"
+
+__unknown_file (
+""2setToughness(I)*
+28*`
+30
+Â Â(D
+B
+
+Â Â(/
+
+%45int"__id*"
+
+__unknown_file (
+""*
+28
+29*Ñ
+31
+‚ ‚(úô
+
+‚ ‚(
+%43void""mage.MageObjectImpl#removePTCDA()V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2removePTCDA()Ã…
+
+„ „(&
+%44void"0mage.game.permanent.token.TokenImpl#setPower(I)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*"
+
+__unknown_file (
+""2setPower(I)*
+30*`
+32
+· ·(D
+B
+
+· ·(+
+
+%42int"__id*"
+
+__unknown_file (
+""*
+30
+31*ù
+33
+ﬂ ﬂ(‹
+Ÿ
+
+ﬂ ﬂ(8+
+%40$mage.abilities.keyword.FlyingAbility"Xmage.abilities.keyword.FlyingAbility#getInstance()Lmage/abilities/keyword/FlyingAbility;*D
+
+__unknown_file (("&
+$mage.abilities.keyword.FlyingAbility•¢
+
+ﬂ ﬂ(9
+%41void"Image.game.permanent.token.TokenImpl#addAbility(Lmage/abilities/Ability;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*I
+
+__unknown_file (-
++
+%40$mage.abilities.keyword.FlyingAbility2$addAbility(Lmage/abilities/Ability;)*
+32*ú
+35
+‹ ‹(ÿ
+’
+
+‹ ‹(7*
+%38#mage.abilities.keyword.HasteAbility"Vmage.abilities.keyword.HasteAbility#getInstance()Lmage/abilities/keyword/HasteAbility;*C
+
+__unknown_file ('"%
+#mage.abilities.keyword.HasteAbility§°
+
+‹ ‹(8
+%39void"Image.game.permanent.token.TokenImpl#addAbility(Lmage/abilities/Ability;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*H
+
+__unknown_file (,
+*
+%38#mage.abilities.keyword.HasteAbility2$addAbility(Lmage/abilities/Ability;)*
+32
+33*÷
+37
+Ÿ Ÿ(®
+•
+
+Ÿ Ÿ(0
+%36mage.constants.CardType"__id*q
+
+__unknown_file (U*S;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+additionalCardTypeäá
+
+Ÿ Ÿ(1
+%37void"8mage.MageObject#addCardType([Lmage/constants/CardType;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*<
+
+__unknown_file ( 
+
+%36mage.constants.CardType2'addCardType([Lmage/constants/CardType;)*
+35
+32
+33*Õ
+38
+ÿ ÿ(®
+•
+
+ÿ ÿ(
+%35mage.constants.CardType"__id*q
+
+__unknown_file (U*S;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+additionalCardType*
+35
+37
+32
+33*È
+39
+÷ ÷(–Õ
+
+÷ ÷(5
+%34void"*mage.MageObjectImpl#setStartingLoyalty(I)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*"
+
+__unknown_file (
+""2setStartingLoyalty(I)*
+38*â
+41
+“ “(µ≤
+
+“ “( 
+%31java.util.Set"1mage.MageObjectImpl#getSuperType()Ljava/util/Set;*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2getSuperType()Y
+W
+
+“( “(;
+%32mage.constants.SuperType"__id*"
+
+__unknown_file (
+""Ÿ÷
+
+“ “(<
+%33boolean")java.util.Set#remove(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%31java.util.Set*=
+
+__unknown_file (!
+
+%32mage.constants.SuperType2remove(Ljava/lang/Object;)*
+38
+39*Ö
+43
+œ œ(X
+V
+
+œ œ(/
+%29mage.constants.CardType"__id*"
+
+__unknown_file (
+""äá
+
+œ œ(0
+%30void"8mage.MageObject#addCardType([Lmage/constants/CardType;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*<
+
+__unknown_file ( 
+
+%29mage.constants.CardType2'addCardType([Lmage/constants/CardType;)*
+38
+39
+41*è
+44
+À À(+a_
+
+À À()+
+%24$mage.game.permanent.token.EmptyToken"$mage.game.permanent.token.EmptyTokenë
+é
+
+À À(+
+%25".mage.game.permanent.token.EmptyToken#<init>()V*I
+
+__unknown_file (-
++
+%24$mage.game.permanent.token.EmptyTokenè
+å
+
+À À(,-
+token$mage.game.permanent.token.EmptyToken"__id*I
+
+__unknown_file (-
++
+%24$mage.game.permanent.token.EmptyToken£
+†
+
+Ã Ã(,
+%26%mage.util.functions.CopyTokenFunction"cmage.util.CardUtil#copyTo(Lmage/game/permanent/token/Token;)Lmage/util/functions/CopyTokenFunction;*2
+
+__unknown_file ("
+mage.util.CardUtil*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyTokençä
+
+Ã Ã(3&
+%27mage.game.permanent.token.Token"nmage.util.functions.CopyTokenFunction#from(Lmage/cards/Card;Lmage/game/Game;)Lmage/game/permanent/token/Token;*J
+
+__unknown_file (.
+,
+%26%mage.util.functions.CopyTokenFunction*9
+
+__unknown_file (
+
+copyFrommage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2'from(Lmage/cards/Card;Lmage/game/Game;)´®
+
+Õ Õ(4
+%28boolean"qmage.util.functions.CopyApplier#apply(Lmage/game/Game;Lmage/MageObject;Lmage/abilities/Ability;Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+appliermage.util.functions.CopyApplier*4
+
+__unknown_file (
+
+gamemage.game.Game*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*8
+
+__unknown_file (
+
+targetIdjava.util.UUID2Papply(Lmage/game/Game;Lmage/MageObject;Lmage/abilities/Ability;Ljava/util/UUID;)*
+38
+39
+41
+43*&
+45
+« «("
+
+« «(
+""*ã
+47
+√ √(çä
+
+√$ √(6.
+%21'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*Y
+
+__unknown_file (=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect2getTargetPointer()äá
+
+√$ √(M
+%22java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*L
+
+__unknown_file (0
+.
+%21'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ËÂ
+
+√ √(N
+%23mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%22java.util.UUID2getCard(Ljava/util/UUID;)g
+e
+
+√ √(N
+copyFrommage.cards.Card"__id*4
+
+__unknown_file (
+
+%23mage.cards.Card*
+44
+45*°
+48
+¡ ¡((Ñ
+Å
+
+¡ ¡((
+copyFrommage.cards.Card"__id*P
+
+__unknown_file (4
+2
+copyFromPermanentmage.game.permanent.Permanent*
+44
+45*µ
+49
+≤ ≤((k
+i
+
+≤ ≤((1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""ß
+§
+
+≤ ≤((1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*3
+
+__unknown_file (
+
+%14java.util.List*"
+
+__unknown_file (
+""*
+48
+49
+53*ñ
+50
+ª* ª(4Û
+
+ª* ª(A&
+%20mage.util.functions.CopyApplier"Vmage.abilities.effects.common.CopyEffect#getApplier()Lmage/util/functions/CopyApplier;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getApplier()á
+Ñ
+
+ª  ª(A*
+appliermage.util.functions.CopyApplier"__id*D
+
+__unknown_file ((
+&
+%20mage.util.functions.CopyApplier*
+49*î
+51
+π< π(BÅ
+
+
+π π(B2
+copyFromPermanentmage.game.permanent.Permanent"__id*7
+
+__unknown_file (
+
+objectmage.MageObjectÛ
+
+∫  ∫(7&
+%19mage.util.functions.CopyApplier"Vmage.abilities.effects.common.CopyEffect#getApplier()Lmage/util/functions/CopyApplier;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getApplier()*
+49
+50*–
+52
+∑: ∑(@Ã…
+
+∑, ∑(M
+%18mage.MageObject"Emage.abilities.effects.common.CopyEffect#getTarget()Lmage/MageObject;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getTarget()e
+c
+
+∑ ∑(N
+objectmage.MageObject"__id*4
+
+__unknown_file (
+
+%18mage.MageObject*
+49
+51*ë
+53
+¥9 ¥(?û
+õ
+
+¥ ¥(@6
+
+copyEffect(mage.abilities.effects.common.CopyEffect"__id*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect”–
+
+∂ ∂(0
+%15java.util.UUID"Fmage.abilities.effects.common.CopyEffect#getSourceId()Ljava/util/UUID;*T
+
+__unknown_file (8
+6
+
+copyEffect(mage.abilities.effects.common.CopyEffect2getSourceId()©¶
+
+∂8 ∂(I
+%16java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()—Œ
+
+∂ ∂(J
+%17boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%15java.util.UUID*3
+
+__unknown_file (
+
+%16java.util.UUID2equals(Ljava/lang/Object;)*
+49
+52*≠
+10
+ãJ ã(P≥∞
+
+ãJ ã(b
+%79java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()`
+^
+
+ãJ ã(b
+%78java.util.UUID"__id*3
+
+__unknown_file (
+
+%79java.util.UUID*
+8*“
+55
+≤+ ≤(/ùö
+
+≤+ ≤(:
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ËÂ
+
+≤+ ≤(Q/
+%13(mage.abilities.effects.ContinuousEffects"Tmage.game.GameState#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*8
+
+__unknown_file (
+
+%12mage.game.GameState2getContinuousEffects()Æ´
+
+≤+ ≤(i
+%14java.util.List"\mage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;)Ljava/util/List;*M
+
+__unknown_file (1
+/
+%13(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game2#getLayeredEffects(Lmage/game/Game;)*
+49*±
+11
+ã ã(ï
+í
+
+ã7 ã(?
+%77java.util.UUID"__id*g
+
+__unknown_file (K*I;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+
+playerId*
+9
+10*¨
+56
+±* ±(3ì
+ê
+
+± ±(42
+copyFromPermanentmage.game.permanent.Permanent"__id*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*
+55*¢
+12
+É É( [
+Y
+
+É É( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""®
+•
+
+É É( !
+abilitymage.abilities.Ability"
+__arrayGet*D
+
+__unknown_file ((
+&
+abilitiesToRemoveTmpjava.util.List*"
+
+__unknown_file (
+""*
+13
+11*˜
+57
+≠ ≠(U
+S
+
+≠ ≠(
+copyFrommage.cards.Card"__id*"
+
+__unknown_file (
+""a_
+
+Æ" Æ(2+
+%10$mage.util.functions.EmptyCopyApplier"$mage.util.functions.EmptyCopyApplierë
+é
+
+Æ Æ(4
+%11".mage.util.functions.EmptyCopyApplier#<init>()V*I
+
+__unknown_file (-
++
+%10$mage.util.functions.EmptyCopyApplierå
+â
+
+Æ Æ(5*
+appliermage.util.functions.CopyApplier"__id*I
+
+__unknown_file (-
++
+%10$mage.util.functions.EmptyCopyApplier*
+47
+56*˝
+13
+Ö Ö(¥±
+
+Ö& Ö(?
+%74java.util.List"8mage.abilities.Ability#getSubAbilities()Ljava/util/List;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSubAbilities()âÜ
+
+Ö Ö(@
+%75void"Fmage.game.permanent.token.TokenImpl#removeAbilities(Ljava/util/List;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*3
+
+__unknown_file (
+
+%74java.util.List2!removeAbilities(Ljava/util/List;)°û
+
+á á(,
+%76void"Lmage.game.permanent.token.TokenImpl#removeAbility(Lmage/abilities/Ability;)V*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2'removeAbility(Lmage/abilities/Ability;)*
+12*“
+58
+© ©(≤Ø
+
+© ©(C#
+%9mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+targetIdjava.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)Ñ
+Å
+
+© ©(C*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+57*˛
+59
+ß ß((åâ
+
+ß ß(*-
+%7'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*Y
+
+__unknown_file (=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect2getTargetPointer()œÃ
+
+ß ß(U#
+%8mage.game.permanent.Permanent"çmage.target.targetpointer.TargetPointer#getFirstTargetPermanentOrLKI(Lmage/game/Game;Lmage/abilities/Ability;)Lmage/game/permanent/Permanent;*K
+
+__unknown_file (/
+-
+%7'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2FgetFirstTargetPermanentOrLKI(Lmage/game/Game;Lmage/abilities/Ability;)Ñ
+Å
+
+ß ß(U*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%8mage.game.permanent.Permanent*
+57*õ
+15
+¸ ¸( [
+Y
+
+¸ ¸( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""°
+û
+
+¸ ¸( !
+abilitymage.abilities.Ability"
+__arrayGet*=
+
+__unknown_file (!
+
+%69mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+17
+12*Î
+16
+˛ ˛((“
+œ
+
+˛ ˛(5
+%73boolean"
+__arrayAdd*D
+
+__unknown_file ((
+&
+abilitiesToRemoveTmpjava.util.List*
+
+__unknown_file (: *?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*
+15*ª
+17
+˝ ˝(¢
+ü
+
+˝ ˝(/
+%70java.util.Set"__id*u
+
+__unknown_file (Y*W;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+abilityClazzesToRemove¢ü
+
+˝9 ˝(K
+%71java.lang.Class",java.lang.Object#getClass()Ljava/lang/Class;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2
+getClass()‘—
+
+˝ ˝(L
+%72boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%70java.util.Set*4
+
+__unknown_file (
+
+%71java.lang.Class2contains(Ljava/lang/Object;)*
+15
+16*‰
+18
+¸# ¸((À»
+
+¸# ¸(7
+%69mage.abilities.Abilities"<mage.MageObjectImpl#getAbilities()Lmage/abilities/Abilities;*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2getAbilities()*
+15*ø
+19
+˘1 ˘(B?=
+
+˘5 ˘(@
+%67java.util.ArrayList"java.util.ArrayListn
+l
+
+˘1 ˘(B
+%68"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%67java.util.ArrayListv
+t
+
+˘ ˘(C&
+abilitiesToRemoveTmpjava.util.List"__id*8
+
+__unknown_file (
+
+%67java.util.ArrayList*
+18*%
+1
+ó ó("
+
+ó ó(
+""*˛
+2
+å å(S
+Q
+
+å å(
+tokenIdjava.util.UUID"__id*"
+
+__unknown_file (
+""è
+å
+
+å å(
+tokenIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%83java.util.List*"
+
+__unknown_file (
+""*
+6
+1*˝
+3
+ì ì("ü
+ú
+
+ì/ ì(6 
+%88mage.counters.CounterType"__id*f
+
+__unknown_file (J*H;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"	
+counterËÂ
+
+ì/ ì(W
+%89mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%88mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)≥∞
+
+ìY ì(q
+%90java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()£†
+ì ì(Ä
+%91boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*M
+
+__unknown_file (1
+/
+tokenPermanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%89mage.counters.Counter*3
+
+__unknown_file (
+
+%90java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*â
+startingBlock
+ú ú(3å
+â
+
+õ õ(
+%92"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ú ú("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%92ñ
+ì
+
+õ õ(
+%93"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+ú, ú(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%93*
+65*Ø
+5
+è è($°
+û
+
+è è($
+%85java.util.List"__id*s
+
+__unknown_file (W*U;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+addedTokenPermanentsœ
+Ã
+
+è è(8
+%86boolean"
+__arrayAdd*3
+
+__unknown_file (
+
+%85java.util.List*
+
+__unknown_file (: *M
+
+__unknown_file (1
+/
+tokenPermanentmage.game.permanent.Permanentü
+ú
+
+ë ë( 
+%87mage.counters.CounterType"__id*f
+
+__unknown_file (J*H;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"	
+counter*
+2
+3*π
+6
+ç' ç(+íè
+
+ç' ç(A$
+%84mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*7
+
+__unknown_file (
+
+tokenIdjava.util.UUID2getPermanent(Ljava/util/UUID;)ä
+á
+
+ç ç(B/
+tokenPermanentmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%84mage.game.permanent.Permanent*
+2
+5*Ó
+7
+å å(!◊‘
+
+å å(8
+%83java.util.List"Jmage.game.permanent.token.TokenImpl#getLastAddedTokenIds()Ljava/util/List;*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2getLastAddedTokenIds()*
+2*ÿ
+8
+ão ã(uù
+ö
+ãÇ ã(ê
+%81java.util.UUID"__id*m
+
+__unknown_file (Q*O;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+attackedPlayer°û
+ã ã(ë
+%82boolean"Ñmage.game.permanent.token.TokenImpl#putOntoBattlefield(ILmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZZLjava/util/UUID;)Z*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%78java.util.UUID*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*3
+
+__unknown_file (
+
+%81java.util.UUID2_putOntoBattlefield(ILmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZZLjava/util/UUID;)*
+7*é
+9
+ãe ã(mï
+í
+
+ãe ã(m
+%80java.util.UUID"__id*g
+
+__unknown_file (K*I;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+
+playerId`
+^
+
+ãe ã(m
+%78java.util.UUID"__id*3
+
+__unknown_file (
+
+%80java.util.UUID*
+8*…
+61
+• •(&©
+¶
+
+• •(&#
+%6mage.game.permanent.Permanent"__id*m
+
+__unknown_file (Q*O;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+savedPermanentÑ
+Å
+
+• •(&*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+57*∞
+62
+£ £(d
+b
+
+£ £(*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""©
+¶
+
+§ §(#
+%5mage.game.permanent.Permanent"__id*m
+
+__unknown_file (Q*O;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+savedPermanent*
+58
+59
+61*ñ
+63
+° °('åâ
+
+° °()-
+%3'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*Y
+
+__unknown_file (=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect2getTargetPointer()àÖ
+
+° °(@
+%4java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%3'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)d
+b
+
+° °(@
+targetIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%4java.util.UUID*
+62*–
+64
+ü& ü(6åâ
+
+ü& ü(8-
+%1'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*Y
+
+__unknown_file (=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect2getTargetPointer()¬ø
+
+ü ü(E
+%2java.util.UUID"Amage.target.targetpointer.FixedTarget#getTarget()Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%1'mage.target.targetpointer.TargetPointer2getTarget()d
+b
+
+ü ü(E
+targetIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%2java.util.UUID*
+62*∏
+20
+¯ ¯(¢
+ü
+
+¯ ¯((
+%65java.util.Set"__id*u
+
+__unknown_file (Y*W;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+abilityClazzesToRemovewu
+
+¯ ¯(2
+%66boolean"java.util.Set#isEmpty()Z*2
+
+__unknown_file (
+
+%65java.util.Set2	isEmpty()*
+19
+11*ˇ
+65
+ù ù(T
+R
+
+ù ù(
+targetIdjava.util.UUID"__id*"
+
+__unknown_file (
+""åâ
+
+û û(-
+%0'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*Y
+
+__unknown_file (=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect2getTargetPointer()*
+63
+64* 
+21
+ı ı(€
+ÿ
+
+ı ı(R
+%63Kmage.abilities.effects.common.CreateTokenCopyTargetEffect$PermanentModifier"__id*p
+
+__unknown_file (T*R;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+permanentModifier”–
+
+ı ı(0
+%64void"Ömage.abilities.effects.common.CreateTokenCopyTargetEffect$PermanentModifier#apply(Lmage/game/permanent/token/Token;Lmage/game/Game;)V*p
+
+__unknown_file (T
+R
+%63Kmage.abilities.effects.common.CreateTokenCopyTargetEffect$PermanentModifier*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken*4
+
+__unknown_file (
+
+gamemage.game.Game28apply(Lmage/game/permanent/token/Token;Lmage/game/Game;)*
+20*Æ
+22
+Û Û(†
+ù
+
+Û Û(
+%59java.util.List"__id*r
+
+__unknown_file (V*T;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+additionalAbilities¶£
+
+Û Û($
+%60java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*3
+
+__unknown_file (
+
+%59java.util.List2stream()Á‰
+
+Û Û(?
+%61void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%60java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)€
+ÿ
+
+Ù Ù(R
+%62Kmage.abilities.effects.common.CreateTokenCopyTargetEffect$PermanentModifier"__id*p
+
+__unknown_file (T*R;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+permanentModifier*
+20
+21*æ
+23
+Ò Ò(≥∞
+
+Ò Ò(
+%56mage.ObjectColor"0mage.MageObjectImpl#getColor()Lmage/ObjectColor;*K
+
+__unknown_file (/
+-
+token$mage.game.permanent.token.EmptyToken2
+getColor()î
+ë
+
+Ò& Ò(+
+%57mage.ObjectColor"__id*d
+
+__unknown_file (H*F;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffect"
+colorÿ’
+
+Ò Ò(,
+%58void".mage.ObjectColor#setColor(Lmage/ObjectColor;)V*5
+
+__unknown_file (
+
+%56mage.ObjectColor*5
+
+__unknown_file (
+
+%57mage.ObjectColor2setColor(Lmage/ObjectColor;)*
+22:$
+
+ú ú(#
+gamemage.game.Game:.
+
+ú$ ú(2 
+sourcemage.abilities.AbilityB=;
+9mage.abilities.effects.common.CreateTokenCopyTargetEffectHP

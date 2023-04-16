@@ -1,0 +1,474 @@
+
+fmage.abilities.effects.common.UnlessPaysDelayedEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/UnlessPaysDelayedEffect.java5 5("startingBlock*íJ
+2= =(yd
+b
+= =(y
+
+turnPlayerjava.util.UUID"__id*2
+
+__unknown_file (
+
+%3java.util.UUIDõ
+ò
+> >(#
+%7mage.abilities.effects.Effect"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.UnlessPaysDelayedEffect"
+effectÜÉ
+>4 >(F-
+%8'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*U
+
+__unknown_file (97
+5mage.abilities.effects.common.UnlessPaysDelayedEffect2getTargetPointer()ÜÉ
+>4 >(]
+%9java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%8'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)a_
+>( >(3,
+%10%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget’
+“
+>$ >(^
+%11"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%9java.util.UUID˘ˆ
+> >(_$
+%12mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*A
+
+__unknown_file (%
+#
+%7mage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)ñ
+ì
+	?} ?(Å
+%13mage.constants.PhaseStep"__id*_
+
+__unknown_file (C*A7
+5mage.abilities.effects.common.UnlessPaysDelayedEffect"
+stepû
+õ
+
+?É ?(â$
+%14mage.abilities.effects.Effect"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.effects.common.UnlessPaysDelayedEffect"
+effect¢ü
+?I ?(pL
+%15Emage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility"Emage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility€
+ÿ
+	?E ?(ä
+%16"òmage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility#<init>(Ljava/util/UUID;Lmage/constants/PhaseStep;Lmage/abilities/effects/Effect;)V*j
+
+__unknown_file (N
+L
+%15Emage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility*:
+
+__unknown_file (
+
+
+turnPlayerjava.util.UUID*=
+
+__unknown_file (!
+
+%13mage.constants.PhaseStep*B
+
+__unknown_file (&
+$
+%14mage.abilities.effects.EffectŸ
+÷
+	? ?(ãW
+delayedAbilityEmage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility"__id*j
+
+__unknown_file (N
+L
+%15Emage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility…∆
+@. @(?
+%17java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction2getId()Ÿ÷
+@ @(@
+%18void"kmage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility#setSpecialActionId(Ljava/util/UUID;)V*u
+
+__unknown_file (Y
+W
+delayedAbilityEmage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility*3
+
+__unknown_file (
+
+%17java.util.UUID2$setSpecialActionId(Ljava/util/UUID;)ÏÈ
+A$ A([
+%19java.util.UUID"{mage.game.Game#addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*u
+
+__unknown_file (Y
+W
+delayedAbilityEmage.abilities.effects.common.UnlessPaysDelayedEffectTriggeredAbility*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2\addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)k
+i
+A A(\"
+delayedAbilityIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%19java.util.UUIDñ
+ì
+D D(" 
+%20mage.abilities.costs.Cost"__id*_
+
+__unknown_file (C*A7
+5mage.abilities.effects.common.UnlessPaysDelayedEffect"
+cost™ß
+D D(#
+%21void"@mage.abilities.AbilityImpl#addCost(Lmage/abilities/costs/Cost;)V*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*>
+
+__unknown_file ("
+ 
+%20mage.abilities.costs.Cost2$addCost(Lmage/abilities/costs/Cost;)öó
+E& E(IH
+%22Amage.abilities.effects.common.RemoveDelayedTriggeredAbilityEffect"Amage.abilities.effects.common.RemoveDelayedTriggeredAbilityEffectõ
+ò
+E" E([
+%23"[mage.abilities.effects.common.RemoveDelayedTriggeredAbilityEffect#<init>(Ljava/util/UUID;)V*f
+
+__unknown_file (J
+H
+%22Amage.abilities.effects.common.RemoveDelayedTriggeredAbilityEffect*@
+
+__unknown_file ($
+"
+delayedAbilityIdjava.util.UUID™
+ß
+E E(\-
+removeEffectmage.abilities.effects.Effect"__id*f
+
+__unknown_file (J
+H
+%22Amage.abilities.effects.common.RemoveDelayedTriggeredAbilityEffect√¿
+F F(-
+%24void"Fmage.abilities.AbilityImpl#addEffect(Lmage/abilities/effects/Effect;)V*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*K
+
+__unknown_file (/
+-
+removeEffectmage.abilities.effects.Effect2*addEffect(Lmage/abilities/effects/Effect;)…∆
+G> G(O
+%25java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction2getId()ÜÉ
+G$ G(=>
+%267mage.abilities.effects.common.RemoveSpecialActionEffect"7mage.abilities.effects.common.RemoveSpecialActionEffect˙
+˜
+G  G(P
+%27"Qmage.abilities.effects.common.RemoveSpecialActionEffect#<init>(Ljava/util/UUID;)V*\
+
+__unknown_file (@
+>
+%267mage.abilities.effects.common.RemoveSpecialActionEffect*3
+
+__unknown_file (
+
+%25java.util.UUID‘—
+G G(Q
+%28void"Fmage.abilities.AbilityImpl#addEffect(Lmage/abilities/effects/Effect;)V*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*\
+
+__unknown_file (@
+>
+%267mage.abilities.effects.common.RemoveSpecialActionEffect2*addEffect(Lmage/abilities/effects/Effect;)©¶
+H" H(6
+%29java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ëé
+H H(7
+%30void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*3
+
+__unknown_file (
+
+%29java.util.UUID2setSourceId(Ljava/util/UUID;)áÑ
+I& I(8.
+%31'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*U
+
+__unknown_file (97
+5mage.abilities.effects.common.UnlessPaysDelayedEffect2getTargetPointer()àÖ
+I& I(O
+%32java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*L
+
+__unknown_file (0
+.
+%31'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ôñ
+I I(P
+%33void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*3
+
+__unknown_file (
+
+%32java.util.UUID2!setControllerId(Ljava/util/UUID;)°û
+J! J(9
+%34java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()o
+m
+J! J(E
+%35java.lang.String"__concat*%
+J! J(9
+
+%34java.lang.String*
+J< J(E	
+ - Pay ñ
+ì
+JH J(L 
+%36mage.abilities.costs.Cost"__id*_
+
+__unknown_file (C*A7
+5mage.abilities.effects.common.UnlessPaysDelayedEffect"
+cost®•
+JH J(V
+%37java.lang.String"5mage.abilities.costs.Cost#getText()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+%36mage.abilities.costs.Cost2	getText()}
+{
+J! J(V
+%38java.lang.String"__concat*%
+J! J(E
+
+%35java.lang.String*%
+JH J(V
+
+%37java.lang.Stringä
+á
+J! J(|
+%39java.lang.String"__concat*%
+J! J(V
+
+%38java.lang.String*1
+JY J(|%#
+! to remove the triggered ability.Æ´
+J J(}$
+%40mage.abilities.effects.Effect"Xmage.abilities.effects.Effect#setText(Ljava/lang/String;)Lmage/abilities/effects/Effect;*K
+
+__unknown_file (/
+-
+removeEffectmage.abilities.effects.Effect*5
+
+__unknown_file (
+
+%39java.lang.String2setText(Ljava/lang/String;)õò
+K K(
+%41mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState() «
+K K(/$
+%42mage.abilities.SpecialActions"Fmage.game.GameState#getSpecialActions()Lmage/abilities/SpecialActions;*8
+
+__unknown_file (
+
+%41mage.game.GameState2getSpecialActions()ı
+Ú
+K K(>
+%43boolean"
+__arrayAdd*B
+
+__unknown_file (&
+$
+%42mage.abilities.SpecialActions*
+
+__unknown_file (: *f
+
+__unknown_file (J
+H
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction"
+L L(
+""*£
+3=` =(f∞≠
+=` =(x
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()\
+Z
+=` =(x
+%3java.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID*
+2*˛
+startingBlock5 5(3ä
+á
+4 4(
+%44"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+5 5("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%44î
+ë
+4 4(
+%45"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+5, 5(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%45*
+6*Ç
+4=4 =(DÜÉ
+=4 =(F-
+%6'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*U
+
+__unknown_file (97
+5mage.abilities.effects.common.UnlessPaysDelayedEffect2getTargetPointer()ÜÉ
+=4 =(]
+%4java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%6'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)\
+Z
+=4 =(]
+%3java.util.UUID"__id*2
+
+__unknown_file (
+
+%4java.util.UUID*
+2*§
+5:6 :(Yçä
+:: :(WA
+%1;mage.abilities.effects.common.UnlessPaysDelayedEffectAction";mage.abilities.effects.common.UnlessPaysDelayedEffectActionª
+∏
+:6 :(Y
+%2"Emage.abilities.effects.common.UnlessPaysDelayedEffectAction#<init>()V*_
+
+__unknown_file (C
+A
+%1;mage.abilities.effects.common.UnlessPaysDelayedEffectActionæ
+ª
+: :(ZH
+	newAction;mage.abilities.effects.common.UnlessPaysDelayedEffectAction"__id*_
+
+__unknown_file (C
+A
+%1;mage.abilities.effects.common.UnlessPaysDelayedEffectAction*
+3
+4*ä
+66" 6((àÖ
+6" 6(>
+%0mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)h
+f
+6 6(?
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%0mage.MageObject*
+5
+1*!
+1N N("
+N N(
+"":"
+5 5(#
+gamemage.game.Game:,
+5$ 5(2 
+sourcemage.abilities.AbilityB97
+5mage.abilities.effects.common.UnlessPaysDelayedEffectHP

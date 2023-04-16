@@ -1,0 +1,349 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>GathererSets xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/mage/plugins/card/dl/sources/GathererSets.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.plugins.card.dl.sources;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.cards.Sets;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.client.constants.Constants;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.mage.plugins.card.dl.DownloadJob;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> java.io.File;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mage.plugins.card.dl.DownloadJob.fromURL;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mage.plugins.card.dl.DownloadJob.toFile;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> <strong class="jxr_keyword">static</strong> org.mage.plugins.card.utils.CardImageUtils.getImagesDir;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment"> * WARNING, unsupported images plugin, last updates from 2018</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="GathererSets" href="../../../../../../org/mage/plugins/card/dl/sources/GathererSets.html#GathererSets">GathererSets</a> <strong class="jxr_keyword">implements</strong> Iterable&lt;DownloadJob&gt; {
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">class</strong> CheckResult {
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          String code;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> set;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">boolean</strong> haveCommon;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">boolean</strong> haveUncommon;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">boolean</strong> haveRare;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">boolean</strong> haveMyth;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">private</strong> CheckResult(String ACode, <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> ASet, <strong class="jxr_keyword">boolean</strong> AHaveCommon, <strong class="jxr_keyword">boolean</strong> AHaveUncommon, <strong class="jxr_keyword">boolean</strong> AHaveRare, <strong class="jxr_keyword">boolean</strong> AHaveMyth) {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              code = ACode;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>              set = ASet;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>              haveCommon = AHaveCommon;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>              haveUncommon = AHaveUncommon;
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>              haveRare = AHaveRare;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              haveMyth = AHaveMyth;
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          }
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      }
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> File outDir;
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> DAYS_BEFORE_RELEASE_TO_DOWNLOAD = +14; <em class="jxr_comment">// Try to load the symbolsBasic eralies 14 days before release date</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = Logger.getLogger(GathererSets.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String[] symbolsBasic = {<span class="jxr_string">"10E"</span>, <span class="jxr_string">"9ED"</span>, <span class="jxr_string">"8ED"</span>, <span class="jxr_string">"7ED"</span>, <span class="jxr_string">"6ED"</span>, <span class="jxr_string">"5ED"</span>, <span class="jxr_string">"4ED"</span>, <span class="jxr_string">"3ED"</span>, <span class="jxr_string">"2ED"</span>, <span class="jxr_string">"LEB"</span>, <span class="jxr_string">"LEA"</span>,
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>              <span class="jxr_string">"HOP"</span>,
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              <span class="jxr_string">"ARN"</span>, <span class="jxr_string">"ATQ"</span>, <span class="jxr_string">"LEG"</span>, <span class="jxr_string">"DRK"</span>, <span class="jxr_string">"FEM"</span>, <span class="jxr_string">"HML"</span>,
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>              <span class="jxr_string">"ICE"</span>, <span class="jxr_string">"ALL"</span>, <span class="jxr_string">"CSP"</span>,
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>              <span class="jxr_string">"MIR"</span>, <span class="jxr_string">"VIS"</span>, <span class="jxr_string">"WTH"</span>,
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>              <span class="jxr_string">"TMP"</span>, <span class="jxr_string">"STH"</span>, <span class="jxr_string">"EXO"</span>,
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>              <span class="jxr_string">"USG"</span>, <span class="jxr_string">"ULG"</span>, <span class="jxr_string">"UDS"</span>,
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>              <span class="jxr_string">"MMQ"</span>, <span class="jxr_string">"NEM"</span>, <span class="jxr_string">"PCY"</span>,
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>              <span class="jxr_string">"INV"</span>, <span class="jxr_string">"PLS"</span>, <span class="jxr_string">"APC"</span>,
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>              <span class="jxr_string">"ODY"</span>, <span class="jxr_string">"TOR"</span>, <span class="jxr_string">"JUD"</span>,
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>              <span class="jxr_string">"ONS"</span>, <span class="jxr_string">"LGN"</span>, <span class="jxr_string">"SCG"</span>,
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>              <span class="jxr_string">"MRD"</span>, <span class="jxr_string">"DST"</span>, <span class="jxr_string">"5DN"</span>,
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>              <span class="jxr_string">"CHK"</span>, <span class="jxr_string">"BOK"</span>, <span class="jxr_string">"SOK"</span>,
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>              <span class="jxr_string">"RAV"</span>, <span class="jxr_string">"GPT"</span>, <span class="jxr_string">"DIS"</span>,
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>              <span class="jxr_string">"TSP"</span>, <span class="jxr_string">"TSB"</span>, <span class="jxr_string">"PLC"</span>, <span class="jxr_string">"FUT"</span>,
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>              <span class="jxr_string">"LRW"</span>, <span class="jxr_string">"MOR"</span>,
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>              <span class="jxr_string">"SHM"</span>, <span class="jxr_string">"EVE"</span>,
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>              <span class="jxr_string">"MED"</span>, <span class="jxr_string">"ME2"</span>, <span class="jxr_string">"ME3"</span>, <span class="jxr_string">"ME4"</span>,
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>              <span class="jxr_string">"POR"</span>, <span class="jxr_string">"P02"</span>, <span class="jxr_string">"PTK"</span>,
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>              <span class="jxr_string">"ARC"</span>, <span class="jxr_string">"DD3EVG"</span>,
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>              <span class="jxr_string">"W16"</span>, <span class="jxr_string">"W17"</span>,
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>              <em class="jxr_comment">// "PALP" -- Gatherer does not have the set Asia Pacific Land Program</em>
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>              <em class="jxr_comment">// "ATH" -- has cards from many sets, symbol does not exist on gatherer</em>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>              <em class="jxr_comment">// "CP", "DPA", "PELP", "PGPX", "PGRU", "H17", "JR", "SWS", // need to fix</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>              <span class="jxr_string">"H09"</span>, <span class="jxr_string">"PD2"</span>, <span class="jxr_string">"PD3"</span>, <span class="jxr_string">"UNH"</span>, <span class="jxr_string">"CM1"</span>, <span class="jxr_string">"V11"</span>, <span class="jxr_string">"A25"</span>, <span class="jxr_string">"UST"</span>, <span class="jxr_string">"IMA"</span>, <span class="jxr_string">"DD2"</span>, <span class="jxr_string">"EVG"</span>, <span class="jxr_string">"DDC"</span>, <span class="jxr_string">"DDE"</span>, <span class="jxr_string">"DDD"</span>, <span class="jxr_string">"CHR"</span>, <span class="jxr_string">"G18"</span>, <span class="jxr_string">"GVL"</span>, <span class="jxr_string">"S00"</span>, <span class="jxr_string">"S99"</span>, <span class="jxr_string">"UGL"</span> <em class="jxr_comment">// ok</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>              <em class="jxr_comment">// current testing</em>
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      };
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String[] symbolsBasicWithMyth = {<span class="jxr_string">"M10"</span>, <span class="jxr_string">"M11"</span>, <span class="jxr_string">"M12"</span>, <span class="jxr_string">"M13"</span>, <span class="jxr_string">"M14"</span>, <span class="jxr_string">"M15"</span>, <span class="jxr_string">"ORI"</span>,
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>              <span class="jxr_string">"DDF"</span>, <span class="jxr_string">"DDG"</span>, <span class="jxr_string">"DDH"</span>, <span class="jxr_string">"DDI"</span>, <span class="jxr_string">"DDJ"</span>, <span class="jxr_string">"DDK"</span>, <span class="jxr_string">"DDL"</span>, <span class="jxr_string">"DDM"</span>, <span class="jxr_string">"DDN"</span>,
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>              <span class="jxr_string">"DVD"</span>, <span class="jxr_string">"JVC"</span>, <span class="jxr_string">"DDO"</span>, <span class="jxr_string">"DDP"</span>, <span class="jxr_string">"DDQ"</span>, <span class="jxr_string">"DDR"</span>, <span class="jxr_string">"DDS"</span>, <span class="jxr_string">"DDT"</span>, <span class="jxr_string">"DDU"</span>,
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>              <span class="jxr_string">"ALA"</span>, <span class="jxr_string">"CON"</span>, <span class="jxr_string">"ARB"</span>,
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>              <span class="jxr_string">"ZEN"</span>, <span class="jxr_string">"WWK"</span>, <span class="jxr_string">"ROE"</span>,
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>              <span class="jxr_string">"SOM"</span>, <span class="jxr_string">"MBS"</span>, <span class="jxr_string">"NPH"</span>,
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>              <span class="jxr_string">"CMD"</span>, <span class="jxr_string">"C13"</span>, <span class="jxr_string">"C14"</span>, <span class="jxr_string">"C15"</span>, <span class="jxr_string">"C16"</span>, <span class="jxr_string">"CMA"</span>,
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>              <span class="jxr_string">"PC2"</span>, <span class="jxr_string">"PCA"</span>,
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>              <span class="jxr_string">"ISD"</span>, <span class="jxr_string">"DKA"</span>, <span class="jxr_string">"AVR"</span>,
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>              <span class="jxr_string">"RTR"</span>, <span class="jxr_string">"GTC"</span>, <span class="jxr_string">"DGM"</span>,
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>              <span class="jxr_string">"MMA"</span>, <span class="jxr_string">"MM2"</span>, <span class="jxr_string">"EMA"</span>, <span class="jxr_string">"MM3"</span>,
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>              <span class="jxr_string">"THS"</span>, <span class="jxr_string">"BNG"</span>, <span class="jxr_string">"JOU"</span>,
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>              <span class="jxr_string">"CNS"</span>, <span class="jxr_string">"CN2"</span>,
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>              <span class="jxr_string">"VMA"</span>, <span class="jxr_string">"TPR"</span>,
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>              <span class="jxr_string">"KTK"</span>, <span class="jxr_string">"FRF"</span>, <span class="jxr_string">"UGIN"</span>, <span class="jxr_string">"DTK"</span>,
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>              <span class="jxr_string">"BFZ"</span>, <span class="jxr_string">"OGW"</span>,
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>              <span class="jxr_string">"SOI"</span>, <span class="jxr_string">"EMN"</span>,
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>              <span class="jxr_string">"KLD"</span>, <span class="jxr_string">"AER"</span>,
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>              <span class="jxr_string">"AKH"</span>, <span class="jxr_string">"HOU"</span>,
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>              <span class="jxr_string">"XLN"</span>, <span class="jxr_string">"C17"</span>,
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>              <span class="jxr_string">"RIX"</span>, <span class="jxr_string">"DOM"</span>, <span class="jxr_string">"M19"</span>,
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>              <span class="jxr_string">"E01"</span>, <span class="jxr_string">"CM2"</span>, <span class="jxr_string">"E02"</span>,
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>              <span class="jxr_string">"GS1"</span>, <span class="jxr_string">"BBD"</span>, <span class="jxr_string">"C18"</span>,
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>              <span class="jxr_string">"GNT"</span>, <span class="jxr_string">"UMA"</span>, <span class="jxr_string">"GRN"</span>,
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>              <span class="jxr_string">"RNA"</span>, <span class="jxr_string">"WAR"</span>, <span class="jxr_string">"MH1"</span>,
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>             <span class="jxr_string">"M20"</span>
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>             <em class="jxr_comment">// "HHO", "ANA" -- do not exist on gatherer</em>
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>     };
+<a class="jxr_linenumber" name="L103" href="#L103">103</a> 
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String[] symbolsOnlyMyth = {
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>             <span class="jxr_string">"DRB"</span>, <span class="jxr_string">"V09"</span>, <span class="jxr_string">"V10"</span>, <span class="jxr_string">"V12"</span>, <span class="jxr_string">"V13"</span>, <span class="jxr_string">"V14"</span>, <span class="jxr_string">"V15"</span>, <span class="jxr_string">"V16"</span>, <span class="jxr_string">"V17"</span>, <span class="jxr_string">"EXP"</span>, <span class="jxr_string">"MED"</span>
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>             <em class="jxr_comment">// "HTR16" does not exist</em>
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     };
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String[] symbolsOnlySpecial = {
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>             <span class="jxr_string">"MPS"</span>, <span class="jxr_string">"MP2"</span>
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>     };
+<a class="jxr_linenumber" name="L111" href="#L111">111</a> 
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> HashMap&lt;String, String&gt; codeReplacements = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L113" href="#L113">113</a> 
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>     <strong class="jxr_keyword">static</strong> {
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         codeReplacements.put(<span class="jxr_string">"2ED"</span>, <span class="jxr_string">"2U"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         codeReplacements.put(<span class="jxr_string">"3ED"</span>, <span class="jxr_string">"3E"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         codeReplacements.put(<span class="jxr_string">"4ED"</span>, <span class="jxr_string">"4E"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         codeReplacements.put(<span class="jxr_string">"5ED"</span>, <span class="jxr_string">"5E"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         codeReplacements.put(<span class="jxr_string">"6ED"</span>, <span class="jxr_string">"6E"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         codeReplacements.put(<span class="jxr_string">"7ED"</span>, <span class="jxr_string">"7E"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>         codeReplacements.put(<span class="jxr_string">"ALL"</span>, <span class="jxr_string">"AL"</span>);
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         codeReplacements.put(<span class="jxr_string">"APC"</span>, <span class="jxr_string">"AP"</span>);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>         codeReplacements.put(<span class="jxr_string">"ARN"</span>, <span class="jxr_string">"AN"</span>);
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         codeReplacements.put(<span class="jxr_string">"ATQ"</span>, <span class="jxr_string">"AQ"</span>);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>         codeReplacements.put(<span class="jxr_string">"CMA"</span>, <span class="jxr_string">"CM1"</span>);
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         codeReplacements.put(<span class="jxr_string">"CHR"</span>, <span class="jxr_string">"CH"</span>);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         codeReplacements.put(<span class="jxr_string">"DVD"</span>, <span class="jxr_string">"DD3_DVD"</span>);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         codeReplacements.put(<span class="jxr_string">"EVG"</span>, <span class="jxr_string">"DD3_EVG"</span>);
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>         codeReplacements.put(<span class="jxr_string">"GVL"</span>, <span class="jxr_string">"DD3_GVL"</span>);
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         codeReplacements.put(<span class="jxr_string">"JVC"</span>, <span class="jxr_string">"DD3_JVC"</span>);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>         codeReplacements.put(<span class="jxr_string">"DRK"</span>, <span class="jxr_string">"DK"</span>);
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         codeReplacements.put(<span class="jxr_string">"EXO"</span>, <span class="jxr_string">"EX"</span>);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>         codeReplacements.put(<span class="jxr_string">"FEM"</span>, <span class="jxr_string">"FE"</span>);
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         codeReplacements.put(<span class="jxr_string">"HML"</span>, <span class="jxr_string">"HM"</span>);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         codeReplacements.put(<span class="jxr_string">"ICE"</span>, <span class="jxr_string">"IA"</span>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>         codeReplacements.put(<span class="jxr_string">"INV"</span>, <span class="jxr_string">"IN"</span>);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         codeReplacements.put(<span class="jxr_string">"LEA"</span>, <span class="jxr_string">"1E"</span>);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         codeReplacements.put(<span class="jxr_string">"LEB"</span>, <span class="jxr_string">"2E"</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         codeReplacements.put(<span class="jxr_string">"LEG"</span>, <span class="jxr_string">"LE"</span>);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         codeReplacements.put(<span class="jxr_string">"MED"</span>, <span class="jxr_string">"MPS_WAR"</span>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>         codeReplacements.put(<span class="jxr_string">"MPS"</span>, <span class="jxr_string">"MPS_KLD"</span>);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>         codeReplacements.put(<span class="jxr_string">"MP2"</span>, <span class="jxr_string">"MPS_AKH"</span>);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         codeReplacements.put(<span class="jxr_string">"MIR"</span>, <span class="jxr_string">"MI"</span>);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>         codeReplacements.put(<span class="jxr_string">"MMQ"</span>, <span class="jxr_string">"MM"</span>);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>         codeReplacements.put(<span class="jxr_string">"NEM"</span>, <span class="jxr_string">"NE"</span>);
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>         codeReplacements.put(<span class="jxr_string">"ODY"</span>, <span class="jxr_string">"OD"</span>);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         codeReplacements.put(<span class="jxr_string">"PCY"</span>, <span class="jxr_string">"PR"</span>);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>         codeReplacements.put(<span class="jxr_string">"PLS"</span>, <span class="jxr_string">"PS"</span>);
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         codeReplacements.put(<span class="jxr_string">"POR"</span>, <span class="jxr_string">"PO"</span>);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         codeReplacements.put(<span class="jxr_string">"P02"</span>, <span class="jxr_string">"P2"</span>);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         codeReplacements.put(<span class="jxr_string">"PTK"</span>, <span class="jxr_string">"PK"</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         codeReplacements.put(<span class="jxr_string">"S00"</span>, <span class="jxr_string">"P4"</span>);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a>         codeReplacements.put(<span class="jxr_string">"S99"</span>, <span class="jxr_string">"P3"</span>);
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         codeReplacements.put(<span class="jxr_string">"STH"</span>, <span class="jxr_string">"ST"</span>);
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         codeReplacements.put(<span class="jxr_string">"TMP"</span>, <span class="jxr_string">"TE"</span>);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         codeReplacements.put(<span class="jxr_string">"UDS"</span>, <span class="jxr_string">"CG"</span>);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a>         codeReplacements.put(<span class="jxr_string">"UGIN"</span>, <span class="jxr_string">"FRF_UGIN"</span>);
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         codeReplacements.put(<span class="jxr_string">"UGL"</span>, <span class="jxr_string">"UG"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         codeReplacements.put(<span class="jxr_string">"ULG"</span>, <span class="jxr_string">"GU"</span>);
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         codeReplacements.put(<span class="jxr_string">"USG"</span>, <span class="jxr_string">"UZ"</span>);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a>         codeReplacements.put(<span class="jxr_string">"VIS"</span>, <span class="jxr_string">"VI"</span>);
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>         codeReplacements.put(<span class="jxr_string">"WTH"</span>, <span class="jxr_string">"WL"</span>);
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>     }
+<a class="jxr_linenumber" name="L164" href="#L164">164</a> 
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>     <strong class="jxr_keyword">public</strong> <a name="GathererSets" href="../../../../../../org/mage/plugins/card/dl/sources/GathererSets.html#GathererSets">GathererSets</a>() {
+<a class="jxr_linenumber" name="L166" href="#L166">166</a> 
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         outDir = <strong class="jxr_keyword">new</strong> File(getImagesDir() + Constants.RESOURCE_PATH_SYMBOLS);
+<a class="jxr_linenumber" name="L168" href="#L168">168</a> 
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>         <strong class="jxr_keyword">if</strong> (!outDir.exists()) {
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>             outDir.mkdirs();
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         }
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>     }
+<a class="jxr_linenumber" name="L173" href="#L173">173</a> 
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>     <em class="jxr_comment">// checks for wrong card settings and support (easy to control what all good)</em>
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> HashMap&lt;String, CheckResult&gt; setsToDownload = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L176" href="#L176">176</a> 
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> CheckSearchResult(String searchCode, <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> foundedExp, <strong class="jxr_keyword">boolean</strong> canDownloadTask,
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>                                    <strong class="jxr_keyword">boolean</strong> haveCommon, <strong class="jxr_keyword">boolean</strong> haveUncommon, <strong class="jxr_keyword">boolean</strong> haveRare, <strong class="jxr_keyword">boolean</strong> haveMyth) {
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>         <em class="jxr_comment">// duplicated in settings</em>
+<a class="jxr_linenumber" name="L180" href="#L180">180</a>         CheckResult res = setsToDownload.get(searchCode);
+<a class="jxr_linenumber" name="L181" href="#L181">181</a> 
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <strong class="jxr_keyword">if</strong> (res != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>             logger.error(String.format(<span class="jxr_string">"Symbols: found duplicate code: %s"</span>, searchCode));
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>             res = <strong class="jxr_keyword">new</strong> CheckResult(searchCode, foundedExp, haveCommon, haveUncommon, haveRare, haveMyth);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>             setsToDownload.put(searchCode, res);
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         }
+<a class="jxr_linenumber" name="L188" href="#L188">188</a> 
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>         <em class="jxr_comment">// not found</em>
+<a class="jxr_linenumber" name="L190" href="#L190">190</a>         <strong class="jxr_keyword">if</strong> (foundedExp == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>             logger.error(String.format(<span class="jxr_string">"Symbols: can't find set by code: %s"</span>, searchCode));
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>         }
+<a class="jxr_linenumber" name="L194" href="#L194">194</a> 
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         <em class="jxr_comment">// checks for founded sets only</em>
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         <em class="jxr_comment">// too early to download</em>
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         <strong class="jxr_keyword">if</strong> (!canDownloadTask) {
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>             Calendar c = Calendar.getInstance();
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>             c.setTime(foundedExp.getReleaseDate());
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>             c.add(Calendar.DATE, -1 * DAYS_BEFORE_RELEASE_TO_DOWNLOAD);
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>             logger.warn(String.format(<span class="jxr_string">"Symbols: early to download: %s (%s), available after %s"</span>,
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>                     searchCode, foundedExp.getName(), c.getTime()));
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         }
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>     }
+<a class="jxr_linenumber" name="L205" href="#L205">205</a> 
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> AnalyseSearchResult() {
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>         <em class="jxr_comment">// analyze supported sets and show wrong settings</em>
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         Date startedDate = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L209" href="#L209">209</a> 
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         <strong class="jxr_keyword">for</strong> (<a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> set : Sets.getInstance().values()) {
+<a class="jxr_linenumber" name="L211" href="#L211">211</a> 
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>             CheckResult res = setsToDownload.get(set.getCode());
+<a class="jxr_linenumber" name="L213" href="#L213">213</a> 
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>             <em class="jxr_comment">// 1. not configured at all</em>
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>             <strong class="jxr_keyword">if</strong> (res == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>                 logger.warn(String.format(<span class="jxr_string">"Symbols: set is not configured: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>                 <strong class="jxr_keyword">continue</strong>; <em class="jxr_comment">// can't do other checks</em>
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>             }
+<a class="jxr_linenumber" name="L219" href="#L219">219</a> 
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>             <strong class="jxr_keyword">if</strong> (logger.isDebugEnabled()) {
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>                 <em class="jxr_comment">// 2. missing rarity icon:</em>
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>                 <em class="jxr_comment">// WARNING, need too much time (60+ secs), only for debug mode</em>
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>                 <em class="jxr_comment">///*</em>
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>                 <strong class="jxr_keyword">if</strong> (!set.getCardsByRarity(Rarity.COMMON).isEmpty() &amp;&amp; !res.haveCommon) {
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>                     logger.error(String.format(<span class="jxr_string">"Symbols: set have common cards, but don't download icon: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>                 }
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>                 <strong class="jxr_keyword">if</strong> (!set.getCardsByRarity(Rarity.UNCOMMON).isEmpty() &amp;&amp; !res.haveUncommon) {
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>                     logger.error(String.format(<span class="jxr_string">"Symbols: set have uncommon cards, but don't download icon: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>                 }
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>                 <strong class="jxr_keyword">if</strong> (!set.getCardsByRarity(Rarity.RARE).isEmpty() &amp;&amp; !res.haveRare) {
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>                     logger.error(String.format(<span class="jxr_string">"Symbols: set have rare cards, but don't download icon: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>                 }
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>                 <strong class="jxr_keyword">if</strong> (!set.getCardsByRarity(Rarity.MYTHIC).isEmpty() &amp;&amp; !res.haveMyth) {
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>                     logger.error(String.format(<span class="jxr_string">"Symbols: set have mythic cards, but don't download icon: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>                 }
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>                 <em class="jxr_comment">//*/</em>
+<a class="jxr_linenumber" name="L237" href="#L237">237</a> 
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>                 <em class="jxr_comment">// 3. info: sets with alternative numbers</em>
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>                 <strong class="jxr_keyword">for</strong> (ExpansionSet.SetCardInfo card : set.getSetCardInfo()) {
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>                     <strong class="jxr_keyword">if</strong> (String.valueOf(card.getCardNumberAsInt()).length() != card.getCardNumber().length()) {
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>                         logger.info(String.format(<span class="jxr_string">"Symbols: set have alternative card but do not config to it: %s (%s)"</span>, set.getCode(), set.getName()));
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>                         <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>                     }
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>                 }
+<a class="jxr_linenumber" name="L245" href="#L245">245</a> 
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>                 <em class="jxr_comment">// 4. info: sets with missing cards for boosters</em>
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>                 <strong class="jxr_keyword">if</strong> (set.getMaxCardNumberInBooster() != Integer.MAX_VALUE) {
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>                     <strong class="jxr_keyword">for</strong> (ExpansionSet.SetCardInfo card : set.getSetCardInfo()) {
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>                         <strong class="jxr_keyword">if</strong> (card.getCardNumberAsInt() &gt; set.getMaxCardNumberInBooster()) {
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>                             <strong class="jxr_keyword">if</strong> (card.getRarity() == Rarity.LAND) {
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>                                 logger.info(String.format(<span class="jxr_string">"Symbols: set's booster have land above max card number: %s (%s), %s - %s"</span>, set.getCode(), set.getName(), card.getCardNumber(), card.getName()));
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>                             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>                                 logger.info(String.format(<span class="jxr_string">"Symbols: set's booster missing nonland card:: %s (%s), %s - %s"</span>, set.getCode(), set.getName(), card.getCardNumber(), card.getName()));
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>                             }
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>                         }
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>                     }
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>                 }
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>             }
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         }
+<a class="jxr_linenumber" name="L260" href="#L260">260</a> 
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         Date endedDate = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         <strong class="jxr_keyword">long</strong> secs = (endedDate.getTime() - startedDate.getTime()) / 1000;
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         logger.debug(String.format(<span class="jxr_string">"Symbols: check completed after %d seconds"</span>, secs));
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>     }
+<a class="jxr_linenumber" name="L265" href="#L265">265</a> 
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>     @Override
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>     <strong class="jxr_keyword">public</strong> Iterator&lt;DownloadJob&gt; iterator() {
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         Calendar c = Calendar.getInstance();
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         c.setTime(<strong class="jxr_keyword">new</strong> Date());
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         c.add(Calendar.DATE, DAYS_BEFORE_RELEASE_TO_DOWNLOAD);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         Date compareDate = c.getTime();
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         List&lt;DownloadJob&gt; jobs = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         <strong class="jxr_keyword">boolean</strong> canDownload;
+<a class="jxr_linenumber" name="L274" href="#L274">274</a> 
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         setsToDownload.clear();
+<a class="jxr_linenumber" name="L276" href="#L276">276</a> 
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         <strong class="jxr_keyword">for</strong> (String symbol : symbolsBasic) {
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>             <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> exp = Sets.findSet(symbol);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>             canDownload = false;
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>             <strong class="jxr_keyword">if</strong> (exp != <strong class="jxr_keyword">null</strong> &amp;&amp; exp.getReleaseDate().before(compareDate)) {
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>                 canDownload = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"C"</span>, <span class="jxr_string">"C"</span>));
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"U"</span>, <span class="jxr_string">"U"</span>));
+<a class="jxr_linenumber" name="L284" href="#L284">284</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"R"</span>, <span class="jxr_string">"R"</span>));
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>             }
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>             CheckSearchResult(symbol, exp, canDownload, <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>, false);
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         }
+<a class="jxr_linenumber" name="L288" href="#L288">288</a> 
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>         <strong class="jxr_keyword">for</strong> (String symbol : symbolsBasicWithMyth) {
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>             <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> exp = Sets.findSet(symbol);
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>             canDownload = false;
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>             <strong class="jxr_keyword">if</strong> (exp != <strong class="jxr_keyword">null</strong> &amp;&amp; exp.getReleaseDate().before(compareDate)) {
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>                 canDownload = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"C"</span>, <span class="jxr_string">"C"</span>));
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"U"</span>, <span class="jxr_string">"U"</span>));
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"R"</span>, <span class="jxr_string">"R"</span>));
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"M"</span>, <span class="jxr_string">"M"</span>));
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>             }
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>             CheckSearchResult(symbol, exp, canDownload, <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         }
+<a class="jxr_linenumber" name="L301" href="#L301">301</a> 
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>         <strong class="jxr_keyword">for</strong> (String symbol : symbolsOnlyMyth) {
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>             <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> exp = Sets.findSet(symbol);
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>             canDownload = false;
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>             <strong class="jxr_keyword">if</strong> (exp != <strong class="jxr_keyword">null</strong> &amp;&amp; exp.getReleaseDate().before(compareDate)) {
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>                 canDownload = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"M"</span>, <span class="jxr_string">"M"</span>));
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>             }
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>             CheckSearchResult(symbol, exp, canDownload, false, false, false, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         }
+<a class="jxr_linenumber" name="L311" href="#L311">311</a> 
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>         <strong class="jxr_keyword">for</strong> (String symbol : symbolsOnlySpecial) {
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>             <a name="ExpansionSet" href="../../../../../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> exp = Sets.findSet(symbol);
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>             canDownload = false;
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>             <strong class="jxr_keyword">if</strong> (exp != <strong class="jxr_keyword">null</strong> &amp;&amp; exp.getReleaseDate().before(compareDate)) {
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>                 canDownload = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>                 jobs.add(generateDownloadJob(symbol, <span class="jxr_string">"M"</span>, <span class="jxr_string">"S"</span>));
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>             }
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>             CheckSearchResult(symbol, exp, canDownload, false, false, false, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         }
+<a class="jxr_linenumber" name="L321" href="#L321">321</a> 
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         <em class="jxr_comment">// check wrong settings</em>
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         AnalyseSearchResult();
+<a class="jxr_linenumber" name="L324" href="#L324">324</a> 
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>         <strong class="jxr_keyword">return</strong> jobs.iterator();
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>     }
+<a class="jxr_linenumber" name="L327" href="#L327">327</a> 
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>     <strong class="jxr_keyword">private</strong> <a name="DownloadJob" href="../../../../../../org/mage/plugins/card/dl/DownloadJob.html#DownloadJob">DownloadJob</a> generateDownloadJob(String set, String rarity, String urlRarity) {
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         File dst = <strong class="jxr_keyword">new</strong> File(outDir, set + '-' + rarity + <span class="jxr_string">".jpg"</span>);
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         <strong class="jxr_keyword">if</strong> (codeReplacements.containsKey(set)) {
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>             set = codeReplacements.get(set);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         }
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         String url = <span class="jxr_string">"https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&amp;set="</span> + set + <span class="jxr_string">"&amp;size=small&amp;rarity="</span> + urlRarity;
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="DownloadJob" href="../../../../../../org/mage/plugins/card/dl/DownloadJob.html#DownloadJob">DownloadJob</a>(set + '-' + rarity, fromURL(url), toFile(dst));
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>     }
+<a class="jxr_linenumber" name="L336" href="#L336">336</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

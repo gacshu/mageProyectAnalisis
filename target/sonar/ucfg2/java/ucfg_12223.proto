@@ -1,0 +1,177 @@
+
+ƒmage.filter.predicate.permanent.GreatestPowerControlledPredicate#apply(Lmage/filter/predicate/ObjectSourcePlayer;Lmage/game/Game;)Zƒ
+yD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/GreatestPowerControlledPredicate.java ("startingBlock*‰
+2 (Z
+X
+ ("
+pmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""•
+’
+ ("
+pmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%5java.util.List*"
+
+__unknown_file (
+""*
+3
+1*Ð
+3 ( ™–
+4 (@
+%6mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent2
+getPower()om
+4 (K	
+%7int"mage.MageInt#getValue()I*0
+
+__unknown_file (
+
+%6mage.MageInt2
+getValue()®
+«
+ (L	
+%8int"java.lang.Math#max(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*'
+
+__unknown_file (
+	
+%7int*
+2* 
+startingBlock (H¥
+¢
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayerr
+p
+7 (<1
+input(mage.filter.predicate.ObjectSourcePlayer"__annotation*#
+
+__unknown_file (
+
+%12Š
+‡
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+C (G
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13*
+5*ç
+
+4 (¾»
+ (0%
+%1mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()r
+p
+E (m:
+%24mage.filter.common.FilterControlledCreaturePermanent"__id*"
+
+__unknown_file (
+""ÌÉ
+	o (‚
+%3java.util.UUID"Fmage.filter.predicate.ObjectSourcePlayer#getPlayerId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getPlayerId()ÙÖ
+
+„ (•
+%4mage.abilities.Ability"Lmage.filter.predicate.ObjectSourcePlayer#getSource()Lmage/abilities/Ability;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getSource()òï
+	 (œ
+%5java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%1mage.game.permanent.Battlefield*X
+
+__unknown_file (<
+:
+%24mage.filter.common.FilterControlledCreaturePermanent*2
+
+__unknown_file (
+
+%3java.util.UUID*:
+
+__unknown_file (
+
+%4mage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*U
+5 (#A
+?
+ (-	
+%0int"__id*"
+
+__unknown_file (
+""*
+4*
+1 (ØÕ
+ ( #
+%9mage.game.permanent.Permanent"Fmage.filter.predicate.ObjectSourcePlayer#getObject()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getObject()›˜
+ (+
+%10mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent2
+getPower()qo
+ (6
+
+%11int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%10mage.MageInt2
+getValue()"
+ (H
+"":=
+ (=1
+input(mage.filter.predicate.ObjectSourcePlayer:"
+> (G
+gamemage.game.GameBDB
+@mage.filter.predicate.permanent.GreatestPowerControlledPredicateHP

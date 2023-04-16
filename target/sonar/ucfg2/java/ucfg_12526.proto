@@ -1,0 +1,153 @@
+
+ymage.abilities.effects.common.DevourEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Zm
+cD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/DevourEffect.java9 9("startingBlock*ý	
+2;E ;(JÙÖ
+;( ;(W#
+%3mage.game.permanent.Permanent"Umage.game.events.EntersTheBattlefieldEvent#getTarget()Lmage/game/permanent/Permanent;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTarget()ˆ
+…
+; ;(X0
+sourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanentš—
+< <(
+%4mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¬©
+<% <(<
+%5java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent2getId()’
+<% <(G
+%6java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*2
+
+__unknown_file (
+
+%5java.util.UUID2
+toString()n
+l
+<% <(T
+%7java.lang.String"__concat*$
+<% <(G
+
+%6java.lang.String*
+<J <(T
+
+devoured¡ž
+< <([
+
+%8void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*7
+
+__unknown_file (
+
+%4mage.game.GameState*4
+
+__unknown_file (
+
+%7java.lang.String*"
+
+__unknown_file (
+""2.setValue(Ljava/lang/String;Ljava/lang/Object;)"
+= =(
+""*Á
+3: :(¯¬
+: :(
+%0java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()¨¥
+:' :(;
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÌÉ
+: :(<
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+2
+1*ü
+startingBlock9 9(F–
+“
+8 8(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+9% 9(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%9”
+‘
+8 8(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+94 9(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+8 8(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+9A 9(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+3*!
+1? ?("
+? ?(
+"":/
+9 9(+#
+eventmage.game.events.GameEvent:,
+9, 9(; 
+sourcemage.abilities.Ability:"
+9< 9(E
+gamemage.game.GameB.,
+*mage.abilities.effects.common.DevourEffectHP

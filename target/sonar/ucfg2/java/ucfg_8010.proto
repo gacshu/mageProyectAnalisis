@@ -1,0 +1,137 @@
+
+œmage.abilities.effects.common.combat.CantBlockUnlessYouControlSourceEffect#applies(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)ZŽ
+ƒD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/CantBlockUnlessYouControlSourceEffect.java' '("startingBlock*	
+2) )(¾»
+) )((%
+%3mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¿
+¼
+)/ )(52
+%4,mage.filter.common.FilterControlledPermanent"__id*v
+
+__unknown_file (Z*XL
+Jmage.abilities.effects.common.combat.CantBlockUnlessYouControlSourceEffect"
+filter°­
+)7 )(O
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¶³
+) )(^	
+%6int"}mage.game.permanent.Battlefield#count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*C
+
+__unknown_file ('
+%
+%3mage.game.permanent.Battlefield*P
+
+__unknown_file (4
+2
+%4,mage.filter.common.FilterControlledPermanent*2
+
+__unknown_file (
+
+%5java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\count(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*¸
+3( ((¦£
+( (( 
+%0java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()¨¥
+(( ((<
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÌÉ
+( ((=
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+2
+1*†
+startingBlock' '(J
+š
+& &(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanentj
+h
+'% '(.*
+	permanentmage.game.permanent.Permanent"__annotation*"
+
+__unknown_file (
+
+%7“
+
+& &(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+'8 '(> 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8‰
+†
+& &(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+'E '(I
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9*
+3*!
+1( )(d"
+( )(d
+"":6
+' '(/*
+	permanentmage.game.permanent.Permanent:,
+'0 '(? 
+sourcemage.abilities.Ability:"
+'@ '(I
+gamemage.game.GameBNL
+Jmage.abilities.effects.common.combat.CantBlockUnlessYouControlSourceEffectHP

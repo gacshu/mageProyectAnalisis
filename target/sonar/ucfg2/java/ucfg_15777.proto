@@ -1,0 +1,462 @@
+
+}mage.filter.predicate.other.DamagedPlayerThisTurnPredicate#apply(Lmage/filter/predicate/ObjectSourcePlayer;Lmage/game/Game;)Z}
+sD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/other/DamagedPlayerThisTurnPredicate.java ("startingBlock*ô
+13- -(!ÙÖ
+- -(2
+%18boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+notYouIdjava.util.UUID*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2equals(Ljava/lang/Object;)*
+10
+12*É
+24 "(š—
+7 (F
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()æã
+7 (7
+%81mage.watchers.common.PlayerDamagedBySourceWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%7mage.game.GameState*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)©
+¦
+	 (€<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher"__id*U
+
+__unknown_file (9
+7
+%81mage.watchers.common.PlayerDamagedBySourceWatcher*
+23
+1*£
+14,% ,()›˜
+,% ,(4
+%16mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()îë
+,% ,(V
+%17mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*8
+
+__unknown_file (
+
+%16mage.game.GameState*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+10*ÿ
+17$ $($T
+R
+$ $($
+
+opponentIdjava.util.UUID"__id*"
+
+__unknown_file (
+""
+Œ
+$ $($
+
+opponentIdjava.util.UUID"
+__arrayGet*2
+
+__unknown_file (
+
+%11java.util.Set*"
+
+__unknown_file (
+""*
+19
+1*Ê
+18' '(&š
+'; '(I
+%14java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+objectmage.game.Controllable2getId()…‚
+' '(P
+%15boolean"hmage.watchers.common.PlayerDamagedBySourceWatcher#hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)Z*Z
+
+__unknown_file (>
+<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher*3
+
+__unknown_file (
+
+%14java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game25hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)"
+' '(Q
+""*Ï
+19% %("›˜
+% %(-
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()êç
+% %(h8
+%131mage.watchers.common.PlayerDamagedBySourceWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%12mage.game.GameState*"
+
+__unknown_file (
+""*:
+
+__unknown_file (
+
+
+opponentIdjava.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)©
+¦
+% %(h<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher"__id*V
+
+__unknown_file (:
+8
+%131mage.watchers.common.PlayerDamagedBySourceWatcher*
+17
+18*!
+1? ?("
+? ?(
+""*¾	
+2 (#ÑÎ
+ (/
+%0mage.game.Controllable"Fmage.filter.predicate.ObjectSourcePlayer#getObject()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getObject()p
+n
+ (0 
+objectmage.game.Controllable"__id*:
+
+__unknown_file (
+
+%0mage.game.ControllableËÈ
+ (+
+%1java.util.UUID"Fmage.filter.predicate.ObjectSourcePlayer#getPlayerId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getPlayerId()b
+`
+ (,
+playerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%1java.util.UUID¦
+£
+ (%
+%2mage.constants.TargetController"__id*j
+
+__unknown_file (N*L<
+:mage.filter.predicate.other.DamagedPlayerThisTurnPredicate"
+
+controller]
+[
+ (%
+%3mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+# #(%
+%4mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
++ +(%
+%5mage.constants.TargetController"__id*"
+
+__unknown_file (
+""]
+[
+5 5(%
+%6mage.constants.TargetController"__id*"
+
+__unknown_file (
+""*
+24
+14
+7
+20
+1*!
+3< <("
+< <(
+""* 
+startingBlock (K¥
+¢
+ (
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayerr
+p
+: (?1
+input(mage.filter.predicate.ObjectSourcePlayer"__annotation*#
+
+__unknown_file (
+
+%29Š
+‡
+ (
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+F (J
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%30*
+2*ý
+46 6(O
+M
+6 6(
+anyIdjava.util.UUID"__id*"
+
+__unknown_file (
+""”
+‘
+6 6(
+anyIdjava.util.UUID"
+__arrayGet*<
+
+__unknown_file ( 
+
+%24mage.players.PlayerList*"
+
+__unknown_file (
+""*
+3
+6*É
+59 9(&š
+9; 9(I
+%27java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+objectmage.game.Controllable2getId()…‚
+9 9(P
+%28boolean"hmage.watchers.common.PlayerDamagedBySourceWatcher#hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)Z*Z
+
+__unknown_file (>
+<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher*3
+
+__unknown_file (
+
+%27java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game25hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)"
+9 9(Q
+""*Ç
+67 7("›˜
+7 7(-
+%25mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()åâ
+7 7(c8
+%261mage.watchers.common.PlayerDamagedBySourceWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%25mage.game.GameState*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+anyIdjava.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)©
+¦
+7 7(c<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher"__id*V
+
+__unknown_file (:
+8
+%261mage.watchers.common.PlayerDamagedBySourceWatcher*
+4
+5*¡
+76" 6(&›˜
+6" 6(1
+%23mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()îë
+6" 6(S
+%24mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*8
+
+__unknown_file (
+
+%23mage.game.GameState*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+4*ˆ
+20$' $(+ñî
+$' $(B
+%11java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getOpponents(Ljava/util/UUID;)*
+17*…
+10, ,("R
+P
+, ,("
+notYouIdjava.util.UUID"__id*"
+
+__unknown_file (
+""—
+”
+, ,("
+notYouIdjava.util.UUID"
+__arrayGet*<
+
+__unknown_file ( 
+
+%17mage.players.PlayerList*"
+
+__unknown_file (
+""*
+13
+1*Ê
+110# 0(*š
+0? 0(M
+%21java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+objectmage.game.Controllable2getId()…‚
+0# 0(T
+%22boolean"hmage.watchers.common.PlayerDamagedBySourceWatcher#hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)Z*Z
+
+__unknown_file (>
+<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher*3
+
+__unknown_file (
+
+%21java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game25hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)"
+0 0(U
+""*Í
+12." .(&›˜
+." .(1
+%19mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()èå
+." .(j8
+%201mage.watchers.common.PlayerDamagedBySourceWatcher"Xmage.game.GameState#getWatcher(Ljava/lang/Class;Ljava/util/UUID;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%19mage.game.GameState*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+notYouIdjava.util.UUID2-getWatcher(Ljava/lang/Class;Ljava/util/UUID;)©
+¦
+. .(j<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher"__id*V
+
+__unknown_file (:
+8
+%201mage.watchers.common.PlayerDamagedBySourceWatcher*
+10
+11*È
+23   ("œ™
+ 7  (E
+%9java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+objectmage.game.Controllable2getId()„
+   (L
+%10boolean"hmage.watchers.common.PlayerDamagedBySourceWatcher#hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)Z*Z
+
+__unknown_file (>
+<
+watcher1mage.watchers.common.PlayerDamagedBySourceWatcher*2
+
+__unknown_file (
+
+%9java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game25hasSourceDoneDamage(Ljava/util/UUID;Lmage/game/Game;)"
+   (M
+"":=
+ (@1
+input(mage.filter.predicate.ObjectSourcePlayer:"
+A (J
+gamemage.game.GameB><
+:mage.filter.predicate.other.DamagedPlayerThisTurnPredicateHP

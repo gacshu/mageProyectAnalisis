@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>VoiceOfResurgenceTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../testapidocs/org/mage/test/cards/triggers/dies/VoiceOfResurgenceTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.triggers.dies;
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.filter.Filter;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="VoiceOfResurgenceTest" href="../../../../../../org/mage/test/cards/triggers/dies/VoiceOfResurgenceTest.html#VoiceOfResurgenceTest">VoiceOfResurgenceTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * Voice of Resurgence creates it's token under owner's control upon death</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">     * even when it is controlled by an opponent when it dies. Happened with</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment">     * Treachery.</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment">     *</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      @Test
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testDiesTriggeredAbility() {
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 5);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Silvercoat Lion"</span>, 1);
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <em class="jxr_comment">// Enchant creature</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <em class="jxr_comment">// When Treachery enters the battlefield, untap up to five lands.</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <em class="jxr_comment">// You control enchanted creature.</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Treachery"</span>); <em class="jxr_comment">// {3}{U}{U}</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Mountain"</span>, 1);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <em class="jxr_comment">// Whenever an opponent casts a spell during your turn or when Voice of Resurgence dies,</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <em class="jxr_comment">// put a green and white Elemental creature token onto the battlefield with "This creature's power and toughness are each equal to the number of creatures you control."</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Voice of Resurgence"</span>, 1); <em class="jxr_comment">// 2/2</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          addCard(Zone.HAND, playerB, <span class="jxr_string">"Lightning Bolt"</span>);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Treachery"</span>, <span class="jxr_string">"Voice of Resurgence"</span>);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          castSpell(1, PhaseStep.POSTCOMBAT_MAIN, playerB, <span class="jxr_string">"Lightning Bolt"</span>, <span class="jxr_string">"Voice of Resurgence"</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          setStopAt(1, PhaseStep.END_TURN);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          execute();
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          assertLife(playerA, 20);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          assertLife(playerB, 20);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          assertGraveyardCount(playerA, <span class="jxr_string">"Treachery"</span>, 1);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          assertGraveyardCount(playerB, <span class="jxr_string">"Voice of Resurgence"</span>, 1);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          assertPermanentCount(playerA, <span class="jxr_string">"Elemental Token"</span>, 2); <em class="jxr_comment">// one from the Lightning Bolt and one from the Voice of Resurgence dying</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          assertPowerToughness(playerA, <span class="jxr_string">"Elemental Token"</span>, 3, 3, Filter.ComparisonScope.All);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          assertTappedCount(<span class="jxr_string">"Island"</span>, <strong class="jxr_keyword">true</strong>, 0);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

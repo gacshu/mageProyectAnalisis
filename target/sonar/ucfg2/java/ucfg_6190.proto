@@ -1,0 +1,385 @@
+
+ämage.abilities.effects.ApplyCountersEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Zm
+cD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/ApplyCountersEffect.java ("startingBlock*õ
+13!P !(Y¶£
+!P !(a
+%7java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()\
+Z
+!P !(a
+%6java.util.UUID"__id*2
+
+__unknown_file (
+
+%7java.util.UUID*
+11*ﬁ
+14! !(√¿
+!) !(=
+%5mage.abilities.Ability"Amage.counters.AbilityCounter#getAbility()Lmage/abilities/Ability;*E
+
+__unknown_file ()
+'
+countermage.counters.AbilityCounter2getAbility()*
+13
+12*›
+15 .  (7ëé
+ .  (I
+%3mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)≤Ø
+ .  (^
+%4java.util.List";mage.counters.Counters#getAbilityCounters()Ljava/util/List;*:
+
+__unknown_file (
+
+%3mage.counters.Counters2getAbilityCounters()*
+10*£
+16' (+æª
+' (<%
+%1mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()Ã…
+' (U
+%2java.util.List"Hmage.game.permanent.Battlefield#getAllActivePermanents()Ljava/util/List;*C
+
+__unknown_file ('
+%
+%1mage.game.permanent.Battlefield2getAllActivePermanents()*
+9*k
+17 (R
+P
+ (9
+%0mage.constants.Layer"__id*"
+
+__unknown_file (
+""*
+16
+8*!
+1- -("
+- -(
+""*ö
+2& &($b
+`
+& &($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""û
+õ
+& &($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%14java.util.List*"
+
+__unknown_file (
+""*
+5
+1*ê
+3' '()]
+[
+' '()%
+countermage.counters.BoostCounter"__id*"
+
+__unknown_file (
+""ô
+ñ
+' '()%
+countermage.counters.BoostCounter"
+__arrayGet*3
+
+__unknown_file (
+
+%16java.util.List*"
+
+__unknown_file (
+""*
+2
+4*Û
+startingBlock (Së
+é
+ (
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+layermage.constants.Layer^
+\
+ ($
+layermage.constants.Layer"__annotation*#
+
+__unknown_file (
+
+%23ó
+î
+ (
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+sublayermage.constants.SubLayerd
+b
+/ (7#
+sublayermage.constants.SubLayer"__annotation*#
+
+__unknown_file (
+
+%24î
+ë
+ (
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+A (G 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%25ä
+á
+ (
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+N (R
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%26*
+17*Ù
+4( ((íè
+(' ((9
+
+%17int"&mage.counters.BoostCounter#getPower()I*C
+
+__unknown_file ('
+%
+countermage.counters.BoostCounter2
+getPower()çä
+(< ((N
+
+%18int"!mage.counters.Counter#getCount()I*C
+
+__unknown_file ('
+%
+countermage.counters.BoostCounter2
+getCount()¡æ
+( ((O
+%19void"*mage.game.permanent.Permanent#addPower(I)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addPower(I)öó
+)+ )(A
+
+%20int"*mage.counters.BoostCounter#getToughness()I*C
+
+__unknown_file ('
+%
+countermage.counters.BoostCounter2getToughness()çä
+)D )(V
+
+%21int"!mage.counters.Counter#getCount()I*C
+
+__unknown_file ('
+%
+countermage.counters.BoostCounter2
+getCount()…∆
+) )(W
+%22void".mage.game.permanent.Permanent#addToughness(I)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2addToughness(I)*
+3*⁄
+5', '(5íè
+', '(G
+%15mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)∞≠
+', '(Z
+%16java.util.List"9mage.counters.Counters#getBoostCounters()Ljava/util/List;*;
+
+__unknown_file (
+
+%15mage.counters.Counters2getBoostCounters()*
+3*√
+6&' &(+øº
+&' &(<&
+%12mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()V
+T
+&T &(e
+%13mage.constants.CardType"__id*"
+
+__unknown_file (
+""îë
+&' &(l
+%14java.util.List"qmage.game.permanent.Battlefield#getAllActivePermanents(Lmage/constants/CardType;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%12mage.game.permanent.Battlefield*<
+
+__unknown_file ( 
+
+%13mage.constants.CardType*4
+
+__unknown_file (
+
+gamemage.game.Game2AgetAllActivePermanents(Lmage/constants/CardType;Lmage/game/Game;)*
+2*m
+7%2 %(:V
+T
+%> %(R
+%11mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""*
+6
+1*j
+8% %(S
+Q
+% %(.
+%10mage.constants.Layer"__id*"
+
+__unknown_file (
+""*
+7
+1*ö
+9 ($b
+`
+ ($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ù
+ö
+ ($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%2java.util.List*"
+
+__unknown_file (
+""*
+15
+8*ï
+10   (+_
+]
+   (+'
+countermage.counters.AbilityCounter"__id*"
+
+__unknown_file (
+""ö
+ó
+   (+'
+countermage.counters.AbilityCounter"
+__arrayGet*2
+
+__unknown_file (
+
+%4java.util.List*"
+
+__unknown_file (
+""*
+14
+9*À
+11!z !(~¥±
+! !(
+
+%9void"cmage.game.permanent.Permanent#addAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%5mage.abilities.Ability*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2DaddAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+10*ù
+12!d !(j®•
+!d !(x
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()\
+Z
+!d !(x
+%6java.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUID*
+11:)
+ (%
+layermage.constants.Layer:/
+& (8#
+sublayermage.constants.SubLayer:,
+9 (H 
+sourcemage.abilities.Ability:"
+I (R
+gamemage.game.GameB.,
+*mage.abilities.effects.ApplyCountersEffectHP

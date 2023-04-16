@@ -1,0 +1,282 @@
+
+rmage.players.PlayerImpl#removeAttachment(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.javaÕ Õ(#"startingBlock*—
+2
+Ø Ø(t
+r
+
+Ø Ø( 
+%8java.util.List"__id*H
+
+__unknown_file (,**
+mage.players.PlayerImpl"
+attachments©¦
+
+Ø( Ø(:
+%9java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent2getId()ÏÌ
+
+Ø Ø(;
+%10boolean"*java.util.List#remove(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%8java.util.List*2
+
+__unknown_file (
+
+%9java.util.UUID2remove(Ljava/lang/Object;)¨¥
+
+Ù Ù(7
+%11void"amage.game.permanent.Permanent#attachTo(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2BattachTo(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)r
+p
+
+Ú3 Ú(;
+%12java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerIdª§
+
+Ú= Ú(O
+%13java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent2getId()YW
+
+Ú# Ú(2'
+%14 mage.game.events.UnattachedEvent" mage.game.events.UnattachedEventÖ
+Ó
+
+Ú Ú(d
+%15"mage.game.events.UnattachedEvent#<init>(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/permanent/Permanent;Lmage/abilities/Ability;)V*E
+
+__unknown_file ()
+'
+%14 mage.game.events.UnattachedEvent*3
+
+__unknown_file (
+
+%12java.util.UUID*3
+
+__unknown_file (
+
+%13java.util.UUID*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityûø
+
+Ú Ú(e
+%16void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+%14 mage.game.events.UnattachedEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+
+Û Û(
+""*ß
+3
+× ×(q
+o
+
+×5 ×(=
+%3java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerId©¦
+
+×? ×(Q
+%4java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent2getId()TR
+
+×' ×(4$
+%5mage.game.events.UnattachEvent"mage.game.events.UnattachEventÍ
+Ê
+
+×# ×(f
+%6"mage.game.events.UnattachEvent#<init>(Ljava/util/UUID;Ljava/util/UUID;Lmage/game/permanent/Permanent;Lmage/abilities/Ability;)V*B
+
+__unknown_file (&
+$
+%5mage.game.events.UnattachEvent*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability€ı
+
+× ×(g
+%7boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*B
+
+__unknown_file (&
+$
+%5mage.game.events.UnattachEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+2
+1*œ
+startingBlock
+Õ# Õ(T¡
+
+
+Ô Ô(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanentn
+l
+
+Õ. Õ(8+
+
+attachmentmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%17–
+“
+
+Ô Ô(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+ÕB Õ(H 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%18Œ
+‰
+
+Ô Ô(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ÕO Õ(S
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19*
+4*
+4
+Ö Ö(t
+r
+
+Ö Ö(
+%0java.util.List"__id*H
+
+__unknown_file (,**
+mage.players.PlayerImpl"
+attachments©¦
+
+Ö& Ö(8
+%1java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent2getId()ÒÏ
+
+Ö Ö(9
+%2boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.List*2
+
+__unknown_file (
+
+%1java.util.UUID2contains(Ljava/lang/Object;)*
+3
+1*%
+1
+Ş Ş("
+
+Ş Ş(
+"":9
+
+Õ$ Õ(9+
+
+attachmentmage.game.permanent.Permanent:.
+
+Õ: Õ(I 
+sourcemage.abilities.Ability:$
+
+ÕJ Õ(S
+gamemage.game.GameB
+mage.players.PlayerImplHP

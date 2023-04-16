@@ -1,0 +1,323 @@
+
+„mage.abilities.common.CastFromGraveyardOnceEffect#applies(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Z{
+qD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/CastFromGraveyardOnceStaticAbility.javaF F("startingBlock*˜
+13G G(þû
+G G(7
+%0boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+1
+12*!
+1U U("
+U U(
+""*!
+2R R(n"
+R R(n
+""*Á
+3R* R(1GE
+RE R(X
+%16mage.MageObjectReference"mage.MageObjectReference›
+˜
+RA R(l
+%17"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*=
+
+__unknown_file (!
+
+%16mage.MageObjectReference*K
+
+__unknown_file (/
+-
+sourceObjectmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameÅÂ
+R* R(m
+%18boolean"^mage.abilities.common.CastFromGraveyardOnceWatcher#abilityNotUsed(Lmage/MageObjectReference;)Z*[
+
+__unknown_file (?
+=
+watcher2mage.abilities.common.CastFromGraveyardOnceWatcher*=
+
+__unknown_file (!
+
+%16mage.MageObjectReference2*abilityNotUsed(Lmage/MageObjectReference;)*
+2*ó
+startingBlockF F(_Ž
+‹
+E E(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+objectIdjava.util.UUID[
+Y
+F  F((
+objectIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%19”
+‘
+E E(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+F2 F(8 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%20š
+—
+E E(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUIDg
+e
+F? F(S&
+affectedControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%21Š
+‡
+E E(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+FZ F(^
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22*
+13*ó
+4Q7 Q(;›˜
+Q7 Q(F
+%14mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Œ
+Q7 Q(u9
+%152mage.abilities.common.CastFromGraveyardOnceWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%14mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)«
+¨
+Q Q(v=
+watcher2mage.abilities.common.CastFromGraveyardOnceWatcher"__id*W
+
+__unknown_file (;
+9
+%152mage.abilities.common.CastFromGraveyardOnceWatcher*
+2
+3*µ
+5P P(‘
+Ž
+P P(
+%12mage.filter.FilterCard"__id*]
+
+__unknown_file (A*?3
+1mage.abilities.common.CastFromGraveyardOnceEffect"
+filter‰†
+P P(M
+%13boolean"hmage.filter.FilterCard#match(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+%12mage.filter.FilterCard*5
+
+__unknown_file (
+
+cardmage.cards.Card*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Pmatch(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+4
+1*Ô
+6O O(»¸
+O O(-"
+%10mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getSpellAbility()þû
+O O(i
+%11boolean"^mage.abilities.SpellAbility#spellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)Z*@
+
+__unknown_file ($
+"
+%10mage.abilities.SpellAbility*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2AspellCanBeActivatedRegularlyNow(Ljava/util/UUID;Lmage/game/Game;)*
+5
+1*Ò
+7N N(º·
+N N(-!
+%9mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getSpellAbility()*
+6
+1*ü
+8M M(äá
+M M(;
+%8boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+7
+1*¸
+10J J(êç
+J J(.
+%6mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getCard(Ljava/util/UUID;)`
+^
+J J(/
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%6mage.cards.CardÈÅ
+K% K(S#
+%7mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)…
+‚
+K K(T-
+sourceObjectmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%7mage.game.permanent.Permanent*
+8
+1*†
+11I I(ìé
+I I(<
+%5boolean"0mage.game.Game#isActivePlayer(Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID2 isActivePlayer(Ljava/util/UUID;)*
+10
+1*Ý
+12H H(Q
+O
+H H(!
+%1mage.constants.Zone"__id*"
+
+__unknown_file (
+""š—
+H) H(8
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ú÷
+H) H(J
+%3mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%2mage.game.GameState*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getZone(Ljava/util/UUID;)ÖÓ
+H H(K
+%4boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*7
+
+__unknown_file (
+
+%1mage.constants.Zone*7
+
+__unknown_file (
+
+%3mage.constants.Zone2equals(Ljava/lang/Object;)*
+11
+1:&
+F F()
+objectIdjava.util.UUID:,
+F* F(9 
+sourcemage.abilities.Ability:2
+F: F(T&
+affectedControllerIdjava.util.UUID:"
+FU F(^
+gamemage.game.GameB53
+1mage.abilities.common.CastFromGraveyardOnceEffectHP

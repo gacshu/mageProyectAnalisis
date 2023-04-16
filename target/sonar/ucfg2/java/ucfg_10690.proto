@@ -1,0 +1,54 @@
+
+@mage.game.events.DamagedBatchEvent#getTargetId()Ljava/util/UUID;e
+[D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/events/DamagedBatchEvent.java" "("1*ô	
+1# #(w
+u
+# #(
+%0java.util.Set"__id*N
+
+__unknown_file (2*0$
+"mage.game.events.DamagedBatchEvent"
+events¡ž
+# $(
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%0java.util.Set2stream()†ƒ
+# %(,
+%2java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+# &()
+%3java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)ª§
+# '(
+%4java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream2findFirst()ÜÙ
+# ((
+%5java.util.UUID"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%4java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)""
+# ((
+
+%5java.util.UUIDB&$
+"mage.game.events.DamagedBatchEventH

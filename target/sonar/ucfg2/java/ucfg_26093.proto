@@ -1,0 +1,216 @@
+
+Omage.server.game.GameController#requestPermissionToRollback(Ljava/util/UUID;I)Ik
+_D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GameController.javaÈ È(+"9*ã
+2
+Î Î(W
+U
+
+Î Î(
+playermage.players.Player"__id*"
+
+__unknown_file (
+""ò
+ï
+
+Î Î(
+playermage.players.Player"
+__arrayGet*8
+
+__unknown_file (
+
+%3java.util.Collection*"
+
+__unknown_file (
+""*
+8
+1*ı
+3
+Û Û(ﬁ€
+
+Û Û(]
+%15void"Vmage.server.game.GameSessionPlayer#requestPermissionToRollbackTurn(Ljava/util/UUID;I)V*O
+
+__unknown_file (3
+1
+gameSession"mage.server.game.GameSessionPlayer*?
+
+__unknown_file (#
+!
+userIdRequesterjava.util.UUID*"
+
+__unknown_file (
+""22requestPermissionToRollbackTurn(Ljava/util/UUID;I)*
+2*ú
+4
+ (ì
+ê
+
+Ò0 Ò(<)
+%12"java.util.concurrent.ConcurrentMap"__id*Q
+
+__unknown_file (5*3!
+mage.server.game.GameController"
+gameSessionsìê
+
+ÒA Ò(O
+%13java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()¬
+ø
+
+Ò0 Ò(P)
+%14"mage.server.game.GameSessionPlayer"__mapGet*G
+
+__unknown_file (+
+)
+%12"java.util.concurrent.ConcurrentMap*3
+
+__unknown_file (
+
+%13java.util.UUIDë
+é
+
+Ò Ò(Q1
+gameSession"mage.server.game.GameSessionPlayer"__id*G
+
+__unknown_file (+
+)
+%14"mage.server.game.GameSessionPlayer*
+2
+3*©
+5
+Ô Ô(%ùö
+
+Ô Ô(+
+%9mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*A
+
+__unknown_file (%
+#
+requestedUserjava.util.Optional2get()èå
+
+Ô Ô(3
+%10java.util.UUID"(mage.server.User#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%9mage.server.User2getId()›⁄
+
+Ô Ô(K
+%11boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%10java.util.UUID*?
+
+__unknown_file (#
+!
+userIdRequesterjava.util.UUID2equals(Ljava/lang/Object;)*
+2
+4*©
+6
+Ó Ó($èå
+
+Ó Ó(0
+%8boolean"java.util.Optional#isPresent()Z*A
+
+__unknown_file (%
+#
+requestedUserjava.util.Optional2isPresent()*
+2
+5*†
+7
+Ì% Ì(+ÜÉ
+
+Ì% Ì(5
+%7boolean"mage.players.Player#isHuman()Z*;
+
+__unknown_file (
+
+playermage.players.Player2	isHuman()*
+2
+6*§
+8
+Ï+ Ï(<íè
+
+Ï= Ï(K
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()˜
+Ù
+
+Ï+ Ï(L
+%5java.util.Optional"Wmage.server.game.GameController#getUserByPlayerId(Ljava/util/UUID;)Ljava/util/Optional;*?
+
+__unknown_file (#!
+mage.server.game.GameController*2
+
+__unknown_file (
+
+%4java.util.UUIDq
+o
+
+Ï Ï(M#
+requestedUserjava.util.Optional"__id*6
+
+__unknown_file (
+
+%5java.util.OptionalàÖ
+
+Ì Ì(!
+%6boolean"mage.players.Player#isInGame()Z*;
+
+__unknown_file (
+
+playermage.players.Player2
+isInGame()*
+2
+7*ˇ
+9
+Î Î(!u
+s
+
+Î Î(!
+%0mage.game.Game"__id*I
+
+__unknown_file (-*+!
+mage.server.game.GameController"
+gameöó
+
+Î Î(,
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*2
+
+__unknown_file (
+
+%0mage.game.Game2
+getState()™ß
+
+Î Î(9
+%2mage.players.Players"6mage.game.GameState#getPlayers()Lmage/players/Players;*7
+
+__unknown_file (
+
+%1mage.game.GameState2getPlayers()ß§
+
+Î Î(B
+%3java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*8
+
+__unknown_file (
+
+%2mage.players.Players2values()*
+2*%
+1
+˜ ˜("
+
+˜ ˜(
+"":/
+
+È, È(A!
+userIdRequesterjava.util.UUID: 
+
+__unknown_file (
+""B#!
+mage.server.game.GameControllerP

@@ -1,0 +1,1133 @@
+
+8mage.deck.TinyLeaders#validate(Lmage/cards/decks/Deck;)Zs
+iD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/TinyLeaders.javah h("startingBlock*©
+46m m(e
+c
+m m(5-
+%5'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""äá
+mQ m(a	
+%6int"'mage.deck.TinyLeaders#getDeckMinSize()I*5
+
+__unknown_file (
+mage.deck.TinyLeaders2getDeckMinSize()f
+d
+m? m(a
+%7java.lang.String"__concat*
+m? m(N
+Must contain *
+mQ m(a
+	
+%6intr
+p
+m? m(r
+%8java.lang.String"__concat*$
+m? m(a
+
+%7java.lang.String*
+md m(r
+ cards: has ùö
+	mu m(Ñ
+%9java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ki
+	mu m(ã
+
+%10int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%9java.util.Set2size()q
+o
+	m? m(ã
+%11java.lang.String"__concat*$
+m? m(r
+
+%8java.lang.String*
+	mu m(ã
+
+
+%10intr
+p
+	m? m(ñ
+%12java.lang.String"__concat*&
+	m? m(ã
+
+%11java.lang.String*
+
+mé m(ñ
+
+ cardsŒÀ
+	m m(ó
+%13void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*K
+
+__unknown_file (/
+-
+%5'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%12java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+45*å
+24
+ô ô($w
+u
+
+ô ô($
+%50java.util.List"__id*J
+
+__unknown_file (.*,
+mage.deck.TinyLeaders"
+bannedCommanderúô
+
+ô. ô(A
+%51java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()◊‘
+
+ô ô(B
+%52boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%50java.util.List*5
+
+__unknown_file (
+
+%51java.lang.String2contains(Ljava/lang/Object;)*
+14
+23*¸
+47i i(o
+m
+j j(
+%0java.util.List"__id*E
+
+__unknown_file ()*'
+mage.deck.TinyLeaders"
+
+errorsListZ
+X
+j j(
+
+%1void"__arrayClear*2
+
+__unknown_file (
+
+%0java.util.Listúô
+l l(
+%2java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ig
+l l("	
+%3int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%2java.util.Set2size()äá
+l& l(6	
+%4int"'mage.deck.TinyLeaders#getDeckMinSize()I*5
+
+__unknown_file (
+mage.deck.TinyLeaders2getDeckMinSize()*
+46
+45*è
+25
+ò ò( X
+V
+
+ò< ò(Q
+%48mage.constants.CardType"__id*"
+
+__unknown_file (
+""òï
+
+ò ò(R
+%49boolean"Fmage.cards.Card#hasCardTypeForDeckbuilding(Lmage/constants/CardType;)Z*:
+
+__unknown_file (
+
+	commandermage.cards.Card*<
+
+__unknown_file ( 
+
+%48mage.constants.CardType25hasCardTypeForDeckbuilding(Lmage/constants/CardType;)*
+13
+24*ß
+26
+óL ó(Uäá
+
+óL ó(c
+%47boolean"mage.MageObject#isLegendary()Z*:
+
+__unknown_file (
+
+	commandermage.cards.Card2isLegendary()*
+24
+25*è
+27
+ó ó(X
+V
+
+ó6 ó(G
+%45mage.constants.CardType"__id*"
+
+__unknown_file (
+""òï
+
+ó ó(H
+%46boolean"Fmage.cards.Card#hasCardTypeForDeckbuilding(Lmage/constants/CardType;)Z*:
+
+__unknown_file (
+
+	commandermage.cards.Card*<
+
+__unknown_file ( 
+
+%45mage.constants.CardType25hasCardTypeForDeckbuilding(Lmage/constants/CardType;)*
+25
+26*&
+28
+ï ï("
+
+ï ï(
+""*Á
+29
+ì ì(h
+f
+
+ì ì(;.
+%43'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""‰·
+
+ì ì(q
+%44void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%43'mage.cards.decks.DeckValidatorErrorType*&
+
+__unknown_file (
+
+Leader*G
+
+__unknown_file (+)
+'Commanders mana value is greater than 32WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+28*•
+30
+í) í(2àÖ
+
+í) í(A
+
+%42int"mage.MageObject#getManaValue()I*:
+
+__unknown_file (
+
+	commandermage.cards.Card2getManaValue()*
+28
+29*º
+10
+≤ ≤(Ø¨
+
+≤ ≤(8
+%73java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()ÔÏ
+
+≤ ≤(9
+%74boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+%73java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+7
+9*◊
+
+32
+ç ç( h
+f
+
+ç! ç(?.
+%36'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""£†
+
+çX ç(f
+%37java.lang.String"1mage.cards.decks.Deck#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2	getName()v
+t
+
+çK ç(f
+%38java.lang.String"__concat*
+
+çK ç(U
+
+Leader [*'
+
+çX ç(f
+
+%37java.lang.String¸
+˘
+çK ç(Ú
+%39java.lang.String"__concat*'
+
+çK ç(f
+
+%38java.lang.String*ù
+çi ç(Úçä
+á] not found. You have to enter the name of the leader card into the DECK NAME field of the DECK EDITOR (top left). Check your spelling ›
+⁄
+çK é(è
+%40java.lang.String"__concat*(
+çK ç(Ú
+
+%39java.lang.String*~
+é" é(èom
+k(use the \"Sultai\" for a UBG (3/3) default Commander or \"Glass\" for a colorless (3/3) default Commander)”–
+ç é(ê
+%41void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%36'mage.cards.decks.DeckValidatorErrorType*&
+
+__unknown_file (
+
+Leader*5
+
+__unknown_file (
+
+%40java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+28
+30*∑
+11
+± ±(üú
+
+± ±((
+%72java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+7*√
+33
+ä ä( h
+f
+
+ä! ä(?.
+%33'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""Ê
+„
+äK ã(ñ
+%34java.lang.String"__concat*®
+äK ä(ﬂòï
+íYou have to save your deck with the leader card name entered to the DECK NAME field of the DECK EDITOR (top left) so that XMage knows your leader.*Ö
+ã" ã(ñvt
+r(You can use the \"Sultai\" for a UBG (3/3) default Commander or \"Glass\" for a colorless 3/3 default Commander.)”–
+ä ã(ó
+%35void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%33'mage.cards.decks.DeckValidatorErrorType*&
+
+__unknown_file (
+
+Leader*5
+
+__unknown_file (
+
+%34java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+28
+30*∏
+12
+Æ Æ(h
+f
+
+Æ Æ(3.
+%70'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""µ≤
+Æ Æ(∏
+%71void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%70'mage.cards.decks.DeckValidatorErrorType*)
+
+__unknown_file (
+	Commander*ì
+
+__unknown_file (wu
+sSideboard must contain only a maximum of 10 sideboard cards (the Tiny Leader name must be written to the deck name)2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+11*¿
+34
+â â(£†
+
+â â(&
+%32java.lang.String"1mage.cards.decks.Deck#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2	getName()*
+32
+33*¿	
+13
+™ ™(h
+f
+
+™ ™(7.
+%64'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""úô
+
+™9 ™(L
+%65java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()úô
+
+™g ™(z
+%66java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()É
+Ä
+
+™N ™(z
+%67java.lang.String"__concat*&
+
+™N ™(d
+Commander invalide (*'
+
+™g ™(z
+
+%66java.lang.Stringq
+o
+™N ™(Ä
+%68java.lang.String"__concat*'
+
+™N ™(z
+
+%67java.lang.String*
+™} ™(Ä
+)ÜÉ
+™ ™(á
+%69void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%64'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%65java.lang.String*5
+
+__unknown_file (
+
+%68java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+11*≠
+36
+á% á(.àÖ
+
+á% á(=
+
+%31int"mage.MageObject#getManaValue()I*:
+
+__unknown_file (
+
+	commandermage.cards.Card2getManaValue()*
+27
+28
+30
+34*Ω	
+14
+¶ ¶(h
+f
+
+¶ ¶(;.
+%58'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""úô
+
+¶= ¶(P
+%59java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()úô
+
+¶i ¶(|
+%60java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2	getName()Ä
+~
+
+¶R ¶(|
+%61java.lang.String"__concat*$
+
+¶R ¶(f
+Commander banned (*'
+
+¶i ¶(|
+
+%60java.lang.Stringq
+o
+¶R ¶(Ç
+%62java.lang.String"__concat*'
+
+¶R ¶(|
+
+%61java.lang.String*
+¶ ¶(Ç
+)ÜÉ
+¶ ¶(â
+%63void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%58'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%59java.lang.String*5
+
+__unknown_file (
+
+%62java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+11*”
+37 (0°û
+B (P
+%29java.lang.String"1mage.cards.decks.Deck#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2	getName()§
+°
+ (W
+%30mage.cards.Card"cmage.game.GameTinyLeadersImpl#getCommanderCard(Ljava/lang/String;Ljava/util/UUID;)Lmage/cards/Card;*=
+
+__unknown_file (!"
+mage.game.GameTinyLeadersImpl*5
+
+__unknown_file (
+
+%29java.lang.String*"
+
+__unknown_file (
+""f
+d
+ (X
+	commandermage.cards.Card"__id*4
+
+__unknown_file (
+
+%30mage.cards.Card*
+36
+28
+30
+34*¸
+15
+† †("Q
+O
+
+† †("
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""å
+â
+
+† †("
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%56java.util.Set*"
+
+__unknown_file (
+""*
+17
+11*≠
+38~ ~(•¢
+~ ~(
+%27java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ki
+~ ~(&
+
+%28int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%27java.util.Set2size()*
+37
+12*Ö
+39w w(V
+T
+w w(
+
+bannedCardjava.lang.String"__id*"
+
+__unknown_file (
+""í
+è
+w w(
+
+bannedCardjava.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%23java.util.List*"
+
+__unknown_file (
+""*
+38
+41*á
+17
+° °(.Ó
+Î
+
+° °(F
+%57boolean"dmage.deck.TinyLeaders#isCardFormatValid(Lmage/cards/Card;Lmage/cards/Card;Lmage/filter/FilterMana;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+cardmage.cards.Card*:
+
+__unknown_file (
+
+	commandermage.cards.Card*=
+
+__unknown_file (!
+
+colormage.filter.FilterMana*
+15*¿
+18
+†% †()ß§
+
+†% †(8
+%56java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+15*¸
+19
+õ õ("Q
+O
+
+õ õ("
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""å
+â
+
+õ õ("
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%54java.util.Set*"
+
+__unknown_file (
+""*
+18
+21*%
+1
+¡ ¡("
+
+¡ ¡(
+""*˘
+2
+π π(Q
+O
+
+π π(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""å
+â
+
+π π(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%81java.util.Set*"
+
+__unknown_file (
+""*
+5
+1*”
+3
+º º(h
+f
+
+º º(=.
+%85'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""óî
+
+º? º(M
+%86java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()Ø¨
+
+ºd º(~
+%87java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()~
+|
+
+ºO º(~
+%88java.lang.String"__concat*"
+
+ºO º(a
+Not allowed Set *'
+
+ºd º(~
+
+%87java.lang.StringÜÉ
+º º(Ö
+%89void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%85'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%86java.lang.String*5
+
+__unknown_file (
+
+%88java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+2*ì
+startingBlockh h(&ë
+é
+g g(
+%90"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck^
+\
+h! h(%
+deckmage.cards.decks.Deck"__annotation*#
+
+__unknown_file (
+
+%90*
+47*Å
+4
+ª ª(Á‰
+
+ª ª($
+%84boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+2
+3*ª
+5
+∫ ∫(Ø¨
+
+∫ ∫(8
+%82java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()ÔÏ
+
+∫ ∫(9
+%83boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+%82java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+2
+4*æ
+6
+π π(ß§
+
+π π(,
+%81java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+2*˙
+7
+± ±(Q
+O
+
+± ±(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""å
+â
+
+± ±(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%72java.util.Set*"
+
+__unknown_file (
+""*
+6
+10*”
+8
+¥ ¥(h
+f
+
+¥ ¥(=.
+%76'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""óî
+
+¥? ¥(M
+%77java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()Ø¨
+
+¥d ¥(~
+%78java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()~
+|
+
+¥O ¥(~
+%79java.lang.String"__concat*"
+
+¥O ¥(a
+Not allowed Set *'
+
+¥d ¥(~
+
+%78java.lang.StringÜÉ
+¥ ¥(Ö
+%80void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%76'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%77java.lang.String*5
+
+__unknown_file (
+
+%79java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+7*Å
+9
+≥ ≥(Á‰
+
+≥ ≥($
+%75boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+7
+8*˙
+40y y(f
+d
+y y(6.
+%25'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""˚¯
+y y(S
+%26void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*L
+
+__unknown_file (0
+.
+%25'mage.cards.decks.DeckValidatorErrorType*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String*&
+
+__unknown_file (
+
+Banned* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+39*˛
+41x x(„‡
+x x(.
+%24boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+countsjava.util.Map*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String2containsKey(Ljava/lang/Object;)*
+39
+40*Ç
+42w! w('l
+j
+w! w('
+%23java.util.List"__id*A
+
+__unknown_file (%*#
+mage.deck.TinyLeaders"
+banned*
+39*á
+21
+ú ú(.Ó
+Î
+
+ú ú(F
+%55boolean"dmage.deck.TinyLeaders#isCardFormatValid(Lmage/cards/Card;Lmage/cards/Card;Lmage/filter/FilterMana;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+cardmage.cards.Card*:
+
+__unknown_file (
+
+	commandermage.cards.Card*=
+
+__unknown_file (!
+
+colormage.filter.FilterMana*
+19*∏
+22
+õ% õ()üú
+
+õ% õ(4
+%54java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+19*‰
+45q& q(597
+q* q(3
+%14java.util.HashMap"java.util.HashMaph
+f
+q& q(5
+%15"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%14java.util.HashMapc
+a
+q q(6
+countsjava.util.Map"__id*6
+
+__unknown_file (
+
+%14java.util.HashMap°û
+r r(!
+%16java.lang.String"1mage.cards.decks.Deck#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2	getName()¡
+æ
+r r(%
+%17java.lang.Integer"__mapSet*5
+
+__unknown_file (
+
+countsjava.util.Map*5
+
+__unknown_file (
+
+%16java.lang.String* 
+
+__unknown_file (2ùö
+s s(*
+%18java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()¬ø
+s s(+
+%19void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%18java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)•¢
+t t(.
+%20java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()¬ø
+t t(/
+%21void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*5
+
+__unknown_file (
+mage.deck.TinyLeaders*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%20java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)âÜ
+u u(&
+%22boolean";mage.cards.decks.Constructed#checkCounts(ILjava/util/Map;)Z*5
+
+__unknown_file (
+mage.deck.TinyLeaders* 
+
+__unknown_file (2*5
+
+__unknown_file (
+
+countsjava.util.Map2checkCounts(ILjava/util/Map;)*
+42*«
+23
+ö' ö(0∫∑
+
+ö' ö(C
+%53mage.filter.FilterMana":mage.cards.Card#getColorIdentity()Lmage/filter/FilterMana;*:
+
+__unknown_file (
+
+	commandermage.cards.Card2getColorIdentity()r
+p
+
+ö ö(D
+colormage.filter.FilterMana"__id*;
+
+__unknown_file (
+
+%53mage.filter.FilterMana*
+22:)
+h h(%
+deckmage.cards.decks.DeckB
+mage.deck.TinyLeadersHP

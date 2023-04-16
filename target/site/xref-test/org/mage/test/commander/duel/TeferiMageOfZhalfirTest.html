@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>TeferiMageOfZhalfirTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/commander/duel/TeferiMageOfZhalfirTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.commander.duel;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.game.Game;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.game.GameException;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestCommanderDuelBase;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> java.io.FileNotFoundException;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="TeferiMageOfZhalfirTest" href="../../../../../org/mage/test/commander/duel/TeferiMageOfZhalfirTest.html#TeferiMageOfZhalfirTest">TeferiMageOfZhalfirTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestCommanderDuelBase" href="../../../../../org/mage/test/serverside/base/CardTestCommanderDuelBase.html#CardTestCommanderDuelBase">CardTestCommanderDuelBase</a> {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      @Override
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      <strong class="jxr_keyword">protected</strong> Game createNewGameAndPlayers() <strong class="jxr_keyword">throws</strong> GameException, FileNotFoundException {
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          setDecknamePlayerA(<span class="jxr_string">"CommanderDuel_UW.dck"</span>); <em class="jxr_comment">// Commander = Daxos of Meletis</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">super</strong>.createNewGameAndPlayers();
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      }
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      @Test
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> castCommanderWithFlash() {
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Plains"</span>, 2);
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 1);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Teferi, Mage of Zhalfir"</span>);
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          castSpell(1, PhaseStep.BEGIN_COMBAT, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          setStopAt(1, PhaseStep.END_COMBAT);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          execute();
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          assertPermanentCount(playerA, <span class="jxr_string">"Daxos of Meletis"</span>, 1);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      }
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      @Test
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCommanderDamage() {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          setLife(playerA, 20);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          setLife(playerB, 20);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Plains"</span>, 6);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 1);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <em class="jxr_comment">// Enchant creature</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <em class="jxr_comment">// Enchanted creature gets +4/+4, has flying and first strike, and is an Angel in addition to its other types.</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <em class="jxr_comment">// When enchanted creature dies, return Angelic Destiny to its owner's hand.</em>
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Angelic Destiny"</span>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Teferi, Mage of Zhalfir"</span>);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <em class="jxr_comment">// Daxos of Meletis can't be blocked by creatures with power 3 or greater.</em>
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <em class="jxr_comment">// Whenever Daxos of Meletis deals combat damage to a player, exile the top card of that player's library.</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <em class="jxr_comment">// You gain life equal to that card's converted mana cost. Until end of turn, you may cast that card</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <em class="jxr_comment">// and you may spend mana as though it were mana of any color to cast it.</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          waitStackResolved(1, PhaseStep.PRECOMBAT_MAIN);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Angelic Destiny"</span>, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          attack(3, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          attack(5, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          attack(7, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          attack(9, playerA, <span class="jxr_string">"Daxos of Meletis"</span>);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          checkPT(<span class="jxr_string">"before lost"</span>, 9, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Daxos of Meletis"</span>, 6, 6);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          setStopAt(9, PhaseStep.POSTCOMBAT_MAIN);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          execute();
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          assertPermanentCount(playerA, <span class="jxr_string">"Daxos of Meletis"</span>, 1);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          assertPowerToughness(playerA, <span class="jxr_string">"Daxos of Meletis"</span>, 6, 6); <em class="jxr_comment">// no effects removes after game over -- users and tests can get last game state with all affected effects</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          assertWonTheGame(playerA);
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          assertLostTheGame(playerB);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      }
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,351 @@
+
+Wmage.abilities.keyword.FabricateEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zj
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/FabricateAbility.javaC C("startingBlock*≠
+13D D( ∞≠
+D+ D(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+D D(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+D D(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+1
+12*!
+1U U("
+U U(
+""*!
+2S S("
+S S(
+""*ö
+3Q Q( _]
+Q Q(+
+%24$mage.game.permanent.token.ServoToken"$mage.game.permanent.token.ServoTokenè
+å
+Q Q( 
+%25".mage.game.permanent.token.ServoToken#<init>()V*I
+
+__unknown_file (-
++
+%24$mage.game.permanent.token.ServoTokenïí
+QI Q([
+%26java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()˙˜
+Q Q(\
+%27boolean"rmage.game.permanent.token.TokenImpl#putOntoBattlefield(ILmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)Z*I
+
+__unknown_file (-
++
+%24$mage.game.permanent.token.ServoToken*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%26java.util.UUID2MputOntoBattlefield(ILmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)*
+2*ˇ
+startingBlockC C(3ä
+á
+B B(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+C C("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%28î
+ë
+B B(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+C, C(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%29*
+13*ù
+4O O($X
+V
+O2 O(B 
+%20mage.counters.CounterType"__id*"
+
+__unknown_file (
+""Ê„
+O2 O(X
+%21mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%20mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)±Æ
+OZ O(r
+%22java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ëé
+	O O(Å
+%23boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject*:
+
+__unknown_file (
+
+%21mage.counters.Counter*3
+
+__unknown_file (
+
+%22java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*∞
+5L L(i}
+{
+L L(i
+%18java.lang.String"__concat*%
+L L(P
+
+%14java.lang.String*%
+LS L(i
+
+%15java.lang.Stringôñ
+G( N(
+%19boolean"®mage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%3mage.constants.Outcome*4
+
+__unknown_file (
+
+%4java.lang.String*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%18java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ìchooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+3
+4*v
+6Lf L(hb
+`
+Lf L(h
+%15java.lang.String"__id*5
+
+__unknown_file (
+
+%17java.lang.String*
+5*v
+7L` L(cb
+`
+L` L(c
+%15java.lang.String"__id*5
+
+__unknown_file (
+
+%16java.lang.String*
+5*„
+8K K(j{
+y
+K K(j
+%11java.lang.String"__concat*$
+K K(Q
+
+%7java.lang.String*$
+KT K(j
+
+%8java.lang.StringÈ
+Ê
+L  L(A
+%12java.lang.String"Fmage.util.CardUtil#numberToText(ILjava/lang/String;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*"
+
+__unknown_file (
+""*!
+
+__unknown_file (
+ao
+m
+L L(A
+%13java.lang.String"__concat*
+L L(	
+Create *%
+L  L(A
+
+%12java.lang.Stringr
+p
+L L(P
+%14java.lang.String"__concat*%
+L L(A
+
+%13java.lang.String*
+LD L(P
+
+ 1/1 token*
+6
+7*u
+9Kg K(ia
+_
+Kg K(i
+%8java.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.String*
+8*u
+10Ka K(d`
+^
+Ka K(d
+%8java.lang.String"__id*4
+
+__unknown_file (
+
+%9java.lang.String*
+8*ö
+11G( G(2T
+R
+H H()
+%3mage.constants.Outcome"__id*"
+
+__unknown_file (
+""^
+\
+I I((
+%4java.lang.String"__concat*
+I I( 
+
+Fabricate *
+I# I((
+""Ë
+Â
+K K(>
+%5java.lang.String"Fmage.util.CardUtil#numberToText(ILjava/lang/String;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*"
+
+__unknown_file (
+""*!
+
+__unknown_file (
+aj
+h
+K K(>
+%6java.lang.String"__concat*
+K K(
+Put *$
+K K(>
+
+%5java.lang.Stringt
+r
+K K(Q
+%7java.lang.String"__concat*$
+K K(>
+
+%6java.lang.String*
+KA K(Q
+ +1/+1 counter*
+9
+10*™
+12F& F(,¶£
+F& F(Q
+%2mage.MageObject"Xmage.abilities.Ability#getSourceObjectIfItStillExists(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game20getSourceObjectIfItStillExists(Lmage/game/Game;)h
+f
+F F(R
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*
+3
+11:"
+C C(#
+gamemage.game.Game:,
+C$ C(2 
+sourcemage.abilities.AbilityB*(
+&mage.abilities.keyword.FabricateEffectHP

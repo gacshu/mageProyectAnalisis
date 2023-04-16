@@ -1,0 +1,255 @@
+
+Wmage.abilities.common.TurnFaceUpEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zj
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/TurnFaceUpAbility.javaM M("startingBlock*¢
+
+2W W(›˜
+W W(#
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()©¦
+W- W(A
+%13java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()”‘
+W- W(L
+%14java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%13java.util.UUID2
+toString()s
+q
+W- W(\
+%15java.lang.String"__concat*%
+W- W(L
+
+%14java.lang.String*
+WO W(\
+TurnFaceUpXßÜ
+W^ W(x*
+%16#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()˜•
+W^ W(
+
+%17int"+mage.abilities.costs.mana.ManaCosts#getX()I*H
+
+__unknown_file (,
+*
+%16#mage.abilities.costs.mana.ManaCosts2getX()«¨
+	W W(€
+%18void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%12mage.game.GameState*5
+
+__unknown_file (
+
+%15java.lang.String*(
+
+__unknown_file (
+
+
+%17int2.setValue(Ljava/lang/String;Ljava/lang/Object;)"
+X X( 
+""*ƒ
+3U U('W
+U
+U4 U(D
+%8mage.counters.CounterType"__id*"
+
+__unknown_file (
+""¾»
+U4 U(U
+%9mage.counters.Counter"Amage.counters.CounterType#createInstance()Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%8mage.counters.CounterType2createInstance()±®
+UW U(o
+%10java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId() 
+U U(~
+%11boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%9mage.counters.Counter*3
+
+__unknown_file (
+
+%10java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*þ
+startingBlockM M(3Š
+‡
+L L(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+M M("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%19”
+‘
+L L(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+M, M(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%20*
+8*
+5S S(#°­
+S= S(U
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()³°
+S S(V
+%7boolean"Umage.cards.Card#turnFaceUp(Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/UUID;)Z*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2DturnFaceUp(Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/UUID;)*	
+2
+3
+1*Ø
+6Q( Q(,¨¥
+Q: Q(N
+%4java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+Q( Q(O#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPermanent(Ljava/util/UUID;)ˆ
+…
+Q Q(P0
+sourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent*
+5
+1*Ÿ
+8N N( °­
+N+ N(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+N N(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+N N(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player¨¥
+O! O(5
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+O O(6
+%3mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getCard(Ljava/util/UUID;)`
+^
+O O(7
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+6
+1*!
+1\ \("
+\ \(
+"":"
+M M(#
+gamemage.game.Game:,
+M$ M(2 
+sourcemage.abilities.AbilityB*(
+&mage.abilities.common.TurnFaceUpEffectHP

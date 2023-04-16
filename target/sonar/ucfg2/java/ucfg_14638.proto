@@ -1,0 +1,1595 @@
+
+Rmage.abilities.effects.ContinuousEffects#traceContinuousEffects(Lmage/game/Game;)Vm
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/ContinuousEffects.javaí í(&"25*£
+24
+ñ* ñ(9ä
+á
+
+ñ* ñ(9
+%4java.util.List"__id*]
+
+__unknown_file (A*?*
+(mage.abilities.effects.ContinuousEffects"
+allEffectsLists*
+22*≠
+25
+ì ì(ﬁ€
+
+ì ì(#.
+%0(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()¨©
+
+ì ì(;
+%1java.util.List"\mage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;)Ljava/util/List;*L
+
+__unknown_file (0
+.
+%0(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game2#getLayeredEffects(Lmage/game/Game;)W
+U
+
+î î(
+%2org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""´®
+
+î î(x
+
+%3void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%2org.apache.log4j.Logger*Å
+
+__unknown_file (ec
+a-------------------------------------------------------------------------------------------------2info(Ljava/lang/Object;)*
+24*π
+10
+≥Z ≥(lé
+ã
+
+≥Z ≥(l
+%104java.util.Map"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+asThoughEffectsMapêç
+
+≥Z ≥(w
+%105java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*3
+
+__unknown_file (
+
+%104java.util.Map2
+entrySet()*
+8*√7
+11
+® ®(yì
+ê
+
+® ®(y
+%82java.lang.String"__concat*6
+
+® ®(:(&
+$auraReplacementEffect ............: *'
+
+®= ®(y
+
+%79java.lang.String‡›
+
+® ®(z
+%83void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%77org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%82java.lang.String2info(Ljava/lang/Object;);9
+
+©4 ©(=
+%84java.util.TreeMap"java.util.TreeMapj
+h
+
+©0 ©(?
+%85"java.util.TreeMap#<init>()V*6
+
+__unknown_file (
+
+%84java.util.TreeMapm
+k
+
+© ©(@
+orderedEffectsjava.util.Map"__id*6
+
+__unknown_file (
+
+%84java.util.TreeMap®
+•
+
+™2 ™(@3
+%86,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffectsï
+í
+
+™ ™(i
+%87void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%86,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+layeredEffects................∏
+µ
+
+´2 ´(P3
+%88,mage.abilities.effects.ContinuousEffectsList"__id*l
+
+__unknown_file (P*N*
+(mage.abilities.effects.ContinuousEffects" 
+continuousRuleModifyingEffectsï
+í
+
+´ ´(y
+%89void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%88,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+continuousRuleModifyingEffects¨
+©
+
+¨2 ¨(D3
+%90,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+replacementEffectsï
+í
+
+¨ ¨(m
+%91void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%90,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+replacementEffects............´
+®
+
+≠2 ≠(C3
+%92,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+preventionEffectsï
+í
+
+≠ ≠(l
+%93void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%92,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+preventionEffects.............¨
+©
+
+Æ2 Æ(D3
+%94,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+requirementEffectsï
+í
+
+Æ Æ(m
+%95void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%94,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+requirementEffects............¨
+©
+
+Ø2 Ø(D3
+%96,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+restrictionEffectsï
+í
+
+Ø Ø(m
+%97void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%96,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+restrictionEffects............º
+π
+
+∞2 ∞(T3
+%98,mage.abilities.effects.ContinuousEffectsList"__id*p
+
+__unknown_file (T*R*
+(mage.abilities.effects.ContinuousEffects"$
+"restrictionUntapNotMoreThanEffectsë
+é
+
+∞ ∞(y
+%99void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*Q
+
+__unknown_file (5
+3
+%98,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+restrictionUntapNotMore...≤
+Ø
+
+±2 ±(I4
+%100,mage.abilities.effects.ContinuousEffectsList"__id*e
+
+__unknown_file (I*G*
+(mage.abilities.effects.ContinuousEffects"
+costModificationEffectsó
+î
+
+± ±(r
+%101void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*R
+
+__unknown_file (6
+4
+%100,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+costModificationEffects.......¨
+©
+
+≤2 ≤(C4
+%102,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+spliceCardEffectsó
+î
+
+≤ ≤(l
+%103void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*R
+
+__unknown_file (6
+4
+%102,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file (" 
+spliceCardEffects.............*
+10*|
+12
+®r ®(xd
+b
+
+®r ®(x
+%79java.lang.String"__id*5
+
+__unknown_file (
+
+%81java.lang.String*
+11*|
+13
+®g ®(od
+b
+
+®g ®(o
+%79java.lang.String"__id*5
+
+__unknown_file (
+
+%80java.lang.String*
+11*®
+14
+ß ß(hì
+ê
+
+ß ß(h
+%75java.lang.String"__concat*6
+
+ß ß(:(&
+$applyCounters ....................: *'
+
+ß= ß(h
+
+%72java.lang.String‡›
+
+ß ß(i
+%76void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%70org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%75java.lang.String2info(Ljava/lang/Object;)X
+V
+
+® ®(
+%77org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""∏
+µ
+
+®> ®(\3
+%78,mage.abilities.effects.ContinuousEffectsList"__id*l
+
+__unknown_file (P*N*
+(mage.abilities.effects.ContinuousEffects" 
+continuousRuleModifyingEffects*
+13
+12*|
+15
+ßa ß(gd
+b
+
+ßa ß(g
+%72java.lang.String"__id*5
+
+__unknown_file (
+
+%74java.lang.String*
+14*|
+16
+ßV ß(^d
+b
+
+ßV ß(^
+%72java.lang.String"__id*5
+
+__unknown_file (
+
+%73java.lang.String*
+14*ú
+17
+ß ß(X
+V
+
+ß ß(
+%70org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""•
+¢
+
+ß> ß(K1
+%71*mage.abilities.effects.ApplyCountersEffect"__id*[
+
+__unknown_file (?*=*
+(mage.abilities.effects.ContinuousEffects"
+applyCounters*
+15
+16*Ü
+18
+§ §(WV
+T
+
+§ §(W
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ë
+é
+
+§ §(W
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%60java.util.Set*"
+
+__unknown_file (
+""*
+17
+19*Ê
+
+19
+• •(X
+V
+
+• •(
+%61org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ø¨
+
+•! •(/(
+%62!mage.constants.AsThoughEffectType".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()©¶
+
+•! •(:
+%63java.lang.String"+java.lang.Enum#toString()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+%62!mage.constants.AsThoughEffectType2
+toString()r
+p
+
+• •(:
+%64java.lang.String"__concat*
+
+• •(
+... *'
+
+•! •(:
+
+%63java.lang.Stringp
+n
+
+• •(A
+%65java.lang.String"__concat*'
+
+• •(:
+
+%64java.lang.String*
+
+•= •(A
+: æª
+
+•D •(T3
+%66,mage.abilities.effects.ContinuousEffectsList"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ìê
+
+•D •([
+
+%67int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%66,mage.abilities.effects.ContinuousEffectsList2size()v
+t
+
+• •([
+%68java.lang.String"__concat*'
+
+• •(A
+
+%65java.lang.String*
+
+•D •([
+
+
+%67int‡›
+
+• •(\
+%69void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%61org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%68java.lang.String2info(Ljava/lang/Object;)*
+18*(
+0 "!
+
+ƒ ƒ(
+implicit return*≠
+1
+√ √(Y
+W
+
+√ √(
+%142org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ª∏
+√ √(É
+%143void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%142org.apache.log4j.Logger*å
+
+__unknown_file (pn
+l---- End trace Continuous effects --------------------------------------------------------------------------2info(Ljava/lang/Object;)*
+0*Ñ
+2
+∑ ∑(/V
+T
+
+∑ ∑(/
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""í
+è
+
+∑ ∑(/
+entryjava.util.Map$Entry"
+__arrayGet*3
+
+__unknown_file (
+
+%110java.util.Set*"
+
+__unknown_file (
+""*
+5
+1*Ø
+3
+º º(Y
+W
+
+º º(
+%120org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨©
+
+º º((!
+%121mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()¨©
+
+º º(2
+%122java.lang.String"5mage.util.trace.TraceInfo#getInfo()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%121mage.util.trace.TraceInfo2	getInfo()q
+o
+
+º Ω(
+%123java.lang.String"__concat*(
+
+º º(2
+
+%122java.lang.String*
+
+Ω Ω(
+ ¨©
+
+Ω Ω(,!
+%124mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()∏µ
+
+Ω Ω(<
+%125java.lang.String";mage.util.trace.TraceInfo#getSourceName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%124mage.util.trace.TraceInfo2getSourceName()á
+Ñ
+
+º Ω(<
+%126java.lang.String"__concat*(
+
+º Ω(
+
+%123java.lang.String*(
+
+Ω Ω(<
+
+%125java.lang.Stringq
+o
+
+º æ(
+%127java.lang.String"__concat*(
+
+º Ω(<
+
+%126java.lang.String*
+
+æ æ(
+ ¨©
+
+æ æ(,!
+%128mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()¬ø
+
+æ æ(:
+%129mage.constants.Duration"@mage.util.trace.TraceInfo#getDuration()Lmage/constants/Duration;*?
+
+__unknown_file (#
+!
+%128mage.util.trace.TraceInfo2getDuration()ôñ
+
+æ æ(A
+%130java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*=
+
+__unknown_file (!
+
+%129mage.constants.Duration2name()á
+Ñ
+
+º æ(A
+%131java.lang.String"__concat*(
+
+º æ(
+
+%127java.lang.String*(
+
+æ æ(A
+
+%130java.lang.Stringq
+o
+
+º ø(
+%132java.lang.String"__concat*(
+
+º æ(A
+
+%131java.lang.String*
+
+ø ø(
+ ¨©
+
+ø ø(,!
+%133mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()¨©
+
+ø ø(6
+%134java.lang.String"5mage.util.trace.TraceInfo#getRule()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%133mage.util.trace.TraceInfo2	getRule()á
+Ñ
+
+º ø(6
+%135java.lang.String"__concat*(
+
+º ø(
+
+%132java.lang.String*(
+
+ø ø(6
+
+%134java.lang.Stringy
+w
+
+º ¿(!
+%136java.lang.String"__concat*(
+
+º ø(6
+
+%135java.lang.String*
+
+¿ ¿(!
+	 (Order: ¨©
+
+¿$ ¿(4!
+%137mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ëé
+
+¿$ ¿(?
+%138long"%mage.util.trace.TraceInfo#getOrder()J*?
+
+__unknown_file (#
+!
+%137mage.util.trace.TraceInfo2
+getOrder()z
+x
+
+º ¿(?
+%139java.lang.String"__concat*(
+
+º ¿(!
+
+%136java.lang.String*
+
+¿$ ¿(?
+
+%138longq
+o
+
+º ¿(E
+%140java.lang.String"__concat*(
+
+º ¿(?
+
+%139java.lang.String*
+
+¿B ¿(E
+)„‡
+
+º ¡(
+%141void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%120org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%140java.lang.String2info(Ljava/lang/Object;)*
+2*…
+4
+π π("¨©
+
+π π(-!
+%114mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()∏µ
+
+π π(=
+%115java.lang.String";mage.util.trace.TraceInfo#getPlayerName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%114mage.util.trace.TraceInfo2getPlayerName()l
+j
+
+π π(=
+
+playerNamejava.lang.String"__id*6
+
+__unknown_file (
+
+%115java.lang.StringY
+W
+
+∫ ∫(
+%116org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""É
+Ä
+
+∫ ∫(7
+%117java.lang.String"__concat*
+
+∫ ∫(*
+--- Player: *.
+
+∫- ∫(7 
+
+
+playerNamejava.lang.Stringì
+ê
+
+∫ ∫(^
+%118java.lang.String"__concat*(
+
+∫ ∫(7
+
+%117java.lang.String*4
+
+∫: ∫(^&$
+"  --------------------------------„‡
+
+∫ ∫(_
+%119void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%116org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%118java.lang.String2info(Ljava/lang/Object;)*
+3*‰
+5
+∏ ∏(¨©
+
+∏ ∏(!!
+%111mage.util.trace.TraceInfo"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()∏µ
+
+∏ ∏(1
+%112java.lang.String";mage.util.trace.TraceInfo#getPlayerName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+%111mage.util.trace.TraceInfo2getPlayerName()‡›
+
+∏ ∏(D
+%113boolean",java.lang.String#equals(Ljava/lang/Object;)Z*6
+
+__unknown_file (
+
+%112java.lang.String*<
+
+__unknown_file ( 
+
+
+playerNamejava.lang.String2equals(Ljava/lang/Object;)*
+3
+4*±
+6
+∑2 ∑(@öó
+
+∑2 ∑(K
+%110java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map2
+entrySet()*
+2*j
+7
+∂ ∂(T
+R
+
+∂ ∂(
+
+playerNamejava.lang.String"__id*
+
+__unknown_file ( *
+6*Ñ
+8
+≥ ≥(WV
+T
+
+≥ ≥(W
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""í
+è
+
+≥ ≥(W
+entryjava.util.Map$Entry"
+__arrayGet*3
+
+__unknown_file (
+
+%105java.util.Set*"
+
+__unknown_file (
+""*
+7
+9*…
+9
+¥ ¥(%øº
+
+¥6 ¥(F4
+%106,mage.abilities.effects.ContinuousEffectsList"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()∞≠
+
+¥N ¥(\)
+%107!mage.constants.AsThoughEffectType".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()´®
+
+¥N ¥(g
+%108java.lang.String"+java.lang.Enum#toString()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+%107!mage.constants.AsThoughEffectType2
+toString()è
+å
+
+¥ ¥(h
+%109void"§mage.abilities.effects.ContinuousEffects#traceAddContinuousEffects(Ljava/util/Map;Lmage/abilities/effects/ContinuousEffectsList;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,"*
+(mage.abilities.effects.ContinuousEffects*=
+
+__unknown_file (!
+
+orderedEffectsjava.util.Map*R
+
+__unknown_file (6
+4
+%106,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+gamemage.game.Game*6
+
+__unknown_file (
+
+%108java.lang.String*
+8*∑
+20
+§Z §(lç
+ä
+
+§Z §(l
+%59java.util.Map"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+asThoughEffectsMapéã
+
+§Z §(w
+%60java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%59java.util.Map2
+entrySet()*
+18*ˆ?
+21
+ô ô(W
+U
+
+ô ô(
+%6org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""{y
+
+ô ô(0	
+%7int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()e
+c
+
+ô ô(0
+%8java.lang.String"__concat*
+
+ô ô(
+
+Turn: *
+
+ô ô(0
+	
+%7intó
+î
+
+ô ô(_
+%9java.lang.String"__concat*&
+
+ô ô(0
+
+%8java.lang.String*<
+
+ô3 ô(_.,
+* - currently existing continuous effects: o
+m
+
+ô ô(o
+%10java.lang.String"__concat*&
+
+ô ô(_
+
+%9java.lang.String*
+
+ôb ô(o
+""ﬂ‹
+
+ô ô(p
+%11void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%6org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%10java.lang.String2info(Ljava/lang/Object;)X
+V
+
+ö ö(
+%12org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""®
+•
+
+ö= ö(K3
+%13,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffectsìê
+
+ö= ö(R
+
+%14int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%13,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+ö ö(R
+%15java.lang.String"__concat*6
+
+ö ö(:(&
+$layeredEffects ...................: *
+
+ö= ö(R
+
+
+%14int‡›
+
+ö ö(S
+%16void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%12org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%15java.lang.String2info(Ljava/lang/Object;)X
+V
+
+õ õ(
+%17org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""∏
+µ
+
+õ= õ([3
+%18,mage.abilities.effects.ContinuousEffectsList"__id*l
+
+__unknown_file (P*N*
+(mage.abilities.effects.ContinuousEffects" 
+continuousRuleModifyingEffectsìê
+
+õ= õ(b
+
+%19int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%18,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+õ õ(b
+%20java.lang.String"__concat*6
+
+õ õ(:(&
+$continuousRuleModifyingEffects ...: *
+
+õ= õ(b
+
+
+%19int‡›
+
+õ õ(c
+%21void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%17org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%20java.lang.String2info(Ljava/lang/Object;)X
+V
+
+ú ú(
+%22org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨
+©
+
+ú= ú(O3
+%23,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+replacementEffectsìê
+
+ú= ú(V
+
+%24int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%23,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+ú ú(V
+%25java.lang.String"__concat*6
+
+ú ú(:(&
+$replacementEffects ...............: *
+
+ú= ú(V
+
+
+%24int‡›
+
+ú ú(W
+%26void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%22org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%25java.lang.String2info(Ljava/lang/Object;)X
+V
+
+ù ù(
+%27org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""´
+®
+
+ù= ù(N3
+%28,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+preventionEffectsìê
+
+ù= ù(U
+
+%29int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%28,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+ù ù(U
+%30java.lang.String"__concat*6
+
+ù ù(:(&
+$preventionEffects ................: *
+
+ù= ù(U
+
+
+%29int‡›
+
+ù ù(V
+%31void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%27org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%30java.lang.String2info(Ljava/lang/Object;)X
+V
+
+û û(
+%32org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨
+©
+
+û= û(O3
+%33,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+requirementEffectsìê
+
+û= û(V
+
+%34int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%33,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+û û(V
+%35java.lang.String"__concat*6
+
+û û(:(&
+$requirementEffects ...............: *
+
+û= û(V
+
+
+%34int‡›
+
+û û(W
+%36void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%32org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%35java.lang.String2info(Ljava/lang/Object;)X
+V
+
+ü ü(
+%37org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨
+©
+
+ü= ü(O3
+%38,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+restrictionEffectsìê
+
+ü= ü(V
+
+%39int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%38,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+ü ü(V
+%40java.lang.String"__concat*6
+
+ü ü(:(&
+$restrictionEffects ...............: *
+
+ü= ü(V
+
+
+%39int‡›
+
+ü ü(W
+%41void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%37org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%40java.lang.String2info(Ljava/lang/Object;)X
+V
+
+† †(
+%42org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""º
+π
+
+†= †(_3
+%43,mage.abilities.effects.ContinuousEffectsList"__id*p
+
+__unknown_file (T*R*
+(mage.abilities.effects.ContinuousEffects"$
+"restrictionUntapNotMoreThanEffectsìê
+
+†= †(f
+
+%44int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%43,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+† †(f
+%45java.lang.String"__concat*6
+
+† †(:(&
+$restrictionUntapNotMoreThanEffects: *
+
+†= †(f
+
+
+%44int‡›
+
+† †(g
+%46void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%42org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%45java.lang.String2info(Ljava/lang/Object;)X
+V
+
+° °(
+%47org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""±
+Æ
+
+°= °(T3
+%48,mage.abilities.effects.ContinuousEffectsList"__id*e
+
+__unknown_file (I*G*
+(mage.abilities.effects.ContinuousEffects"
+costModificationEffectsìê
+
+°= °([
+
+%49int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%48,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+° °([
+%50java.lang.String"__concat*6
+
+° °(:(&
+$costModificationEffects ..........: *
+
+°= °([
+
+
+%49int‡›
+
+° °(\
+%51void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%47org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%50java.lang.String2info(Ljava/lang/Object;)X
+V
+
+¢ ¢(
+%52org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""´
+®
+
+¢= ¢(N3
+%53,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+spliceCardEffectsìê
+
+¢= ¢(U
+
+%54int"java.util.ArrayList#size()I*Q
+
+__unknown_file (5
+3
+%53,mage.abilities.effects.ContinuousEffectsList2size()Ü
+É
+
+¢ ¢(U
+%55java.lang.String"__concat*6
+
+¢ ¢(:(&
+$spliceCardEffects ................: *
+
+¢= ¢(U
+
+
+%54int‡›
+
+¢ ¢(V
+%56void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%52org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%55java.lang.String2info(Ljava/lang/Object;)X
+V
+
+£ £(
+%57org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""€ÿ
+
+£ £('
+%58void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%57org.apache.log4j.Logger*0
+
+__unknown_file (
+asThoughEffects:2info(Ljava/lang/Object;)*
+20*∂
+22
+ñ ñ('n
+l
+
+ñ ñ('4
+list,mage.abilities.effects.ContinuousEffectsList"__id*"
+
+__unknown_file (
+""©
+¶
+
+ñ ñ('4
+list,mage.abilities.effects.ContinuousEffectsList"
+__arrayGet*2
+
+__unknown_file (
+
+%4java.util.List*"
+
+__unknown_file (
+""*
+21
+23*¨
+23
+ó ó(ìê
+
+ó ó((	
+%5int"java.util.ArrayList#size()I*R
+
+__unknown_file (6
+4
+list,mage.abilities.effects.ContinuousEffectsList2size()*
+22:$
+
+í' í(0
+gamemage.game.GameB,*
+(mage.abilities.effects.ContinuousEffectsH

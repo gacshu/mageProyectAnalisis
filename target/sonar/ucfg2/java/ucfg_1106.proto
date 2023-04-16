@@ -1,0 +1,242 @@
+
+‰mage.abilities.effects.common.ReturnCreatureFromGraveyardToBattlefieldAndGainHasteEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zœ
+‘D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ReturnCreatureFromGraveyardToBattlefieldAndGainHasteEffect.java" "("startingBlock*!
+20 0("
+0 0(
+""*ì
+3,F ,(RÕ
+Ò
+,F ,(`)
+%8#mage.abilities.keyword.HasteAbility"Vmage.abilities.keyword.HasteAbility#getInstance()Lmage/abilities/keyword/HasteAbility;*C
+
+__unknown_file ('"%
+#mage.abilities.keyword.HasteAbilityU
+S
+,b ,(q
+%9mage.constants.Duration"__id*"
+
+__unknown_file (
+""˜•
+,. ,(EG
+%10@mage.abilities.effects.common.continuous.GainAbilityTargetEffect"@mage.abilities.effects.common.continuous.GainAbilityTargetEffectþ
+û
+,* ,(r
+%11"{mage.abilities.effects.common.continuous.GainAbilityTargetEffect#<init>(Lmage/abilities/Ability;Lmage/constants/Duration;)V*e
+
+__unknown_file (I
+G
+%10@mage.abilities.effects.common.continuous.GainAbilityTargetEffect*G
+
+__unknown_file (+
+)
+%8#mage.abilities.keyword.HasteAbility*;
+
+__unknown_file (
+
+%9mage.constants.Duration­
+ª
+, ,(s1
+effect'mage.abilities.effects.ContinuousEffect"__id*e
+
+__unknown_file (I
+G
+%10@mage.abilities.effects.common.continuous.GainAbilityTargetEffecta_
+-, -(7,
+%12%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÀ
+½
+-( -(H
+%13"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game¦£
+- -(I.
+%14'mage.abilities.effects.ContinuousEffect"Œmage.abilities.effects.ContinuousEffect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Š
+. .(.
+%15void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+2*þ
+startingBlock" "(3Š
+‡
+! !(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+" "("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16”
+‘
+! !(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+", "(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%17*
+7*—	
+4) )(Q
+O
+)' )(7
+%4mage.constants.Zone"__id*"
+
+__unknown_file (
+""Ž‹
+) )(F
+%5boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*7
+
+__unknown_file (
+
+%4mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Š‡
+*4 *(@
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Š‡
+*" *(A#
+%7mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+* *(B*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%7mage.game.permanent.Permanent*
+2
+3*
+5' '(®«
+'! '(8
+%2java.util.UUID"7mage.abilities.Ability#getFirstTarget()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getFirstTarget()äá
+' '(9
+%3mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getCard(Ljava/util/UUID;)`
+^
+' '(:
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+4
+1*!
+6% %("
+% %(
+""*«
+7# #( °­
+#+ #(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+# #(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+# #(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+5
+6*!
+13 3("
+3 3(
+"":"
+" "(#
+gamemage.game.Game:,
+"$ "(2 
+sourcemage.abilities.AbilityB\Z
+Xmage.abilities.effects.common.ReturnCreatureFromGraveyardToBattlefieldAndGainHasteEffectHP

@@ -1,0 +1,86 @@
+
+Gmage.server.Session#validateEmail(Ljava/lang/String;)Ljava/lang/String;_
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.javaº º('"4"5*È
+2
+Á Á($~
+|
+
+Á Á(,
+%3java.lang.String"__concat*!
+
+Á Á($
+Email address '*)
+
+Á' Á(,
+
+emailjava.lang.StringŽ
+‹
+
+Á Á(R
+%4java.lang.String"__concat*&
+
+Á Á(,
+
+%3java.lang.String*3
+
+Á/ Á(R%#
+!' is associated with another user"&
+
+Á Á(S
+
+%4java.lang.String*³
+3
+¿( ¿(@Û
+Ø
+
+¿( ¿(N*
+%1$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepositoryµ²
+
+¿( ¿(` 
+%2mage.server.AuthorizedUser"_mage.server.AuthorizedUserRepository#getByEmail(Ljava/lang/String;)Lmage/server/AuthorizedUser;*H
+
+__unknown_file (,
+*
+%1$mage.server.AuthorizedUserRepository*7
+
+__unknown_file (
+
+emailjava.lang.String2getByEmail(Ljava/lang/String;)ƒ
+€
+
+¿ ¿(a,
+authorizedUsermage.server.AuthorizedUser"__id*>
+
+__unknown_file ("
+ 
+%2mage.server.AuthorizedUser*
+2
+1*@
+4
+½ ½(2"/
+
+½ ½(3!
+Email address cannot be blank*—
+5
+¼ ¼("~|
+
+¼ ¼(,
+%0boolean"java.lang.String#isEmpty()Z*7
+
+__unknown_file (
+
+emailjava.lang.String2	isEmpty()*
+3
+4*%
+1
+Ã Ã("
+
+Ã Ã(
+"":'
+
+º( º(4
+emailjava.lang.StringB"
+mage.server.Session

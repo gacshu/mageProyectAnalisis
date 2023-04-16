@@ -1,0 +1,273 @@
+
+mmage.cards.CardImpl#cast(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/SpellAbility;Ljava/util/UUID;)ZX
+LD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/CardImpl.javaû û("startingBlock*ä
+startingBlock
+û û(Zå
+â
+
+ù ù(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+û û(!
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12ï
+í
+
+ù ù(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zoneb
+`
+
+û( û(0
+fromZonemage.constants.Zone"__annotation*#
+
+__unknown_file (
+
+%13ú
+ô
+
+ù ù(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbilityi
+g
+
+û? û(F&
+abilitymage.abilities.SpellAbility"__annotation*#
+
+__unknown_file (
+
+%14î
+ë
+
+ù ù(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUIDa
+_
+
+ûM û(Y
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%15*
+1*
+1
+ü ü(#ûõ
+
+ü ü(%
+%0mage.cards.Card"2mage.cards.CardImpl#getMainCard()Lmage/cards/Card;*3
+
+__unknown_file (
+mage.cards.CardImpl2getMainCard()f
+d
+
+ü ü(&
+mainCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%0mage.cards.Cardêç
+
+†4 †(D
+%1java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*9
+
+__unknown_file (
+
+mainCardmage.cards.Card2getId()S
+Q
+
+†g †(q
+%2mage.constants.Zone"__id*"
+
+__unknown_file (
+""XV
+
+†$ †(3&
+%3 mage.game.events.ZoneChangeEvent" mage.game.events.ZoneChangeEventö
+ó
+
+†  †(r
+%4"åmage.game.events.ZoneChangeEvent#<init>(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/Zone;Lmage/constants/Zone;)V*D
+
+__unknown_file ((
+&
+%3 mage.game.events.ZoneChangeEvent*2
+
+__unknown_file (
+
+%1java.util.UUID*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*7
+
+__unknown_file (
+
+%2mage.constants.ZoneÜ
+É
+
+† †(s)
+event mage.game.events.ZoneChangeEvent"__id*D
+
+__unknown_file ((
+&
+%3 mage.game.events.ZoneChangeEventøº
+
+°& °(L!
+%5mage.abilities.SpellAbility"cmage.abilities.SpellAbility#getSpellAbilityToResolve(Lmage/game/Game;)Lmage/abilities/SpellAbility;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2*getSpellAbilityToResolve(Lmage/game/Game;)«ƒ
+
+°\ °(o
+%6mage.constants.Zone"Cmage.game.events.ZoneChangeEvent#getFromZone()Lmage/constants/Zone;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getFromZone()B@
+
+° °(
+%7mage.game.stack.Spell"mage.game.stack.Spell¯
+ı
+
+° °(v
+%8"Çmage.game.stack.Spell#<init>(Lmage/cards/Card;Lmage/abilities/SpellAbility;Ljava/util/UUID;Lmage/constants/Zone;Lmage/game/Game;)V*9
+
+__unknown_file (
+
+%7mage.game.stack.Spell*3
+
+__unknown_file (
+mage.cards.CardImpl*?
+
+__unknown_file (#
+!
+%5mage.abilities.SpellAbility*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID*7
+
+__unknown_file (
+
+%6mage.constants.Zone*4
+
+__unknown_file (
+
+gamemage.game.Gameo
+m
+
+° °(w
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%7mage.game.stack.SpellTR
+
+¢( ¢(<$
+%9mage.game.ZoneChangeInfo$Stack"mage.game.ZoneChangeInfo$Stackƒ
+¡
+
+¢$ ¢(J
+%10"amage.game.ZoneChangeInfo$Stack#<init>(Lmage/game/events/ZoneChangeEvent;Lmage/game/stack/Spell;)V*B
+
+__unknown_file (&
+$
+%9mage.game.ZoneChangeInfo$Stack*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent*<
+
+__unknown_file ( 
+
+spellmage.game.stack.SpellÄ
+~
+
+¢ ¢(K&
+infomage.game.ZoneChangeInfo$Stack"__id*B
+
+__unknown_file (&
+$
+%9mage.game.ZoneChangeInfo$Stack˚
+¯
+
+£ £(5
+%11boolean"`mage.game.ZonesHandler#cast(Lmage/game/ZoneChangeInfo;Lmage/game/Game;Lmage/abilities/Ability;)Z*6
+
+__unknown_file ("
+mage.game.ZonesHandler*D
+
+__unknown_file ((
+&
+infomage.game.ZoneChangeInfo$Stack*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility"
+
+£ £(6
+"":$
+
+û û("
+gamemage.game.Game:-
+
+û# û(1
+fromZonemage.constants.Zone:4
+
+û2 û(G&
+abilitymage.abilities.SpellAbility:,
+
+ûH û(Y
+controllerIdjava.util.UUIDB
+mage.cards.CardImplHP

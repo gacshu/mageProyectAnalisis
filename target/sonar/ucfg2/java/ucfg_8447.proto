@@ -1,0 +1,332 @@
+
+Mmage.game.turn.Phase#resumePlay(Lmage/game/Game;Lmage/constants/PhaseStep;Z)ZW
+MD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/turn/Phase.javaw w("18*À
+13
+Ç Ç(Æ´
+
+Ç Ç(
+%6mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*9
+
+__unknown_file (
+
+stepmage.game.turn.Step2	getType()*
+14
+12*ñ
+14
+Ä Ä(óî
+
+Ä Ä(
+%5mage.game.turn.Step"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()j
+h
+
+Ä Ä(
+stepmage.game.turn.Step"__id*7
+
+__unknown_file (
+
+%5mage.game.turn.Stepx
+v
+
+Å Å('
+mage.game.turn.Phase"
+currentStep"__id*9
+
+__unknown_file (
+
+stepmage.game.turn.Step*
+13*Ï
+15| |("¢ü
+| |(6
+%2java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()r
+p
+| |(6*
+mage.game.turn.Phase"
+activePlayerId"__id*2
+
+__unknown_file (
+
+%2java.util.UUIDi
+g
+} }(!
+%3java.util.List"__id*?
+
+__unknown_file (#*!
+mage.game.turn.Phase"
+stepsñì
+} }(,
+%4java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%3java.util.List2
+iterator()d
+b
+} }(-
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%4java.util.IteratorS
+Q
+~ ~(
+stepmage.game.turn.Step"__id*"
+
+__unknown_file (
+""*
+14*"
+16y y("
+y y(
+""*ß
+17x x(#åâ
+x x(7
+%1boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+15
+16*ì
+18x x(yw
+x x(
+%0boolean"mage.game.Game#isPaused()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2
+isPaused()*
+16
+17* 
+1
+ï ï(u
+s
+
+ñ ñ(%
+%22java.util.UUID"__id*H
+
+__unknown_file (,**
+mage.game.turn.Phase"
+activePlayerId´®
+
+ñ ñ(&
+%23void"@mage.game.turn.Phase#endPhase(Lmage/game/Game;Ljava/util/UUID;)V*4
+
+__unknown_file (
+mage.game.turn.Phase*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%22java.util.UUID2*endPhase(Lmage/game/Game;Ljava/util/UUID;)"
+
+ó ó(
+""*%
+2
+ì ì("
+
+ì ì(
+""*©
+3
+í í(#èå
+
+í í(7
+%21boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+2
+1*ï
+4
+í í(|z
+
+í í(
+%20boolean"mage.game.Game#isPaused()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2
+isPaused()*
+2
+3*%
+5
+ç ç("
+
+ç ç( 
+""*É
+6
+ã ã(÷”
+
+ã ã(
+%18void"0mage.game.turn.Phase#playStep(Lmage/game/Game;)V*4
+
+__unknown_file (
+mage.game.turn.Phase*4
+
+__unknown_file (
+
+gamemage.game.Game2playStep(Lmage/game/Game;)èå
+
+å å(,
+%19boolean"#mage.game.Game#executingRollback()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2executingRollback()*
+5
+11*„	
+7
+â â(x
+v
+
+â â('
+mage.game.turn.Phase"
+currentStep"__id*9
+
+__unknown_file (
+
+stepmage.game.turn.Stepùö
+
+ä ä( 
+%12mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¥±
+
+ä ä(.
+%13mage.game.turn.TurnMods":mage.game.GameState#getTurnMods()Lmage/game/turn/TurnMods;*8
+
+__unknown_file (
+
+%12mage.game.GameState2getTurnMods()u
+s
+
+ä8 ä(F
+%14java.util.UUID"__id*H
+
+__unknown_file (,**
+mage.game.turn.Phase"
+activePlayerIdw
+u
+
+äH ä(S
+%15mage.game.turn.Step"__id*E
+
+__unknown_file ()*'
+mage.game.turn.Phase"
+currentStepÆ´
+
+äH ä(]
+%16mage.constants.PhaseStep"7mage.game.turn.Step#getType()Lmage/constants/PhaseStep;*8
+
+__unknown_file (
+
+%15mage.game.turn.Step2	getType()÷”
+
+ä ä(^
+%17boolean"Mmage.game.turn.TurnMods#skipStep(Ljava/util/UUID;Lmage/constants/PhaseStep;)Z*<
+
+__unknown_file ( 
+
+%13mage.game.turn.TurnMods*3
+
+__unknown_file (
+
+%14java.util.UUID*=
+
+__unknown_file (!
+
+%16mage.constants.PhaseStep24skipStep(Ljava/util/UUID;Lmage/constants/PhaseStep;)*
+6
+11*%
+8
+á á("
+
+á á(
+""*©
+9
+Ü# Ü('èå
+
+Ü# Ü(;
+%11boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+7
+8*ú
+10
+Ö Ö(óî
+
+Ö Ö(
+%9mage.game.turn.Step"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next()j
+h
+
+Ö Ö(
+stepmage.game.turn.Step"__id*7
+
+__unknown_file (
+
+%9mage.game.turn.Step|z
+
+Ü Ü(
+%10boolean"mage.game.Game#isPaused()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2
+isPaused()*
+8
+9*ö
+11
+Ñ Ñ(}
+
+Ñ Ñ(
+%8boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+4
+10*ò
+12
+É É(ˇ¸
+
+É É(#
+
+%7void"3mage.game.turn.Phase#resumeStep(Lmage/game/Game;Z)V*4
+
+__unknown_file (
+mage.game.turn.Phase*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2resumeStep(Lmage/game/Game;Z)*
+11:"
+w w((
+gamemage.game.Game:0
+w) w(<$
+stepTypemage.constants.PhaseStep: 
+
+__unknown_file (
+""B
+mage.game.turn.PhaseHP

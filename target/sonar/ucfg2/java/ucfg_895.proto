@@ -1,0 +1,535 @@
+
+Vmage.abilities.keyword.AuraSwapEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zi
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/AuraSwapAbility.java? ?("startingBlock*∑$
+2N N(õò
+N N('
+%25mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ëé
+N? N(Q
+%26java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+auraInHandmage.cards.Card2getId()o
+m
+N1 N(Q
+%27java.lang.String"__concat*
+N1 N(<
+	attachTo:*#
+N? N(Q
+
+%26java.util.UUID”–
+N N(f
+%28void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%25mage.game.GameState*5
+
+__unknown_file (
+
+%27java.lang.String*Q
+
+__unknown_file (5
+3
+enchantedPermanentmage.game.permanent.Permanent2.setValue(Ljava/lang/String;Ljava/lang/Object;)R
+P
+O9 O(I
+%29mage.constants.Zone"__id*"
+
+__unknown_file (
+""ñì
+O O(X
+%30boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+
+auraInHandmage.cards.Card*8
+
+__unknown_file (
+
+%29mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)ëé
+P9 P(K
+%31java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+auraInHandmage.cards.Card2getId()æª
+P P(Z
+%32boolean"Xmage.cards.Card#addAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*Q
+
+__unknown_file (5
+3
+enchantedPermanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%31java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2GaddAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)©¶
+Q+ Q(B
+%33java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()m
+k
+Q+ Q(L
+%34java.lang.String"__concat*%
+Q+ Q(B
+
+%33java.lang.String*
+QE Q(L	
+ put °û
+QO Q(f
+%35java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+auraInHandmage.cards.Card2getLogName()}
+{
+Q+ Q(f
+%36java.lang.String"__concat*%
+Q+ Q(L
+
+%34java.lang.String*%
+QO Q(f
+
+%35java.lang.Stringã
+à
+	Q+ Q(ã
+%37java.lang.String"__concat*%
+Q+ Q(f
+
+%36java.lang.String*1
+	Qi Q(ã$"
+  on the battlefield attached to π∂
+
+Qé Q(≠
+%38java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*Q
+
+__unknown_file (5
+3
+enchantedPermanentmage.game.permanent.Permanent2getLogName()Å
+
+	Q+ Q(≠
+%39java.lang.String"__concat*&
+	Q+ Q(ã
+
+%37java.lang.String*'
+
+Qé Q(≠
+
+%38java.lang.Stringm
+k
+	Q+ Q(≥
+%40java.lang.String"__concat*&
+	Q+ Q(≠
+
+%39java.lang.String*
+
+Q∞ Q(≥
+.ﬁ€
+	Q Q(¥
+%41void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%40java.lang.String2!informPlayers(Ljava/lang/String;)±Æ
+R< R(W
+%42java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*R
+
+__unknown_file (6
+4
+auraSourcePermanentmage.game.permanent.Permanent2getId()ƒ¡
+R R(f
+%43boolean"[mage.cards.Card#removeAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*Q
+
+__unknown_file (5
+3
+enchantedPermanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%42java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2JremoveAttachment(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)R
+P
+SI S(R
+%44mage.constants.Zone"__id*"
+
+__unknown_file (
+""≠™
+S S(a
+%45boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*R
+
+__unknown_file (6
+4
+auraSourcePermanentmage.game.permanent.Permanent*8
+
+__unknown_file (
+
+%44mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)"
+S S(b
+""*¶
+3L& L(*ºπ
+L3 L(J
+%23java.util.UUID"7mage.target.TargetImpl#getFirstTarget()Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+target#mage.target.common.TargetCardInHand2getFirstTarget()Ê„
+L& L(K
+%24mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%23java.util.UUID2getCard(Ljava/util/UUID;)g
+e
+L L(L
+
+auraInHandmage.cards.Card"__id*4
+
+__unknown_file (
+
+%24mage.cards.Card*
+2
+1*˛
+startingBlock? ?(3ä
+á
+> >(
+%46"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+? ?("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%46î
+ë
+> >(
+%47"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+?, ?(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%47*
+8*˙
+4H/ H(3»≈
+HA H(d
+%13java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*R
+
+__unknown_file (6
+4
+auraSourcePermanentmage.game.permanent.Permanent2getAttachedTo()åâ
+H/ H(e$
+%14mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%13java.util.UUID2getPermanent(Ljava/util/UUID;)å
+â
+H H(f3
+enchantedPermanentmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%14mage.game.permanent.Permanent∞≠
+II I(c
+%15java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*Q
+
+__unknown_file (5
+3
+enchantedPermanentmage.game.permanent.Permanent2getId()äá
+I* I(H@
+%169mage.filter.predicate.card.AuraCardCanAttachToPermanentId"9mage.filter.predicate.card.AuraCardCanAttachToPermanentId˛
+˚
+I& I(d
+%17"Smage.filter.predicate.card.AuraCardCanAttachToPermanentId#<init>(Ljava/util/UUID;)V*^
+
+__unknown_file (B
+@
+%169mage.filter.predicate.card.AuraCardCanAttachToPermanentId*3
+
+__unknown_file (
+
+%15java.util.UUIDŒÀ
+I I(e
+%18mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*I
+
+__unknown_file (-
++
+filterCardToCheckmage.filter.FilterCard*^
+
+__unknown_file (B
+@
+%169mage.filter.predicate.card.AuraCardCanAttachToPermanentId2&add(Lmage/filter/predicate/Predicate;)][
+J. J(>*
+%19#mage.target.common.TargetCardInHand"#mage.target.common.TargetCardInHand
+Ì
+J* J(Q
+%20"Emage.target.common.TargetCardInHand#<init>(Lmage/filter/FilterCard;)V*H
+
+__unknown_file (,
+*
+%19#mage.target.common.TargetCardInHand*I
+
+__unknown_file (-
++
+filterCardToCheckmage.filter.FilterCardå
+â
+J J(R-
+target#mage.target.common.TargetCardInHand"__id*H
+
+__unknown_file (,
+*
+%19#mage.target.common.TargetCardInHandU
+S
+K& K(;
+%21mage.constants.Outcome"__id*"
+
+__unknown_file (
+""Ø¨
+K K(R
+%22boolean"qmage.players.Player#choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%21mage.constants.Outcome*K
+
+__unknown_file (/
+-
+target#mage.target.common.TargetCardInHand*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\choose(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*
+3
+1*Ω
+5G G(*±Æ
+G5 G(M
+%11java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÒÓ
+G G(N
+%12boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*R
+
+__unknown_file (6
+4
+auraSourcePermanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%11java.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+4
+1*Œ
+6F F(*T
+R
+F6 F(B
+%9mage.constants.SubType"__id*"
+
+__unknown_file (
+""‡›
+F F(I
+%10boolean"Emage.MageObject#hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)Z*R
+
+__unknown_file (6
+4
+auraSourcePermanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%9mage.constants.SubType*4
+
+__unknown_file (
+
+gamemage.game.Game24hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)*
+5
+1*‹
+7D, D(0®•
+D> D(R
+%7java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+D, D(S#
+%8mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getPermanent(Ljava/util/UUID;)å
+â
+D D(T4
+auraSourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%8mage.game.permanent.Permanent*
+6
+1*Ã
+8@' @(7B@
+@+ @(5
+%0mage.filter.FilterCard"mage.filter.FilterCardp
+n
+@' @(7
+%1" mage.filter.FilterCard#<init>()V*:
+
+__unknown_file (
+
+%0mage.filter.FilterCard{
+y
+@ @(8+
+filterCardToCheckmage.filter.FilterCard"__id*:
+
+__unknown_file (
+
+%0mage.filter.FilterCardT
+R
+A A(*
+%2mage.constants.SubType"__id*"
+
+__unknown_file (
+""ÿ’
+A A(9-
+%3'mage.constants.SubType$SubTypePredicate"Nmage.constants.SubType#getPredicate()Lmage/constants/SubType$SubTypePredicate;*:
+
+__unknown_file (
+
+%2mage.constants.SubType2getPredicate()∫∑
+A A(:
+%4mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*I
+
+__unknown_file (-
++
+filterCardToCheckmage.filter.FilterCard*K
+
+__unknown_file (/
+-
+%3'mage.constants.SubType$SubTypePredicate2&add(Lmage/filter/predicate/Predicate;)∞≠
+B+ B(C
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+B B(D
+%6mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+B B(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%6mage.players.Player*
+7
+1*!
+1X X("
+X X(
+"":"
+? ?(#
+gamemage.game.Game:,
+?$ ?(2 
+sourcemage.abilities.AbilityB)'
+%mage.abilities.keyword.AuraSwapEffectHP

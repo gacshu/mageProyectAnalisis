@@ -1,0 +1,206 @@
+
+Kmage.abilities.Modes#getMaxModes(Lmage/game/Game;Lmage/abilities/Ability;)IY
+MD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/Modes.javaÍ Í("13"14*¥
+13
+Ô Ô(ˆ
+…
+
+Ô Ô((
+%0"mage.abilities.condition.Condition"__id*G
+
+__unknown_file (+*)
+mage.abilities.Modes"
+moreCondition*
+10
+12*&
+14
+Ð Ð("
+
+Ð Ð( 
+""*”
+4
+Ü Ü((Z
+X
+
+Ü Ü(( 
+targetPlayerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ž
+›
+
+Ü Ü(( 
+targetPlayerIdjava.util.UUID"
+__arrayGet*;
+
+__unknown_file (
+
+%8mage.players.PlayerList*"
+
+__unknown_file (
+""*
+6
+1*É	
+6
+Ý* Ý(.þû
+
+Ý* Ý(H
+%9mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+targetPlayerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)r
+p
+
+Ý Ý(I#
+targetPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%9mage.players.Playery
+w
+
+Þ( Þ(;
+%10mage.filter.Filter"__id*H
+
+__unknown_file (,**
+mage.abilities.Modes"
+maxModesFilter³°
+
+ÞQ Þ(i
+%11java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Œ‰
+
+Þ Þ(x
+%12boolean"nmage.filter.FilterPlayer#match(Lmage/players/Player;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*7
+
+__unknown_file (
+
+%10mage.filter.Filter*A
+
+__unknown_file (%
+#
+targetPlayermage.players.Player*3
+
+__unknown_file (
+
+%11java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Tmatch(Lmage/players/Player;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+4*Ó
+7
+Ü+ Ü(/œ™
+
+Ü+ Ü(:
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()²¯
+
+ÜM Ü(e
+%7java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()èå
+
+Ü+ Ü(l
+%8mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%6mage.game.GameState*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+4*‘
+9
+Ú Ú(x
+v
+
+Ú Ú(#
+%5mage.filter.Filter"__id*H
+
+__unknown_file (,**
+mage.abilities.Modes"
+maxModesFilter*
+7
+1*Í
+10
+Ù Ù(²¯
+
+Ù Ù(
+%4mage.filter.Filter"<mage.abilities.Modes#getMaxModesFilter()Lmage/filter/Filter;*4
+
+__unknown_file (
+mage.abilities.Modes2getMaxModesFilter()*
+9
+1*Š
+11
+Õ Õ(rp
+
+Õ Õ(&	
+%3int"java.util.HashMap#size()I*4
+
+__unknown_file (
+mage.abilities.Modes2size()*
+10*Š
+12
+Ô% Ô(2ˆ
+…
+
+Ô% Ô(2(
+%1"mage.abilities.condition.Condition"__id*G
+
+__unknown_file (+*)
+mage.abilities.Modes"
+moreConditionâß
+
+Ô% Ô(F
+%2boolean"Smage.abilities.condition.Condition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*F
+
+__unknown_file (*
+(
+%1"mage.abilities.condition.Condition*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)*
+10
+11*%
+1
+è è("
+
+è è(
+"":$
+
+Í Í(%
+gamemage.game.Game:.
+
+Í& Í(4 
+sourcemage.abilities.AbilityB
+mage.abilities.ModesHP

@@ -1,0 +1,356 @@
+
+umage.player.ai.ma.ArtificialScoringSystem#getVariablePermanentScore(Lmage/game/Game;Lmage/game/permanent/Permanent;)IÉ
+yD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/ma/ArtificialScoringSystem.javaB B(/"19*ï
+13N N( Y
+W
+N N( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ü
+ú
+N N( !
+abilitymage.abilities.Ability"
+__arrayGet*=
+
+__unknown_file (!
+
+%16mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+14
+12*¸
+14O O(Â
+‚
+O  O(E
+
+%17int"Image.player.ai.ma.MagicAbility#getAbilityScore(Lmage/abilities/Ability;)I*>
+
+__unknown_file ("" 
+mage.player.ai.ma.MagicAbility*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*
+13*Ø
+15N# N(,òï
+N# N(?
+%16mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)*
+13*Ã
+16K K('¢ü
+K K(2
+%12mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()qo
+K K(=
+
+%13int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%12mage.MageInt2
+getValue()™ß
+L" L(:
+%14mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()qo
+L" L(E
+
+%15int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%14mage.MageInt2
+getValue()*
+15*—
+17J J(Å˛
+J J('
+%9java.util.List"=mage.MageObject#getCardType(Lmage/game/Game;)Ljava/util/List;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCardType(Lmage/game/Game;)V
+T
+J1 J(B
+%10mage.constants.CardType"__id*"
+
+__unknown_file (
+""€ÿ
+J J(C
+%11boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%9java.util.List*<
+
+__unknown_file ( 
+
+%10mage.constants.CardType2contains(Ljava/lang/Object;)*
+16
+1*Ê
+18H H(œ
+Ã
+H H(4	
+%8int"jmage.player.ai.ma.ArtificialScoringSystem#getTappedScore(Lmage/game/Game;Lmage/game/permanent/Permanent;)I*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*4
+
+__unknown_file (
+
+gamemage.game.Game*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*
+17*÷
+19D D(ëé
+D D(/
+%0mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)W
+U
+D9 D(K
+%1mage.counters.CounterType"__id*"
+
+__unknown_file (
+""˘ˆ
+D D(L	
+%2int"=mage.counters.Counters#getCount(Lmage/counters/CounterType;)I*:
+
+__unknown_file (
+
+%0mage.counters.Counters*=
+
+__unknown_file (!
+
+%1mage.counters.CounterType2%getCount(Lmage/counters/CounterType;)ëé
+E E(,
+%3mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)W
+U
+E6 E(G
+%4mage.counters.CounterType"__id*"
+
+__unknown_file (
+""˘ˆ
+E E(H	
+%5int"=mage.counters.Counters#getCount(Lmage/counters/CounterType;)I*:
+
+__unknown_file (
+
+%3mage.counters.Counters*=
+
+__unknown_file (!
+
+%4mage.counters.CounterType2%getCount(Lmage/counters/CounterType;)õò
+F F(&	
+%6int"*mage.game.permanent.Permanent#getDamage()I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getDamage()À
+»
+G G($
+%7boolean"bmage.player.ai.ma.ArtificialScoringSystem#canTap(Lmage/game/Game;Lmage/game/permanent/Permanent;)Z*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*4
+
+__unknown_file (
+
+gamemage.game.Game*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*
+17
+18*!
+1j j("
+j j(
+""*è
+3f f(˙˜
+f f(,
+%28boolean"<mage.game.permanent.Permanent#canBlockAny(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2canBlockAny(Lmage/game/Game;)*
+1*œ
+5` `(∫∑
+b b(0
+%27boolean"Jmage.game.permanent.Permanent#canAttack(Ljava/util/UUID;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2+canAttack(Ljava/util/UUID;Lmage/game/Game;)*
+3*Û
+6T T(N
+L
+T T(
+uuidjava.util.UUID"__id*"
+
+__unknown_file (
+""ä
+á
+T T(
+uuidjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%20java.util.List*"
+
+__unknown_file (
+""*
+5
+10*ƒ
+9W' W(-d
+b
+W W(.
+cardmage.cards.Card"__id*7
+
+__unknown_file (
+
+objectmage.MageObjectÖÇ
+X' X(>
+%22mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)òï
+X' X(P
+
+%23int"+mage.abilities.Abilities#getOutcomeTotal()I*=
+
+__unknown_file (!
+
+%22mage.abilities.Abilities2getOutcomeTotal()ÔÏ
+Y Y(.
+%24java.util.List"=mage.MageObject#getCardType(Lmage/game/Game;)Ljava/util/List;*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2getCardType(Lmage/game/Game;)V
+T
+Y8 Y(L
+%25mage.constants.CardType"__id*"
+
+__unknown_file (
+""‹Ÿ
+Y Y(M
+%26boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%24java.util.List*<
+
+__unknown_file ( 
+
+%25mage.constants.CardType2contains(Ljava/lang/Object;)*
+6*È
+10U$ U((ÎË
+U$ U(8
+%21mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+uuidjava.util.UUID2getObject(Ljava/util/UUID;)c
+a
+U U(9
+objectmage.MageObject"__id*4
+
+__unknown_file (
+
+%21mage.MageObject*
+6
+9*÷
+11T T(&¿Ω
+T T(7
+%20java.util.List">mage.game.permanent.Permanent#getAttachments()Ljava/util/List;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getAttachments()*
+6*†
+12Q Q(√
+¿
+Q# Q(9
+
+%18int"9mage.player.ai.ma.ArtificialScoringSystem#getPositive(I)I*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*"
+
+__unknown_file (
+""√
+¿
+QR Q(d
+
+%19int"9mage.player.ai.ma.ArtificialScoringSystem#getPositive(I)I*I
+
+__unknown_file (-"+
+)mage.player.ai.ma.ArtificialScoringSystem*"
+
+__unknown_file (
+""*
+11:"
+B0 B(@
+gamemage.game.Game:6
+BA B(Z*
+	permanentmage.game.permanent.PermanentB-"+
+)mage.player.ai.ma.ArtificialScoringSystemHP

@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>PhaseStep xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/constants/PhaseStep.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.constants;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <em class="jxr_javadoccomment"> * @author North</em>
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">public</strong> enum <a name="PhaseStep" href="../../mage/constants/PhaseStep.html#PhaseStep">PhaseStep</a> {
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>       UNTAP(<span class="jxr_string">"Untap"</span>, 0, <span class="jxr_string">"untap step"</span>, <span class="jxr_string">"UN"</span>),
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>       UPKEEP(<span class="jxr_string">"Upkeep"</span>, 1, <span class="jxr_string">"upkeep"</span>, <span class="jxr_string">"UP"</span>), <em class="jxr_comment">// card texts don't use the word "step" for this phase step</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>       DRAW(<span class="jxr_string">"Draw"</span>, 2, <span class="jxr_string">"draw step"</span>, <span class="jxr_string">"DR"</span>),
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>      PRECOMBAT_MAIN(<span class="jxr_string">"Precombat Main"</span>, 3, <span class="jxr_string">"precombat main step"</span>, <span class="jxr_string">"M1"</span>),
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>      BEGIN_COMBAT(<span class="jxr_string">"Begin Combat"</span>, 4, <span class="jxr_string">"begin combat step"</span>, <span class="jxr_string">"BC"</span>),
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      DECLARE_ATTACKERS(<span class="jxr_string">"Declare Attackers"</span>, 5, <span class="jxr_string">"declare attackers step"</span>, <span class="jxr_string">"DA"</span>),
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      DECLARE_BLOCKERS(<span class="jxr_string">"Declare Blockers"</span>, 6, <span class="jxr_string">"declare blockers step"</span>, <span class="jxr_string">"DB"</span>),
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      FIRST_COMBAT_DAMAGE(<span class="jxr_string">"First Combat Damage"</span>, 7, <span class="jxr_string">"first combat damage"</span>, <span class="jxr_string">"FCD"</span>),
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      COMBAT_DAMAGE(<span class="jxr_string">"Combat Damage"</span>, 8, <span class="jxr_string">"combat damage step"</span>, <span class="jxr_string">"CD"</span>),
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      END_COMBAT(<span class="jxr_string">"End Combat"</span>, 9, <span class="jxr_string">"end of combat step"</span>, <span class="jxr_string">"EC"</span>),
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      POSTCOMBAT_MAIN(<span class="jxr_string">"Postcombat Main"</span>, 10, <span class="jxr_string">"postcombat main step"</span>, <span class="jxr_string">"M2"</span>),
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      END_TURN(<span class="jxr_string">"End Turn"</span>, 11, <span class="jxr_string">"end turn step"</span>, <span class="jxr_string">"ET"</span>),
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      CLEANUP(<span class="jxr_string">"Cleanup"</span>, 12, <span class="jxr_string">"cleanup step"</span>, <span class="jxr_string">"CL"</span>);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String text;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String stepText;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String stepShortText; <em class="jxr_comment">// for chats/logs</em>
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <em class="jxr_javadoccomment">     * Index is used for game state scoring system.</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> index;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      <a name="PhaseStep" href="../../mage/constants/PhaseStep.html#PhaseStep">PhaseStep</a>(String text, <strong class="jxr_keyword">int</strong> index, String stepText, String stepShortText) {
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          <strong class="jxr_keyword">this</strong>.text = text;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">this</strong>.index = index;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <strong class="jxr_keyword">this</strong>.stepText = stepText;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          <strong class="jxr_keyword">this</strong>.stepShortText = stepShortText;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      }
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isBefore(<a name="PhaseStep" href="../../mage/constants/PhaseStep.html#PhaseStep">PhaseStep</a> other) {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.getIndex() &lt; other.getIndex();
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      }
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isAfter(<a name="PhaseStep" href="../../mage/constants/PhaseStep.html#PhaseStep">PhaseStep</a> other) {
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.getIndex() &gt; other.getIndex();
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getIndex() {
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <strong class="jxr_keyword">return</strong> index;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      }
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>      @Override
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      <strong class="jxr_keyword">public</strong> String toString() {
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <strong class="jxr_keyword">return</strong> text;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">public</strong> String getStepText() {
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <strong class="jxr_keyword">return</strong> stepText;
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      }
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      <strong class="jxr_keyword">public</strong> String getStepShortText() {
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          <strong class="jxr_keyword">return</strong> stepShortText;
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      }
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

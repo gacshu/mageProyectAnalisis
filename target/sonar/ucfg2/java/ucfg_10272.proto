@@ -1,0 +1,97 @@
+
+kmage.filter.predicate.permanent.CounterAnyPredicate#apply(Lmage/game/permanent/Permanent;Lmage/game/Game;)Zv
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/CounterAnyPredicate.java ("startingBlock*†
+startingBlock (4™
+–
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanentf
+d
+# ((&
+inputmage.game.permanent.Permanent"__annotation*"
+
+__unknown_file (
+
+%6‰
+†
+ (
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+/ (3
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7*
+1*ï
+
+1 (Š
+ ("
+%0mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)¡ž
+ (
+%1java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+%0mage.counters.Counters2values()¨¥
+ (
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%1java.util.Collection2stream() 
+ (, 
+%3java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)¯
+¬
+ ($%
+%4java.util.function.IntPredicate"__declareFunction*f
+
+__unknown_file (JH
+F__sonar_lambda_209$mage.filter.predicate.permanent.CounterAnyPredicate—”
+ (%
+%5boolean"Gjava.util.stream.IntStream#anyMatch(Ljava/util/function/IntPredicate;)Z*>
+
+__unknown_file ("
+ 
+%3java.util.stream.IntStream*C
+
+__unknown_file ('
+%
+%4java.util.function.IntPredicate2+anyMatch(Ljava/util/function/IntPredicate;)"
+ (&
+"":2
+ ()&
+inputmage.game.permanent.Permanent:"
+* (3
+gamemage.game.GameB75
+3mage.filter.predicate.permanent.CounterAnyPredicateHP

@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>MageTextArea xref</title>
+<link type="text/css" rel="stylesheet" href="../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../apidocs/mage/client/components/MageTextArea.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.client.components;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> java.awt.Color;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> javax.swing.JEditorPane;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> javax.swing.SwingUtilities;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.client.util.GUISizeHelper;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.mage.card.arcane.ManaSymbols;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.mage.card.arcane.UI;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> * Component for displaying text in mage. Supports drawing mana symbols.</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author nantuko</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="MageTextArea" href="../../../mage/client/components/MageTextArea.html#MageTextArea">MageTextArea</a> <strong class="jxr_keyword">extends</strong> JEditorPane {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      <strong class="jxr_keyword">private</strong> String currentText;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">int</strong> currentPanelWidth;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">public</strong> <a name="MageTextArea" href="../../../mage/client/components/MageTextArea.html#MageTextArea">MageTextArea</a>() {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          UI.setHTMLEditorKit(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          setEditable(false);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          setBackground(<strong class="jxr_keyword">new</strong> Color(0, 0, 0, 0)); <em class="jxr_comment">// transparent background</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          setFocusable(false);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      }
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>      @Override
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setText(String text) {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          setText(text, 0);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      }
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setText(String text, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> panelWidth) {
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <strong class="jxr_keyword">if</strong> (text == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          }
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <strong class="jxr_keyword">if</strong>(text.equals(currentText) &amp;&amp; panelWidth == currentPanelWidth)
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          currentText = text;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          currentPanelWidth = panelWidth;
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <strong class="jxr_keyword">final</strong> StringBuilder buffer = <strong class="jxr_keyword">new</strong> StringBuilder(512);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <em class="jxr_comment">// Dialog is a java logical font family, so it should work on all systems</em>
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          buffer.append(<span class="jxr_string">"&lt;html&gt;&lt;body style='font-family:Dialog;font-size:"</span>);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          buffer.append(GUISizeHelper.gameDialogAreaFontSizeBig);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          buffer.append(<span class="jxr_string">"pt;margin:3px 3px 3px 3px;color: #FFFFFF'&gt;&lt;b&gt;&lt;center&gt;"</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          <em class="jxr_comment">// Don't know what it does (easy italc?) but it bugs with multiple #HTML color codes (LevelX2)</em>
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          <em class="jxr_comment">//text = text.replaceAll("#([^#]+)#", "&lt;i&gt;$1&lt;/i&gt;");</em>
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          <em class="jxr_comment">//text = text.replaceAll("&#92;&#92;s*//&#92;&#92;s*", "&lt;hr width='50%'&gt;");</em>
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          text = text.replace(<span class="jxr_string">"\r\n"</span>, <span class="jxr_string">"&lt;div style='font-size:5pt'&gt;&lt;/div&gt;"</span>);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>  
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <strong class="jxr_keyword">final</strong> String basicText = ManaSymbols.replaceSymbolsWithHTML(text, ManaSymbols.Type.DIALOG);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <strong class="jxr_keyword">if</strong> (!text.isEmpty()) {
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>              buffer.append(basicText);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          }
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          buffer.append(<span class="jxr_string">"&lt;/b&gt;&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;"</span>);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>  
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          SwingUtilities.invokeLater(() -&gt; {
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>              String promptText = buffer.toString();
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>              MageTextArea.<strong class="jxr_keyword">super</strong>.setText(promptText);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>              <em class="jxr_comment">// in case the text don't fit in the panel a tooltip with the text is added</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>              <strong class="jxr_keyword">if</strong> (panelWidth &gt; 0 &amp;&amp; MageTextArea.<strong class="jxr_keyword">this</strong>.getPreferredSize().getWidth() &gt; panelWidth) {
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>                  String tooltip = <span class="jxr_string">"&lt;html&gt;&lt;center&gt;&lt;body style='font-family:Dialog;font-size:"</span>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>                          + GUISizeHelper.gameDialogAreaFontSizeBig
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>                          + <span class="jxr_string">";color: #FFFFFF'&gt;&lt;p width='500'&gt;"</span> + basicText + <span class="jxr_string">"&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;"</span>;
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>                  MageTextArea.<strong class="jxr_keyword">super</strong>.setToolTipText(tooltip);
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>              } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>                  MageTextArea.<strong class="jxr_keyword">super</strong>.setToolTipText(<strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>              }
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>              setCaretPosition(0);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          });
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>      }
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

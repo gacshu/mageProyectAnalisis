@@ -1,0 +1,397 @@
+
+gmage.abilities.effects.common.ReturnToHandSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zy
+oD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ReturnToHandSourceEffect.java9 9("startingBlock*¼
+13L L($¢Ÿ
+L L(1
+%10boolean"+mage.game.permanent.Permanent#isPhasedIn()Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2isPhasedIn()*
+12
+1*Ó
+14I O(¨¥
+J8 J(L
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+J& J(M#
+%9mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+J J(N*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+13
+1*"
+15F F("
+F F(
+""*¨
+17C C(¦£
+C C(D
+%7mage.MageObject"Xmage.abilities.Ability#getSourceObjectIfItStillExists(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game20getSourceObjectIfItStillExists(Lmage/game/Game;)f
+d
+C C(D
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%7mage.MageObject*
+2
+15*†
+18A A(„
+A A(/
+%6mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)f
+d
+A A(/
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%6mage.MageObject*
+2
+15*ˆ
+19@ @(š—
+@ @("
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¨¥
+@8 @(L
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()êç
+@ @(M	
+%4int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*7
+
+__unknown_file (
+
+%2mage.game.GameState*2
+
+__unknown_file (
+
+%3java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)¸µ
+@Q @(z	
+%5int":mage.abilities.Ability#getSourceObjectZoneChangeCounter()I*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2"getSourceObjectZoneChangeCounter()*
+17
+18*!
+1Z Z("
+Z Z(
+""*™
+2H H(›˜
+H H(
+%20mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()‘Ž
+H( H(:
+%21java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject2getId()÷ô
+H H(;
+%22mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*8
+
+__unknown_file (
+
+%20mage.game.GameState*3
+
+__unknown_file (
+
+%21java.util.UUID2getZone(Ljava/util/UUID;)R
+P
+I I(
+%23mage.constants.Zone"__id*"
+
+__unknown_file (
+""R
+P
+P P(
+%24mage.constants.Zone"__id*"
+
+__unknown_file (
+""R
+P
+Q Q(
+%25mage.constants.Zone"__id*"
+
+__unknown_file (
+""R
+P
+T T(
+%26mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+14
+7
+10
+1*!
+3V X(^"
+V X(^
+""*ÿ
+startingBlock9 9(3Š
+‡
+8 8(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+9 9("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%27”
+‘
+8 8(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+9, 9(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28*
+22*£
+4X X(%¨¥
+X0 X(C
+%17mage.cards.Card"4mage.game.stack.Spell#getMainCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getMainCard()R
+P
+XE X(N
+%18mage.constants.Zone"__id*"
+
+__unknown_file (
+""Œ
+X X(]
+%19boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*4
+
+__unknown_file (
+
+%17mage.cards.Card*8
+
+__unknown_file (
+
+%18mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+3*¨
+7T X(^©¦
+U, U(@
+%15java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ôñ
+U U(A
+%16mage.game.stack.Spell"@mage.game.Game#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%15java.util.UUID2getSpell(Ljava/util/UUID;)n
+l
+U U(B
+spellmage.game.stack.Spell"__id*:
+
+__unknown_file (
+
+%16mage.game.stack.Spell*
+3
+4*!
+8S S(c"
+S S(c
+""*ù
+9S/ S(9R
+P
+SJ S(S
+%13mage.constants.Zone"__id*"
+
+__unknown_file (
+""
+S/ S(b
+%14boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%13mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+8*o
+20> >(U
+S
+> >(
+
+mageObjectmage.MageObject"__id*"
+
+__unknown_file (
+""*
+17
+19*"
+21< <("
+< <(
+""*€
+10P S(ch
+f
+R R(.
+cardmage.cards.Card"__id*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject*
+8
+9*®
+22: :( °­
+:+ :(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+: :(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+: :(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+20
+21*œ
+12M M(%R
+P
+M; M(D
+%11mage.constants.Zone"__id*"
+
+__unknown_file (
+""£ 
+M M(S
+%12boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*8
+
+__unknown_file (
+
+%11mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)"
+M M(T
+"":"
+9 9(#
+gamemage.game.Game:,
+9$ 9(2 
+sourcemage.abilities.AbilityB:8
+6mage.abilities.effects.common.ReturnToHandSourceEffectHP

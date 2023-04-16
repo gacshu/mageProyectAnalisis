@@ -1,0 +1,249 @@
+
+˜mage.abilities.effects.common.combat.MustBeBlockedByTargetSourceEffect#applies(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z‰
+D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/MustBeBlockedByTargetSourceEffect.java! !("startingBlock*Ú
+2. .(ÅÂ
+. .(
+%13void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*f
+
+__unknown_file (JH
+Fmage.abilities.effects.common.combat.MustBeBlockedByTargetSourceEffect2	discard()*
+1*!
+3, ,("
+, ,( 
+""*
+startingBlock! !(Jž
+›
+   (
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanentk
+i
+!% !(.*
+	permanentmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%14”
+‘
+   (
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+!8 !(> 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15Š
+‡
+   (
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+!E !(I
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16*
+10*!
+4* *($"
+* *(%
+""*è
+5(: ((PÐÍ
+	(: ((„
+%12boolean"—mage.watchers.common.BlockedAttackerWatcher#creatureHasBlockedAttacker(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;Lmage/game/Game;)Z*c
+
+__unknown_file (G
+E
+blockedAttackerWatcher+mage.watchers.common.BlockedAttackerWatcher*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2jcreatureHasBlockedAttacker(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;Lmage/game/Game;)*
+3
+4*í
+6'D '(H›˜
+'D '(S
+%10mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ˆ…
+'D '(|2
+%11+mage.watchers.common.BlockedAttackerWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*8
+
+__unknown_file (
+
+%10mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)¬
+©
+' '(}E
+blockedAttackerWatcher+mage.watchers.common.BlockedAttackerWatcher"__id*P
+
+__unknown_file (4
+2
+%11+mage.watchers.common.BlockedAttackerWatcher*
+3
+5*ã
+7%% %(+ÈÅ
+%% %(S#
+%9mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)€
+~
+% %(T)
+attackermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+2
+6*ˆ
+8$# $(*¨¥
+$4 $(H
+%7java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÅÂ
+$# $(O
+%8boolean"Image.game.permanent.Permanent#canBlock(Ljava/util/UUID;Lmage/game/Game;)Z*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2*canBlock(Ljava/util/UUID;Lmage/game/Game;)*
+7
+1*Æ
+9#  #($—”
+#2 #(I-
+%4'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*f
+
+__unknown_file (JH
+Fmage.abilities.effects.common.combat.MustBeBlockedByTargetSourceEffect2getTargetPointer()†ƒ
+#2 #(`
+%5java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%4'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Š‡
+#  #(a#
+%6mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPermanent(Ljava/util/UUID;)
+}
+# #(b(
+blockermage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+8
+1*±
+10" "(¦£
+" "(
+%0java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()—”
+"% "(<-
+%1'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*f
+
+__unknown_file (JH
+Fmage.abilities.effects.common.combat.MustBeBlockedByTargetSourceEffect2getTargetPointer()†ƒ
+"% "(S
+%2java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%1'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ÌÉ
+" "(T
+%3boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%2java.util.UUID2equals(Ljava/lang/Object;)*
+9
+1*!
+12 2("
+2 2(
+"":6
+! !(/*
+	permanentmage.game.permanent.Permanent:,
+!0 !(? 
+sourcemage.abilities.Ability:"
+!@ !(I
+gamemage.game.GameBJH
+Fmage.abilities.effects.common.combat.MustBeBlockedByTargetSourceEffectHP

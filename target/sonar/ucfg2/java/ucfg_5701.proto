@@ -1,0 +1,101 @@
+
+|mage.abilities.effects.PlaneswalkerRedirectionEffect#getSourceControllerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;w
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/PlaneswalkerRedirectionEffect.javaM M(&"5*î
+2T T(º·
+T T(.
+%5java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()""
+T T(/
+
+%5java.util.UUID*
+3R R("¾»
+R R(3%
+%3mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()°­
+R R(J#
+%4mage.game.permanent.Permanent"]mage.game.permanent.Battlefield#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*C
+
+__unknown_file ('
+%
+%3mage.game.permanent.Battlefield*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2getPermanent(Ljava/util/UUID;)
+
+R R(K*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+2
+1*é
+4P P(µ²
+P P(+
+%2java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+sourcemage.game.stack.StackObject2getControllerId()""
+P P(,
+
+%2java.util.UUID*å
+5N N(!¨¥
+N N(, 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¦£
+N N(E!
+%1mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2 getStackObject(Ljava/util/UUID;)z
+x
+N N(F%
+sourcemage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%1mage.game.stack.StackObject*
+3
+4*Í
+1W W(ÜÙ
+W W(*.
+%6(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()º·
+W W(L
+%7java.util.UUID"bmage.abilities.effects.ContinuousEffects#getControllerOfSourceId(Ljava/util/UUID;)Ljava/util/UUID;*L
+
+__unknown_file (0
+.
+%6(mage.abilities.effects.ContinuousEffects*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2)getControllerOfSourceId(Ljava/util/UUID;)""
+W W(M
+
+%7java.util.UUID:&
+M' M(5
+sourceIdjava.util.UUID:"
+M6 M(?
+gamemage.game.GameB86
+4mage.abilities.effects.PlaneswalkerRedirectionEffect

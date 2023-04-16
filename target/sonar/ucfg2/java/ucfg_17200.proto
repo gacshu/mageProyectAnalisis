@@ -1,0 +1,636 @@
+
+Ymage.game.tournament.TournamentImpl#toProto()Lmage/game/result/ResultProtos$TourneyProto;h
+\D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/tournament/TournamentImpl.javaœ œ("21*Ä
+13
+©* ©(/¬©
+
+©* ©(:
+%14java.util.List"5mage.game.tournament.Round#getPairs()Ljava/util/List;*A
+
+__unknown_file (%
+#
+roundmage.game.tournament.Round2
+getPairs()*
+6*¥
+14
+§5 §(CÇÄ
+
+§5 §(V>
+%117mage.game.result.ResultProtos$TourneyRoundProto$Builder"~mage.game.result.ResultProtos$TourneyProto$Builder#addRoundsBuilder()Lmage/game/result/ResultProtos$TourneyRoundProto$Builder;*b
+
+__unknown_file (F
+D
+tourneyBuilder2mage.game.result.ResultProtos$TourneyProto$Builder2addRoundsBuilder()ž›
+
+¨ ¨(4
+
+%12int",mage.game.tournament.Round#getRoundNumber()I*A
+
+__unknown_file (%
+#
+roundmage.game.tournament.Round2getRoundNumber()âß
+
+§5 ¨(5>
+%137mage.game.result.ResultProtos$TourneyRoundProto$Builder"|mage.game.result.ResultProtos$TourneyRoundProto$Builder#setRound(I)Lmage/game/result/ResultProtos$TourneyRoundProto$Builder;*\
+
+__unknown_file (@
+>
+%117mage.game.result.ResultProtos$TourneyRoundProto$Builder*(
+
+__unknown_file (
+
+
+%12int2setRound(I)¼
+¹
+
+§ ¨(6G
+roundBuilder7mage.game.result.ResultProtos$TourneyRoundProto$Builder"__id*\
+
+__unknown_file (@
+>
+%137mage.game.result.ResultProtos$TourneyRoundProto$Builder*
+13*“
+15
+¦ ¦(!|
+z
+
+¦ ¦(!
+%10java.util.List"__id*O
+
+__unknown_file (3*1%
+#mage.game.tournament.TournamentImpl"
+rounds*
+2*²
+16
+Ÿ Ÿ($i
+g
+
+Ÿ Ÿ($/
+player%mage.game.tournament.TournamentPlayer"__id*"
+
+__unknown_file (
+""ª
+§
+
+Ÿ Ÿ($/
+player%mage.game.tournament.TournamentPlayer"
+__arrayGet*8
+
+__unknown_file (
+
+%5java.util.Collection*"
+
+__unknown_file (
+""*
+15
+19*ã
+17
+¤ ¤(ËÈ
+
+¤ ¤(.>
+%78mage.game.result.ResultProtos$TourneyPlayerProto$Builder"€mage.game.result.ResultProtos$TourneyProto$Builder#addPlayersBuilder()Lmage/game/result/ResultProtos$TourneyPlayerProto$Builder;*b
+
+__unknown_file (F
+D
+tourneyBuilder2mage.game.result.ResultProtos$TourneyProto$Builder2addPlayersBuilder()„
+
+¤9 ¤(I6
+%80mage.game.result.ResultProtos$TourneyPlayerProto"amage.game.tournament.TournamentPlayer#toProto()Lmage/game/result/ResultProtos$TourneyPlayerProto;*M
+
+__unknown_file (1
+/
+player%mage.game.tournament.TournamentPlayer2	toProto()õò
+
+¤ ¤(J>
+%98mage.game.result.ResultProtos$TourneyPlayerProto$Builder"°mage.game.result.ResultProtos$TourneyPlayerProto$Builder#mergeFrom(Lmage/game/result/ResultProtos$TourneyPlayerProto;)Lmage/game/result/ResultProtos$TourneyPlayerProto$Builder;*\
+
+__unknown_file (@
+>
+%78mage.game.result.ResultProtos$TourneyPlayerProto$Builder*T
+
+__unknown_file (8
+6
+%80mage.game.result.ResultProtos$TourneyPlayerProto2=mergeFrom(Lmage/game/result/ResultProtos$TourneyPlayerProto;)*
+16*¶
+18
+¢ ¢('
+š
+
+¢ ¢('/
+player%mage.game.tournament.TournamentPlayer"__id*U
+
+__unknown_file (9
+7
+replacedPlayer%mage.game.tournament.TournamentPlayer*
+17*Ï
+19
+ .  (4–“
+
+ .  (R+
+%6%mage.game.tournament.TournamentPlayer"jmage.game.tournament.TournamentPlayer#getReplacedTournamentPlayer()Lmage/game/tournament/TournamentPlayer;*M
+
+__unknown_file (1
+/
+player%mage.game.tournament.TournamentPlayer2getReplacedTournamentPlayer()™
+–
+
+   (S7
+replacedPlayer%mage.game.tournament.TournamentPlayer"__id*I
+
+__unknown_file (-
++
+%6%mage.game.tournament.TournamentPlayer*
+17
+18*ì
+1
+¼ ¼(—”
+
+¼ ¼(%1
+%50*mage.game.result.ResultProtos$TourneyProto"fmage.game.result.ResultProtos$TourneyProto$Builder#build()Lmage/game/result/ResultProtos$TourneyProto;*b
+
+__unknown_file (F
+D
+tourneyBuilder2mage.game.result.ResultProtos$TourneyProto$Builder2build()"A
+
+¼ ¼(&3
+1
+%50*mage.game.result.ResultProtos$TourneyProto*“
+2
+¦ ¦(]
+[
+
+¦ ¦(#
+roundmage.game.tournament.Round"__id*"
+
+__unknown_file (
+""™
+–
+
+¦ ¦(#
+roundmage.game.tournament.Round"
+__arrayGet*3
+
+__unknown_file (
+
+%10java.util.List*"
+
+__unknown_file (
+""*
+14
+1*¢
+3
+¸ ¸($e
+c
+
+¸ ¸($+
+tp%mage.game.tournament.TournamentPlayer"__id*"
+
+__unknown_file (
+""¡
+ž
+
+¸ ¸($+
+tp%mage.game.tournament.TournamentPlayer"
+__arrayGet*3
+
+__unknown_file (
+
+%46java.util.List*"
+
+__unknown_file (
+""*
+2
+4*Ÿ
+4
+¹ ¹(ËÈ
+
+¹% ¹(3
+%47mage.players.Player"Fmage.game.tournament.TournamentPlayer#getPlayer()Lmage/players/Player;*I
+
+__unknown_file (-
++
+tp%mage.game.tournament.TournamentPlayer2getPlayer()ž›
+
+¹% ¹(=
+%48java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+%47mage.players.Player2	getName()™–
+
+¹ ¹(>>
+%497mage.game.result.ResultProtos$TourneyRoundProto$Builder"Œmage.game.result.ResultProtos$TourneyRoundProto$Builder#addByes(Ljava/lang/String;)Lmage/game/result/ResultProtos$TourneyRoundProto$Builder;*e
+
+__unknown_file (I
+G
+roundBuilder7mage.game.result.ResultProtos$TourneyRoundProto$Builder*5
+
+__unknown_file (
+
+%48java.lang.String2addByes(Ljava/lang/String;)*
+3*Í
+5
+¸' ¸(,¶³
+
+¸' ¸(<
+%46java.util.List":mage.game.tournament.Round#getPlayerByes()Ljava/util/List;*A
+
+__unknown_file (%
+#
+roundmage.game.tournament.Round2getPlayerByes()*
+3*©
+6
+© ©('h
+f
+
+© ©('.
+pair&mage.game.tournament.TournamentPairing"__id*"
+
+__unknown_file (
+""¤
+¡
+
+© ©('.
+pair&mage.game.tournament.TournamentPairing"
+__arrayGet*3
+
+__unknown_file (
+
+%14java.util.List*"
+
+__unknown_file (
+""*
+5
+12*Þ
+7
+µ* µ(rvt
+
+µ* µ(r
+%44long"java.util.Date#getTime()J*3
+
+__unknown_file (
+
+%40java.util.Date2	getTime()ÏÌ
+
+¬6 µ(s7
+%450mage.game.result.ResultProtos$MatchProto$Builder"rmage.game.result.ResultProtos$MatchProto$Builder#setEndTimeMs(J)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%380mage.game.result.ResultProtos$MatchProto$Builder*)
+
+__unknown_file (
+
+%44long2setEndTimeMs(J)*
+6*“
+8
+µ] µ(g53
+
+µa µ(e
+%42java.util.Date"java.util.Dated
+b
+
+µ] µ(g
+%43"java.util.Date#<init>()V*3
+
+__unknown_file (
+
+%42java.util.Date`
+^
+
+µ] µ(g
+%40java.util.Date"__id*3
+
+__unknown_file (
+
+%42java.util.Date*
+7*Ÿ
+9
+µH µ(M¦£
+
+µH µ(Z
+%41java.util.Date"2mage.game.match.Match#getEndTime()Ljava/util/Date;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getEndTime()`
+^
+
+µH µ(Z
+%40java.util.Date"__id*3
+
+__unknown_file (
+
+%41java.util.Date*
+7*¬
+20
+Ÿ' Ÿ(.{
+y
+
+Ÿ' Ÿ(.
+%4java.util.Map"__id*P
+
+__unknown_file (4*2%
+#mage.game.tournament.TournamentImpl"	
+players–“
+
+Ÿ' Ÿ(7
+%5java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%4java.util.Map2values()*
+16*	
+21
+. (:j
+h
+
+. (:0
+%0*mage.game.result.ResultProtos$TourneyProto"__id*"
+
+__unknown_file (
+""‚
+ÿ
+
+. (G8
+%12mage.game.result.ResultProtos$TourneyProto$Builder"kmage.game.result.ResultProtos$TourneyProto#newBuilder()Lmage/game/result/ResultProtos$TourneyProto$Builder;*J
+
+__unknown_file (.",
+*mage.game.result.ResultProtos$TourneyProtoÆÃ
+
+ž  ž(5
+%2java.lang.String"Fmage.game.tournament.TournamentImpl#getBoosterInfo()Ljava/lang/String;*C
+
+__unknown_file ('%
+#mage.game.tournament.TournamentImpl2getBoosterInfo()‡„
+
+. ž(68
+%32mage.game.result.ResultProtos$TourneyProto$Builder"‰mage.game.result.ResultProtos$TourneyProto$Builder#setBoosterInfo(Ljava/lang/String;)Lmage/game/result/ResultProtos$TourneyProto$Builder;*V
+
+__unknown_file (:
+8
+%12mage.game.result.ResultProtos$TourneyProto$Builder*4
+
+__unknown_file (
+
+%2java.lang.String2"setBoosterInfo(Ljava/lang/String;)³
+°
+
+ ž(7D
+tourneyBuilder2mage.game.result.ResultProtos$TourneyProto$Builder"__id*V
+
+__unknown_file (:
+8
+%32mage.game.result.ResultProtos$TourneyProto$Builder*
+20*þ4
+10
+¬6 ¬(BÃÀ
+
+¬6 ¬(V7
+%170mage.game.result.ResultProtos$MatchProto$Builder"}mage.game.result.ResultProtos$TourneyRoundProto$Builder#addMatchesBuilder()Lmage/game/result/ResultProtos$MatchProto$Builder;*e
+
+__unknown_file (I
+G
+roundBuilder7mage.game.result.ResultProtos$TourneyRoundProto$Builder2addMatchesBuilder()¤¡
+
+­% ­(4
+%18java.lang.String"1mage.game.match.Match#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2	getName()óð
+
+¬6 ­(57
+%190mage.game.result.ResultProtos$MatchProto$Builder"~mage.game.result.ResultProtos$MatchProto$Builder#setName(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%170mage.game.result.ResultProtos$MatchProto$Builder*5
+
+__unknown_file (
+
+%18java.lang.String2setName(Ljava/lang/String;)Â¿
+
+®) ®(;#
+%20mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getOptions()¸µ
+
+®) ®(I
+%21java.lang.String"<mage.game.match.MatchOptions#getGameType()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+%20mage.game.match.MatchOptions2getGameType()üù
+
+¬6 ®(J7
+%220mage.game.result.ResultProtos$MatchProto$Builder"‚mage.game.result.ResultProtos$MatchProto$Builder#setGameType(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%190mage.game.result.ResultProtos$MatchProto$Builder*5
+
+__unknown_file (
+
+%21java.lang.String2setGameType(Ljava/lang/String;)Â¿
+
+¯) ¯(;#
+%23mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getOptions()¸µ
+
+¯) ¯(I
+%24java.lang.String"<mage.game.match.MatchOptions#getDeckType()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+%23mage.game.match.MatchOptions2getDeckType()üù
+
+¬6 ¯(J7
+%250mage.game.result.ResultProtos$MatchProto$Builder"‚mage.game.result.ResultProtos$MatchProto$Builder#setDeckType(Ljava/lang/String;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%220mage.game.result.ResultProtos$MatchProto$Builder*5
+
+__unknown_file (
+
+%24java.lang.String2setDeckType(Ljava/lang/String;)Ž‹
+
+°& °(9
+
+%26int"$mage.game.match.Match#getNumGames()I*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getNumGames()ÆÃ
+
+¬6 °(:7
+%270mage.game.result.ResultProtos$MatchProto$Builder"nmage.game.result.ResultProtos$MatchProto$Builder#setGames(I)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%250mage.game.result.ResultProtos$MatchProto$Builder*(
+
+__unknown_file (
+
+
+%26int2setGames(I)ˆ…
+
+±& ±(6
+
+%28int"!mage.game.match.Match#getDraws()I*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2
+getDraws()ÆÃ
+
+¬6 ±(77
+%290mage.game.result.ResultProtos$MatchProto$Builder"nmage.game.result.ResultProtos$MatchProto$Builder#setDraws(I)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%270mage.game.result.ResultProtos$MatchProto$Builder*(
+
+__unknown_file (
+
+
+%28int2setDraws(I)õò
+
+²< ²(M,
+%30%mage.game.tournament.TournamentPlayer"Zmage.game.tournament.TournamentPairing#getPlayer1()Lmage/game/tournament/TournamentPlayer;*L
+
+__unknown_file (0
+.
+pair&mage.game.tournament.TournamentPairing2getPlayer1()¸
+µ
+
+²( ²(N5
+%31.mage.game.result.ResultProtos$MatchPlayerProto" mage.game.tournament.TournamentImpl#matchToProto(Lmage/game/match/Match;Lmage/game/tournament/TournamentPlayer;)Lmage/game/result/ResultProtos$MatchPlayerProto;*C
+
+__unknown_file ('%
+#mage.game.tournament.TournamentImpl*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match*J
+
+__unknown_file (.
+,
+%30%mage.game.tournament.TournamentPlayerÔÑ
+
+¬6 ²(O7
+%320mage.game.result.ResultProtos$MatchProto$Builder"Ÿmage.game.result.ResultProtos$MatchProto$Builder#addPlayers(Lmage/game/result/ResultProtos$MatchPlayerProto;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%290mage.game.result.ResultProtos$MatchProto$Builder*S
+
+__unknown_file (7
+5
+%31.mage.game.result.ResultProtos$MatchPlayerProto2<addPlayers(Lmage/game/result/ResultProtos$MatchPlayerProto;)õò
+
+³< ³(M,
+%33%mage.game.tournament.TournamentPlayer"Zmage.game.tournament.TournamentPairing#getPlayer2()Lmage/game/tournament/TournamentPlayer;*L
+
+__unknown_file (0
+.
+pair&mage.game.tournament.TournamentPairing2getPlayer2()¸
+µ
+
+³( ³(N5
+%34.mage.game.result.ResultProtos$MatchPlayerProto" mage.game.tournament.TournamentImpl#matchToProto(Lmage/game/match/Match;Lmage/game/tournament/TournamentPlayer;)Lmage/game/result/ResultProtos$MatchPlayerProto;*C
+
+__unknown_file ('%
+#mage.game.tournament.TournamentImpl*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match*J
+
+__unknown_file (.
+,
+%33%mage.game.tournament.TournamentPlayerÔÑ
+
+¬6 ³(O7
+%350mage.game.result.ResultProtos$MatchProto$Builder"Ÿmage.game.result.ResultProtos$MatchProto$Builder#addPlayers(Lmage/game/result/ResultProtos$MatchPlayerProto;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%320mage.game.result.ResultProtos$MatchProto$Builder*S
+
+__unknown_file (7
+5
+%34.mage.game.result.ResultProtos$MatchPlayerProto2<addPlayers(Lmage/game/result/ResultProtos$MatchPlayerProto;)Â¿
+
+´- ´(?#
+%36mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getOptions()îë
+
+´- ´(I6
+%37/mage.game.result.ResultProtos$MatchOptionsProto"Wmage.game.match.MatchOptions#toProto()Lmage/game/result/ResultProtos$MatchOptionsProto;*A
+
+__unknown_file (%
+#
+%36mage.game.match.MatchOptions2	toProto()áÞ
+
+¬6 ´(J7
+%380mage.game.result.ResultProtos$MatchProto$Builder"¥mage.game.result.ResultProtos$MatchProto$Builder#setMatchOptions(Lmage/game/result/ResultProtos$MatchOptionsProto;)Lmage/game/result/ResultProtos$MatchProto$Builder;*U
+
+__unknown_file (9
+7
+%350mage.game.result.ResultProtos$MatchProto$Builder*T
+
+__unknown_file (8
+6
+%37/mage.game.result.ResultProtos$MatchOptionsProto2BsetMatchOptions(Lmage/game/result/ResultProtos$MatchOptionsProto;)¦£
+
+µ+ µ(=
+%39java.util.Date"2mage.game.match.Match#getEndTime()Ljava/util/Date;*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2getEndTime()*
+8
+9*¨
+11
+«% «(*Œ‰
+
+«% «(5
+%16boolean"!mage.game.match.Match#hasEnded()Z*<
+
+__unknown_file ( 
+
+matchmage.game.match.Match2
+hasEnded()*
+6
+10*ß
+12
+ª ª("ÑÎ
+
+ª ª(-
+%15mage.game.match.Match"Hmage.game.tournament.TournamentPairing#getMatch()Lmage/game/match/Match;*L
+
+__unknown_file (0
+.
+pair&mage.game.tournament.TournamentPairing2
+getMatch()p
+n
+
+ª ª(.
+matchmage.game.match.Match"__id*:
+
+__unknown_file (
+
+%15mage.game.match.Match*
+6
+11B'%
+#mage.game.tournament.TournamentImplH

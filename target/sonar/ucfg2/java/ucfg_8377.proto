@@ -1,0 +1,197 @@
+
+vmage.abilities.effects.common.continuous.IsBeingCastFromHandCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z”
+‰D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/CastFromHandWithoutPayingManaCostEffect.javaZ Z("startingBlock*÷
+2e e(%d
+b
+e e(&
+cardmage.cards.Card"__id*7
+
+__unknown_file (
+
+objectmage.MageObject–“
+f" f(3
+%7java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getOwnerId()ðí
+f f(4
+%8mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%7java.util.UUID2getPlayer(Ljava/util/UUID;)š—
+f f(>
+%9mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*7
+
+__unknown_file (
+
+%8mage.players.Player2	getHand()‹ˆ
+fC f(O
+%10java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()¶³
+f f(V
+%11mage.cards.Card"Gmage.cards.Cards#get(Ljava/util/UUID;Lmage/game/Game;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+%9mage.cards.Cards*3
+
+__unknown_file (
+
+%10java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2%get(Ljava/util/UUID;Lmage/game/Game;)"
+f f(_
+""*þ
+startingBlockZ Z(3Š
+‡
+Y Y(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+Z Z("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+Y Y(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+Z, Z(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+9*ì
+4a" a((k
+i
+a a()
+spellmage.game.stack.Spell"__id*7
+
+__unknown_file (
+
+objectmage.MageObjectQ
+O
+b b(
+%4mage.constants.Zone"__id*"
+
+__unknown_file (
+""¯¬
+b$ b(7
+%5mage.constants.Zone"8mage.game.stack.Spell#getFromZone()Lmage/constants/Zone;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getFromZone()ÖÓ
+b b(8
+%6boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*7
+
+__unknown_file (
+
+%4mage.constants.Zone*7
+
+__unknown_file (
+
+%5mage.constants.Zone2equals(Ljava/lang/Object;)"
+b b(9
+""*ÿ
+6]& ](,œ™
+] ](;
+%1mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*7
+
+__unknown_file (
+
+objectmage.MageObject2getMainCard()ˆ…
+] ](C
+%2java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%1mage.cards.Card2getId()d
+b
+] ](D
+
+mainCardIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%2java.util.UUIDðí
+^ ^(/
+%3mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2getObject(Ljava/util/UUID;)b
+`
+^ ^(/
+objectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*	
+2
+4
+1*†
+9[ [( „
+[ [(2
+%0mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)b
+`
+[ [(3
+objectmage.MageObject"__id*3
+
+__unknown_file (
+
+%0mage.MageObject*
+2
+4
+6
+1*!
+1h h("
+h h(
+"":"
+Z Z(#
+gamemage.game.Game:,
+Z$ Z(2 
+sourcemage.abilities.AbilityBIG
+Emage.abilities.effects.common.continuous.IsBeingCastFromHandConditionHP

@@ -1,0 +1,1183 @@
+
+cmage.players.PlayerImpl#cast(Lmage/abilities/SpellAbility;Lmage/game/Game;ZLmage/ApprovingObject;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.javaÿ ÿ("startingBlock*Š
+13
+	 	(ñî
+
+	 	(-
+%40void"2mage.game.stack.Spell#setCopy(ZLmage/MageObject;)V*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell* 
+
+__unknown_file (2*"
+
+__unknown_file (
+""2setCopy(ZLmage/MageObject;)*
+12*–
+14
+	 	(zx
+
+	 	(!
+%39boolean"mage.MageObject#isCopy()Z*5
+
+__unknown_file (
+
+cardmage.cards.Card2isCopy()*
+13
+12*­
+15
+š	 š	(X
+V
+
+š	 š	(
+%35org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""±®
+
+š	H š	(Y
+%36java.lang.String"6mage.abilities.AbilityImpl#getRule()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2	getRule()‘
+
+
+š	! š	(Y
+%37java.lang.String"__concat*4
+
+š	! š	(E&$
+"Got no spell from stack. ability: *'
+
+š	H š	(Y
+
+%36java.lang.Stringâß
+
+š	 š	(Z
+%38void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%35org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%37java.lang.String2error(Ljava/lang/Object;)"
+
+›	 ›	(!
+""*¿
+16
+•	 •	(#ƒ€
+
+•	 •	(3
+
+%28int"mage.game.Game#bookmarkState()I*4
+
+__unknown_file (
+
+gamemage.game.Game2bookmarkState()¾»
+
+–	 –	(+
+%29void"-mage.players.PlayerImpl#setStoredBookmark(I)V*7
+
+__unknown_file (
+mage.players.PlayerImpl*"
+
+__unknown_file (
+""2setStoredBookmark(I)r
+p
+
+—	3 —	(;
+%30java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerId‹ˆ
+
+—	 —	(<
+%31boolean"image.cards.Card#cast(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/SpellAbility;Ljava/util/UUID;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*3
+
+__unknown_file (
+
+%30java.util.UUID2Xcast(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/SpellAbility;Ljava/util/UUID;)«¨
+
+˜	 ˜	(-!
+%32mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()©¦
+
+˜	7 ˜	(F
+%33java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getId()Š
+
+˜	 ˜	(G
+%34mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*?
+
+__unknown_file (#
+!
+%32mage.game.stack.SpellStack*3
+
+__unknown_file (
+
+%33java.util.UUID2getSpell(Ljava/util/UUID;)p
+n
+
+˜	 ˜	(H
+spellmage.game.stack.Spell"__id*:
+
+__unknown_file (
+
+%34mage.game.stack.Spell*
+14
+15*¬
+17
+	 	( š
+
+	 	(+
+%17mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()š
+
+	4 	(F
+%18mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getMainCard()Œ‰
+
+	4 	(N
+%19java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%18mage.cards.Card2getId()ùö
+
+	 	(O
+%20mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*8
+
+__unknown_file (
+
+%17mage.game.GameState*3
+
+__unknown_file (
+
+%19java.util.UUID2getZone(Ljava/util/UUID;)o
+m
+
+	 	(P
+fromZonemage.constants.Zone"__id*8
+
+__unknown_file (
+
+%20mage.constants.Zonee
+c
+
+‘	5 ‘	(H+
+%21$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+‘	5 ‘	(S+
+%22$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""©¦
+
+’	 ’	(#
+%23java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getId()r
+p
+
+’	. ’	(6
+%24java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerIdè
+å
+
+‘	" ’	(H!
+%25mage.game.events.GameEvent"µmage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/ApprovingObject;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%22$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%23java.util.UUID*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*3
+
+__unknown_file (
+
+%24java.util.UUID*E
+
+__unknown_file ()
+'
+approvingObjectmage.ApprovingObject~
+|
+
+‘	 ’	(I'
+	castEventmage.game.events.GameEvent"__id*?
+
+__unknown_file (#
+!
+%25mage.game.events.GameEventşû
+
+“	 “	('
+%26void":mage.game.events.GameEvent#setZone(Lmage/constants/Zone;)V*E
+
+__unknown_file ()
+'
+	castEventmage.game.events.GameEvent*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone2setZone(Lmage/constants/Zone;)ú÷
+
+”	 ”	(6
+%27boolean"Rmage.game.Game#replaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+	castEventmage.game.events.GameEvent*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2BreplaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;)*
+16
+1*¡
+18
+	 	(µ²
+
+	! 	(6
+%15java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()èå
+
+	 	(7
+%16mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%15java.util.UUID2getCard(Ljava/util/UUID;)c
+a
+
+	 	(8
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%16mage.cards.Card*
+17
+1*–
+19
+‹	 ‹	(W
+U
+
+‹	 ‹	(
+%8org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""{y
+
+‹	< ‹	(M	
+%9int"mage.game.Game#getTurnNum()I*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnNum()~
+|
+
+‹	 ‹	(M
+%10java.lang.String"__concat*0
+
+‹	 ‹	(9" 
+Ability without sourceId turn *
+
+‹	< ‹	(M
+	
+%9inty
+w
+
+‹	 ‹	(]
+%11java.lang.String"__concat*'
+
+‹	 ‹	(M
+
+%10java.lang.String*
+
+‹	P ‹	(]
+. Ability: ±®
+
+‹	` ‹	(q
+%12java.lang.String"6mage.abilities.AbilityImpl#getRule()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2	getRule()„
+
+
+‹	 ‹	(q
+%13java.lang.String"__concat*'
+
+‹	 ‹	(]
+
+%11java.lang.String*'
+
+‹	` ‹	(q
+
+%12java.lang.StringáŞ
+
+‹	 ‹	(r
+%14void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%8org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%13java.lang.String2error(Ljava/lang/Object;)"
+
+Œ	 Œ	(
+""*%
+1
+Ë	 Ë	("
+
+Ë	 Ë	(
+""*Ï
+2
+È	 È	(±®
+
+È	' È	(8
+%96java.lang.String"6mage.abilities.AbilityImpl#getRule()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2	getRule()„
+
+È	 È	(?
+%97mage.game.GameState"Zmage.players.Player#restoreState(ILjava/lang/String;Lmage/game/Game;)Lmage/game/GameState;*7
+
+__unknown_file (
+mage.players.PlayerImpl*"
+
+__unknown_file (
+""*5
+
+__unknown_file (
+
+%96java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Game21restoreState(ILjava/lang/String;Lmage/game/Game;)*
+1*É
+3
+Ä	 Ä	(¬©
+
+Ä	 Ä	(1
+%94void"!mage.game.Game#removeBookmark(I)V*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2removeBookmark(I)òï
+
+Å	 Å	(-
+%95void">mage.players.PlayerImpl#resetStoredBookmark(Lmage/game/Game;)V*7
+
+__unknown_file (
+mage.players.PlayerImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2%resetStoredBookmark(Lmage/game/Game;)"
+
+Æ	 Æ	( 
+""*·
+startingBlock
+ÿ ÿ(q¤
+¡
+
+ş ş(
+%98"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*L
+
+__unknown_file (0
+.
+originalAbilitymage.abilities.SpellAbilityq
+o
+
+ÿ% ÿ(4.
+originalAbilitymage.abilities.SpellAbility"__annotation*#
+
+__unknown_file (
+
+%98Œ
+‰
+
+ş ş(
+%99"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ÿ; ÿ(?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%99
+›
+
+ş ş(
+%100"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+approvingObjectmage.ApprovingObjectk
+i
+
+ÿa ÿ(p'
+approvingObjectmage.ApprovingObject"__annotation*$
+
+__unknown_file (
+
+%100*
+20
+21*¼
+4
+Â	 Â	(§¤
+
+Â	+ Â	(7
+%90java.lang.String"6mage.players.PlayerImpl#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLogName()’
+
+Â	: Â	(Y
+%91java.lang.String"Mmage.game.stack.Spell#getActivatedMessage(Lmage/game/Game;)Ljava/lang/String;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game2%getActivatedMessage(Lmage/game/Game;)„
+
+
+Â	+ Â	(Y
+%92java.lang.String"__concat*'
+
+Â	+ Â	(7
+
+%90java.lang.String*'
+
+Â	: Â	(Y
+
+%91java.lang.StringßÜ
+
+Â	 Â	(Z
+%93void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%92java.lang.String2!informPlayers(Ljava/lang/String;)*
+3*
+5
+½	, ½	(5e
+c
+
+½	? ½	(R+
+%80$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+½	? ½	(]+
+%81$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ÊÇ
+
+¾	 ¾	(3"
+%82mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()¥¢
+
+¾	 ¾	(;
+%83java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%82mage.abilities.SpellAbility2getId()ÊÇ
+
+¾	= ¾	(T"
+%84mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()r
+p
+
+¾	V ¾	(^
+%85java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerIdä
+á
+
+½	, ¾	(p!
+%86mage.game.events.GameEvent"µmage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/ApprovingObject;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%81$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%83java.util.UUID*@
+
+__unknown_file ($
+"
+%84mage.abilities.SpellAbility*3
+
+__unknown_file (
+
+%85java.util.UUID*E
+
+__unknown_file ()
+'
+approvingObjectmage.ApprovingObject€
+~
+
+½	 ¾	(q)
+castedEventmage.game.events.GameEvent"__id*?
+
+__unknown_file (#
+!
+%86mage.game.events.GameEvent€ı
+
+¿	 ¿	(1
+%87void":mage.game.events.GameEvent#setZone(Lmage/constants/Zone;)V*G
+
+__unknown_file (+
+)
+castedEventmage.game.events.GameEvent*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone2setZone(Lmage/constants/Zone;)ıú
+
+À	 À	(/
+%88void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*G
+
+__unknown_file (+
+)
+castedEventmage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)…‚
+
+Á	 Á	(,
+%89boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+3
+4*¹
+6
+¶	 ¶	(*ª§
+
+¶	 ¶	(,
+%69void"5mage.players.PlayerImpl#clearCastSourceIdManaCosts()V*7
+
+__unknown_file (
+mage.players.PlayerImpl2clearCastSourceIdManaCosts()e
+c
+
+¸	/ ¸	(B+
+%70$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+¸	/ ¸	(M+
+%71$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""ÊÇ
+
+¹	 ¹	(/"
+%72mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()¥¢
+
+¹	 ¹	(7
+%73java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*@
+
+__unknown_file ($
+"
+%72mage.abilities.SpellAbility2getId()ÊÇ
+
+¹	9 ¹	(P"
+%74mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()r
+p
+
+¹	R ¹	(Z
+%75java.util.UUID"__id*E
+
+__unknown_file ()*'
+mage.players.PlayerImpl"
+
+playerIdä
+á
+
+¸	 ¹	(l!
+%76mage.game.events.GameEvent"µmage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/ApprovingObject;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%71$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%73java.util.UUID*@
+
+__unknown_file ($
+"
+%74mage.abilities.SpellAbility*3
+
+__unknown_file (
+
+%75java.util.UUID*E
+
+__unknown_file ()
+'
+approvingObjectmage.ApprovingObject~
+|
+
+¸	 ¹	(l'
+	castEventmage.game.events.GameEvent"__id*?
+
+__unknown_file (#
+!
+%76mage.game.events.GameEventşû
+
+º	 º	(+
+%77void":mage.game.events.GameEvent#setZone(Lmage/constants/Zone;)V*E
+
+__unknown_file ()
+'
+	castEventmage.game.events.GameEvent*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone2setZone(Lmage/constants/Zone;)ûø
+
+»	 »	()
+%78void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+	castEventmage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)ˆ…
+
+¼	 ¼	(0
+%79boolean"2mage.game.stack.Spell#activate(Lmage/game/Game;Z)Z*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2activate(Lmage/game/Game;Z)*
+2
+5*¯
+7
+³	 ³	($ÃÀ
+
+³	 ³	(/!
+%67mage.abilities.costs.Costs"=mage.abilities.Ability#getCosts()Lmage/abilities/costs/Costs;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2
+getCosts()Ò
+Ï
+
+³	 ³	(=
+%68boolean"__arrayAddAll*?
+
+__unknown_file (#
+!
+%67mage.abilities.costs.Costs*
+
+__unknown_file (: *A
+
+__unknown_file (%
+#
+costsmage.abilities.costs.Costs*
+6*É
+8
+±	 ±	( ÃÀ
+
+±	 ±	(+!
+%65mage.abilities.costs.Costs"=mage.abilities.Ability#getCosts()Lmage/abilities/costs/Costs;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2
+getCosts()j
+h
+
+±	 ±	(3
+%66void"__arrayClear*?
+
+__unknown_file (#
+!
+%65mage.abilities.costs.Costs*
+6
+7*®
+9
+¬	 ¬	($İÚ
+
+¬	 ¬	(3*
+%55#mage.abilities.costs.mana.ManaCosts"Jmage.abilities.Ability#getManaCosts()Lmage/abilities/costs/mana/ManaCosts;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2getManaCosts()s
+q
+
+¬	 ¬	(;
+%56void"__arrayClear*H
+
+__unknown_file (,
+*
+%55#mage.abilities.costs.mana.ManaCostsçä
+
+­	 ­	(8*
+%57#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2getManaCostsToPay()s
+q
+
+­	 ­	(@
+%58void"__arrayClear*H
+
+__unknown_file (,
+*
+%57#mage.abilities.costs.mana.ManaCostsİÚ
+
+®	 ®	(3*
+%59#mage.abilities.costs.mana.ManaCosts"Jmage.abilities.Ability#getManaCosts()Lmage/abilities/costs/mana/ManaCosts;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2getManaCosts()éæ
+
+®	8 ®	(M*
+%60#mage.abilities.costs.mana.ManaCosts"Omage.abilities.costs.mana.ManaCosts#copy()Lmage/abilities/costs/mana/ManaCosts;*S
+
+__unknown_file (7
+5
+alternateCosts#mage.abilities.costs.mana.ManaCosts2copy()ß
+Ü
+
+®	 ®	(N
+%61boolean"
+__arrayAdd*H
+
+__unknown_file (,
+*
+%59#mage.abilities.costs.mana.ManaCosts*
+
+__unknown_file (: *H
+
+__unknown_file (,
+*
+%60#mage.abilities.costs.mana.ManaCostsçä
+
+¯	 ¯	(8*
+%62#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*D
+
+__unknown_file ((
+&
+spellAbilitymage.abilities.Ability2getManaCostsToPay()éæ
+
+¯	= ¯	(R*
+%63#mage.abilities.costs.mana.ManaCosts"Omage.abilities.costs.mana.ManaCosts#copy()Lmage/abilities/costs/mana/ManaCosts;*S
+
+__unknown_file (7
+5
+alternateCosts#mage.abilities.costs.mana.ManaCosts2copy()ß
+Ü
+
+¯	 ¯	(S
+%64boolean"
+__arrayAdd*H
+
+__unknown_file (,
+*
+%62#mage.abilities.costs.mana.ManaCosts*
+
+__unknown_file (: *H
+
+__unknown_file (,
+*
+%63#mage.abilities.costs.mana.ManaCosts*
+8*é
+20
+…	 …	(.ÉÆ
+
+…	 …	(5!
+%0mage.abilities.SpellAbility"?mage.abilities.SpellAbility#copy()Lmage/abilities/SpellAbility;*L
+
+__unknown_file (0
+.
+originalAbilitymage.abilities.SpellAbility2copy()}
+{
+
+…	 …	(6&
+abilitymage.abilities.SpellAbility"__id*?
+
+__unknown_file (#
+!
+%0mage.abilities.SpellAbility˜•
+
+†	  †	('
+%1java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()÷ô
+
+†	 †	((
+
+%2void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*2
+
+__unknown_file (
+
+%1java.util.UUID2!setControllerId(Ljava/util/UUID;)œ™
+
+‡	1 ‡	(@
+%3mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()´±
+
+‡	V ‡	(k
+%4java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()ìé
+
+‡	1 ‡	(l	
+%5int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*7
+
+__unknown_file (
+
+%3mage.game.GameState*2
+
+__unknown_file (
+
+%4java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)ğí
+
+‡	 ‡	(m
+
+%6void"?mage.abilities.AbilityImpl#setSourceObjectZoneChangeCounter(I)V*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*'
+
+__unknown_file (
+	
+%5int2#setSourceObjectZoneChangeCounter(I)´±
+
+Š	 Š	(!
+%7java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()*
+18
+19*&
+21
+	 	("
+
+	 	(
+""*»
+11
+¦	+ ¦	(0ÊÇ
+
+¦	+ ¦	(B"
+%48mage.abilities.SpellAbility"Dmage.game.stack.Spell#getSpellAbility()Lmage/abilities/SpellAbility;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSpellAbility()~
+|
+
+¦	 ¦	(C&
+spellAbilitymage.abilities.Ability"__id*@
+
+__unknown_file ($
+"
+%48mage.abilities.SpellAbility½º
+
+§	/ §	(I
+%49java.util.Map"Amage.players.PlayerImpl#getCastSourceIdManaCosts()Ljava/util/Map;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getCastSourceIdManaCosts()µ²
+
+§	N §	(c
+%50java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()®
+«
+
+§	/ §	(d*
+%51#mage.abilities.costs.mana.ManaCosts"__mapGet*2
+
+__unknown_file (
+
+%49java.util.Map*3
+
+__unknown_file (
+
+%50java.util.UUID–
+“
+
+§	 §	(e5
+alternateCosts#mage.abilities.costs.mana.ManaCosts"__id*H
+
+__unknown_file (,
+*
+%51#mage.abilities.costs.mana.ManaCostsµ²
+
+¨	( ¨	(>
+%52java.util.Map"=mage.players.PlayerImpl#getCastSourceIdCosts()Ljava/util/Map;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getCastSourceIdCosts()µ²
+
+¨	C ¨	(X
+%53java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()¥
+¢
+
+¨	( ¨	(Y!
+%54mage.abilities.costs.Costs"__mapGet*2
+
+__unknown_file (
+
+%52java.util.Map*3
+
+__unknown_file (
+
+%53java.util.UUIDz
+x
+
+¨	 ¨	(Z#
+costsmage.abilities.costs.Costs"__id*?
+
+__unknown_file (#
+!
+%54mage.abilities.costs.Costs*
+8
+9*¶
+12
+¡	 ¡	(š
+
+¡	9 ¡	(H
+%41mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()µ²
+
+¡	^ ¡	(s
+%42java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()ïì
+
+¡	9 ¡	(t
+
+%43int";mage.game.GameState#getZoneChangeCounter(Ljava/util/UUID;)I*8
+
+__unknown_file (
+
+%41mage.game.GameState*3
+
+__unknown_file (
+
+%42java.util.UUID2&getZoneChangeCounter(Ljava/util/UUID;)òï
+
+¡	 ¡	(u
+%44void"?mage.abilities.AbilityImpl#setSourceObjectZoneChangeCounter(I)V*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*(
+
+__unknown_file (
+
+
+%43int2#setSourceObjectZoneChangeCounter(I)ÍÊ
+
+¥	 ¥	(6
+%45java.util.Set"Image.players.PlayerImpl#getCastSourceIdWithAlternateMana()Ljava/util/Set;*7
+
+__unknown_file (
+mage.players.PlayerImpl2"getCastSourceIdWithAlternateMana()µ²
+
+¥	@ ¥	(U
+%46java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getSourceId()ÓĞ
+
+¥	 ¥	(V
+%47boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%45java.util.Set*3
+
+__unknown_file (
+
+%46java.util.UUID2contains(Ljava/lang/Object;)*
+6
+11:<
+
+ÿ ÿ(5.
+originalAbilitymage.abilities.SpellAbility:$
+
+ÿ6 ÿ(@
+gamemage.game.Game: 
+
+__unknown_file (
+"":5
+
+ÿQ ÿ(p'
+approvingObjectmage.ApprovingObjectB
+mage.players.PlayerImplHP

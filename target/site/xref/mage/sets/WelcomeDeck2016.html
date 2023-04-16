@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>WelcomeDeck2016 xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/WelcomeDeck2016.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> * @author escplan9</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="WelcomeDeck2016" href="../../mage/sets/WelcomeDeck2016.html#WelcomeDeck2016">WelcomeDeck2016</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="WelcomeDeck2016" href="../../mage/sets/WelcomeDeck2016.html#WelcomeDeck2016">WelcomeDeck2016</a> instance = <strong class="jxr_keyword">new</strong> <a name="WelcomeDeck2016" href="../../mage/sets/WelcomeDeck2016.html#WelcomeDeck2016">WelcomeDeck2016</a>();
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="WelcomeDeck2016" href="../../mage/sets/WelcomeDeck2016.html#WelcomeDeck2016">WelcomeDeck2016</a> getInstance() {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      }
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>      <strong class="jxr_keyword">private</strong> <a name="WelcomeDeck2016" href="../../mage/sets/WelcomeDeck2016.html#WelcomeDeck2016">WelcomeDeck2016</a>() {
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Welcome Deck 2016"</span>, <span class="jxr_string">"W16"</span>, ExpansionSet.buildDate(2016, 3, 8), SetType.SUPPLEMENTAL_STANDARD_LEGAL);
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = false;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Aegis Angel"</span>, 1, Rarity.RARE, mage.cards.a.AegisAngel.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Air Servant"</span>, 4, Rarity.UNCOMMON, mage.cards.a.AirServant.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Borderland Marauder"</span>, 11, Rarity.COMMON, mage.cards.b.BorderlandMarauder.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Cone of Flame"</span>, 12, Rarity.UNCOMMON, mage.cards.c.ConeOfFlame.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Disperse"</span>, 5, Rarity.COMMON, mage.cards.d.Disperse.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Incremental Growth"</span>, 14, Rarity.UNCOMMON, mage.cards.i.IncrementalGrowth.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Marked by Honor"</span>, 2, Rarity.COMMON, mage.cards.m.MarkedByHonor.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mind Rot"</span>, 7, Rarity.COMMON, mage.cards.m.MindRot.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Nightmare"</span>, 8, Rarity.RARE, mage.cards.n.Nightmare.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Oakenform"</span>, 15, Rarity.COMMON, mage.cards.o.Oakenform.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Sengir Vampire"</span>, 9, Rarity.UNCOMMON, mage.cards.s.SengirVampire.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Serra Angel"</span>, 3, Rarity.UNCOMMON, mage.cards.s.SerraAngel.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Shivan Dragon"</span>, 13, Rarity.RARE, mage.cards.s.ShivanDragon.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Soul of the Harvest"</span>, 16, Rarity.RARE, mage.cards.s.SoulOfTheHarvest.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Sphinx of Magosi"</span>, 6, Rarity.RARE, mage.cards.s.SphinxOfMagosi.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Walking Corpse"</span>, 10, Rarity.COMMON, mage.cards.w.WalkingCorpse.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>      }
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

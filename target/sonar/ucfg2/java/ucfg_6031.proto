@@ -1,0 +1,119 @@
+
+image.abilities.keyword.SuspendAbility#getSuspendExileId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;j
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/SuspendAbility.java¾ ¾(("3*İ
+2
+Á Á(
+
+
+Á Á('
+%4java.util.UUID"+java.util.UUID#randomUUID()Ljava/util/UUID;*.
+
+__unknown_file ("
+java.util.UUIDc
+a
+
+Á Á('
+exileIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%4java.util.UUIDœ™
+
+Â Â(
+%5mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ƒ
+€
+
+Â% Â(D
+%6java.lang.String"__concat* 
+
+Â% Â(5
+SuspendExileId*.
+
+Â8 Â(D 
+
+controllerIdjava.util.UUID¸µ
+
+Â Â(N
+
+%7void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*7
+
+__unknown_file (
+
+%5mage.game.GameState*4
+
+__unknown_file (
+
+%6java.lang.String*7
+
+__unknown_file (
+
+exileIdjava.util.UUID2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+1*µ
+3
+¿ ¿("œ™
+
+¿ ¿(-
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()›
+
+¿J ¿(a
+%1java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2
+toString()z
+x
+
+¿7 ¿(a
+%2java.lang.String"__concat* 
+
+¿7 ¿(G
+SuspendExileId*&
+
+¿J ¿(a
+
+%1java.lang.Stringøõ
+
+¿ ¿(b
+%3java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%0mage.game.GameState*4
+
+__unknown_file (
+
+%2java.lang.String2getValue(Ljava/lang/String;)e
+c
+
+¿ ¿(c
+exileIdjava.util.UUID"__id*4
+
+__unknown_file (
+
+%3java.lang.Object*
+2
+1*:
+1
+Ä Ä(")
+
+Ä Ä(
+
+exileIdjava.util.UUID:,
+
+¾) ¾(;
+controllerIdjava.util.UUID:$
+
+¾< ¾(E
+gamemage.game.GameB)"'
+%mage.abilities.keyword.SuspendAbilityH

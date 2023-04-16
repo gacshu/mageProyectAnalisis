@@ -1,0 +1,497 @@
+
+ßmage.abilities.costs.common.RemoveCountersSourceCost#pay(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZLmage/abilities/costs/Cost;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/RemoveCountersSourceCost.java6 6("startingBlock*ı
+13< <(T
+R
+< <(
+toRemovejava.lang.String"__id*"
+
+__unknown_file (
+""ã
+à
+= =(
+%3java.lang.String"__id*^
+
+__unknown_file (B*@6
+4mage.abilities.costs.common.RemoveCountersSourceCost"
+nameyw
+= =(
+%4boolean"java.lang.String#isEmpty()Z*4
+
+__unknown_file (
+
+%3java.lang.String2	isEmpty()*
+4
+5*"
+14: :("
+: :(
+""*˘
+167 7(∞≠
+7' 7(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+7 7(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+7 7(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player»≈
+8 8(L#
+%2mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)Å
+
+8 8(M*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+13
+14*!
+1\ \("
+\ \(
+""*˙
+2Y Y(Â‚
+Y Y(D
+%27void"\mage.cards.Card#removeCounters(Ljava/lang/String;ILmage/abilities/Ability;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+toRemovejava.lang.String*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2KremoveCounters(Ljava/lang/String;ILmage/abilities/Ability;Lmage/game/Game;)*
+1*ì
+3X X(íè
+X X('
+%25mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)Ê„
+X X(:
+
+%26int"4mage.counters.Counters#getCount(Ljava/lang/String;)I*;
+
+__unknown_file (
+
+%25mage.counters.Counters*:
+
+__unknown_file (
+
+toRemovejava.lang.String2getCount(Ljava/lang/String;)*
+2
+1*˜	
+startingBlock6 6(uï
+í
+5 5(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+6 6(&!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28ä
+á
+5 5(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+6- 6(1
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%29î
+ë
+5 5(
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+6; 6(A 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%30í
+è
+5 5(
+%31"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+6H 6(T
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%31ö
+ó
+5 5(
+%32"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Costg
+e
+6k 6(t&
+	costToPaymage.abilities.costs.Cost"__annotation*#
+
+__unknown_file (
+
+%32*
+16*ä
+4V V(å
+â
+V V(
+%24java.lang.String"__id*^
+
+__unknown_file (B*@6
+4mage.abilities.costs.common.RemoveCountersSourceCost"
+nameg
+e
+V V(
+toRemovejava.lang.String"__id*5
+
+__unknown_file (
+
+%24java.lang.String*
+3*≥
+5>7 >(@íè
+>7 >(R
+%19mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)ïí
+>7 >([
+%20java.util.Set")java.util.HashMap#keySet()Ljava/util/Set;*;
+
+__unknown_file (
+
+%19mage.counters.Counters2keySet()EC
+>' >(6
+%21java.util.LinkedHashSet"java.util.LinkedHashSetø
+º
+># >(\
+%22"7java.util.LinkedHashSet#<init>(Ljava/util/Collection;)V*<
+
+__unknown_file ( 
+
+%21java.util.LinkedHashSet*2
+
+__unknown_file (
+
+%20java.util.Setk
+i
+> >(]
+toChoosejava.util.Set"__id*<
+
+__unknown_file ( 
+
+%21java.util.LinkedHashSetpn
+? ?(#
+
+%23int"java.util.Set#size()I*7
+
+__unknown_file (
+
+toChoosejava.util.Set2size()*
+6
+10
+11
+12*–
+6N S(2EC
+O( O(2
+%12mage.choices.ChoiceImpl"mage.choices.ChoiceImplò
+ï
+O$ O(8
+%13""mage.choices.ChoiceImpl#<init>(Z)V*<
+
+__unknown_file ( 
+
+%12mage.choices.ChoiceImpl* 
+
+__unknown_file (2o
+m
+O O(9
+choicemage.choices.Choice"__id*<
+
+__unknown_file ( 
+
+%12mage.choices.ChoiceImplﬂ‹
+P P(/
+%14void"0mage.choices.Choice#setChoices(Ljava/util/Set;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*7
+
+__unknown_file (
+
+toChoosejava.util.Set2setChoices(Ljava/util/Set;)Ì
+Q Q(K
+%15void"3mage.choices.Choice#setMessage(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+choicemage.choices.Choice*B
+
+__unknown_file (&$
+"Choose a type of counter to remove2setMessage(Ljava/lang/String;)U
+S
+R" R(9
+%16mage.constants.Outcome"__id*"
+
+__unknown_file (
+""≠™
+R R(H
+%17boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%16mage.constants.Outcome*;
+
+__unknown_file (
+
+choicemage.choices.Choice*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)£†
+S S(1
+%18java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*;
+
+__unknown_file (
+
+choicemage.choices.Choice2getChoice()g
+e
+S S(1
+toRemovejava.lang.String"__id*5
+
+__unknown_file (
+
+%18java.lang.String*
+3*{
+7I L()g
+e
+I L()
+toRemovejava.lang.String"__id*5
+
+__unknown_file (
+
+%11java.lang.String*
+3*z
+8L" L()f
+d
+L" L()
+%11java.lang.String"__id*9
+
+__unknown_file (
+
+choice2java.lang.String*
+7*z
+9L L(f
+d
+L L(
+%11java.lang.String"__id*9
+
+__unknown_file (
+
+choice1java.lang.String*
+7*ß
+10E M(öó
+F0 F(C
+%6java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*7
+
+__unknown_file (
+
+toChoosejava.util.Set2
+iterator()j
+h
+F F(D
+iteratorjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%6java.util.Iteratoròï
+G% G(4
+%7java.lang.String"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()e
+c
+G G(5
+choice1java.lang.String"__id*4
+
+__unknown_file (
+
+%7java.lang.Stringòï
+H% H(4
+%8java.lang.String"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()e
+c
+H H(5
+choice2java.lang.String"__id*4
+
+__unknown_file (
+
+%8java.lang.StringT
+R
+J J(3
+%9mage.constants.Outcome"__id*"
+
+__unknown_file (
+""´®
+I L(
+%10boolean"®mage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*:
+
+__unknown_file (
+
+%9mage.constants.Outcome*B
+
+__unknown_file (&$
+"Choose a type of counter to remove*"
+
+__unknown_file (
+""*9
+
+__unknown_file (
+
+choice1java.lang.String*9
+
+__unknown_file (
+
+choice2java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ìchooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+8
+9*Á
+11B D(È
+Ê
+C C(H
+%5java.lang.String"Smage.util.RandomUtil#randomFromCollection(Ljava/util/Collection;)Ljava/lang/Object;*4
+
+__unknown_file ("
+mage.util.RandomUtil*7
+
+__unknown_file (
+
+toChoosejava.util.Setf
+d
+C C(H
+toRemovejava.lang.String"__id*4
+
+__unknown_file (
+
+%5java.lang.String*
+3*"
+12@ A( "
+A A( 
+"":-
+6 6('!
+abilitymage.abilities.Ability:"
+6( 6(2
+gamemage.game.Game:,
+63 6(B 
+sourcemage.abilities.Ability:*
+6C 6(U
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"":2
+6f 6(t&
+	costToPaymage.abilities.costs.CostB86
+4mage.abilities.costs.common.RemoveCountersSourceCostHP

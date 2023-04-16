@@ -1,0 +1,1247 @@
+
+dmage.client.dialog.NewTableDialog#onSaveSettings(ILmage/game/match/MatchOptions;Ljava/lang/String;)Vm
+aD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/dialog/NewTableDialog.javaû û("20*ã8
+13
+¥ ¥(yß
+§
+
+¥ ¥(y
+%39void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%34java.lang.String*5
+
+__unknown_file (
+
+%36java.lang.Stringl
+j
+
+µ$ µ(\
+%40java.lang.String"__id*=
+
+__unknown_file (!
+newTableNumberOfFreeMulligansã
+à
+
+µ$ µ(i
+%41java.lang.String"__concat*'
+
+µ$ µ(\
+
+%40java.lang.String*.
+
+µ_ µ(i 
+
+
+versionStrjava.lang.String©¶
+µ| µ(ñ
+
+%42int"0mage.game.match.MatchOptions#getFreeMulligans()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getFreeMulligans()∑
+¥
+µk µ(ó
+%43java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%42int®
+•
+µ µ(ò
+%44void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%41java.lang.String*5
+
+__unknown_file (
+
+%43java.lang.Stringc
+a
+
+∂$ ∂(Q
+%45java.lang.String"__id*4
+
+__unknown_file (
+newTableMulliganTypeã
+à
+
+∂$ ∂(^
+%46java.lang.String"__concat*'
+
+∂$ ∂(Q
+
+%45java.lang.String*.
+
+∂T ∂(^ 
+
+
+versionStrjava.lang.String‚ﬂ
+
+∂` ∂(y&
+%47mage.game.mulligan.MulliganType"Omage.game.match.MatchOptions#getMulliganType()Lmage/game/mulligan/MulliganType;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getMulliganType()π∂
+∂` ∂(Ñ
+%48java.lang.String"<mage.game.mulligan.MulliganType#toString()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+%47mage.game.mulligan.MulliganType2
+toString()®
+•
+∂ ∂(Ö
+%49void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%46java.lang.String*5
+
+__unknown_file (
+
+%48java.lang.String_
+]
+
+∑$ ∑(M
+%50java.lang.String"__id*0
+
+__unknown_file (
+newTableDeckFileã
+à
+
+∑$ ∑(Z
+%51java.lang.String"__concat*'
+
+∑$ ∑(M
+
+%50java.lang.String*.
+
+∑P ∑(Z 
+
+
+versionStrjava.lang.String¨
+©
+
+∑ ∑(e
+%52void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%51java.lang.String*:
+
+__unknown_file (
+
+deckFilejava.lang.Stringd
+b
+
+∏$ ∏(R
+%53java.lang.String"__id*5
+
+__unknown_file (
+newTableNumberPlayersã
+à
+
+∏$ ∏(_
+%54java.lang.String"__concat*'
+
+∏$ ∏(R
+
+%53java.lang.String*.
+
+∏U ∏(_ 
+
+
+versionStrjava.lang.Stringà
+Ö
+
+∏a ∏(n
+%55javax.swing.JSpinner"__id*T
+
+__unknown_file (8*6#
+!mage.client.dialog.NewTableDialog"
+spnNumPlayers¢ü
+
+∏a ∏(y
+%56java.lang.Object"1javax.swing.JSpinner#getValue()Ljava/lang/Object;*9
+
+__unknown_file (
+
+%55javax.swing.JSpinner2
+getValue()õò
+∏a ∏(Ñ
+%57java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*5
+
+__unknown_file (
+
+%56java.lang.Object2
+toString()®
+•
+∏ ∏(Ö
+%58void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%54java.lang.String*5
+
+__unknown_file (
+
+%57java.lang.String\
+Z
+
+π$ π(I
+%59java.lang.String"__id*-
+
+__unknown_file (
+newTableRangeã
+à
+
+π$ π(V
+%60java.lang.String"__concat*'
+
+π$ π(I
+
+%59java.lang.String*.
+
+πL π(V 
+
+
+versionStrjava.lang.String‘—
+
+πi π({&
+%61mage.constants.RangeOfInfluence"Hmage.game.match.MatchOptions#getRange()Lmage/constants/RangeOfInfluence;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2
+getRange()õò
+πi π(Ü
+
+%62int"+mage.constants.RangeOfInfluence#getRange()I*D
+
+__unknown_file ((
+&
+%61mage.constants.RangeOfInfluence2
+getRange()∑
+¥
+πX π(á
+%63java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%62int®
+•
+π π(à
+%64void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%60java.lang.String*5
+
+__unknown_file (
+
+%63java.lang.Stringc
+a
+
+∫$ ∫(Q
+%65java.lang.String"__id*4
+
+__unknown_file (
+newTableAttackOptionã
+à
+
+∫$ ∫(^
+%66java.lang.String"__concat*'
+
+∫$ ∫(Q
+
+%65java.lang.String*.
+
+∫T ∫(^ 
+
+
+versionStrjava.lang.StringÌ
+
+∫` ∫(y-
+%67&mage.constants.MultiplayerAttackOption"Vmage.game.match.MatchOptions#getAttackOption()Lmage/constants/MultiplayerAttackOption;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getAttackOption()«ƒ
+∫` ∫(Ñ
+%68java.lang.String"Cmage.constants.MultiplayerAttackOption#toString()Ljava/lang/String;*K
+
+__unknown_file (/
+-
+%67&mage.constants.MultiplayerAttackOption2
+toString()®
+•
+∫ ∫(Ö
+%69void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%66java.lang.String*5
+
+__unknown_file (
+
+%68java.lang.Stringa
+_
+
+ª$ ª(O
+%70java.lang.String"__id*2
+
+__unknown_file (
+newTableSkillLevelã
+à
+
+ª$ ª(\
+%71java.lang.String"__concat*'
+
+ª$ ª(O
+
+%70java.lang.String*.
+
+ªR ª(\ 
+
+
+versionStrjava.lang.String“œ
+
+ª^ ª(u 
+%72mage.constants.SkillLevel"Gmage.game.match.MatchOptions#getSkillLevel()Lmage/constants/SkillLevel;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getSkillLevel()≠™
+ª^ ª(Ä
+%73java.lang.String"6mage.constants.SkillLevel#toString()Ljava/lang/String;*>
+
+__unknown_file ("
+ 
+%72mage.constants.SkillLevel2
+toString()®
+•
+ª ª(Å
+%74void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%71java.lang.String*5
+
+__unknown_file (
+
+%73java.lang.Stringh
+f
+
+º$ º(V
+%75java.lang.String"__id*9
+
+__unknown_file (
+newTableSpectatorsAllowedã
+à
+
+º$ º(c
+%76java.lang.String"__concat*'
+
+º$ º(V
+
+%75java.lang.String*.
+
+ºY º(c 
+
+
+versionStrjava.lang.String≥∞
+ºe º(Ç
+%77boolean"3mage.game.match.MatchOptions#isSpectatorsAllowed()Z*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2isSpectatorsAllowed()*
+11
+12*|
+14
+¥t ¥(xd
+b
+
+¥t ¥(x
+%36java.lang.String"__id*5
+
+__unknown_file (
+
+%38java.lang.String*
+13*|
+15
+¥l ¥(qd
+b
+
+¥l ¥(q
+%36java.lang.String"__id*5
+
+__unknown_file (
+
+%37java.lang.String*
+13*œ
+16≥ ≥(ô®
+•
+≥ ≥(ô
+%32void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%27java.lang.String*5
+
+__unknown_file (
+
+%29java.lang.String\
+Z
+
+¥$ ¥(I
+%33java.lang.String"__id*-
+
+__unknown_file (
+newTableRatedã
+à
+
+¥$ ¥(V
+%34java.lang.String"__concat*'
+
+¥$ ¥(I
+
+%33java.lang.String*.
+
+¥L ¥(V 
+
+
+versionStrjava.lang.Stringöó
+
+¥X ¥(i
+%35boolean"'mage.game.match.MatchOptions#isRated()Z*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2	isRated()*
+14
+15*Ä
+17≥î ≥(òf
+d
+≥î ≥(ò
+%29java.lang.String"__id*5
+
+__unknown_file (
+
+%31java.lang.String*
+16*Ä
+18≥å ≥(ëf
+d
+≥å ≥(ë
+%29java.lang.String"__id*5
+
+__unknown_file (
+
+%30java.lang.String*
+16*ê(
+19
+≠ ≠(Z
+X
+
+≠$ ≠(H
+%0java.lang.String"__id*,
+
+__unknown_file (
+newTableNameâ
+Ü
+
+≠$ ≠(U
+%1java.lang.String"__concat*&
+
+≠$ ≠(H
+
+%0java.lang.String*.
+
+≠K ≠(U 
+
+
+versionStrjava.lang.String≥∞
+
+≠W ≠(h
+%2java.lang.String"8mage.game.match.MatchOptions#getName()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2	getName()§
+°
+
+≠ ≠(i
+
+%3void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*4
+
+__unknown_file (
+
+%1java.lang.String*4
+
+__unknown_file (
+
+%2java.lang.String^
+\
+
+Æ$ Æ(L
+%4java.lang.String"__id*0
+
+__unknown_file (
+newTablePasswordâ
+Ü
+
+Æ$ Æ(Y
+%5java.lang.String"__concat*&
+
+Æ$ Æ(L
+
+%4java.lang.String*.
+
+ÆO Æ(Y 
+
+
+versionStrjava.lang.Stringª∏
+
+Æ[ Æ(p
+%6java.lang.String"<mage.game.match.MatchOptions#getPassword()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getPassword()§
+°
+
+Æ Æ(q
+
+%7void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*4
+
+__unknown_file (
+
+%5java.lang.String*4
+
+__unknown_file (
+
+%6java.lang.String^
+\
+
+Ø$ Ø(M
+%8java.lang.String"__id*0
+
+__unknown_file (
+newTableDeckTypeâ
+Ü
+
+Ø$ Ø(Z
+%9java.lang.String"__concat*&
+
+Ø$ Ø(M
+
+%8java.lang.String*.
+
+ØP Ø(Z 
+
+
+versionStrjava.lang.Stringºπ
+
+Ø\ Ø(q
+%10java.lang.String"<mage.game.match.MatchOptions#getDeckType()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getDeckType()¶
+£
+
+Ø Ø(r
+%11void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*4
+
+__unknown_file (
+
+%9java.lang.String*5
+
+__unknown_file (
+
+%10java.lang.String`
+^
+
+∞$ ∞(N
+%12java.lang.String"__id*1
+
+__unknown_file (
+newTableTimeLimitã
+à
+
+∞$ ∞([
+%13java.lang.String"__concat*'
+
+∞$ ∞(N
+
+%12java.lang.String*.
+
+∞Q ∞([ 
+
+
+versionStrjava.lang.Stringß§
+∞n ∞(á
+
+%14int"/mage.game.match.MatchOptions#getPriorityTime()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getPriorityTime()∑
+¥
+∞] ∞(à
+%15java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%14int®
+•
+∞ ∞(â
+%16void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%13java.lang.String*5
+
+__unknown_file (
+
+%15java.lang.String_
+]
+
+±$ ±(M
+%17java.lang.String"__id*0
+
+__unknown_file (
+newTableGameTypeã
+à
+
+±$ ±(Z
+%18java.lang.String"__concat*'
+
+±$ ±(M
+
+%17java.lang.String*.
+
+±P ±(Z 
+
+
+versionStrjava.lang.Stringºπ
+
+±\ ±(q
+%19java.lang.String"<mage.game.match.MatchOptions#getGameType()Ljava/lang/String;*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getGameType()ß
+§
+
+± ±(r
+%20void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%18java.lang.String*5
+
+__unknown_file (
+
+%19java.lang.Stringc
+a
+
+≤$ ≤(R
+%21java.lang.String"__id*4
+
+__unknown_file (
+newTableNumberOfWinsã
+à
+
+≤$ ≤(_
+%22java.lang.String"__concat*'
+
+≤$ ≤(R
+
+%21java.lang.String*.
+
+≤U ≤(_ 
+
+
+versionStrjava.lang.String£†
+≤r ≤(â
+
+%23int"-mage.game.match.MatchOptions#getWinsNeeded()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getWinsNeeded()∑
+¥
+≤a ≤(ä
+%24java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%23int®
+•
+≤ ≤(ã
+%25void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%22java.lang.String*5
+
+__unknown_file (
+
+%24java.lang.Stringk
+i
+
+≥$ ≥(Z
+%26java.lang.String"__id*<
+
+__unknown_file ( 
+newTableRollbackTurnsAllowedã
+à
+
+≥$ ≥(g
+%27java.lang.String"__concat*'
+
+≥$ ≥(Z
+
+%26java.lang.String*.
+
+≥] ≥(g 
+
+
+versionStrjava.lang.Stringπ∂
+≥i ≥(â
+%28boolean"6mage.game.match.MatchOptions#isRollbackTurnsAllowed()Z*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2isRollbackTurnsAllowed()*
+17
+18*(
+0 "!
+
+À À(
+implicit return*
+1
+   (c
+a
+
+ $  (P
+%111java.lang.String"__id*3
+
+__unknown_file (
+newTablePlayerTypesç
+ä
+
+ $  (]
+%112java.lang.String"__concat*(
+
+ $  (P
+
+%111java.lang.String*.
+
+ S  (] 
+
+
+versionStrjava.lang.String∑¥
+
+ _  ({
+%113java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*J
+
+__unknown_file (.
+,
+playerTypesStringjava.lang.StringBuilder2
+toString()™
+ß
+
+   (|
+%114void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*6
+
+__unknown_file (
+
+%112java.lang.String*6
+
+__unknown_file (
+
+%113java.lang.String*
+0*Å
+2
+√ √(T
+R
+
+√ √(
+playerjava.lang.Object"__id*"
+
+__unknown_file (
+""ë
+é
+
+√ √(
+playerjava.lang.Object"
+__arrayGet*4
+
+__unknown_file (
+
+%106java.util.List*"
+
+__unknown_file (
+""*
+5
+1*ê
+3
+«6 «(<y
+w
+
+« «(=)
+tpp"mage.client.table.TablePlayerPanel"__id*8
+
+__unknown_file (
+
+playerjava.lang.Object◊‘
+
+»% »(8
+%109mage.players.PlayerType"Kmage.client.table.TablePlayerPanel#getPlayerType()Lmage/players/PlayerType;*G
+
+__unknown_file (+
+)
+tpp"mage.client.table.TablePlayerPanel2getPlayerType()§°
+
+» »(9
+%110java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*J
+
+__unknown_file (.
+,
+playerTypesStringjava.lang.StringBuilder*=
+
+__unknown_file (!
+
+%109mage.players.PlayerType2append(Ljava/lang/Object;)*
+2*˝
+4
+≈ ≈(!Ê„
+
+≈ ≈(-
+%108java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*J
+
+__unknown_file (.
+,
+playerTypesStringjava.lang.StringBuilder*!
+
+__unknown_file (
+,2	append(C)*
+3*∑
+5
+ƒ ƒ(!ùö
+
+ƒ ƒ(*
+%107int")java.lang.AbstractStringBuilder#length()I*J
+
+__unknown_file (.
+,
+playerTypesStringjava.lang.StringBuilder2length()*
+3
+4*í
+6
+√ √($|
+z
+
+√ √($
+%106java.util.List"__id*N
+
+__unknown_file (2*0#
+!mage.client.dialog.NewTableDialog"	
+players*
+2*í
+7Ω Ω(É®
+•
+Ω Ω(É
+%88void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%83java.lang.String*5
+
+__unknown_file (
+
+%85java.lang.String`
+^
+
+æ$ æ(N
+%89java.lang.String"__id*1
+
+__unknown_file (
+newTableQuitRatioã
+à
+
+æ$ æ([
+%90java.lang.String"__concat*'
+
+æ$ æ(N
+
+%89java.lang.String*.
+
+æQ æ([ 
+
+
+versionStrjava.lang.String°û
+æn æ(Ñ
+
+%91int",mage.game.match.MatchOptions#getQuitRatio()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getQuitRatio()∑
+¥
+æ] æ(Ö
+%92java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%91int®
+•
+æ æ(Ü
+%93void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%90java.lang.String*5
+
+__unknown_file (
+
+%92java.lang.Stringd
+b
+
+ø$ ø(R
+%94java.lang.String"__id*5
+
+__unknown_file (
+newTableMinimumRatingã
+à
+
+ø$ ø(_
+%95java.lang.String"__concat*'
+
+ø$ ø(R
+
+%94java.lang.String*.
+
+øU ø(_ 
+
+
+versionStrjava.lang.String©¶
+ør ø(å
+
+%96int"0mage.game.match.MatchOptions#getMinimumRating()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getMinimumRating()∑
+¥
+øa ø(ç
+%97java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*(
+
+__unknown_file (
+
+
+%96int®
+•
+ø ø(é
+%98void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%95java.lang.String*5
+
+__unknown_file (
+
+%97java.lang.Stringd
+b
+
+¿$ ¿(S
+%99java.lang.String"__id*5
+
+__unknown_file (
+newTableEdhPowerLevelå
+â
+
+¿$ ¿(`
+%100java.lang.String"__concat*'
+
+¿$ ¿(S
+
+%99java.lang.String*.
+
+¿V ¿(` 
+
+
+versionStrjava.lang.String™ß
+¿s ¿(ç
+%101int"0mage.game.match.MatchOptions#getEdhPowerLevel()I*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2getEdhPowerLevel()π
+∂
+¿b ¿(é
+%102java.lang.String"/java.lang.Integer#toString(I)Ljava/lang/String;*1
+
+__unknown_file ("
+java.lang.Integer*)
+
+__unknown_file (
+
+%101int´
+®
+¿ ¿(è
+%103void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*6
+
+__unknown_file (
+
+%100java.lang.String*6
+
+__unknown_file (
+
+%102java.lang.StringHF
+
+¬. ¬(;
+%104java.lang.StringBuilder"java.lang.StringBuilderx
+v
+
+¬* ¬(=
+%105"!java.lang.StringBuilder#<init>()V*=
+
+__unknown_file (!
+
+%104java.lang.StringBuilderÅ
+
+
+¬ ¬(>,
+playerTypesStringjava.lang.StringBuilder"__id*=
+
+__unknown_file (!
+
+%104java.lang.StringBuilder*
+6*|
+8Ω~ Ω(Çe
+c
+Ω~ Ω(Ç
+%85java.lang.String"__id*5
+
+__unknown_file (
+
+%87java.lang.String*
+7*z
+9
+Ωv Ω({d
+b
+
+Ωv Ω({
+%85java.lang.String"__id*5
+
+__unknown_file (
+
+%86java.lang.String*
+7*t
+20
+† †(T
+R
+
+† †(
+
+versionStrjava.lang.String"__id*
+
+__unknown_file ( *
+21
+22
+23*l
+21
+® ™(T
+R
+
+© ©(
+
+versionStrjava.lang.String"__id*
+
+__unknown_file ( *
+19*‹
+10º º(í®
+•
+º º(í
+%81void"Umage.client.dialog.PreferencesDialog#saveValue(Ljava/lang/String;Ljava/lang/String;)V*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*5
+
+__unknown_file (
+
+%76java.lang.String*5
+
+__unknown_file (
+
+%78java.lang.Stringa
+_
+
+Ω$ Ω(N
+%82java.lang.String"__id*2
+
+__unknown_file (
+newTablePlaneChaseã
+à
+
+Ω$ Ω([
+%83java.lang.String"__concat*'
+
+Ω$ Ω(N
+
+%82java.lang.String*.
+
+ΩQ Ω([ 
+
+
+versionStrjava.lang.String§°
+
+Ω] Ω(s
+%84boolean",mage.game.match.MatchOptions#isPlaneChase()Z*E
+
+__unknown_file ()
+'
+optionsmage.game.match.MatchOptions2isPlaneChase()*
+8
+9*o
+22
+• ß(W
+U
+
+¶ ¶( 
+
+versionStrjava.lang.String"__id*!
+
+__unknown_file (
+2*
+19*Ä
+11ºç º(ëf
+d
+ºç º(ë
+%78java.lang.String"__id*5
+
+__unknown_file (
+
+%80java.lang.String*
+10*o
+23
+¢ §(W
+U
+
+£ £( 
+
+versionStrjava.lang.String"__id*!
+
+__unknown_file (
+1*
+19*Ä
+12ºÖ º(äf
+d
+ºÖ º(ä
+%78java.lang.String"__id*5
+
+__unknown_file (
+
+%79java.lang.String*
+10: 
+
+__unknown_file (
+"":5
+
+û- û(B'
+optionsmage.game.match.MatchOptions:*
+
+ûC û(R
+deckFilejava.lang.StringB%#
+!mage.client.dialog.NewTableDialog

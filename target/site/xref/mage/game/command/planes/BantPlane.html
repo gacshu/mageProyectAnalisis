@@ -1,0 +1,96 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>BantPlane xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../apidocs/mage/game/command/planes/BantPlane.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.game.command.planes;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.ObjectColor;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.ActivateIfConditionActivatedAbility;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.SimpleStaticAbility;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.condition.common.IsStillOnPlaneCondition;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.abilities.condition.common.MainPhaseStackEmptyCondition;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.abilities.condition.common.TargetHasCounterCondition;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.abilities.costs.mana.GenericManaCost;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.abilities.decorator.ConditionalContinuousEffect;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.Effect;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.RollPlanarDieEffect;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.continuous.GainAbilityAllEffect;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.continuous.GainAbilityTargetEffect;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.cost.PlanarDieRollCostIncreasingEffect;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.counter.AddCountersTargetEffect;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> mage.abilities.keyword.ExaltedAbility;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> mage.abilities.keyword.IndestructibleAbility;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> mage.constants.Duration;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> mage.constants.Planes;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> mage.constants.TargetController;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> mage.counters.CounterType;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> mage.filter.StaticFilters;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> mage.filter.common.FilterCreaturePermanent;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> mage.filter.predicate.Predicates;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> mage.filter.predicate.mageobject.ColorPredicate;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> mage.game.command.Plane;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> mage.target.Target;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> mage.target.common.TargetCreaturePermanent;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <strong class="jxr_keyword">import</strong> mage.watchers.common.PlanarRollWatcher;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="BantPlane" href="../../../../mage/game/command/planes/BantPlane.html#BantPlane">BantPlane</a> <strong class="jxr_keyword">extends</strong> <a name="Plane" href="../../../../mage/game/command/Plane.html#Plane">Plane</a> {
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a> filter = <strong class="jxr_keyword">new</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a>(<span class="jxr_string">"Creatures"</span>);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a> filter2 = <strong class="jxr_keyword">new</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a>(<span class="jxr_string">"Green, White or Blue creatures"</span>);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>  
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>      <strong class="jxr_keyword">static</strong> {
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          filter2.add(Predicates.or(<strong class="jxr_keyword">new</strong> <a name="ColorPredicate" href="../../../../mage/filter/predicate/mageobject/ColorPredicate.html#ColorPredicate">ColorPredicate</a>(ObjectColor.GREEN), <strong class="jxr_keyword">new</strong> <a name="ColorPredicate" href="../../../../mage/filter/predicate/mageobject/ColorPredicate.html#ColorPredicate">ColorPredicate</a>(ObjectColor.WHITE), <strong class="jxr_keyword">new</strong> <a name="ColorPredicate" href="../../../../mage/filter/predicate/mageobject/ColorPredicate.html#ColorPredicate">ColorPredicate</a>(ObjectColor.BLUE)));
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      }
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>  
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String rule = <span class="jxr_string">"{this} has indestructible as long as it has a divinity counter on it"</span>;
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> String exaltedRule = <span class="jxr_string">"All creatures have exalted"</span>;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">public</strong> <a name="BantPlane" href="../../../../mage/game/command/planes/BantPlane.html#BantPlane">BantPlane</a>() {
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          <strong class="jxr_keyword">this</strong>.setPlaneType(Planes.PLANE_BANT);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          <strong class="jxr_keyword">this</strong>.setExpansionSetCodeForImage(<span class="jxr_string">"PCA"</span>);
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          <em class="jxr_comment">// All creatures have exalted</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a> ability
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>                  = <strong class="jxr_keyword">new</strong> <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a>(Zone.COMMAND, <strong class="jxr_keyword">new</strong> <a name="ConditionalContinuousEffect" href="../../../../mage/abilities/decorator/ConditionalContinuousEffect.html#ConditionalContinuousEffect">ConditionalContinuousEffect</a>(
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>                  <strong class="jxr_keyword">new</strong> <a name="GainAbilityAllEffect" href="../../../../mage/abilities/effects/common/continuous/GainAbilityAllEffect.html#GainAbilityAllEffect">GainAbilityAllEffect</a>(<strong class="jxr_keyword">new</strong> <a name="ExaltedAbility" href="../../../../mage/abilities/keyword/ExaltedAbility.html#ExaltedAbility">ExaltedAbility</a>(), Duration.Custom, StaticFilters.FILTER_PERMANENT_CREATURE),
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>                  <strong class="jxr_keyword">new</strong> <a name="IsStillOnPlaneCondition" href="../../../../mage/abilities/condition/common/IsStillOnPlaneCondition.html#IsStillOnPlaneCondition">IsStillOnPlaneCondition</a>(<strong class="jxr_keyword">this</strong>.getName()),
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>                  exaltedRule));
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(ability);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <em class="jxr_comment">// Active player can roll the planar die: Whenever you roll {CHAOS}, put a divinity counter on target green, white, or blue creature.  That creature gains indestructible for as long as it has a divinity counter on it.</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          <a name="Effect" href="../../../../mage/abilities/effects/Effect.html#Effect">Effect</a> chaosEffect = <strong class="jxr_keyword">new</strong> <a name="ConditionalContinuousEffect" href="../../../../mage/abilities/decorator/ConditionalContinuousEffect.html#ConditionalContinuousEffect">ConditionalContinuousEffect</a>(<strong class="jxr_keyword">new</strong> <a name="GainAbilityTargetEffect" href="../../../../mage/abilities/effects/common/continuous/GainAbilityTargetEffect.html#GainAbilityTargetEffect">GainAbilityTargetEffect</a>(IndestructibleAbility.getInstance(), Duration.Custom), <strong class="jxr_keyword">new</strong> <a name="TargetHasCounterCondition" href="../../../../mage/abilities/condition/common/TargetHasCounterCondition.html#TargetHasCounterCondition">TargetHasCounterCondition</a>(CounterType.DIVINITY), rule);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          <a name="Target" href="../../../../mage/target/Target.html#Target">Target</a> chaosTarget = <strong class="jxr_keyword">new</strong> <a name="TargetCreaturePermanent" href="../../../../mage/target/common/TargetCreaturePermanent.html#TargetCreaturePermanent">TargetCreaturePermanent</a>(1, 1, filter2, false);
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <a name="Effect" href="../../../../mage/abilities/effects/Effect.html#Effect">Effect</a> chaosEffect2 = <strong class="jxr_keyword">new</strong> <a name="AddCountersTargetEffect" href="../../../../mage/abilities/effects/common/counter/AddCountersTargetEffect.html#AddCountersTargetEffect">AddCountersTargetEffect</a>(CounterType.DIVINITY.createInstance());
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>  
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          List&lt;Effect&gt; chaosEffects = <strong class="jxr_keyword">new</strong> ArrayList&lt;Effect&gt;();
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          chaosEffects.add(chaosEffect2);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>          chaosEffects.add(chaosEffect);
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          List&lt;Target&gt; chaosTargets = <strong class="jxr_keyword">new</strong> ArrayList&lt;Target&gt;();
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          chaosTargets.add(chaosTarget);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          chaosTargets.add(chaosTarget);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <a name="ActivateIfConditionActivatedAbility" href="../../../../mage/abilities/common/ActivateIfConditionActivatedAbility.html#ActivateIfConditionActivatedAbility">ActivateIfConditionActivatedAbility</a> chaosAbility = <strong class="jxr_keyword">new</strong> <a name="ActivateIfConditionActivatedAbility" href="../../../../mage/abilities/common/ActivateIfConditionActivatedAbility.html#ActivateIfConditionActivatedAbility">ActivateIfConditionActivatedAbility</a>(Zone.COMMAND, <strong class="jxr_keyword">new</strong> <a name="RollPlanarDieEffect" href="../../../../mage/abilities/effects/common/RollPlanarDieEffect.html#RollPlanarDieEffect">RollPlanarDieEffect</a>(chaosEffects, chaosTargets), <strong class="jxr_keyword">new</strong> <a name="GenericManaCost" href="../../../../mage/abilities/costs/mana/GenericManaCost.html#GenericManaCost">GenericManaCost</a>(0), MainPhaseStackEmptyCondition.instance);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          chaosAbility.addWatcher(<strong class="jxr_keyword">new</strong> <a name="PlanarRollWatcher" href="../../../../mage/watchers/common/PlanarRollWatcher.html#PlanarRollWatcher">PlanarRollWatcher</a>());
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(chaosAbility);
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          chaosAbility.setMayActivate(TargetController.ANY);
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(<strong class="jxr_keyword">new</strong> <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a>(Zone.ALL, <strong class="jxr_keyword">new</strong> <a name="PlanarDieRollCostIncreasingEffect" href="../../../../mage/abilities/effects/common/cost/PlanarDieRollCostIncreasingEffect.html#PlanarDieRollCostIncreasingEffect">PlanarDieRollCostIncreasingEffect</a>(chaosAbility.getOriginalId())));
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>      }
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

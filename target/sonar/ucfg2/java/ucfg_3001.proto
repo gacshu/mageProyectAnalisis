@@ -1,0 +1,91 @@
+
+mmage.cards.decks.importer.CardLookup#lookupCardInfo(Ljava/lang/String;Ljava/lang/String;)Ljava/util/Optional;g
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/importer/CardLookup.java (,"3*9
+2 ("*
+ (
+
+resultjava.util.Optional*†
+3$ (2ZX
+7 (C(
+%0"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteria‰
+†
+3 (E
+%1",mage.cards.repository.CardCriteria#<init>()V*F
+
+__unknown_file (*
+(
+%0"mage.cards.repository.CardCriteria²¯
+3 (P(
+%2"mage.cards.repository.CardCriteria"_mage.cards.repository.CardCriteria#name(Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*F
+
+__unknown_file (*
+(
+%0"mage.cards.repository.CardCriteria*6
+
+__unknown_file (
+
+namejava.lang.String2name(Ljava/lang/String;)»¸
+3 (^(
+%3"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*F
+
+__unknown_file (*
+(
+%2"mage.cards.repository.CardCriteria*5
+
+__unknown_file (
+
+setjava.lang.String2setCodes([Ljava/lang/String;)ÒÏ
+$ (_
+%4java.util.List"image.cards.decks.importer.CardLookup#lookupCardInfo(Lmage/cards/repository/CardCriteria;)Ljava/util/List;*D
+
+__unknown_file ((&
+$mage.cards.decks.importer.CardLookup*F
+
+__unknown_file (*
+(
+%3"mage.cards.repository.CardCriteria24lookupCardInfo(Lmage/cards/repository/CardCriteria;)¢Ÿ
+$ (
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%4java.util.List2stream()¦£
+$ (
+%6java.util.Optional"5java.util.stream.Stream#findAny()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream2	findAny()h
+f
+ (
+resultjava.util.Optional"__id*6
+
+__unknown_file (
+
+%6java.util.Optional†ƒ
+ (
+%7boolean"java.util.Optional#isPresent()Z*:
+
+__unknown_file (
+
+resultjava.util.Optional2isPresent()*
+2
+1*Þ
+1 (¦£
+ (#
+%8java.util.Optional"[mage.cards.decks.importer.CardLookup#lookupCardInfo(Ljava/lang/String;)Ljava/util/Optional;*D
+
+__unknown_file ((&
+$mage.cards.decks.importer.CardLookup*6
+
+__unknown_file (
+
+namejava.lang.String2"lookupCardInfo(Ljava/lang/String;)"&
+ ($
+
+%8java.util.Optional:$
+- (9
+namejava.lang.String:#
+: (D
+setjava.lang.StringB(&
+$mage.cards.decks.importer.CardLookupH

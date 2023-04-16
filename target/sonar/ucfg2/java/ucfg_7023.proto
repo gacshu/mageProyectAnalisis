@@ -1,0 +1,366 @@
+
+omage.game.permanent.PermanentImpl#cantBeAttachedBy(Lmage/MageObject;Lmage/abilities/Ability;Lmage/game/Game;Z)Zf
+ZD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/PermanentImpl.java„	 „	(#"startingBlock*æ
+1
+Ï	 Ï	(ﬂ‹
+
+Ï	 Ï	(*/
+%16(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()üú
+
+Ï	] Ï	(i
+%17java.util.UUID"+mage.MageObjectImpl#getId()Ljava/util/UUID;*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl2getId()ìê
+
+Ï	k Ï	(}
+%18java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject2getId()][
+
+Ï	K Ï	(\)
+%19"mage.game.events.StayAttachedEvent""mage.game.events.StayAttachedEvent
+Ì
+Ï	G Ï	(Ü
+%20"dmage.game.events.StayAttachedEvent#<init>(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;)V*G
+
+__unknown_file (+
+)
+%19"mage.game.events.StayAttachedEvent*3
+
+__unknown_file (
+
+%17java.util.UUID*3
+
+__unknown_file (
+
+%18java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability©¶
+Ï	 Ï	(ü
+%21boolean"åmage.abilities.effects.ContinuousEffects#preventedByRuleModification(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;Z)Z*M
+
+__unknown_file (1
+/
+%16(mage.abilities.effects.ContinuousEffects*G
+
+__unknown_file (+
+)
+%19"mage.game.events.StayAttachedEvent*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2bpreventedByRuleModification(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;Z)"
+Ï	 Ï	(†
+""*º
+2
+‰	 ‰	(&m
+k
+
+‰	 ‰	(&3
+ability(mage.abilities.keyword.ProtectionAbility"__id*"
+
+__unknown_file (
+""≤
+Ø
+
+‰	 ‰	(&3
+ability(mage.abilities.keyword.ProtectionAbility"
+__arrayGet*<
+
+__unknown_file ( 
+
+%1mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+11
+1*%
+3
+È	 È	(x"
+
+È	 È	(x
+""*Å
+startingBlock
+„	# „	(iì
+ê
+
+‚	 ‚	(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject`
+^
+
+„	/ „	(9
+
+attachmentmage.MageObject"__annotation*#
+
+__unknown_file (
+
+%22ñ
+ì
+
+‚	 ‚	(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+„	C „	(I 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%23å
+â
+
+‚	 ‚	(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+„	P „	(T
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24*
+12*ô
+4
+È	? È	(Mìê
+
+È	c È	(u
+%13java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject2getId()ˆÛ
+
+È	N È	(v
+%14java.util.UUID"@mage.game.Game#getControllerId(Ljava/util/UUID;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%13java.util.UUID2!getControllerId(Ljava/util/UUID;)Û
+
+È	? È	(w
+%15boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*3
+
+__unknown_file (
+
+%14java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+3*
+5
+È	 È	(÷”
+
+È	 È	(;
+%12boolean"Emage.abilities.keyword.ProtectionAbility#getDoesntRemoveControlled()Z*Q
+
+__unknown_file (5
+3
+ability(mage.abilities.keyword.ProtectionAbility2getDoesntRemoveControlled()*
+3
+4*Ö
+6
+Ë	 Ë	(ÎË
+
+Ë	 Ë	(;
+%11boolean"Vmage.abilities.keyword.ProtectionAbility#canTarget(Lmage/MageObject;Lmage/game/Game;)Z*Q
+
+__unknown_file (5
+3
+ability(mage.abilities.keyword.ProtectionAbility*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2,canTarget(Lmage/MageObject;Lmage/game/Game;)*
+2
+5*Ë
+7
+Á	 Á	("íè
+
+Á	 Á	(*
+%8java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject2getId()Á‰
+
+Á	2 Á	(S
+%9java.util.UUID"Rmage.abilities.keyword.ProtectionAbility#getAuraIdNotToBeRemoved()Ljava/util/UUID;*Q
+
+__unknown_file (5
+3
+ability(mage.abilities.keyword.ProtectionAbility2getAuraIdNotToBeRemoved()œÃ
+
+Á	 Á	(T
+%10boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%8java.util.UUID*2
+
+__unknown_file (
+
+%9java.util.UUID2equals(Ljava/lang/Object;)*
+2
+6*›
+8
+Ê	K Ê	(R√¿
+
+Ê	K Ê	(e
+%7boolean"<mage.abilities.keyword.ProtectionAbility#removesEquipment()Z*Q
+
+__unknown_file (5
+3
+ability(mage.abilities.keyword.ProtectionAbility2removesEquipment()*
+2
+7*º
+9
+Ê	 Ê	(#V
+T
+
+Ê	/ Ê	(@
+%5mage.constants.SubType"__id*"
+
+__unknown_file (
+"" «
+
+Ê	 Ê	(G
+%6boolean"Emage.MageObject#hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject*:
+
+__unknown_file (
+
+%5mage.constants.SubType*4
+
+__unknown_file (
+
+gamemage.game.Game24hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)*
+7
+8*÷
+10
+Â	? Â	(Fª∏
+
+Â	? Â	(U
+%4boolean"8mage.abilities.keyword.ProtectionAbility#removesAuras()Z*Q
+
+__unknown_file (5
+3
+ability(mage.abilities.keyword.ProtectionAbility2removesAuras()*
+2
+9*æ
+11
+Â	 Â	(V
+T
+
+Â	( Â	(4
+%2mage.constants.SubType"__id*"
+
+__unknown_file (
+"" «
+
+Â	 Â	(;
+%3boolean"Emage.MageObject#hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+
+attachmentmage.MageObject*:
+
+__unknown_file (
+
+%2mage.constants.SubType*4
+
+__unknown_file (
+
+gamemage.game.Game24hasSubtype(Lmage/constants/SubType;Lmage/game/Game;)*
+9
+10*ì
+12
+‰	) ‰	(-§°
+
+‰	) ‰	(@
+%0mage.abilities.Abilities"Zmage.game.permanent.PermanentImpl#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*A
+
+__unknown_file (%#
+!mage.game.permanent.PermanentImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)‘—
+
+‰	) ‰	(Y
+%1mage.abilities.Abilities"Kmage.abilities.Abilities#getProtectionAbilities()Lmage/abilities/Abilities;*<
+
+__unknown_file ( 
+
+%0mage.abilities.Abilities2getProtectionAbilities()*
+2:+
+
+„	$ „	(:
+
+attachmentmage.MageObject:.
+
+„	; „	(J 
+sourcemage.abilities.Ability:$
+
+„	K „	(U
+gamemage.game.Game: 
+
+__unknown_file (
+""B%#
+!mage.game.permanent.PermanentImplHP

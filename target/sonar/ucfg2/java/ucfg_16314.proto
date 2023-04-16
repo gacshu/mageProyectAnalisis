@@ -1,0 +1,502 @@
+
+Çmage.players.PlayerImpl#moveCardToCommandWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.java«% «%(,"startingBlock*£
+13
+Õ% Õ%(ÑÅ
+
+Õ% Õ%($
+%2boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+
+9
+11
+1*¿
+14
+À% À%(S
+Q
+
+Ã% Ã%((
+%0mage.constants.Zone"__id*"
+
+__unknown_file (
+""œÃ
+
+Ã% Ã%(=
+%1boolean"[mage.cards.Card#moveToZone(Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;Z)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*7
+
+__unknown_file (
+
+%0mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22JmoveToZone(Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;Z)*
+13
+1*&
+15
+…% …%("
+
+…% …%(
+""*%
+1
+„% „%("
+
+„% „%(
+""*∫	
+3
+ﬁ% ﬁ%(çä
+
+ﬁ%B ﬁ%(N
+%29java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()¯
+ı
+
+ﬁ% ﬁ%(O
+%30java.lang.String"omage.util.CardUtil#getSourceLogName(Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%29java.util.UUIDåâ
+
+ﬁ% ﬁ%(P
+%31java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%30java.lang.String2append(Ljava/lang/String;)ß§
+
+ﬂ%# ﬂ%(0
+%32java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2
+toString()ﬂ‹
+
+ﬂ% ﬂ%(1
+%33void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%32java.lang.String2!informPlayers(Ljava/lang/String;)*
+1*ı
+startingBlock
+«%, «%(aç
+ä
+
+∆% ∆%(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*5
+
+__unknown_file (
+
+cardmage.cards.CardZ
+X
+
+«%2 «%(6
+cardmage.cards.Card"__annotation*#
+
+__unknown_file (
+
+%34ñ
+ì
+
+∆% ∆%(
+%35"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+«%@ «%(F 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%35å
+â
+
+∆% ∆%(
+%36"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+«%M «%(Q
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%36ï
+í
+
+∆% ∆%(
+%37"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zoneb
+`
+
+«%X «%(`
+fromZonemage.constants.Zone"__annotation*#
+
+__unknown_file (
+
+%37*
+14
+15*÷
+4
+€% €%(˚¯
+
+€% €%()
+%25java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*$
+
+__unknown_file (
+ to 2append(Ljava/lang/String;)ß§
+
+€%1 €%(D
+%26java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*;
+
+__unknown_file (
+
+playermage.players.Player2getLogName()çä
+
+€% €%(E
+%27java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%25java.lang.StringBuilder*5
+
+__unknown_file (
+
+%26java.lang.String2append(Ljava/lang/String;)áÑ
+
+€% €%(_
+%28java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%27java.lang.StringBuilder*/
+
+__unknown_file (
+'s command zone2append(Ljava/lang/String;)*
+3*ô
+5
+Ÿ%$ Ÿ%((ôñ
+
+Ÿ%3 Ÿ%(D
+%23java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getOwnerId()ÙÒ
+
+Ÿ%$ Ÿ%(E
+%24mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%23java.util.UUID2getPlayer(Ljava/util/UUID;)m
+k
+
+Ÿ% Ÿ%(F
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%24mage.players.Player*
+3
+4*§
+6
+◊% ◊%(çä
+
+◊% ◊%(7
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*6
+
+__unknown_file (
+ to their command zone2append(Ljava/lang/String;)*
+3*å
+7
+÷% ÷%(ôñ
+
+÷%# ÷%(*
+%20java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()÷”
+
+÷% ÷%(+
+%21boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*3
+
+__unknown_file (
+
+%20java.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+5
+6*ˆ	
+8
+‘% ‘%(¸˘
+
+‘% ‘%(&
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*%
+
+__unknown_file (	
+from 2append(Ljava/lang/String;)•¢
+
+‘%. ‘%(A
+%15java.lang.String"0mage.constants.Zone#toString()Ljava/lang/String;*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone2
+toString()Q
+O
+
+‘%N ‘%(\
+%16java.util.Locale"__id*"
+
+__unknown_file (
+""˚¯
+
+‘%. ‘%(]
+%17java.lang.String"Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%15java.lang.String*5
+
+__unknown_file (
+
+%16java.util.Locale2toLowerCase(Ljava/util/Locale;)çä
+
+‘% ‘%(^
+%18java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%14java.lang.StringBuilder*5
+
+__unknown_file (
+
+%17java.lang.String2append(Ljava/lang/String;)◊‘
+
+‘% ‘%(j
+%19java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%18java.lang.StringBuilder*!
+
+__unknown_file (
+ 2	append(C)*
+7*≈
+9
+—%5 —%(9¶£
+
+—%5 —%(F
+%7java.lang.String"6mage.players.PlayerImpl#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLogName()FD
+
+—%' —%(4
+%8java.lang.StringBuilder"java.lang.StringBuilderΩ
+∫
+
+—%# —%(G
+%9"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%8java.lang.StringBuilder*4
+
+__unknown_file (
+
+%7java.lang.String˝˙
+
+—%# “%()
+%10java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%8java.lang.StringBuilder*&
+
+__unknown_file (
+
+ puts 2append(Ljava/lang/String;)ùö
+
+“%1 “%(B
+%11java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getLogName()çä
+
+—%# “%(C
+%12java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%10java.lang.StringBuilder*5
+
+__unknown_file (
+
+%11java.lang.String2append(Ljava/lang/String;)◊‘
+
+—%# “%(O
+%13java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%12java.lang.StringBuilder*!
+
+__unknown_file (
+ 2	append(C)q
+o
+
+—% “%(P
+sbjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%13java.lang.StringBuilder*
+7
+8*Ò
+10
+œ% œ%(åâ
+
+œ%( œ%(4
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Ê„
+
+œ% œ%(5
+%6mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getCard(Ljava/util/UUID;)b
+`
+
+œ% œ%(5
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%6mage.cards.Card*
+9*ë
+11
+Œ%5 Œ%(9åâ
+
+Œ%B Œ%(N
+%3java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Ê„
+
+Œ%5 Œ%(O
+%4mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getCard(Ljava/util/UUID;)*
+9
+10:%
+
+«%- «%(7
+cardmage.cards.Card:.
+
+«%8 «%(G 
+sourcemage.abilities.Ability:$
+
+«%H «%(R
+gamemage.game.Game:-
+
+«%S «%(`
+fromZonemage.constants.ZoneB
+mage.players.PlayerImplHP

@@ -1,0 +1,140 @@
+
+umage.abilities.common.DiscardedByOpponentTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DiscardedByOpponentTriggeredAbility.java) )("startingBlock*î
+2- -(ÏÌ
+-) -(?
+%6java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*Y
+
+__unknown_file (=;
+9mage.abilities.common.DiscardedByOpponentTriggeredAbility2getControllerId()êç
+- -(@
+%7java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getOpponents(Ljava/util/UUID;)º·
+-J -(g
+%8java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+stackObjectmage.game.stack.StackObject2getControllerId()ÎË
+- -(h
+%9boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%7java.util.Set*2
+
+__unknown_file (
+
+%8java.util.UUID2contains(Ljava/lang/Object;)"
+- -(i
+""*–
+3+& +(*¨¥
++& +(5 
+%3mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
++E +(X
+%4java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId() 
++& +(Y!
+%5mage.game.stack.StackObject"Xmage.game.stack.SpellStack#getStackObject(Ljava/util/UUID;)Lmage/game/stack/StackObject;*>
+
+__unknown_file ("
+ 
+%3mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%4java.util.UUID2 getStackObject(Ljava/util/UUID;)
+}
++ +(Z*
+stackObjectmage.game.stack.StackObject"__id*?
+
+__unknown_file (#
+!
+%5mage.game.stack.StackObject*
+2
+1*„
+startingBlock) )(;—
+”
+( ((
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+)* )(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+( ((
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+)6 )(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+4*à
+4* *(ÇÄ
+* *(
+%0java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*Y
+
+__unknown_file (=;
+9mage.abilities.common.DiscardedByOpponentTriggeredAbility2getSourceId()¯¬
+*! *(4
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ÌÉ
+* *(5
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+3
+1*!
+10 0("
+0 0(
+"":/
+)  )(0#
+eventmage.game.events.GameEvent:"
+)1 )(:
+gamemage.game.GameB=;
+9mage.abilities.common.DiscardedByOpponentTriggeredAbilityHP

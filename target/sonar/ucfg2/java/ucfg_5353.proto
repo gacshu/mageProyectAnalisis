@@ -1,0 +1,163 @@
+
+omage.game.command.planes.PanopticonTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zk
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/planes/PanopticonPlane.javaS S("startingBlock*›
+2[ [(ßÜ
+[ [($
+%7mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*S
+
+__unknown_file (75
+3mage.game.command.planes.PanopticonTriggeredAbility2getEffects()–“
+[: [(N
+%8java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+activePlayermage.players.Player2getId()`^
+[. [(9+
+%9%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÔ
+Ñ
+[* [(O
+%10"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*I
+
+__unknown_file (-
++
+%9%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%8java.util.UUIDÃÀ
+[ [(P
+%11void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%7mage.abilities.effects.Effects*I
+
+__unknown_file (-
++
+%9%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)"
+\ \(
+""*Ÿ
+3Y Y("¢Ÿ
+Y- Y(E
+%5java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()ðí
+Y Y(F
+%6mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+Y Y(G#
+activePlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%6mage.players.Player*
+2
+1*„
+startingBlockS S(;—
+”
+R R(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+S* S(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%12Š
+‡
+R R(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+S6 S(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13*
+6*!
+4V V("
+V V(
+""*„
+5U U(%º·
+U U(4
+%2mage.constants.Planes"=mage.game.command.Plane#getPlaneType()Lmage/constants/Planes;*?
+
+__unknown_file (#
+!
+cPlanemage.game.command.Plane2getPlaneType()S
+Q
+U< U(S
+%3mage.constants.Planes"__id*"
+
+__unknown_file (
+""Ú×
+U U(T
+%4boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+%2mage.constants.Planes*9
+
+__unknown_file (
+
+%3mage.constants.Planes2equals(Ljava/lang/Object;)*
+3
+4*á
+6T T(š—
+T T(&
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¸µ
+T T(8
+%1mage.game.command.Plane">mage.game.GameState#getCurrentPlane()Lmage/game/command/Plane;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getCurrentPlane()r
+p
+T T(9!
+cPlanemage.game.command.Plane"__id*;
+
+__unknown_file (
+
+%1mage.game.command.Plane*
+4
+5*!
+1^ ^("
+^ ^(
+"":/
+S  S(0#
+eventmage.game.events.GameEvent:"
+S1 S(:
+gamemage.game.GameB75
+3mage.game.command.planes.PanopticonTriggeredAbilityHP

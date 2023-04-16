@@ -1,0 +1,154 @@
+
+úmage.abilities.dynamicvalue.common.PermanentsTargetOpponentControlsCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Iå
+ÅD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/PermanentsTargetOpponentControlsCount.java+ +("startingBlock*ª
+22 2(¶
+£
+2 2(
+%6java.lang.Integer"__id*x
+
+__unknown_file (\*ZJ
+Hmage.abilities.dynamicvalue.common.PermanentsTargetOpponentControlsCount"
+
+multiplier*
+1*˙
+30 0(æª
+0 0()%
+%2mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¨
+©
+03 0(9!
+%3mage.filter.FilterPermanent"__id*t
+
+__unknown_file (X*VJ
+Hmage.abilities.dynamicvalue.common.PermanentsTargetOpponentControlsCount"
+filter…∆
+0 0(R	
+%4int"hmage.game.permanent.Battlefield#countAll(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)I*C
+
+__unknown_file ('
+%
+%2mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%3mage.filter.FilterPermanent*@
+
+__unknown_file ($
+"
+targetOpponentIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2GcountAll(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)¶
+£
+1 1(
+%5java.lang.Integer"__id*x
+
+__unknown_file (\*ZJ
+Hmage.abilities.dynamicvalue.common.PermanentsTargetOpponentControlsCount"
+
+multiplier*
+2
+1*é
+startingBlock+ +(Iâ
+Ü
+* *(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
++ +("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7ö
+ó
+* *(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityg
+e
++, +(9'
+sourceAbilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8ö
+ó
+* *(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effectg
+e
++B +(H'
+effectmage.abilities.effects.Effect"__annotation*"
+
+__unknown_file (
+
+%9*
+5*!
+4. .("
+. .(
+""*Ü
+5,  ,(&ÚÔ
+,  ,(9-
+%0'mage.target.targetpointer.TargetPointer"Ymage.abilities.effects.Effect#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect2getTargetPointer()çä
+,  ,(W
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)j
+h
+, ,(X"
+targetOpponentIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%1java.util.UUID*
+3
+4*!
+14 4("
+4 4(
+"":"
++ +(#
+gamemage.game.Game:3
++$ +(:'
+sourceAbilitymage.abilities.Ability:3
++; +(H'
+effectmage.abilities.effects.EffectBLJ
+Hmage.abilities.dynamicvalue.common.PermanentsTargetOpponentControlsCountHP

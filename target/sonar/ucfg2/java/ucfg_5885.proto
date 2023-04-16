@@ -1,0 +1,209 @@
+
+ëmage.abilities.dynamicvalue.common.HighestCMCOfPermanentValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)IÄ
+vD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/HighestCMCOfPermanentValue.java   ("startingBlock*ú
+2$ $($b
+`
+$ $($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ù
+ö
+$ $($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%5java.util.List*"
+
+__unknown_file (
+""*	
+4
+5
+1*®
+3( ((%ìê
+( ((4	
+%9int"mage.MageObject#getManaValue()I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getManaValue()*
+2*î
+startingBlock   (Iä
+á
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10õ
+ò
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+ ,  (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11õ
+ò
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+ B  (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%12*
+8*´
+4' '($ìê
+' '(3	
+%8int"mage.MageObject#getManaValue()I*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getManaValue()*
+2
+3*û
+5&/ &(9∏µ
+	&h &(á
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()À»
+	&/ &(é
+%7boolean"Åmage.players.Player#canPaySacrificeCost(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2lcanPaySacrificeCost(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+2
+4*ó	
+7$' $(+æª
+$' $(<%
+%2mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()°
+û
+%) %(/!
+%3mage.filter.FilterPermanent"__id*i
+
+__unknown_file (M*K?
+=mage.abilities.dynamicvalue.common.HighestCMCOfPermanentValue"
+filter∑¥
+%1 %(P
+%4java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()„‡
+$' %(f
+%5java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%2mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%3mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%4java.util.UUID*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*≤
+8! !(∑¥
+"+ "(J
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()Ì
+" "(K
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+" "(L!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+7
+1*!
+1- -("
+- -(
+"":"
+   (#
+gamemage.game.Game:3
+ $  (:'
+sourceAbilitymage.abilities.Ability:3
+ ;  (H'
+effectmage.abilities.effects.EffectBA?
+=mage.abilities.dynamicvalue.common.HighestCMCOfPermanentValueHP

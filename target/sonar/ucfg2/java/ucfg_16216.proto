@@ -1,0 +1,273 @@
+
+cmage.players.PlayerImpl#seekCard(Lmage/filter/FilterCard;Lmage/abilities/Ability;Lmage/game/Game;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.java¥ ¥("startingBlock*%
+2
+­ ­("
+
+­ ­(
+""*õ
+3
+¦ ¦(®«
+
+¦ ¦(+
+%0mage.players.Library":mage.players.PlayerImpl#getLibrary()Lmage/players/Library;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLibrary()òï
+
+¦ §(
+%1java.util.List"?mage.players.Library#getCards(Lmage/game/Game;)Ljava/util/List;*8
+
+__unknown_file (
+
+%0mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)¤¡
+
+¦ ¨(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%1java.util.List2stream()’
+
+
+© ©(I"
+%3java.util.function.Predicate"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_318$mage.players.PlayerImpl“
+
+
+__unknown_file (.
+"
+%3java.util.function.Predicate"
+filter"__id*>
+
+__unknown_file ("
+ 
+filtermage.filter.FilterCard“
+
+
+__unknown_file (.
+"
+%3java.util.function.Predicate"
+source"__id*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability‡
+„
+
+__unknown_file (,
+"
+%3java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game•
+’
+
+__unknown_file (7
+"
+%3java.util.function.Predicate"
+PlayerImpl.this"__id*7
+
+__unknown_file (
+mage.players.PlayerImpl®«
+
+¦ ©(J
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%3java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)¯
+¬
+
+ª ª(+ 
+%7java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors™–
+
+¦ ª(,
+%8java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)_
+]
+
+¦ ª(-
+cardsjava.util.Set"__id*1
+
+__unknown_file (
+
+%8java.util.Setç
+ä
+
+« «(:
+%9mage.cards.Card"Smage.util.RandomUtil#randomFromCollection(Ljava/util/Collection;)Ljava/lang/Object;*4
+
+__unknown_file ("
+mage.util.RandomUtil*4
+
+__unknown_file (
+
+cardsjava.util.Setb
+`
+
+« «(;
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%9mage.cards.Card*
+2
+1*†
+startingBlock
+¥ ¥(I–
+“
+
+¤ ¤(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+filtermage.filter.FilterCardc
+a
+
+¥' ¥(- 
+filtermage.filter.FilterCard"__annotation*#
+
+__unknown_file (
+
+%15–
+“
+
+¤ ¤(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+¥7 ¥(= 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%16Œ
+‰
+
+¤ ¤(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+¥D ¥(H
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%17*
+3*ª	
+1
+¯ ¯(§¤
+
+¯ ¯(,
+%10java.lang.String"6mage.players.PlayerImpl#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLogName()
+Œ
+
+¯ ¯(Q
+%11java.lang.String"__concat*'
+
+¯ ¯(,
+
+%10java.lang.String*2
+
+¯/ ¯(Q$"
+  seeks a card from their libraryßÜ
+
+¯ ¯(R
+%12void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%11java.lang.String2!informPlayers(Ljava/lang/String;)T
+R
+
+° °(&
+%13mage.constants.Zone"__id*"
+
+__unknown_file (
+""Ž‹
+
+° °(5
+%14boolean"rmage.players.PlayerImpl#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*7
+
+__unknown_file (
+mage.players.PlayerImpl*5
+
+__unknown_file (
+
+cardmage.cards.Card*8
+
+__unknown_file (
+
+%13mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)"
+
+± ±(
+"":.
+
+¥ ¥(. 
+filtermage.filter.FilterCard:.
+
+¥/ ¥(> 
+sourcemage.abilities.Ability:$
+
+¥? ¥(H
+gamemage.game.GameB
+mage.players.PlayerImplHP

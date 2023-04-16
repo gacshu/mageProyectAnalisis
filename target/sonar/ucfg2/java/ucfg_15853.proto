@@ -1,0 +1,216 @@
+
+tmage.abilities.effects.mana.AddManaOfAnyColorEffect#produceMana(Lmage/game/Game;Lmage/abilities/Ability;)Lmage/Mana;v
+lD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/mana/AddManaOfAnyColorEffect.javaN N("startingBlock*Ü
+2W( W(.À½
+W( W(>
+%9	mage.Mana".mage.choices.ChoiceColor#getMana(I)Lmage/Mana;*@
+
+__unknown_file ($
+"
+choicemage.choices.ChoiceColor*"
+
+__unknown_file (
+""2
+getMana(I)T
+R
+W W(?
+mana	mage.Mana"__id*-
+
+__unknown_file (
+
+%9	mage.Mana’
+X X(1
+%10void"mage.Mana#setFlag(Z)V*/
+
+__unknown_file (
+
+mana	mage.Mana*"
+
+__unknown_file (
+""2
+setFlag(Z)"
+Y Y((
+
+mana	mage.Mana*Â
+3V V("ª§
+V V(-
+%8mage.ObjectColor"5mage.choices.ChoiceColor#getColor()Lmage/ObjectColor;*@
+
+__unknown_file ($
+"
+choicemage.choices.ChoiceColor2
+getColor()*
+2
+1*
+startingBlockN N(6Š
+‡
+M M(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+N! N(%
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+M M(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+N/ N(5 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+6
+1*Ñ
+
+4T9 T(=„
+TD T(Z
+%3mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)FD
+T- T(8
+%4mage.choices.ChoiceColor"mage.choices.ChoiceColor§
+¤
+T) T([
+%5"Fmage.choices.ChoiceColor#<init>(ZLjava/lang/String;Lmage/MageObject;)V*<
+
+__unknown_file ( 
+
+%4mage.choices.ChoiceColor* 
+
+__unknown_file (2*5
+
+__unknown_file (
+
+mesjava.lang.String*3
+
+__unknown_file (
+
+%3mage.MageObjectt
+r
+T T(\"
+choicemage.choices.ChoiceColor"__id*<
+
+__unknown_file ( 
+
+%4mage.choices.ChoiceColor“
+
+U* U(1
+%6mage.constants.Outcome"__id*`
+
+__unknown_file (D*B5
+3mage.abilities.effects.mana.AddManaOfAnyColorEffect"	
+outcome´±
+U U(@
+%7boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%6mage.constants.Outcome*@
+
+__unknown_file ($
+"
+choicemage.choices.ChoiceColor*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+3
+1*
+5R R(#•
+’
+R R(a
+%2java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*F
+
+__unknown_file (*(
+&Select a color of mana to add %d of it*"
+
+__unknown_file (
+""a
+_
+R R(b
+mesjava.lang.String"__id*4
+
+__unknown_file (
+
+%2java.lang.String*
+4
+1*«
+6P  P($°­
+P/ P(G
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+P  P(H
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+P P(I!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+5
+1*²
+1_ _()'
+_ _(
+%11	mage.Mana"	mage.ManaX
+V
+_ _(
+%12"mage.Mana#<init>()V*.
+
+__unknown_file (
+
+%11	mage.Mana"
+_ _(
+
+%11	mage.Mana:"
+N N(&
+gamemage.game.Game:,
+N' N(5 
+sourcemage.abilities.AbilityB75
+3mage.abilities.effects.mana.AddManaOfAnyColorEffectH

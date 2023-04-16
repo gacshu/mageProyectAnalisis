@@ -1,0 +1,211 @@
+
+qmage.client.util.TransformedImageCache#rotateImage(Ljava/awt/image/BufferedImage;D)Ljava/awt/image/BufferedImage;p
+fD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/util/TransformedImageCache.javaM! M(,"1*π
+1N N(á
+Ñ
+N N(-
+%0double"java.lang.Math#sin(D)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""è
+å
+N N(.
+%1double"java.lang.Math#abs(D)D*.
+
+__unknown_file ("
+java.lang.Math**
+
+__unknown_file (
+
+%0doubleá
+Ñ
+N? N(N
+%2double"java.lang.Math#cos(D)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""è
+å
+N6 N(O
+%3double"java.lang.Math#abs(D)D*.
+
+__unknown_file ("
+java.lang.Math**
+
+__unknown_file (
+
+%2doubleìê
+O O($	
+%4int"(java.awt.image.BufferedImage#getWidth()I*C
+
+__unknown_file ('
+%
+imagejava.awt.image.BufferedImage2
+getWidth()ïí
+O/ O(@	
+%5int")java.awt.image.BufferedImage#getHeight()I*C
+
+__unknown_file ('
+%
+imagejava.awt.image.BufferedImage2getHeight()â
+Ü
+P P(C
+%6double"java.lang.Math#floor(D)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""â
+Ü
+PW P(}
+%7double"java.lang.Math#floor(D)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""…
+∆
+R! R(R"
+%8java.awt.GraphicsEnvironment"Xjava.awt.GraphicsEnvironment#getLocalGraphicsEnvironment()Ljava/awt/GraphicsEnvironment;*<
+
+__unknown_file ( "
+java.awt.GraphicsEnvironmentx
+v
+R R(S"
+gejava.awt.GraphicsEnvironment"__id*@
+
+__unknown_file ($
+"
+%8java.awt.GraphicsEnvironmentÿ’
+S S(7
+%9java.awt.GraphicsDevice"Njava.awt.GraphicsEnvironment#getDefaultScreenDevice()Ljava/awt/GraphicsDevice;*@
+
+__unknown_file ($
+"
+gejava.awt.GraphicsEnvironment2getDefaultScreenDevice()n
+l
+S S(8
+gsjava.awt.GraphicsDevice"__id*;
+
+__unknown_file (
+
+%9java.awt.GraphicsDeviceﬂ‹
+T# T(?%
+%10java.awt.GraphicsConfiguration"Qjava.awt.GraphicsDevice#getDefaultConfiguration()Ljava/awt/GraphicsConfiguration;*;
+
+__unknown_file (
+
+gsjava.awt.GraphicsDevice2getDefaultConfiguration()}
+{
+T T(@$
+gcjava.awt.GraphicsConfiguration"__id*C
+
+__unknown_file ('
+%
+%10java.awt.GraphicsConfigurationB
+@
+VM V(e
+
+%11int"__id*"
+
+__unknown_file (
+""›⁄
+V V(f#
+%12java.awt.image.BufferedImage"Wjava.awt.GraphicsConfiguration#createCompatibleImage(III)Ljava/awt/image/BufferedImage;*B
+
+__unknown_file (&
+$
+gcjava.awt.GraphicsConfiguration*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%11int2createCompatibleImage(III)}
+{
+V V(g&
+resultjava.awt.image.BufferedImage"__id*A
+
+__unknown_file (%
+#
+%12java.awt.image.BufferedImage≈¬
+W W(.
+%13java.awt.Graphics2D"Bjava.awt.image.BufferedImage#createGraphics()Ljava/awt/Graphics2D;*D
+
+__unknown_file ((
+&
+resultjava.awt.image.BufferedImage2createGraphics()f
+d
+W W(/
+gjava.awt.Graphics2D"__id*8
+
+__unknown_file (
+
+%13java.awt.Graphics2DÕ 
+X X(E
+%14void""java.awt.Graphics2D#translate(II)V*6
+
+__unknown_file (
+
+gjava.awt.Graphics2D*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2translate(II)ÌÍ
+Y Y(.
+%15void" java.awt.Graphics2D#rotate(DDD)V*6
+
+__unknown_file (
+
+gjava.awt.Graphics2D*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2rotate(DDD)ÙÒ
+Z Z((
+%16void"ejava.awt.Graphics2D#drawRenderedImage(Ljava/awt/image/RenderedImage;Ljava/awt/geom/AffineTransform;)V*6
+
+__unknown_file (
+
+gjava.awt.Graphics2D*C
+
+__unknown_file ('
+%
+imagejava.awt.image.BufferedImage*"
+
+__unknown_file (
+""2PdrawRenderedImage(Ljava/awt/image/RenderedImage;Ljava/awt/geom/AffineTransform;)zx
+[ [(
+%17void"java.awt.Graphics#dispose()V*6
+
+__unknown_file (
+
+gjava.awt.Graphics2D2	dispose()"4
+\ \((
+&
+resultjava.awt.image.BufferedImage:1
+M- M(A%
+imagejava.awt.image.BufferedImage: 
+
+__unknown_file (
+""B*"(
+&mage.client.util.TransformedImageCache

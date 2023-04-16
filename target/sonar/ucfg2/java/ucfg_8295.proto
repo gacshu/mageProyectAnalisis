@@ -1,0 +1,127 @@
+
+vmage.abilities.common.BecomesBlockedSourceTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z}
+sD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/BecomesBlockedSourceTriggeredAbility.java' '("startingBlock*Ï
+2* *(æã
+* *($
+%0mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*Z
+
+__unknown_file (><
+:mage.abilities.common.BecomesBlockedSourceTriggeredAbility2getEffects()¤¡
++$ +(4
+%1mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ÈÅ
++J +(W
+%2java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*Z
+
+__unknown_file (><
+:mage.abilities.common.BecomesBlockedSourceTriggeredAbility2getSourceId()âß
++$ +(^
+%3java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%1mage.game.combat.Combat*2
+
+__unknown_file (
+
+%2java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)`^
++ +(#+
+%4%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetÓ
+Ð
++ +(_
+%5"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*I
+
+__unknown_file (-
++
+%4%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%3java.util.UUIDÂ¿
+* +(`
+
+%6void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%0mage.abilities.effects.Effects*I
+
+__unknown_file (-
++
+%4%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*‡
+startingBlock' '(;—
+”
+& &(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+'* '(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+& &(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+'6 '(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+2
+1*í
+1- -(¯¬
+- -("
+%7java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ÈÅ
+-* -(<
+%8java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*Z
+
+__unknown_file (><
+:mage.abilities.common.BecomesBlockedSourceTriggeredAbility2getSourceId()ÌÉ
+- -(=
+%9boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%7java.util.UUID*2
+
+__unknown_file (
+
+%8java.util.UUID2equals(Ljava/lang/Object;)"
+- -(>
+"":/
+'  '(0#
+eventmage.game.events.GameEvent:"
+'1 '(:
+gamemage.game.GameB><
+:mage.abilities.common.BecomesBlockedSourceTriggeredAbilityHP

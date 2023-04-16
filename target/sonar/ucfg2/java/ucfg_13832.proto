@@ -1,0 +1,238 @@
+
+qmage.abilities.common.TurnedFaceUpAllTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/TurnedFaceUpAllTriggeredAbility.java9 9("startingBlock*ﬁ
+13: :(Ø¨
+: :( 
+%0java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()√¿
+:( :(5
+%1java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*U
+
+__unknown_file (97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility2getSourceId()Ã…
+: :(6
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+7
+12*!
+2M M("
+M M(
+""*§
+3I I("_
+]
+I I("'
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""´
+®
+I I("'
+effectmage.abilities.effects.Effect"
+__arrayGet*C
+
+__unknown_file ('
+%
+%10mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+2
+4*Ö
+startingBlock9 9(;ó
+î
+8 8(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+9* 9(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%15ä
+á
+8 8(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+96 9(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16*
+13*«
+4J J(∞≠
+J< J(O
+%11java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()a_
+J0 J(;,
+%12%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetú
+ô
+J, J(V
+%13"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%11java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game˝˙
+J J(W$
+%14mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+3*˜
+5I% I(/‚ﬂ
+I% I(1%
+%10mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*U
+
+__unknown_file (97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility2getEffects()*
+3*ç
+7F F("Ø¨
+F0 F(C
+%5java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()äá
+F F(D#
+%6mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+F F(E*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanentô
+ñ
+G G(!
+%7mage.filter.FilterPermanent"__id*a
+
+__unknown_file (E*C7
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility"
+filterÀ»
+G$ G(5
+%8java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*U
+
+__unknown_file (97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility2getControllerId()≈¬
+G G(B
+%9boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%7mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%8java.util.UUID*U
+
+__unknown_file (97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*	
+2
+5
+1*!
+8C C("
+C C(
+""*!
+9? ?( "
+? ?(!
+""*Ù
+10=9 =(B€ÿ
+=1 =(T
+%4boolean"-mage.cards.Card#isFaceDown(Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+	sourceObjmage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game2isFaceDown(Lmage/game/Game;)*
+7
+9*ß
+12;# ;('£†
+;# ;(=
+%3mage.MageObject"Mmage.abilities.AbilityImpl#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*U
+
+__unknown_file (97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)e
+c
+; ;(>
+	sourceObjmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*
+
+7
+8
+10*!
+1O O("
+O O(
+"":/
+9  9(0#
+eventmage.game.events.GameEvent:"
+91 9(:
+gamemage.game.GameB97
+5mage.abilities.common.TurnedFaceUpAllTriggeredAbilityHP

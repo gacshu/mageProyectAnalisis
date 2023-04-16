@@ -1,0 +1,294 @@
+
+qmage.abilities.effects.common.ReturnToHandFromGraveyardAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)ZÉ
+yD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ReturnToHandFromGraveyardAllEffect.java( (("startingBlock*"
+13+ +("
++ +(
+""*Ç
+2- -(R
+P
+- -(
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ñ
+ì
+- -(
+playerIdjava.util.UUID"
+__arrayGet*;
+
+__unknown_file (
+
+%4mage.players.PlayerList*"
+
+__unknown_file (
+""*
+6
+1*Æ
+14) )( ∞≠
+)+ )(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+) )(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+) )(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+13
+12*˚
+3? ?(Ø¨
+? ?(2
+%14mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()†
+ù
+@ @(
+%15mage.filter.FilterCard"__id*l
+
+__unknown_file (P*NB
+@mage.abilities.effects.common.ReturnToHandFromGraveyardAllEffect"
+filterëé
+@ @(*
+%16java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()°û
+? A(
+%17java.util.Set"~mage.cards.CardsImpl#getCards(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*8
+
+__unknown_file (
+
+%14mage.game.Graveyard*;
+
+__unknown_file (
+
+%15mage.filter.FilterCard*3
+
+__unknown_file (
+
+%16java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZgetCards(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)R
+P
+A A(
+%18mage.constants.Zone"__id*"
+
+__unknown_file (
+""ÖÇ
+? A('
+%19boolean"lmage.players.Player#moveCards(Ljava/util/Set;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*2
+
+__unknown_file (
+
+%17java.util.Set*8
+
+__unknown_file (
+
+%18mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2WmoveCards(Ljava/util/Set;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*ˇ
+startingBlock( ((3ä
+á
+' '(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+( (("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20î
+ë
+' '(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+(, ((2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21*
+14*¸
+5; ;( ˜Ù
+; ;(4
+%13mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)k
+i
+; ;(5
+playermage.players.Player"__id*8
+
+__unknown_file (
+
+%13mage.players.Player*
+2
+3*Õ
+6. .($≤
+Ø
+. .($%
+%8mage.constants.TargetController"__id*v
+
+__unknown_file (Z*XB
+@mage.abilities.effects.common.ReturnToHandFromGraveyardAllEffect"
+targetController]
+[
+/ /(%
+%9mage.constants.TargetController"__id*"
+
+__unknown_file (
+""^
+\
+0 0( &
+%10mage.constants.TargetController"__id*"
+
+__unknown_file (
+""^
+\
+2 2(&
+%11mage.constants.TargetController"__id*"
+
+__unknown_file (
+""^
+\
+6 6(&
+%12mage.constants.TargetController"__id*"
+
+__unknown_file (
+""*
+
+5
+8
+10*Å
+86 9(îë
+7 7(+
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()“œ
+7 7(<
+%7boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%6java.util.UUID*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2equals(Ljava/lang/Object;)*
+2
+5*Ÿ
+102 5(¿Ω
+3 3(?
+%5boolean"Bmage.players.Player#hasOpponent(Ljava/util/UUID;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2-hasOpponent(Ljava/util/UUID;Lmage/game/Game;)*
+2
+8*∞
+12- -(!öó
+- -(,
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()îë
+-? -(Q
+%3java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()Ê„
+- -(X
+%4mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%2mage.game.GameState*2
+
+__unknown_file (
+
+%3java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+2*!
+1C C("
+C C(
+"":"
+( ((#
+gamemage.game.Game:,
+($ ((2 
+sourcemage.abilities.AbilityBDB
+@mage.abilities.effects.common.ReturnToHandFromGraveyardAllEffectHP

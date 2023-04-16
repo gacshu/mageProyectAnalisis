@@ -1,0 +1,263 @@
+
+umage.abilities.common.DealtDamageAttachedTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DealtDamageAttachedTriggeredAbility.java1 1("startingBlock*!
+2@ @("
+@ @(
+""*£
+35 5(_
+]
+5 5('
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""™
+ß
+5 5('
+effectmage.abilities.effects.Effect"
+__arrayGet*B
+
+__unknown_file (&
+$
+%6mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*
+2
+4*Ö
+startingBlock1 1(;ó
+î
+0 0(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+1* 1(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%20ä
+á
+0 0(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+16 1(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%21*
+10*—
+46 6(íè
+6* 6(;
+
+%15int"'mage.game.events.GameEvent#getAmount()I*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getAmount()≤Ø
+6 6(<
+%16void"Mmage.abilities.effects.Effect#setValue(Ljava/lang/String;Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*&
+
+__unknown_file (
+
+damage*(
+
+__unknown_file (
+
+
+%15int2.setValue(Ljava/lang/String;Ljava/lang/Object;)¨
+©
+7 7('&
+%17mage.constants.SetTargetPointer"__id*o
+
+__unknown_file (S*Q;
+9mage.abilities.common.DealtDamageAttachedTriggeredAbility"
+setTargetPointer^
+\
+8 8("&
+%18mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""^
+\
+; ;(&
+%19mage.constants.SetTargetPointer"__id*"
+
+__unknown_file (
+""*	
+3
+5
+6*∫	
+5; =(±Æ
+<@ <(k$
+%10mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+targetIdjava.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)µ≤
+<@ <(}
+%11java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*B
+
+__unknown_file (&
+$
+%10mage.game.permanent.Permanent2getControllerId()a_
+<4 <(?,
+%12%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget÷
+”
+<0 <(~
+%13"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%11java.util.UUID˝˙
+< <($
+%14mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%12%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+3*î
+68 :(`^
+94 9(?+
+%7%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetü
+ú
+90 9(O
+%8"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+%7%mage.target.targetpointer.FixedTarget*8
+
+__unknown_file (
+
+targetIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game˚¯
+9 9(P#
+%9mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*I
+
+__unknown_file (-
++
+%7%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+3*˙
+75  5($Â‚
+5  5(1$
+%6mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*Y
+
+__unknown_file (=;
+9mage.abilities.common.DealtDamageAttachedTriggeredAbility2getEffects()*
+3*¨
+84I 4(Qøº
+4Y 4(t
+%4java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()“œ
+4I 4(u
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+targetIdjava.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+7
+1*◊
+94" 4(-øº
+4" 4(=
+%3java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+enchantmentmage.game.permanent.Permanent2getAttachedTo()*
+8
+1*’
+102  2($í
+è
+22 2(:
+%0java.util.UUID"__id*g
+
+__unknown_file (K*I;
+9mage.abilities.common.DealtDamageAttachedTriggeredAbility"
+
+sourceIdäá
+2  2(;#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)Ñ
+Å
+2 2(<,
+enchantmentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.PermanentØ¨
+3 3(+
+%2java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()b
+`
+3 3(,
+targetIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%2java.util.UUID*
+9
+1*!
+1B B("
+B B(
+"":/
+1  1(0#
+eventmage.game.events.GameEvent:"
+11 1(:
+gamemage.game.GameB=;
+9mage.abilities.common.DealtDamageAttachedTriggeredAbilityHP

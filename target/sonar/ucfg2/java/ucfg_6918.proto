@@ -1,0 +1,146 @@
+
+emage.abilities.keyword.AnnihilatorAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zl
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/AnnihilatorAbility.java2 2("startingBlock*Æ
+27 7(ÕÒ
+7 7($
+%6mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*I
+
+__unknown_file (-+
+)mage.abilities.keyword.AnnihilatorAbility2getEffects()¡
+ž
+7% 9(!
+%7java.util.function.Consumer"__declareFunction*\
+
+__unknown_file (@>
+<__sonar_lambda_123$mage.abilities.keyword.AnnihilatorAbility 
+
+
+__unknown_file (8
+!
+%7java.util.function.Consumer"
+defendingPlayerId"__id*A
+
+__unknown_file (%
+#
+defendingPlayerIdjava.util.UUIDƒ€
+7 9(
+
+%9void";java.util.ArrayList#forEach(Ljava/util/function/Consumer;)V*B
+
+__unknown_file (&
+$
+%6mage.abilities.effects.Effects*?
+
+__unknown_file (#
+!
+%7java.util.function.Consumer2&forEach(Ljava/util/function/Consumer;)"
+: :(
+""*’
+34% 4()¤¡
+4% 4(5
+%3mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()
+
+4K 4(S
+%4java.util.UUID"__id*W
+
+__unknown_file (;*9+
+)mage.abilities.keyword.AnnihilatorAbility"
+
+sourceIdâß
+4% 4(Z
+%5java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%3mage.game.combat.Combat*2
+
+__unknown_file (
+
+%4java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)k
+i
+4 4([#
+defendingPlayerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID*
+2
+1*„
+startingBlock2 2(;—
+”
+1 1(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+2* 2(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%10Š
+‡
+1 1(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+26 2(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+4*Ð
+43 3(¯¬
+3 3(
+%0java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()·´
+3' 3(9
+%1java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*I
+
+__unknown_file (-+
+)mage.abilities.keyword.AnnihilatorAbility2getSourceId()ÌÉ
+3 3(:
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+3
+1*!
+1= =("
+= =(
+"":/
+2  2(0#
+eventmage.game.events.GameEvent:"
+21 2(:
+gamemage.game.GameB-+
+)mage.abilities.keyword.AnnihilatorAbilityHP

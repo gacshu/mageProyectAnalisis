@@ -1,0 +1,523 @@
+
+]mage.abilities.effects.keyword.BolsterEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zo
+eD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/keyword/BolsterEffect.java4 4("startingBlock*∂
+13= =("©¶
+=% =(=
+%9mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()pn
+=% =(H
+
+%10int"mage.MageInt#getValue()I*0
+
+__unknown_file (
+
+%9mage.MageInt2
+getValue()*
+11
+12*€
+14<' <(+æª
+<' <(<%
+%5mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()h
+f
+<T <({0
+%6*mage.filter.common.FilterCreaturePermanent"__id*"
+
+__unknown_file (
+""ïí
+	<} <(è
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()Çˇ
+	<' <(ñ
+%8java.util.List"Ömage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%5mage.game.permanent.Battlefield*N
+
+__unknown_file (2
+0
+%6*mage.filter.common.FilterCreaturePermanent*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)*
+9*¬
+15:! :((A
+?
+:! :(2	
+%4int"__id*"
+
+__unknown_file (
+""i
+g
+; ;(.1
+selectedCreaturemage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""*
+14*"
+168 8("
+8 8(
+""*∑
+177 7(ù
+ö
+7 7(.
+%2(mage.abilities.dynamicvalue.DynamicValue"__id*X
+
+__unknown_file (<*:.
+,mage.abilities.effects.keyword.BolsterEffect"
+amount¸˘
+7 7(4	
+%3int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%2(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*L
+
+__unknown_file (0.
+,mage.abilities.effects.keyword.BolsterEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)*
+15
+16*≠
+185 5( ∞≠
+5+ 5(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+5 5(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+5 5(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+17
+1*!
+1V V("
+V V(
+""*!
+2T T("
+T T(
+""*Í
+3O@ O(KX
+V
+O@ O(P 
+%31mage.counters.CounterType"__id*"
+
+__unknown_file (
+""û
+õ
+O` O(f/
+%32(mage.abilities.dynamicvalue.DynamicValue"__id*X
+
+__unknown_file (<*:.
+,mage.abilities.effects.keyword.BolsterEffect"
+amountˇ¸
+	O` O(Ñ
+
+%33int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%32(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*L
+
+__unknown_file (0.
+,mage.abilities.effects.keyword.BolsterEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)ÌÍ
+	O@ O(Ö
+%34mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%31mage.counters.CounterType*(
+
+__unknown_file (
+
+
+%33int2createInstance(I)íè
+O( O(?D
+%35=mage.abilities.effects.common.counter.AddCountersTargetEffect"=mage.abilities.effects.common.counter.AddCountersTargetEffectï
+í
+	O$ O(Ü
+%36"^mage.abilities.effects.common.counter.AddCountersTargetEffect#<init>(Lmage/counters/Counter;)V*b
+
+__unknown_file (F
+D
+%35=mage.abilities.effects.common.counter.AddCountersTargetEffect*:
+
+__unknown_file (
+
+%34mage.counters.Counter°
+û
+	O O(á'
+effectmage.abilities.effects.Effect"__id*b
+
+__unknown_file (F
+D
+%35=mage.abilities.effects.common.counter.AddCountersTargetEffecta_
+P0 P(;,
+%37%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget«
+ƒ
+P, P(S
+%38"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%37%mage.target.targetpointer.FixedTarget*O
+
+__unknown_file (3
+1
+selectedCreaturemage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game˝˙
+P P(T$
+%39mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%37%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)€ÿ
+Q Q(5
+%40boolean"Nmage.abilities.effects.Effect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)"
+Q Q(6
+""*ˇ
+startingBlock4 4(3ä
+á
+3 3(
+%41"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+4 4("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%41î
+ë
+3 3(
+%42"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+4, 4(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%42*
+18*€
+5K+ K(/ß§
+K= K(T
+%29java.util.UUID"3mage.target.Target#getFirstTarget()Ljava/util/UUID;*:
+
+__unknown_file (
+
+targetmage.target.Target2getFirstTarget()åâ
+K+ K(U$
+%30mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%29java.util.UUID2getPermanent(Ljava/util/UUID;)ä
+á
+K K(U1
+selectedCreaturemage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%30mage.game.permanent.Permanent*
+2
+3*–
+6GS G(y{
+y
+	GS G(ä
+%18java.lang.String"__concat*4
+GS G(y(&
+$creature you control with toughness *
+	G| G(ä
+""}
+G1 G(R;
+%194mage.filter.common.FilterControlledCreaturePermanent"4mage.filter.common.FilterControlledCreaturePermanent˘
+ˆ
+	G- G(ã
+%20"Pmage.filter.common.FilterControlledCreaturePermanent#<init>(Ljava/lang/String;)V*Y
+
+__unknown_file (=
+;
+%194mage.filter.common.FilterControlledCreaturePermanent*5
+
+__unknown_file (
+
+%18java.lang.Stringñ
+ì
+	G G(å%
+filtermage.filter.FilterPermanent"__id*Y
+
+__unknown_file (=
+;
+%194mage.filter.common.FilterControlledCreaturePermanent\
+Z
+H6 H(M$
+%21mage.constants.ComparisonType"__id*"
+
+__unknown_file (
+""}{
+H# H(5:
+%223mage.filter.predicate.mageobject.ToughnessPredicate"3mage.filter.predicate.mageobject.ToughnessPredicateµ
+≤
+H H(^
+%23"]mage.filter.predicate.mageobject.ToughnessPredicate#<init>(Lmage/constants/ComparisonType;I)V*X
+
+__unknown_file (<
+:
+%223mage.filter.predicate.mageobject.ToughnessPredicate*B
+
+__unknown_file (&
+$
+%21mage.constants.ComparisonType*"
+
+__unknown_file (
+""¬ø
+H H(_
+%24mage.filter.Filter"Qmage.filter.FilterImpl#add(Lmage/filter/predicate/Predicate;)Lmage/filter/Filter;*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent*X
+
+__unknown_file (<
+:
+%223mage.filter.predicate.mageobject.ToughnessPredicate2&add(Lmage/filter/predicate/Predicate;)MK
+I( I(7"
+%25mage.target.TargetPermanent"mage.target.TargetPermanent»
+≈
+I$ I(K
+%26"Emage.target.TargetPermanent#<init>(IILmage/filter/FilterPermanent;Z)V*@
+
+__unknown_file ($
+"
+%25mage.target.TargetPermanent* 
+
+__unknown_file (2* 
+
+__unknown_file (2*C
+
+__unknown_file ('
+%
+filtermage.filter.FilterPermanent* 
+
+__unknown_file (2r
+p
+I I(L
+targetmage.target.Target"__id*@
+
+__unknown_file ($
+"
+%25mage.target.TargetPermanentç
+ä
+J0 J(7
+%27mage.constants.Outcome"__id*Y
+
+__unknown_file (=*;.
+,mage.abilities.effects.keyword.BolsterEffect"	
+outcome™ß
+J J(N
+%28boolean"wmage.players.Player#chooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%27mage.constants.Outcome*:
+
+__unknown_file (
+
+targetmage.target.Target*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2bchooseTarget(Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)*	
+2
+3
+5*\
+8E E(B
+@
+E" E(3
+
+%17int"__id*"
+
+__unknown_file (
+""*	
+2
+3
+6*ö
+9< <($b
+`
+< <($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ù
+ö
+< <($*
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%8java.util.List*"
+
+__unknown_file (
+""*
+13
+8*û
+10A% A(.™ß
+A% A(=
+%15mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()qo
+A% A(H
+
+%16int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%15mage.MageInt2
+getValue()i
+g
+B B(+1
+selectedCreaturemage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""*
+9*∑
+11@ @()™ß
+@- @(E
+%13mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()qo
+@- @(P
+
+%14int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%13mage.MageInt2
+getValue()*
+9
+10*∆
+12>% >(.™ß
+>% >(=
+%11mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()qo
+>% >(H
+
+%12int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%11mage.MageInt2
+getValue()ê
+ç
+? ?(01
+selectedCreaturemage.game.permanent.Permanent"__id*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*
+9:"
+4 4(#
+gamemage.game.Game:,
+4$ 4(2 
+sourcemage.abilities.AbilityB0.
+,mage.abilities.effects.keyword.BolsterEffectHP

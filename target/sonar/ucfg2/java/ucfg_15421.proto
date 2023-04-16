@@ -1,0 +1,94 @@
+
+Fmage.game.combat.CombatGroup#hasFirstOrDoubleStrike(Lmage/game/Game;)Z_
+UD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/combat/CombatGroup.java= =()"1*ë
+1> >(u
+s
+> >(&
+%0java.util.List"__id*K
+
+__unknown_file (/*-
+mage.game.combat.CombatGroup"
+	attackers¢Ÿ
+> >(/
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%0java.util.List2stream()t
+r
+>1 >(9
+%2java.util.List"__id*J
+
+__unknown_file (.*,
+mage.game.combat.CombatGroup"
+
+blockers¢Ÿ
+>1 >(B
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%2java.util.List2stream()Ì
+É
+> >(C
+%4java.util.stream.Stream"kjava.util.stream.Stream#concat(Ljava/util/stream/Stream;Ljava/util/stream/Stream;)Ljava/util/stream/Stream;*7
+
+__unknown_file ("
+java.util.stream.Stream*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*;
+
+__unknown_file (
+
+%3java.util.stream.Stream”
+‘
+? ?(0!
+%5java.util.function.Function"__declareFunction*O
+
+__unknown_file (31
+/__sonar_lambda_308$mage.game.combat.CombatGroup†
+ƒ
+
+__unknown_file (+
+!
+%5java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game£ 
+> ?(1
+%7java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%5java.util.function.Function2"map(Ljava/util/function/Function;)Ž‹
+> @()
+%8java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)êç
+> A(7
+%9boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)"
+> A(8
+"":"
+=* =(3
+gamemage.game.GameB 
+mage.game.combat.CombatGroupHP

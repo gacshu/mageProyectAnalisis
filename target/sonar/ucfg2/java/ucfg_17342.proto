@@ -1,0 +1,277 @@
+
+kmage.abilities.hint.common.DayNightHint#getText(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;j
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/hint/common/DayNightHint.java ("startingBlock*∑	
+13 (®•
+ (0
+%1boolean" mage.game.Game#checkDayNight(Z)Z*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22checkDayNight(Z)öó
+ (
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()àÖ
+ (;3
+%3-mage.watchers.common.CastSpellLastTurnWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%2mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)⁄◊
+ (/	
+%4int"Mmage.watchers.common.CastSpellLastTurnWatcher#getActivePlayerThisTurnCount()I*Q
+
+__unknown_file (5
+3
+%3-mage.watchers.common.CastSpellLastTurnWatcher2getActivePlayerThisTurnCount()DB
+ (,
+%5java.lang.StringBuilder"java.lang.StringBuilder∂
+≥
+ (?
+%6"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%5java.lang.StringBuilder*/
+
+__unknown_file (
+It's currently n
+l
+ (@
+sbjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%5java.lang.StringBuilder*
+11
+12*;
+14 (0"+
+ (1
+It's neither day nor night.*ô
+15 (}
+ (
+%0boolean"mage.game.Game#hasDayNight()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2hasDayNight()*
+13
+14*Ï
+1 (*äá
+ (*
+%25java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%22java.lang.String2append(Ljava/lang/String;)Ä˝
+   ( 
+%26java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*+
+
+__unknown_file (
+ next turn.2append(Ljava/lang/String;)•¢
+! !(
+%27java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2
+toString()"%
+! !(
+
+%27java.lang.String*v
+2$ ()b
+`
+$ ()
+%22java.lang.String"__id*5
+
+__unknown_file (
+
+%24java.lang.String*
+1*v
+3 (!b
+`
+ (!
+%22java.lang.String"__id*5
+
+__unknown_file (
+
+%23java.lang.String*
+1*Å
+startingBlock (5ä
+á
+ (
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ (#
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%28ï
+í
+ (
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityb
+`
+- (4!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%29*
+15*¢
+4 (Säá
+ (S
+%20java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%17java.lang.String2append(Ljava/lang/String;)˝˙
+ (
+%21java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*(
+
+__unknown_file (
+
+ become 2append(Ljava/lang/String;)*
+2
+3*v
+5M (Rb
+`
+M (R
+%17java.lang.String"__id*5
+
+__unknown_file (
+
+%19java.lang.String*
+4*v
+6H (Jb
+`
+H (J
+%17java.lang.String"__id*5
+
+__unknown_file (
+
+%18java.lang.String*
+4*g
+81 (?P
+N
+1 (D
+%14boolean"__id*,
+
+__unknown_file (
+
+%16boolean*
+5
+6*g
+9 ()P
+N
+ (.
+%14boolean"__id*,
+
+__unknown_file (
+
+%15boolean*
+5
+6*û
+10 (*âÜ
+ (*
+%10java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*4
+
+__unknown_file (
+
+%7java.lang.String2append(Ljava/lang/String;)éã
+ (.
+%11java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*9
+
+__unknown_file (
+, active player has cast 2append(Ljava/lang/String;)’“
+ (!
+%12java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)êç
+ (0
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*;
+
+__unknown_file (
+ spells this turn. It will 2append(Ljava/lang/String;)*
+8
+9*v
+11" ()`
+^
+" ()
+%7java.lang.String"__id*4
+
+__unknown_file (
+
+%9java.lang.String*
+10*v
+12 (`
+^
+ (
+%7java.lang.String"__id*4
+
+__unknown_file (
+
+%8java.lang.String*
+10:"
+ ($
+gamemage.game.Game:-
+% (4!
+abilitymage.abilities.AbilityB+)
+'mage.abilities.hint.common.DayNightHintH

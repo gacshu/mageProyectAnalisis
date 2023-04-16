@@ -1,0 +1,804 @@
+
+¤mage.abilities.effects.common.continuous.BecomesCreatureSourceEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z‡
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/BecomesCreatureSourceEffect.javaN N("startingBlock*Ä
+24k o(¬
+©
+l l(&
+%20mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+tokenüù
+l l((
+%21mage.ObjectColor"<mage.MageObject#getColor(Lmage/game/Game;)Lmage/ObjectColor;*D
+
+__unknown_file ((
+&
+%20mage.game.permanent.token.Token*4
+
+__unknown_file (
+
+gamemage.game.Game2getColor(Lmage/game/Game;)}{
+l l(3
+%22boolean"mage.ObjectColor#hasColor()Z*5
+
+__unknown_file (
+
+%21mage.ObjectColor2
+hasColor()*
+23
+1* 
+25h h(¬
+©
+h1 h(6&
+%18mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+tokenÛØ
+h h(7
+%19void"Dmage.MageObject#copySubTypesFrom(Lmage/game/Game;Lmage/MageObject;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+%18mage.game.permanent.token.Token23copySubTypesFrom(Lmage/game/Game;Lmage/MageObject;)*
+1*–
+26f f(ÿü
+f f(:
+%17void"9mage.MageObject#removeAllCreatureTypes(Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2(removeAllCreatureTypes(Lmage/game/Game;)*
+25*ı
+27e7 e(@âß
+e7 e(M
+%16boolean")mage.MageObject#isLand(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isLand(Lmage/game/Game;)*
+25
+26*Ã
+28e e(+¨
+¥
+e e(+
+%15java.lang.String"__id*z
+
+__unknown_file (^*\F
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+theyAreStillType*
+25
+27*À
+29d0 d(@¨
+¥
+d0 d(@
+%13java.lang.String"__id*z
+
+__unknown_file (^*\F
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+theyAreStillType{y
+d0 d(J
+%14boolean"java.lang.String#isEmpty()Z*5
+
+__unknown_file (
+
+%13java.lang.String2	isEmpty()*
+26
+28*Ã
+30d d($¨
+¥
+d d($
+%12java.lang.String"__id*z
+
+__unknown_file (^*\F
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+theyAreStillType*
+28
+29*
+31` `(&[
+Y
+` `(&#
+cardTypemage.constants.CardType"__id*"
+
+__unknown_file (
+""—
+”
+` `(&#
+cardTypemage.constants.CardType"
+__arrayGet*3
+
+__unknown_file (
+
+%10java.util.List*"
+
+__unknown_file (
+""*
+30
+32*Ã
+10~ ~(!¢Ÿ
+~ ~(,
+%38mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()µ
+²
+~B ~(G/
+%39(mage.abilities.dynamicvalue.DynamicValue"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+power–“
+~B ~(e
+
+%40int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%39(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)·´
+~ ~(f
+%41void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%38mage.MageInt*(
+
+__unknown_file (
+
+
+%40int2setModifiedBaseValue(I)*
+7*÷
+32a a(àİ
+a a(9
+%11void"Hmage.MageObject#addCardType(Lmage/game/Game;[Lmage/constants/CardType;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*A
+
+__unknown_file (%
+#
+cardTypemage.constants.CardType27addCardType(Lmage/game/Game;[Lmage/constants/CardType;)*
+31*Â
+33`) `(.«
+¨
+`) `(.%
+%9mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+tokenıú
+`) `(@
+%10java.util.List"=mage.MageObject#getCardType(Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%9mage.game.permanent.token.Token*4
+
+__unknown_file (
+
+gamemage.game.Game2getCardType(Lmage/game/Game;)*
+31*Ï
+11} }(µ
+²
+} }(/
+%37(mage.abilities.dynamicvalue.DynamicValue"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+power*
+9
+10*
+34^ ^(öó
+^ ^(6
+
+%8void"5mage.MageObject#removeAllCardTypes(Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2$removeAllCardTypes(Lmage/game/Game;)*
+33*ø
+12|> |(QŞÛ
+|> |(S
+%36boolean"Bmage.abilities.effects.ContinuousEffectImpl#isCharacterDefining()Z*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect2isCharacterDefining()*
+11
+1*o
+13| |($V
+T
+|( |(9
+%35mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""*
+12
+1*"
+36Y Y("
+Y Y(
+""*ù
+14{G {(ZŞÛ
+{G {(\
+%34boolean"Bmage.abilities.effects.ContinuousEffectImpl#isCharacterDefining()Z*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect2isCharacterDefining()*
+13
+11*q
+15	z ˆ(V
+T
+{! {(C
+%33mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""*
+13
+14*Ù
+37W W(Â¿
+W W(
+
+%7void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect2	discard()*
+36*˜
+38V V(¦
+£
+V V(
+%5mage.constants.Duration"__id*r
+
+__unknown_file (V*TF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+
+durationU
+S
+V V(+
+%6mage.constants.Duration"__id*"
+
+__unknown_file (
+""*
+36
+37*”
+17u u($Y
+W
+u u($!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""Ÿ
+œ
+u u($!
+abilitymage.abilities.Ability"
+__arrayGet*=
+
+__unknown_file (!
+
+%30mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+18
+1*ş
+18v v(©¦
+v2 v(F
+%31java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()»¸
+v v(M
+%32void"cmage.game.permanent.Permanent#addAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*3
+
+__unknown_file (
+
+%31java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2DaddAbility(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+17*„
+19u' u(,¬
+©
+u' u(,&
+%29mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+token¾»
+u' u(;
+%30mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*D
+
+__unknown_file ((
+&
+%29mage.game.permanent.token.Token2getAbilities()*
+17*%
+1
+‹ ‹("
+
+‹ ‹(
+""*ş
+2[ [(S
+Q
+\ \(&
+%61mage.constants.Layer"__id*"
+
+__unknown_file (
+""S
+Q
+k k('
+%62mage.constants.Layer"__id*"
+
+__unknown_file (
+""S
+Q
+q q(/
+%63mage.constants.Layer"__id*"
+
+__unknown_file (
+""S
+Q
+z z($
+%64mage.constants.Layer"__id*"
+
+__unknown_file (
+""*
+24
+15
+19
+20
+33
+1
+34*ó
+startingBlockN N(S‘
+
+M M(
+%65"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+layermage.constants.Layer^
+\
+N N($
+layermage.constants.Layer"__annotation*#
+
+__unknown_file (
+
+%65—
+”
+M M(
+%66"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+sublayermage.constants.SubLayerd
+b
+N/ N(7#
+sublayermage.constants.SubLayer"__annotation*#
+
+__unknown_file (
+
+%66”
+‘
+M M(
+%67"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+NA N(G 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%67Š
+‡
+M M(
+%68"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+NN N(R
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%68*
+42*Ğ
+4
+… …(!¬©
+
+… …(0
+%56mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()®
+«
+
+…F …(K&
+%57mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+token¨¥
+
+…F …(Z
+%58mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*D
+
+__unknown_file ((
+&
+%57mage.game.permanent.token.Token2getToughness()sq
+
+…F …(e
+
+%59int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%58mage.MageInt2
+getValue()¹¶
+
+… …(f
+%60void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%56mage.MageInt*(
+
+__unknown_file (
+
+
+%59int2setModifiedBaseValue(I)*
+1*ó
+5
+„ „($®
+«
+
+„ „($&
+%54mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+token¨¥
+
+„ „(3
+%55mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*D
+
+__unknown_file ((
+&
+%54mage.game.permanent.token.Token2getToughness()*
+4
+1*Ø
+6
+ƒ ƒ(!¬©
+
+ƒ ƒ(0
+%50mage.MageInt",mage.MageObject#getToughness()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getToughness()»
+¸
+
+ƒF ƒ(O/
+%51(mage.abilities.dynamicvalue.DynamicValue"__id*s
+
+__unknown_file (W*UF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+	toughness˜•
+
+ƒF ƒ(m
+
+%52int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*M
+
+__unknown_file (1
+/
+%51(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*d
+
+__unknown_file (HF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)¹¶
+
+ƒ ƒ(n
+%53void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%50mage.MageInt*(
+
+__unknown_file (
+
+
+%52int2setModifiedBaseValue(I)*
+1*Õ
+7
+‚ ‚(!»
+¸
+
+‚ ‚(!/
+%49(mage.abilities.dynamicvalue.DynamicValue"__id*s
+
+__unknown_file (W*UF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+	toughness*
+5
+6*À
+8
+€ €(!¤¡
+
+€ €(,
+%44mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2
+getPower()®
+«
+
+€B €(G&
+%45mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+token 
+
+€B €(R
+%46mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*D
+
+__unknown_file ((
+&
+%45mage.game.permanent.token.Token2
+getPower()sq
+
+€B €(]
+
+%47int"mage.MageInt#getValue()I*1
+
+__unknown_file (
+
+%46mage.MageInt2
+getValue()¹¶
+
+€ €(^
+%48void"%mage.MageInt#setModifiedBaseValue(I)V*1
+
+__unknown_file (
+
+%44mage.MageInt*(
+
+__unknown_file (
+
+
+%47int2setModifiedBaseValue(I)*
+7*å
+9 ($¬
+©
+ ($&
+%42mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+token›
+ (/
+%43mage.MageInt"(mage.MageObject#getPower()Lmage/MageInt;*D
+
+__unknown_file ((
+&
+%42mage.game.permanent.token.Token2
+getPower()*
+7
+8*Ó
+40S S(¨¥
+S* S(>
+%3java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Š‡
+S S(?#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+S S(?*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+2
+38*ö
+41Q Q(*§
+¤
+Q Q(*
+%0java.util.List"__id*|
+
+__unknown_file (`*^F
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+affectedObjectList
+Š
+Q Q(1
+%1mage.MageObjectReference"
+__arrayGet*2
+
+__unknown_file (
+
+%0java.util.List*
+
+__unknown_file (2 ›
+Q Q(D#
+%2mage.game.permanent.Permanent"Vmage.MageObjectReference#getPermanent(Lmage/game/Game;)Lmage/game/permanent/Permanent;*<
+
+__unknown_file ( 
+
+%1mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanent(Lmage/game/Game;)
+
+Q Q(D*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+2
+38*|
+42O O(b
+`
+O O(*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""*
+40
+41*
+20s s(©¦
+s1 s(E
+%27java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Ú×
+s s(L
+%28void"Smage.game.permanent.Permanent#removeAllAbilities(Ljava/util/UUID;Lmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%27java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game24removeAllAbilities(Ljava/util/UUID;Lmage/game/Game;)*
+19*
+23m m(€ı
+m m(,
+%23mage.ObjectColor"<mage.MageObject#getColor(Lmage/game/Game;)Lmage/ObjectColor;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getColor(Lmage/game/Game;)¬
+©
+m6 m(;&
+%24mage.game.permanent.token.Token"__id*o
+
+__unknown_file (S*QF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffect"
+tokenüù
+m6 m(J
+%25mage.ObjectColor"<mage.MageObject#getColor(Lmage/game/Game;)Lmage/ObjectColor;*D
+
+__unknown_file ((
+&
+%24mage.game.permanent.token.Token*4
+
+__unknown_file (
+
+gamemage.game.Game2getColor(Lmage/game/Game;)ÖÓ
+m m(K
+%26void".mage.ObjectColor#setColor(Lmage/ObjectColor;)V*5
+
+__unknown_file (
+
+%23mage.ObjectColor*5
+
+__unknown_file (
+
+%25mage.ObjectColor2setColor(Lmage/ObjectColor;)*
+1:)
+N N(%
+layermage.constants.Layer:/
+N& N(8#
+sublayermage.constants.SubLayer:,
+N9 N(H 
+sourcemage.abilities.Ability:"
+NI N(R
+gamemage.game.GameBHF
+Dmage.abilities.effects.common.continuous.BecomesCreatureSourceEffectHP

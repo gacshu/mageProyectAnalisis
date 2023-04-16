@@ -1,0 +1,205 @@
+
+mage.abilities.effects.common.ExileReturnBattlefieldOwnerNextEndStepSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z”
+‰D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileReturnBattlefieldOwnerNextEndStepSourceEffect.java( (("startingBlock*!
+2/ /("
+/ /(
+""*ä
+3- -($ÈÅ
+- -(L#
+%2mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)
+
+- -(M*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+2
+1*þ
+startingBlock( ((3Š
+‡
+' '(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+( (("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14”
+‘
+' '(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+(, ((2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%15*
+5*!
+4+ +("
++ +(
+""*«
+5) )( °­
+)+ )(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+) )(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+) )(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+3
+4*´
+11 1(Q
+O
+1( 1(3
+%3mage.constants.Zone"__id*"
+
+__unknown_file (
+""¡ž
+1 1(B
+%4boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*7
+
+__unknown_file (
+
+%3mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)³°
+4 4(DT
+%5Nmage.abilities.effects.common.ReturnToBattlefieldUnderOwnerControlTargetEffect"Nmage.abilities.effects.common.ReturnToBattlefieldUnderOwnerControlTargetEffect©
+¦
+4 4(X
+%6"Zmage.abilities.effects.common.ReturnToBattlefieldUnderOwnerControlTargetEffect#<init>(ZZ)V*r
+
+__unknown_file (V
+T
+%5Nmage.abilities.effects.common.ReturnToBattlefieldUnderOwnerControlTargetEffect*"
+
+__unknown_file (
+""* 
+
+__unknown_file (2¦£
+5: 5(K
+%7java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()`^
+5. 5(9+
+%8%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget™
+–
+5* 5(R
+%9"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%7java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game­ª
+4 5(S$
+%10mage.abilities.effects.Effect"|mage.abilities.effects.EffectImpl#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*r
+
+__unknown_file (V
+T
+%5Nmage.abilities.effects.common.ReturnToBattlefieldUnderOwnerControlTargetEffect*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)°­
+3, 3(ZS
+%11Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility"Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbilityÂ
+¿
+3( 6(	
+%12"umage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility#<init>(Lmage/abilities/effects/Effect;)V*q
+
+__unknown_file (U
+S
+%11Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*B
+
+__unknown_file (&
+$
+%10mage.abilities.effects.Effectèå
+3 6(
+%13java.util.UUID"{mage.game.Game#addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game*q
+
+__unknown_file (U
+S
+%11Lmage.abilities.common.delayed.AtTheBeginOfNextEndStepDelayedTriggeredAbility*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2\addDelayedTriggeredAbility(Lmage/abilities/DelayedTriggeredAbility;Lmage/abilities/Ability;)"
+7 7(
+"":"
+( ((#
+gamemage.game.Game:,
+($ ((2 
+sourcemage.abilities.AbilityBTR
+Pmage.abilities.effects.common.ExileReturnBattlefieldOwnerNextEndStepSourceEffectHP

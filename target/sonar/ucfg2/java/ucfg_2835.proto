@@ -1,0 +1,312 @@
+
+€mage.abilities.keyword.RiotReplacementEffect#replaceEvent(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Ze
+[D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/RiotAbility.javaE E("startingBlock*‡
+
+2M M(Ö
+Ó
+M; M(U*
+%18#mage.abilities.keyword.HasteAbility"Vmage.abilities.keyword.HasteAbility#getInstance()Lmage/abilities/keyword/HasteAbility;*C
+
+__unknown_file ('"%
+#mage.abilities.keyword.HasteAbilityV
+T
+MW M(f
+%19mage.constants.Duration"__id*"
+
+__unknown_file (
+""˜•
+M# M(:G
+%20@mage.abilities.effects.common.continuous.GainAbilitySourceEffect"@mage.abilities.effects.common.continuous.GainAbilitySourceEffect€
+ý
+M M(g
+%21"{mage.abilities.effects.common.continuous.GainAbilitySourceEffect#<init>(Lmage/abilities/Ability;Lmage/constants/Duration;)V*e
+
+__unknown_file (I
+G
+%20@mage.abilities.effects.common.continuous.GainAbilitySourceEffect*H
+
+__unknown_file (,
+*
+%18#mage.abilities.keyword.HasteAbility*<
+
+__unknown_file ( 
+
+%19mage.constants.Duration£ 
+M M(p
+%22void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*e
+
+__unknown_file (I
+G
+%20@mage.abilities.effects.common.continuous.GainAbilitySourceEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+1*Õ
+3J J(¨¥
+J# J(:
+%8java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()‰
+†
+J# J(a
+%9java.lang.String"__concat*$
+J# J(:
+
+%8java.lang.String*2
+J= J(a&$
+" choose to put a +1/+1 counter on §¤
+Jd J(v
+%10java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2	getName()|
+z
+J# J(v
+%11java.lang.String"__concat*$
+J# J(a
+
+%9java.lang.String*%
+Jd J(v
+
+%10java.lang.StringÝÚ
+J J(w
+%12void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%11java.lang.String2!informPlayers(Ljava/lang/String;)X
+V
+K% K(5 
+%13mage.counters.CounterType"__id*"
+
+__unknown_file (
+""À½
+K% K(F
+%14mage.counters.Counter"Amage.counters.CounterType#createInstance()Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%13mage.counters.CounterType2createInstance()±®
+KH K(`
+%15java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()½º
+	Kp K(‰
+%16java.util.List">mage.game.events.GameEvent#getAppliedEffects()Ljava/util/List;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getAppliedEffects()ðí
+	K K(Š
+%17boolean"}mage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/List;)Z*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%14mage.counters.Counter*3
+
+__unknown_file (
+
+%15java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%16java.util.List2laddCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;Ljava/util/List;)*
+1*þ
+startingBlockE E(K—
+”
+D D(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+E* E(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%23”
+‘
+D D(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+E9 E(? 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%24Š
+‡
+D D(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+EF E(J
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25*
+6*ð
+
+4I I(Œ
+‰
+I% I(,
+%3mage.constants.Outcome"__id*Y
+
+__unknown_file (=*;.
+,mage.abilities.keyword.RiotReplacementEffect"	
+outcome¬©
+I8 I(M
+%4java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2getLogName()k
+i
+I. I(M
+%5java.lang.String"__concat*
+I. I(5	
+Have *$
+I8 I(M
+
+%4java.lang.String©
+¦
+	I. I(’
+%6java.lang.String"__concat*$
+I. I(M
+
+%5java.lang.String*Q
+	IP I(’DB
+@ enter the battlefield with a +1/+1 counter on it or with haste?þ
+	I I(Á
+%7boolean"¨mage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%3mage.constants.Outcome*4
+
+__unknown_file (
+
+%6java.lang.String*"
+
+__unknown_file (
+""*-
+
+__unknown_file (
++1/+1 counter*%
+
+__unknown_file (	
+Haste*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2“chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+3*Š
+6F: F(?ÙÖ
+F F(L#
+%0mage.game.permanent.Permanent"Umage.game.events.EntersTheBattlefieldEvent#getTarget()Lmage/game/permanent/Permanent;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTarget()€
+~
+F F(M)
+creaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent°­
+G+ G(C
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+G G(D
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+G G(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+4
+1*!
+1P P("
+P P(
+"":/
+E  E(0#
+eventmage.game.events.GameEvent:,
+E1 E(@ 
+sourcemage.abilities.Ability:"
+EA E(J
+gamemage.game.GameB0.
+,mage.abilities.keyword.RiotReplacementEffectHP

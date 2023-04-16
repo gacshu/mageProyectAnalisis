@@ -1,0 +1,104 @@
+
+umage.target.common.TargetActivatedOrTriggeredAbility#possibleTargets(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/Set;w
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetActivatedOrTriggeredAbility.javaH H($"startingBlock*„
+startingBlockH$ H(H—
+”
+G G(
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDd
+b
+H* H(<$
+sourceControllerIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%9Š
+‡
+G G(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+HC H(G
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+1*¼
+1I I(¨¥
+I I( 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()®«
+I I('
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack2stream()Ž‹
+I J(Y
+%2java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)¬
+©
+K K(I!
+%3java.util.function.Function"__declareFunction*g
+
+__unknown_file (KI
+G__sonar_lambda_235$mage.target.common.TargetActivatedOrTriggeredAbility£ 
+I K(J
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%3java.util.function.Function2"map(Ljava/util/function/Function;)­
+ª
+L L(+ 
+%7java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors—”
+I L(,
+%8java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%7java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"!
+I L(-
+
+%8java.util.Set:0
+H% H(=$
+sourceControllerIdjava.util.UUID:"
+H> H(G
+gamemage.game.GameB86
+4mage.target.common.TargetActivatedOrTriggeredAbilityH

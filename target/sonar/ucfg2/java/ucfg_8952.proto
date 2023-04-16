@@ -1,0 +1,187 @@
+
+__sonar_lambda_179$l
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/importer/O8dDeckImporter.java= I(	"startingBlock*ç
+2A  A((¤¡
+A  A(.$
+%4mage.cards.repository.CardInfo"*java.util.Optional#get()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+cardInfojava.util.Optional2get()~
+|
+A A(/&
+infomage.cards.repository.CardInfo"__id*B
+
+__unknown_file (&
+$
+%4mage.cards.repository.CardInfoï
+ì
+C C(1	
+%5int"Rmage.cards.decks.importer.O8dDeckImporter#getQuantityFromNode(Lorg/w3c/dom/Node;)I*I
+
+__unknown_file (-"+
+)mage.cards.decks.importer.O8dDeckImporter*6
+
+__unknown_file (
+
+nodeorg.w3c.dom.Node²¯
+D) D(7
+%6java.lang.String":mage.cards.repository.CardInfo#getName()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+infomage.cards.repository.CardInfo2	getName()¾»
+D9 D(M
+%7java.lang.String"@mage.cards.repository.CardInfo#getCardNumber()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+infomage.cards.repository.CardInfo2getCardNumber()¸µ
+DO D(`
+%8java.lang.String"=mage.cards.repository.CardInfo#getSetCode()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+infomage.cards.repository.CardInfo2getSetCode()PN
+D D((#
+%9mage.cards.decks.DeckCardInfo"mage.cards.decks.DeckCardInfoØ
+Õ
+D D(a
+%10"]mage.cards.decks.DeckCardInfo#<init>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)V*A
+
+__unknown_file (%
+#
+%9mage.cards.decks.DeckCardInfo*4
+
+__unknown_file (
+
+%6java.lang.String*4
+
+__unknown_file (
+
+%7java.lang.String*4
+
+__unknown_file (
+
+%8java.lang.String‹
+ˆ
+B D(b
+%11java.util.List"Bjava.util.Collections#nCopies(ILjava/lang/Object;)Ljava/util/List;*5
+
+__unknown_file ("
+java.util.Collections*'
+
+__unknown_file (
+	
+%5int*A
+
+__unknown_file (%
+#
+%9mage.cards.decks.DeckCardInfo¤¡
+B D(k
+%12java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*3
+
+__unknown_file (
+
+%11java.util.List2stream()",
+B D(l 
+
+%12java.util.stream.Stream*È
+3> >(¤¡
+> >(/
+%1java.lang.String"3org.w3c.dom.Node#getTextContent()Ljava/lang/String;*6
+
+__unknown_file (
+
+nodeorg.w3c.dom.Node2getTextContent()b
+`
+> >(0
+namejava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.String®«
+?* ?(E
+%2java.util.Optional"[mage.cards.decks.importer.CardLookup#lookupCardInfo(Ljava/lang/String;)Ljava/util/Optional;*L
+
+__unknown_file (0
+.
+lookup$mage.cards.decks.importer.CardLookup*6
+
+__unknown_file (
+
+namejava.lang.String2"lookupCardInfo(Ljava/lang/String;)j
+h
+? ?(F
+cardInfojava.util.Optional"__id*6
+
+__unknown_file (
+
+%2java.util.Optionalˆ…
+@ @($
+%3boolean"java.util.Optional#isPresent()Z*<
+
+__unknown_file ( 
+
+cardInfojava.util.Optional2isPresent()*
+2
+1*ë
+startingBlock= I(	ª
+§
+
+__unknown_file (.
+lookup$mage.cards.decks.importer.CardLookup"__id*U
+
+__unknown_file (9*7+
+)mage.cards.decks.importer.O8dDeckImporter"
+lookup
+š
+
+__unknown_file (!
+errorsjava.lang.StringBuilder"__id*U
+
+__unknown_file (9*7+
+)mage.cards.decks.importer.O8dDeckImporter"
+errors*
+3*û
+1F F(Œ
+F F(7
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+errorsjava.lang.StringBuilder*6
+
+__unknown_file (
+Could not find card: '2append(Ljava/lang/String;)Œ‰
+F F(D
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%13java.lang.StringBuilder*6
+
+__unknown_file (
+
+namejava.lang.String2append(Ljava/lang/String;)ùö
+F F(R
+%15java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%14java.lang.StringBuilder*#
+
+__unknown_file (
+'\n2append(Ljava/lang/String;) 
+
+G G(%
+%16java.util.stream.Stream"8java.util.stream.Stream#empty()Ljava/util/stream/Stream;*7
+
+__unknown_file ("
+java.util.stream.Stream",
+G G(& 
+
+%16java.util.stream.Stream:$
+= =(
+nodeorg.w3c.dom.NodeB
+java.util.function.Function

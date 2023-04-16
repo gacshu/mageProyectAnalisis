@@ -1,0 +1,506 @@
+
+?mage.client.dialog.NewTableDialog#showDialog(Ljava/util/UUID;)Vm
+aD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/dialog/NewTableDialog.javaò ò("7*≈
+2
+™ ™(∫∑
+
+™ ™(
+%47void"*mage.client.dialog.MageDialog#setModal(Z)V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialog* 
+
+__unknown_file (22setModal(Z)î
+ë
+
+´ ´(
+%48void"3mage.client.dialog.NewTableDialog#setGameOptions()V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialog⁄◊
+
+¨ ¨(&
+%49void"#java.awt.Component#setLocation(II)V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialog*!
+
+__unknown_file (2ñ* 
+
+__unknown_file (2d2setLocation(II)*
+1*∏
+3
+ß ß(2p
+n
+
+ß ß(26
+tablePlayerPanel"mage.client.table.TablePlayerPanel"__id*"
+
+__unknown_file (
+""¨
+©
+
+ß ß(26
+tablePlayerPanel"mage.client.table.TablePlayerPanel"
+__arrayGet*3
+
+__unknown_file (
+
+%44java.util.List*"
+
+__unknown_file (
+""*
+2
+4*π
+4
+® ®( „‡
+
+®+ ®(K
+%45mage.players.PlayerType"Kmage.client.table.TablePlayerPanel#getPlayerType()Lmage/players/PlayerType;*T
+
+__unknown_file (8
+6
+tablePlayerPanel"mage.client.table.TablePlayerPanel2getPlayerType()ºπ
+
+® ®(L
+%46void"Dmage.client.table.TablePlayerPanel#init(ILmage/players/PlayerType;)V*T
+
+__unknown_file (8
+6
+tablePlayerPanel"mage.client.table.TablePlayerPanel*"
+
+__unknown_file (
+""*<
+
+__unknown_file ( 
+
+%45mage.players.PlayerType2 init(ILmage/players/PlayerType;)*
+3*ë
+5
+ß5 ß(<{
+y
+
+ß5 ß(<
+%44java.util.List"__id*N
+
+__unknown_file (2*0#
+!mage.client.dialog.NewTableDialog"	
+players*
+3*¸:
+6
+õ õ(*†
+ù
+
+õ õ(9
+%3java.lang.String";mage.client.SessionHandler#getSessionId()Ljava/lang/String;*:
+
+__unknown_file ("
+mage.client.SessionHandlerÉ
+Ä
+
+õ õ(96#
+!mage.client.dialog.NewTableDialog"
+lastSessionId"__id*4
+
+__unknown_file (
+
+%3java.lang.Stringí
+è
+
+ú ú(&
+%4 mage.client.table.NewPlayerPanel"__id*S
+
+__unknown_file (7*5#
+!mage.client.dialog.NewTableDialog"
+player1Panelü
+ú
+
+ú, ú(H
+%5java.lang.String":mage.client.SessionHandler#getUserName()Ljava/lang/String;*:
+
+__unknown_file ("
+mage.client.SessionHandlerˇ¸
+
+ú ú(I
+
+%6void"Cmage.client.table.NewPlayerPanel#setPlayerName(Ljava/lang/String;)V*D
+
+__unknown_file ((
+&
+%4 mage.client.table.NewPlayerPanel*4
+
+__unknown_file (
+
+%5java.lang.String2!setPlayerName(Ljava/lang/String;)Ö
+Ç
+
+ù ù(
+%7javax.swing.JComboBox"__id*Q
+
+__unknown_file (5*3#
+!mage.client.dialog.NewTableDialog"
+
+cbGameTypeú
+ô
+
+ù9 ù(V
+%8java.util.List"9mage.client.SessionHandler#getGameTypes()Ljava/util/List;*:
+
+__unknown_file ("
+mage.client.SessionHandlerïí
+
+ù9 ù(`
+%9java.lang.Object[]"+java.util.List#toArray()[Ljava/lang/Object;*2
+
+__unknown_file (
+
+%8java.util.List2	toArray()YW
+
+ù$ ù(8'
+%10 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModel‘
+—
+
+ù  ù(a
+%11"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%10 javax.swing.DefaultComboBoxModel*6
+
+__unknown_file (
+
+%9java.lang.Object[]ÉÄ
+
+ù ù(b
+%12void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*9
+
+__unknown_file (
+
+%7javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%10 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)Ü
+É
+
+û û(
+%13javax.swing.JComboBox"__id*Q
+
+__unknown_file (5*3#
+!mage.client.dialog.NewTableDialog"
+
+cbDeckType§
+°
+
+û9 û(V
+%14java.lang.String[]"<mage.client.SessionHandler#getDeckTypes()[Ljava/lang/String;*:
+
+__unknown_file ("
+mage.client.SessionHandlerYW
+
+û$ û(8'
+%15 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModel’
+“
+
+û  û(W
+%16"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%15 javax.swing.DefaultComboBoxModel*7
+
+__unknown_file (
+
+%14java.lang.String[]ÑÅ
+
+û û(X
+%17void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%13javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%15 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)ú
+ô
+
+ü ü($
+%18void";mage.client.dialog.NewTableDialog#selectLimitedByDefault()V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialogá
+Ñ
+
+† †(
+%19javax.swing.JComboBox"__id*R
+
+__unknown_file (6*4#
+!mage.client.dialog.NewTableDialog"
+cbTimeLimitæ
+ª
+
+†: †(Q&
+%20mage.constants.MatchTimeLimit[]"Fmage.constants.MatchTimeLimit#values()[Lmage/constants/MatchTimeLimit;*=
+
+__unknown_file (!"
+mage.constants.MatchTimeLimitYW
+
+†% †(9'
+%21 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModel‚
+ﬂ
+
+†! †(R
+%22"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%21 javax.swing.DefaultComboBoxModel*D
+
+__unknown_file ((
+&
+%20mage.constants.MatchTimeLimit[]ÑÅ
+
+† †(S
+%23void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%19javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%21 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)É
+Ä
+
+° °(
+%24javax.swing.JComboBox"__id*N
+
+__unknown_file (2*0#
+!mage.client.dialog.NewTableDialog"	
+cbRange∆
+√
+
+°6 °(O(
+%25!mage.constants.RangeOfInfluence[]"Jmage.constants.RangeOfInfluence#values()[Lmage/constants/RangeOfInfluence;*?
+
+__unknown_file (#"!
+mage.constants.RangeOfInfluenceYW
+
+°! °(5'
+%26 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModel‰
+·
+
+° °(P
+%27"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%26 javax.swing.DefaultComboBoxModel*F
+
+__unknown_file (*
+(
+%25!mage.constants.RangeOfInfluence[]ÑÅ
+
+° °(Q
+%28void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%24javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%26 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)ä
+á
+
+¢ ¢(
+%29javax.swing.JComboBox"__id*U
+
+__unknown_file (9*7#
+!mage.client.dialog.NewTableDialog"
+cbAttackOption‚
+ﬂ
+
+¢= ¢(]/
+%30(mage.constants.MultiplayerAttackOption[]"Xmage.constants.MultiplayerAttackOption#values()[Lmage/constants/MultiplayerAttackOption;*F
+
+__unknown_file (*"(
+&mage.constants.MultiplayerAttackOptionYW
+
+¢( ¢(<'
+%31 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModelÎ
+Ë
+
+¢$ ¢(^
+%32"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%31 javax.swing.DefaultComboBoxModel*M
+
+__unknown_file (1
+/
+%30(mage.constants.MultiplayerAttackOption[]ÑÅ
+
+¢ ¢(_
+%33void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%29javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%31 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)à
+Ö
+
+£ £(
+%34javax.swing.JComboBox"__id*S
+
+__unknown_file (7*5#
+!mage.client.dialog.NewTableDialog"
+cbSkillLevelÆ
+´
+
+£; £(N"
+%35mage.constants.SkillLevel[]">mage.constants.SkillLevel#values()[Lmage/constants/SkillLevel;*9
+
+__unknown_file ("
+mage.constants.SkillLevelYW
+
+£& £(:'
+%36 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModelﬁ
+€
+
+£" £(O
+%37"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%36 javax.swing.DefaultComboBoxModel*@
+
+__unknown_file ($
+"
+%35mage.constants.SkillLevel[]ÑÅ
+
+£ £(P
+%38void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%34javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%36 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)Ü
+É
+
+§ §(
+%39javax.swing.JComboBox"__id*Q
+
+__unknown_file (5*3#
+!mage.client.dialog.NewTableDialog"
+
+cbMulligan∆
+√
+
+§9 §(N(
+%40!mage.game.mulligan.MulliganType[]"Jmage.game.mulligan.MulliganType#values()[Lmage/game/mulligan/MulliganType;*?
+
+__unknown_file (#"!
+mage.game.mulligan.MulliganTypeYW
+
+§$ §(8'
+%41 javax.swing.DefaultComboBoxModel" javax.swing.DefaultComboBoxModel‰
+·
+
+§  §(O
+%42"=javax.swing.DefaultComboBoxModel#<init>([Ljava/lang/Object;)V*E
+
+__unknown_file ()
+'
+%41 javax.swing.DefaultComboBoxModel*F
+
+__unknown_file (*
+(
+%40!mage.game.mulligan.MulliganType[]ÑÅ
+
+§ §(P
+%43void"<javax.swing.JComboBox#setModel(Ljavax/swing/ComboBoxModel;)V*:
+
+__unknown_file (
+
+%39javax.swing.JComboBox*E
+
+__unknown_file ()
+'
+%41 javax.swing.DefaultComboBoxModel2%setModel(Ljavax/swing/ComboBoxModel;)*
+5*ñ
+7
+ô ô(}
+{
+
+ô ô(/#
+!mage.client.dialog.NewTableDialog"
+roomId"__id*6
+
+__unknown_file (
+
+roomIdjava.util.UUIDÉ
+Ä
+
+ö ö(
+%0java.lang.String"__id*T
+
+__unknown_file (8*6#
+!mage.client.dialog.NewTableDialog"
+lastSessionId†
+ù
+
+ö" ö(?
+%1java.lang.String";mage.client.SessionHandler#getSessionId()Ljava/lang/String;*:
+
+__unknown_file ("
+mage.client.SessionHandler‘—
+
+ö ö(@
+%2boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%0java.lang.String*4
+
+__unknown_file (
+
+%1java.lang.String2equals(Ljava/lang/Object;)*
+6
+1*(
+0 "!
+
+≥ ≥(
+implicit return*ç
+1
+∞ ∞(µ
+≤
+
+∞ ∞(
+%50void"4mage.client.dialog.NewTableDialog#onLoadSettings(I)V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialog*
+
+__unknown_file (2 æª
+
+≤ ≤(
+%51void",mage.client.dialog.MageDialog#setVisible(Z)V*A
+
+__unknown_file (%#
+!mage.client.dialog.NewTableDialog* 
+
+__unknown_file (22setVisible(Z)*
+0:&
+
+ò ò(&
+roomIdjava.util.UUIDB%#
+!mage.client.dialog.NewTableDialogH

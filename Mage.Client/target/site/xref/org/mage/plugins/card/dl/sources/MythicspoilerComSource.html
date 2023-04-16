@@ -1,0 +1,479 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>MythicspoilerComSource xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../../apidocs/org/mage/plugins/card/dl/sources/MythicspoilerComSource.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.plugins.card.dl.sources;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.client.MageFrame;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.remote.Connection;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.remote.Connection.ProxyType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.util.CardUtil;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.jsoup.Jsoup;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.jsoup.nodes.Document;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> org.jsoup.nodes.Element;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> org.jsoup.select.Elements;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> org.mage.plugins.card.dl.DownloadServiceInfo;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> org.mage.plugins.card.images.CardDownloadData;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> java.io.BufferedReader;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> java.io.IOException;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> java.io.InputStreamReader;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> java.net.HttpURLConnection;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> java.net.InetSocketAddress;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> java.net.Proxy;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> java.net.URL;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> java.util.prefs.Preferences;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">public</strong> enum <a name="MythicspoilerComSource" href="../../../../../../org/mage/plugins/card/dl/sources/MythicspoilerComSource.html#MythicspoilerComSource">MythicspoilerComSource</a> <strong class="jxr_keyword">implements</strong> <a name="CardImageSource" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageSource.html#CardImageSource">CardImageSource</a> {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>      instance;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, String&gt; setsAliases;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, String&gt; cardNameAliases;
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Set&lt;String&gt;&gt; cardNameAliasesStart;
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Map&lt;String, String&gt;&gt; sets;
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Set&lt;String&gt; supportedSets;
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;String, Map&lt;String, String&gt;&gt; manualLinks;
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      @Override
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      <strong class="jxr_keyword">public</strong> String getSourceName() {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <strong class="jxr_keyword">return</strong> <span class="jxr_string">"mythicspoiler.com"</span>;
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>      }
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>  
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>      <a name="MythicspoilerComSource" href="../../../../../../org/mage/plugins/card/dl/sources/MythicspoilerComSource.html#MythicspoilerComSource">MythicspoilerComSource</a>() {
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          supportedSets = <strong class="jxr_keyword">new</strong> LinkedHashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  <em class="jxr_comment">//        supportedSets.add("LEA");</em>
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          supportedSets.add(<span class="jxr_string">"LEB"</span>);
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  <em class="jxr_comment">//        supportedSets.add("2ED");</em>
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          supportedSets.add(<span class="jxr_string">"ARN"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          supportedSets.add(<span class="jxr_string">"ATQ"</span>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          supportedSets.add(<span class="jxr_string">"3ED"</span>);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          supportedSets.add(<span class="jxr_string">"LEG"</span>);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          supportedSets.add(<span class="jxr_string">"DRK"</span>);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          supportedSets.add(<span class="jxr_string">"FEM"</span>);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  <em class="jxr_comment">//        supportedSets.add("4ED");</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          supportedSets.add(<span class="jxr_string">"ICE"</span>);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          supportedSets.add(<span class="jxr_string">"CHR"</span>);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          supportedSets.add(<span class="jxr_string">"HML"</span>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          supportedSets.add(<span class="jxr_string">"ALL"</span>);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          supportedSets.add(<span class="jxr_string">"MIR"</span>);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          supportedSets.add(<span class="jxr_string">"VIS"</span>);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  <em class="jxr_comment">//        supportedSets.add("5ED");</em>
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  <em class="jxr_comment">//        supportedSets.add("POR");</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          supportedSets.add(<span class="jxr_string">"WTH"</span>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          supportedSets.add(<span class="jxr_string">"TMP"</span>);
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          supportedSets.add(<span class="jxr_string">"STH"</span>);
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          supportedSets.add(<span class="jxr_string">"EXO"</span>);
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>  <em class="jxr_comment">//        supportedSets.add("P02");</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  <em class="jxr_comment">//        supportedSets.add("UGL");</em>
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          supportedSets.add(<span class="jxr_string">"USG"</span>);
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>  <em class="jxr_comment">//        supportedSets.add("DD3DVD");</em>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  <em class="jxr_comment">//        supportedSets.add("DD3EVG");</em>
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  <em class="jxr_comment">//        supportedSets.add("DD3GVL");</em>
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>  <em class="jxr_comment">//        supportedSets.add("DD3JVC");</em>
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  <em class="jxr_comment">//        supportedSets.add("ULG");</em>
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>  <em class="jxr_comment">//        supportedSets.add("6ED");</em>
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          supportedSets.add(<span class="jxr_string">"UDS"</span>);
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          supportedSets.add(<span class="jxr_string">"PTK"</span>);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>  <em class="jxr_comment">//        supportedSets.add("S99");</em>
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          supportedSets.add(<span class="jxr_string">"MMQ"</span>);
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          <em class="jxr_comment">// supportedSets.add("BRB");Battle Royale Box Set</em>
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          supportedSets.add(<span class="jxr_string">"NEM"</span>);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  <em class="jxr_comment">//        supportedSets.add("S00");</em>
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          supportedSets.add(<span class="jxr_string">"PCY"</span>);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          supportedSets.add(<span class="jxr_string">"INV"</span>);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          <em class="jxr_comment">// supportedSets.add("BTD"); // Beatdown Boxset</em>
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          supportedSets.add(<span class="jxr_string">"PLS"</span>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          supportedSets.add(<span class="jxr_string">"7ED"</span>);
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>          supportedSets.add(<span class="jxr_string">"APC"</span>);
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>          supportedSets.add(<span class="jxr_string">"ODY"</span>);
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          <em class="jxr_comment">// supportedSets.add("DKM"); // Deckmasters 2001</em>
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>          supportedSets.add(<span class="jxr_string">"TOR"</span>);
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          supportedSets.add(<span class="jxr_string">"JUD"</span>);
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          supportedSets.add(<span class="jxr_string">"ONS"</span>);
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          supportedSets.add(<span class="jxr_string">"LGN"</span>);
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          supportedSets.add(<span class="jxr_string">"SCG"</span>);
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          supportedSets.add(<span class="jxr_string">"8ED"</span>);
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          supportedSets.add(<span class="jxr_string">"MRD"</span>);
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          supportedSets.add(<span class="jxr_string">"DST"</span>);
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          supportedSets.add(<span class="jxr_string">"5DN"</span>);
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         supportedSets.add(<span class="jxr_string">"CHK"</span>);
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         supportedSets.add(<span class="jxr_string">"UNH"</span>);
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         supportedSets.add(<span class="jxr_string">"BOK"</span>);
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>         supportedSets.add(<span class="jxr_string">"SOK"</span>);
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>         supportedSets.add(<span class="jxr_string">"9ED"</span>);
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>         supportedSets.add(<span class="jxr_string">"RAV"</span>);
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         supportedSets.add(<span class="jxr_string">"GPT"</span>);
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>         supportedSets.add(<span class="jxr_string">"DIS"</span>);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>         supportedSets.add(<span class="jxr_string">"CSP"</span>);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>         supportedSets.add(<span class="jxr_string">"TSP"</span>);
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         supportedSets.add(<span class="jxr_string">"TSB"</span>);
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         supportedSets.add(<span class="jxr_string">"PLC"</span>);
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         supportedSets.add(<span class="jxr_string">"FUT"</span>);
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>         supportedSets.add(<span class="jxr_string">"10E"</span>);
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         supportedSets.add(<span class="jxr_string">"MED"</span>);
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>         supportedSets.add(<span class="jxr_string">"LRW"</span>);
+<a class="jxr_linenumber" name="L116" href="#L116">116</a>         supportedSets.add(<span class="jxr_string">"EVG"</span>);
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>         supportedSets.add(<span class="jxr_string">"MOR"</span>);
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         supportedSets.add(<span class="jxr_string">"SHM"</span>);
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>         supportedSets.add(<span class="jxr_string">"EVE"</span>);
+<a class="jxr_linenumber" name="L120" href="#L120">120</a>         supportedSets.add(<span class="jxr_string">"DRB"</span>);
+<a class="jxr_linenumber" name="L121" href="#L121">121</a> <em class="jxr_comment">//        supportedSets.add("ME2");</em>
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         supportedSets.add(<span class="jxr_string">"ALA"</span>);
+<a class="jxr_linenumber" name="L123" href="#L123">123</a> <em class="jxr_comment">//        supportedSets.add("DD2");</em>
+<a class="jxr_linenumber" name="L124" href="#L124">124</a>         supportedSets.add(<span class="jxr_string">"CON"</span>);
+<a class="jxr_linenumber" name="L125" href="#L125">125</a> <em class="jxr_comment">//        supportedSets.add("DDC");</em>
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         supportedSets.add(<span class="jxr_string">"ARB"</span>);
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>         supportedSets.add(<span class="jxr_string">"M10"</span>);
+<a class="jxr_linenumber" name="L128" href="#L128">128</a>         <em class="jxr_comment">// supportedSets.add("TD0"); // Magic Online Deck Series</em>
+<a class="jxr_linenumber" name="L129" href="#L129">129</a> <em class="jxr_comment">//        supportedSets.add("V09");</em>
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         supportedSets.add(<span class="jxr_string">"HOP"</span>);
+<a class="jxr_linenumber" name="L131" href="#L131">131</a> <em class="jxr_comment">//        supportedSets.add("ME3");</em>
+<a class="jxr_linenumber" name="L132" href="#L132">132</a>         supportedSets.add(<span class="jxr_string">"ZEN"</span>);
+<a class="jxr_linenumber" name="L133" href="#L133">133</a> <em class="jxr_comment">//        supportedSets.add("DDD");</em>
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         supportedSets.add(<span class="jxr_string">"H09"</span>);
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         supportedSets.add(<span class="jxr_string">"WWK"</span>);
+<a class="jxr_linenumber" name="L136" href="#L136">136</a> <em class="jxr_comment">//        supportedSets.add("DDE");</em>
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>         supportedSets.add(<span class="jxr_string">"ROE"</span>);
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>         supportedSets.add(<span class="jxr_string">"DPA"</span>);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a>         supportedSets.add(<span class="jxr_string">"ARC"</span>);
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         supportedSets.add(<span class="jxr_string">"M11"</span>);
+<a class="jxr_linenumber" name="L141" href="#L141">141</a> <em class="jxr_comment">//        supportedSets.add("V10");</em>
+<a class="jxr_linenumber" name="L142" href="#L142">142</a> <em class="jxr_comment">//        supportedSets.add("DDF");</em>
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         supportedSets.add(<span class="jxr_string">"SOM"</span>);
+<a class="jxr_linenumber" name="L144" href="#L144">144</a> <em class="jxr_comment">//        supportedSets.add("TD0"); // Commander Theme Decks</em>
+<a class="jxr_linenumber" name="L145" href="#L145">145</a> <em class="jxr_comment">//        supportedSets.add("PD2");</em>
+<a class="jxr_linenumber" name="L146" href="#L146">146</a> <em class="jxr_comment">//        supportedSets.add("ME4");</em>
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         supportedSets.add(<span class="jxr_string">"MBS"</span>);
+<a class="jxr_linenumber" name="L148" href="#L148">148</a> <em class="jxr_comment">//        supportedSets.add("DDG");</em>
+<a class="jxr_linenumber" name="L149" href="#L149">149</a>         supportedSets.add(<span class="jxr_string">"NPH"</span>);
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>         supportedSets.add(<span class="jxr_string">"CMD"</span>);
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         supportedSets.add(<span class="jxr_string">"M12"</span>);
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>         supportedSets.add(<span class="jxr_string">"V11"</span>);
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> <em class="jxr_comment">//        supportedSets.add("DDH");</em>
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>         supportedSets.add(<span class="jxr_string">"ISD"</span>);
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         supportedSets.add(<span class="jxr_string">"PD3"</span>);
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>         supportedSets.add(<span class="jxr_string">"DKA"</span>);
+<a class="jxr_linenumber" name="L157" href="#L157">157</a> <em class="jxr_comment">//        supportedSets.add("DDI");</em>
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>         supportedSets.add(<span class="jxr_string">"AVR"</span>);
+<a class="jxr_linenumber" name="L159" href="#L159">159</a> <em class="jxr_comment">//        supportedSets.add("PC2");</em>
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>         supportedSets.add(<span class="jxr_string">"M13"</span>);
+<a class="jxr_linenumber" name="L161" href="#L161">161</a> <em class="jxr_comment">//        supportedSets.add("V12");</em>
+<a class="jxr_linenumber" name="L162" href="#L162">162</a> <em class="jxr_comment">//        supportedSets.add("DDJ");</em>
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         supportedSets.add(<span class="jxr_string">"RTR"</span>);
+<a class="jxr_linenumber" name="L164" href="#L164">164</a> <em class="jxr_comment">//        supportedSets.add("CM1");</em>
+<a class="jxr_linenumber" name="L165" href="#L165">165</a>         <em class="jxr_comment">// supportedSets.add("TD2"); // Duel Decks: Mirrodin Pure vs. New Phyrexia</em>
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>         supportedSets.add(<span class="jxr_string">"GTC"</span>);
+<a class="jxr_linenumber" name="L167" href="#L167">167</a> <em class="jxr_comment">//        supportedSets.add("DDK");</em>
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         supportedSets.add(<span class="jxr_string">"DGM"</span>);
+<a class="jxr_linenumber" name="L169" href="#L169">169</a> <em class="jxr_comment">//        supportedSets.add("MMA");</em>
+<a class="jxr_linenumber" name="L170" href="#L170">170</a>         supportedSets.add(<span class="jxr_string">"M14"</span>);
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>         supportedSets.add(<span class="jxr_string">"V13"</span>);
+<a class="jxr_linenumber" name="L172" href="#L172">172</a> <em class="jxr_comment">//        supportedSets.add("DDL");</em>
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         supportedSets.add(<span class="jxr_string">"THS"</span>);
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>         supportedSets.add(<span class="jxr_string">"C13"</span>);
+<a class="jxr_linenumber" name="L175" href="#L175">175</a>         supportedSets.add(<span class="jxr_string">"BNG"</span>);
+<a class="jxr_linenumber" name="L176" href="#L176">176</a> <em class="jxr_comment">//        supportedSets.add("DDM");</em>
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         supportedSets.add(<span class="jxr_string">"JOU"</span>);
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         <em class="jxr_comment">// supportedSets.add("MD1"); // Modern Event Deck</em>
+<a class="jxr_linenumber" name="L179" href="#L179">179</a> <em class="jxr_comment">//        supportedSets.add("CNS");</em>
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> <em class="jxr_comment">//        supportedSets.add("VMA");</em>
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>         supportedSets.add(<span class="jxr_string">"M15"</span>);
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         supportedSets.add(<span class="jxr_string">"V14"</span>);
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         supportedSets.add(<span class="jxr_string">"DDN"</span>);
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>         supportedSets.add(<span class="jxr_string">"KTK"</span>);
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>         supportedSets.add(<span class="jxr_string">"C14"</span>);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>         <em class="jxr_comment">// supportedSets.add("DD3"); // Duel Decks Anthology</em>
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         supportedSets.add(<span class="jxr_string">"FRF"</span>);
+<a class="jxr_linenumber" name="L188" href="#L188">188</a> <em class="jxr_comment">//        supportedSets.add("DDO");</em>
+<a class="jxr_linenumber" name="L189" href="#L189">189</a> <em class="jxr_comment">//        supportedSets.add("DTK");</em>
+<a class="jxr_linenumber" name="L190" href="#L190">190</a> <em class="jxr_comment">//        supportedSets.add("TPR");</em>
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>         supportedSets.add(<span class="jxr_string">"MM2"</span>);
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         supportedSets.add(<span class="jxr_string">"ORI"</span>);
+<a class="jxr_linenumber" name="L193" href="#L193">193</a> <em class="jxr_comment">//        supportedSets.add("V15");</em>
+<a class="jxr_linenumber" name="L194" href="#L194">194</a> <em class="jxr_comment">//        supportedSets.add("DDP");</em>
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>         supportedSets.add(<span class="jxr_string">"BFZ"</span>);
+<a class="jxr_linenumber" name="L196" href="#L196">196</a> <em class="jxr_comment">//        supportedSets.add("EXP");</em>
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         supportedSets.add(<span class="jxr_string">"C15"</span>);
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         <em class="jxr_comment">// supportedSets.add("PZ1"); // Legendary Cube</em>
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         supportedSets.add(<span class="jxr_string">"OGW"</span>);
+<a class="jxr_linenumber" name="L200" href="#L200">200</a> <em class="jxr_comment">//        supportedSets.add("DDQ");</em>
+<a class="jxr_linenumber" name="L201" href="#L201">201</a> <em class="jxr_comment">//        supportedSets.add("W16");</em>
+<a class="jxr_linenumber" name="L202" href="#L202">202</a>         supportedSets.add(<span class="jxr_string">"SOI"</span>);
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>         supportedSets.add(<span class="jxr_string">"EMA"</span>);
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         supportedSets.add(<span class="jxr_string">"EMN"</span>);
+<a class="jxr_linenumber" name="L205" href="#L205">205</a> <em class="jxr_comment">//        supportedSets.add("V16");</em>
+<a class="jxr_linenumber" name="L206" href="#L206">206</a>         supportedSets.add(<span class="jxr_string">"CN2"</span>);
+<a class="jxr_linenumber" name="L207" href="#L207">207</a> <em class="jxr_comment">//        supportedSets.add("DDR");</em>
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         supportedSets.add(<span class="jxr_string">"KLD"</span>);
+<a class="jxr_linenumber" name="L209" href="#L209">209</a> <em class="jxr_comment">//        supportedSets.add("MPS");</em>
+<a class="jxr_linenumber" name="L210" href="#L210">210</a>         <em class="jxr_comment">// supportedSets.add("PZ2");</em>
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>         supportedSets.add(<span class="jxr_string">"C16"</span>);
+<a class="jxr_linenumber" name="L212" href="#L212">212</a> <em class="jxr_comment">//        supportedSets.add("PCA");</em>
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>         supportedSets.add(<span class="jxr_string">"AER"</span>);
+<a class="jxr_linenumber" name="L214" href="#L214">214</a>         supportedSets.add(<span class="jxr_string">"MM3"</span>);
+<a class="jxr_linenumber" name="L215" href="#L215">215</a> <em class="jxr_comment">//        supportedSets.add("W17");</em>
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         supportedSets.add(<span class="jxr_string">"AKH"</span>);
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         supportedSets.add(<span class="jxr_string">"MPS"</span>);
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         supportedSets.add(<span class="jxr_string">"CMA"</span>);
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>         supportedSets.add(<span class="jxr_string">"E01"</span>);
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>         supportedSets.add(<span class="jxr_string">"HOU"</span>);
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         supportedSets.add(<span class="jxr_string">"C17"</span>);
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         supportedSets.add(<span class="jxr_string">"IMA"</span>);
+<a class="jxr_linenumber" name="L223" href="#L223">223</a>         supportedSets.add(<span class="jxr_string">"XLN"</span>);
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         supportedSets.add(<span class="jxr_string">"UST"</span>);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a>         supportedSets.add(<span class="jxr_string">"RIX"</span>);
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         supportedSets.add(<span class="jxr_string">"DOM"</span>);
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>         supportedSets.add(<span class="jxr_string">"BBD"</span>);
+<a class="jxr_linenumber" name="L228" href="#L228">228</a>         supportedSets.add(<span class="jxr_string">"M19"</span>);
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>         supportedSets.add(<span class="jxr_string">"C18"</span>);
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         supportedSets.add(<span class="jxr_string">"CM2"</span>);
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>         supportedSets.add(<span class="jxr_string">"GRN"</span>);
+<a class="jxr_linenumber" name="L232" href="#L232">232</a> 
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>         sets = <strong class="jxr_keyword">new</strong> LinkedHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         setsAliases = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>         setsAliases.put(<span class="jxr_string">"exp"</span>, <span class="jxr_string">"bfz"</span>);
+<a class="jxr_linenumber" name="L236" href="#L236">236</a>         setsAliases.put(<span class="jxr_string">"xln"</span>, <span class="jxr_string">"ixa"</span>);
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>         setsAliases.put(<span class="jxr_string">"nem"</span>, <span class="jxr_string">"nms"</span>);
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         cardNameAliases = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>         <em class="jxr_comment">// set+wrong name from web side =&gt; correct card name</em>
+<a class="jxr_linenumber" name="L240" href="#L240">240</a>         cardNameAliases.put(<span class="jxr_string">"MM2-otherwordlyjourney"</span>, <span class="jxr_string">"otherworldlyjourney"</span>);
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>         cardNameAliases.put(<span class="jxr_string">"THS-fellhideminotaur"</span>, <span class="jxr_string">"felhideminotaur"</span>);
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         cardNameAliases.put(<span class="jxr_string">"THS-purphorosemissary"</span>, <span class="jxr_string">"purphorossemissary"</span>);
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>         cardNameAliases.put(<span class="jxr_string">"THS-soldierofpantheon"</span>, <span class="jxr_string">"soldierofthepantheon"</span>);
+<a class="jxr_linenumber" name="L244" href="#L244">244</a>         cardNameAliases.put(<span class="jxr_string">"THS-vulpinegolaith"</span>, <span class="jxr_string">"vulpinegoliath"</span>);
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>         cardNameAliases.put(<span class="jxr_string">"ORI-kothopedhoarderofsouls"</span>, <span class="jxr_string">"kothophedsoulhoarder"</span>);
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         cardNameAliases.put(<span class="jxr_string">"BFZ-kozliekschanneler"</span>, <span class="jxr_string">"kozilekschanneler"</span>);
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>         cardNameAliases.put(<span class="jxr_string">"OGW-wastes"</span>, <span class="jxr_string">"wastes1"</span>);
+<a class="jxr_linenumber" name="L248" href="#L248">248</a>         cardNameAliases.put(<span class="jxr_string">"OGW-wastes2"</span>, <span class="jxr_string">"wastes2"</span>);
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>         cardNameAliases.put(<span class="jxr_string">"AER-aegisautomation"</span>, <span class="jxr_string">"aegisautomaton"</span>);
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         cardNameAliases.put(<span class="jxr_string">"AKH-illusorywrappins"</span>, <span class="jxr_string">"illusorywrappings"</span>);
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>         cardNameAliases.put(<span class="jxr_string">"AKH-reducerumble"</span>, <span class="jxr_string">"reducerubble"</span>);
+<a class="jxr_linenumber" name="L252" href="#L252">252</a>         cardNameAliases.put(<span class="jxr_string">"AKH-forsakethewordly"</span>, <span class="jxr_string">"forsaketheworldly"</span>);
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>         cardNameAliases.put(<span class="jxr_string">"AKH-kefnatsmonument"</span>, <span class="jxr_string">"kefnetsmonument"</span>);
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         cardNameAliases.put(<span class="jxr_string">"XLN-kinjaliscaller"</span>, <span class="jxr_string">"kinjalliscaller"</span>);
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         cardNameAliases.put(<span class="jxr_string">"XLN-lookoutsdecision"</span>, <span class="jxr_string">"lookoutsdispersal"</span>);
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>         cardNameAliases.put(<span class="jxr_string">"XLN-infuriatedgladiodon"</span>, <span class="jxr_string">"ragingswordtooth"</span>);
+<a class="jxr_linenumber" name="L257" href="#L257">257</a>         cardNameAliases.put(<span class="jxr_string">"XLN-redoubledvolley"</span>, <span class="jxr_string">"repeatingbarrage"</span>);
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>         cardNameAliases.put(<span class="jxr_string">"UST-captialoffense"</span>, <span class="jxr_string">"capitaloffense"</span>);
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         cardNameAliases.put(<span class="jxr_string">"RIX-tetzimocdeathprimordial"</span>, <span class="jxr_string">"tetzimocprimaldeath"</span>);
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>         <em class="jxr_comment">// &lt;card name, card link&gt;</em>
+<a class="jxr_linenumber" name="L261" href="#L261">261</a>         manualLinks = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>         Map&lt;String, String&gt; links = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         links.put(<span class="jxr_string">"templeofaclazotz"</span>, <span class="jxr_string">"templeofaclazotz"</span>);
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>         links.put(<span class="jxr_string">"conquerorsfoothold"</span>, <span class="jxr_string">"conquerorsfoothold"</span>);
+<a class="jxr_linenumber" name="L265" href="#L265">265</a>         links.put(<span class="jxr_string">"primalwellspring"</span>, <span class="jxr_string">"primalwellspring"</span>);
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>         links.put(<span class="jxr_string">"azcantathesunkenruin"</span>, <span class="jxr_string">"azcantathesunkenruin"</span>);
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         links.put(<span class="jxr_string">"spiresoforazca"</span>, <span class="jxr_string">"spiresoforazca"</span>);
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>         links.put(<span class="jxr_string">"treasurecove"</span>, <span class="jxr_string">"treasurecove"</span>);
+<a class="jxr_linenumber" name="L269" href="#L269">269</a>         links.put(<span class="jxr_string">"itlimoccradleofthesun"</span>, <span class="jxr_string">"itlimoccradleofthesun"</span>);
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>         links.put(<span class="jxr_string">"lostvale"</span>, <span class="jxr_string">"lostvale"</span>);
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         links.put(<span class="jxr_string">"adantothefirstfort"</span>, <span class="jxr_string">"adantothefirstport"</span>);
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>         links.put(<span class="jxr_string">"spitfirebastion"</span>, <span class="jxr_string">"spitfirebastion"</span>);
+<a class="jxr_linenumber" name="L273" href="#L273">273</a>         manualLinks.put(<span class="jxr_string">"XLN"</span>, links);
+<a class="jxr_linenumber" name="L274" href="#L274">274</a> 
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         Map&lt;String, String&gt; linksRix = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>         linksRix.put(<span class="jxr_string">"vaultofcatlacan"</span>, <span class="jxr_string">"vaultofcatlacan"</span>);
+<a class="jxr_linenumber" name="L277" href="#L277">277</a>         linksRix.put(<span class="jxr_string">"atzalcaveofeternity"</span>, <span class="jxr_string">"atzalcaveofeternity"</span>);
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>         linksRix.put(<span class="jxr_string">"wingedtempleoforazca"</span>, <span class="jxr_string">"wingedtempleoforazca"</span>);
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         linksRix.put(<span class="jxr_string">"metzalitoweroftriumph"</span>, <span class="jxr_string">"metzalitoweroftriumph"</span>);
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         linksRix.put(<span class="jxr_string">"tomboftheduskrose"</span>, <span class="jxr_string">"tomboftheduskrose"</span>);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         linksRix.put(<span class="jxr_string">"sanctumofthesun"</span>, <span class="jxr_string">"sanctumofthesun"</span>);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         linksRix.put(<span class="jxr_string">"goldforgegarrison"</span>, <span class="jxr_string">"goldforgegarrison"</span>);
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>         manualLinks.put(<span class="jxr_string">"RIX"</span>, linksRix);
+<a class="jxr_linenumber" name="L284" href="#L284">284</a> 
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>         cardNameAliasesStart = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         Set&lt;String&gt; names = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         names.add(<span class="jxr_string">"eldrazidevastator.jpg"</span>);
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>         cardNameAliasesStart.put(<span class="jxr_string">"BFZ"</span>, names);
+<a class="jxr_linenumber" name="L289" href="#L289">289</a>     }
+<a class="jxr_linenumber" name="L290" href="#L290">290</a> 
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>     <strong class="jxr_keyword">private</strong> Map&lt;String, String&gt; getSetLinks(String cardSet) {
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>         Map&lt;String, String&gt; setLinks = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L293" href="#L293">293</a>         <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>             String setNames = setsAliases.get(cardSet.toLowerCase(Locale.ENGLISH));
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>             Set&lt;String&gt; aliasesStart = <strong class="jxr_keyword">new</strong> HashSet&lt;&gt;();
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>             <strong class="jxr_keyword">if</strong> (cardNameAliasesStart.containsKey(cardSet)) {
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>                 aliasesStart.addAll(cardNameAliasesStart.get(cardSet));
+<a class="jxr_linenumber" name="L298" href="#L298">298</a>             }
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>             <strong class="jxr_keyword">if</strong> (setNames == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>                 setNames = cardSet.toLowerCase(Locale.ENGLISH);
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>             }
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>             Preferences prefs = MageFrame.getPreferences();
+<a class="jxr_linenumber" name="L303" href="#L303">303</a>             Connection.ProxyType proxyType = Connection.ProxyType.valueByText(prefs.get(<span class="jxr_string">"proxyType"</span>, <span class="jxr_string">"None"</span>));
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>             <strong class="jxr_keyword">for</strong> (String setName : setNames.split(<span class="jxr_string">"&#92;&#92;^"</span>)) {
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>                 String URLSetName = CardUtil.urlEncode(setName);
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>                 String baseUrl = <span class="jxr_string">"http://mythicspoiler.com/"</span> + URLSetName + '/';
+<a class="jxr_linenumber" name="L307" href="#L307">307</a> 
+<a class="jxr_linenumber" name="L308" href="#L308">308</a>                 Map&lt;String, String&gt; pageLinks = getSetLinksFromPage(cardSet, aliasesStart, prefs, proxyType, baseUrl, baseUrl);
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>                 setLinks.putAll(pageLinks);
+<a class="jxr_linenumber" name="L310" href="#L310">310</a> 
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>                 <em class="jxr_comment">// try to download images for double-faced cards</em>
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>                 <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L313" href="#L313">313</a>                     String doubleFacedUrl = baseUrl + <span class="jxr_string">"dfc.html"</span>;
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>                     pageLinks = getSetLinksFromPage(cardSet, aliasesStart, prefs, proxyType, baseUrl, doubleFacedUrl);
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>                     setLinks.putAll(pageLinks);
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>                 } <strong class="jxr_keyword">catch</strong> (Exception ex) {
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>                     <em class="jxr_comment">// that's ok if we cannot download double-faced cards for some sets</em>
+<a class="jxr_linenumber" name="L318" href="#L318">318</a>                 }
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>             }
+<a class="jxr_linenumber" name="L320" href="#L320">320</a> 
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>         } <strong class="jxr_keyword">catch</strong> (IOException ex) {
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>             System.out.println(<span class="jxr_string">"Exception when parsing the mythicspoiler page: "</span> + ex.getMessage());
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         }
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         <strong class="jxr_keyword">return</strong> setLinks;
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>     }
+<a class="jxr_linenumber" name="L326" href="#L326">326</a> 
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>     <strong class="jxr_keyword">private</strong> Map&lt;String, String&gt; getSetLinksFromPage(String cardSet, Set&lt;String&gt; aliasesStart, Preferences prefs,
+<a class="jxr_linenumber" name="L328" href="#L328">328</a>                                                     ProxyType proxyType, String baseUrl, String pageUrl) <strong class="jxr_keyword">throws</strong> IOException {
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>         Map&lt;String, String&gt; pageLinks = <strong class="jxr_keyword">new</strong> HashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L330" href="#L330">330</a> 
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>         String urlDocument;
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>         Document doc;
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         <strong class="jxr_keyword">if</strong> (proxyType == ProxyType.NONE) {
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>             urlDocument = pageUrl;
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>             doc = Jsoup.connect(urlDocument).get();
+<a class="jxr_linenumber" name="L336" href="#L336">336</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>             String proxyServer = prefs.get(<span class="jxr_string">"proxyAddress"</span>, <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L338" href="#L338">338</a>             <strong class="jxr_keyword">int</strong> proxyPort = Integer.parseInt(prefs.get(<span class="jxr_string">"proxyPort"</span>, <span class="jxr_string">"0"</span>));
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>             URL url = <strong class="jxr_keyword">new</strong> URL(pageUrl);
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>             Proxy proxy = <strong class="jxr_keyword">new</strong> Proxy(Proxy.Type.HTTP, <strong class="jxr_keyword">new</strong> InetSocketAddress(proxyServer, proxyPort));
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>             HttpURLConnection uc = (HttpURLConnection) url.openConnection(proxy);
+<a class="jxr_linenumber" name="L342" href="#L342">342</a> 
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>             uc.connect();
+<a class="jxr_linenumber" name="L344" href="#L344">344</a> 
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>             String line;
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>             StringBuffer tmp = <strong class="jxr_keyword">new</strong> StringBuffer();
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>             BufferedReader in = <strong class="jxr_keyword">new</strong> BufferedReader(<strong class="jxr_keyword">new</strong> InputStreamReader(uc.getInputStream()));
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>             <strong class="jxr_keyword">while</strong> ((line = in.readLine()) != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>                 tmp.append(line);
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>             }
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>             doc = Jsoup.parse(String.valueOf(tmp));
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>         }
+<a class="jxr_linenumber" name="L353" href="#L353">353</a> 
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         Elements cardsImages = doc.select(<span class="jxr_string">"img[src^=cards/]"</span>); <em class="jxr_comment">// starts with cards/</em>
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>         <strong class="jxr_keyword">if</strong> (!aliasesStart.isEmpty()) {
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>             <strong class="jxr_keyword">for</strong> (String text : aliasesStart) {
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>                 cardsImages.addAll(doc.select(<span class="jxr_string">"img[src^="</span> + text + ']'));
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>             }
+<a class="jxr_linenumber" name="L359" href="#L359">359</a>         }
+<a class="jxr_linenumber" name="L360" href="#L360">360</a> 
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>         <strong class="jxr_keyword">for</strong> (Element cardsImage : cardsImages) {
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>             String cardLink = cardsImage.attr(<span class="jxr_string">"src"</span>);
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>             String cardName = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>             <strong class="jxr_keyword">if</strong> (cardLink.startsWith(<span class="jxr_string">"cards/"</span>) &amp;&amp; cardLink.endsWith(<span class="jxr_string">".jpg"</span>)) {
+<a class="jxr_linenumber" name="L365" href="#L365">365</a>                 cardName = cardLink.substring(6, cardLink.length() - 4);
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>             } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (aliasesStart.contains(cardLink)) {
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>                 cardName = cardLink.substring(0, cardLink.length() - 4);
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>             }
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>             <strong class="jxr_keyword">if</strong> (cardName != <strong class="jxr_keyword">null</strong> &amp;&amp; !cardName.isEmpty()) {
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>                 <strong class="jxr_keyword">if</strong> (cardNameAliases.containsKey(cardSet + '-' + cardName)) {
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>                     cardName = cardNameAliases.get(cardSet + '-' + cardName);
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (cardName.endsWith(<span class="jxr_string">"1"</span>) || cardName.endsWith(<span class="jxr_string">"2"</span>) || cardName.endsWith(<span class="jxr_string">"3"</span>) || cardName.endsWith(<span class="jxr_string">"4"</span>) || cardName.endsWith(<span class="jxr_string">"5"</span>)) {
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>                     cardName = cardName.substring(0, cardName.length() - 1);
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (cardName.endsWith(<span class="jxr_string">"promo"</span>)) {
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>                     cardName = cardName.substring(0, cardName.length() - 5);
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>                 }
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>                 pageLinks.put(cardName, baseUrl + cardLink);
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>             }
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>         }
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>         Map&lt;String, String&gt; linksToAdd = manualLinks.get(cardSet);
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>         <strong class="jxr_keyword">if</strong> (linksToAdd != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L382" href="#L382">382</a>             <strong class="jxr_keyword">for</strong> (Map.Entry&lt;String, String&gt; link : linksToAdd.entrySet()) {
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>                 pageLinks.put(link.getKey(), baseUrl + <span class="jxr_string">"cards/"</span> + link.getValue() + <span class="jxr_string">".jpg"</span>);
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>             }
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>         }
+<a class="jxr_linenumber" name="L386" href="#L386">386</a>         <strong class="jxr_keyword">return</strong> pageLinks;
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>     }
+<a class="jxr_linenumber" name="L388" href="#L388">388</a> 
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>     @Override
+<a class="jxr_linenumber" name="L390" href="#L390">390</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> prepareDownloadList(<a name="DownloadServiceInfo" href="../../../../../../org/mage/plugins/card/dl/DownloadServiceInfo.html#DownloadServiceInfo">DownloadServiceInfo</a> downloadServiceInfo, List&lt;CardDownloadData&gt; downloadList) {
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>     }
+<a class="jxr_linenumber" name="L393" href="#L393">393</a> 
+<a class="jxr_linenumber" name="L394" href="#L394">394</a>     @Override
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>     <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateCardUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card) <strong class="jxr_keyword">throws</strong> Exception {
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>         String collectorId = card.getCollectorId();
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>         String cardSet = card.getSet();
+<a class="jxr_linenumber" name="L398" href="#L398">398</a>         <strong class="jxr_keyword">if</strong> (collectorId == <strong class="jxr_keyword">null</strong> || cardSet == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>             <strong class="jxr_keyword">throw</strong> <strong class="jxr_keyword">new</strong> Exception(<span class="jxr_string">"Wrong parameters for image: collector id: "</span> + collectorId + <span class="jxr_string">", card set: "</span> + cardSet);
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         }
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>         <strong class="jxr_keyword">if</strong> (card.isFlippedSide()) { <em class="jxr_comment">//doesn't support rotated images</em>
+<a class="jxr_linenumber" name="L402" href="#L402">402</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>         }
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         Map&lt;String, String&gt; setLinks = sets.computeIfAbsent(cardSet, k -&gt; getSetLinks(cardSet));
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>         String searchName = card.getDownloadName().toLowerCase(Locale.ENGLISH)
+<a class="jxr_linenumber" name="L406" href="#L406">406</a>                 .replaceAll(<span class="jxr_string">" "</span>, <span class="jxr_string">""</span>)
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>                 .replaceAll(<span class="jxr_string">"&#92;&#92;."</span>, <span class="jxr_string">""</span>)
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>                 .replaceAll(<span class="jxr_string">"&amp;"</span>, <span class="jxr_string">"and"</span>)
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>                 .replaceAll(<span class="jxr_string">"-"</span>, <span class="jxr_string">""</span>)
+<a class="jxr_linenumber" name="L410" href="#L410">410</a>                 .replaceAll(<span class="jxr_string">"'"</span>, <span class="jxr_string">""</span>)
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>                 .replaceAll(<span class="jxr_string">","</span>, <span class="jxr_string">""</span>)
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>                 .replaceAll(<span class="jxr_string">"/"</span>, <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>         String link = setLinks.get(searchName);
+<a class="jxr_linenumber" name="L414" href="#L414">414</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a>(link);
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>     }
+<a class="jxr_linenumber" name="L416" href="#L416">416</a> 
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>     @Override
+<a class="jxr_linenumber" name="L418" href="#L418">418</a>     <strong class="jxr_keyword">public</strong> <a name="CardImageUrls" href="../../../../../../org/mage/plugins/card/dl/sources/CardImageUrls.html#CardImageUrls">CardImageUrls</a> generateTokenUrl(<a name="CardDownloadData" href="../../../../../../org/mage/plugins/card/images/CardDownloadData.html#CardDownloadData">CardDownloadData</a> card
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>     ) {
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>     }
+<a class="jxr_linenumber" name="L422" href="#L422">422</a> 
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>     @Override
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">float</strong> getAverageSize() {
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>         <strong class="jxr_keyword">return</strong> 50.0f;
+<a class="jxr_linenumber" name="L426" href="#L426">426</a>     }
+<a class="jxr_linenumber" name="L427" href="#L427">427</a> 
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>     @Override
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>     <strong class="jxr_keyword">public</strong> String getNextHttpImageUrl() {
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>     }
+<a class="jxr_linenumber" name="L432" href="#L432">432</a> 
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>     @Override
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>     <strong class="jxr_keyword">public</strong> String getFileForHttpImage(String httpImageUrl) {
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>     }
+<a class="jxr_linenumber" name="L437" href="#L437">437</a> 
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>     @Override
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getTotalImages() {
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>         <strong class="jxr_keyword">return</strong> -1;
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>     }
+<a class="jxr_linenumber" name="L442" href="#L442">442</a> 
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>     @Override
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isTokenSource() {
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>     }
+<a class="jxr_linenumber" name="L447" href="#L447">447</a> 
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>     @Override
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardSource() {
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>     }
+<a class="jxr_linenumber" name="L452" href="#L452">452</a> 
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>     @Override
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> doPause(String httpImageUrl) {
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>     }
+<a class="jxr_linenumber" name="L456" href="#L456">456</a> 
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>     @Override
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>     <strong class="jxr_keyword">public</strong> List&lt;String&gt; getSupportedSets() {
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;(supportedSets);
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>     }
+<a class="jxr_linenumber" name="L461" href="#L461">461</a> 
+<a class="jxr_linenumber" name="L462" href="#L462">462</a>     @Override
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isCardImageProvided(String setCode, String cardName) {
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>         <strong class="jxr_keyword">return</strong> supportedSets.contains(setCode);
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>     }
+<a class="jxr_linenumber" name="L466" href="#L466">466</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

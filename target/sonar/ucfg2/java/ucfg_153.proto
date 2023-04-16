@@ -1,0 +1,441 @@
+
+?mage.deck.CanadianHighlander#validate(Lmage/cards/decks/Deck;)Zz
+pD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/CanadianHighlander.javaM M("startingBlock*‹
+13R R(e
+c
+R R(5-
+%4'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""ùö
+	Rs R(Ç
+%5java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()jh
+	Rs R(â	
+%6int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%5java.util.Set2size()ä
+á
+	R? R(ä
+%7java.lang.String"__concat*>
+R? R(o20
+.Must contain 100 or more singleton cards: has *
+	Rr R(ä
+	
+%6intp
+n
+	R? R(ï
+%8java.lang.String"__concat*%
+	R? R(ä
+
+%7java.lang.String*
+
+Rç R(ï
+
+ cards”–
+	R R(ñ
+
+%9void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*K
+
+__unknown_file (/
+-
+%4'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*4
+
+__unknown_file (
+
+%8java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+12*⁄
+2j j(f
+d
+j j(3.
+%39'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""u
+s
+jN j(~
+%40java.lang.String"__concat*0
+jN j(p$"
+ Your calculated point total was *
+js j(~
+""Ê„
+j j(
+%41void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*L
+
+__unknown_file (0
+.
+%39'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+Total points too high*5
+
+__unknown_file (
+
+%40java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+1*ˆ
+14N N(v
+t
+O O(
+%0java.util.List"__id*L
+
+__unknown_file (0*.
+mage.deck.CanadianHighlander"
+
+errorsListZ
+X
+O O(
+
+%1void"__arrayClear*2
+
+__unknown_file (
+
+%0java.util.Listúô
+Q Q(
+%2java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ig
+Q Q("	
+%3int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%2java.util.Set2size()*
+13
+12*ì
+startingBlockM M(&ë
+é
+L L(
+%42"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck^
+\
+M! M(%
+deckmage.cards.decks.Deck"__annotation*#
+
+__unknown_file (
+
+%42*
+14*Ä
+4b b(-T
+R
+b b(-
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""è
+å
+b b(-
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%25java.util.Set*"
+
+__unknown_file (
+""*	
+2
+6
+1*Ÿ
+5e e(L
+J
+e e('
+%29java.util.Map"__id*"
+
+__unknown_file (
+""õ
+ò
+e e(/
+%30java.lang.Integer"__mapGet*2
+
+__unknown_file (
+
+%29java.util.Map*4
+
+__unknown_file (
+
+cnjava.lang.Stringf
+d
+f f(5.
+%31'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""úô
+f7 f(E
+%32java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()L
+J
+fM f(U
+%33java.util.Map"__id*"
+
+__unknown_file (
+""õ
+ò
+fM f(]
+%34java.lang.Integer"__mapGet*2
+
+__unknown_file (
+
+%33java.util.Map*4
+
+__unknown_file (
+
+cnjava.lang.Stringj
+h
+fG f(]
+%35java.lang.String"__concat*
+fG f(J
+ *&
+fM f(]
+
+%34java.lang.Integero
+m
+fG f(i
+%36java.lang.String"__concat*%
+fG f(]
+
+%35java.lang.String*
+f` f(i	
+ point |
+z
+fG f(n
+%37java.lang.String"__concat*%
+fG f(i
+
+%36java.lang.String*$
+fl f(n
+
+cnjava.lang.Stringäá
+f f(u
+%38void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*L
+
+__unknown_file (0
+.
+%31'mage.cards.decks.DeckValidatorErrorType*5
+
+__unknown_file (
+
+%32java.lang.String*5
+
+__unknown_file (
+
+%37java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+4*¿
+6c c(úô
+c c(&
+%26java.lang.String".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()a
+_
+c c('
+cnjava.lang.String"__id*5
+
+__unknown_file (
+
+%26java.lang.StringL
+J
+d d(
+%27java.util.Map"__id*"
+
+__unknown_file (
+""ÿ’
+d d((
+%28boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%27java.util.Map*4
+
+__unknown_file (
+
+cnjava.lang.String2containsKey(Ljava/lang/Object;)*
+4
+5*§
+7b0 b(6èå
+b0 b(A
+%25java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*5
+
+__unknown_file (
+
+countsjava.util.Map2
+entrySet()*
+4*ê
+10[& [(597
+[* [(3
+%18java.util.HashMap"java.util.HashMaph
+f
+[& [(5
+%19"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%18java.util.HashMapc
+a
+[ [(6
+countsjava.util.Map"__id*6
+
+__unknown_file (
+
+%18java.util.HashMapùö
+\ \(*
+%20java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()…∆
+\ \(+
+%21void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%20java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)•¢
+] ](.
+%22java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()…∆
+] ](/
+%23void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%22java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)êç
+^ ^(&
+%24boolean";mage.cards.decks.Constructed#checkCounts(ILjava/util/Map;)Z*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander* 
+
+__unknown_file (2*5
+
+__unknown_file (
+
+countsjava.util.Map2checkCounts(ILjava/util/Map;)*
+7*Á
+11W W(f
+d
+W W(5.
+%12'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""•¢
+Wl W(
+%13java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()lj
+	Wl W(Ü
+
+%14int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%13java.util.Set2size()Ö
+Ç
+	W? W(á
+%15java.lang.String"__concat*7
+W? W(h+)
+'Sideboard can't contain any cards: has *
+	Wk W(á
+
+
+%14intr
+p
+	W? W(í
+%16java.lang.String"__concat*&
+	W? W(á
+
+%15java.lang.String*
+
+Wä W(í
+
+ cards÷”
+	W W(ì
+%17void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*<
+
+__unknown_file ( 
+mage.deck.CanadianHighlander*L
+
+__unknown_file (0
+.
+%12'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%16java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+10*∑
+12V V(•¢
+V V( 
+%10java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()us
+V V(*
+%11boolean"java.util.Set#isEmpty()Z*2
+
+__unknown_file (
+
+%10java.util.Set2	isEmpty()*
+10
+11*!
+1m m("
+m m(
+"":)
+M M(%
+deckmage.cards.decks.DeckB 
+mage.deck.CanadianHighlanderHP

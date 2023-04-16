@@ -1,0 +1,336 @@
+
+rmage.server.TableController#replaceDraftPlayer(Lmage/players/Player;Ljava/lang/String;Lmage/players/PlayerType;I)Zg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/TableController.javaÝ  Ý(2"4*%
+2
+à à("
+
+à à(
+""*’
+3
+ß) ß(.s
+q
+
+ß) ß(.
+%2mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+table¨¥
+
+ß) ß(9
+%3mage.constants.TableState"5mage.game.Table#getState()Lmage/constants/TableState;*3
+
+__unknown_file (
+
+%2mage.game.Table2
+getState()Y
+W
+
+ß= ß(P
+%4mage.constants.TableState"__id*"
+
+__unknown_file (
+""*
+2
+1*
+4
+Þ( Þ(4ó
+ð
+
+Þ( Þ(M
+%0java.util.Optional"jmage.server.TableController#createPlayer(Ljava/lang/String;Lmage/players/PlayerType;I)Ljava/util/Optional;*;
+
+__unknown_file (
+mage.server.TableController*6
+
+__unknown_file (
+
+namejava.lang.String*C
+
+__unknown_file ('
+%
+
+playerTypemage.players.PlayerType*"
+
+__unknown_file (
+""p
+n
+
+Þ Þ(N"
+newPlayerOptjava.util.Optional"__id*6
+
+__unknown_file (
+
+%0java.util.OptionalŽ‹
+
+ß ß(%
+%1boolean"java.util.Optional#isPresent()Z*@
+
+__unknown_file ($
+"
+newPlayerOptjava.util.Optional2isPresent()*
+2
+3*»+
+1
+â â('Ÿœ
+
+â â(-
+%5mage.players.Player"*java.util.Optional#get()Ljava/lang/Object;*@
+
+__unknown_file ($
+"
+newPlayerOptjava.util.Optional2get()o
+m
+
+â â(. 
+	newPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%5mage.players.Player‰
+†
+
+ã/ ã(9%
+%6mage.game.tournament.Tournament"__id*K
+
+__unknown_file (/*-
+mage.server.TableController"
+
+tournament•’
+
+ãD ã(U
+%7java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player2getId()¶³
+
+ã/ ã(V+
+%8%mage.game.tournament.TournamentPlayer"bmage.game.tournament.Tournament#getPlayer(Ljava/util/UUID;)Lmage/game/tournament/TournamentPlayer;*C
+
+__unknown_file ('
+%
+%6mage.game.tournament.Tournament*2
+
+__unknown_file (
+
+%7java.util.UUID2getPlayer(Ljava/util/UUID;)ž
+›
+
+ã ã(W<
+oldTournamentPlayer%mage.game.tournament.TournamentPlayer"__id*I
+
+__unknown_file (-
++
+%8%mage.game.tournament.TournamentPlayer‰
+†
+
+ä ä(%
+%9mage.game.tournament.Tournament"__id*K
+
+__unknown_file (/*-
+mage.server.TableController"
+
+tournament–“
+
+ä  ä(1
+%10java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player2getId()÷ô
+
+ä ä(2
+%11void"?mage.game.tournament.Tournament#removePlayer(Ljava/util/UUID;)V*C
+
+__unknown_file ('
+%
+%9mage.game.tournament.Tournament*3
+
+__unknown_file (
+
+%10java.util.UUID2removePlayer(Ljava/util/UUID;)Š
+‡
+
+å å(&
+%12mage.game.tournament.Tournament"__id*K
+
+__unknown_file (/*-
+mage.server.TableController"
+
+tournamentþû
+
+å å(3
+%13void"Zmage.game.tournament.Tournament#addPlayer(Lmage/players/Player;Lmage/players/PlayerType;)V*D
+
+__unknown_file ((
+&
+%12mage.game.tournament.Tournament*>
+
+__unknown_file ("
+ 
+	newPlayermage.players.Player*C
+
+__unknown_file ('
+%
+
+playerTypemage.players.PlayerType29addPlayer(Lmage/players/Player;Lmage/players/PlayerType;)Š
+‡
+
+ç/ ç(9&
+%14mage.game.tournament.Tournament"__id*K
+
+__unknown_file (/*-
+mage.server.TableController"
+
+tournament–“
+
+çD ç(U
+%15java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+	newPlayermage.players.Player2getId()¹¶
+
+ç/ ç(V,
+%16%mage.game.tournament.TournamentPlayer"bmage.game.tournament.Tournament#getPlayer(Ljava/util/UUID;)Lmage/game/tournament/TournamentPlayer;*D
+
+__unknown_file ((
+&
+%14mage.game.tournament.Tournament*3
+
+__unknown_file (
+
+%15java.util.UUID2getPlayer(Ljava/util/UUID;)Ÿ
+œ
+
+ç ç(W<
+newTournamentPlayer%mage.game.tournament.TournamentPlayer"__id*J
+
+__unknown_file (.
+,
+%16%mage.game.tournament.TournamentPlayerüù
+
+è% è(C+
+%17$mage.constants.TournamentPlayerState"Vmage.game.tournament.TournamentPlayer#getState()Lmage/constants/TournamentPlayerState;*Z
+
+__unknown_file (>
+<
+oldTournamentPlayer%mage.game.tournament.TournamentPlayer2
+getState()ÎË
+
+è è(D
+%18void"Wmage.game.tournament.TournamentPlayer#setState(Lmage/constants/TournamentPlayerState;)V*Z
+
+__unknown_file (>
+<
+newTournamentPlayer%mage.game.tournament.TournamentPlayer*I
+
+__unknown_file (-
++
+%17$mage.constants.TournamentPlayerState20setState(Lmage/constants/TournamentPlayerState;)‡„
+
+é é(L
+%19void"kmage.game.tournament.TournamentPlayer#setReplacedTournamentPlayer(Lmage/game/tournament/TournamentPlayer;)V*Z
+
+__unknown_file (>
+<
+newTournamentPlayer%mage.game.tournament.TournamentPlayer*Z
+
+__unknown_file (>
+<
+oldTournamentPlayer%mage.game.tournament.TournamentPlayer2DsetReplacedTournamentPlayer(Lmage/game/tournament/TournamentPlayer;)’
+
+
+ë ë(*
+%20#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryêç
+
+ë ë(%(
+%21!mage.server.managers.DraftManager"Umage.server.managers.ManagerFactory#draftManager()Lmage/server/managers/DraftManager;*H
+
+__unknown_file (,
+*
+%20#mage.server.managers.ManagerFactory2draftManager()t
+r
+
+ë4 ë(9
+%22mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+tableŽ‹
+
+ë4 ë(A
+%23java.util.UUID"'mage.game.Table#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%22mage.game.Table2getId()Ÿœ
+
+ë ë(B
+%24java.util.Optional"Umage.server.managers.DraftManager#getController(Ljava/util/UUID;)Ljava/util/Optional;*F
+
+__unknown_file (*
+(
+%21!mage.server.managers.DraftManager*3
+
+__unknown_file (
+
+%23java.util.UUID2getController(Ljava/util/UUID;)—
+”
+ëM ë(‰"
+%25java.util.function.Consumer"__declareFunction*N
+
+__unknown_file (20
+.__sonar_lambda_732$mage.server.TableController–
+“
+
+__unknown_file (1
+"
+%25java.util.function.Consumer"
+	oldPlayer"__id*>
+
+__unknown_file ("
+ 
+	oldPlayermage.players.Player–
+“
+
+__unknown_file (1
+"
+%25java.util.function.Consumer"
+	newPlayer"__id*>
+
+__unknown_file ("
+ 
+	newPlayermage.players.Player€ý
+ë ë(Š
+%27void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*7
+
+__unknown_file (
+
+%24java.util.Optional*@
+
+__unknown_file ($
+"
+%25java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)"
+
+ì ì(
+"":.
+
+Ý3 Ý(D 
+	oldPlayermage.players.Player:&
+
+ÝE Ý(Q
+namejava.lang.String:3
+
+ÝR Ý(h%
+
+playerTypemage.players.PlayerType: 
+
+__unknown_file (
+""B
+mage.server.TableControllerHP

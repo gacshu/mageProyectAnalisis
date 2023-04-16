@@ -1,0 +1,167 @@
+
+gmage.abilities.effects.common.RegenerateAttachedEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zy
+oD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/RegenerateAttachedEffect.java   ("startingBlock*!
+2( (("
+( ((
+""*ç
+3& &("¾»
+&0 &(J
+%2java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*I
+
+__unknown_file (-
++
+
+attachmentmage.game.permanent.Permanent2getAttachedTo()Š‡
+& &(K#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+& &(L*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+2
+1*þ
+startingBlock   (3Š
+‡
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10”
+‘
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+ ,  (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11*
+5*!
+4$ $("
+$ $(
+""*ó
+5" "(#¨¥
+"A "(U
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ª§
+" "(V#
+%1mage.game.permanent.Permanent"\mage.game.Game#getPermanentOrLKIBattlefield(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2.getPermanentOrLKIBattlefield(Ljava/util/UUID;)ƒ
+€
+" "(W+
+
+attachmentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+3
+4*‡
+1+- +(I~|
++1 +(G:
+%44mage.abilities.effects.common.RegenerateTargetEffect"4mage.abilities.effects.common.RegenerateTargetEffect­
+ª
++- +(I
+%5">mage.abilities.effects.common.RegenerateTargetEffect#<init>()V*X
+
+__unknown_file (<
+:
+%44mage.abilities.effects.common.RegenerateTargetEffect²
+¯
++ +(JC
+regenEffect4mage.abilities.effects.common.RegenerateTargetEffect"__id*X
+
+__unknown_file (<
+:
+%44mage.abilities.effects.common.RegenerateTargetEffect`^
+,) ,(4+
+%6%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¾
+»
+,% ,(E
+%7"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+%6%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Gameº·
+, ,(F-
+%8'mage.abilities.effects.ContinuousEffect"mage.abilities.effects.ContinuousEffectImpl#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*a
+
+__unknown_file (E
+C
+regenEffect4mage.abilities.effects.common.RegenerateTargetEffect*I
+
+__unknown_file (-
++
+%6%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)ž›
+- -(+
+
+%9void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*a
+
+__unknown_file (E
+C
+regenEffect4mage.abilities.effects.common.RegenerateTargetEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)"
+. .(
+"":"
+   (#
+gamemage.game.Game:,
+ $  (2 
+sourcemage.abilities.AbilityB:8
+6mage.abilities.effects.common.RegenerateAttachedEffectHP

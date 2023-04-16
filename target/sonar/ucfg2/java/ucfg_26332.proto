@@ -1,0 +1,657 @@
+
+vmage.server.Main$ClientConnectionListener#handleConnectionException(Ljava/lang/Throwable;Lorg/jboss/remoting/Client;)V\
+PD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Main.javaØ Ø(-"startingBlock*‘
+2
+   ("X
+V
+
+   ("
+%53org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""„‡
+
+   (B
+%54void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%53org.apache.log4j.Logger*6
+
+__unknown_file (
+- cause: Lease expired2debug(Ljava/lang/Object;)*
+0*£
+startingBlock
+Ø- Ø(Qñ
+ì
+
+Æ Æ(
+%60"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+	throwablejava.lang.Throwablec
+a
+
+Ø8 Ø(A 
+	throwablejava.lang.Throwable"__annotation*#
+
+__unknown_file (
+
+%60ô
+ñ
+
+Æ Æ(
+%61"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+clientorg.jboss.remoting.Clientf
+d
+
+ØJ Ø(P#
+clientorg.jboss.remoting.Client"__annotation*#
+
+__unknown_file (
+
+%61*
+11*ò
+4
+∆ ∆("†
+ù
+
+∆ ∆("*
+%43#mage.server.managers.ManagerFactory"__id*]
+
+__unknown_file (A*?+
+)mage.server.Main$ClientConnectionListener"
+managerFactoryÚÔ
+
+∆ ∆(3*
+%44#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*H
+
+__unknown_file (,
+*
+%43#mage.server.managers.ManagerFactory2sessionManager()∑¥
+
+∆? ∆(T
+%45java.lang.String":org.jboss.remoting.Client#getSessionId()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+clientorg.jboss.remoting.Client2getSessionId()]
+[
+
+∆V ∆(u#
+%46mage.server.DisconnectReason"__id*"
+
+__unknown_file (
+""Å˛
+
+∆ ∆(v
+%47void"amage.server.managers.SessionManager#disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)V*H
+
+__unknown_file (,
+*
+%44#mage.server.managers.SessionManager*5
+
+__unknown_file (
+
+%45java.lang.String*A
+
+__unknown_file (%
+#
+%46mage.server.DisconnectReason2<disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)X
+V
+
+« «(
+%48org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ê
+ç
+
+«  «(B
+%49java.lang.String"__concat*$
+
+«  «(4
+LOST CONNECTION - *6
+
+«7 «(B(
+&
+sessionInfojava.lang.StringBuilder‡›
+
+« «(C
+%50void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%48org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%49java.lang.String2info(Ljava/lang/Object;)X
+V
+
+» »(
+%51org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""úô
+
+» »(/
+%52boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%51org.apache.log4j.Logger2isDebugEnabled()*	
+2
+0
+1*º
+5
+¬ ¬("†
+ù
+
+¬ ¬("*
+%33#mage.server.managers.ManagerFactory"__id*]
+
+__unknown_file (A*?+
+)mage.server.Main$ClientConnectionListener"
+managerFactoryÚÔ
+
+¬ ¬(3*
+%34#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*H
+
+__unknown_file (,
+*
+%33#mage.server.managers.ManagerFactory2sessionManager()∑¥
+
+¬? ¬(T
+%35java.lang.String":org.jboss.remoting.Client#getSessionId()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+clientorg.jboss.remoting.Client2getSessionId()]
+[
+
+¬V ¬(u#
+%36mage.server.DisconnectReason"__id*"
+
+__unknown_file (
+""Å˛
+
+¬ ¬(v
+%37void"amage.server.managers.SessionManager#disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)V*H
+
+__unknown_file (,
+*
+%34#mage.server.managers.SessionManager*5
+
+__unknown_file (
+
+%35java.lang.String*A
+
+__unknown_file (%
+#
+%36mage.server.DisconnectReason2<disconnect(Ljava/lang/String;Lmage/server/DisconnectReason;)X
+V
+
+√ √(
+%38org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""î
+ë
+
+√  √(F
+%39java.lang.String"__concat*(
+
+√  √(8
+CLIENT DISCONNECTED - *6
+
+√; √(F(
+&
+sessionInfojava.lang.StringBuilder‡›
+
+√ √(G
+%40void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%38org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%39java.lang.String2info(Ljava/lang/Object;)X
+V
+
+ƒ ƒ(
+%41org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¬ø
+
+ƒ ƒ(:
+%42void"Iorg.apache.log4j.Category#debug(Ljava/lang/Object;Ljava/lang/Throwable;)V*<
+
+__unknown_file ( 
+
+%41org.apache.log4j.Logger*+
+
+__unknown_file (
+Stack Trace*>
+
+__unknown_file ("
+ 
+	throwablejava.lang.Throwable2.debug(Ljava/lang/Object;Ljava/lang/Throwable;)*
+0*ø
+6
+Ω Ω(ÑÅ
+
+Ω Ω(*
+%25java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*D
+
+__unknown_file ((
+&
+sessionInfojava.lang.StringBuilder*$
+
+__unknown_file (
+ at 2append(Ljava/lang/String;)õò
+
+Ω2 Ω(?
+%26mage.server.Session"*java.util.Optional#get()Ljava/lang/Object;*;
+
+__unknown_file (
+
+sessionjava.util.Optional2get()ûõ
+
+Ω2 Ω(I
+%27java.lang.String"/mage.server.Session#getHost()Ljava/lang/String;*8
+
+__unknown_file (
+
+%26mage.server.Session2	getHost()çä
+
+Ω Ω(J
+%28java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%25java.lang.StringBuilder*5
+
+__unknown_file (
+
+%27java.lang.String2append(Ljava/lang/String;)ÑÅ
+
+Ω Ω(a
+%29java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%28java.lang.StringBuilder*,
+
+__unknown_file (
+ sessionId: 2append(Ljava/lang/String;)õò
+
+Ωi Ω(v
+%30mage.server.Session"*java.util.Optional#get()Ljava/lang/Object;*;
+
+__unknown_file (
+
+sessionjava.util.Optional2get()öó
+
+Ωi Ω(~
+%31java.lang.String"-mage.server.Session#getId()Ljava/lang/String;*8
+
+__unknown_file (
+
+%30mage.server.Session2getId()çä
+
+Ω Ω(
+%32java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%29java.lang.StringBuilder*5
+
+__unknown_file (
+
+%31java.lang.String2append(Ljava/lang/String;)*
+4
+5*¶
+7
+ª ª(èå
+
+ª ª(9
+%24java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*D
+
+__unknown_file ((
+&
+sessionInfojava.lang.StringBuilder*/
+
+__unknown_file (
+[user missing] 2append(Ljava/lang/String;)*
+6*Å
+8
+π π(ïí
+
+π' π(1
+%16mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()òï
+
+π' π(;
+%17java.lang.String",mage.server.User#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+%16mage.server.User2	getName()ïí
+
+π π(<
+%18java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*D
+
+__unknown_file ((
+&
+sessionInfojava.lang.StringBuilder*5
+
+__unknown_file (
+
+%17java.lang.String2append(Ljava/lang/String;)˙˜
+
+π π(I
+%19java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%18java.lang.StringBuilder*"
+
+__unknown_file (
+ [2append(Ljava/lang/String;)ïí
+
+πQ π([
+%20mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()†ù
+
+πQ π(i
+%21java.lang.String"0mage.server.User#getGameInfo()Ljava/lang/String;*5
+
+__unknown_file (
+
+%20mage.server.User2getGameInfo()çä
+
+π π(j
+%22java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%19java.lang.StringBuilder*5
+
+__unknown_file (
+
+%21java.lang.String2append(Ljava/lang/String;)◊‘
+
+π π(v
+%23java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%22java.lang.StringBuilder*!
+
+__unknown_file (
+]2	append(C)*
+6*å
+9
+µ µ(%öó
+
+µ µ(+
+%8mage.server.Session"*java.util.Optional#get()Ljava/lang/Object;*;
+
+__unknown_file (
+
+sessionjava.util.Optional2get()úô
+
+µ µ(7
+%9java.util.UUID"/mage.server.Session#getUserId()Ljava/util/UUID;*7
+
+__unknown_file (
+
+%8mage.server.Session2getUserId()b
+`
+
+µ µ(8
+userIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%9java.util.UUIDGE
+
+∂0 ∂(=
+%10java.lang.StringBuilder"java.lang.StringBuilderv
+t
+
+∂, ∂(?
+%11"!java.lang.StringBuilder#<init>()V*<
+
+__unknown_file ( 
+
+%10java.lang.StringBuilderz
+x
+
+∂ ∂(@&
+sessionInfojava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%10java.lang.StringBuilder†
+ù
+
+∑& ∑(4*
+%12#mage.server.managers.ManagerFactory"__id*]
+
+__unknown_file (A*?+
+)mage.server.Main$ClientConnectionListener"
+managerFactoryÊ„
+
+∑& ∑(B'
+%13 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%12#mage.server.managers.ManagerFactory2userManager()îë
+
+∑& ∑(R
+%14java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%13 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2getUser(Ljava/util/UUID;)i
+g
+
+∑ ∑(S
+userjava.util.Optional"__id*7
+
+__unknown_file (
+
+%14java.util.OptionaláÑ
+
+∏ ∏($
+%15boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+7
+8*Ÿ
+10
+≥ ≥(W
+U
+
+≥ ≥(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""à
+Ö
+
+≥ ≥(?
+%6java.lang.String"__concat*&
+
+≥ ≥(3
+Session not found : *-
+
+≥6 ≥(?
+
+	sessionIdjava.lang.String›⁄
+
+≥ ≥(@
+
+%7void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%6java.lang.String2trace(Ljava/lang/Object;)*
+0*(
+0 "!
+
+” ”(	
+implicit return*ı	
+11
+∞ ∞(%∂≥
+
+∞ ∞(4
+%0java.lang.String":org.jboss.remoting.Client#getSessionId()Ljava/lang/String;*A
+
+__unknown_file (%
+#
+clientorg.jboss.remoting.Client2getSessionId()i
+g
+
+∞ ∞(5
+	sessionIdjava.lang.String"__id*4
+
+__unknown_file (
+
+%0java.lang.Stringü
+ú
+
+±( ±(6)
+%1#mage.server.managers.ManagerFactory"__id*]
+
+__unknown_file (A*?+
+)mage.server.Main$ClientConnectionListener"
+managerFactoryÌ
+
+±( ±(G)
+%2#mage.server.managers.SessionManager"Ymage.server.managers.ManagerFactory#sessionManager()Lmage/server/managers/SessionManager;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ManagerFactory2sessionManager()ß§
+
+±( ±(]
+%3java.util.Optional"Vmage.server.managers.SessionManager#getSession(Ljava/lang/String;)Ljava/util/Optional;*G
+
+__unknown_file (+
+)
+%2#mage.server.managers.SessionManager*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String2getSession(Ljava/lang/String;)k
+i
+
+± ±(^
+sessionjava.util.Optional"__id*6
+
+__unknown_file (
+
+%3java.util.OptionalâÜ
+
+≤ ≤($
+%4boolean"java.util.Optional#isPresent()Z*;
+
+__unknown_file (
+
+sessionjava.util.Optional2isPresent()*
+9
+10*‚
+1
+Ã Ã("X
+V
+
+Ã Ã("
+%55org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""Ô
+Ï
+
+Ã8 Ã(X
+%56java.lang.Throwable"Mmage.server.Session#getBasicCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;*3
+
+__unknown_file ("
+mage.server.Session*>
+
+__unknown_file ("
+ 
+	throwablejava.lang.Throwable†ù
+
+Ã8 Ã(c
+%57java.lang.String"0java.lang.Throwable#toString()Ljava/lang/String;*8
+
+__unknown_file (
+
+%56java.lang.Throwable2
+toString()x
+v
+
+Ã) Ã(c
+%58java.lang.String"__concat*
+
+Ã) Ã(5
+
+ - cause: *'
+
+Ã8 Ã(c
+
+%57java.lang.String‚ﬂ
+
+Ã Ã(d
+%59void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%55org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%58java.lang.String2debug(Ljava/lang/Object;)*
+0:.
+
+Ø. Ø(B 
+	throwablejava.lang.Throwable:1
+
+ØC Ø(P#
+clientorg.jboss.remoting.ClientB-+
+)mage.server.Main$ClientConnectionListenerH

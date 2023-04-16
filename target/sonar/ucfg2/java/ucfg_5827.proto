@@ -1,0 +1,178 @@
+
+ômage.abilities.dynamicvalue.common.CardsInTargetPlayersGraveyardCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Ià
+~D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/CardsInTargetPlayersGraveyardCount.java   ("startingBlock*¥
+2& &(Æ´
+& &(,
+%6mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()§
+°
+&3 &(9
+%7mage.filter.FilterCard"__id*q
+
+__unknown_file (U*SG
+Emage.abilities.dynamicvalue.common.CardsInTargetPlayersGraveyardCount"
+filterØ¨
+&; &(V
+%8java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getSourceId()ÜÉ
+& &(l	
+%9int"mmage.cards.CardsImpl#count(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)I*7
+
+__unknown_file (
+
+%6mage.game.Graveyard*:
+
+__unknown_file (
+
+%7mage.filter.FilterCard*2
+
+__unknown_file (
+
+%8java.util.UUID*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Wcount(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+& &(m
+""*«
+3$ $(Æ´
+$ $(,
+%4mage.game.Graveyard"7mage.players.Player#getGraveyard()Lmage/game/Graveyard;*;
+
+__unknown_file (
+
+playermage.players.Player2getGraveyard()sq
+$ $(3	
+%5int"java.util.HashSet#size()I*7
+
+__unknown_file (
+
+%4mage.game.Graveyard2size()"
+$ $(4
+""*î
+startingBlock   (Iä
+á
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10õ
+ò
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+ ,  (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11õ
+ò
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+ B  (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%12*
+5*º
+4# #(§
+°
+# #(
+%3mage.filter.FilterCard"__id*q
+
+__unknown_file (U*SG
+Emage.abilities.dynamicvalue.common.CardsInTargetPlayersGraveyardCount"
+filter*
+2
+3*˘
+5! !(ÚÔ
+!' !(@-
+%0'mage.target.targetpointer.TargetPointer"Ymage.abilities.effects.Effect#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect2getTargetPointer()çä
+!' !(^
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ì
+! !(_
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+! !(`
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+4
+1*!
+1) )("
+) )(
+"":"
+   (#
+gamemage.game.Game:3
+ $  (:'
+sourceAbilitymage.abilities.Ability:3
+ ;  (H'
+effectmage.abilities.effects.EffectBIG
+Emage.abilities.dynamicvalue.common.CardsInTargetPlayersGraveyardCountHP

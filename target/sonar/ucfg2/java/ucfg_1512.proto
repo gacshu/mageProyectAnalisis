@@ -1,0 +1,242 @@
+
+^mage.game.command.planes.FieldsOfSummerEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zo
+eD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/planes/FieldsOfSummerPlane.javaL L("startingBlock*±
+2S5 S(6{y
+S  S(49
+%112mage.abilities.effects.common.GainLifeTargetEffect"2mage.abilities.effects.common.GainLifeTargetEffectŒ
+À
+S S(7
+%12"=mage.abilities.effects.common.GainLifeTargetEffect#<init>(I)V*W
+
+__unknown_file (;
+9
+%112mage.abilities.effects.common.GainLifeTargetEffect* 
+
+__unknown_file (2ï
+í
+S S(8'
+effectmage.abilities.effects.Effect"__id*W
+
+__unknown_file (;
+9
+%112mage.abilities.effects.common.GainLifeTargetEffectêç
+T4 T(A
+%13java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+ownermage.players.Player2getId()a_
+T( T(3,
+%14%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget÷
+”
+T$ T(B
+%15"?mage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;)V*J
+
+__unknown_file (.
+,
+%14%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%13java.util.UUID˝˙
+T T(C$
+%16mage.abilities.effects.Effect"xmage.abilities.effects.Effect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/Effect;*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect*J
+
+__unknown_file (.
+,
+%14%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)ÿ’
+T T(W
+%17boolean"Nmage.abilities.effects.Effect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*B
+
+__unknown_file (&
+$
+%16mage.abilities.effects.Effect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)"
+U U(
+""*˙
+3R3 R(8T
+R
+RC R(R
+%9mage.constants.Outcome"__id*"
+
+__unknown_file (
+""åâ
+R3 R(q
+%10boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*:
+
+__unknown_file (
+
+ownermage.players.Player*:
+
+__unknown_file (
+
+%9mage.constants.Outcome*,
+
+__unknown_file (
+Gain 2 life?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*˛
+startingBlockL L(3ä
+á
+K K(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+L L("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%18î
+ë
+K K(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+L, L(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%19*
+8*°
+4R R("âÜ
+R R(/
+%8boolean"!mage.players.Player#canRespond()Z*:
+
+__unknown_file (
+
+ownermage.players.Player2canRespond()*
+3
+1*˝
+5Q Q(˛˚
+Q& Q(=-
+%5'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*M
+
+__unknown_file (1/
+-mage.game.command.planes.FieldsOfSummerEffect2getTargetPointer()ÜÉ
+Q& Q(T
+%6java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%5'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ì
+Q Q(U
+%7mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getPlayer(Ljava/util/UUID;)i
+g
+Q Q(V
+ownermage.players.Player"__id*7
+
+__unknown_file (
+
+%7mage.players.Player*
+4
+1*!
+6O O("
+O O(
+""*Ñ
+7N N(%∫∑
+N N(4
+%2mage.constants.Planes"=mage.game.command.Plane#getPlaneType()Lmage/constants/Planes;*?
+
+__unknown_file (#
+!
+cPlanemage.game.command.Plane2getPlaneType()S
+Q
+N< N(Y
+%3mage.constants.Planes"__id*"
+
+__unknown_file (
+""⁄◊
+N N(Z
+%4boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*9
+
+__unknown_file (
+
+%2mage.constants.Planes*9
+
+__unknown_file (
+
+%3mage.constants.Planes2equals(Ljava/lang/Object;)*
+5
+6*·
+8M M(öó
+M M(&
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()∏µ
+M M(8
+%1mage.game.command.Plane">mage.game.GameState#getCurrentPlane()Lmage/game/command/Plane;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getCurrentPlane()r
+p
+M M(9!
+cPlanemage.game.command.Plane"__id*;
+
+__unknown_file (
+
+%1mage.game.command.Plane*
+6
+7*!
+1W W("
+W W(
+"":"
+L L(#
+gamemage.game.Game:,
+L$ L(2 
+sourcemage.abilities.AbilityB1/
+-mage.game.command.planes.FieldsOfSummerEffectHP

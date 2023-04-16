@@ -1,0 +1,642 @@
+
+ªmage.abilities.costs.mana.ManaCostImpl#assignGeneric(Lmage/abilities/Ability;Lmage/game/Game;Lmage/players/ManaPool;ILmage/filter/FilterMana;Lmage/abilities/costs/Cost;)Zk
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/mana/ManaCostImpl.java¡ ¡(#"30*°
+13
+À' À(1‘Ž
+
+À' À(;
+%25boolean"!mage.filter.FilterMana#isWhite()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2	isWhite()*
+
+8
+9
+12*â
+24
+¨D ¨(HW
+U
+
+© ©(&
+%5mage.constants.ManaType"__id*"
+
+__unknown_file (
+""‰
+†
+
+©1 ©(=
+%6mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter€
+~
+
+©P ©(]
+%7	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÙÖ
+
+¨D ª(
+%8boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*;
+
+__unknown_file (
+
+%5mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*6
+
+__unknown_file (
+
+%6mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*-
+
+__unknown_file (
+
+%7	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*
+20
+21
+23*¹
+25
+¨' ¨(1˜•
+
+¨' ¨(?
+%4boolean"%mage.filter.FilterMana#isColorless()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2isColorless()*
+24
+20
+21*‹
+15
+» »({
+y
+
+» »(
+%23	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentvt
+
+» »(+
+%24void"mage.Mana#increaseBlue()V*.
+
+__unknown_file (
+
+%23	mage.Mana2increaseBlue()*
+29*é
+16
+¸? ¸(CX
+V
+
+¹ ¹(!
+%19mage.constants.ManaType"__id*"
+
+__unknown_file (
+""Š
+‡
+
+¹, ¹(8
+%20mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter
+
+
+¹K ¹(X
+%21	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÝÚ
+
+¸? º(
+%22boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*<
+
+__unknown_file ( 
+
+%19mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*7
+
+__unknown_file (
+
+%20mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*.
+
+__unknown_file (
+
+%21	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*
+13
+15
+12*°
+17
+¸' ¸(1Œ
+
+¸' ¸(:
+%18boolean" mage.filter.FilterMana#isBlue()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2isBlue()*
+13
+16
+12*ž
+28
+£* £(.}
+
+£* £(6	
+%3int"mage.players.ManaPool#count()I*;
+
+__unknown_file (
+
+poolmage.players.ManaPool2count()*
+24
+25
+1*ü
+29
+£ £(z
+x
+
+£ £(
+%1	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentec
+
+£ £(%	
+%2int"mage.Mana#count()I*-
+
+__unknown_file (
+
+%1	mage.Mana2count()*
+28
+1*
+19
+³ ³({
+y
+
+³ ³(
+%16	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentxv
+
+³ ³(,
+%17void"mage.Mana#increaseBlack()V*.
+
+__unknown_file (
+
+%16	mage.Mana2increaseBlack()*
+29*‹
+1
+Ú Ú({
+y
+
+Ú Ú(
+%46	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentge
+
+Ú Ú(%
+
+%47int"mage.Mana#count()I*.
+
+__unknown_file (
+
+%46	mage.Mana2count()"
+
+Ú Ú(&
+""*ˆ
+3
+Ó Ó({
+y
+
+Ó Ó(
+%44	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymenttr
+
+Ó Ó(*
+%45void"mage.Mana#increaseRed()V*.
+
+__unknown_file (
+
+%44	mage.Mana2increaseRed()*
+29*â
+4
+Ð> Ð(BX
+V
+
+Ñ Ñ( 
+%40mage.constants.ManaType"__id*"
+
+__unknown_file (
+""Š
+‡
+
+Ñ+ Ñ(7
+%41mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter
+
+
+ÑJ Ñ(W
+%42	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÝÚ
+
+Ð> Ò(
+%43boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*<
+
+__unknown_file ( 
+
+%40mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*7
+
+__unknown_file (
+
+%41mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*.
+
+__unknown_file (
+
+%42	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*
+3
+1*§
+5
+Ð' Ð(1Š
+
+Ð' Ð(9
+%39boolean"mage.filter.FilterMana#isRed()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2isRed()*
+4
+1*Œ
+7
+Ë Ë({
+y
+
+Ë Ë(
+%37	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentxv
+
+Ë Ë(,
+%38void"mage.Mana#increaseGreen()V*.
+
+__unknown_file (
+
+%37	mage.Mana2increaseGreen()*
+29*å
+8
+È@ È(DX
+V
+
+É É("
+%33mage.constants.ManaType"__id*"
+
+__unknown_file (
+""Š
+‡
+
+É- É(9
+%34mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter
+
+
+ÉL É(Y
+%35	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÝÚ
+
+È@ Ê(
+%36boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*<
+
+__unknown_file ( 
+
+%33mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*7
+
+__unknown_file (
+
+%34mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*.
+
+__unknown_file (
+
+%35	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*	
+4
+5
+7*®
+9
+È' È(1‘Ž
+
+È' È(;
+%32boolean"!mage.filter.FilterMana#isGreen()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2	isGreen()*	
+4
+5
+8*í
+30
+¢ ¢(#ÔÑ
+
+¢ ¢(]	
+%0int"‡mage.players.ManaPool#getConditionalCount(Lmage/abilities/Ability;Lmage/game/Game;Lmage/filter/FilterMana;Lmage/abilities/costs/Cost;)I*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost2pgetConditionalCount(Lmage/abilities/Ability;Lmage/game/Game;Lmage/filter/FilterMana;Lmage/abilities/costs/Cost;)*
+29*é
+20
+°@ °(DX
+V
+
+± ±("
+%12mage.constants.ManaType"__id*"
+
+__unknown_file (
+""Š
+‡
+
+±- ±(9
+%13mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter
+
+
+±L ±(Y
+%14	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÝÚ
+
+°@ ²(
+%15boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*<
+
+__unknown_file ( 
+
+%12mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*7
+
+__unknown_file (
+
+%13mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*.
+
+__unknown_file (
+
+%14	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*
+16
+17
+19*²
+21
+°' °(1‘Ž
+
+°' °(;
+%11boolean"!mage.filter.FilterMana#isBlack()Z*B
+
+__unknown_file (&
+$
+
+filterManamage.filter.FilterMana2	isBlack()*
+16
+17
+20*
+11
+Ã Ã({
+y
+
+Ã Ã(
+%30	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+paymentxv
+
+Ã Ã(,
+%31void"mage.Mana#increaseWhite()V*.
+
+__unknown_file (
+
+%30	mage.Mana2increaseWhite()*
+29*ç
+12
+À@ À(DX
+V
+
+Á Á("
+%26mage.constants.ManaType"__id*"
+
+__unknown_file (
+""Š
+‡
+
+Á- Á(9
+%27mage.filter.Filter"__id*X
+
+__unknown_file (<*:(
+&mage.abilities.costs.mana.ManaCostImpl"
+sourceFilter
+
+
+ÁL Á(Y
+%28	mage.Mana"__id*Y
+
+__unknown_file (=*;(
+&mage.abilities.costs.mana.ManaCostImpl"
+usedManaToPayÝÚ
+
+À@ Â(
+%29boolean"—mage.players.ManaPool#pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)Z*;
+
+__unknown_file (
+
+poolmage.players.ManaPool*<
+
+__unknown_file ( 
+
+%26mage.constants.ManaType*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*7
+
+__unknown_file (
+
+%27mage.filter.Filter*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Cost*.
+
+__unknown_file (
+
+%28	mage.Mana2€pay(Lmage/constants/ManaType;Lmage/abilities/Ability;Lmage/filter/Filter;Lmage/game/Game;Lmage/abilities/costs/Cost;Lmage/Mana;)*
+
+8
+9
+11*“
+23
+« «(z
+x
+
+« «(
+%9	mage.Mana"__id*S
+
+__unknown_file (7*5(
+&mage.abilities.costs.mana.ManaCostImpl"	
+payment}
+
+« «(0
+%10void"mage.Mana#increaseColorless()V*-
+
+__unknown_file (
+
+%9	mage.Mana2increaseColorless()*
+29:/
+
+¡$ ¡(4!
+abilitymage.abilities.Ability:$
+
+¡5 ¡(?
+gamemage.game.Game:+
+
+¡@ ¡(N
+poolmage.players.ManaPool: 
+
+__unknown_file (
+"":2
+
+¡Y ¡(o$
+
+filterManamage.filter.FilterMana:4
+
+¡p ¡(~&
+	costToPaymage.abilities.costs.CostB*(
+&mage.abilities.costs.mana.ManaCostImplP

@@ -1,0 +1,816 @@
+
+?mage.cards.decks.Constructed#validate(Lmage/cards/decks/Deck;)Za
+UD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/decks/Constructed.javaÝ Ý("startingBlock*Š
+24
+û û(h
+f
+
+û û(9.
+%36'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""n
+l
+
+ûK û(h
+%37java.lang.String"__concat*%
+
+ûK û(`
+Restricted amount: *
+
+ûc û(h
+""—”
+
+û û(o
+%38void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*L
+
+__unknown_file (0
+.
+%36'mage.cards.decks.DeckValidatorErrorType*@
+
+__unknown_file ($
+"
+restrictedCardjava.lang.String*5
+
+__unknown_file (
+
+%37java.lang.String* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+23*É
+25
+ù ù("¬
+©
+
+ù ù(6
+%35java.lang.Integer"__mapGet*5
+
+__unknown_file (
+
+countsjava.util.Map*@
+
+__unknown_file ($
+"
+restrictedCardjava.lang.String*
+24
+23*†
+26
+ø ø(éæ
+
+ø ø(2
+%34boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+countsjava.util.Map*@
+
+__unknown_file ($
+"
+restrictedCardjava.lang.String2containsKey(Ljava/lang/Object;)*
+25
+23*‘
+27
+÷% ÷(/y
+w
+
+÷% ÷(/
+%33java.util.List"__id*L
+
+__unknown_file (0*.
+mage.cards.decks.Constructed"
+
+restricted*
+23*‹
+28
+ð ð(X
+V
+
+ð ð(
+
+bannedCardjava.lang.String"__id*"
+
+__unknown_file (
+""”
+‘
+
+ð ð(
+
+bannedCardjava.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%29java.util.List*"
+
+__unknown_file (
+""*
+27
+30*‡
+29
+ò ò(h
+f
+
+ò ò(6.
+%31'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""„
+
+ò ò(S
+%32void"xmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*L
+
+__unknown_file (0
+.
+%31'mage.cards.decks.DeckValidatorErrorType*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String*&
+
+__unknown_file (
+
+Banned* 
+
+__unknown_file (22XaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;Z)*
+28*‚
+30
+ñ ñ(åâ
+
+ñ ñ(.
+%30boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+countsjava.util.Map*<
+
+__unknown_file ( 
+
+
+bannedCardjava.lang.String2containsKey(Ljava/lang/Object;)*
+28
+29*
+31
+ð! ð('u
+s
+
+ð! ð('
+%29java.util.List"__id*H
+
+__unknown_file (,**
+mage.cards.decks.Constructed"
+banned*
+28*Ã
+10
+“ “(¯¬
+
+“ “(8
+%52java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()öó
+
+“ “(9
+%53boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+%52java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+7
+9*·
+11
+’ ’(Ÿœ
+
+’ ’((
+%51java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+7*£
+34
+ë& ë(5;9
+
+ë* ë(3
+%22java.util.HashMap"java.util.HashMapj
+h
+
+ë& ë(5
+%23"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%22java.util.HashMape
+c
+
+ë ë(6
+countsjava.util.Map"__id*6
+
+__unknown_file (
+
+%22java.util.HashMapŸœ
+
+ì ì(*
+%24java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ËÈ
+
+ì ì(+
+%25void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%24java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)§¤
+
+í í(.
+%26java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()ËÈ
+
+í í(/
+%27void"Qmage.cards.decks.DeckValidator#countCards(Ljava/util/Map;Ljava/util/Collection;)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+countsjava.util.Map*2
+
+__unknown_file (
+
+%26java.util.Set21countCards(Ljava/util/Map;Ljava/util/Collection;)’
+
+î î(&
+%28boolean";mage.cards.decks.Constructed#checkCounts(ILjava/util/Map;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed* 
+
+__unknown_file (2*5
+
+__unknown_file (
+
+countsjava.util.Map2checkCounts(ILjava/util/Map;)*
+31*ü
+12
+‰ ‰(Q
+O
+
+‰ ‰(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+‰ ‰(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%46java.util.Set*"
+
+__unknown_file (
+""*
+15
+11*…	
+35
+ç ç(h
+f
+
+ç ç(5.
+%16'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""¨¥
+çr ç(…
+%17java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()nl
+çr ç(Œ
+
+%18int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%17java.util.Set2size()
+Š
+çD ç(Œ
+%19java.lang.String"__concat*;
+
+çD ç(o-+
+)Must contain no more than 15 cards : has *
+çr ç(Œ
+
+
+%18intx
+v
+çD ç(—
+%20java.lang.String"__concat*(
+çD ç(Œ
+
+%19java.lang.String*
+ç ç(—
+
+ cardsÝÚ
+ç ç(˜
+%21void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*L
+
+__unknown_file (0
+.
+%16'mage.cards.decks.DeckValidatorErrorType*)
+
+__unknown_file (
+	Sideboard*5
+
+__unknown_file (
+
+%20java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+34*³
+36
+æ æ(§¤
+
+æ æ(
+%14java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()mk
+
+æ æ(&
+
+%15int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%14java.util.Set2size()*
+35
+34*‹
+14
+‹ ‹($òï
+
+‹ ‹(*
+%50boolean"<mage.cards.decks.Constructed#legalRarity(Lmage/cards/Card;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalRarity(Lmage/cards/Card;)*
+12*ö
+37
+â â(g
+e
+
+â â(5-
+%5'mage.cards.decks.DeckValidatorErrorType"__id*"
+
+__unknown_file (
+""š—
+
+âZ â(j	
+%6int".mage.cards.decks.Constructed#getDeckMinSize()I*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed2getDeckMinSize()u
+s
+
+â? â(j
+%7java.lang.String"__concat*(
+
+â? â(W
+Must contain at least *
+
+âZ â(j
+	
+%6int
+}
+â? â(€
+%8java.lang.String"__concat*&
+
+â? â(j
+
+%7java.lang.String*$
+âm â(€
+ cards: has only  
+âƒ â(’
+%9java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()nl
+âƒ â(™
+
+%10int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%9java.util.Set2size()y
+w
+â? â(™
+%11java.lang.String"__concat*'
+â? â(€
+
+%8java.lang.String*
+âƒ â(™
+
+
+%10intx
+v
+â? â(¤
+%12java.lang.String"__concat*(
+â? â(™
+
+%11java.lang.String*
+âœ â(¤
+
+ cards×Ô
+â â(¥
+%13void"wmage.cards.decks.DeckValidator#addError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)V*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*K
+
+__unknown_file (/
+-
+%5'mage.cards.decks.DeckValidatorErrorType*$
+
+__unknown_file (
+Deck*5
+
+__unknown_file (
+
+%12java.lang.String2WaddError(Lmage/cards/decks/DeckValidatorErrorType;Ljava/lang/String;Ljava/lang/String;)*
+36*š
+15
+Š Š(w
+u
+
+Š Š(
+%47java.util.List"__id*J
+
+__unknown_file (.*,
+mage.cards.decks.Constructed"
+
+rarities¥¢
+
+Š' Š(7
+%48mage.constants.Rarity"2mage.cards.Card#getRarity()Lmage/constants/Rarity;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getRarity()ÜÙ
+
+Š Š(8
+%49boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%47java.util.List*:
+
+__unknown_file (
+
+%48mage.constants.Rarity2contains(Ljava/lang/Object;)*
+14
+12*
+38
+Þ Þ(x
+v
+
+ß ß(
+%0java.util.List"__id*L
+
+__unknown_file (0*.
+mage.cards.decks.Constructed"
+
+errorsList\
+Z
+
+ß ß(
+
+%1void"__arrayClear*2
+
+__unknown_file (
+
+%0java.util.Listž›
+
+á á(
+%2java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()ki
+
+á á("	
+%3int"java.util.Set#size()I*1
+
+__unknown_file (
+
+%2java.util.Set2size()š—
+
+á% á(5	
+%4int".mage.cards.decks.Constructed#getDeckMinSize()I*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed2getDeckMinSize()*
+36
+37*À
+16
+‰ ‰(!§¤
+
+‰ ‰(0
+%46java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+12*ü
+17
+‚ ‚(Q
+O
+
+‚ ‚(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+‚ ‚(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%41java.util.Set*"
+
+__unknown_file (
+""*
+16
+20*‹
+19
+„ „($òï
+
+„ „(*
+%45boolean"<mage.cards.decks.Constructed#legalRarity(Lmage/cards/Card;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalRarity(Lmage/cards/Card;)*
+17*%
+1
+   ("
+
+   (
+""*ù
+2
+™ ™(Q
+O
+
+™ ™(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+™ ™(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%55java.util.Set*"
+
+__unknown_file (
+""*
+5
+1*™
+startingBlock
+Ý Ý(&“
+
+
+Ü Ü(
+%59"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck`
+^
+
+Ý! Ý(%
+deckmage.cards.decks.Deck"__annotation*#
+
+__unknown_file (
+
+%59*
+38*…
+4
+› ›(îë
+
+› ›($
+%58boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+2*Â
+5
+š š(¯¬
+
+š š(8
+%56java.lang.String"7mage.cards.Card#getExpansionSetCode()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getExpansionSetCode()öó
+
+š š(9
+%57boolean">mage.cards.decks.Constructed#isSetAllowed(Ljava/lang/String;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+%56java.lang.String2 isSetAllowed(Ljava/lang/String;)*
+2
+4*¾
+6
+™ ™(§¤
+
+™ ™(,
+%55java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()*
+2*ú
+7
+’ ’(Q
+O
+
+’ ’(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""Œ
+‰
+
+’ ’(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%51java.util.Set*"
+
+__unknown_file (
+""*
+6
+10*…
+9
+” ”(îë
+
+” ”($
+%54boolean":mage.cards.decks.Constructed#legalSets(Lmage/cards/Card;)Z*<
+
+__unknown_file ( 
+mage.cards.decks.Constructed*5
+
+__unknown_file (
+
+cardmage.cards.Card2legalSets(Lmage/cards/Card;)*
+7*š
+20
+ƒ ƒ(w
+u
+
+ƒ ƒ(
+%42java.util.List"__id*J
+
+__unknown_file (.*,
+mage.cards.decks.Constructed"
+
+rarities¥¢
+
+ƒ' ƒ(7
+%43mage.constants.Rarity"2mage.cards.Card#getRarity()Lmage/constants/Rarity;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getRarity()ÜÙ
+
+ƒ ƒ(8
+%44boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%42java.util.List*:
+
+__unknown_file (
+
+%43mage.constants.Rarity2contains(Ljava/lang/Object;)*
+17
+19*¸
+21
+‚ ‚(!Ÿœ
+
+‚ ‚(,
+%41java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+17*Ž
+22
+ (w
+u
+
+ (
+%39java.util.List"__id*J
+
+__unknown_file (.*,
+mage.cards.decks.Constructed"
+
+raritiesyw
+
+ (
+%40boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%39java.util.List2	isEmpty()*
+21
+11*“
+23
+÷ ÷("\
+Z
+
+÷ ÷(""
+restrictedCardjava.lang.String"__id*"
+
+__unknown_file (
+""˜
+•
+
+÷ ÷(""
+restrictedCardjava.lang.String"
+__arrayGet*3
+
+__unknown_file (
+
+%33java.util.List*"
+
+__unknown_file (
+""*
+26
+22:+
+
+Ý Ý(%
+deckmage.cards.decks.DeckB 
+mage.cards.decks.ConstructedHP

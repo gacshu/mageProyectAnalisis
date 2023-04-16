@@ -1,0 +1,917 @@
+
+Dorg.mage.plugins.card.dl.sources.GathererSets#AnalyseSearchResult()Vy
+mD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/org/mage/plugins/card/dl/sources/GathererSets.javaŒ Œ($"30*é
+25
+‡ ‡(V
+T
+
+‡* ‡(7
+%14mage.constants.Rarity"__id*"
+
+__unknown_file (
+""ûõ
+
+‡ ‡(8
+%15java.util.List"Qmage.cards.ExpansionSet#getCardsByRarity(Lmage/constants/Rarity;)Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet*:
+
+__unknown_file (
+
+%14mage.constants.Rarity2)getCardsByRarity(Lmage/constants/Rarity;)yw
+
+‡ ‡(B
+%16boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%15java.util.List2	isEmpty()*
+22
+23*í
+26
+‹ ‹(X
+V
+
+‹ ‹(
+%12org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""úô
+
+‹ ‹('
+%13boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%12org.apache.log4j.Logger2isDebugEnabled()*
+2
+25*Ñ
+27
+ÿ ÿ(W
+U
+
+ÿ ÿ(
+%7org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""•¢
+
+ÿU ÿ(b
+%8java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()•¢
+
+ÿd ÿ(q
+%9java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()·
+ﬁ
+
+ÿ ÿ(r
+%10java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*G
+
+__unknown_file (+)
+'Symbols: set is not configured: %s (%s)*4
+
+__unknown_file (
+
+%8java.lang.String*4
+
+__unknown_file (
+
+%9java.lang.Stringﬂ‹
+
+ÿ ÿ(s
+%11void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%7org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%10java.lang.String2warn(Ljava/lang/Object;)*
+2*ò
+28
+‘ ‘(,Q
+O
+
+‘ ‘(,
+%4java.util.HashMap"__id*"
+
+__unknown_file (
+""•¢
+
+‘1 ‘(>
+%5java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()«
+ƒ
+
+‘ ‘(??
+%69org.mage.plugins.card.dl.sources.GathererSets$CheckResult"__mapGet*5
+
+__unknown_file (
+
+%4java.util.HashMap*4
+
+__unknown_file (
+
+%5java.lang.String∂
+≥
+
+‘ ‘(@@
+res9org.mage.plugins.card.dl.sources.GathererSets$CheckResult"__id*]
+
+__unknown_file (A
+?
+%69org.mage.plugins.card.dl.sources.GathererSets$CheckResult*
+26
+27*æ
+29
+“  “($á
+Ñ
+
+“  “(2
+%2mage.cards.Sets".mage.cards.Sets#getInstance()Lmage/cards/Sets;*/
+
+__unknown_file ("
+mage.cards.Setsúô
+
+“  “(;
+%3java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*3
+
+__unknown_file (
+
+%2mage.cards.Sets2values()*
+2*ô
+30
+– –(%42
+
+– –(#
+%0java.util.Date"java.util.Dateb
+`
+
+– –(%
+%1"java.util.Date#<init>()V*2
+
+__unknown_file (
+
+%0java.util.Dateg
+e
+
+– –(&
+startedDatejava.util.Date"__id*2
+
+__unknown_file (
+
+%0java.util.Date*
+29*§
+10
+Ô Ô(2e
+c
+
+Ô Ô(2+
+card#mage.cards.ExpansionSet$SetCardInfo"__id*"
+
+__unknown_file (
+""°
+û
+
+Ô Ô(2+
+card#mage.cards.ExpansionSet$SetCardInfo"
+__arrayGet*3
+
+__unknown_file (
+
+%46java.util.List*"
+
+__unknown_file (
+""*
+9
+12*´
+11
+Ò Ò(X
+V
+
+Ò Ò(
+%52org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ß§
+Òy Ò(Ü
+%53java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+Òà Ò(ï
+%54java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()Ä
+˝
+Ò$ Ò(ñ
+%55java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*c
+
+__unknown_file (GE
+CSymbols: set have alternative card but do not config to it: %s (%s)*5
+
+__unknown_file (
+
+%53java.lang.String*5
+
+__unknown_file (
+
+%54java.lang.String·ﬁ
+Ò Ò(ó
+%56void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%52org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%55java.lang.String2info(Ljava/lang/Object;)*
+9* 
+12
+ (∑¥
+
+' (@
+
+%47int"9mage.cards.ExpansionSet$SetCardInfo#getCardNumberAsInt()I*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getCardNumberAsInt()≥
+∞
+
+ (A
+%48java.lang.String"-java.lang.String#valueOf(I)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*(
+
+__unknown_file (
+
+
+%47intwu
+
+ (J
+
+%49int"java.lang.String#length()I*5
+
+__unknown_file (
+
+%48java.lang.String2length()À»
+
+N (b
+%50java.lang.String"Emage.cards.ExpansionSet$SetCardInfo#getCardNumber()Ljava/lang/String;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getCardNumber()wu
+
+N (k
+
+%51int"java.lang.String#length()I*5
+
+__unknown_file (
+
+%50java.lang.String2length()*
+10
+11*…
+13
+Ô5 Ô(8∞≠
+
+Ô5 Ô(I
+%46java.util.List"8mage.cards.ExpansionSet#getSetCardInfo()Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2getSetCardInfo()*
+10*´
+14
+Í Í(X
+V
+
+Í Í(
+%41org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ß§
+Ís Í(Ä
+%42java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+ÍÇ Í(è
+%43java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()˝
+˙
+Í! Í(ê
+%44java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*`
+
+__unknown_file (DB
+@Symbols: set have mythic cards, but don't download icon: %s (%s)*5
+
+__unknown_file (
+
+%42java.lang.String*5
+
+__unknown_file (
+
+%43java.lang.String„‡
+Í Í(ë
+%45void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%41org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%44java.lang.String2error(Ljava/lang/Object;)*
+13*é
+16
+È È(V
+T
+
+È* È(7
+%38mage.constants.Rarity"__id*"
+
+__unknown_file (
+""ûõ
+
+È È(8
+%39java.util.List"Qmage.cards.ExpansionSet#getCardsByRarity(Lmage/constants/Rarity;)Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet*:
+
+__unknown_file (
+
+%38mage.constants.Rarity2)getCardsByRarity(Lmage/constants/Rarity;)yw
+
+È È(B
+%40boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%39java.util.List2	isEmpty()*
+13
+14*®
+17
+Á Á(X
+V
+
+Á Á(
+%33org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¶£
+
+Áq Á(~
+%34java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+ÁÄ Á(ç
+%35java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()˚
+¯
+Á! Á(é
+%36java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*^
+
+__unknown_file (B@
+>Symbols: set have rare cards, but don't download icon: %s (%s)*5
+
+__unknown_file (
+
+%34java.lang.String*5
+
+__unknown_file (
+
+%35java.lang.String„‡
+Á Á(è
+%37void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%33org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%36java.lang.String2error(Ljava/lang/Object;)*
+16*é
+19
+Ê Ê(V
+T
+
+Ê* Ê(5
+%30mage.constants.Rarity"__id*"
+
+__unknown_file (
+""ûõ
+
+Ê Ê(6
+%31java.util.List"Qmage.cards.ExpansionSet#getCardsByRarity(Lmage/constants/Rarity;)Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet*:
+
+__unknown_file (
+
+%30mage.constants.Rarity2)getCardsByRarity(Lmage/constants/Rarity;)yw
+
+Ê Ê(@
+%32boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%31java.util.List2	isEmpty()*
+16
+17*(
+0 "!
+
+à à(
+implicit return*Ù
+1
+Ö Ö(#53
+
+Ö Ö(!
+%78java.util.Date"java.util.Dated
+b
+
+Ö Ö(#
+%79"java.util.Date#<init>()V*3
+
+__unknown_file (
+
+%78java.util.Datef
+d
+
+Ö Ö($
+	endedDatejava.util.Date"__id*3
+
+__unknown_file (
+
+%78java.util.Date|z
+
+Ü Ü((
+%80long"java.util.Date#getTime()J*9
+
+__unknown_file (
+
+	endedDatejava.util.Date2	getTime()~|
+
+Ü+ Ü(@
+%81long"java.util.Date#getTime()J*;
+
+__unknown_file (
+
+startedDatejava.util.Date2	getTime()X
+V
+
+á á(
+%82org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""õ
+ò
+
+á á(U
+%83java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*I
+
+__unknown_file (-+
+)Symbols: check completed after %d seconds*"
+
+__unknown_file (
+""‚ﬂ
+
+á á(V
+%84void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%82org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%83java.lang.String2debug(Ljava/lang/Object;)*
+0*é
+2
+“ “(X
+V
+
+“ “(
+setmage.cards.ExpansionSet"__id*"
+
+__unknown_file (
+""ô
+ñ
+
+“ “(
+setmage.cards.ExpansionSet"
+__arrayGet*8
+
+__unknown_file (
+
+%3java.util.Collection*"
+
+__unknown_file (
+""*
+28
+1*¢
+3
+¯ ¯(6e
+c
+
+¯ ¯(6+
+card#mage.cards.ExpansionSet$SetCardInfo"__id*"
+
+__unknown_file (
+""°
+û
+
+¯ ¯(6+
+card#mage.cards.ExpansionSet$SetCardInfo"
+__arrayGet*3
+
+__unknown_file (
+
+%59java.util.List*"
+
+__unknown_file (
+""*
+2
+7*ß
+4
+˝  ˝(&X
+V
+
+˝  ˝(&
+%71org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ß§
+˝| ˝(â
+%72java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+˝ã ˝(ò
+%73java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()Õ 
+˝ö ˝(Æ
+%74java.lang.String"Emage.cards.ExpansionSet$SetCardInfo#getCardNumber()Ljava/lang/String;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getCardNumber()¡æ
+˝∞ ˝(æ
+%75java.lang.String"?mage.cards.ExpansionSet$SetCardInfo#getName()Ljava/lang/String;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2	getName()È
+Ê
+˝, ˝(ø
+%76java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*^
+
+__unknown_file (B@
+>Symbols: set's booster missing nonland card:: %s (%s), %s - %s*5
+
+__unknown_file (
+
+%72java.lang.String*5
+
+__unknown_file (
+
+%73java.lang.String*5
+
+__unknown_file (
+
+%74java.lang.String*5
+
+__unknown_file (
+
+%75java.lang.String·ﬁ
+˝  ˝(¿
+%77void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%71org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%76java.lang.String2info(Ljava/lang/Object;)*
+3*≤
+5
+˚  ˚(&X
+V
+
+˚  ˚(&
+%64org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""®•
+˚Ü ˚(ì
+%65java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+˚ï ˚(¢
+%66java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()Õ 
+˚§ ˚(∏
+%67java.lang.String"Emage.cards.ExpansionSet$SetCardInfo#getCardNumber()Ljava/lang/String;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getCardNumber()¡æ
+˚∫ ˚(»
+%68java.lang.String"?mage.cards.ExpansionSet$SetCardInfo#getName()Ljava/lang/String;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2	getName()Û
+
+˚, ˚(…
+%69java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*h
+
+__unknown_file (LJ
+HSymbols: set's booster have land above max card number: %s (%s), %s - %s*5
+
+__unknown_file (
+
+%65java.lang.String*5
+
+__unknown_file (
+
+%66java.lang.String*5
+
+__unknown_file (
+
+%67java.lang.String*5
+
+__unknown_file (
+
+%68java.lang.String·ﬁ
+˚  ˚( 
+%70void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%64org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%69java.lang.String2info(Ljava/lang/Object;)*
+3*ø
+6
+˙  ˙($Õ 
+
+˙  ˙(0
+%62mage.constants.Rarity"Fmage.cards.ExpansionSet$SetCardInfo#getRarity()Lmage/constants/Rarity;*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getRarity()V
+T
+
+˙4 ˙(?
+%63mage.constants.Rarity"__id*"
+
+__unknown_file (
+""*
+4
+5*Ä
+7
+˘ ˘( ∑¥
+
+˘ ˘(5
+
+%60int"9mage.cards.ExpansionSet$SetCardInfo#getCardNumberAsInt()I*I
+
+__unknown_file (-
++
+card#mage.cards.ExpansionSet$SetCardInfo2getCardNumberAsInt()¨©
+
+˘8 ˘(W
+
+%61int"4mage.cards.ExpansionSet#getMaxCardNumberInBooster()I*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2getMaxCardNumberInBooster()*
+3
+6*«
+8
+¯9 ¯(<∞≠
+
+¯9 ¯(M
+%59java.util.List"8mage.cards.ExpansionSet#getSetCardInfo()Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2getSetCardInfo()*
+3*å
+9
+˜ ˜(¨©
+
+˜ ˜(3
+
+%57int"4mage.cards.ExpansionSet#getMaxCardNumberInBooster()I*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2getMaxCardNumberInBooster()D
+B
+
+˜7 ˜(H
+
+%58int"__id*"
+
+__unknown_file (
+""*
+2
+8*≠
+20
+‰ ‰(X
+V
+
+‰ ‰(
+%25org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ß§
+‰u ‰(Ç
+%26java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+‰Ñ ‰(ë
+%27java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()ˇ
+¸
+‰! ‰(í
+%28java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*b
+
+__unknown_file (FD
+BSymbols: set have uncommon cards, but don't download icon: %s (%s)*5
+
+__unknown_file (
+
+%26java.lang.String*5
+
+__unknown_file (
+
+%27java.lang.String„‡
+‰ ‰(ì
+%29void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%25org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%28java.lang.String2error(Ljava/lang/Object;)*
+19*é
+22
+„ „(V
+T
+
+„* „(9
+%22mage.constants.Rarity"__id*"
+
+__unknown_file (
+""ûõ
+
+„ „(:
+%23java.util.List"Qmage.cards.ExpansionSet#getCardsByRarity(Lmage/constants/Rarity;)Ljava/util/List;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet*:
+
+__unknown_file (
+
+%22mage.constants.Rarity2)getCardsByRarity(Lmage/constants/Rarity;)yw
+
+„ „(D
+%24boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%23java.util.List2	isEmpty()*
+19
+20*´
+23
+· ·(X
+V
+
+· ·(
+%17org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ß§
+·s ·(Ä
+%18java.lang.String"3mage.cards.ExpansionSet#getCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getCode()®•
+·Ç ·(è
+%19java.lang.String"3mage.cards.ExpansionSet#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+setmage.cards.ExpansionSet2	getName()˝
+˙
+·! ·(ê
+%20java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*`
+
+__unknown_file (DB
+@Symbols: set have common cards, but don't download icon: %s (%s)*5
+
+__unknown_file (
+
+%18java.lang.String*5
+
+__unknown_file (
+
+%19java.lang.String„‡
+· ·(ë
+%21void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%17org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%20java.lang.String2error(Ljava/lang/Object;)*
+22B1/
+-org.mage.plugins.card.dl.sources.GathererSets

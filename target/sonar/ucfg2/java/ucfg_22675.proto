@@ -1,0 +1,851 @@
+
+%mage.client.game.GamePanel#cleanUp()Vf
+ZD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/game/GamePanel.javaß ß("34*¥
+24
+ü1 ü(7r
+p
+
+ü1 ü(7
+%38java.util.Map"__id*F
+
+__unknown_file (**(
+mage.client.game.GamePanel"
+exiles˜•
+
+ü1 ü(@
+%39java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%38java.util.Map2values()*
+22*Ý
+25
+ú ú(—
+”
+
+ú ú(/
+%36(mage.client.dialog.PickMultiNumberDialog"__id*O
+
+__unknown_file (3*1
+mage.client.game.GamePanel"
+pickMultiNumberª§
+
+ú ú(*
+%37void"-mage.client.dialog.MageDialog#removeDialog()V*M
+
+__unknown_file (1
+/
+%36(mage.client.dialog.PickMultiNumberDialog2removeDialog()*
+24*´
+26
+ù ù(—
+”
+
+ù ù(/
+%35(mage.client.dialog.PickMultiNumberDialog"__id*O
+
+__unknown_file (3*1
+mage.client.game.GamePanel"
+pickMultiNumber*
+24
+25*Î
+27
+÷ ÷(
+Š
+
+÷ ÷(*
+%33#mage.client.dialog.PickNumberDialog"__id*J
+
+__unknown_file (.*,
+mage.client.game.GamePanel"
+
+pickNumber¥¢
+
+÷ ÷(%
+%34void"-mage.client.dialog.MageDialog#removeDialog()V*H
+
+__unknown_file (,
+*
+%33#mage.client.dialog.PickNumberDialog2removeDialog()*
+26*ß
+28
+ó ó(™
+–
+
+ó ó(3
+%28,mage.client.components.ability.AbilityPicker"__id*M
+
+__unknown_file (1*/
+mage.client.game.GamePanel"
+abilityPicker³°
+
+ó ó($
+%29void"7mage.client.components.ability.AbilityPicker#cleanUp()V*Q
+
+__unknown_file (5
+3
+%28,mage.client.components.ability.AbilityPicker2	cleanUp()s
+q
+
+ô! ô('
+%30java.util.UUID"__id*F
+
+__unknown_file (**(
+mage.client.game.GamePanel"
+gameIdë
+è
+
+ô ô((
+%31void"Jmage.client.components.ext.dlg.DialogManager#removeGame(Ljava/util/UUID;)V*L
+
+__unknown_file (0".
+,mage.client.components.ext.dlg.DialogManager*3
+
+__unknown_file (
+
+%30java.util.UUID
+Š
+
+ö ö(*
+%32#mage.client.dialog.PickNumberDialog"__id*J
+
+__unknown_file (.*,
+mage.client.game.GamePanel"
+
+pickNumber*
+26
+27*ú
+
+29
+ð ð(„
+
+
+ð ð(
+%21javax.swing.JLayeredPane"__id*L
+
+__unknown_file (0*.
+mage.client.game.GamePanel"
+jLayeredPane™
+–
+
+ð  ð(-3
+%22,mage.client.components.ability.AbilityPicker"__id*M
+
+__unknown_file (1*/
+mage.client.game.GamePanel"
+abilityPickerþû
+
+ð ð(.
+%23void"0java.awt.Container#remove(Ljava/awt/Component;)V*=
+
+__unknown_file (!
+
+%21javax.swing.JLayeredPane*Q
+
+__unknown_file (5
+3
+%22,mage.client.components.ability.AbilityPicker2remove(Ljava/awt/Component;)„
+
+
+ñ ñ(
+%24javax.swing.JLayeredPane"__id*L
+
+__unknown_file (0*.
+mage.client.game.GamePanel"
+jLayeredPanes
+q
+
+ñ9 ñ(?
+%25java.util.UUID"__id*F
+
+__unknown_file (**(
+mage.client.game.GamePanel"
+gameIdÀ
+½
+
+ñ  ñ(@3
+%26,mage.client.components.ext.dlg.DialogManager"wmage.client.components.ext.dlg.DialogManager#getManager(Ljava/util/UUID;)Lmage/client/components/ext/dlg/DialogManager;*L
+
+__unknown_file (0".
+,mage.client.components.ext.dlg.DialogManager*3
+
+__unknown_file (
+
+%25java.util.UUIDþû
+
+ñ ñ(A
+%27void"0java.awt.Container#remove(Ljava/awt/Component;)V*=
+
+__unknown_file (!
+
+%24javax.swing.JLayeredPane*Q
+
+__unknown_file (5
+3
+%26,mage.client.components.ext.dlg.DialogManager2remove(Ljava/awt/Component;)*
+28*Ì
+30
+ì ì(s
+q
+
+ì ì(
+%16java.util.Map"__id*G
+
+__unknown_file (+*)
+mage.client.game.GamePanel"	
+players[
+Y
+
+ì ì(
+%17void"
+__mapClear*2
+
+__unknown_file (
+
+%16java.util.Mapz
+x
+
+í í(
+%18java.util.Map"__id*N
+
+__unknown_file (2*0
+mage.client.game.GamePanel"
+playersWhoLeft[
+Y
+
+í í(#
+%19void"
+__mapClear*2
+
+__unknown_file (
+
+%18java.util.Map„
+
+
+ï ï(
+%20javax.swing.JLayeredPane"__id*L
+
+__unknown_file (0*.
+mage.client.game.GamePanel"
+jLayeredPane*
+28
+29* 
+31
+é é(>c
+a
+
+é é(>)
+playAreaPanelEntryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""ž
+›
+
+é é(>)
+playAreaPanelEntryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%13java.util.Set*"
+
+__unknown_file (
+""*
+30
+32*ð
+32
+ê ê(½º
+
+ê ê()%
+%14mage.client.game.PlayAreaPanel"0java.util.Map$Entry#getValue()Ljava/lang/Object;*G
+
+__unknown_file (+
+)
+playAreaPanelEntryjava.util.Map$Entry2
+getValue()—”
+
+ê ê(3
+%15void")mage.client.game.PlayAreaPanel#CleanUp()V*C
+
+__unknown_file ('
+%
+%14mage.client.game.PlayAreaPanel2	CleanUp()*
+31*Â
+10
+Œ Œ(.q
+o
+
+Œ Œ(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+Œ Œ(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%55java.util.Collection*"
+
+__unknown_file (
+""*
+9
+11*œ
+33
+éA é(Hs
+q
+
+éA é(H
+%12java.util.Map"__id*G
+
+__unknown_file (+*)
+mage.client.game.GamePanel"	
+playersŽ‹
+
+éA é(S
+%13java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%12java.util.Map2
+entrySet()*
+31*€
+11
+ (²¯
+
+ ("
+%56void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+Ž Ž('
+%57void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+10*å
+34
+à à(r
+p
+
+à à(#
+%0java.util.UUID"__id*F
+
+__unknown_file (**(
+mage.client.game.GamePanel"
+gameId»
+¸
+
+à à($
+
+%1void"3mage.client.MageFrame#removeGame(Ljava/util/UUID;)V*5
+
+__unknown_file ("
+mage.client.MageFrame*2
+
+__unknown_file (
+
+%0java.util.UUID‹
+ˆ
+
+á á(
+
+%2void"2mage.client.game.GamePanel#saveDividerLocations()V*:
+
+__unknown_file (
+mage.client.game.GamePanel‹
+ˆ
+
+â â(%
+%3mage.client.chat.ChatPanelBasic"__id*M
+
+__unknown_file (1*/
+mage.client.game.GamePanel"
+gameChatPanelš
+
+â â('
+
+%4void"-mage.client.chat.ChatPanelBasic#disconnect()V*C
+
+__unknown_file ('
+%
+%3mage.client.chat.ChatPanelBasic2disconnect()‹
+ˆ
+
+ã ã(%
+%5mage.client.chat.ChatPanelBasic"__id*M
+
+__unknown_file (1*/
+mage.client.game.GamePanel"
+userChatPanelš
+
+ã ã('
+
+%6void"-mage.client.chat.ChatPanelBasic#disconnect()V*C
+
+__unknown_file ('
+%
+%5mage.client.chat.ChatPanelBasic2disconnect()…
+‚
+
+å å(
+
+%7void",mage.client.game.GamePanel#removeListener()V*:
+
+__unknown_file (
+mage.client.game.GamePanel†
+ƒ
+
+ç ç( 
+%8mage.client.game.HandPanel"__id*M
+
+__unknown_file (1*/
+mage.client.game.GamePanel"
+handContainerŠ
+
+ç ç($
+
+%9void"%mage.client.game.HandPanel#cleanUp()V*>
+
+__unknown_file ("
+ 
+%8mage.client.game.HandPanel2	cleanUp()ƒ
+€
+
+è è(
+%10mage.client.cards.Cards"__id*L
+
+__unknown_file (0*.
+mage.client.game.GamePanel"
+stackObjects‰†
+
+è è(#
+%11void""mage.client.cards.Cards#cleanUp()V*<
+
+__unknown_file ( 
+
+%10mage.client.cards.Cards2	cleanUp()*
+33*§
+12
+Œ1 Œ(9t
+r
+
+Œ1 Œ(9
+%54java.util.Map"__id*H
+
+__unknown_file (,**
+mage.client.game.GamePanel"
+
+lookedAt˜•
+
+Œ1 Œ(B
+%55java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%54java.util.Map2values()*
+10*Ã
+13
+ˆ ˆ(.q
+o
+
+ˆ ˆ(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+ˆ ˆ(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%51java.util.Collection*"
+
+__unknown_file (
+""*
+14
+12*€
+14
+‰ ‰(²¯
+
+‰ ‰("
+%52void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+Š Š('
+%53void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+13*§
+15
+ˆ1 ˆ(9t
+r
+
+ˆ1 ˆ(9
+%50java.util.Map"__id*H
+
+__unknown_file (,**
+mage.client.game.GamePanel"
+
+revealed˜•
+
+ˆ1 ˆ(B
+%51java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%50java.util.Map2values()*
+13*Ã
+16
+„ „(.q
+o
+
+„ „(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+„ „(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%47java.util.Collection*"
+
+__unknown_file (
+""*
+15
+17*€
+17
+… …(²¯
+
+… …("
+%48void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+† †('
+%49void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+16*¯
+18
+„1 „(A|
+z
+
+„1 „(A
+%46java.util.Map"__id*P
+
+__unknown_file (4*2
+mage.client.game.GamePanel"
+sideboardWindows˜•
+
+„1 „(J
+%47java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%46java.util.Map2values()*
+16*Ã
+19
+€ €(.q
+o
+
+€ €(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+€ €(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%43java.util.Collection*"
+
+__unknown_file (
+""*
+18
+20*(
+0 "!
+
+   (
+implicit return*Ü
+1
+ž ž(x
+v
+
+ž ž(
+%72javax.swing.JPanel"__id*G
+
+__unknown_file (+*)
+mage.client.game.GamePanel"	
+jPanel2
+}
+
+ž ž( 
+%73mage.client.cards.BigCard"__id*G
+
+__unknown_file (+*)
+mage.client.game.GamePanel"	
+bigCardåâ
+
+ž ž(
+%74void"0java.awt.Container#remove(Ljava/awt/Component;)V*7
+
+__unknown_file (
+
+%72javax.swing.JPanel*>
+
+__unknown_file ("
+ 
+%73mage.client.cards.BigCard2remove(Ljava/awt/Component;)c
+a
+
+Ÿ Ÿ()
+mage.client.game.GamePanel"	
+bigCard"__id*"
+
+__unknown_file (
+""*
+0*¾
+3
+™ ™(fs
+q
+
+™ ™(f$
+popupContainerjava.awt.Component"__id*7
+
+__unknown_file (
+
+%68java.awt.Component²¯
+
+š š(,
+%69void"!java.awt.Component#setVisible(Z)V*B
+
+__unknown_file (&
+$
+popupContainerjava.awt.Component*
+
+__unknown_file (2 2setVisible(Z)*
+1*Ù
+4
+™F ™(Tf
+d
+
+™F ™(d,
+%67%mage.client.components.MageComponents"__id*"
+
+__unknown_file (
+""Ú×
+
+™' ™(e
+%68java.awt.Component"gmage.client.components.MageUI#getComponent(Lmage/client/components/MageComponents;)Ljava/awt/Component;*B
+
+__unknown_file (&
+$
+%66mage.client.components.MageUI*J
+
+__unknown_file (.
+,
+%67%mage.client.components.MageComponents25getComponent(Lmage/client/components/MageComponents;)*
+3*Á
+5
+™' ™(0ª
+§
+
+™' ™(8$
+%66mage.client.components.MageUI"<mage.client.MageFrame#getUI()Lmage/client/components/MageUI;*5
+
+__unknown_file ("
+mage.client.MageFrame*
+4*¥
+6
+• •(ˆ
+…
+
+• •(
+%62void".mage.client.game.GamePanel#clearPickDialogs()V*:
+
+__unknown_file (
+mage.client.game.GamePanela
+_
+
+— —('
+%63 mage.client.plugins.impl.Plugins"__id*"
+
+__unknown_file (
+""ìé
+
+— —(,'
+%64 mage.cards.action.ActionCallback"Vmage.client.plugins.impl.Plugins#getActionCallback()Lmage/cards/action/ActionCallback;*E
+
+__unknown_file ()
+'
+%63 mage.client.plugins.impl.Plugins2getActionCallback()±®
+
+— —(A
+%65void"6mage.cards.action.ActionCallback#hideOpenComponents()V*E
+
+__unknown_file ()
+'
+%64 mage.cards.action.ActionCallback2hideOpenComponents()*
+5*À
+7
+ (.q
+o
+
+ (.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+ (.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%59java.util.Collection*"
+
+__unknown_file (
+""*
+6
+8*þ
+8
+‘ ‘(²¯
+
+‘ ‘("
+%60void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+’ ’('
+%61void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+7*¦
+9
+1 (:u
+s
+
+1 (:
+%58java.util.Map"__id*I
+
+__unknown_file (-*+
+mage.client.game.GamePanel"
+	companion˜•
+
+1 (C
+%59java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%58java.util.Map2values()*
+7*€
+20
+ (²¯
+
+ ("
+%44void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+‚ ‚('
+%45void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+19*¯
+21
+€1 €(A|
+z
+
+€1 €(A
+%42java.util.Map"__id*P
+
+__unknown_file (4*2
+mage.client.game.GamePanel"
+graveyardWindows˜•
+
+€1 €(J
+%43java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%42java.util.Map2values()*
+19*Ã
+22
+ü ü(.q
+o
+
+ü ü(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"__id*"
+
+__unknown_file (
+""³
+°
+
+ü ü(.7
+windowDialog'mage.client.dialog.CardInfoWindowDialog"
+__arrayGet*9
+
+__unknown_file (
+
+%39java.util.Collection*"
+
+__unknown_file (
+""*
+21
+23*€
+23
+ý ý(²¯
+
+ý ý("
+%40void"2mage.client.dialog.CardInfoWindowDialog#cleanUp()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2	cleanUp()²¯
+
+þ þ('
+%41void"-mage.client.dialog.MageDialog#removeDialog()V*U
+
+__unknown_file (9
+7
+windowDialog'mage.client.dialog.CardInfoWindowDialog2removeDialog()*
+22B
+mage.client.game.GamePanelH

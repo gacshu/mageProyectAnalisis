@@ -1,0 +1,182 @@
+
+umage.abilities.common.CardsLeaveGraveyardTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/CardsLeaveGraveyardTriggeredAbility.java+ +("startingBlock*Ä
+21 1(¾»
+1 1($
+%5java.util.Set"?mage.game.events.ZoneChangeGroupEvent#getCards()Ljava/util/Set;*M
+
+__unknown_file (1
+/
+zEvent%mage.game.events.ZoneChangeGroupEvent2
+getCards()¡ž
+1 2(
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%5java.util.Set2stream()Ž‹
+1 3()
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)²
+¯
+4 4(Q"
+%8java.util.function.Predicate"__declareFunction*l
+
+__unknown_file (PN
+L__sonar_lambda_279$mage.abilities.common.CardsLeaveGraveyardTriggeredAbility‡
+„
+
+__unknown_file (,
+"
+%8java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.GameÐ
+Í
+
+__unknown_file (P
+"
+%8java.util.function.Predicate"*
+(CardsLeaveGraveyardTriggeredAbility.this"__id*Y
+
+__unknown_file (=;
+9mage.abilities.common.CardsLeaveGraveyardTriggeredAbility­ª
+1 4(R
+%12java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ˆ…
+1 5(&
+%13java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ìé
+1 6(/
+%14boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%13java.util.stream.Stream*"
+
+__unknown_file (
+""2(anyMatch(Ljava/util/function/Predicate;)*
+1*„
+startingBlock+ +(;—
+”
+* *(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
++* +(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%15Š
+‡
+* *(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
++6 +(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16*
+9*Ö
+40 0(¾»
+0 0($
+%4java.util.Set"?mage.game.events.ZoneChangeGroupEvent#getCards()Ljava/util/Set;*M
+
+__unknown_file (1
+/
+zEvent%mage.game.events.ZoneChangeGroupEvent2
+getCards()*
+2
+1*º
+6/ /(Q
+O
+/ /(!
+%2mage.constants.Zone"__id*"
+
+__unknown_file (
+""ÌÉ
+/% /(7
+%3mage.constants.Zone"Fmage.game.events.ZoneChangeGroupEvent#getToZone()Lmage/constants/Zone;*M
+
+__unknown_file (1
+/
+zEvent%mage.game.events.ZoneChangeGroupEvent2getToZone()*	
+2
+4
+1*Á
+8. .(Q
+O
+. .(!
+%0mage.constants.Zone"__id*"
+
+__unknown_file (
+""ÐÍ
+.% .(9
+%1mage.constants.Zone"Hmage.game.events.ZoneChangeGroupEvent#getFromZone()Lmage/constants/Zone;*M
+
+__unknown_file (1
+/
+zEvent%mage.game.events.ZoneChangeGroupEvent2getFromZone()*
+2
+4
+6
+1*¨
+9,= ,(B‡
+„
+, ,(C/
+zEvent%mage.game.events.ZoneChangeGroupEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent*
+2
+4
+6
+8
+1*!
+1- 6(0"
+- 6(0
+"":/
++  +(0#
+eventmage.game.events.GameEvent:"
++1 +(:
+gamemage.game.GameB=;
+9mage.abilities.common.CardsLeaveGraveyardTriggeredAbilityHP

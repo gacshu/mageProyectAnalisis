@@ -1,0 +1,154 @@
+
+mmage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility#checkInterveningIfClause(Lmage/game/Game;)Z„
+zD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/AttacksOpponentWithMostLifeTriggeredAbility.java& &(+"startingBlock*…
+2) )(×Ô
+* *(/
+%4java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*a
+
+__unknown_file (EC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility2getControllerId()Ž‹
+) *(6
+%5java.util.Set"=mage.game.Game#getOpponents(Ljava/util/UUID;Z)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID* 
+
+__unknown_file (22getOpponents(Ljava/util/UUID;Z)¡ž
+) +(
+%6java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%5java.util.Set2stream()†ƒ
+) ,(%
+%7java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+) -()
+%8java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;) 
+) .(* 
+%9java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)«¨
+) /(
+%10java.util.OptionalInt"7java.util.stream.IntStream#max()Ljava/util/OptionalInt;*>
+
+__unknown_file ("
+ 
+%9java.util.stream.IntStream2max()B
+@
+0 0()
+
+%11int"__id*"
+
+__unknown_file (
+""¬©
+) 0(*
+
+%12int" java.util.OptionalInt#orElse(I)I*:
+
+__unknown_file (
+
+%10java.util.OptionalInt*(
+
+__unknown_file (
+
+
+%11int2	orElse(I)ƒ€
+1 2(
+
+%13int"mage.players.Player#getLife()I*=
+
+__unknown_file (!
+
+defendermage.players.Player2	getLife()*
+1*ð
+3' '(¤¡
+') '(9
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ÏÌ
+'H '(U
+%1java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*a
+
+__unknown_file (EC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility2getSourceId()þû
+') '(V
+%2java.util.UUID"Gmage.game.combat.Combat#getDefenderId(Ljava/util/UUID;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat*2
+
+__unknown_file (
+
+%1java.util.UUID2getDefenderId(Ljava/util/UUID;)ðí
+' '(W
+%3mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+' '(X
+defendermage.players.Player"__id*7
+
+__unknown_file (
+
+%3mage.players.Player*
+2
+1*„
+startingBlock&+ &(6Š
+‡
+% %(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+&1 &(5
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+3*!
+1( 2("
+( 2(
+"":"
+&, &(5
+gamemage.game.GameBEC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbilityHP

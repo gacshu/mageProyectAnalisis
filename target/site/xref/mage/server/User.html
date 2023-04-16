@@ -1,0 +1,836 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>User xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/server/User.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.server;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.Deck;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.ManaType;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.TableState;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.game.Table;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.game.result.ResultProtos;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.game.tournament.TournamentPlayer;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.interfaces.callback.ClientCallback;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.interfaces.callback.ClientCallbackMethod;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.players.net.UserData;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.server.draft.DraftSession;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.server.game.GameSessionPlayer;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.server.managers.ManagerFactory;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.server.rating.GlickoRating;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> mage.server.rating.GlickoRatingSystem;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> mage.server.record.UserStats;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> mage.server.record.UserStatsRepository;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> mage.server.tournament.TournamentController;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> mage.server.tournament.TournamentSession;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> mage.server.util.ServerMessagesUtil;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> mage.server.util.SystemUtil;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> mage.view.TableClientMessage;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> org.apache.log4j.Logger;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  <strong class="jxr_keyword">import</strong> java.util.*;
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> java.util.Map.Entry;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.ConcurrentHashMap;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> java.util.concurrent.TimeUnit;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <em class="jxr_javadoccomment"> * @author BetaSteward_at_googlemail.com</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="User" href="../../mage/server/User.html#User">User</a> {
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> Logger logger = Logger.getLogger(User.<strong class="jxr_keyword">class</strong>);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>      <strong class="jxr_keyword">public</strong> enum UserState {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          Created, <em class="jxr_comment">// Used if user is created an not connected to the session</em>
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          Connected, <em class="jxr_comment">// Used if user is correctly connected</em>
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          Disconnected, <em class="jxr_comment">// Used if the user lost connection</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          Offline <em class="jxr_comment">// set if the user was disconnected and expired or regularly left XMage. Removed is the user later after some time</em>
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>      }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a name="ManagerFactory" href="../../mage/server/managers/ManagerFactory.html#ManagerFactory">ManagerFactory</a> managerFactory;
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> UUID userId;
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String userName;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> String host;
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Date connectionTime;
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, Table&gt; tables;
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> List&lt;UUID&gt; tablesToDelete;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, GameSessionPlayer&gt; gameSessions;
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, DraftSession&gt; draftSessions;
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, UUID&gt; userTournaments; <em class="jxr_comment">// playerId, tournamentId</em>
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, TournamentSession&gt; constructing;
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> Map&lt;UUID, Deck&gt; sideboarding;
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> List&lt;UUID&gt; watchedGames;
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>      <strong class="jxr_keyword">private</strong> String sessionId;
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">private</strong> String pingInfo = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <strong class="jxr_keyword">private</strong> Date lastActivity;
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>      <strong class="jxr_keyword">private</strong> UserState userState;
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>      <strong class="jxr_keyword">private</strong> <a name="UserData" href="../../mage/players/net/UserData.html#UserData">UserData</a> userData;
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      <strong class="jxr_keyword">private</strong> <a name="UserStats" href="../../mage/server/record/UserStats.html#UserStats">UserStats</a> userStats;
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      <strong class="jxr_keyword">private</strong> Date chatLockedUntil;
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">boolean</strong> active;
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      <strong class="jxr_keyword">private</strong> Date lockedUntil;
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">final</strong> <a name="AuthorizedUser" href="../../mage/server/AuthorizedUser.html#AuthorizedUser">AuthorizedUser</a> authorizedUser;
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>      <strong class="jxr_keyword">private</strong> String clientVersion;
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      <strong class="jxr_keyword">private</strong> String userIdStr;
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <strong class="jxr_keyword">public</strong> <a name="User" href="../../mage/server/User.html#User">User</a>(<a name="ManagerFactory" href="../../mage/server/managers/ManagerFactory.html#ManagerFactory">ManagerFactory</a> managerFactory, String userName, String host, <a name="AuthorizedUser" href="../../mage/server/AuthorizedUser.html#AuthorizedUser">AuthorizedUser</a> authorizedUser) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <strong class="jxr_keyword">this</strong>.managerFactory = managerFactory;
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>          <strong class="jxr_keyword">this</strong>.userId = UUID.randomUUID();
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          <strong class="jxr_keyword">this</strong>.userName = userName;
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          <strong class="jxr_keyword">this</strong>.host = host;
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>          <strong class="jxr_keyword">this</strong>.userState = UserState.Created;
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">this</strong>.connectionTime = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          <strong class="jxr_keyword">this</strong>.lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>          <strong class="jxr_keyword">if</strong> (authorizedUser != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>              <strong class="jxr_keyword">this</strong>.active = authorizedUser.active;
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>              <strong class="jxr_keyword">this</strong>.chatLockedUntil = authorizedUser.chatLockedUntil;
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>              <strong class="jxr_keyword">this</strong>.lockedUntil = authorizedUser.lockedUntil;
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>              <strong class="jxr_keyword">this</strong>.authorizedUser = authorizedUser;
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>              updateAuthorizedUser();
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>              <strong class="jxr_keyword">this</strong>.active = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>              <strong class="jxr_keyword">this</strong>.chatLockedUntil = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>              <strong class="jxr_keyword">this</strong>.lockedUntil = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>              <strong class="jxr_keyword">this</strong>.authorizedUser = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>          }
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>  
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <strong class="jxr_keyword">this</strong>.tables = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          <strong class="jxr_keyword">this</strong>.gameSessions = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>          <strong class="jxr_keyword">this</strong>.draftSessions = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>          <strong class="jxr_keyword">this</strong>.userTournaments = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>          <strong class="jxr_keyword">this</strong>.constructing = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>          <strong class="jxr_keyword">this</strong>.sideboarding = <strong class="jxr_keyword">new</strong> ConcurrentHashMap&lt;&gt;();
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>          <strong class="jxr_keyword">this</strong>.watchedGames = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>          <strong class="jxr_keyword">this</strong>.tablesToDelete = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>         <strong class="jxr_keyword">this</strong>.sessionId = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>         <strong class="jxr_keyword">this</strong>.clientVersion = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>         <strong class="jxr_keyword">this</strong>.userIdStr = <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>     }
+<a class="jxr_linenumber" name="L104" href="#L104">104</a> 
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>     <strong class="jxr_keyword">public</strong> String getName() {
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>         <strong class="jxr_keyword">return</strong> userName;
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>     }
+<a class="jxr_linenumber" name="L108" href="#L108">108</a> 
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>     <strong class="jxr_keyword">public</strong> UUID getId() {
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>         <strong class="jxr_keyword">return</strong> userId;
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>     }
+<a class="jxr_linenumber" name="L112" href="#L112">112</a> 
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     <strong class="jxr_keyword">public</strong> String getHost() {
+<a class="jxr_linenumber" name="L114" href="#L114">114</a>         <strong class="jxr_keyword">return</strong> host;
+<a class="jxr_linenumber" name="L115" href="#L115">115</a>     }
+<a class="jxr_linenumber" name="L116" href="#L116">116</a> 
+<a class="jxr_linenumber" name="L117" href="#L117">117</a>     <strong class="jxr_keyword">public</strong> String getSessionId() {
+<a class="jxr_linenumber" name="L118" href="#L118">118</a>         <strong class="jxr_keyword">return</strong> sessionId;
+<a class="jxr_linenumber" name="L119" href="#L119">119</a>     }
+<a class="jxr_linenumber" name="L120" href="#L120">120</a> 
+<a class="jxr_linenumber" name="L121" href="#L121">121</a>     <strong class="jxr_keyword">public</strong> Date getChatLockedUntil() {
+<a class="jxr_linenumber" name="L122" href="#L122">122</a>         <strong class="jxr_keyword">return</strong> chatLockedUntil;
+<a class="jxr_linenumber" name="L123" href="#L123">123</a>     }
+<a class="jxr_linenumber" name="L124" href="#L124">124</a> 
+<a class="jxr_linenumber" name="L125" href="#L125">125</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isActive() {
+<a class="jxr_linenumber" name="L126" href="#L126">126</a>         <strong class="jxr_keyword">return</strong> active;
+<a class="jxr_linenumber" name="L127" href="#L127">127</a>     }
+<a class="jxr_linenumber" name="L128" href="#L128">128</a> 
+<a class="jxr_linenumber" name="L129" href="#L129">129</a>     <strong class="jxr_keyword">public</strong> Date getLockedUntil() {
+<a class="jxr_linenumber" name="L130" href="#L130">130</a>         <strong class="jxr_keyword">return</strong> lockedUntil;
+<a class="jxr_linenumber" name="L131" href="#L131">131</a>     }
+<a class="jxr_linenumber" name="L132" href="#L132">132</a> 
+<a class="jxr_linenumber" name="L133" href="#L133">133</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setSessionId(String sessionId) {
+<a class="jxr_linenumber" name="L134" href="#L134">134</a>         <strong class="jxr_keyword">this</strong>.sessionId = sessionId;
+<a class="jxr_linenumber" name="L135" href="#L135">135</a>         <strong class="jxr_keyword">if</strong> (sessionId.isEmpty()) {
+<a class="jxr_linenumber" name="L136" href="#L136">136</a>             setUserState(UserState.Disconnected);
+<a class="jxr_linenumber" name="L137" href="#L137">137</a>             lostConnection();
+<a class="jxr_linenumber" name="L138" href="#L138">138</a>             logger.trace(<span class="jxr_string">"USER - lost connection: "</span> + userName + <span class="jxr_string">" id: "</span> + userId);
+<a class="jxr_linenumber" name="L139" href="#L139">139</a> 
+<a class="jxr_linenumber" name="L140" href="#L140">140</a>         } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (userState == UserState.Created) {
+<a class="jxr_linenumber" name="L141" href="#L141">141</a>             setUserState(UserState.Connected);
+<a class="jxr_linenumber" name="L142" href="#L142">142</a>             logger.trace(<span class="jxr_string">"USER - created: "</span> + userName + <span class="jxr_string">" id: "</span> + userId);
+<a class="jxr_linenumber" name="L143" href="#L143">143</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L144" href="#L144">144</a>             setUserState(UserState.Connected);
+<a class="jxr_linenumber" name="L145" href="#L145">145</a>             reconnect();
+<a class="jxr_linenumber" name="L146" href="#L146">146</a>             logger.trace(<span class="jxr_string">"USER - reconnected: "</span> + userName + <span class="jxr_string">" id: "</span> + userId);
+<a class="jxr_linenumber" name="L147" href="#L147">147</a>         }
+<a class="jxr_linenumber" name="L148" href="#L148">148</a>     }
+<a class="jxr_linenumber" name="L149" href="#L149">149</a> 
+<a class="jxr_linenumber" name="L150" href="#L150">150</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setClientVersion(String clientVersion) {
+<a class="jxr_linenumber" name="L151" href="#L151">151</a>         <strong class="jxr_keyword">this</strong>.clientVersion = clientVersion;
+<a class="jxr_linenumber" name="L152" href="#L152">152</a>     }
+<a class="jxr_linenumber" name="L153" href="#L153">153</a> 
+<a class="jxr_linenumber" name="L154" href="#L154">154</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUserIdStr(String userIdStr) {
+<a class="jxr_linenumber" name="L155" href="#L155">155</a>         <strong class="jxr_keyword">this</strong>.userIdStr = userIdStr;
+<a class="jxr_linenumber" name="L156" href="#L156">156</a>     }
+<a class="jxr_linenumber" name="L157" href="#L157">157</a> 
+<a class="jxr_linenumber" name="L158" href="#L158">158</a>     <strong class="jxr_keyword">public</strong> String getUserIdStr() {
+<a class="jxr_linenumber" name="L159" href="#L159">159</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.userIdStr;
+<a class="jxr_linenumber" name="L160" href="#L160">160</a>     }
+<a class="jxr_linenumber" name="L161" href="#L161">161</a> 
+<a class="jxr_linenumber" name="L162" href="#L162">162</a>     <strong class="jxr_keyword">public</strong> String getClientVersion() {
+<a class="jxr_linenumber" name="L163" href="#L163">163</a>         <strong class="jxr_keyword">return</strong> clientVersion;
+<a class="jxr_linenumber" name="L164" href="#L164">164</a>     }
+<a class="jxr_linenumber" name="L165" href="#L165">165</a> 
+<a class="jxr_linenumber" name="L166" href="#L166">166</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setChatLockedUntil(Date chatLockedUntil) {
+<a class="jxr_linenumber" name="L167" href="#L167">167</a>         <strong class="jxr_keyword">this</strong>.chatLockedUntil = chatLockedUntil;
+<a class="jxr_linenumber" name="L168" href="#L168">168</a>         updateAuthorizedUser();
+<a class="jxr_linenumber" name="L169" href="#L169">169</a>     }
+<a class="jxr_linenumber" name="L170" href="#L170">170</a> 
+<a class="jxr_linenumber" name="L171" href="#L171">171</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setActive(<strong class="jxr_keyword">boolean</strong> active) {
+<a class="jxr_linenumber" name="L172" href="#L172">172</a>         <strong class="jxr_keyword">this</strong>.active = active;
+<a class="jxr_linenumber" name="L173" href="#L173">173</a>         updateAuthorizedUser();
+<a class="jxr_linenumber" name="L174" href="#L174">174</a>     }
+<a class="jxr_linenumber" name="L175" href="#L175">175</a> 
+<a class="jxr_linenumber" name="L176" href="#L176">176</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setLockedUntil(Date lockedUntil) {
+<a class="jxr_linenumber" name="L177" href="#L177">177</a>         <strong class="jxr_keyword">this</strong>.lockedUntil = lockedUntil;
+<a class="jxr_linenumber" name="L178" href="#L178">178</a>         updateAuthorizedUser();
+<a class="jxr_linenumber" name="L179" href="#L179">179</a>     }
+<a class="jxr_linenumber" name="L180" href="#L180">180</a> 
+<a class="jxr_linenumber" name="L181" href="#L181">181</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> lostConnection() {
+<a class="jxr_linenumber" name="L182" href="#L182">182</a>         <em class="jxr_comment">// Because watched games don't get restored after reconnection call stop watching</em>
+<a class="jxr_linenumber" name="L183" href="#L183">183</a>         <strong class="jxr_keyword">for</strong> (Iterator&lt;UUID&gt; iterator = watchedGames.iterator(); iterator.hasNext(); ) {
+<a class="jxr_linenumber" name="L184" href="#L184">184</a>             UUID gameId = iterator.next();
+<a class="jxr_linenumber" name="L185" href="#L185">185</a>             managerFactory.gameManager().stopWatching(gameId, userId);
+<a class="jxr_linenumber" name="L186" href="#L186">186</a>             iterator.remove();
+<a class="jxr_linenumber" name="L187" href="#L187">187</a>         }
+<a class="jxr_linenumber" name="L188" href="#L188">188</a>         ServerMessagesUtil.instance.incLostConnection();
+<a class="jxr_linenumber" name="L189" href="#L189">189</a>     }
+<a class="jxr_linenumber" name="L190" href="#L190">190</a> 
+<a class="jxr_linenumber" name="L191" href="#L191">191</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isConnected() {
+<a class="jxr_linenumber" name="L192" href="#L192">192</a>         <strong class="jxr_keyword">return</strong> userState == UserState.Connected;
+<a class="jxr_linenumber" name="L193" href="#L193">193</a>     }
+<a class="jxr_linenumber" name="L194" href="#L194">194</a> 
+<a class="jxr_linenumber" name="L195" href="#L195">195</a>     <strong class="jxr_keyword">public</strong> String getDisconnectDuration() {
+<a class="jxr_linenumber" name="L196" href="#L196">196</a>         <em class="jxr_comment">//long secondsDisconnected = getSecondsDisconnected();</em>
+<a class="jxr_linenumber" name="L197" href="#L197">197</a>         <em class="jxr_comment">//int minutes = (int) secondsDisconnected / 60;</em>
+<a class="jxr_linenumber" name="L198" href="#L198">198</a>         <em class="jxr_comment">//int seconds = (int) secondsDisconnected % 60;</em>
+<a class="jxr_linenumber" name="L199" href="#L199">199</a>         <em class="jxr_comment">//return Integer.toString(minutes) + ':' + (seconds &gt; 9 ? seconds : '0' + Integer.toString(seconds));</em>
+<a class="jxr_linenumber" name="L200" href="#L200">200</a>         <strong class="jxr_keyword">return</strong> getSecondsDisconnected() + <span class="jxr_string">" secs"</span>;
+<a class="jxr_linenumber" name="L201" href="#L201">201</a>     }
+<a class="jxr_linenumber" name="L202" href="#L202">202</a> 
+<a class="jxr_linenumber" name="L203" href="#L203">203</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">long</strong> getSecondsDisconnected() {
+<a class="jxr_linenumber" name="L204" href="#L204">204</a>         <strong class="jxr_keyword">return</strong> SystemUtil.getDateDiff(lastActivity, <strong class="jxr_keyword">new</strong> Date(), TimeUnit.SECONDS);
+<a class="jxr_linenumber" name="L205" href="#L205">205</a>     }
+<a class="jxr_linenumber" name="L206" href="#L206">206</a> 
+<a class="jxr_linenumber" name="L207" href="#L207">207</a>     <strong class="jxr_keyword">public</strong> Date getConnectionTime() {
+<a class="jxr_linenumber" name="L208" href="#L208">208</a>         <strong class="jxr_keyword">return</strong> connectionTime;
+<a class="jxr_linenumber" name="L209" href="#L209">209</a>     }
+<a class="jxr_linenumber" name="L210" href="#L210">210</a> 
+<a class="jxr_linenumber" name="L211" href="#L211">211</a>     <strong class="jxr_keyword">public</strong> Date getLastActivity() {
+<a class="jxr_linenumber" name="L212" href="#L212">212</a>         <strong class="jxr_keyword">return</strong> lastActivity;
+<a class="jxr_linenumber" name="L213" href="#L213">213</a>     }
+<a class="jxr_linenumber" name="L214" href="#L214">214</a> 
+<a class="jxr_linenumber" name="L215" href="#L215">215</a>     <strong class="jxr_keyword">public</strong> String getConnectionDuration() {
+<a class="jxr_linenumber" name="L216" href="#L216">216</a>         <strong class="jxr_keyword">int</strong> minutes = (<strong class="jxr_keyword">int</strong>) SystemUtil.getDateDiff(connectionTime, <strong class="jxr_keyword">new</strong> Date(), TimeUnit.SECONDS) / 60;
+<a class="jxr_linenumber" name="L217" href="#L217">217</a>         <strong class="jxr_keyword">int</strong> hours = 0;
+<a class="jxr_linenumber" name="L218" href="#L218">218</a>         <strong class="jxr_keyword">if</strong> (minutes &gt; 59) {
+<a class="jxr_linenumber" name="L219" href="#L219">219</a>             hours = minutes / 60;
+<a class="jxr_linenumber" name="L220" href="#L220">220</a>             minutes = minutes - (hours * 60);
+<a class="jxr_linenumber" name="L221" href="#L221">221</a>         }
+<a class="jxr_linenumber" name="L222" href="#L222">222</a>         String connTime = hours + <span class="jxr_string">":"</span> + (minutes &gt; 9 ? Integer.toString(minutes) : '0' + Integer.toString(minutes));
+<a class="jxr_linenumber" name="L223" href="#L223">223</a> 
+<a class="jxr_linenumber" name="L224" href="#L224">224</a>         <strong class="jxr_keyword">int</strong> lastSecs = (<strong class="jxr_keyword">int</strong>) SystemUtil.getDateDiff(lastActivity, <strong class="jxr_keyword">new</strong> Date(), TimeUnit.SECONDS);
+<a class="jxr_linenumber" name="L225" href="#L225">225</a> 
+<a class="jxr_linenumber" name="L226" href="#L226">226</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">" (online: "</span> + connTime + <span class="jxr_string">"; seen: "</span> + lastSecs + <span class="jxr_string">" sec ago)"</span>;
+<a class="jxr_linenumber" name="L227" href="#L227">227</a>     }
+<a class="jxr_linenumber" name="L228" href="#L228">228</a> 
+<a class="jxr_linenumber" name="L229" href="#L229">229</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> fireCallback(<strong class="jxr_keyword">final</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a> call) {
+<a class="jxr_linenumber" name="L230" href="#L230">230</a>         <strong class="jxr_keyword">if</strong> (isConnected()) {
+<a class="jxr_linenumber" name="L231" href="#L231">231</a>             managerFactory.sessionManager().getSession(sessionId).ifPresent(session
+<a class="jxr_linenumber" name="L232" href="#L232">232</a>                     -&gt; session.fireCallback(call)
+<a class="jxr_linenumber" name="L233" href="#L233">233</a>             );
+<a class="jxr_linenumber" name="L234" href="#L234">234</a>         }
+<a class="jxr_linenumber" name="L235" href="#L235">235</a>     }
+<a class="jxr_linenumber" name="L236" href="#L236">236</a> 
+<a class="jxr_linenumber" name="L237" href="#L237">237</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccJoinedTable(<strong class="jxr_keyword">final</strong> UUID roomId, <strong class="jxr_keyword">final</strong> UUID tableId, <strong class="jxr_keyword">boolean</strong> isTournament) {
+<a class="jxr_linenumber" name="L238" href="#L238">238</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.JOINED_TABLE, tableId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(roomId, tableId, isTournament)));
+<a class="jxr_linenumber" name="L239" href="#L239">239</a>     }
+<a class="jxr_linenumber" name="L240" href="#L240">240</a> 
+<a class="jxr_linenumber" name="L241" href="#L241">241</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccGameStarted(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> UUID playerId) {
+<a class="jxr_linenumber" name="L242" href="#L242">242</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.START_GAME, gameId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(gameId, playerId)));
+<a class="jxr_linenumber" name="L243" href="#L243">243</a>     }
+<a class="jxr_linenumber" name="L244" href="#L244">244</a> 
+<a class="jxr_linenumber" name="L245" href="#L245">245</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccDraftStarted(<strong class="jxr_keyword">final</strong> UUID draftId, <strong class="jxr_keyword">final</strong> UUID playerId) {
+<a class="jxr_linenumber" name="L246" href="#L246">246</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.START_DRAFT, draftId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(draftId, playerId)));
+<a class="jxr_linenumber" name="L247" href="#L247">247</a>     }
+<a class="jxr_linenumber" name="L248" href="#L248">248</a> 
+<a class="jxr_linenumber" name="L249" href="#L249">249</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccTournamentStarted(<strong class="jxr_keyword">final</strong> UUID tournamentId, <strong class="jxr_keyword">final</strong> UUID playerId) {
+<a class="jxr_linenumber" name="L250" href="#L250">250</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.START_TOURNAMENT, tournamentId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(tournamentId, playerId)));
+<a class="jxr_linenumber" name="L251" href="#L251">251</a>     }
+<a class="jxr_linenumber" name="L252" href="#L252">252</a> 
+<a class="jxr_linenumber" name="L253" href="#L253">253</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccSideboard(<strong class="jxr_keyword">final</strong> <a name="Deck" href="../../mage/cards/decks/Deck.html#Deck">Deck</a> deck, <strong class="jxr_keyword">final</strong> UUID tableId, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> time, <strong class="jxr_keyword">boolean</strong> limited) {
+<a class="jxr_linenumber" name="L254" href="#L254">254</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.SIDEBOARD, tableId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(deck, tableId, time, limited)));
+<a class="jxr_linenumber" name="L255" href="#L255">255</a>         sideboarding.put(tableId, deck);
+<a class="jxr_linenumber" name="L256" href="#L256">256</a>     }
+<a class="jxr_linenumber" name="L257" href="#L257">257</a> 
+<a class="jxr_linenumber" name="L258" href="#L258">258</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccViewLimitedDeck(<strong class="jxr_keyword">final</strong> <a name="Deck" href="../../mage/cards/decks/Deck.html#Deck">Deck</a> deck, <strong class="jxr_keyword">final</strong> UUID tableId, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> time, <strong class="jxr_keyword">boolean</strong> limited) {
+<a class="jxr_linenumber" name="L259" href="#L259">259</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.VIEW_LIMITED_DECK, tableId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(deck, tableId, time, limited)));
+<a class="jxr_linenumber" name="L260" href="#L260">260</a>     }
+<a class="jxr_linenumber" name="L261" href="#L261">261</a> 
+<a class="jxr_linenumber" name="L262" href="#L262">262</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccViewSideboard(<strong class="jxr_keyword">final</strong> UUID tableId, <strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> UUID targetPlayerId) {
+<a class="jxr_linenumber" name="L263" href="#L263">263</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.VIEW_SIDEBOARD, tableId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(gameId, targetPlayerId)));
+<a class="jxr_linenumber" name="L264" href="#L264">264</a>     }
+<a class="jxr_linenumber" name="L265" href="#L265">265</a> 
+<a class="jxr_linenumber" name="L266" href="#L266">266</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccConstruct(<strong class="jxr_keyword">final</strong> <a name="Deck" href="../../mage/cards/decks/Deck.html#Deck">Deck</a> deck, <strong class="jxr_keyword">final</strong> UUID tableId, <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">int</strong> time) {
+<a class="jxr_linenumber" name="L267" href="#L267">267</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.CONSTRUCT, tableId, <strong class="jxr_keyword">new</strong> <a name="TableClientMessage" href="../../mage/view/TableClientMessage.html#TableClientMessage">TableClientMessage</a>(deck, tableId, time)));
+<a class="jxr_linenumber" name="L268" href="#L268">268</a>     }
+<a class="jxr_linenumber" name="L269" href="#L269">269</a> 
+<a class="jxr_linenumber" name="L270" href="#L270">270</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccShowTournament(<strong class="jxr_keyword">final</strong> UUID tournamentId) {
+<a class="jxr_linenumber" name="L271" href="#L271">271</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.SHOW_TOURNAMENT, tournamentId));
+<a class="jxr_linenumber" name="L272" href="#L272">272</a>     }
+<a class="jxr_linenumber" name="L273" href="#L273">273</a> 
+<a class="jxr_linenumber" name="L274" href="#L274">274</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccShowGameEndDialog(<strong class="jxr_keyword">final</strong> UUID gameId) {
+<a class="jxr_linenumber" name="L275" href="#L275">275</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.SHOW_GAME_END_DIALOG, gameId));
+<a class="jxr_linenumber" name="L276" href="#L276">276</a>     }
+<a class="jxr_linenumber" name="L277" href="#L277">277</a> 
+<a class="jxr_linenumber" name="L278" href="#L278">278</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> showUserMessage(<strong class="jxr_keyword">final</strong> String titel, String message) {
+<a class="jxr_linenumber" name="L279" href="#L279">279</a>         List&lt;String&gt; messageData = <strong class="jxr_keyword">new</strong> LinkedList&lt;&gt;();
+<a class="jxr_linenumber" name="L280" href="#L280">280</a>         messageData.add(titel);
+<a class="jxr_linenumber" name="L281" href="#L281">281</a>         messageData.add(message);
+<a class="jxr_linenumber" name="L282" href="#L282">282</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.SHOW_USERMESSAGE, <strong class="jxr_keyword">null</strong>, messageData));
+<a class="jxr_linenumber" name="L283" href="#L283">283</a>     }
+<a class="jxr_linenumber" name="L284" href="#L284">284</a> 
+<a class="jxr_linenumber" name="L285" href="#L285">285</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> ccWatchGame(<strong class="jxr_keyword">final</strong> UUID gameId) {
+<a class="jxr_linenumber" name="L286" href="#L286">286</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.WATCHGAME, gameId));
+<a class="jxr_linenumber" name="L287" href="#L287">287</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L288" href="#L288">288</a>     }
+<a class="jxr_linenumber" name="L289" href="#L289">289</a> 
+<a class="jxr_linenumber" name="L290" href="#L290">290</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> ccReplayGame(<strong class="jxr_keyword">final</strong> UUID gameId) {
+<a class="jxr_linenumber" name="L291" href="#L291">291</a>         fireCallback(<strong class="jxr_keyword">new</strong> <a name="ClientCallback" href="../../mage/interfaces/callback/ClientCallback.html#ClientCallback">ClientCallback</a>(ClientCallbackMethod.REPLAY_GAME, gameId));
+<a class="jxr_linenumber" name="L292" href="#L292">292</a>     }
+<a class="jxr_linenumber" name="L293" href="#L293">293</a> 
+<a class="jxr_linenumber" name="L294" href="#L294">294</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sendPlayerUUID(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> UUID data) {
+<a class="jxr_linenumber" name="L295" href="#L295">295</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L296" href="#L296">296</a>         managerFactory.gameManager().sendPlayerUUID(gameId, userId, data);
+<a class="jxr_linenumber" name="L297" href="#L297">297</a>     }
+<a class="jxr_linenumber" name="L298" href="#L298">298</a> 
+<a class="jxr_linenumber" name="L299" href="#L299">299</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sendPlayerString(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> String data) {
+<a class="jxr_linenumber" name="L300" href="#L300">300</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L301" href="#L301">301</a>         managerFactory.gameManager().sendPlayerString(gameId, userId, data);
+<a class="jxr_linenumber" name="L302" href="#L302">302</a>     }
+<a class="jxr_linenumber" name="L303" href="#L303">303</a> 
+<a class="jxr_linenumber" name="L304" href="#L304">304</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sendPlayerManaType(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> UUID playerId, <strong class="jxr_keyword">final</strong> <a name="ManaType" href="../../mage/constants/ManaType.html#ManaType">ManaType</a> data) {
+<a class="jxr_linenumber" name="L305" href="#L305">305</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L306" href="#L306">306</a>         managerFactory.gameManager().sendPlayerManaType(gameId, playerId, userId, data);
+<a class="jxr_linenumber" name="L307" href="#L307">307</a>     }
+<a class="jxr_linenumber" name="L308" href="#L308">308</a> 
+<a class="jxr_linenumber" name="L309" href="#L309">309</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sendPlayerBoolean(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> Boolean data) {
+<a class="jxr_linenumber" name="L310" href="#L310">310</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L311" href="#L311">311</a>         managerFactory.gameManager().sendPlayerBoolean(gameId, userId, data);
+<a class="jxr_linenumber" name="L312" href="#L312">312</a>     }
+<a class="jxr_linenumber" name="L313" href="#L313">313</a> 
+<a class="jxr_linenumber" name="L314" href="#L314">314</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> sendPlayerInteger(<strong class="jxr_keyword">final</strong> UUID gameId, <strong class="jxr_keyword">final</strong> Integer data) {
+<a class="jxr_linenumber" name="L315" href="#L315">315</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L316" href="#L316">316</a>         managerFactory.gameManager().sendPlayerInteger(gameId, userId, data);
+<a class="jxr_linenumber" name="L317" href="#L317">317</a>     }
+<a class="jxr_linenumber" name="L318" href="#L318">318</a> 
+<a class="jxr_linenumber" name="L319" href="#L319">319</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> updateLastActivity(String pingInfo) {
+<a class="jxr_linenumber" name="L320" href="#L320">320</a>         <strong class="jxr_keyword">if</strong> (pingInfo != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L321" href="#L321">321</a>             <strong class="jxr_keyword">this</strong>.pingInfo = pingInfo;
+<a class="jxr_linenumber" name="L322" href="#L322">322</a>         }
+<a class="jxr_linenumber" name="L323" href="#L323">323</a>         lastActivity = <strong class="jxr_keyword">new</strong> Date();
+<a class="jxr_linenumber" name="L324" href="#L324">324</a>         <strong class="jxr_keyword">if</strong> (userState == UserState.Disconnected) { <em class="jxr_comment">// this can happen if user reconnects very fast after disconnect</em>
+<a class="jxr_linenumber" name="L325" href="#L325">325</a>             setUserState(UserState.Connected);
+<a class="jxr_linenumber" name="L326" href="#L326">326</a>         }
+<a class="jxr_linenumber" name="L327" href="#L327">327</a>     }
+<a class="jxr_linenumber" name="L328" href="#L328">328</a> 
+<a class="jxr_linenumber" name="L329" href="#L329">329</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> isExpired(Date expired) {
+<a class="jxr_linenumber" name="L330" href="#L330">330</a>         <strong class="jxr_keyword">if</strong> (lastActivity.before(expired)) {
+<a class="jxr_linenumber" name="L331" href="#L331">331</a>             logger.trace(userName + <span class="jxr_string">" is expired!"</span>);
+<a class="jxr_linenumber" name="L332" href="#L332">332</a>             <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L333" href="#L333">333</a>         }
+<a class="jxr_linenumber" name="L334" href="#L334">334</a>         logger.trace(<span class="jxr_string">"isExpired: User "</span> + userName + <span class="jxr_string">" lastActivity: "</span> + lastActivity + <span class="jxr_string">" expired: "</span> + expired);
+<a class="jxr_linenumber" name="L335" href="#L335">335</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L336" href="#L336">336</a> 
+<a class="jxr_linenumber" name="L337" href="#L337">337</a>     }
+<a class="jxr_linenumber" name="L338" href="#L338">338</a> 
+<a class="jxr_linenumber" name="L339" href="#L339">339</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> reconnect() {
+<a class="jxr_linenumber" name="L340" href="#L340">340</a>         logger.trace(userName + <span class="jxr_string">" started reconnect"</span>);
+<a class="jxr_linenumber" name="L341" href="#L341">341</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, Table&gt; entry : tables.entrySet()) {
+<a class="jxr_linenumber" name="L342" href="#L342">342</a>             ccJoinedTable(entry.getValue().getRoomId(), entry.getValue().getId(), entry.getValue().isTournament());
+<a class="jxr_linenumber" name="L343" href="#L343">343</a>         }
+<a class="jxr_linenumber" name="L344" href="#L344">344</a>         <strong class="jxr_keyword">for</strong> (Iterator&lt;Entry&lt;UUID, UUID&gt;&gt; iterator = userTournaments.entrySet().iterator(); iterator.hasNext(); ) {
+<a class="jxr_linenumber" name="L345" href="#L345">345</a>             Entry&lt;UUID, UUID&gt; next = iterator.next();
+<a class="jxr_linenumber" name="L346" href="#L346">346</a>             Optional&lt;TournamentController&gt; tournamentController = managerFactory.tournamentManager().getTournamentController(next.getValue());
+<a class="jxr_linenumber" name="L347" href="#L347">347</a>             <strong class="jxr_keyword">if</strong> (tournamentController.isPresent()) {
+<a class="jxr_linenumber" name="L348" href="#L348">348</a>                 ccTournamentStarted(next.getValue(), next.getKey());
+<a class="jxr_linenumber" name="L349" href="#L349">349</a>                 tournamentController.get().rejoin(next.getKey());
+<a class="jxr_linenumber" name="L350" href="#L350">350</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L351" href="#L351">351</a>                 iterator.remove(); <em class="jxr_comment">// tournament has ended meanwhile</em>
+<a class="jxr_linenumber" name="L352" href="#L352">352</a>             }
+<a class="jxr_linenumber" name="L353" href="#L353">353</a>         }
+<a class="jxr_linenumber" name="L354" href="#L354">354</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, GameSessionPlayer&gt; entry : gameSessions.entrySet()) {
+<a class="jxr_linenumber" name="L355" href="#L355">355</a>             ccGameStarted(entry.getValue().getGameId(), entry.getKey());
+<a class="jxr_linenumber" name="L356" href="#L356">356</a>             entry.getValue().init();
+<a class="jxr_linenumber" name="L357" href="#L357">357</a>             managerFactory.gameManager().sendPlayerString(entry.getValue().getGameId(), userId, <span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L358" href="#L358">358</a>         }
+<a class="jxr_linenumber" name="L359" href="#L359">359</a> 
+<a class="jxr_linenumber" name="L360" href="#L360">360</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, DraftSession&gt; entry : draftSessions.entrySet()) {
+<a class="jxr_linenumber" name="L361" href="#L361">361</a>             ccDraftStarted(entry.getValue().getDraftId(), entry.getKey());
+<a class="jxr_linenumber" name="L362" href="#L362">362</a>             entry.getValue().init();
+<a class="jxr_linenumber" name="L363" href="#L363">363</a>             entry.getValue().update();
+<a class="jxr_linenumber" name="L364" href="#L364">364</a>         }
+<a class="jxr_linenumber" name="L365" href="#L365">365</a> 
+<a class="jxr_linenumber" name="L366" href="#L366">366</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, TournamentSession&gt; entry : constructing.entrySet()) {
+<a class="jxr_linenumber" name="L367" href="#L367">367</a>             entry.getValue().construct(0); <em class="jxr_comment">// TODO: Check if this is correct</em>
+<a class="jxr_linenumber" name="L368" href="#L368">368</a>         }
+<a class="jxr_linenumber" name="L369" href="#L369">369</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, Deck&gt; entry : sideboarding.entrySet()) {
+<a class="jxr_linenumber" name="L370" href="#L370">370</a>             Optional&lt;TableController&gt; controller = managerFactory.tableManager().getController(entry.getKey());
+<a class="jxr_linenumber" name="L371" href="#L371">371</a>             <strong class="jxr_keyword">if</strong> (controller.isPresent()) {
+<a class="jxr_linenumber" name="L372" href="#L372">372</a>                 ccSideboard(entry.getValue(), entry.getKey(), controller.get().getRemainingTime(), controller.get().getOptions().isLimited());
+<a class="jxr_linenumber" name="L373" href="#L373">373</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L374" href="#L374">374</a>                 <em class="jxr_comment">// Table is missing after connection was lost during sideboard.</em>
+<a class="jxr_linenumber" name="L375" href="#L375">375</a>                 <em class="jxr_comment">// Means other players were removed or conceded the game?</em>
+<a class="jxr_linenumber" name="L376" href="#L376">376</a>                 logger.debug(getName() + <span class="jxr_string">" reconnects during sideboarding but tableId not found: "</span> + entry.getKey());
+<a class="jxr_linenumber" name="L377" href="#L377">377</a>             }
+<a class="jxr_linenumber" name="L378" href="#L378">378</a>         }
+<a class="jxr_linenumber" name="L379" href="#L379">379</a>         ServerMessagesUtil.instance.incReconnects();
+<a class="jxr_linenumber" name="L380" href="#L380">380</a>         logger.trace(userName + <span class="jxr_string">" ended reconnect"</span>);
+<a class="jxr_linenumber" name="L381" href="#L381">381</a>     }
+<a class="jxr_linenumber" name="L382" href="#L382">382</a> 
+<a class="jxr_linenumber" name="L383" href="#L383">383</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addGame(UUID playerId, <a name="GameSessionPlayer" href="../../mage/server/game/GameSessionPlayer.html#GameSessionPlayer">GameSessionPlayer</a> gameSession) {
+<a class="jxr_linenumber" name="L384" href="#L384">384</a>         gameSessions.put(playerId, gameSession);
+<a class="jxr_linenumber" name="L385" href="#L385">385</a>     }
+<a class="jxr_linenumber" name="L386" href="#L386">386</a> 
+<a class="jxr_linenumber" name="L387" href="#L387">387</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeGame(UUID playerId) {
+<a class="jxr_linenumber" name="L388" href="#L388">388</a>         gameSessions.remove(playerId);
+<a class="jxr_linenumber" name="L389" href="#L389">389</a>     }
+<a class="jxr_linenumber" name="L390" href="#L390">390</a> 
+<a class="jxr_linenumber" name="L391" href="#L391">391</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addDraft(UUID playerId, <a name="DraftSession" href="../../mage/server/draft/DraftSession.html#DraftSession">DraftSession</a> draftSession) {
+<a class="jxr_linenumber" name="L392" href="#L392">392</a>         draftSessions.put(playerId, draftSession);
+<a class="jxr_linenumber" name="L393" href="#L393">393</a>     }
+<a class="jxr_linenumber" name="L394" href="#L394">394</a> 
+<a class="jxr_linenumber" name="L395" href="#L395">395</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeDraft(UUID playerId) {
+<a class="jxr_linenumber" name="L396" href="#L396">396</a>         draftSessions.remove(playerId);
+<a class="jxr_linenumber" name="L397" href="#L397">397</a>     }
+<a class="jxr_linenumber" name="L398" href="#L398">398</a> 
+<a class="jxr_linenumber" name="L399" href="#L399">399</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addTournament(UUID playerId, UUID tournamentId) {
+<a class="jxr_linenumber" name="L400" href="#L400">400</a>         userTournaments.put(playerId, tournamentId);
+<a class="jxr_linenumber" name="L401" href="#L401">401</a>     }
+<a class="jxr_linenumber" name="L402" href="#L402">402</a> 
+<a class="jxr_linenumber" name="L403" href="#L403">403</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeTournament(UUID playerId) {
+<a class="jxr_linenumber" name="L404" href="#L404">404</a>         userTournaments.remove(playerId);
+<a class="jxr_linenumber" name="L405" href="#L405">405</a>     }
+<a class="jxr_linenumber" name="L406" href="#L406">406</a> 
+<a class="jxr_linenumber" name="L407" href="#L407">407</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addTable(UUID playerId, <a name="Table" href="../../mage/game/Table.html#Table">Table</a> table) {
+<a class="jxr_linenumber" name="L408" href="#L408">408</a>         tables.put(playerId, table);
+<a class="jxr_linenumber" name="L409" href="#L409">409</a>     }
+<a class="jxr_linenumber" name="L410" href="#L410">410</a> 
+<a class="jxr_linenumber" name="L411" href="#L411">411</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeTable(UUID playerId) {
+<a class="jxr_linenumber" name="L412" href="#L412">412</a>         tables.remove(playerId);
+<a class="jxr_linenumber" name="L413" href="#L413">413</a>     }
+<a class="jxr_linenumber" name="L414" href="#L414">414</a> 
+<a class="jxr_linenumber" name="L415" href="#L415">415</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addConstructing(UUID playerId, <a name="TournamentSession" href="../../mage/server/tournament/TournamentSession.html#TournamentSession">TournamentSession</a> tournamentSession) {
+<a class="jxr_linenumber" name="L416" href="#L416">416</a>         constructing.put(playerId, tournamentSession);
+<a class="jxr_linenumber" name="L417" href="#L417">417</a>     }
+<a class="jxr_linenumber" name="L418" href="#L418">418</a> 
+<a class="jxr_linenumber" name="L419" href="#L419">419</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeConstructing(UUID playerId) {
+<a class="jxr_linenumber" name="L420" href="#L420">420</a>         constructing.remove(playerId);
+<a class="jxr_linenumber" name="L421" href="#L421">421</a>     }
+<a class="jxr_linenumber" name="L422" href="#L422">422</a> 
+<a class="jxr_linenumber" name="L423" href="#L423">423</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeSideboarding(UUID tableId) {
+<a class="jxr_linenumber" name="L424" href="#L424">424</a>         sideboarding.remove(tableId);
+<a class="jxr_linenumber" name="L425" href="#L425">425</a>     }
+<a class="jxr_linenumber" name="L426" href="#L426">426</a> 
+<a class="jxr_linenumber" name="L427" href="#L427">427</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeUserFromAllTables(<a name="DisconnectReason" href="../../mage/server/DisconnectReason.html#DisconnectReason">DisconnectReason</a> reason) {
+<a class="jxr_linenumber" name="L428" href="#L428">428</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" Draft sessions "</span> + draftSessions.size());
+<a class="jxr_linenumber" name="L429" href="#L429">429</a>         <strong class="jxr_keyword">for</strong> (<a name="DraftSession" href="../../mage/server/draft/DraftSession.html#DraftSession">DraftSession</a> draftSession : draftSessions.values()) {
+<a class="jxr_linenumber" name="L430" href="#L430">430</a>             draftSession.setKilled();
+<a class="jxr_linenumber" name="L431" href="#L431">431</a>         }
+<a class="jxr_linenumber" name="L432" href="#L432">432</a>         draftSessions.clear();
+<a class="jxr_linenumber" name="L433" href="#L433">433</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" Tournament sessions "</span> + userTournaments.size());
+<a class="jxr_linenumber" name="L434" href="#L434">434</a>         <strong class="jxr_keyword">for</strong> (UUID tournamentId : userTournaments.values()) {
+<a class="jxr_linenumber" name="L435" href="#L435">435</a>             managerFactory.tournamentManager().quit(tournamentId, userId);
+<a class="jxr_linenumber" name="L436" href="#L436">436</a>         }
+<a class="jxr_linenumber" name="L437" href="#L437">437</a>         userTournaments.clear();
+<a class="jxr_linenumber" name="L438" href="#L438">438</a>         constructing.clear();
+<a class="jxr_linenumber" name="L439" href="#L439">439</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" Tables "</span> + tables.size());
+<a class="jxr_linenumber" name="L440" href="#L440">440</a>         <strong class="jxr_keyword">for</strong> (Entry&lt;UUID, Table&gt; entry : tables.entrySet()) {
+<a class="jxr_linenumber" name="L441" href="#L441">441</a>             logger.debug(<span class="jxr_string">"-- leave tableId: "</span> + entry.getValue().getId());
+<a class="jxr_linenumber" name="L442" href="#L442">442</a>             managerFactory.tableManager().leaveTable(userId, entry.getValue().getId());
+<a class="jxr_linenumber" name="L443" href="#L443">443</a>         }
+<a class="jxr_linenumber" name="L444" href="#L444">444</a>         tables.clear();
+<a class="jxr_linenumber" name="L445" href="#L445">445</a>         sideboarding.clear();
+<a class="jxr_linenumber" name="L446" href="#L446">446</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" Game sessions: "</span> + gameSessions.size());
+<a class="jxr_linenumber" name="L447" href="#L447">447</a>         <strong class="jxr_keyword">for</strong> (<a name="GameSessionPlayer" href="../../mage/server/game/GameSessionPlayer.html#GameSessionPlayer">GameSessionPlayer</a> gameSessionPlayer : gameSessions.values()) {
+<a class="jxr_linenumber" name="L448" href="#L448">448</a>             logger.debug(<span class="jxr_string">"-- kill game session of gameId: "</span> + gameSessionPlayer.getGameId());
+<a class="jxr_linenumber" name="L449" href="#L449">449</a>             managerFactory.gameManager().quitMatch(gameSessionPlayer.getGameId(), userId);
+<a class="jxr_linenumber" name="L450" href="#L450">450</a>             gameSessionPlayer.quitGame();
+<a class="jxr_linenumber" name="L451" href="#L451">451</a>         }
+<a class="jxr_linenumber" name="L452" href="#L452">452</a>         gameSessions.clear();
+<a class="jxr_linenumber" name="L453" href="#L453">453</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" watched Games "</span> + watchedGames.size());
+<a class="jxr_linenumber" name="L454" href="#L454">454</a>         <strong class="jxr_keyword">for</strong> (Iterator&lt;UUID&gt; it = watchedGames.iterator(); it.hasNext(); ) { <em class="jxr_comment">// Iterator to prevent ConcurrentModificationException</em>
+<a class="jxr_linenumber" name="L455" href="#L455">455</a>             UUID gameId = it.next();
+<a class="jxr_linenumber" name="L456" href="#L456">456</a>             managerFactory.gameManager().stopWatching(gameId, userId);
+<a class="jxr_linenumber" name="L457" href="#L457">457</a>         }
+<a class="jxr_linenumber" name="L458" href="#L458">458</a>         watchedGames.clear();
+<a class="jxr_linenumber" name="L459" href="#L459">459</a>         logger.trace(<span class="jxr_string">"REMOVE "</span> + userName + <span class="jxr_string">" Chats "</span>);
+<a class="jxr_linenumber" name="L460" href="#L460">460</a>         managerFactory.chatManager().removeUser(userId, reason);
+<a class="jxr_linenumber" name="L461" href="#L461">461</a>     }
+<a class="jxr_linenumber" name="L462" href="#L462">462</a> 
+<a class="jxr_linenumber" name="L463" href="#L463">463</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUserData(<a name="UserData" href="../../mage/players/net/UserData.html#UserData">UserData</a> userData) {
+<a class="jxr_linenumber" name="L464" href="#L464">464</a>         <strong class="jxr_keyword">if</strong> (<strong class="jxr_keyword">this</strong>.userData != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L465" href="#L465">465</a>             <strong class="jxr_keyword">this</strong>.userData.update(userData);
+<a class="jxr_linenumber" name="L466" href="#L466">466</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L467" href="#L467">467</a>             <strong class="jxr_keyword">this</strong>.userData = userData;
+<a class="jxr_linenumber" name="L468" href="#L468">468</a>             resetUserStats();
+<a class="jxr_linenumber" name="L469" href="#L469">469</a>         }
+<a class="jxr_linenumber" name="L470" href="#L470">470</a>     }
+<a class="jxr_linenumber" name="L471" href="#L471">471</a> 
+<a class="jxr_linenumber" name="L472" href="#L472">472</a>     <strong class="jxr_keyword">public</strong> <a name="UserData" href="../../mage/players/net/UserData.html#UserData">UserData</a> getUserData() {
+<a class="jxr_linenumber" name="L473" href="#L473">473</a>         <strong class="jxr_keyword">if</strong> (userData == <strong class="jxr_keyword">null</strong>) {<em class="jxr_comment">// default these to avaiod NPE -&gt; will be updated from client short after</em>
+<a class="jxr_linenumber" name="L474" href="#L474">474</a>             <strong class="jxr_keyword">return</strong> UserData.getDefaultUserDataView();
+<a class="jxr_linenumber" name="L475" href="#L475">475</a>         }
+<a class="jxr_linenumber" name="L476" href="#L476">476</a>         <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">this</strong>.userData;
+<a class="jxr_linenumber" name="L477" href="#L477">477</a>     }
+<a class="jxr_linenumber" name="L478" href="#L478">478</a> 
+<a class="jxr_linenumber" name="L479" href="#L479">479</a>     <strong class="jxr_keyword">public</strong> String getGameInfo() {
+<a class="jxr_linenumber" name="L480" href="#L480">480</a>         StringBuilder sb = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="L481" href="#L481">481</a> 
+<a class="jxr_linenumber" name="L482" href="#L482">482</a>         <strong class="jxr_keyword">int</strong> draft = 0, match = 0, sideboard = 0, tournament = 0, construct = 0, waiting = 0;
+<a class="jxr_linenumber" name="L483" href="#L483">483</a> 
+<a class="jxr_linenumber" name="L484" href="#L484">484</a>         <strong class="jxr_keyword">for</strong> (Map.Entry&lt;UUID, Table&gt; tableEntry : tables.entrySet()) {
+<a class="jxr_linenumber" name="L485" href="#L485">485</a>             <strong class="jxr_keyword">if</strong> (tableEntry != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L486" href="#L486">486</a>                 <a name="Table" href="../../mage/game/Table.html#Table">Table</a> table = tableEntry.getValue();
+<a class="jxr_linenumber" name="L487" href="#L487">487</a>                 <strong class="jxr_keyword">if</strong> (table != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L488" href="#L488">488</a>                     <strong class="jxr_keyword">if</strong> (table.isTournament()) {
+<a class="jxr_linenumber" name="L489" href="#L489">489</a>                         <strong class="jxr_keyword">if</strong> (tableEntry.getKey() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L490" href="#L490">490</a>                             <a name="TournamentPlayer" href="../../mage/game/tournament/TournamentPlayer.html#TournamentPlayer">TournamentPlayer</a> tournamentPlayer = table.getTournament().getPlayer(tableEntry.getKey());
+<a class="jxr_linenumber" name="L491" href="#L491">491</a>                             <strong class="jxr_keyword">if</strong> (tournamentPlayer != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L492" href="#L492">492</a>                                 <strong class="jxr_keyword">if</strong> (!tournamentPlayer.isEliminated()) {
+<a class="jxr_linenumber" name="L493" href="#L493">493</a>                                     <strong class="jxr_keyword">switch</strong> (table.getState()) {
+<a class="jxr_linenumber" name="L494" href="#L494">494</a>                                         <strong class="jxr_keyword">case</strong> WAITING:
+<a class="jxr_linenumber" name="L495" href="#L495">495</a>                                         <strong class="jxr_keyword">case</strong> STARTING:
+<a class="jxr_linenumber" name="L496" href="#L496">496</a>                                         <strong class="jxr_keyword">case</strong> READY_TO_START:
+<a class="jxr_linenumber" name="L497" href="#L497">497</a>                                             waiting++;
+<a class="jxr_linenumber" name="L498" href="#L498">498</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L499" href="#L499">499</a>                                         <strong class="jxr_keyword">case</strong> CONSTRUCTING:
+<a class="jxr_linenumber" name="L500" href="#L500">500</a>                                             construct++;
+<a class="jxr_linenumber" name="L501" href="#L501">501</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L502" href="#L502">502</a>                                         <strong class="jxr_keyword">case</strong> DRAFTING:
+<a class="jxr_linenumber" name="L503" href="#L503">503</a>                                             draft++;
+<a class="jxr_linenumber" name="L504" href="#L504">504</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L505" href="#L505">505</a>                                         <strong class="jxr_keyword">case</strong> DUELING:
+<a class="jxr_linenumber" name="L506" href="#L506">506</a>                                             tournament++;
+<a class="jxr_linenumber" name="L507" href="#L507">507</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L508" href="#L508">508</a>                                     }
+<a class="jxr_linenumber" name="L509" href="#L509">509</a>                                     <strong class="jxr_keyword">switch</strong> (getUserState()) {
+<a class="jxr_linenumber" name="L510" href="#L510">510</a>                                         <strong class="jxr_keyword">case</strong> Disconnected:
+<a class="jxr_linenumber" name="L511" href="#L511">511</a>                                             tournamentPlayer.setDisconnectInfo(<span class="jxr_string">" (discon. "</span> + getDisconnectDuration() + ')');
+<a class="jxr_linenumber" name="L512" href="#L512">512</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L513" href="#L513">513</a>                                         <strong class="jxr_keyword">case</strong> Offline:
+<a class="jxr_linenumber" name="L514" href="#L514">514</a>                                             tournamentPlayer.setDisconnectInfo(<span class="jxr_string">" Offline"</span>);
+<a class="jxr_linenumber" name="L515" href="#L515">515</a>                                             <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L516" href="#L516">516</a>                                         <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L517" href="#L517">517</a>                                             tournamentPlayer.setDisconnectInfo(<span class="jxr_string">""</span>);
+<a class="jxr_linenumber" name="L518" href="#L518">518</a>                                     }
+<a class="jxr_linenumber" name="L519" href="#L519">519</a>                                 }
+<a class="jxr_linenumber" name="L520" href="#L520">520</a>                             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L521" href="#L521">521</a>                                 <em class="jxr_comment">// can happen if tournamet has just ended</em>
+<a class="jxr_linenumber" name="L522" href="#L522">522</a>                                 logger.debug(userName + <span class="jxr_string">" tournament player missing - tableId:"</span> + table.getId(), <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L523" href="#L523">523</a>                                 tablesToDelete.add(tableEntry.getKey());
+<a class="jxr_linenumber" name="L524" href="#L524">524</a>                             }
+<a class="jxr_linenumber" name="L525" href="#L525">525</a>                         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L526" href="#L526">526</a>                             logger.error(userName + <span class="jxr_string">" tournament key missing - tableId: "</span> + table.getId(), <strong class="jxr_keyword">null</strong>);
+<a class="jxr_linenumber" name="L527" href="#L527">527</a>                         }
+<a class="jxr_linenumber" name="L528" href="#L528">528</a>                     } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L529" href="#L529">529</a>                         <strong class="jxr_keyword">switch</strong> (table.getState()) {
+<a class="jxr_linenumber" name="L530" href="#L530">530</a>                             <strong class="jxr_keyword">case</strong> WAITING:
+<a class="jxr_linenumber" name="L531" href="#L531">531</a>                             <strong class="jxr_keyword">case</strong> STARTING:
+<a class="jxr_linenumber" name="L532" href="#L532">532</a>                             <strong class="jxr_keyword">case</strong> READY_TO_START:
+<a class="jxr_linenumber" name="L533" href="#L533">533</a>                                 waiting++;
+<a class="jxr_linenumber" name="L534" href="#L534">534</a>                                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L535" href="#L535">535</a>                             <strong class="jxr_keyword">case</strong> SIDEBOARDING:
+<a class="jxr_linenumber" name="L536" href="#L536">536</a>                                 sideboard++;
+<a class="jxr_linenumber" name="L537" href="#L537">537</a>                                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L538" href="#L538">538</a>                             <strong class="jxr_keyword">case</strong> DUELING:
+<a class="jxr_linenumber" name="L539" href="#L539">539</a>                                 match++;
+<a class="jxr_linenumber" name="L540" href="#L540">540</a>                                 <strong class="jxr_keyword">break</strong>;
+<a class="jxr_linenumber" name="L541" href="#L541">541</a>                         }
+<a class="jxr_linenumber" name="L542" href="#L542">542</a>                     }
+<a class="jxr_linenumber" name="L543" href="#L543">543</a>                 }
+<a class="jxr_linenumber" name="L544" href="#L544">544</a>             }
+<a class="jxr_linenumber" name="L545" href="#L545">545</a>         }
+<a class="jxr_linenumber" name="L546" href="#L546">546</a>         <strong class="jxr_keyword">if</strong> (!tablesToDelete.isEmpty()) {
+<a class="jxr_linenumber" name="L547" href="#L547">547</a>             <strong class="jxr_keyword">for</strong> (UUID keyId : tablesToDelete) {
+<a class="jxr_linenumber" name="L548" href="#L548">548</a>                 removeTable(keyId);
+<a class="jxr_linenumber" name="L549" href="#L549">549</a>             }
+<a class="jxr_linenumber" name="L550" href="#L550">550</a>             tablesToDelete.clear();
+<a class="jxr_linenumber" name="L551" href="#L551">551</a>         }
+<a class="jxr_linenumber" name="L552" href="#L552">552</a>         <strong class="jxr_keyword">if</strong> (waiting &gt; 0) {
+<a class="jxr_linenumber" name="L553" href="#L553">553</a>             sb.append(<span class="jxr_string">"Wait: "</span>).append(waiting).append(' ');
+<a class="jxr_linenumber" name="L554" href="#L554">554</a>         }
+<a class="jxr_linenumber" name="L555" href="#L555">555</a>         <strong class="jxr_keyword">if</strong> (match &gt; 0) {
+<a class="jxr_linenumber" name="L556" href="#L556">556</a>             sb.append(<span class="jxr_string">"Match: "</span>).append(match).append(' ');
+<a class="jxr_linenumber" name="L557" href="#L557">557</a>         }
+<a class="jxr_linenumber" name="L558" href="#L558">558</a>         <strong class="jxr_keyword">if</strong> (sideboard &gt; 0) {
+<a class="jxr_linenumber" name="L559" href="#L559">559</a>             sb.append(<span class="jxr_string">"Sideb: "</span>).append(sideboard).append(' ');
+<a class="jxr_linenumber" name="L560" href="#L560">560</a>         }
+<a class="jxr_linenumber" name="L561" href="#L561">561</a>         <strong class="jxr_keyword">if</strong> (draft &gt; 0) {
+<a class="jxr_linenumber" name="L562" href="#L562">562</a>             sb.append(<span class="jxr_string">"Draft: "</span>).append(draft).append(' ');
+<a class="jxr_linenumber" name="L563" href="#L563">563</a>         }
+<a class="jxr_linenumber" name="L564" href="#L564">564</a>         <strong class="jxr_keyword">if</strong> (construct &gt; 0) {
+<a class="jxr_linenumber" name="L565" href="#L565">565</a>             sb.append(<span class="jxr_string">"Const: "</span>).append(construct).append(' ');
+<a class="jxr_linenumber" name="L566" href="#L566">566</a>         }
+<a class="jxr_linenumber" name="L567" href="#L567">567</a>         <strong class="jxr_keyword">if</strong> (tournament &gt; 0) {
+<a class="jxr_linenumber" name="L568" href="#L568">568</a>             sb.append(<span class="jxr_string">"Tourn: "</span>).append(tournament).append(' ');
+<a class="jxr_linenumber" name="L569" href="#L569">569</a>         }
+<a class="jxr_linenumber" name="L570" href="#L570">570</a>         <strong class="jxr_keyword">if</strong> (!watchedGames.isEmpty()) {
+<a class="jxr_linenumber" name="L571" href="#L571">571</a>             sb.append(<span class="jxr_string">"Watch: "</span>).append(watchedGames.size()).append(' ');
+<a class="jxr_linenumber" name="L572" href="#L572">572</a>         }
+<a class="jxr_linenumber" name="L573" href="#L573">573</a>         <strong class="jxr_keyword">return</strong> sb.toString();
+<a class="jxr_linenumber" name="L574" href="#L574">574</a>     }
+<a class="jxr_linenumber" name="L575" href="#L575">575</a> 
+<a class="jxr_linenumber" name="L576" href="#L576">576</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> addGameWatchInfo(UUID gameId) {
+<a class="jxr_linenumber" name="L577" href="#L577">577</a>         watchedGames.add(gameId);
+<a class="jxr_linenumber" name="L578" href="#L578">578</a>     }
+<a class="jxr_linenumber" name="L579" href="#L579">579</a> 
+<a class="jxr_linenumber" name="L580" href="#L580">580</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> removeGameWatchInfo(UUID gameId) {
+<a class="jxr_linenumber" name="L581" href="#L581">581</a>         watchedGames.remove(gameId);
+<a class="jxr_linenumber" name="L582" href="#L582">582</a>     }
+<a class="jxr_linenumber" name="L583" href="#L583">583</a> 
+<a class="jxr_linenumber" name="L584" href="#L584">584</a>     <strong class="jxr_keyword">public</strong> UserState getUserState() {
+<a class="jxr_linenumber" name="L585" href="#L585">585</a>         <strong class="jxr_keyword">return</strong> userState;
+<a class="jxr_linenumber" name="L586" href="#L586">586</a>     }
+<a class="jxr_linenumber" name="L587" href="#L587">587</a> 
+<a class="jxr_linenumber" name="L588" href="#L588">588</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> setUserState(UserState userState) {
+<a class="jxr_linenumber" name="L589" href="#L589">589</a>         <strong class="jxr_keyword">this</strong>.userState = userState;
+<a class="jxr_linenumber" name="L590" href="#L590">590</a>     }
+<a class="jxr_linenumber" name="L591" href="#L591">591</a> 
+<a class="jxr_linenumber" name="L592" href="#L592">592</a>     <strong class="jxr_keyword">public</strong> String getPingInfo() {
+<a class="jxr_linenumber" name="L593" href="#L593">593</a>         <strong class="jxr_keyword">switch</strong> (getUserState()) {
+<a class="jxr_linenumber" name="L594" href="#L594">594</a>             <strong class="jxr_keyword">case</strong> Disconnected:
+<a class="jxr_linenumber" name="L595" href="#L595">595</a>                 <strong class="jxr_keyword">return</strong> <span class="jxr_string">" (discon. "</span> + getDisconnectDuration() + ')';
+<a class="jxr_linenumber" name="L596" href="#L596">596</a>             <strong class="jxr_keyword">case</strong> Offline:
+<a class="jxr_linenumber" name="L597" href="#L597">597</a>                 <strong class="jxr_keyword">return</strong> <span class="jxr_string">" Offline"</span>;
+<a class="jxr_linenumber" name="L598" href="#L598">598</a>             <strong class="jxr_keyword">default</strong>:
+<a class="jxr_linenumber" name="L599" href="#L599">599</a>                 <strong class="jxr_keyword">return</strong> pingInfo + <span class="jxr_string">" "</span> + getConnectionDuration();
+<a class="jxr_linenumber" name="L600" href="#L600">600</a>         }
+<a class="jxr_linenumber" name="L601" href="#L601">601</a>     }
+<a class="jxr_linenumber" name="L602" href="#L602">602</a> 
+<a class="jxr_linenumber" name="L603" href="#L603">603</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> resetUserStats() {
+<a class="jxr_linenumber" name="L604" href="#L604">604</a>         <strong class="jxr_keyword">if</strong> (userData == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L605" href="#L605">605</a>             <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L606" href="#L606">606</a>         }
+<a class="jxr_linenumber" name="L607" href="#L607">607</a>         userStats = UserStatsRepository.instance.getUser(<strong class="jxr_keyword">this</strong>.userName);
+<a class="jxr_linenumber" name="L608" href="#L608">608</a>         <strong class="jxr_keyword">if</strong> (userStats != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L609" href="#L609">609</a>             ResultProtos.UserStatsProto userStatsProto = userStats.getProto();
+<a class="jxr_linenumber" name="L610" href="#L610">610</a> 
+<a class="jxr_linenumber" name="L611" href="#L611">611</a>             userData.setMatchHistory(userStatsToMatchHistory(userStatsProto));
+<a class="jxr_linenumber" name="L612" href="#L612">612</a>             userData.setMatchQuitRatio(userStatsToMatchQuitRatio(userStatsProto));
+<a class="jxr_linenumber" name="L613" href="#L613">613</a>             userData.setTourneyHistory(userStatsToTourneyHistory(userStatsProto));
+<a class="jxr_linenumber" name="L614" href="#L614">614</a>             userData.setTourneyQuitRatio(userStatsToTourneyQuitRatio(userStatsProto));
+<a class="jxr_linenumber" name="L615" href="#L615">615</a>             userData.setGeneralRating(userStatsToGeneralRating(userStatsProto));
+<a class="jxr_linenumber" name="L616" href="#L616">616</a>             userData.setConstructedRating(userStatsToConstructedRating(userStatsProto));
+<a class="jxr_linenumber" name="L617" href="#L617">617</a>             userData.setLimitedRating(userStatsToLimitedRating(userStatsProto));
+<a class="jxr_linenumber" name="L618" href="#L618">618</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L619" href="#L619">619</a>             userData.setMatchHistory(<span class="jxr_string">"0"</span>);
+<a class="jxr_linenumber" name="L620" href="#L620">620</a>             userData.setMatchQuitRatio(0);
+<a class="jxr_linenumber" name="L621" href="#L621">621</a>             userData.setTourneyHistory(<span class="jxr_string">"0"</span>);
+<a class="jxr_linenumber" name="L622" href="#L622">622</a>             userData.setTourneyQuitRatio(0);
+<a class="jxr_linenumber" name="L623" href="#L623">623</a>             userData.setGeneralRating(GlickoRatingSystem.getDefaultDisplayedRating());
+<a class="jxr_linenumber" name="L624" href="#L624">624</a>             userData.setConstructedRating(GlickoRatingSystem.getDefaultDisplayedRating());
+<a class="jxr_linenumber" name="L625" href="#L625">625</a>             userData.setLimitedRating(GlickoRatingSystem.getDefaultDisplayedRating());
+<a class="jxr_linenumber" name="L626" href="#L626">626</a>         }
+<a class="jxr_linenumber" name="L627" href="#L627">627</a>     }
+<a class="jxr_linenumber" name="L628" href="#L628">628</a> 
+<a class="jxr_linenumber" name="L629" href="#L629">629</a>     <strong class="jxr_keyword">public</strong> String getMatchHistory() {
+<a class="jxr_linenumber" name="L630" href="#L630">630</a>         <strong class="jxr_keyword">if</strong> (userData != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L631" href="#L631">631</a>             <strong class="jxr_keyword">return</strong> userData.getMatchHistory();
+<a class="jxr_linenumber" name="L632" href="#L632">632</a>         }
+<a class="jxr_linenumber" name="L633" href="#L633">633</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"&lt;not available&gt;"</span>;
+<a class="jxr_linenumber" name="L634" href="#L634">634</a>     }
+<a class="jxr_linenumber" name="L635" href="#L635">635</a> 
+<a class="jxr_linenumber" name="L636" href="#L636">636</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getMatchQuitRatio() {
+<a class="jxr_linenumber" name="L637" href="#L637">637</a>         <strong class="jxr_keyword">if</strong> (userData != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L638" href="#L638">638</a>             <strong class="jxr_keyword">return</strong> userData.getMatchQuitRatio();
+<a class="jxr_linenumber" name="L639" href="#L639">639</a>         }
+<a class="jxr_linenumber" name="L640" href="#L640">640</a>         <strong class="jxr_keyword">return</strong> 0;
+<a class="jxr_linenumber" name="L641" href="#L641">641</a>     }
+<a class="jxr_linenumber" name="L642" href="#L642">642</a> 
+<a class="jxr_linenumber" name="L643" href="#L643">643</a>     <strong class="jxr_keyword">public</strong> String getTourneyHistory() {
+<a class="jxr_linenumber" name="L644" href="#L644">644</a>         <strong class="jxr_keyword">if</strong> (userData != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L645" href="#L645">645</a>             <strong class="jxr_keyword">return</strong> userData.getTourneyHistory();
+<a class="jxr_linenumber" name="L646" href="#L646">646</a>         }
+<a class="jxr_linenumber" name="L647" href="#L647">647</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"&lt;not available&gt;"</span>;
+<a class="jxr_linenumber" name="L648" href="#L648">648</a>     }
+<a class="jxr_linenumber" name="L649" href="#L649">649</a> 
+<a class="jxr_linenumber" name="L650" href="#L650">650</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String userStatsToHistory(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L651" href="#L651">651</a>         <em class="jxr_comment">// todo: add preference to hide rating?</em>
+<a class="jxr_linenumber" name="L652" href="#L652">652</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">"Matches:"</span> + userStatsToMatchHistory(proto)
+<a class="jxr_linenumber" name="L653" href="#L653">653</a>                 + <span class="jxr_string">", Tourneys: "</span> + userStatsToTourneyHistory(proto)
+<a class="jxr_linenumber" name="L654" href="#L654">654</a>                 + <span class="jxr_string">", Constructed Rating: "</span> + userStatsToConstructedRating(proto)
+<a class="jxr_linenumber" name="L655" href="#L655">655</a>                 + <span class="jxr_string">", Limited Rating: "</span> + userStatsToLimitedRating(proto);
+<a class="jxr_linenumber" name="L656" href="#L656">656</a>     }
+<a class="jxr_linenumber" name="L657" href="#L657">657</a> 
+<a class="jxr_linenumber" name="L658" href="#L658">658</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getTourneyQuitRatio() {
+<a class="jxr_linenumber" name="L659" href="#L659">659</a>         <strong class="jxr_keyword">if</strong> (userData != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L660" href="#L660">660</a>             <strong class="jxr_keyword">return</strong> userData.getTourneyQuitRatio();
+<a class="jxr_linenumber" name="L661" href="#L661">661</a>         }
+<a class="jxr_linenumber" name="L662" href="#L662">662</a>         <strong class="jxr_keyword">return</strong> 0;
+<a class="jxr_linenumber" name="L663" href="#L663">663</a>     }
+<a class="jxr_linenumber" name="L664" href="#L664">664</a> 
+<a class="jxr_linenumber" name="L665" href="#L665">665</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String userStatsToMatchHistory(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L666" href="#L666">666</a>         StringBuilder builder = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="L667" href="#L667">667</a>         builder.append(proto.getMatches());
+<a class="jxr_linenumber" name="L668" href="#L668">668</a>         List&lt;String&gt; quit = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L669" href="#L669">669</a>         <strong class="jxr_keyword">if</strong> (proto.getMatchesIdleTimeout() &gt; 0) {
+<a class="jxr_linenumber" name="L670" href="#L670">670</a>             quit.add(<span class="jxr_string">"I:"</span> + proto.getMatchesIdleTimeout());
+<a class="jxr_linenumber" name="L671" href="#L671">671</a>         }
+<a class="jxr_linenumber" name="L672" href="#L672">672</a>         <strong class="jxr_keyword">if</strong> (proto.getMatchesTimerTimeout() &gt; 0) {
+<a class="jxr_linenumber" name="L673" href="#L673">673</a>             quit.add(<span class="jxr_string">"T:"</span> + proto.getMatchesTimerTimeout());
+<a class="jxr_linenumber" name="L674" href="#L674">674</a>         }
+<a class="jxr_linenumber" name="L675" href="#L675">675</a>         <strong class="jxr_keyword">if</strong> (proto.getMatchesQuit() &gt; 0) {
+<a class="jxr_linenumber" name="L676" href="#L676">676</a>             quit.add(<span class="jxr_string">"Q:"</span> + proto.getMatchesQuit());
+<a class="jxr_linenumber" name="L677" href="#L677">677</a>         }
+<a class="jxr_linenumber" name="L678" href="#L678">678</a>         <strong class="jxr_keyword">if</strong> (!quit.isEmpty()) {
+<a class="jxr_linenumber" name="L679" href="#L679">679</a>             builder.append(<span class="jxr_string">" ("</span>);
+<a class="jxr_linenumber" name="L680" href="#L680">680</a>             joinStrings(builder, quit, <span class="jxr_string">" "</span>);
+<a class="jxr_linenumber" name="L681" href="#L681">681</a>             builder.append(')');
+<a class="jxr_linenumber" name="L682" href="#L682">682</a>         }
+<a class="jxr_linenumber" name="L683" href="#L683">683</a>         <strong class="jxr_keyword">return</strong> builder.toString();
+<a class="jxr_linenumber" name="L684" href="#L684">684</a>     }
+<a class="jxr_linenumber" name="L685" href="#L685">685</a> 
+<a class="jxr_linenumber" name="L686" href="#L686">686</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> userStatsToMatchQuitRatio(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L687" href="#L687">687</a>         <strong class="jxr_keyword">int</strong> matches = proto.getMatches();
+<a class="jxr_linenumber" name="L688" href="#L688">688</a>         <strong class="jxr_keyword">if</strong> (matches == 0) {
+<a class="jxr_linenumber" name="L689" href="#L689">689</a>             <strong class="jxr_keyword">return</strong> 0;
+<a class="jxr_linenumber" name="L690" href="#L690">690</a>         }
+<a class="jxr_linenumber" name="L691" href="#L691">691</a>         <strong class="jxr_keyword">int</strong> quits = proto.getMatchesIdleTimeout()
+<a class="jxr_linenumber" name="L692" href="#L692">692</a>                 + proto.getMatchesTimerTimeout()
+<a class="jxr_linenumber" name="L693" href="#L693">693</a>                 + proto.getMatchesQuit();
+<a class="jxr_linenumber" name="L694" href="#L694">694</a>         <strong class="jxr_keyword">return</strong> 100 * quits / matches;
+<a class="jxr_linenumber" name="L695" href="#L695">695</a>     }
+<a class="jxr_linenumber" name="L696" href="#L696">696</a> 
+<a class="jxr_linenumber" name="L697" href="#L697">697</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> String userStatsToTourneyHistory(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L698" href="#L698">698</a>         StringBuilder builder = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="L699" href="#L699">699</a>         builder.append(proto.getTourneys());
+<a class="jxr_linenumber" name="L700" href="#L700">700</a>         List&lt;String&gt; quit = <strong class="jxr_keyword">new</strong> ArrayList&lt;&gt;();
+<a class="jxr_linenumber" name="L701" href="#L701">701</a>         <strong class="jxr_keyword">if</strong> (proto.getTourneysQuitDuringDrafting() &gt; 0) {
+<a class="jxr_linenumber" name="L702" href="#L702">702</a>             quit.add(<span class="jxr_string">"D:"</span> + proto.getTourneysQuitDuringDrafting());
+<a class="jxr_linenumber" name="L703" href="#L703">703</a>         }
+<a class="jxr_linenumber" name="L704" href="#L704">704</a>         <strong class="jxr_keyword">if</strong> (proto.getTourneysQuitDuringConstruction() &gt; 0) {
+<a class="jxr_linenumber" name="L705" href="#L705">705</a>             quit.add(<span class="jxr_string">"C:"</span> + proto.getTourneysQuitDuringConstruction());
+<a class="jxr_linenumber" name="L706" href="#L706">706</a>         }
+<a class="jxr_linenumber" name="L707" href="#L707">707</a>         <strong class="jxr_keyword">if</strong> (proto.getTourneysQuitDuringRound() &gt; 0) {
+<a class="jxr_linenumber" name="L708" href="#L708">708</a>             quit.add(<span class="jxr_string">"R:"</span> + proto.getTourneysQuitDuringRound());
+<a class="jxr_linenumber" name="L709" href="#L709">709</a>         }
+<a class="jxr_linenumber" name="L710" href="#L710">710</a>         <strong class="jxr_keyword">if</strong> (!quit.isEmpty()) {
+<a class="jxr_linenumber" name="L711" href="#L711">711</a>             builder.append(<span class="jxr_string">" ("</span>);
+<a class="jxr_linenumber" name="L712" href="#L712">712</a>             joinStrings(builder, quit, <span class="jxr_string">" "</span>);
+<a class="jxr_linenumber" name="L713" href="#L713">713</a>             builder.append(')');
+<a class="jxr_linenumber" name="L714" href="#L714">714</a>         }
+<a class="jxr_linenumber" name="L715" href="#L715">715</a>         <strong class="jxr_keyword">return</strong> builder.toString();
+<a class="jxr_linenumber" name="L716" href="#L716">716</a>     }
+<a class="jxr_linenumber" name="L717" href="#L717">717</a> 
+<a class="jxr_linenumber" name="L718" href="#L718">718</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> userStatsToTourneyQuitRatio(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L719" href="#L719">719</a>         <strong class="jxr_keyword">int</strong> tourneys = proto.getTourneys();
+<a class="jxr_linenumber" name="L720" href="#L720">720</a>         <strong class="jxr_keyword">if</strong> (tourneys == 0) {
+<a class="jxr_linenumber" name="L721" href="#L721">721</a>             <strong class="jxr_keyword">return</strong> 0;
+<a class="jxr_linenumber" name="L722" href="#L722">722</a>         }
+<a class="jxr_linenumber" name="L723" href="#L723">723</a>         <strong class="jxr_keyword">int</strong> quits = proto.getTourneysQuitDuringDrafting()
+<a class="jxr_linenumber" name="L724" href="#L724">724</a>                 + proto.getTourneysQuitDuringConstruction()
+<a class="jxr_linenumber" name="L725" href="#L725">725</a>                 + proto.getTourneysQuitDuringRound();
+<a class="jxr_linenumber" name="L726" href="#L726">726</a>         <strong class="jxr_keyword">return</strong> 100 * quits / tourneys;
+<a class="jxr_linenumber" name="L727" href="#L727">727</a>     }
+<a class="jxr_linenumber" name="L728" href="#L728">728</a> 
+<a class="jxr_linenumber" name="L729" href="#L729">729</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> userStatsToGeneralRating(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L730" href="#L730">730</a>         <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a> glickoRating;
+<a class="jxr_linenumber" name="L731" href="#L731">731</a>         <strong class="jxr_keyword">if</strong> (proto.hasGeneralGlickoRating()) {
+<a class="jxr_linenumber" name="L732" href="#L732">732</a>             ResultProtos.GlickoRatingProto glickoRatingProto = proto.getGeneralGlickoRating();
+<a class="jxr_linenumber" name="L733" href="#L733">733</a>             glickoRating = <strong class="jxr_keyword">new</strong> <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a>(
+<a class="jxr_linenumber" name="L734" href="#L734">734</a>                     glickoRatingProto.getRating(),
+<a class="jxr_linenumber" name="L735" href="#L735">735</a>                     glickoRatingProto.getRatingDeviation(),
+<a class="jxr_linenumber" name="L736" href="#L736">736</a>                     glickoRatingProto.getLastGameTimeMs());
+<a class="jxr_linenumber" name="L737" href="#L737">737</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L738" href="#L738">738</a>             glickoRating = GlickoRatingSystem.getInitialRating();
+<a class="jxr_linenumber" name="L739" href="#L739">739</a>         }
+<a class="jxr_linenumber" name="L740" href="#L740">740</a>         <strong class="jxr_keyword">return</strong> GlickoRatingSystem.getDisplayedRating(glickoRating);
+<a class="jxr_linenumber" name="L741" href="#L741">741</a>     }
+<a class="jxr_linenumber" name="L742" href="#L742">742</a> 
+<a class="jxr_linenumber" name="L743" href="#L743">743</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> userStatsToConstructedRating(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L744" href="#L744">744</a>         <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a> glickoRating;
+<a class="jxr_linenumber" name="L745" href="#L745">745</a>         <strong class="jxr_keyword">if</strong> (proto.hasConstructedGlickoRating()) {
+<a class="jxr_linenumber" name="L746" href="#L746">746</a>             ResultProtos.GlickoRatingProto glickoRatingProto = proto.getConstructedGlickoRating();
+<a class="jxr_linenumber" name="L747" href="#L747">747</a>             glickoRating = <strong class="jxr_keyword">new</strong> <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a>(
+<a class="jxr_linenumber" name="L748" href="#L748">748</a>                     glickoRatingProto.getRating(),
+<a class="jxr_linenumber" name="L749" href="#L749">749</a>                     glickoRatingProto.getRatingDeviation(),
+<a class="jxr_linenumber" name="L750" href="#L750">750</a>                     glickoRatingProto.getLastGameTimeMs());
+<a class="jxr_linenumber" name="L751" href="#L751">751</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L752" href="#L752">752</a>             glickoRating = GlickoRatingSystem.getInitialRating();
+<a class="jxr_linenumber" name="L753" href="#L753">753</a>         }
+<a class="jxr_linenumber" name="L754" href="#L754">754</a>         <strong class="jxr_keyword">return</strong> GlickoRatingSystem.getDisplayedRating(glickoRating);
+<a class="jxr_linenumber" name="L755" href="#L755">755</a>     }
+<a class="jxr_linenumber" name="L756" href="#L756">756</a> 
+<a class="jxr_linenumber" name="L757" href="#L757">757</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">int</strong> userStatsToLimitedRating(ResultProtos.UserStatsProto proto) {
+<a class="jxr_linenumber" name="L758" href="#L758">758</a>         <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a> glickoRating;
+<a class="jxr_linenumber" name="L759" href="#L759">759</a>         <strong class="jxr_keyword">if</strong> (proto.hasLimitedGlickoRating()) {
+<a class="jxr_linenumber" name="L760" href="#L760">760</a>             ResultProtos.GlickoRatingProto glickoRatingProto = proto.getLimitedGlickoRating();
+<a class="jxr_linenumber" name="L761" href="#L761">761</a>             glickoRating = <strong class="jxr_keyword">new</strong> <a name="GlickoRating" href="../../mage/server/rating/GlickoRating.html#GlickoRating">GlickoRating</a>(
+<a class="jxr_linenumber" name="L762" href="#L762">762</a>                     glickoRatingProto.getRating(),
+<a class="jxr_linenumber" name="L763" href="#L763">763</a>                     glickoRatingProto.getRatingDeviation(),
+<a class="jxr_linenumber" name="L764" href="#L764">764</a>                     glickoRatingProto.getLastGameTimeMs());
+<a class="jxr_linenumber" name="L765" href="#L765">765</a>         } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L766" href="#L766">766</a>             glickoRating = GlickoRatingSystem.getInitialRating();
+<a class="jxr_linenumber" name="L767" href="#L767">767</a>         }
+<a class="jxr_linenumber" name="L768" href="#L768">768</a>         <strong class="jxr_keyword">return</strong> GlickoRatingSystem.getDisplayedRating(glickoRating);
+<a class="jxr_linenumber" name="L769" href="#L769">769</a>     }
+<a class="jxr_linenumber" name="L770" href="#L770">770</a> 
+<a class="jxr_linenumber" name="L771" href="#L771">771</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">void</strong> joinStrings(StringBuilder joined, List&lt;String&gt; strings, String separator) {
+<a class="jxr_linenumber" name="L772" href="#L772">772</a>         <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; strings.size(); ++i) {
+<a class="jxr_linenumber" name="L773" href="#L773">773</a>             <strong class="jxr_keyword">if</strong> (i &gt; 0) {
+<a class="jxr_linenumber" name="L774" href="#L774">774</a>                 joined.append(separator);
+<a class="jxr_linenumber" name="L775" href="#L775">775</a>             }
+<a class="jxr_linenumber" name="L776" href="#L776">776</a>             joined.append(strings.get(i));
+<a class="jxr_linenumber" name="L777" href="#L777">777</a>         }
+<a class="jxr_linenumber" name="L778" href="#L778">778</a>     }
+<a class="jxr_linenumber" name="L779" href="#L779">779</a> 
+<a class="jxr_linenumber" name="L780" href="#L780">780</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getNumberOfNotStartedTables() {
+<a class="jxr_linenumber" name="L781" href="#L781">781</a>         <strong class="jxr_keyword">int</strong> number = 0;
+<a class="jxr_linenumber" name="L782" href="#L782">782</a>         <strong class="jxr_keyword">for</strong> (<a name="Table" href="../../mage/game/Table.html#Table">Table</a> table : tables.values()) {
+<a class="jxr_linenumber" name="L783" href="#L783">783</a>             <strong class="jxr_keyword">if</strong> (table.getState() == TableState.WAITING || table.getState() == TableState.STARTING) {
+<a class="jxr_linenumber" name="L784" href="#L784">784</a>                 number++;
+<a class="jxr_linenumber" name="L785" href="#L785">785</a>             }
+<a class="jxr_linenumber" name="L786" href="#L786">786</a>         }
+<a class="jxr_linenumber" name="L787" href="#L787">787</a>         <strong class="jxr_keyword">return</strong> number;
+<a class="jxr_linenumber" name="L788" href="#L788">788</a>     }
+<a class="jxr_linenumber" name="L789" href="#L789">789</a> 
+<a class="jxr_linenumber" name="L790" href="#L790">790</a>     <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">int</strong> getNumberOfNotFinishedTables() {
+<a class="jxr_linenumber" name="L791" href="#L791">791</a>         <strong class="jxr_keyword">int</strong> number = 0;
+<a class="jxr_linenumber" name="L792" href="#L792">792</a>         <strong class="jxr_keyword">for</strong> (<a name="Table" href="../../mage/game/Table.html#Table">Table</a> table : tables.values()) {
+<a class="jxr_linenumber" name="L793" href="#L793">793</a>             <strong class="jxr_keyword">if</strong> (table.getState() == TableState.FINISHED) {
+<a class="jxr_linenumber" name="L794" href="#L794">794</a>                 number++;
+<a class="jxr_linenumber" name="L795" href="#L795">795</a>             } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L796" href="#L796">796</a>                 Optional&lt;TableController&gt; tableController = managerFactory.tableManager().getController(table.getId());
+<a class="jxr_linenumber" name="L797" href="#L797">797</a>                 <strong class="jxr_keyword">if</strong> (!tableController.isPresent()) {
+<a class="jxr_linenumber" name="L798" href="#L798">798</a>                     logger.error(<span class="jxr_string">"table not found : "</span> + table.getId());
+<a class="jxr_linenumber" name="L799" href="#L799">799</a>                 } <strong class="jxr_keyword">else</strong> <strong class="jxr_keyword">if</strong> (tableController.get().isUserStillActive(userId)) {
+<a class="jxr_linenumber" name="L800" href="#L800">800</a>                     number++;
+<a class="jxr_linenumber" name="L801" href="#L801">801</a>                 }
+<a class="jxr_linenumber" name="L802" href="#L802">802</a>             }
+<a class="jxr_linenumber" name="L803" href="#L803">803</a>         }
+<a class="jxr_linenumber" name="L804" href="#L804">804</a>         <strong class="jxr_keyword">return</strong> number;
+<a class="jxr_linenumber" name="L805" href="#L805">805</a>     }
+<a class="jxr_linenumber" name="L806" href="#L806">806</a> 
+<a class="jxr_linenumber" name="L807" href="#L807">807</a>     <strong class="jxr_keyword">public</strong> String getEmail() {
+<a class="jxr_linenumber" name="L808" href="#L808">808</a>         <strong class="jxr_keyword">if</strong> (authorizedUser != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L809" href="#L809">809</a>             <strong class="jxr_keyword">return</strong> authorizedUser.email;
+<a class="jxr_linenumber" name="L810" href="#L810">810</a>         }
+<a class="jxr_linenumber" name="L811" href="#L811">811</a>         <strong class="jxr_keyword">return</strong> <span class="jxr_string">""</span>;
+<a class="jxr_linenumber" name="L812" href="#L812">812</a>     }
+<a class="jxr_linenumber" name="L813" href="#L813">813</a> 
+<a class="jxr_linenumber" name="L814" href="#L814">814</a>     <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> updateAuthorizedUser() {
+<a class="jxr_linenumber" name="L815" href="#L815">815</a>         <strong class="jxr_keyword">if</strong> (authorizedUser != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L816" href="#L816">816</a>             authorizedUser.lastConnection = <strong class="jxr_keyword">this</strong>.connectionTime;
+<a class="jxr_linenumber" name="L817" href="#L817">817</a>             authorizedUser.chatLockedUntil = <strong class="jxr_keyword">this</strong>.chatLockedUntil;
+<a class="jxr_linenumber" name="L818" href="#L818">818</a>             authorizedUser.lockedUntil = <strong class="jxr_keyword">this</strong>.lockedUntil;
+<a class="jxr_linenumber" name="L819" href="#L819">819</a>             authorizedUser.active = <strong class="jxr_keyword">this</strong>.active;
+<a class="jxr_linenumber" name="L820" href="#L820">820</a>             AuthorizedUserRepository.getInstance().update(authorizedUser);
+<a class="jxr_linenumber" name="L821" href="#L821">821</a>         }
+<a class="jxr_linenumber" name="L822" href="#L822">822</a>     }
+<a class="jxr_linenumber" name="L823" href="#L823">823</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,503 @@
+
+bmage.abilities.effects.ContinuousEffects#getControllerOfSourceId(Ljava/util/UUID;)Ljava/util/UUID;m
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/ContinuousEffects.javaè
+ è
+('"25*
+13
+ø
+% ø
+(7¬
+©
+
+ø
+% ø
+(73
+%10,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+replacementEffects¸µ
+
+ø
+C ø
+(Q
+%11java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*P
+
+__unknown_file (4
+2
+effect(mage.abilities.effects.ReplacementEffect2getId()¥¢
+
+ø
+% ø
+(R
+%12java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*Q
+
+__unknown_file (5
+3
+%10,mage.abilities.effects.ContinuousEffectsList*3
+
+__unknown_file (
+
+%11java.util.UUID2getAbility(Ljava/util/UUID;)d
+b
+
+ø
+ ø
+(S
+	abilitiesjava.util.Set"__id*2
+
+__unknown_file (
+
+%12java.util.Set*
+3*Ã
+24
+ê
+' ê
+(8ª
+§
+
+ê
+' ê
+(82
+%0,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+preventionEffects*
+15*Ã
+14
+÷
+( ÷
+(:«
+¨
+
+÷
+( ÷
+(:2
+%9,mage.abilities.effects.ContinuousEffectsList"__id*`
+
+__unknown_file (D*B*
+(mage.abilities.effects.ContinuousEffects"
+replacementEffects*
+2*s
+25
+é
+ é
+(#[
+Y
+
+é
+ é
+($!
+controllerFoundjava.util.UUID"__id*"
+
+__unknown_file (
+""*
+24*Î
+15
+ê
+ ê
+($k
+i
+
+ê
+ ê
+($1
+effect'mage.abilities.effects.PreventionEffect"__id*"
+
+__unknown_file (
+""Ä
+Á
+
+ê
+ ê
+($1
+effect'mage.abilities.effects.PreventionEffect"
+__arrayGet*P
+
+__unknown_file (4
+2
+%0,mage.abilities.effects.ContinuousEffectsList*"
+
+__unknown_file (
+""*
+14
+23*–
+16
+ì
+ ì
+( [
+Y
+
+ì
+ ì
+( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""œ
+™
+
+ì
+ ì
+( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+15
+21*&
+17
+ò
+ ò
+(#"
+
+ò
+ ò
+($
+""*¹
+18
+ï
+* ï
+(1³°
+
+ï
+* ï
+(C
+%8java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()k
+i
+
+ï
+ ï
+(C!
+controllerFoundjava.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUID*
+16*®
+19
+î
+3 î
+(B³°
+
+î
+J î
+(c
+%6java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()ÛØ
+
+î
+3 î
+(d
+%7boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+controllerFoundjava.util.UUID*2
+
+__unknown_file (
+
+%6java.util.UUID2equals(Ljava/lang/Object;)*
+17
+18*B
+1
+Š Š("1
+
+Š Š(#
+!
+controllerFoundjava.util.UUID*Î
+2
+÷
+ ÷
+(%l
+j
+
+÷
+ ÷
+(%2
+effect(mage.abilities.effects.ReplacementEffect"__id*"
+
+__unknown_file (
+""Å
+Â
+
+÷
+ ÷
+(%2
+effect(mage.abilities.effects.ReplacementEffect"
+__arrayGet*P
+
+__unknown_file (4
+2
+%9,mage.abilities.effects.ContinuousEffectsList*"
+
+__unknown_file (
+""*
+13
+1*”
+3
+ù
+ ù
+( [
+Y
+
+ù
+ ù
+( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""œ
+™
+
+ù
+ ù
+( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+2
+11*‡
+4
+… …(X
+V
+
+… …(
+%19org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""¨¥
+
+…B …(S
+%20java.lang.String"2mage.abilities.Ability#getRule()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2	getRule()ˆ
+…
+
+…$ …(S
+%21java.lang.String"__concat*+
+
+…$ …(?
+Ability without sourceId:*'
+
+…B …(S
+
+%20java.lang.Stringàİ
+
+… …(T
+%22void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%19org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%21java.lang.String2warn(Ljava/lang/Object;)*
+3*%
+6
+€# €('"
+
+€ €((
+""*¹
+7
+ı
+. ı
+(5´±
+
+ı
+. ı
+(G
+%18java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()l
+j
+
+ı
+ ı
+(G!
+controllerFoundjava.util.UUID"__id*3
+
+__unknown_file (
+
+%18java.util.UUID*
+3*®
+8
+ü
+7 ü
+(F´±
+
+ü
+N ü
+(g
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getControllerId()İÚ
+
+ü
+7 ü
+(h
+%17boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*?
+
+__unknown_file (#
+!
+controllerFoundjava.util.UUID*3
+
+__unknown_file (
+
+%16java.util.UUID2equals(Ljava/lang/Object;)*
+6
+7*£
+21
+í
+ í
+(«¨
+
+í
+ í
+()
+%4java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()ÔÑ
+
+í
+ í
+(:
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%4java.util.UUID*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2equals(Ljava/lang/Object;)*
+16
+18
+19*£
+10
+û
+ û
+(¬©
+
+û
+ û
+(-
+%14java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()ÖÓ
+
+û
+ û
+(>
+%15boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%14java.util.UUID*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2equals(Ljava/lang/Object;)*	
+3
+7
+8*Ë
+11
+ú
+ ú
+(¬©
+
+ú
+ ú
+()
+%13java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getSourceId()*
+
+3
+4
+10*†
+23
+ë
+% ë
+(6ª
+§
+
+ë
+% ë
+(62
+%1,mage.abilities.effects.ContinuousEffectsList"__id*_
+
+__unknown_file (C*A*
+(mage.abilities.effects.ContinuousEffects"
+preventionEffects¶³
+
+ë
+B ë
+(P
+%2java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.PreventionEffect2getId()¢Ÿ
+
+ë
+% ë
+(Q
+%3java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*P
+
+__unknown_file (4
+2
+%1,mage.abilities.effects.ContinuousEffectsList*2
+
+__unknown_file (
+
+%2java.util.UUID2getAbility(Ljava/util/UUID;)c
+a
+
+ë
+ ë
+(R
+	abilitiesjava.util.Set"__id*1
+
+__unknown_file (
+
+%3java.util.Set*
+16:(
+
+è
+( è
+(5
+sourceIdjava.util.UUIDB,*
+(mage.abilities.effects.ContinuousEffectsH

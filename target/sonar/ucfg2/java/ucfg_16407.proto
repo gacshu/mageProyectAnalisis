@@ -1,0 +1,227 @@
+
+ìmage.abilities.effects.common.combat.CantAttackYouUnlessPayAllEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Zá
+}D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/combat/CantAttackYouUnlessPayAllEffect.java1 1("startingBlock*!
+2C C("
+C C(
+""*ƒ
+3B B( ±Æ
+B0 B(H
+%11java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¯ı
+B B(I
+%12boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*3
+
+__unknown_file (
+
+%11java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*ˇ
+startingBlock1 1(Fó
+î
+0 0(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+1% 1(*#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%13î
+ë
+0 0(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+14 1(: 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14ä
+á
+0 0(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+1A 1(E
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+11*ä
+4A A( ÚÔ
+A A(5
+%10boolean"1mage.MageObject#isPlaneswalker(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2 isPlaneswalker(Lmage/game/Game;)*
+3
+1*ÿ
+5?" ?(&Ø¨
+?4 ?(G
+%8java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()äá
+?" ?(H#
+%9mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%8java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+? ?(I*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%9mage.game.permanent.Permanent*
+4
+1*!
+7; ;("
+; ;(
+""*π
+8: :(Ø¨
+:" :(5
+%6java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ÏÈ
+: :(6
+%7boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%6java.util.UUID2 isControlledBy(Ljava/util/UUID;)*	
+5
+7
+1*!
+96 6("
+6 6(
+""*ò
+104" 4(&Ø¨
+44 4(G
+%1java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()äá
+4" 4(H#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+4 4(I*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent…
+∆
+5 5((0
+%3*mage.filter.common.FilterCreaturePermanent"__id*Å
+
+__unknown_file (e*cF
+Dmage.abilities.effects.common.combat.CantAttackYouUnlessPayAllEffect"
+filterCreaturePermanent∞≠
+5: 5(R
+%4java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ω∫
+5 5(a
+%5boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%3*mage.filter.common.FilterCreaturePermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%4java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+8
+9*„
+113 3(#…
+∆
+3 3(#0
+%0*mage.filter.common.FilterCreaturePermanent"__id*Å
+
+__unknown_file (e*cF
+Dmage.abilities.effects.common.combat.CantAttackYouUnlessPayAllEffect"
+filterCreaturePermanent*
+8
+10*!
+1F F("
+F F(
+"":/
+1 1(+#
+eventmage.game.events.GameEvent:,
+1, 1(; 
+sourcemage.abilities.Ability:"
+1< 1(E
+gamemage.game.GameBHF
+Dmage.abilities.effects.common.combat.CantAttackYouUnlessPayAllEffectHP

@@ -1,0 +1,118 @@
+
+_mage.filter.common.BlockTappedPredicate#apply(Lmage/game/permanent/Permanent;Lmage/game/Game;)Zr
+hD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/common/FilterCreatureForCombatBlock.java% %("startingBlock*Š
+2&$ &((š—
+&, &(;
+%1mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()äá
+&, &(R.
+%2(mage.abilities.effects.ContinuousEffects"Tmage.game.GameState#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*7
+
+__unknown_file (
+
+%1mage.game.GameState2getContinuousEffects()¢Ÿ
+&\ &(i
+%3java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getId()`
+^
+	&k &(Š'
+%4!mage.constants.AsThoughEffectType"__id*"
+
+__unknown_file (
+""¸µ
+
+&’ &(©
+%5java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2getControllerId()¯¬
+	&, &(°
+%6mage.ApprovingObject"´mage.abilities.effects.ContinuousEffects#asThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/ApprovingObject;*L
+
+__unknown_file (0
+.
+%2(mage.abilities.effects.ContinuousEffects*2
+
+__unknown_file (
+
+%3java.util.UUID*E
+
+__unknown_file ()
+'
+%4!mage.constants.AsThoughEffectType*"
+
+__unknown_file (
+""*2
+
+__unknown_file (
+
+%5java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2uasThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+1*±
+3& &(™–
+& &( 
+%0boolean")mage.game.permanent.Permanent#isTapped()Z*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanent2
+isTapped()*
+2
+1*†
+startingBlock% %(4™
+–
+$ $(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+inputmage.game.permanent.Permanentf
+d
+%# %((&
+inputmage.game.permanent.Permanent"__annotation*"
+
+__unknown_file (
+
+%7‰
+†
+$ $(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+%/ %(3
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+3*#
+1	& &(±"
+	& &(±
+"":2
+% %()&
+inputmage.game.permanent.Permanent:"
+%* %(3
+gamemage.game.GameB+)
+'mage.filter.common.BlockTappedPredicateHP

@@ -1,0 +1,1653 @@
+
+òmage.players.PlayerImpl#rollDiceInner(Lmage/constants/Outcome;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/RollDieType;IIIII)Ljava/util/List;\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.java’ ’(&"52*ü
+24
+≈ ≈("≤Ø
+
+≈4 ≈(M
+
+%77int"2mage.players.PlayerImpl$RollDieResult#getResult()I*T
+
+__unknown_file (8
+6
+rollDieResult%mage.players.PlayerImpl$RollDieResult2getResult()—Œ
+
+≈ ≈(N
+%78boolean"*java.util.List#remove(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+ignoredResultsjava.util.List*(
+
+__unknown_file (
+
+
+%77int2remove(Ljava/lang/Object;)*
+22*÷
+47
+ÓJ Ó(Vπ∂
+
+ÓJ Ó(n
+
+%18int"6mage.game.events.RollDieEvent#getBigIdeaRollsAmount()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getBigIdeaRollsAmount()*
+39
+45*ß
+25
+ƒ ƒ("≤Ø
+
+ƒ, ƒ(E
+
+%75int"2mage.players.PlayerImpl$RollDieResult#getResult()I*T
+
+__unknown_file (8
+6
+rollDieResult%mage.players.PlayerImpl$RollDieResult2getResult()’“
+
+ƒ ƒ(F
+%76boolean",java.util.List#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+ignoredResultsjava.util.List*(
+
+__unknown_file (
+
+
+%75int2contains(Ljava/lang/Object;)*
+24
+23*
+48
+È9 È(?ôñ
+
+ÈA È(M
+%10java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()‡›
+
+ÈO È(m!
+%11mage.constants.RollDieType"Kmage.game.events.RollDiceEvent#getRollDieType()Lmage/constants/RollDieType;*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getRollDieType()£†
+Èo È(á
+
+%12int"*mage.game.events.RollDiceEvent#getSides()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2
+getSides()SQ
+
+È, È(8$
+%13mage.game.events.RollDieEvent"mage.game.events.RollDieEvent©
+¶
+È( È(à
+%14"lmage.game.events.RollDieEvent#<init>(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/RollDieType;I)V*B
+
+__unknown_file (&
+$
+%13mage.game.events.RollDieEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%10java.util.UUID*?
+
+__unknown_file (#
+!
+%11mage.constants.RollDieType*(
+
+__unknown_file (
+
+
+%12intâ
+Ü
+È È(â-
+rollDieEventmage.game.events.RollDieEvent"__id*B
+
+__unknown_file (&
+$
+%13mage.game.events.RollDieEventäá
+
+Í Í(+
+%15boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2*replaceEvent(Lmage/game/events/GameEvent;)X
+V
+
+Ï Ï(
+
+rollResultjava.lang.Object"__id*"
+
+__unknown_file (
+""›⁄
+
+Ó Ó(-!
+%16mage.constants.RollDieType"Jmage.game.events.RollDieEvent#getRollDieType()Lmage/constants/RollDieType;*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollDieType()[
+Y
+
+Ó1 Ó(F!
+%17mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""*
+47
+39*º
+49
+Á Á(üú
+
+Á Á(5	
+%9int"'mage.game.events.GameEvent#getAmount()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getAmount()*
+36
+48*«
+27
+º º("±Æ
+
+º Ω(%
+%66java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*>
+
+__unknown_file ("
+ 
+ignoredResultsjava.util.List2stream()í
+è
+
+æ! æ(,"
+%67java.util.function.Function"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_321$mage.players.PlayerImpl®•
+
+º æ(-
+%69java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%66java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%67java.util.function.Function2"map(Ljava/util/function/Function;)Ó
+Î
+
+ø% ø(=!
+%70java.util.stream.Collector"Yjava.util.stream.Collectors#joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*"
+
+__unknown_file (
+, üú
+
+º ø(>
+%71java.lang.String"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%69java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%70java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)ö
+ó
+
+∫ ¿(
+%72java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*5
+
+__unknown_file (
+
+%63java.lang.String*5
+
+__unknown_file (
+
+%71java.lang.Stringn
+l
+
+∫ ¿(!
+ignoreMessagejava.lang.String"__id*5
+
+__unknown_file (
+
+%72java.lang.String?=
+
+¬/ ¬(:
+%73java.util.ArrayList"java.util.ArrayListn
+l
+
+¬+ ¬(<
+%74"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%73java.util.ArrayListj
+h
+
+¬ ¬(=
+newRollsjava.util.List"__id*8
+
+__unknown_file (
+
+%73java.util.ArrayList*
+22*|
+28
+ªD ª(Sd
+b
+
+ªD ª(S
+%63java.lang.String"__id*5
+
+__unknown_file (
+
+%65java.lang.String*
+27*|
+29
+ª0 ª(Ad
+b
+
+ª0 ª(A
+%63java.lang.String"__id*5
+
+__unknown_file (
+
+%64java.lang.String*
+27*ÿ
+50
+‹ ‹(ãà
+
+‹ ‹((
+%4boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2*replaceEvent(Lmage/game/events/GameEvent;)><
+
+Â& Â(1
+%5java.util.ArrayList"java.util.ArrayListl
+j
+
+Â" Â(3
+%6"java.util.ArrayList#<init>()V*7
+
+__unknown_file (
+
+%5java.util.ArrayListk
+i
+
+Â Â(4
+
+dieResultsjava.util.List"__id*7
+
+__unknown_file (
+
+%5java.util.ArrayList><
+
+Ê+ Ê(6
+%7java.util.ArrayList"java.util.ArrayListl
+j
+
+Ê' Ê(8
+%8"java.util.ArrayList#<init>()V*7
+
+__unknown_file (
+
+%7java.util.ArrayListi
+g
+
+Ê Ê(9
+dieRollsjava.util.List"__id*7
+
+__unknown_file (
+
+%7java.util.ArrayList*
+49*˚
+51
+⁄ ⁄(‚ﬂ
+
+⁄ ⁄(C
+
+%3void"8mage.game.events.RollDiceEvent#incIgnoreLowestAmount(I)V*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent*"
+
+__unknown_file (
+""2incIgnoreLowestAmount(I)*
+50*È
+52
+ÿ8 ÿ(>òï
+
+ÿ@ ÿ(L
+%0java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()TR
+
+ÿ* ÿ(7$
+%1mage.game.events.RollDiceEvent"mage.game.events.RollDiceEventŒ
+À
+
+ÿ& ÿ(t
+%2"nmage.game.events.RollDiceEvent#<init>(Lmage/abilities/Ability;Ljava/util/UUID;Lmage/constants/RollDieType;II)V*B
+
+__unknown_file (&
+$
+%1mage.game.events.RollDiceEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%0java.util.UUID*G
+
+__unknown_file (+
+)
+rollDieTypemage.constants.RollDieType*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""ä
+á
+
+ÿ ÿ(u/
+rollDiceEventmage.game.events.RollDiceEvent"__id*B
+
+__unknown_file (&
+$
+%1mage.game.events.RollDiceEvent*
+50
+51*ñ
+30
+∫ ∫("zx
+
+ª ª()
+
+%62int"java.util.List#size()I*>
+
+__unknown_file ("
+ 
+ignoredResultsjava.util.List2size()*
+28
+29*ê
+10
+‰ ‰("vt
+
+‰ ‰()
+
+%97int"java.util.List#size()I*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List2size()*
+8
+9*ñ
+32
+∂ ∂($≠™
+
+∂ ∂(-
+%54java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List2stream()äá
+
+∂ ∂(F
+%55java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%54java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)§°
+
+∂ ∂(b!
+%56java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*<
+
+__unknown_file ( 
+
+%55java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)Æ´
+
+∂ ∂(h
+%57java.util.OptionalInt"7java.util.stream.IntStream#min()Ljava/util/OptionalInt;*?
+
+__unknown_file (#
+!
+%56java.util.stream.IntStream2min()§°
+
+∂ ∂(r
+
+%58int" java.util.OptionalInt#orElse(I)I*:
+
+__unknown_file (
+
+%57java.util.OptionalInt*
+
+__unknown_file (2 2	orElse(I)±
+Æ
+
+∑" ∑(6
+%59java.lang.Integer"/java.lang.Integer#valueOf(I)Ljava/lang/Integer;*1
+
+__unknown_file ("
+java.lang.Integer*"
+
+__unknown_file (
+""€ÿ
+
+∑ ∑(7
+%60boolean"*java.util.List#remove(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List*6
+
+__unknown_file (
+
+%59java.lang.Integer2remove(Ljava/lang/Object;)Ø
+¨
+
+∏ ∏('
+%61boolean"
+__arrayAdd*>
+
+__unknown_file ("
+ 
+ignoredResultsjava.util.List*
+
+__unknown_file (: *"
+
+__unknown_file (
+""*
+33*|
+11
+„6 „(8d
+b
+
+„6 „(8
+%94java.lang.Object"__id*5
+
+__unknown_file (
+
+%96java.lang.String*
+10*Ÿ
+33
+µ µ(ºπ
+
+µ  µ(E
+
+%53int"7mage.game.events.RollDiceEvent#getIgnoreLowestAmount()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getIgnoreLowestAmount()*
+30
+32*π
+34
+¥+ ¥(<?=
+
+¥/ ¥(:
+%51java.util.ArrayList"java.util.ArrayListn
+l
+
+¥+ ¥(<
+%52"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%51java.util.ArrayListp
+n
+
+¥ ¥(= 
+ignoredResultsjava.util.List"__id*8
+
+__unknown_file (
+
+%51java.util.ArrayList*
+33*p
+12
+„0 „(3X
+V
+
+„0 „(3
+%94java.lang.Object"__id*)
+
+__unknown_file (
+
+%95char*
+10*Ÿ
+35
+≤G ≤(Tºπ
+
+≤G ≤(l
+
+%50int"7mage.game.events.RollDiceEvent#getIgnoreLowestAmount()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getIgnoreLowestAmount()*
+20
+34*∑
+13
+‚ ‚(%¢ü
+
+‚ ‚(0
+
+%92int"*mage.game.events.RollDiceEvent#getSides()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2
+getSides()vt
+
+„ „()
+
+%93int"java.util.List#size()I*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List2size()*
+11
+12*≠
+36
+∞ ∞(&tr
+
+∞ ∞(-
+
+%47int"java.util.List#size()I*8
+
+__unknown_file (
+
+dieRollsjava.util.List2size()[
+Y
+
+± ±(!
+ignoreMessagejava.lang.String"__id*"
+
+__unknown_file (
+""‡›
+
+≤ ≤(*!
+%48mage.constants.RollDieType"Kmage.game.events.RollDiceEvent#getRollDieType()Lmage/constants/RollDieType;*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getRollDieType()[
+Y
+
+≤. ≤(C!
+%49mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""*
+35
+20*|
+14
+·@ ·(Dd
+b
+
+·@ ·(D
+%89java.lang.Object"__id*5
+
+__unknown_file (
+
+%91java.lang.String*
+13*o
+15
+·. ·(=W
+U
+
+·. ·(=
+%89java.lang.Object"__id*(
+
+__unknown_file (
+
+
+%90int*
+13*ﬁ
+38
+• •(≈
+¬
+
+• •(&
+%46boolean"
+__arrayAdd*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List*
+
+__unknown_file (: *<
+
+__unknown_file ( 
+
+
+rollResultjava.lang.Object*
+49*ƒ
+16
+‹ Á(ß§
+
+‡ ‡($
+%88java.lang.String"6mage.players.PlayerImpl#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLogName()*
+14
+15*¥
+39
+Ç Ç($›⁄
+
+Ç Ç(5!
+%43mage.constants.RollDieType"Jmage.game.events.RollDieEvent#getRollDieType()Lmage/constants/RollDieType;*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollDieType()[
+Y
+
+Ñ Ñ("!
+%44mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""[
+Y
+
+î î(!
+%45mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""*
+40
+41*±
+17
+— —(!i
+g
+
+— —(!/
+result%mage.players.PlayerImpl$RollDieResult"__id*"
+
+__unknown_file (
+""™
+ß
+
+— —(!/
+result%mage.players.PlayerImpl$RollDieResult"
+__arrayGet*8
+
+__unknown_file (
+
+dieRollsjava.util.List*"
+
+__unknown_file (
+""*
+2
+18*æ
+18
+“ “(‡›
+
+“6 “(T!
+%82mage.constants.RollDieType"Kmage.game.events.RollDiceEvent#getRollDieType()Lmage/constants/RollDieType;*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getRollDieType()¢ü
+
+“V “(n
+
+%83int"*mage.game.events.RollDiceEvent#getSides()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2
+getSides()£
+†
+“ó “(™)
+%84"mage.constants.PlanarDieRollResult"__id*_
+
+__unknown_file (C*A
+/
+result%mage.players.PlayerImpl$RollDieResult"
+planarResultWU
+
+“ “(-&
+%85mage.game.events.DieRolledEvent"mage.game.events.DieRolledEvent†
+ù
+“ “(´
+%86"Ñmage.game.events.DieRolledEvent#<init>(Lmage/abilities/Ability;Lmage/constants/RollDieType;IIILmage/constants/PlanarDieRollResult;)V*D
+
+__unknown_file ((
+&
+%85mage.game.events.DieRolledEvent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*?
+
+__unknown_file (#
+!
+%82mage.constants.RollDieType*(
+
+__unknown_file (
+
+
+%83int*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*G
+
+__unknown_file (+
+)
+%84"mage.constants.PlanarDieRollResult˚¯
+“ “(¨
+%87void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*D
+
+__unknown_file ((
+&
+%85mage.game.events.DieRolledEvent2'fireEvent(Lmage/game/events/GameEvent;)*
+17*§
+1
+ (‰·
+
+ (#
+%122void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*9
+
+__unknown_file (
+
+messagejava.lang.String2!informPlayers(Ljava/lang/String;)",
+
+Ò Ò(
+
+
+dieResultsjava.util.List*ô
+2
+‘ ‘(£†
+
+‘+ ‘(C
+%110int"*mage.game.events.RollDiceEvent#getSides()I*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2
+getSides()öó
+
+‘Y ‘(e
+%111java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()ZX
+
+‘ ‘(*(
+%112 mage.game.events.DiceRolledEvent" mage.game.events.DiceRolledEvent°
+û
+
+‘ ‘(f
+%113"cmage.game.events.DiceRolledEvent#<init>(ILjava/util/List;Lmage/abilities/Ability;Ljava/util/UUID;)V*F
+
+__unknown_file (*
+(
+%112 mage.game.events.DiceRolledEvent*)
+
+__unknown_file (
+
+%110int*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+%111java.util.UUID˝˙
+
+‘ ‘(g
+%114void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*F
+
+__unknown_file (*
+(
+%112 mage.game.events.DiceRolledEvent2'fireEvent(Lmage/game/events/GameEvent;)Æ´
+
+÷ ◊(
+%115java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List2stream()åâ
+
+÷ ÿ(&
+%116java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%115java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ô
+Ï
+
+Ÿ Ÿ(1"
+%117java.util.stream.Collector"Yjava.util.stream.Collectors#joining(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*"
+
+__unknown_file (
+, ¢ü
+
+÷ Ÿ(2
+%118java.lang.String"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*=
+
+__unknown_file (!
+
+%116java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%117java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)n
+l
+
+÷ Ÿ(3 
+resultStringjava.lang.String"__id*6
+
+__unknown_file (
+
+%118java.lang.StringU
+S
+
+⁄ ⁄(
+messagejava.lang.String"__id*"
+
+__unknown_file (
+""·ﬁ
+
+€ €(."
+%119mage.constants.RollDieType"Kmage.game.events.RollDiceEvent#getRollDieType()Lmage/constants/RollDieType;*M
+
+__unknown_file (1
+/
+rollDiceEventmage.game.events.RollDiceEvent2getRollDieType()\
+Z
+
+› ›("
+%120mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""\
+Z
+
+Ë Ë("
+%121mage.constants.RollDieType"__id*"
+
+__unknown_file (
+""*
+16
+6*“
+3
+Ì Ì( ¥
+±
+
+Ì Ì(?
+%108java.lang.String"_mage.util.CardUtil#getSourceLogName(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityô
+ñ
+
+Í Ì(@
+%109java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*B
+
+__unknown_file (&$
+"[Roll a planar die] %s rolled %s%s*6
+
+__unknown_file (
+
+%103java.lang.String*6
+
+__unknown_file (
+
+%105java.lang.Object*6
+
+__unknown_file (
+
+%108java.lang.Stringi
+g
+
+Í Ì(@
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%109java.lang.String*
+1*Ñ
+4
+ÏK Ï(Wn
+l
+
+ÏK Ï(W
+%105java.lang.Object"__id*>
+
+__unknown_file ("
+ 
+resultStringjava.lang.String*
+3*⁄
+5
+Ï0 Ï(3n
+l
+
+Ï6 Ï(B
+%105java.lang.Object"__id*>
+
+__unknown_file ("
+ 
+resultStringjava.lang.Stringy
+w
+
+Ï0 Ï(B
+%107java.lang.String"__concat*
+
+Ï0 Ï(3
+[*0
+
+Ï6 Ï(B"
+ 
+resultStringjava.lang.Stringq
+o
+
+Ï0 Ï(H
+%106java.lang.String"__concat*(
+
+Ï0 Ï(B
+
+%107java.lang.String*
+
+ÏE Ï(H
+]f
+d
+
+Ï0 Ï(H
+%105java.lang.Object"__id*6
+
+__unknown_file (
+
+%106java.lang.String*
+3*ª
+6
+Ë Ó(®•
+
+Î Î($
+%103java.lang.String"6mage.players.PlayerImpl#getLogName()Ljava/lang/String;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getLogName()wu
+
+Ï Ï()
+%104int"java.util.List#size()I*:
+
+__unknown_file (
+
+
+dieResultsjava.util.List2size()*
+4
+5*µ
+7
+Â Â(%¥
+±
+
+Ê Ê(?
+%101java.lang.String"_mage.util.CardUtil#getSourceLogName(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability¸
+˘
+
+ﬂ Ê(@
+%102java.lang.String"Pjava.lang.String#format(Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;*0
+
+__unknown_file ("
+java.lang.String*N
+
+__unknown_file (20
+.[Roll a die] %s rolled %sd%s, result%s: %s%s%s*5
+
+__unknown_file (
+
+%88java.lang.String*5
+
+__unknown_file (
+
+%89java.lang.Object*(
+
+__unknown_file (
+
+
+%92int*5
+
+__unknown_file (
+
+%94java.lang.Object*5
+
+__unknown_file (
+
+%98java.lang.Object*?
+
+__unknown_file (#
+!
+ignoreMessagejava.lang.String*6
+
+__unknown_file (
+
+%101java.lang.Stringi
+g
+
+ﬂ Ê(@
+messagejava.lang.String"__id*6
+
+__unknown_file (
+
+%102java.lang.String*
+1*É
+8
+‰K ‰(Wm
+k
+
+‰K ‰(W
+%98java.lang.Object"__id*>
+
+__unknown_file ("
+ 
+resultStringjava.lang.String*
+7*÷
+9
+‰0 ‰(3m
+k
+
+‰6 ‰(B
+%98java.lang.Object"__id*>
+
+__unknown_file ("
+ 
+resultStringjava.lang.Stringy
+w
+
+‰0 ‰(B
+%100java.lang.String"__concat*
+
+‰0 ‰(3
+[*0
+
+‰6 ‰(B"
+ 
+resultStringjava.lang.Stringp
+n
+
+‰0 ‰(H
+%99java.lang.String"__concat*(
+
+‰0 ‰(B
+
+%100java.lang.String*
+
+‰E ‰(H
+]d
+b
+
+‰0 ‰(H
+%98java.lang.Object"__id*5
+
+__unknown_file (
+
+%99java.lang.String*
+7*Î
+40
+î ¢(›⁄
+
+ô  ô(=!
+%36mage.constants.RollDieType"Jmage.game.events.RollDieEvent#getRollDieType()Lmage/constants/RollDieType;*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollDieType()üú
+
+ö  ö(7
+
+%37int")mage.game.events.RollDieEvent#getSides()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2
+getSides()´®
+
+ù  ù(=
+
+%38int"/mage.game.events.RollDieEvent#getRollsAmount()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollsAmount()ê
+ç
+
+ïQ û(
+%39java.lang.Object"òmage.players.PlayerImpl#rollDieInner(Lmage/constants/Outcome;Lmage/game/Game;Lmage/abilities/Ability;Lmage/constants/RollDieType;IIII)Ljava/lang/Object;*7
+
+__unknown_file (
+mage.players.PlayerImpl*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*?
+
+__unknown_file (#
+!
+%36mage.constants.RollDieType*(
+
+__unknown_file (
+
+
+%37int*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%38int
+}
+
+ï û(2
+planarResult"mage.constants.PlanarDieRollResult"__id*5
+
+__unknown_file (
+
+%39java.lang.Objectca
+
+ü) ü(6,
+%40%mage.players.PlayerImpl$RollDieResult"%mage.players.PlayerImpl$RollDieResultÀ
+»
+
+ü% ü(J
+%41"Umage.players.PlayerImpl$RollDieResult#<init>(IILmage/constants/PlanarDieRollResult;)V*J
+
+__unknown_file (.
+,
+%40%mage.players.PlayerImpl$RollDieResult*
+
+__unknown_file (2 *
+
+__unknown_file (2 *P
+
+__unknown_file (4
+2
+planarResult"mage.constants.PlanarDieRollResult—
+Œ
+
+ü ü(K
+%42boolean"
+__arrayAdd*8
+
+__unknown_file (
+
+dieRollsjava.util.List*
+
+__unknown_file (: *J
+
+__unknown_file (.
+,
+%40%mage.players.PlayerImpl$RollDieResultá
+Ñ
+
+† †(1
+
+rollResultjava.lang.Object"__id*P
+
+__unknown_file (4
+2
+planarResult"mage.constants.PlanarDieRollResult*
+38*Œ
+41
+É í(›⁄
+
+â  â(=!
+%28mage.constants.RollDieType"Jmage.game.events.RollDieEvent#getRollDieType()Lmage/constants/RollDieType;*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollDieType()üú
+
+ä  ä(7
+
+%29int")mage.game.events.RollDieEvent#getSides()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2
+getSides()´®
+
+ç  ç(=
+
+%30int"/mage.game.events.RollDieEvent#getRollsAmount()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollsAmount()ê
+ç
+
+Ö6 é(
+%31java.lang.Object"òmage.players.PlayerImpl#rollDieInner(Lmage/constants/Outcome;Lmage/game/Game;Lmage/abilities/Ability;Lmage/constants/RollDieType;IIII)Ljava/lang/Object;*7
+
+__unknown_file (
+mage.players.PlayerImpl*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*?
+
+__unknown_file (#
+!
+%28mage.constants.RollDieType*(
+
+__unknown_file (
+
+
+%29int*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%30int±Æ
+
+èF è(f
+
+%32int"2mage.game.events.RollDieEvent#getResultModifier()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getResultModifier()ca
+
+è) è(6,
+%33%mage.players.PlayerImpl$RollDieResult"%mage.players.PlayerImpl$RollDieResult´
+®
+
+è% è(m
+%34"Umage.players.PlayerImpl$RollDieResult#<init>(IILmage/constants/PlanarDieRollResult;)V*J
+
+__unknown_file (.
+,
+%33%mage.players.PlayerImpl$RollDieResult*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%32int*"
+
+__unknown_file (
+""—
+Œ
+
+è è(n
+%35boolean"
+__arrayAdd*8
+
+__unknown_file (
+
+dieRollsjava.util.List*
+
+__unknown_file (: *J
+
+__unknown_file (.
+,
+%33%mage.players.PlayerImpl$RollDieResultX
+V
+
+ê ê(2
+
+rollResultjava.lang.Object"__id*"
+
+__unknown_file (
+""*
+38*p
+42
+ˇ ˇ(%X
+V
+
+ˇ ˇ(%
+
+rollResultjava.lang.Object"__id*"
+
+__unknown_file (
+""*
+38*o
+20
+Õ Õ(W
+U
+
+Õ Õ(!
+ignoreMessagejava.lang.String"__id*
+
+__unknown_file ( *
+17*¿
+21
+   (c
+a
+
+   (
+%80void"__arrayClear*8
+
+__unknown_file (
+
+dieRollsjava.util.List¬
+ø
+
+À À(%
+%81boolean"__arrayAddAll*8
+
+__unknown_file (
+
+dieRollsjava.util.List*
+
+__unknown_file (: *8
+
+__unknown_file (
+
+newRollsjava.util.List*
+17*Ù
+44
+Û1 Û(=›⁄
+
+˜ ˜(9!
+%20mage.constants.RollDieType"Jmage.game.events.RollDieEvent#getRollDieType()Lmage/constants/RollDieType;*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollDieType()üú
+
+¯ ¯(3
+
+%21int")mage.game.events.RollDieEvent#getSides()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2
+getSides()´®
+
+˚ ˚(9
+
+%22int"/mage.game.events.RollDieEvent#getRollsAmount()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getRollsAmount()ê
+ç
+
+Û1 ˚(:
+%23java.lang.Object"òmage.players.PlayerImpl#rollDieInner(Lmage/constants/Outcome;Lmage/game/Game;Lmage/abilities/Ability;Lmage/constants/RollDieType;IIII)Ljava/lang/Object;*7
+
+__unknown_file (
+mage.players.PlayerImpl*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*?
+
+__unknown_file (#
+!
+%20mage.constants.RollDieType*(
+
+__unknown_file (
+
+
+%21int*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%22int±Æ
+
+˝A ˝(a
+
+%24int"2mage.game.events.RollDieEvent#getResultModifier()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getResultModifier()ca
+
+˝% ˝(2,
+%25%mage.players.PlayerImpl$RollDieResult"%mage.players.PlayerImpl$RollDieResult´
+®
+
+˝! ˝(h
+%26"Umage.players.PlayerImpl$RollDieResult#<init>(IILmage/constants/PlanarDieRollResult;)V*J
+
+__unknown_file (.
+,
+%25%mage.players.PlayerImpl$RollDieResult*"
+
+__unknown_file (
+""*(
+
+__unknown_file (
+
+
+%24int*"
+
+__unknown_file (
+""—
+Œ
+
+˝ ˝(i
+%27boolean"
+__arrayAdd*8
+
+__unknown_file (
+
+dieRollsjava.util.List*
+
+__unknown_file (: *J
+
+__unknown_file (.
+,
+%25%mage.players.PlayerImpl$RollDieResult*
+45*¿
+22
+√ √(,p
+n
+
+√ √(,6
+rollDieResult%mage.players.PlayerImpl$RollDieResult"__id*"
+
+__unknown_file (
+""±
+Æ
+
+√ √(,6
+rollDieResult%mage.players.PlayerImpl$RollDieResult"
+__arrayGet*8
+
+__unknown_file (
+
+dieRollsjava.util.List*"
+
+__unknown_file (
+""*
+25
+21*÷
+45
+Ú  Ú(!π∂
+
+Ú$ Ú(H
+
+%19int"6mage.game.events.RollDieEvent#getBigIdeaRollsAmount()I*K
+
+__unknown_file (/
+-
+rollDieEventmage.game.events.RollDieEvent2getBigIdeaRollsAmount()*
+42
+44*Ù
+23
+« «(€
+ÿ
+
+« «(/
+%79boolean"
+__arrayAdd*8
+
+__unknown_file (
+
+newRollsjava.util.List*
+
+__unknown_file (: *T
+
+__unknown_file (8
+6
+rollDieResult%mage.players.PlayerImpl$RollDieResult*
+22:/
+
+’' ’(7!
+outcomemage.constants.Outcome:.
+
+’8 ’(G 
+sourcemage.abilities.Ability:$
+
+’H ’(R
+gamemage.game.Game:7
+
+’S ’(k)
+rollDieTypemage.constants.RollDieType: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+""B
+mage.players.PlayerImpl

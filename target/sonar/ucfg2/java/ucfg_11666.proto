@@ -1,0 +1,243 @@
+
+cmage.abilities.keyword.BecomesRenownedSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zg
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/RenownAbility.javaN N("startingBlock*‚
+2W( W(3W
+U
+W( W(8
+%9mage.counters.CounterType"__id*"
+
+__unknown_file (
+""Â‚
+W( W(T
+%10mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%9mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)íè
+W W('D
+%11=mage.abilities.effects.common.counter.AddCountersSourceEffect"=mage.abilities.effects.common.counter.AddCountersSourceEffect∑
+¥
+W W([
+%12"_mage.abilities.effects.common.counter.AddCountersSourceEffect#<init>(Lmage/counters/Counter;Z)V*b
+
+__unknown_file (F
+D
+%11=mage.abilities.effects.common.counter.AddCountersSourceEffect*:
+
+__unknown_file (
+
+%10mage.counters.Counter* 
+
+__unknown_file (2òï
+W W(o
+%13boolean"nmage.abilities.effects.common.counter.AddCountersSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z*b
+
+__unknown_file (F
+D
+%11=mage.abilities.effects.common.counter.AddCountersSourceEffect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2/apply(Lmage/game/Game;Lmage/abilities/Ability;)≈¬
+X X('
+%14void"-mage.game.permanent.Permanent#setRenowned(Z)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent* 
+
+__unknown_file (22setRenowned(Z)c
+a
+Y. Y(A+
+%15$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
+Y. Y(R+
+%16$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""©¶
+YT Y(h
+%17java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()≤Ø
+	Yr Y(ä
+%18java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()©
+¶
+	Y Y(ò!
+%19mage.game.events.GameEvent"†mage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;I)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%16$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%17java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%18java.util.UUID*"
+
+__unknown_file (
+""ÙÒ
+	Y Y(ô
+%20void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%19mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+Z Z(
+""*å
+3U U($ﬁ€
+U U(8)
+%7#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()ñì
+U U(?	
+%8int"+mage.abilities.costs.mana.ManaCosts#getX()I*G
+
+__unknown_file (+
+)
+%7#mage.abilities.costs.mana.ManaCosts2getX()*
+2*˛
+startingBlockN N(3ä
+á
+M M(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+N N("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%21î
+ë
+M M(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+N, N(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%22*
+6*É
+4Q Q(≠™
+Q Q(5
+%2java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getLogName()v
+t
+Q Q(J
+%3java.lang.String"__concat*$
+Q Q(5
+
+%2java.lang.String* 
+Q8 Q(J
+ is now renowned€ÿ
+Q Q(K
+
+%4void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%3java.lang.String2!informPlayers(Ljava/lang/String;)¢ü
+R R(G	
+%5int"6mage.abilities.keyword.RenownAbility#getRenownValue()I*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getRenownValue()A
+?
+T T(0	
+%6int"__id*"
+
+__unknown_file (
+""*
+2
+3*—
+6O O("®•
+O0 O(D
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+O O(E#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+O O(F*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+4
+1*!
+1\ \("
+\ \(
+"":"
+N N(#
+gamemage.game.Game:,
+N$ N(2 
+sourcemage.abilities.AbilityB64
+2mage.abilities.keyword.BecomesRenownedSourceEffectHP

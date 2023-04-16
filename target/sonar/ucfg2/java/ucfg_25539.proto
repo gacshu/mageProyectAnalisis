@@ -1,0 +1,1302 @@
+
+8mage.server.TableController#startGame(Ljava/util/UUID;)Vg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/TableController.javaï ï("93*«
+24
+Ÿ Ÿ(i
+}
+
+Ÿ Ÿ(i
+%83java.lang.String"__concat*
+
+Ÿ Ÿ('
+GAME started *+
+
+Ÿ* Ÿ(i
+
+%78java.io.Serializablep
+n
+
+Ÿ Ÿ(p
+%84java.lang.String"__concat*'
+
+Ÿ Ÿ(i
+
+%83java.lang.String*
+
+Ÿl Ÿ(p
+ [z
+x
+
+Ÿs Ÿ(x
+%85mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match£ 
+Ÿs Ÿ(‚
+%86java.lang.String"1mage.game.match.Match#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+%85mage.game.match.Match2	getName()*
+23*”
+68
+ı+ ı(9’
+
+
+ı+ ı(9*
+%37#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryæã
+
+ı+ ı(G'
+%38 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%37#mage.server.managers.ManagerFactory2userManager()*
+67*€
+25
+Ÿ_ Ÿ(hh
+f
+
+Ÿ_ Ÿ(h
+%78java.io.Serializable"__id*5
+
+__unknown_file (
+
+%80java.lang.String*
+24*Œ
+26
+ŸE Ÿ(\‹ˆ
+
+ŸE Ÿ(\
+%79java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%82mage.game.Game2getId()f
+d
+
+ŸE Ÿ(\
+%78java.io.Serializable"__id*3
+
+__unknown_file (
+
+%79java.util.UUID*
+24*³
+27
+ŸE Ÿ(Jz
+x
+
+ŸE Ÿ(J
+%81mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match›
+
+ŸE Ÿ(T
+%82mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%81mage.game.match.Match2	getGame()*
+26*‘
+29
+Ÿ Ÿ(X
+V
+
+Ÿ Ÿ(
+%75org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+Ÿ+ Ÿ(0
+%76mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match›
+
+Ÿ+ Ÿ(:
+%77mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%76mage.game.match.Match2	getGame()*
+25
+27*±
+70
+üB ü(m”‘
+
+üB ü(m
+%36boolean"&mage.game.match.MatchPlayer#hasQuit()Z*@
+
+__unknown_file ($
+"
+%35mage.game.match.MatchPlayer2	hasQuit()*
+68
+41*ª
+71
+üB ü(c‘
+
+üB ü(c"
+%35mage.game.match.MatchPlayer"Nmage.game.match.Match#getPlayer(Ljava/util/UUID;)Lmage/game/match/MatchPlayer;*:
+
+__unknown_file (
+
+%33mage.game.match.Match*3
+
+__unknown_file (
+
+%34java.util.UUID2getPlayer(Ljava/util/UUID;)*
+70*µ
+72
+üB ü(Gz
+x
+
+üB ü(G
+%33mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match 
+
+üR ü(b
+%34java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+71*®
+74
+ü ü(5‘
+
+ü ü(5"
+%32mage.game.match.MatchPlayer"Nmage.game.match.Match#getPlayer(Ljava/util/UUID;)Lmage/game/match/MatchPlayer;*:
+
+__unknown_file (
+
+%30mage.game.match.Match*3
+
+__unknown_file (
+
+%31java.util.UUID2getPlayer(Ljava/util/UUID;)*
+72
+41*°
+30
+œ œ(d
+b
+
+œ œ('*
+%73#mage.server.util.ServerMessagesUtil"__id*"
+
+__unknown_file (
+""±®
+
+œ œ(9
+%74void"6mage.server.util.ServerMessagesUtil#incGamesStarted()V*H
+
+__unknown_file (,
+*
+%73#mage.server.util.ServerMessagesUtil2incGamesStarted()*
+29*µ
+75
+ü ü(z
+x
+
+ü ü(
+%30mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match 
+
+ü$ ü(4
+%31java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+74*›
+31
+” ”($`
+^
+
+” ”($&
+mPlayermage.game.match.MatchPlayer"__id*"
+
+__unknown_file (
+""œ
+™
+
+” ”($&
+mPlayermage.game.match.MatchPlayer"
+__arrayGet*3
+
+__unknown_file (
+
+%66java.util.List*"
+
+__unknown_file (
+""*
+39
+30*ğ
+76
+û+ û(8”
+‘
+
+û+ û(8-
+%28&java.util.concurrent.ConcurrentHashMap"__id*N
+
+__unknown_file (2*0
+mage.server.TableController"
+userPlayerMapÀ½
+
+û+ û(C
+%29java.util.Set"@java.util.concurrent.ConcurrentHashMap#entrySet()Ljava/util/Set;*K
+
+__unknown_file (/
+-
+%28&java.util.concurrent.ConcurrentHashMap2
+entrySet()*
+41*«
+32
+™ ™(6’
+
+™ ™(6
+%72java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%71java.lang.String2append(Ljava/lang/String;)*
+31*
+77
+ú ú(9w
+u
+
+ú ú(9#
+opponentjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%26java.lang.StringBuilder*
+76*Ë
+33
+™ ™(²¯
+
+™$ ™(5
+%71java.lang.String"7mage.game.match.MatchPlayer#getName()Ljava/lang/String;*D
+
+__unknown_file ((
+&
+mPlayermage.game.match.MatchPlayer2	getName()*
+32*®
+78
+ù ù(!U
+S
+
+ù ù("
+creatorjava.lang.String"__id*"
+
+__unknown_file (
+""GE
+
+ú) ú(6
+%26java.lang.StringBuilder"java.lang.StringBuilderv
+t
+
+ú% ú(8
+%27"!java.lang.StringBuilder#<init>()V*<
+
+__unknown_file ( 
+
+%26java.lang.StringBuilder*
+77*™
+34
+— —( €ı
+
+— —(.
+%70java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder*#
+
+__unknown_file (
+ - 2append(Ljava/lang/String;)*
+33*ÿ
+79
+øj ø(zæã
+ø ø(ˆ
+%25java.util.UUID"³mage.server.managers.GameManager#createGameSession(Lmage/game/Game;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/UUID;Ljava/util/UUID;Lmage/game/GameOptions;)Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+%19 mage.server.managers.GameManager*3
+
+__unknown_file (
+
+%21mage.game.Game*K
+
+__unknown_file (/
+-
+%22&java.util.concurrent.ConcurrentHashMap*3
+
+__unknown_file (
+
+%24java.util.UUID*@
+
+__unknown_file ($
+"
+choosingPlayerIdjava.util.UUID*B
+
+__unknown_file (&
+$
+gameOptionsmage.game.GameOptions2‚createGameSession(Lmage/game/Game;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/UUID;Ljava/util/UUID;Lmage/game/GameOptions;)*
+78*°
+36
+– –( “
+
+– –()
+
+%69int")java.lang.AbstractStringBuilder#length()I*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder2length()*
+33
+34*¡
+38
+• •(2„
+
+• •(2
+%68boolean"mage.players.Player#isHuman()Z*8
+
+__unknown_file (
+
+%67mage.players.Player2	isHuman()*
+36
+31*Õ
+39
+• •(¼¹
+
+• •((
+%67mage.players.Player"<mage.game.match.MatchPlayer#getPlayer()Lmage/players/Player;*D
+
+__unknown_file ((
+&
+mPlayermage.game.match.MatchPlayer2getPlayer()*
+38*´
+80
+øL ø(Y”
+‘
+
+øL ø(Y-
+%22&java.util.concurrent.ConcurrentHashMap"__id*N
+
+__unknown_file (2*0
+mage.server.TableController"
+userPlayerMapt
+r
+
+ø[ ø(`
+%23mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+table‹
+
+ø[ ø(h
+%24java.util.UUID"'mage.game.Table#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%23mage.game.Table2getId()*
+79*³
+81
+ø; ø(@z
+x
+
+ø; ø(@
+%20mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match›
+
+ø; ø(J
+%21mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%20mage.game.match.Match2	getGame()*
+80*”
+82
+ø ø(’
+
+
+ø ø(*
+%18#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryæã
+
+ø ø(('
+%19 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*H
+
+__unknown_file (,
+*
+%18#mage.server.managers.ManagerFactory2gameManager()*
+81*
+83
+÷+ ÷(6÷ô
+
+÷ ÷(7
+%17void"7mage.game.Game#setGameOptions(Lmage/game/GameOptions;)V*3
+
+__unknown_file (
+
+%16mage.game.Game*B
+
+__unknown_file (&
+$
+gameOptionsmage.game.GameOptions2'setGameOptions(Lmage/game/GameOptions;)*
+82*³
+84
+ö ö(Fz
+x
+
+÷ ÷(
+%15mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match›
+
+÷ ÷(
+%16mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%15mage.game.match.Match2	getGame()*
+83*¹
+40
+”' ”(,z
+x
+
+”' ”(,
+%65mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¤¡
+
+”' ”(9
+%66java.util.List"2mage.game.match.Match#getPlayers()Ljava/util/List;*:
+
+__unknown_file (
+
+%65mage.game.match.Match2getPlayers()*
+31*¹
+85
+ö% ö(F 
+
+ö% ö(F
+%14boolean",mage.game.match.MatchOptions#isPlaneChase()Z*A
+
+__unknown_file (%
+#
+%13mage.game.match.MatchOptions2isPlaneChase()*
+84*†
+41
+û û((V
+T
+
+û û((
+entryjava.util.Map$Entry"__id*"
+
+__unknown_file (
+""‘
+
+
+û û((
+entryjava.util.Map$Entry"
+__arrayGet*2
+
+__unknown_file (
+
+%29java.util.Set*"
+
+__unknown_file (
+""*
+40
+75*Ö
+86
+õ õ(I
+}
+
+õ õ(I5
+$
+gameOptionsmage.game.GameOptions"
+bannedUsers"__id*2
+
+__unknown_file (
+
+%11java.util.Setz
+x
+
+ö% ö(*
+%12mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchÀ½
+
+ö% ö(7#
+%13mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*:
+
+__unknown_file (
+
+%12mage.game.match.Match2getOptions()*
+85*Ö
+42
+ ('½º
+
+ (5
+%64void"'mage.game.match.MatchPlayer#setQuit(Z)V*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer* 
+
+__unknown_file (22
+setQuit(Z)*
+41*Ñ
+87
+õ& õ(I¸µ
+
+õ& õ(I
+%11java.util.Set"<mage.game.match.MatchOptions#getBannedUsers()Ljava/util/Set;*A
+
+__unknown_file (%
+#
+%10mage.game.match.MatchOptions2getBannedUsers()*
+86*Ó
+88
+ô ô(Zy
+w
+
+õ& õ(+
+%9mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¿¼
+
+õ& õ(8#
+%10mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*9
+
+__unknown_file (
+
+%9mage.game.match.Match2getOptions()*
+87*¹
+44
+4 (?œ™
+
+4 (I
+%63boolean"&mage.game.match.MatchPlayer#hasQuit()Z*H
+
+__unknown_file (,
+*
+matchPlayermage.game.match.MatchPlayer2	hasQuit()*
+41
+42*Ë
+89
+ô/ ô(Z²¯
+
+ô/ ô(Z
+%8boolean"6mage.game.match.MatchOptions#isRollbackTurnsAllowed()Z*@
+
+__unknown_file ($
+"
+%7mage.game.match.MatchOptions2isRollbackTurnsAllowed()*
+88* 
+45
+Œ Œ(Tƒ
+€
+
+Œ Œ(T*
+matchPlayermage.game.match.MatchPlayer"__id*@
+
+__unknown_file ($
+"
+%62mage.game.match.MatchPlayer*
+41
+44*ª
+46
+Œ2 Œ(S‘
+
+Œ2 Œ(S"
+%62mage.game.match.MatchPlayer"Nmage.game.match.Match#getPlayer(Ljava/util/UUID;)Lmage/game/match/MatchPlayer;*:
+
+__unknown_file (
+
+%60mage.game.match.Match*3
+
+__unknown_file (
+
+%61java.util.UUID2getPlayer(Ljava/util/UUID;)*
+45*µ
+47
+Œ2 Œ(7z
+x
+
+Œ2 Œ(7
+%60mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match 
+
+ŒB Œ(R
+%61java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+46*ÿ
+48
+‹% ‹(q
+
+
+‹% ‹(q
+%58java.lang.String"__concat*'
+
+‹% ‹(^
+
+%56java.lang.String*%
+
+‹a ‹(q
+
+%57java.util.UUIDâß
+
+‹ ‹(r
+%59void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%53org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%58java.lang.String2error(Ljava/lang/Object;)*
+47*¹
+49
+‹% ‹(M
+
+
+‹% ‹(M
+%55java.lang.String"__concat*'
+
+‹% ‹(<
+Unable to find user: *%
+
+‹? ‹(M
+
+%54java.util.UUIDz
+x
+
+‹% ‹(^
+%56java.lang.String"__concat*'
+
+‹% ‹(M
+
+%55java.lang.String*
+
+‹P ‹(^
+  playerId:  
+
+‹a ‹(q
+%57java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+48*É
+90
+ó ó(8u
+s
+
+ó ó(8$
+gameOptionsmage.game.GameOptions"__id*9
+
+__unknown_file (
+
+%4mage.game.GameOptionsy
+w
+
+ô/ ô(4
+%6mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¾»
+
+ô/ ô(A"
+%7mage.game.match.MatchOptions"@mage.game.match.Match#getOptions()Lmage/game/match/MatchOptions;*9
+
+__unknown_file (
+
+%6mage.game.match.Match2getOptions()*
+89*Ì
+91
+ó& ó(7B@
+
+ó* ó(5
+%4mage.game.GameOptions"mage.game.GameOptionsp
+n
+
+ó& ó(7
+%5"mage.game.GameOptions#<init>()V*9
+
+__unknown_file (
+
+%4mage.game.GameOptions*
+90*…
+92
+ò ò(s
+q
+
+ò ò(
+%2mage.game.Table"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+tablexv
+
+ò ò(
+
+%3void"mage.game.Table#initGame()V*3
+
+__unknown_file (
+
+%2mage.game.Table2
+initGame()*
+91*›
+93
+ñ ñ(y
+w
+
+ñ ñ(
+%0mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match‡„
+
+ñ ñ(
+
+%1void""mage.game.match.Match#startGame()V*9
+
+__unknown_file (
+
+%0mage.game.match.Match2startGame()*
+92*
+50
+‹ ‹(X
+V
+
+‹ ‹(
+%53org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""œ™
+
+‹? ‹(M
+%54java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()*
+49*«
+51
+ˆ ˆ(;’
+
+ˆ ˆ(;
+%52java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%51java.lang.String2append(Ljava/lang/String;)*
+41*²
+52
+ˆ ˆ($™–
+
+ˆ, ˆ(:
+%51java.lang.String",mage.server.User#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getName()*
+51*™
+53
+†  †((€ı
+
+†  †(6
+%50java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder*#
+
+__unknown_file (
+ - 2append(Ljava/lang/String;)*
+52*°
+55
+…  …((“
+
+…  …(1
+
+%49int")java.lang.AbstractStringBuilder#length()I*A
+
+__unknown_file (%
+#
+opponentjava.lang.StringBuilder2length()*
+52
+53*€
+56
+ƒ ƒ(4h
+f
+
+ƒ ƒ(4
+creatorjava.lang.String"__id*5
+
+__unknown_file (
+
+%48java.lang.String*
+41*ü
+13
+¢ ¢(l}
+{
+
+¢ ¢(l
+%112java.lang.String"__concat*
+
+¢ ¢(*
+- chatId:  **
+
+¢- ¢(l
+
+%111java.util.Optionalåâ
+
+¢ ¢(m
+%113void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%105org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%112java.lang.String2debug(Ljava/lang/Object;)*
+0*²
+57
+ƒ& ƒ(*™–
+
+ƒ& ƒ(4
+%48java.lang.String",mage.server.User#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+usermage.server.User2	getName()*
+56*±
+14
+¢- ¢(l˜•
+
+¢- ¢(l
+%111java.util.Optional"Pmage.server.managers.GameManager#getChatId(Ljava/util/UUID;)Ljava/util/Optional;*F
+
+__unknown_file (*
+(
+%107 mage.server.managers.GameManager*4
+
+__unknown_file (
+
+%110java.util.UUID2getChatId(Ljava/util/UUID;)*
+13*¦
+15
+¢T ¢(kŠ
+
+¢T ¢(k
+%110java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%109mage.game.Game2getId()*
+14*Ï
+59
+€ €(U²¯
+
+€ €(U
+%47void"Amage.server.User#ccGameStarted(Ljava/util/UUID;Ljava/util/UUID;)V*6
+
+__unknown_file (
+
+usermage.server.User*3
+
+__unknown_file (
+
+%45java.util.UUID*3
+
+__unknown_file (
+
+%46java.util.UUID2/ccGameStarted(Ljava/util/UUID;Ljava/util/UUID;)*
+57
+55*¶
+16
+¢T ¢(Y{
+y
+
+¢T ¢(Y
+%108mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match 
+
+¢T ¢(c
+%109mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*;
+
+__unknown_file (
+
+%108mage.game.match.Match2	getGame()*
+15*ò
+17
+¢ ¢(Y
+W
+
+¢ ¢(
+%105org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""“
+
+
+¢- ¢(;+
+%106#mage.server.managers.ManagerFactory"__id*O
+
+__unknown_file (3*1
+mage.server.TableController"
+managerFactoryèå
+
+¢- ¢(I(
+%107 mage.server.managers.GameManager"Smage.server.managers.ManagerFactory#gameManager()Lmage/server/managers/GameManager;*I
+
+__unknown_file (-
++
+%106#mage.server.managers.ManagerFactory2gameManager()*
+16*¹
+19
+¡ ¡({
+y
+
+¡ ¡(
+%103mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match 
+
+¡ ¡(
+%104mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*;
+
+__unknown_file (
+
+%103mage.game.match.Match2	getGame()*
+17
+0*(
+0 "!
+
+± ±(
+implicit return*¹
+60
+€D €(I 
+
+€D €(T
+%46java.util.UUID"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()*
+59*¤
+61
+€+ €(B‹ˆ
+
+€+ €(B
+%45java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%44mage.game.Game2getId()*
+60*š
+62
+ÿ ÿ(0e
+c
+
+ÿ ÿ(0
+usermage.server.User"__id*5
+
+__unknown_file (
+
+%42mage.server.Userz
+x
+
+€+ €(0
+%43mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match›
+
+€+ €(:
+%44mage.game.Game"/mage.game.match.Match#getGame()Lmage/game/Game;*:
+
+__unknown_file (
+
+%43mage.game.match.Match2	getGame()*
+61*¯
+63
+ÿ$ ÿ()–“
+
+ÿ$ ÿ(/
+%42mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*9
+
+__unknown_file (
+
+_userjava.util.Optional2get()*
+62*ø
+20
+   (O…
+‚
+
+   (O
+%100java.lang.String"__concat*'
+
+   (=
+
+%97java.lang.String*'
+
+ @  (O
+
+%99java.lang.Stringq
+o
+
+   (U
+%101java.lang.String"__concat*(
+
+   (O
+
+%100java.lang.String*
+
+ R  (U
+]äá
+
+   (V
+%102void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%93org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%101java.lang.String2debug(Ljava/lang/Object;)*
+19*¢
+21
+   (6w
+u
+
+   (6
+%96java.lang.String"__concat*
+
+   (&
+- matchId: *%
+
+ )  (6
+
+%95java.util.UUIDp
+n
+
+   (=
+%97java.lang.String"__concat*'
+
+   (6
+
+%96java.lang.String*
+
+ 9  (=
+ [z
+x
+
+ @  (E
+%98mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+match¢Ÿ
+
+ @  (O
+%99java.lang.String"1mage.game.match.Match#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+%98mage.game.match.Match2	getName()*
+20*‘
+65
+ı ı(`j
+h
+
+ı ı(`
+_userjava.util.Optional"__id*7
+
+__unknown_file (
+
+%40java.util.Optionalˆ…
+
+ş ş()
+%41boolean"java.util.Optional#isPresent()Z*9
+
+__unknown_file (
+
+_userjava.util.Optional2isPresent()*
+50
+63*‰
+22
+   (X
+V
+
+   (
+%93org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""z
+x
+
+ )  (.
+%94mage.game.match.Match"__id*F
+
+__unknown_file (**(
+mage.server.TableController"
+matchš—
+
+ )  (6
+%95java.util.UUID"-mage.game.match.Match#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+%94mage.game.match.Match2getId()*
+21*ª
+66
+ı+ ı(_‘
+
+ı+ ı(_
+%40java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%38 mage.server.managers.UserManager*3
+
+__unknown_file (
+
+%39java.util.UUID2getUser(Ljava/util/UUID;)*
+65*—
+23Ÿ Ÿ(‚†
+ƒ
+Ÿ Ÿ(‚
+%87java.lang.String"__concat*'
+
+Ÿ Ÿ(p
+
+%84java.lang.String*(
+Ÿs Ÿ(‚
+
+%86java.lang.Stringt
+r
+Ÿ Ÿ(‰
+%88java.lang.String"__concat*(
+Ÿ Ÿ(‚
+
+%87java.lang.String*
+Ÿ… Ÿ(‰
+] Œ
+‰
+Ÿ Ÿ(“
+%89java.lang.String"__concat*(
+Ÿ Ÿ(‰
+
+%88java.lang.String*-
+ŸŒ Ÿ(“
+
+creatorjava.lang.Stringu
+s
+Ÿ Ÿ(›
+%90java.lang.String"__concat*(
+Ÿ Ÿ(“
+
+%89java.lang.String*
+Ÿ– Ÿ(›
+ - ”
+‘
+Ÿ Ÿ(¦
+%91java.lang.String"__concat*(
+Ÿ Ÿ(›
+
+%90java.lang.String*5
+Ÿ Ÿ(¦%
+#
+opponentjava.lang.StringBuilderáŞ
+Ÿ Ÿ(§
+%92void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%75org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%91java.lang.String2info(Ljava/lang/Object;)*
+22*µ
+67
+ıP ı(Uœ™
+
+ıP ı(^
+%39java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()*
+66:0
+
+ï ï(0"
+choosingPlayerIdjava.util.UUIDB
+mage.server.TableController

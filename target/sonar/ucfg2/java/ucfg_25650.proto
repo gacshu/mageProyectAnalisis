@@ -1,0 +1,388 @@
+
+Pmage.server.MageServerImpl#emailAuthToken(Ljava/lang/String;Ljava/lang/String;)Zd
+ZD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/MageServerImpl.javaT T(!"startingBlock*ˆ
+2m m($“
+œ
+m m(t
+%32void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*a
+
+__unknown_file (EC
+AThere was an error inside the server while emailing an auth token"
+n n(
+""*ˇ
+startingBlockT! T(Aë
+é
+S S(
+%33"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String^
+\
+T) T(2
+	sessionIdjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%33ç
+ä
+S S(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+emailjava.lang.StringZ
+X
+T; T(@
+emailjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%34*
+10*Õ
+4j j($è
+å
+j j($*
+%29#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactoryÊ„
+j j(4&
+%30mage.server.managers.MailClient"Tmage.server.managers.ManagerFactory#mailgunClient()Lmage/server/managers/MailClient;*H
+
+__unknown_file (,
+*
+%29#mage.server.managers.ManagerFactory2mailgunClient()∫∑
+j j(V
+%31boolean"dmage.server.managers.MailClient#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z*D
+
+__unknown_file ((
+&
+%30mage.server.managers.MailClient*7
+
+__unknown_file (
+
+emailjava.lang.String*9
+
+__unknown_file (
+
+subjectjava.lang.String*6
+
+__unknown_file (
+
+textjava.lang.String2CsendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+2
+1*«
+5h h($è
+å
+h h($*
+%26#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactory‡›
+h h(1&
+%27mage.server.managers.MailClient"Qmage.server.managers.ManagerFactory#mailClient()Lmage/server/managers/MailClient;*H
+
+__unknown_file (,
+*
+%26#mage.server.managers.ManagerFactory2mailClient()∫∑
+h h(S
+%28boolean"dmage.server.managers.MailClient#sendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Z*D
+
+__unknown_file ((
+&
+%27mage.server.managers.MailClient*7
+
+__unknown_file (
+
+emailjava.lang.String*9
+
+__unknown_file (
+
+subjectjava.lang.String*6
+
+__unknown_file (
+
+textjava.lang.String2CsendMessage(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)*
+2
+1*¡
+6a a(,§
+°
+a a(.
+%13java.lang.String"@mage.server.MageServerImpl#generateAuthToken()Ljava/lang/String;*:
+
+__unknown_file ("
+mage.server.MageServerImplh
+f
+a a(/
+	authTokenjava.lang.String"__id*5
+
+__unknown_file (
+
+%13java.lang.StringÖ
+Ç
+b b(
+%14java.util.LinkedHashMap"__id*P
+
+__unknown_file (4*2
+mage.server.MageServerImpl"
+activeAuthTokens‰
+·
+b b(.
+%15java.lang.String"__mapSet*<
+
+__unknown_file ( 
+
+%14java.util.LinkedHashMap*7
+
+__unknown_file (
+
+emailjava.lang.String*;
+
+__unknown_file (
+
+	authTokenjava.lang.Stringp
+n
+c c(;
+subjectjava.lang.String"__id*?
+
+__unknown_file (#!
+XMage Password Reset Auth TokenÅ
+
+d8 d(K
+%16java.lang.String"__id*T
+
+__unknown_file (8*6
+,
+authorizedUsermage.server.AuthorizedUser"
+nameÜ
+É
+d d(K
+%17java.lang.String"__concat*-
+d d(5!
+Use this auth token to reset *%
+d8 d(K
+
+%16java.lang.Stringu
+s
+d d(]
+%18java.lang.String"__concat*%
+d d(K
+
+%17java.lang.String*
+dN d(]
+'s password: Ñ
+Å
+d d(i
+%19java.lang.String"__concat*%
+d d(]
+
+%18java.lang.String*+
+d` d(i
+
+	authTokenjava.lang.Stringj
+h
+d d(p
+%20java.lang.String"__concat*%
+d d(i
+
+%19java.lang.String*
+dl d(p
+\ní
+è
+d e(=
+%21java.lang.String"__concat*%
+d d(p
+
+%20java.lang.String*9
+e e(=-+
+)It's valid until the next server restart.c
+a
+d e(>
+textjava.lang.String"__id*5
+
+__unknown_file (
+
+%21java.lang.Stringè
+å
+g g(*
+%22#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactoryÌ
+g g(,*
+%23#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*H
+
+__unknown_file (,
+*
+%22#mage.server.managers.ManagerFactory2configSettings()ƒ¡
+g g(:
+%24java.lang.String"Cmage.server.managers.ConfigSettings#getMailUser()Ljava/lang/String;*H
+
+__unknown_file (,
+*
+%23#mage.server.managers.ConfigSettings2getMailUser(){y
+g g(D
+%25boolean"java.lang.String#isEmpty()Z*5
+
+__unknown_file (
+
+%24java.lang.String2	isEmpty()*
+4
+5*™
+7\ \($ì
+ê
+\0 \(c
+%7java.lang.String"__concat*9
+\0 \([-+
+)No user was found with the email address *'
+\^ \(c
+
+emailjava.lang.String§
+°
+\ \(d
+
+%8void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*4
+
+__unknown_file (
+
+%7java.lang.StringU
+S
+] ](
+%9org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""á
+Ñ
+] ](>
+%10java.lang.String"__concat*,
+] ](6 
+Auth token is requested for *'
+]9 ](>
+
+emailjava.lang.Stringà
+Ö
+] ](b
+%11java.lang.String"__concat*%
+] ](>
+
+%10java.lang.String*/
+]A ](b#!
+ but there's no such user in DB›⁄
+] ](c
+%12void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%9org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%11java.lang.String2info(Ljava/lang/Object;)"
+^ ^(
+""*™
+8Z( Z(@Ÿ
+÷
+Z( Z(N*
+%5$mage.server.AuthorizedUserRepository"Xmage.server.AuthorizedUserRepository#getInstance()Lmage/server/AuthorizedUserRepository;*D
+
+__unknown_file (("&
+$mage.server.AuthorizedUserRepository≥∞
+Z( Z(` 
+%6mage.server.AuthorizedUser"_mage.server.AuthorizedUserRepository#getByEmail(Ljava/lang/String;)Lmage/server/AuthorizedUser;*H
+
+__unknown_file (,
+*
+%5$mage.server.AuthorizedUserRepository*7
+
+__unknown_file (
+
+emailjava.lang.String2getByEmail(Ljava/lang/String;)Ä
+~
+Z Z(a,
+authorizedUsermage.server.AuthorizedUser"__id*>
+
+__unknown_file ("
+ 
+%6mage.server.AuthorizedUser*
+6
+7*˜
+9V V($¨
+©
+V0 V(U
+%3java.lang.String"__id*
+
+__unknown_file (ca
+_Registration has been disabled on the server. You can use any name and empty password to login.§
+°
+V V(V
+
+%4void"Zmage.server.MageServerImpl#sendErrorMessageToClient(Ljava/lang/String;Ljava/lang/String;)V*:
+
+__unknown_file (
+mage.server.MageServerImpl*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String*4
+
+__unknown_file (
+
+%3java.lang.String"
+W W(
+""*˚
+10U U(é
+ã
+U U()
+%0#mage.server.managers.ManagerFactory"__id*N
+
+__unknown_file (2*0
+mage.server.MageServerImpl"
+managerFactoryÓÎ
+U U(,)
+%1#mage.server.managers.ConfigSettings"Ymage.server.managers.ManagerFactory#configSettings()Lmage/server/managers/ConfigSettings;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2configSettings()‡›
+U U(H
+%2java.lang.Boolean"Rmage.server.managers.ConfigSettings#isAuthenticationActivated()Ljava/lang/Boolean;*G
+
+__unknown_file (+
+)
+%1#mage.server.managers.ConfigSettings2isAuthenticationActivated()*
+8
+9*!
+1p p("
+p p(
+"":)
+T" T(3
+	sessionIdjava.lang.String:%
+T4 T(@
+emailjava.lang.StringB
+mage.server.MageServerImplHP

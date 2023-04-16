@@ -1,0 +1,1792 @@
+
+Omage.player.ai.ComputerPlayer6#addActions(Lmage/player/ai/SimulationNode2;III)Iz
+nD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/ComputerPlayer6.javaÏ Ï("61*±
+24
+„ „(
+
+„ „((
+%102boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+16
+21
+23*®
+26
+ş ş(•’
+
+ş ş(.
+%101void"Zmage.player.ai.ComputerPlayer6#resolve(Lmage/player/ai/SimulationNode2;ILmage/game/Game;)V*>
+
+__unknown_file (" 
+mage.player.ai.ComputerPlayer6*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2:resolve(Lmage/player/ai/SimulationNode2;ILmage/game/Game;)*
+24*Ø
+27
+ı ı(«¨
+
+ı ı($!
+%99mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()Š
+
+ı ı(.
+%100boolean"java.util.ArrayDeque#isEmpty()Z*?
+
+__unknown_file (#
+!
+%99mage.game.stack.SpellStack2	isEmpty()*
+24
+26*Ÿ
+28
+û û(X
+V
+
+û û(
+%83org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""p
+n
+
+û û(8
+%84java.lang.String"__concat*'
+
+û û(0
+Add Action -- alpha: *
+
+û3 û(8
+""u
+s
+
+û û(D
+%85java.lang.String"__concat*'
+
+û û(8
+
+%84java.lang.String*
+
+û; û(D	
+ beta: p
+n
+
+û û(K
+%86java.lang.String"__concat*'
+
+û û(D
+
+%85java.lang.String*
+
+ûG û(K
+""u
+s
+
+û û(W
+%87java.lang.String"__concat*'
+
+û û(K
+
+%86java.lang.String*
+
+ûN û(W	
+ depth:p
+n
+
+û û(_
+%88java.lang.String"__concat*'
+
+û û(W
+
+%87java.lang.String*
+
+ûZ û(_
+""t
+r
+
+û û(j
+%89java.lang.String"__concat*'
+
+û û(_
+
+%88java.lang.String*
+
+ûb û(j
+
+ step:¶³
+ûm û(ƒ
+%90mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()
+‹
+û û(ƒ
+%91java.lang.String"__concat*'
+
+û û(j
+
+%89java.lang.String*0
+ûm û(ƒ!
+
+%90mage.constants.PhaseStep~
+|
+û û(”
+%92java.lang.String"__concat*(
+û û(ƒ
+
+%91java.lang.String* 
+û† û(”
+ for player:§¤
+û¦ û(¾
+%93java.util.UUID"2mage.game.Game#getActivePlayerId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+gamemage.game.Game2getActivePlayerId()öó
+û— û(¿
+%94mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%93java.util.UUID2getPlayer(Ljava/util/UUID;) 
+û— û(É
+%95java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+%94mage.players.Player2	getName()ˆ
+…
+û û(É
+%96java.lang.String"__concat*(
+û û(”
+
+%92java.lang.String*)
+û— û(É
+
+%95java.lang.StringáŞ
+û û(Ê
+%97void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%83org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%96java.lang.String2trace(Ljava/lang/Object;)ïì
+
+ü ü(
+%98boolean";mage.player.ai.ComputerPlayer6#allPassed(Lmage/game/Game;)Z*>
+
+__unknown_file (" 
+mage.player.ai.ComputerPlayer6*4
+
+__unknown_file (
+
+gamemage.game.Game2allPassed(Lmage/game/Game;)*
+24
+27*¥
+29
+ù ù(Š
+
+ù ù(9
+
+%82int"Nmage.player.ai.ComputerPlayer6#minimaxAB(Lmage/player/ai/SimulationNode2;III)I*>
+
+__unknown_file (" 
+mage.player.ai.ComputerPlayer6*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2.minimaxAB(Lmage/player/ai/SimulationNode2;III)*
+1*´
+30
+ö ö(ÖÓ
+
+ö ö(
+%79java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+)2	append(C)X
+V
+
+÷ ÷(
+%80org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""èå
+
+÷ ÷( 
+%81void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%80org.apache.log4j.Logger*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2debug(Ljava/lang/Object;)*
+29*¡
+31
+ó ó(,c
+a
+
+ó ó(,)
+logNodemage.player.ai.SimulationNode2"__id*"
+
+__unknown_file (
+""Ÿ
+œ
+
+ó ó(,)
+logNodemage.player.ai.SimulationNode2"
+__arrayGet*3
+
+__unknown_file (
+
+%71java.util.List*"
+
+__unknown_file (
+""*
+35
+30*¢
+32
+ô ô(jŒ‰
+
+ô ô(j
+%77java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%73java.lang.String2append(Ljava/lang/String;)ú÷
+
+ô ô(w
+%78java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%77java.lang.StringBuilder*"
+
+__unknown_file (
+, 2append(Ljava/lang/String;)*
+31*|
+33
+ôc ô(id
+b
+
+ôc ô(i
+%73java.lang.String"__id*5
+
+__unknown_file (
+
+%75java.lang.String*
+32*Ø
+34
+ô? ô(F¾»
+
+ô? ô(U
+%76java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()˜•
+
+ô? ô(`
+%74java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%76java.util.List2
+toString()d
+b
+
+ô? ô(`
+%73java.lang.String"__id*5
+
+__unknown_file (
+
+%74java.lang.String*
+32*Û
+35
+ô ô(¾»
+
+ô ô(4
+%72java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()*
+33
+34*Ò
+36
+ó/ ó(3¹¶
+
+ó/ ó(A
+%71java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren()*
+31*°
+37
+ï# ñ(fŠ
+
+ï# ñ(f
+%65java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%59java.lang.StringBuilder*5
+
+__unknown_file (
+
+%61java.lang.String2append(Ljava/lang/String;)‰†
+
+ï# ò(4
+%66java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%65java.lang.StringBuilder*1
+
+__unknown_file (
+ added children: 2append(Ljava/lang/String;)¹¶
+
+ò< ò(N
+%67java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren()om
+
+ò< ò(U
+
+%68int"java.util.List#size()I*3
+
+__unknown_file (
+
+%67java.util.List2size()ŞÛ
+
+ï# ò(V
+%69java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%66java.lang.StringBuilder*(
+
+__unknown_file (
+
+
+%68int2	append(I)ú÷
+
+ï# ò(c
+%70java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%69java.lang.StringBuilder*"
+
+__unknown_file (
+ (2append(Ljava/lang/String;)q
+o
+
+ï ò(d
+sbjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%70java.lang.StringBuilder*
+36*|
+38
+ñ_ ñ(ed
+b
+
+ñ_ ñ(e
+%61java.lang.String"__id*5
+
+__unknown_file (
+
+%63java.lang.String*
+37*Õ
+39
+ñ> ñ(B»¸
+
+ñ> ñ(Q
+%64java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()˜•
+
+ñ> ñ(\
+%62java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%64java.util.List2
+toString()d
+b
+
+ñ> ñ(\
+%61java.lang.String"__id*5
+
+__unknown_file (
+
+%62java.lang.String*
+37*Ï
+40
+ï5 ï(CGE
+
+ï' ï(4
+%56java.lang.StringBuilder"java.lang.StringBuilder·
+´
+
+ï# ï(D
+%57"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%56java.lang.StringBuilder*,
+
+__unknown_file (
+Add Action [ØÕ
+
+ï# ï(R
+%58java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%56java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)–“
+
+ï# ğ(A
+%59java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%58java.lang.StringBuilder*>
+
+__unknown_file (" 
+] -- something added children 2append(Ljava/lang/String;)»¸
+
+ñ  ñ(3
+%60java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()*
+38
+39*“
+41
+î î(X
+V
+
+î î(
+%54org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""œ™
+
+î î('
+%55boolean"+org.apache.log4j.Category#isDebugEnabled()Z*<
+
+__unknown_file ( 
+
+%54org.apache.log4j.Logger2isDebugEnabled()*
+29
+40*Ñ
+42
+í í(¹¶
+
+í í(&
+%52java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren()yw
+
+í í(0
+%53boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%52java.util.List2	isEmpty()*
+28
+41*Ø
+43
+ë ë(X
+V
+
+ë ë(
+%50org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""æã
+
+ë ë( 
+%51void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%50org.apache.log4j.Logger*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2trace(Ljava/lang/Object;)*
+1*õ
+44
+ê ê(!ØÕ
+
+ê ê(-%
+%49mage.player.ai.SimulationNode2"Jmage.player.ai.SimulationNode2#getParent()Lmage/player/ai/SimulationNode2;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getParent()*
+48
+43*³
+45è0 è(¥†
+ƒ
+è0 è(¥
+%44java.lang.String"__concat*'
+
+è0 è(R
+
+%38java.lang.String*(
+èU è(¥
+
+%40java.lang.StringGE
+
+è" è(/
+%45java.lang.StringBuilder"java.lang.StringBuilderÁ
+¾
+è è(¦
+%46"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%45java.lang.StringBuilder*5
+
+__unknown_file (
+
+%44java.lang.String 
+è è(§
+%47java.lang.StringBuilder"Qjava.lang.StringBuilder#append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*<
+
+__unknown_file ( 
+
+%45java.lang.StringBuilder2 append(Ljava/lang/CharSequence;)ØÕ
+
+é é(1%
+%48mage.player.ai.SimulationNode2"Jmage.player.ai.SimulationNode2#getParent()Lmage/player/ai/SimulationNode2;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getParent()…
+‚
+
+é é(1)
+logNodemage.player.ai.SimulationNode2"__id*C
+
+__unknown_file ('
+%
+%48mage.player.ai.SimulationNode2*
+44*€
+46è› è(¤f
+d
+è› è(¤
+%40java.lang.String"__id*5
+
+__unknown_file (
+
+%42java.lang.String*
+45*Û
+47
+èw è(~¿¼
+èw è(
+%43java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()™–
+èw è(˜
+%41java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%43java.util.List2
+toString()e
+c
+èw è(˜
+%40java.lang.String"__id*5
+
+__unknown_file (
+
+%41java.lang.String*
+45*Ó
+48
+è è(œ™
+
+è: è(L
+
+%36int"*mage.player.ai.SimulationNode2#getDepth()I*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22
+getDepth()f
+d
+
+è0 è(L
+%37java.lang.String"__concat*
+
+è0 è(7	
+ <- [*
+
+è: è(L
+
+
+%36into
+m
+
+è0 è(R
+%38java.lang.String"__concat*'
+
+è0 è(L
+
+%37java.lang.String*
+
+èO è(R
+]¾»
+
+èV è(l
+%39java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()*
+46
+47*á
+49
+å5 å(ZGE
+
+å' å(4
+%32java.lang.StringBuilder"java.lang.StringBuilderÎ
+Ë
+
+å# å([
+%33"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%32java.lang.StringBuilder*C
+
+__unknown_file ('%
+#Add Actions -- reached end state  <ØÕ
+
+å# å(g
+%34java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%32java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)×Ô
+
+å# å(s
+%35java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%34java.lang.StringBuilder*!
+
+__unknown_file (
+>2	append(C)q
+o
+
+å å(t
+sbjava.lang.StringBuilder"__id*<
+
+__unknown_file ( 
+
+%35java.lang.StringBuilder†
+ƒ
+
+æ æ(/)
+logNodemage.player.ai.SimulationNode2"__id*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*
+48*è
+50
+ã ã(%y
+w
+
+ã/ ã(7
+%27java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId…
+‚
+
+ã ã(>=
+%286mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*3
+
+__unknown_file (
+
+%27java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÒÏ
+
+ã ã(N
+
+%29int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*[
+
+__unknown_file (?
+=
+%286mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()X
+V
+
+ä ä(
+%30org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""š—
+
+ä ä('
+%31boolean")org.apache.log4j.Logger#isTraceEnabled()Z*<
+
+__unknown_file ( 
+
+%30org.apache.log4j.Logger2isTraceEnabled()*
+49
+1*¬
+51
+â â(Œ
+
+â â(+
+%26boolean"#mage.game.Game#checkIfGameIsOver()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2checkIfGameIsOver()*
+50
+42*Ä
+
+54
+Û Û(
+‹
+
+Û Û("
+%19java.lang.Thread"2java.lang.Thread#currentThread()Ljava/lang/Thread;*0
+
+__unknown_file ("
+java.lang.Thread~|
+
+Û Û(.
+%20void"java.lang.Thread#interrupt()V*5
+
+__unknown_file (
+
+%19java.lang.Thread2interrupt()X
+V
+
+Ü Ü(
+%21org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ØÕ
+
+Ü Ü('
+%22void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%21org.apache.log4j.Logger*+
+
+__unknown_file (
+interrupted2debug(Ljava/lang/Object;)y
+w
+
+İ0 İ(8
+%23java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId…
+‚
+
+İ İ(?=
+%246mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*3
+
+__unknown_file (
+
+%23java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÒÏ
+
+İ İ(O
+
+%25int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*[
+
+__unknown_file (?
+=
+%246mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()"
+
+İ İ(P
+""*Ò
+10
+š3 š(7º·
+
+š3 š(E
+%138java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren()*
+5*‘
+55
+Ú Ú(q
+o
+
+Ú Ú('
+%18boolean"java.lang.Thread#interrupted()Z*0
+
+__unknown_file ("
+java.lang.Thread*
+50
+51
+54*¾
+11
+–' ˜(j
+
+–' ˜(j
+%132java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%126java.lang.StringBuilder*6
+
+__unknown_file (
+
+%128java.lang.String2append(Ljava/lang/String;)‹ˆ
+
+–' ™(8
+%133java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%132java.lang.StringBuilder*1
+
+__unknown_file (
+ added children: 2append(Ljava/lang/String;)º·
+
+™@ ™(R
+%134java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren()qo
+
+™@ ™(Y
+%135int"java.util.List#size()I*4
+
+__unknown_file (
+
+%134java.util.List2size()áŞ
+
+–' ™(Z
+%136java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%133java.lang.StringBuilder*)
+
+__unknown_file (
+
+%135int2	append(I)üù
+
+–' ™(g
+%137java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%136java.lang.StringBuilder*"
+
+__unknown_file (
+ (2append(Ljava/lang/String;)r
+p
+
+– ™(h
+sbjava.lang.StringBuilder"__id*=
+
+__unknown_file (!
+
+%137java.lang.StringBuilder*
+10*µ
+56
+Ø Ø(±®
+
+Ø Ø("
+%17mage.game.Game"8mage.player.ai.SimulationNode2#getGame()Lmage/game/Game;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22	getGame()a
+_
+
+Ø Ø(#
+gamemage.game.Game"__id*3
+
+__unknown_file (
+
+%17mage.game.Game*
+50
+51
+55*~
+12
+˜c ˜(if
+d
+
+˜c ˜(i
+%128java.lang.String"__id*6
+
+__unknown_file (
+
+%130java.lang.String*
+11*Ó
+57
+Ö Ö(W
+U
+
+Ö Ö(
+%6org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""f
+d
+
+Ö Ö(/
+%7java.lang.String"__concat*
+
+Ö Ö('
+Add Action [*
+
+Ö* Ö(/
+""n
+l
+
+Ö Ö(6
+%8java.lang.String"__concat*&
+
+Ö Ö(/
+
+%7java.lang.String*
+
+Ö2 Ö(6
+] º·
+
+Ö9 Ö(L
+%9java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()—”
+
+Ö9 Ö(W
+%10java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*2
+
+__unknown_file (
+
+%9java.util.List2
+toString()ƒ
+€
+
+Ö Ö(W
+%11java.lang.String"__concat*&
+
+Ö Ö(6
+
+%8java.lang.String*'
+
+Ö9 Ö(W
+
+%10java.lang.Strings
+q
+
+Ö Ö(a
+%12java.lang.String"__concat*'
+
+Ö Ö(W
+
+%11java.lang.String*
+
+ÖZ Ö(a	
+  a: p
+n
+
+Ö Ö(i
+%13java.lang.String"__concat*'
+
+Ö Ö(a
+
+%12java.lang.String*
+
+Öd Ö(i
+""r
+p
+
+Ö Ö(r
+%14java.lang.String"__concat*'
+
+Ö Ö(i
+
+%13java.lang.String*
+
+Öl Ö(r
+ b: p
+n
+
+Ö Ö(y
+%15java.lang.String"__concat*'
+
+Ö Ö(r
+
+%14java.lang.String*
+
+Öu Ö(y
+""ßÜ
+
+Ö Ö(z
+%16void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%6org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%15java.lang.String2trace(Ljava/lang/Object;)*
+56*Ú
+13
+˜B ˜(F¼¹
+
+˜B ˜(U
+%131java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()š—
+
+˜B ˜(`
+%129java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%131java.util.List2
+toString()f
+d
+
+˜B ˜(`
+%128java.lang.String"__id*6
+
+__unknown_file (
+
+%129java.lang.String*
+11*¹
+58
+Õ Õ(º·
+
+Õ Õ('
+%3java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()–“
+
+Õ Õ(2
+%4java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*2
+
+__unknown_file (
+
+%3java.util.List2
+toString()ÆÃ
+
+Õ Õ(C
+%5boolean",java.lang.String#equals(Ljava/lang/Object;)Z*4
+
+__unknown_file (
+
+%4java.lang.String*&
+
+__unknown_file (
+
+[Pass]2equals(Ljava/lang/Object;)*
+57
+56*Æ
+14
+–9 –(GHF
+
+–+ –(8
+%123java.lang.StringBuilder"java.lang.StringBuilder¹
+¶
+
+–' –(H
+%124"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%123java.lang.StringBuilder*,
+
+__unknown_file (
+Add Action [Ú×
+
+–' –(V
+%125java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%123java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)‡„
+
+–' —(4
+%126java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%125java.lang.StringBuilder*-
+
+__unknown_file (
+] -- trigger 2append(Ljava/lang/String;)¼¹
+
+˜$ ˜(7
+%127java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()*
+13
+12*×
+59
+Ô Ô(º·
+
+Ô Ô(&
+%2java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getAbilities()*
+58
+56*•
+15
+• •(Y
+W
+
+• •(
+%121org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""›
+
+• •(+
+%122boolean"+org.apache.log4j.Category#isDebugEnabled()Z*=
+
+__unknown_file (!
+
+%121org.apache.log4j.Logger2isDebugEnabled()*
+3
+14*Ó
+16
+” ”(º·
+
+” ”(*
+%119java.util.List"<mage.player.ai.SimulationNode2#getChildren()Ljava/util/List;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getChildren(){y
+
+” ”(4
+%120boolean"java.util.List#isEmpty()Z*4
+
+__unknown_file (
+
+%119java.util.List2	isEmpty()*
+2
+15*ò
+17
+’ ’(-z
+x
+
+’7 ’(?
+%116java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId‡
+„
+
+’ ’(F>
+%1176mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*4
+
+__unknown_file (
+
+%116java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÔÑ
+
+’ ’(V
+%118int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*\
+
+__unknown_file (@
+>
+%1176mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()*
+1*ò
+18
+ (1z
+x
+
+; (C
+%113java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId‡
+„
+
+ (J>
+%1146mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*4
+
+__unknown_file (
+
+%113java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÔÑ
+
+ (Z
+%115int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*\
+
+__unknown_file (@
+>
+%1146mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()*
+1*´
+1
+¥ ¥(Á¾
+
+¥ ¥(
+%151void"+mage.player.ai.SimulationNode2#setScore(I)V*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*"
+
+__unknown_file (
+""2setScore(I)Y
+W
+
+¦ ¦(
+%152org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""p
+n
+
+¦ ¦(1
+%153java.lang.String"__concat*&
+
+¦ ¦(+
+returning -- score: *
+
+¦. ¦(1
+""w
+u
+
+¦ ¦(=
+%154java.lang.String"__concat*(
+
+¦ ¦(1
+
+%153java.lang.String*
+
+¦4 ¦(=	
+ depth:r
+p
+
+¦ ¦(E
+%155java.lang.String"__concat*(
+
+¦ ¦(=
+
+%154java.lang.String*
+
+¦@ ¦(E
+""v
+t
+
+¦ ¦(P
+%156java.lang.String"__concat*(
+
+¦ ¦(E
+
+%155java.lang.String*
+
+¦H ¦(P
+
+ step:¶³
+
+¦S ¦(i 
+%157mage.constants.PhaseStep":mage.game.Game#getTurnStepType()Lmage/constants/PhaseStep;*4
+
+__unknown_file (
+
+gamemage.game.Game2getTurnStepType()
+Œ
+
+¦ ¦(i
+%158java.lang.String"__concat*(
+
+¦ ¦(P
+
+%156java.lang.String*0
+
+¦S ¦(i"
+ 
+%157mage.constants.PhaseStep|
+z
+
+¦ ¦(z
+%159java.lang.String"__concat*(
+
+¦ ¦(i
+
+%158java.lang.String*
+
+¦l ¦(z
+ for player:¼¹
+¦Œ ¦(
+%160java.util.UUID"<mage.player.ai.SimulationNode2#getPlayerId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode22getPlayerId()÷ô
+¦} ¦(Ÿ
+%161mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%160java.util.UUID2getPlayer(Ljava/util/UUID;)¡
+¦} ¦(©
+%162java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*9
+
+__unknown_file (
+
+%161mage.players.Player2	getName()‰
+†
+¦ ¦(©
+%163java.lang.String"__concat*(
+
+¦ ¦(z
+
+%159java.lang.String*)
+¦} ¦(©
+
+%162java.lang.Stringäá
+¦ ¦(ª
+%164void"2org.apache.log4j.Logger#trace(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%152org.apache.log4j.Logger*6
+
+__unknown_file (
+
+%163java.lang.String2trace(Ljava/lang/Object;)"
+
+§ §(
+""*‰
+2
+¢ ¢(&òï
+
+¢ ¢(F
+%150int"emage.player.ai.ComputerPlayer6#simulatePriority(Lmage/player/ai/SimulationNode2;Lmage/game/Game;III)I*>
+
+__unknown_file (" 
+mage.player.ai.ComputerPlayer6*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2EsimulatePriority(Lmage/player/ai/SimulationNode2;Lmage/game/Game;III)*
+1*¥
+3
+   (‹
+
+   (=
+%149int"Nmage.player.ai.ComputerPlayer6#minimaxAB(Lmage/player/ai/SimulationNode2;III)I*>
+
+__unknown_file (" 
+mage.player.ai.ComputerPlayer6*D
+
+__unknown_file ((
+&
+nodemage.player.ai.SimulationNode2*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2.minimaxAB(Lmage/player/ai/SimulationNode2;III)*
+1*¶
+4
+ (×Ô
+
+ ("
+%146java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*!
+
+__unknown_file (
+)2	append(C)Y
+W
+
+ (
+%147org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""êç
+
+ ($
+%148void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%147org.apache.log4j.Logger*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder2debug(Ljava/lang/Object;)*
+3*Ÿ
+5
+š š(0c
+a
+
+š š(0)
+logNodemage.player.ai.SimulationNode2"__id*"
+
+__unknown_file (
+"" 
+
+
+š š(0)
+logNodemage.player.ai.SimulationNode2"
+__arrayGet*4
+
+__unknown_file (
+
+%138java.util.List*"
+
+__unknown_file (
+""*
+4
+9*¤
+6
+› ›(n‹
+
+› ›(n
+%144java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+sbjava.lang.StringBuilder*6
+
+__unknown_file (
+
+%140java.lang.String2append(Ljava/lang/String;)üù
+
+› ›({
+%145java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%144java.lang.StringBuilder*"
+
+__unknown_file (
+, 2append(Ljava/lang/String;)*
+5*|
+7
+›g ›(mf
+d
+
+›g ›(m
+%140java.lang.String"__id*6
+
+__unknown_file (
+
+%142java.lang.String*
+6*Û
+8
+›C ›(J¿¼
+
+›C ›(Y
+%143java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()š—
+
+›C ›(d
+%141java.lang.String"-java.lang.Object#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%143java.util.List2
+toString()f
+d
+
+›C ›(d
+%140java.lang.String"__id*6
+
+__unknown_file (
+
+%141java.lang.String*
+6*Ù
+9
+› ›(¿¼
+
+›" ›(8
+%139java.util.List"=mage.player.ai.SimulationNode2#getAbilities()Ljava/util/List;*G
+
+__unknown_file (+
+)
+logNodemage.player.ai.SimulationNode22getAbilities()*
+7
+8*
+61
+Ğ Ğ($W
+U
+
+Ò Ò(
+%0org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""˜•
+
+Ò Ò(#
+%1boolean")org.apache.log4j.Logger#isTraceEnabled()Z*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger2isTraceEnabled()*
+59
+56*“
+21
+‡ ‡(Y
+W
+
+‡ ‡(
+%106org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ÜÙ
+
+‡ ‡(-
+%107void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*=
+
+__unknown_file (!
+
+%106org.apache.log4j.Logger*-
+
+__unknown_file (
+Step finished2debug(Ljava/lang/Object;)z
+x
+
+ˆ= ˆ(E
+%108java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId‡
+„
+
+ˆ  ˆ(L>
+%1096mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*4
+
+__unknown_file (
+
+%108java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÔÑ
+
+ˆ  ˆ(\
+%110int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*\
+
+__unknown_file (@
+>
+%1096mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()z
+x
+
+‰( ‰(0
+%111java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerIdàİ
+
+‰ ‰(1
+%112boolean"0mage.game.Game#isActivePlayer(Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*4
+
+__unknown_file (
+
+%111java.util.UUID2 isActivePlayer(Ljava/util/UUID;)*
+17
+18
+1*ò
+23
+… …()z
+x
+
+…3 …(;
+%103java.util.UUID"__id*L
+
+__unknown_file (0*. 
+mage.player.ai.ComputerPlayer6"
+
+playerId‡
+„
+
+… …(B>
+%1046mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore"…mage.player.ai.GameStateEvaluator2#evaluate(Ljava/util/UUID;Lmage/game/Game;)Lmage/player/ai/GameStateEvaluator2$PlayerEvaluateScore;*B
+
+__unknown_file (&"$
+"mage.player.ai.GameStateEvaluator2*4
+
+__unknown_file (
+
+%103java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÔÑ
+
+… …(R
+%105int"Gmage.player.ai.GameStateEvaluator2$PlayerEvaluateScore#getTotalScore()I*\
+
+__unknown_file (@
+>
+%1046mage.player.ai.GameStateEvaluator2$PlayerEvaluateScore2getTotalScore()*
+1:4
+
+Ï Ï(2&
+nodemage.player.ai.SimulationNode2: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+""B" 
+mage.player.ai.ComputerPlayer6P

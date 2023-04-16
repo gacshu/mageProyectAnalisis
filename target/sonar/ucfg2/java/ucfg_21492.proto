@@ -1,0 +1,2219 @@
+
+ñmage.client.util.gui.GuiDisplayUtil#getRulesFromCardView(Lmage/view/CardView;Lmage/client/util/gui/GuiDisplayUtil$TextLines;)Ljava/lang/StringBuilder;o
+cD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/util/gui/GuiDisplayUtil.javaÊ  Ê(4"65*«
+24
+ﬂ! ﬂ(%Æ´
+
+ﬂ! ﬂ(9
+%137java.util.List"6mage.view.CardView#getLeftSplitRules()Ljava/util/List;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLeftSplitRules()*
+20*π
+25
+◊ ◊(≥∞
+
+◊ ◊(T
+%125java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*Y
+
+__unknown_file (=;
+9<table cellspacing=0 cellpadding=0 border=0 width='100%'>2append(Ljava/lang/String;)íè
+
+ÿ ÿ(3
+%126java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*8
+
+__unknown_file (
+<tr><td valign='top'><b>2append(Ljava/lang/String;)∞≠
+
+Ÿ Ÿ(/
+%127java.lang.String"7mage.view.CardView#getLeftSplitName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLeftSplitName()êç
+
+Ÿ Ÿ(0
+%128java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*6
+
+__unknown_file (
+
+%127java.lang.String2append(Ljava/lang/String;)Ø¨
+
+⁄ ⁄(P
+%129java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*U
+
+__unknown_file (97
+5</b></td><td align='right' valign='top' style='width:2append(Ljava/lang/String;)∏µ
+
+€= €(X
+%130java.lang.String";mage.view.CardView#getLeftSplitCostsStr()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLeftSplitCostsStr()Ê
+„
+
+€ €(Y
+%131int"Norg.mage.card.arcane.ManaSymbols#getClearManaSymbolsCount(Ljava/lang/String;)I*@
+
+__unknown_file ($""
+ org.mage.card.arcane.ManaSymbols*6
+
+__unknown_file (
+
+%130java.lang.String€ÿ
+€ €(Ä
+%132java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)˛˚
+
+‹ ‹(
+%133java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*$
+
+__unknown_file (
+px'>2append(Ljava/lang/String;)∏µ
+
+› ›(3
+%134java.lang.String";mage.view.CardView#getLeftSplitCostsStr()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLeftSplitCostsStr()êç
+
+› ›(4
+%135java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*6
+
+__unknown_file (
+
+%134java.lang.String2append(Ljava/lang/String;)åâ
+
+ﬁ ﬁ(-
+%136java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*2
+
+__unknown_file (
+</td></tr></table>2append(Ljava/lang/String;)*
+24*Ã
+26
+– –(éã
+
+– –(+
+%119java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+</td></tr></table>2append(Ljava/lang/String;)<:
+
+”* ”(3
+%120java.util.HashSet"java.util.HashSetl
+j
+
+”& ”(5
+%121"java.util.HashSet#<init>()V*7
+
+__unknown_file (
+
+%120java.util.HashSeto
+m
+
+” ”(6 
+duplicatedRulesjava.util.Set"__id*7
+
+__unknown_file (
+
+%120java.util.HashSetHF
+
+’! ’(.
+%122java.lang.StringBuilder"java.lang.StringBuilder≤
+Ø
+
+’ ’(7
+%123"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*=
+
+__unknown_file (!
+
+%122java.lang.StringBuilder*%
+
+__unknown_file (	
+<br/>t
+r
+
+’ ’(8
+rulejava.lang.StringBuilder"__id*=
+
+__unknown_file (!
+
+%122java.lang.StringBuilderåâ
+
+÷ ÷(
+%124boolean"!mage.view.CardView#isSplitCard()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isSplitCard()*
+13
+25*≥
+27
+Œ Œ(Ã…
+
+Œ Œ(2%
+%116mage.constants.MageObjectType"Emage.view.CardView#getMageObjectType()Lmage/constants/MageObjectType;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getMageObjectType()∂≥
+
+Œ Œ(=
+%117java.lang.String":mage.constants.MageObjectType#toString()Ljava/lang/String;*C
+
+__unknown_file ('
+%
+%116mage.constants.MageObjectType2
+toString()íè
+
+Œ Œ(>
+%118java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*6
+
+__unknown_file (
+
+%117java.lang.String2append(Ljava/lang/String;)*
+26* 
+28
+Õ Õ(Ã…
+
+Õ Õ($%
+%114mage.constants.MageObjectType"Emage.view.CardView#getMageObjectType()Lmage/constants/MageObjectType;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getMageObjectType()_
+]
+
+Õ( Õ(;%
+%115mage.constants.MageObjectType"__id*"
+
+__unknown_file (
+""*
+26
+27*ß
+29
+   (éã
+
+   (3
+%113java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+[only controlled] 2append(Ljava/lang/String;)*
+28*∂
+30
+» »(€ÿ
+
+» »("
+%109java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*!
+
+__unknown_file (
+[2	append(C)≠™
+
+»* »(O
+%110java.lang.String"8mage.view.PermanentView#getNameOwner()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getNameOwner()êç
+
+» »(P
+%111java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%109java.lang.StringBuilder*6
+
+__unknown_file (
+
+%110java.lang.String2append(Ljava/lang/String;)¸˘
+
+» »(]
+%112java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%111java.lang.StringBuilder*"
+
+__unknown_file (
+] 2append(Ljava/lang/String;)*
+28*∫
+
+32
+√ √(–Õ
+
+√ √(m
+%104java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*t
+
+__unknown_file (XV
+T<table cellspacing=0 cellpadding=0 border=0 width='100%' valign='bottom'><tr><td><b>2append(Ljava/lang/String;)êç
+
+ƒ ƒ(
+%105java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*4
+
+__unknown_file (
+
+ptjava.lang.String2append(Ljava/lang/String;)ÉÄ
+
+ƒ ƒ(-
+%106java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%105java.lang.StringBuilder*)
+
+__unknown_file (
+	</b></td>2append(Ljava/lang/String;)éã
+
+≈ ≈(+
+%107java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+<td align='right'>2append(Ljava/lang/String;)úô
+
+∆ ∆('
+%108boolean")mage.view.CardView#isControlledByOwner()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isControlledByOwner()*
+28
+29
+30*£
+33
+¿ ¿(§°
+
+¿ ¿("
+%103java.lang.String"1mage.view.CardView#getLoyalty()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLoyalty()d
+b
+
+¿ ¿("
+ptjava.lang.String"__id*6
+
+__unknown_file (
+
+%103java.lang.String*
+32*Ø
+34
+ø ø(íè
+
+ø ø((
+%102boolean"$mage.view.CardView#isPlanesWalker()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isPlanesWalker()*
+32
+33*√
+35
+æ æ(üú
+
+æ æ( 
+%98java.lang.String"/mage.view.CardView#getPower()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getPower()o
+m
+
+æ æ(&
+%99java.lang.String"__concat*'
+
+æ æ( 
+
+%98java.lang.String*
+
+æ# æ(&
+/®•
+
+æ) æ(<
+%100java.lang.String"3mage.view.CardView#getToughness()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getToughness()Ü
+É
+
+æ æ(<
+%101java.lang.String"__concat*'
+
+æ æ(&
+
+%99java.lang.String*(
+
+æ) æ(<
+
+%100java.lang.Stringd
+b
+
+æ æ(<
+ptjava.lang.String"__id*6
+
+__unknown_file (
+
+%101java.lang.String*
+32*Ñ
+36
+∫ ∫(çä
+
+∫ ∫(+
+%96java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+</td></tr></table>2append(Ljava/lang/String;)L
+J
+
+º º(
+ptjava.lang.String"__id*
+
+__unknown_file ( âÜ
+
+Ω Ω(
+%97boolean" mage.view.CardView#isCreature()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isCreature()*
+35
+34*®	
+37
+∏ ∏(µ≤
+
+∏= ∏(W
+%91java.lang.String":mage.view.CardView#getExpansionSetCode()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getExpansionSetCode()Q
+O
+
+∏d ∏(r
+%92java.util.Locale"__id*"
+
+__unknown_file (
+""˚¯
+
+∏= ∏(s
+%93java.lang.String"Bjava.lang.String#toUpperCase(Ljava/util/Locale;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%91java.lang.String*5
+
+__unknown_file (
+
+%92java.util.Locale2toUpperCase(Ljava/util/Locale;)Ú
+Ô
+∏ ∏(ù
+%94java.lang.String"porg.mage.card.arcane.ManaSymbols#replaceSetCodeWithHTML(Ljava/lang/String;Ljava/lang/String;I)Ljava/lang/String;*@
+
+__unknown_file ($""
+ org.mage.card.arcane.ManaSymbols*5
+
+__unknown_file (
+
+%93java.lang.String*8
+
+__unknown_file (
+
+rarityjava.lang.String*"
+
+__unknown_file (
+""ëé
+∏ ∏(û
+%95java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%94java.lang.String2append(Ljava/lang/String;)*
+36*“
+38
+∑ ∑(µ≤
+
+∑ ∑(&
+%90java.lang.String":mage.view.CardView#getExpansionSetCode()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getExpansionSetCode()*
+36
+37*“
+39
+µ µ(´®
+
+µ µ(%
+%88mage.constants.Rarity"5mage.view.CardView#getRarity()Lmage/constants/Rarity;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRarity()¢ü
+
+µ µ(/
+%89java.lang.String"1mage.constants.Rarity#getCode()Ljava/lang/String;*:
+
+__unknown_file (
+
+%88mage.constants.Rarity2	getCode()g
+e
+
+µ µ(/
+rarityjava.lang.String"__id*5
+
+__unknown_file (
+
+%89java.lang.String*
+38*¥
+40
+ß ß(´®
+
+ß ß($
+%83mage.constants.Rarity"5mage.view.CardView#getRarity()Lmage/constants/Rarity;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRarity()V
+T
+
+® ®(
+%84mage.constants.Rarity"__id*"
+
+__unknown_file (
+""V
+T
+
+´ ´(
+%85mage.constants.Rarity"__id*"
+
+__unknown_file (
+""V
+T
+
+Æ Æ(
+%86mage.constants.Rarity"__id*"
+
+__unknown_file (
+""V
+T
+
+± ±(
+%87mage.constants.Rarity"__id*"
+
+__unknown_file (
+""*
+39
+41
+42
+43
+44*ß
+41
+± ≥(éã
+
+≤ ≤(8
+%82java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*3
+
+__unknown_file (
+<b color='#D5330B'>2append(Ljava/lang/String;)*
+39*•
+42
+Æ ∞(åâ
+
+Ø Ø(6
+%81java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*1
+
+__unknown_file (
+<b color='black'>2append(Ljava/lang/String;)*
+39*¶
+43
+´ ≠(çä
+
+¨ ¨(7
+%80java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+<b color='silver'>2append(Ljava/lang/String;)*
+39*ß
+44
+® ™(éã
+
+© ©(8
+%79java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*3
+
+__unknown_file (
+<b color='#FFBF00'>2append(Ljava/lang/String;)*
+39*ã
+45
+§ §(V
+T
+
+§ §("
+%76mage.constants.Rarity"__id*"
+
+__unknown_file (
+""¢ü
+
+§ §(,
+%77java.lang.String"1mage.constants.Rarity#getCode()Ljava/lang/String;*:
+
+__unknown_file (
+
+%76mage.constants.Rarity2	getCode()g
+e
+
+§ §(,
+rarityjava.lang.String"__id*5
+
+__unknown_file (
+
+%77java.lang.Stringåâ
+
+• •(.
+%78java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*1
+
+__unknown_file (
+<b color='black'>2append(Ljava/lang/String;)*
+38*∆
+46
+† †(˝
+˙
+
+† †($
+%72java.lang.String"Tmage.client.util.gui.GuiDisplayUtil#getTypes(Lmage/view/CardView;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+
+cardmage.view.CardViewêç
+
+† †(%
+%73java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%72java.lang.String2append(Ljava/lang/String;)íè
+
+° °(0
+%74java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*7
+
+__unknown_file (
+</td><td align='right'>2append(Ljava/lang/String;)T
+R
+
+¢ ¢(
+rarityjava.lang.String"__id*"
+
+__unknown_file (
+""´®
+
+£ £(
+%75mage.constants.Rarity"5mage.view.CardView#getRarity()Lmage/constants/Rarity;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRarity()*
+40
+45*†
+47
+û û(áÑ
+
+û û()
+%71java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*,
+
+__unknown_file (
+&nbsp;&nbsp;2append(Ljava/lang/String;)*
+46*≈
+48
+ù ù(üú
+
+ù ù(
+%69mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor()ÜÉ
+
+ù ù(*
+%70boolean"mage.ObjectColor#isColorless()Z*5
+
+__unknown_file (
+
+%69mage.ObjectColor2isColorless()*
+46
+47*œ
+
+49
+õ õ(ÖÇ
+
+õ õ('
+%64java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder**
+
+__unknown_file (
+
+<img src='2append(Ljava/lang/String;)Ç
+ˇ
+
+õ/ õ(Z
+%65java.lang.String"Ymage.client.util.gui.GuiDisplayUtil#getResourcePath(Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+card/color_ind_green.pngçä
+
+õ õ([
+%66java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%64java.lang.StringBuilder*5
+
+__unknown_file (
+
+%65java.lang.String2append(Ljava/lang/String;)Çˇ
+
+õ õ(p
+%67java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%66java.lang.StringBuilder**
+
+__unknown_file (
+
+' alt='G' 2append(Ljava/lang/String;)îë
+õ õ(Ç
+%68java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%67java.lang.StringBuilder*;
+
+__unknown_file (
+
+	imageSizejava.lang.String2append(Ljava/lang/String;)*
+48*ª
+50
+ö ö(üú
+
+ö ö(
+%62mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor()}{
+
+ö ö(%
+%63boolean"mage.ObjectColor#isGreen()Z*5
+
+__unknown_file (
+
+%62mage.ObjectColor2	isGreen()*
+48
+49*Õ
+
+51
+ò ò(ÖÇ
+
+ò ò('
+%57java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder**
+
+__unknown_file (
+
+<img src='2append(Ljava/lang/String;)Ä
+˝
+
+ò/ ò(X
+%58java.lang.String"Ymage.client.util.gui.GuiDisplayUtil#getResourcePath(Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*6
+
+__unknown_file (
+card/color_ind_red.pngçä
+
+ò ò(Y
+%59java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%57java.lang.StringBuilder*5
+
+__unknown_file (
+
+%58java.lang.String2append(Ljava/lang/String;)Çˇ
+
+ò ò(n
+%60java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%59java.lang.StringBuilder**
+
+__unknown_file (
+
+' alt='R' 2append(Ljava/lang/String;)îë
+ò ò(Ä
+%61java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%60java.lang.StringBuilder*;
+
+__unknown_file (
+
+	imageSizejava.lang.String2append(Ljava/lang/String;)*
+50*∑
+52
+ó ó(üú
+
+ó ó(
+%55mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor()yw
+
+ó ó(#
+%56boolean"mage.ObjectColor#isRed()Z*5
+
+__unknown_file (
+
+%55mage.ObjectColor2isRed()*
+50
+51*œ
+
+53
+ï ï(ÖÇ
+
+ï ï('
+%50java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder**
+
+__unknown_file (
+
+<img src='2append(Ljava/lang/String;)Ç
+ˇ
+
+ï/ ï(Z
+%51java.lang.String"Ymage.client.util.gui.GuiDisplayUtil#getResourcePath(Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+card/color_ind_black.pngçä
+
+ï ï([
+%52java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%50java.lang.StringBuilder*5
+
+__unknown_file (
+
+%51java.lang.String2append(Ljava/lang/String;)Çˇ
+
+ï ï(p
+%53java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%52java.lang.StringBuilder**
+
+__unknown_file (
+
+' alt='B' 2append(Ljava/lang/String;)îë
+ï ï(Ç
+%54java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%53java.lang.StringBuilder*;
+
+__unknown_file (
+
+	imageSizejava.lang.String2append(Ljava/lang/String;)*
+52*ª
+54
+î î(üú
+
+î î(
+%48mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor()}{
+
+î î(%
+%49boolean"mage.ObjectColor#isBlack()Z*5
+
+__unknown_file (
+
+%48mage.ObjectColor2	isBlack()*
+52
+53*Ù
+10
+¯) ¯(1¡æ
+
+¯) ¯(B
+%172java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*:
+
+__unknown_file (
+
+textLinejava.lang.String*!
+
+__unknown_file (
+.*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)îë
+
+¯) ¯(I
+%173java.lang.String")java.lang.String#trim()Ljava/lang/String;*6
+
+__unknown_file (
+
+%172java.lang.String2trim()}
+
+¯) ¯(S
+%174boolean"java.lang.String#isEmpty()Z*6
+
+__unknown_file (
+
+%173java.lang.String2	isEmpty()*
+6
+9*Œ
+
+55
+í í(ÖÇ
+
+í í('
+%43java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder**
+
+__unknown_file (
+
+<img src='2append(Ljava/lang/String;)Å
+˛
+
+í/ í(Y
+%44java.lang.String"Ymage.client.util.gui.GuiDisplayUtil#getResourcePath(Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*7
+
+__unknown_file (
+card/color_ind_blue.pngçä
+
+í í(Z
+%45java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%43java.lang.StringBuilder*5
+
+__unknown_file (
+
+%44java.lang.String2append(Ljava/lang/String;)Çˇ
+
+í í(o
+%46java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%45java.lang.StringBuilder**
+
+__unknown_file (
+
+' alt='U' 2append(Ljava/lang/String;)îë
+í í(Å
+%47java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%46java.lang.StringBuilder*;
+
+__unknown_file (
+
+	imageSizejava.lang.String2append(Ljava/lang/String;)*
+54*π
+56
+ë ë(üú
+
+ë ë(
+%41mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor(){y
+
+ë ë($
+%42boolean"mage.ObjectColor#isBlue()Z*5
+
+__unknown_file (
+
+%41mage.ObjectColor2isBlue()*
+54
+55*Ô
+12
+˜# ˜(,◊‘
+
+˜# ˜(7
+%171java.util.List"Hmage.client.util.gui.GuiDisplayUtil$TextLines#getLines()Ljava/util/List;*X
+
+__unknown_file (<
+:
+	textLines-mage.client.util.gui.GuiDisplayUtil$TextLines2
+getLines()*
+6*œ
+
+57
+è è(ÖÇ
+
+è è('
+%36java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder**
+
+__unknown_file (
+
+<img src='2append(Ljava/lang/String;)Ç
+ˇ
+
+è/ è(Z
+%37java.lang.String"Ymage.client.util.gui.GuiDisplayUtil#getResourcePath(Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+card/color_ind_white.pngçä
+
+è è([
+%38java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%36java.lang.StringBuilder*5
+
+__unknown_file (
+
+%37java.lang.String2append(Ljava/lang/String;)Çˇ
+
+è è(p
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%38java.lang.StringBuilder**
+
+__unknown_file (
+
+' alt='W' 2append(Ljava/lang/String;)îë
+è è(Ç
+%40java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%39java.lang.StringBuilder*;
+
+__unknown_file (
+
+	imageSizejava.lang.String2append(Ljava/lang/String;)*
+56*
+13
+ˆ ˆ(◊‘
+
+ˆ ˆ(!
+%169java.util.List"Hmage.client.util.gui.GuiDisplayUtil$TextLines#getLines()Ljava/util/List;*X
+
+__unknown_file (<
+:
+	textLines-mage.client.util.gui.GuiDisplayUtil$TextLines2
+getLines(){y
+
+ˆ ˆ(+
+%170boolean"java.util.List#isEmpty()Z*4
+
+__unknown_file (
+
+%169java.util.List2	isEmpty()*
+5
+12*œ
+58
+ã ã(çä
+
+ã ã(+
+%28java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+</td></tr></table>2append(Ljava/lang/String;)’“
+
+å å(s
+%29java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*z
+
+__unknown_file (^\
+Z<table cellspacing=0 cellpadding=0 border=0 width='100%'><tr><td style='margin-left: 1px'>2append(Ljava/lang/String;)b
+`
+
+ç ç(H
+%30java.lang.String"__concat*
+
+ç ç($	
+ width=*
+
+ç' ç(H
+""v
+t
+
+ç ç(U
+%31java.lang.String"__concat*'
+
+ç ç(H
+
+%30java.lang.String*
+
+çK ç(U
+
+ height=p
+n
+
+ç ç(y
+%32java.lang.String"__concat*'
+
+ç ç(U
+
+%31java.lang.String*
+
+çX ç(y
+""o
+m
+
+ç ç(
+%33java.lang.String"__concat*'
+
+ç ç(y
+
+%32java.lang.String*
+
+ç| ç(
+>k
+i
+ç ç(Ä
+	imageSizejava.lang.String"__id*5
+
+__unknown_file (
+
+%33java.lang.Stringüú
+
+é é(
+%34mage.ObjectColor"/mage.view.CardView#getColor()Lmage/ObjectColor;*8
+
+__unknown_file (
+
+cardmage.view.CardView2
+getColor()}{
+
+é é(%
+%35boolean"mage.ObjectColor#isWhite()Z*5
+
+__unknown_file (
+
+%34mage.ObjectColor2	isWhite()*
+57
+56*à
+14
+Ó Ó(T
+R
+
+Ó Ó(
+rulingjava.lang.String"__id*"
+
+__unknown_file (
+""ë
+é
+
+Ó Ó(
+rulingjava.lang.String"
+__arrayGet*4
+
+__unknown_file (
+
+%159java.util.List*"
+
+__unknown_file (
+""*
+13
+14
+16*±
+59
+â â(òï
+
+â â(&
+%27java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*=
+
+__unknown_file (!
+
+castingCostjava.lang.String2append(Ljava/lang/String;)*
+58*ê
+15
+Ò Ò(#∆
+√
+
+Ò Ò(/
+%163boolean"
+__arrayAdd*>
+
+__unknown_file ("
+ 
+duplicatedRulesjava.util.Set*
+
+__unknown_file (: *8
+
+__unknown_file (
+
+rulingjava.lang.Stringëé
+
+Ú Ú(:
+%164java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*7
+
+__unknown_file (
+<p style='margin: 2px'>2append(Ljava/lang/String;)≤Ø
+
+Ú] Ú(u
+%165java.lang.String"8mage.view.CardView#getRightSplitName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRightSplitName()–
+Õ
+
+ÚB Ú(v
+%166java.lang.String"nmage.client.util.gui.GuiDisplayUtil#replaceNamesInRule(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+
+rulingjava.lang.String*6
+
+__unknown_file (
+
+%165java.lang.Stringêç
+
+Ú Ú(w
+%167java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%164java.lang.StringBuilder*6
+
+__unknown_file (
+
+%166java.lang.String2append(Ljava/lang/String;)ˇ¸
+Ú Ú(Ü
+%168java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%167java.lang.StringBuilder*$
+
+__unknown_file (
+</p>2append(Ljava/lang/String;)*
+14*Ù
+16
+Ô' Ô(-øº
+
+Ô' Ô(>
+%160java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*8
+
+__unknown_file (
+
+rulingjava.lang.String*!
+
+__unknown_file (
+.*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)îë
+
+Ô' Ô(E
+%161java.lang.String")java.lang.String#trim()Ljava/lang/String;*6
+
+__unknown_file (
+
+%160java.lang.String2trim()}
+
+Ô' Ô(O
+%162boolean"java.lang.String#isEmpty()Z*6
+
+__unknown_file (
+
+%161java.lang.String2	isEmpty()*
+14
+15*…
+18
+Ó! Ó(%∞≠
+
+Ó! Ó(:
+%159java.util.List"7mage.view.CardView#getRightSplitRules()Ljava/util/List;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRightSplitRules()*
+14*ø
+19
+Ê Ê(≥∞
+
+Ê Ê(T
+%147java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*Y
+
+__unknown_file (=;
+9<table cellspacing=0 cellpadding=0 border=0 width='100%'>2append(Ljava/lang/String;)íè
+
+Á Á(3
+%148java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*8
+
+__unknown_file (
+<tr><td valign='top'><b>2append(Ljava/lang/String;)≤Ø
+
+Ë Ë(0
+%149java.lang.String"8mage.view.CardView#getRightSplitName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRightSplitName()êç
+
+Ë Ë(1
+%150java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*6
+
+__unknown_file (
+
+%149java.lang.String2append(Ljava/lang/String;)Ø¨
+
+È È(P
+%151java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*U
+
+__unknown_file (97
+5</b></td><td align='right' valign='top' style='width:2append(Ljava/lang/String;)∫∑
+
+Í= Í(Y
+%152java.lang.String"<mage.view.CardView#getRightSplitCostsStr()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRightSplitCostsStr()Ê
+„
+
+Í Í(Z
+%153int"Norg.mage.card.arcane.ManaSymbols#getClearManaSymbolsCount(Ljava/lang/String;)I*@
+
+__unknown_file ($""
+ org.mage.card.arcane.ManaSymbols*6
+
+__unknown_file (
+
+%152java.lang.String€ÿ
+Í Í(Å
+%154java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)˛˚
+
+Î Î(
+%155java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*$
+
+__unknown_file (
+px'>2append(Ljava/lang/String;)∫∑
+
+Ï Ï(4
+%156java.lang.String"<mage.view.CardView#getRightSplitCostsStr()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getRightSplitCostsStr()êç
+
+Ï Ï(5
+%157java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*6
+
+__unknown_file (
+
+%156java.lang.String2append(Ljava/lang/String;)åâ
+
+Ì Ì(-
+%158java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*2
+
+__unknown_file (
+</td></tr></table>2append(Ljava/lang/String;)*
+18*”
+1
+å å(éã
+
+å å(+
+%191java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*2
+
+__unknown_file (
+<br></body></html>2append(Ljava/lang/String;)"1
+
+ç ç(#
+!
+bufferjava.lang.StringBuilder*”
+2
+â â(•¢
+
+â â(F
+%188java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*I
+
+__unknown_file (-+
+)<p style='margin: 2px'><b>Card Zone:</b> 2append(Ljava/lang/String;)ìê
+
+â â(S
+%189java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/Object;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%188java.lang.StringBuilder*9
+
+__unknown_file (
+
+zonemage.constants.Zone2append(Ljava/lang/Object;)˛˚
+
+â â(b
+%190java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%189java.lang.StringBuilder*$
+
+__unknown_file (
+</p>2append(Ljava/lang/String;)*
+1*¨
+3
+á á(§°
+
+á á("
+%187mage.constants.Zone"1mage.view.CardView#getZone()Lmage/constants/Zone;*8
+
+__unknown_file (
+
+cardmage.view.CardView2	getZone()l
+j
+
+á á(#
+zonemage.constants.Zone"__id*9
+
+__unknown_file (
+
+%187mage.constants.Zone*
+2
+1*‡
+4
+É É(&¨©
+
+É. É(C
+%181java.lang.String"5mage.view.CardView#getDisplayName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getDisplayName()œ
+Ã
+
+É É(D
+%182java.lang.String"nmage.client.util.gui.GuiDisplayUtil#replaceNamesInRule(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*7
+
+__unknown_file (
+
+legaljava.lang.String*6
+
+__unknown_file (
+
+%181java.lang.Stringg
+e
+
+É É(D
+legaljava.lang.String"__id*6
+
+__unknown_file (
+
+%182java.lang.Stringg
+e
+
+ÑD Ñ(T-
+%183%org.mage.card.arcane.ManaSymbols$Type"__id*"
+
+__unknown_file (
+""g
+e
+
+ÑD Ñ(\-
+%184%org.mage.card.arcane.ManaSymbols$Type"__id*"
+
+__unknown_file (
+""¯
+ı
+
+Ñ Ñ(]
+%185java.lang.String"Ñorg.mage.card.arcane.ManaSymbols#replaceSymbolsWithHTML(Ljava/lang/String;Lorg/mage/card/arcane/ManaSymbols$Type;)Ljava/lang/String;*@
+
+__unknown_file ($""
+ org.mage.card.arcane.ManaSymbols*7
+
+__unknown_file (
+
+legaljava.lang.String*K
+
+__unknown_file (/
+-
+%184%org.mage.card.arcane.ManaSymbols$Typeíè
+
+Ñ Ñ(^
+%186java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*6
+
+__unknown_file (
+
+%185java.lang.String2append(Ljava/lang/String;)*
+3*∞
+5
+Å Å(™ß
+
+Å Å(&
+%179java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder2
+toString()g
+e
+
+Å Å('
+legaljava.lang.String"__id*6
+
+__unknown_file (
+
+%179java.lang.StringÄ~
+
+Ç Ç(
+%180boolean"java.lang.String#isEmpty()Z*7
+
+__unknown_file (
+
+legaljava.lang.String2	isEmpty()*
+3
+4*â
+6
+˜ ˜( V
+T
+
+˜ ˜( 
+textLinejava.lang.String"__id*"
+
+__unknown_file (
+""ì
+ê
+
+˜ ˜( 
+textLinejava.lang.String"
+__arrayGet*4
+
+__unknown_file (
+
+%171java.util.List*"
+
+__unknown_file (
+""*
+
+5
+6
+10*¿
+7
+¸ ¸(ëé
+
+¸ ¸(:
+%176java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*7
+
+__unknown_file (
+<p style='margin: 2px'>2append(Ljava/lang/String;)îë
+
+¸ ¸(K
+%177java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%176java.lang.StringBuilder*:
+
+__unknown_file (
+
+textLinejava.lang.String2append(Ljava/lang/String;)˛˚
+
+¸ ¸(Z
+%178java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%177java.lang.StringBuilder*$
+
+__unknown_file (
+</p>2append(Ljava/lang/String;)*
+6*Å
+9
+˘ ˘('Á‰
+
+˘ ˘(:
+%175boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+duplicatedRulesjava.util.Set*:
+
+__unknown_file (
+
+textLinejava.lang.String2contains(Ljava/lang/Object;)*
+6
+7*ª
+60
+Ö Ö(∞≠
+
+Ö Ö(N
+%23java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*U
+
+__unknown_file (97
+5</b></td><td align='right' valign='top' style='width:2append(Ljava/lang/String;)€ÿ
+
+Ü Ü(F
+%24java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)ˇ¸
+
+á á(
+%25java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*$
+
+__unknown_file (
+px'>2append(Ljava/lang/String;)ãà
+
+à à(
+%26boolean"!mage.view.CardView#isSplitCard()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isSplitCard()*
+58
+59*É	
+61
+É É(˝˙
+
+É É(
+%18java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*"
+
+__unknown_file (
+ [2append(Ljava/lang/String;)ïí
+
+É' É(3
+%19java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getId()ñì
+
+É' É(>
+%20java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%19java.util.UUID2
+toString()ﬂ‹
+
+É É(E
+%21java.lang.StringBuilder"Sjava.lang.StringBuilder#append(Ljava/lang/CharSequence;II)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%18java.lang.StringBuilder*5
+
+__unknown_file (
+
+%20java.lang.String*
+
+__unknown_file (2 * 
+
+__unknown_file (22"append(Ljava/lang/CharSequence;II)◊‘
+
+É É(Q
+%22java.lang.StringBuilder":java.lang.StringBuilder#append(C)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%21java.lang.StringBuilder*!
+
+__unknown_file (
+]2	append(C)*
+60*´
+62
+Ò Ò($\
+Z
+
+Ò Ò(%
+
+fontFamilyjava.lang.String"__id*&
+
+__unknown_file (
+
+tahomaFD
+
+˘) ˘(6
+%6java.lang.StringBuilder"java.lang.StringBuilderô
+ñ
+
+˘% ˘(;
+%7""java.lang.StringBuilder#<init>(I)V*;
+
+__unknown_file (
+
+%6java.lang.StringBuilder*!
+
+__unknown_file (2Ät
+r
+
+˘ ˘(<!
+bufferjava.lang.StringBuilder"__id*;
+
+__unknown_file (
+
+%6java.lang.StringBuilderôñ
+
+˙ ˙(8
+%8java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*?
+
+__unknown_file (#!
+<html><body style='font-family:2append(Ljava/lang/String;)ñì
+
+˚ ˚(!
+%9java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*<
+
+__unknown_file ( 
+
+
+fontFamilyjava.lang.String2append(Ljava/lang/String;)ÜÉ
+
+¸ ¸($
+%10java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*+
+
+__unknown_file (
+;font-size:2append(Ljava/lang/String;)€ÿ
+
+˝ ˝(
+%11java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)ñì
+
+˛ ˛(4
+%12java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*;
+
+__unknown_file (
+pt;margin:0px 1px 0px 1px'>2append(Ljava/lang/String;)¥±
+
+ˇ ˇ(R
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*Y
+
+__unknown_file (=;
+9<table cellspacing=0 cellpadding=0 border=0 width='100%'>2append(Ljava/lang/String;)ìê
+
+Ä Ä(1
+%14java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*8
+
+__unknown_file (
+<tr><td valign='top'><b>2append(Ljava/lang/String;)´®
+
+Å Å(+
+%15java.lang.String"5mage.view.CardView#getDisplayName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getDisplayName()êç
+
+Å Å(,
+%16java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*?
+
+__unknown_file (#
+!
+bufferjava.lang.StringBuilder*5
+
+__unknown_file (
+
+%15java.lang.String2append(Ljava/lang/String;)ìê
+
+Ç Ç(
+%17boolean"(mage.view.SimpleCardView#isGameObject()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isGameObject()*
+60
+61*é
+64
+Ì Ì($ÒÓ
+
+Ì Ì(<	
+%5int".java.lang.String#indexOf(Ljava/lang/String;I)I*=
+
+__unknown_file (!
+
+castingCostjava.lang.String*$
+
+__unknown_file (
+<img*"
+
+__unknown_file (
+""2indexOf(Ljava/lang/String;I)*
+62
+64*à
+20
+ﬂ ﬂ(T
+R
+
+ﬂ ﬂ(
+rulingjava.lang.String"__id*"
+
+__unknown_file (
+""ë
+é
+
+ﬂ ﬂ(
+rulingjava.lang.String"
+__arrayGet*4
+
+__unknown_file (
+
+%137java.util.List*"
+
+__unknown_file (
+""*
+19
+20
+22*√
+
+65
+Á Á(™ß
+
+Á Á(/
+%0java.lang.String"5mage.view.CardView#getManaCostStr()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getManaCostStr()h
+f
+
+Á Á(0
+manaCostjava.lang.String"__id*4
+
+__unknown_file (
+
+%0java.lang.StringÓ
+Î
+
+Ë Ë(<
+%1java.lang.String"Porg.mage.card.arcane.UI#getDisplayManaCost(Ljava/lang/String;)Ljava/lang/String;*7
+
+__unknown_file ("
+org.mage.card.arcane.UI*:
+
+__unknown_file (
+
+manaCostjava.lang.Stringk
+i
+
+Ë Ë(=
+castingCostjava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.Stringe
+c
+
+ÈF È(V+
+%2%org.mage.card.arcane.ManaSymbols$Type"__id*"
+
+__unknown_file (
+""e
+c
+
+ÈF È(^+
+%3%org.mage.card.arcane.ManaSymbols$Type"__id*"
+
+__unknown_file (
+""˙
+˜
+
+È È(_
+%4java.lang.String"Ñorg.mage.card.arcane.ManaSymbols#replaceSymbolsWithHTML(Ljava/lang/String;Lorg/mage/card/arcane/ManaSymbols$Type;)Ljava/lang/String;*@
+
+__unknown_file ($""
+ org.mage.card.arcane.ManaSymbols*=
+
+__unknown_file (!
+
+castingCostjava.lang.String*I
+
+__unknown_file (-
++
+%3%org.mage.card.arcane.ManaSymbols$Typek
+i
+
+È È(_
+castingCostjava.lang.String"__id*4
+
+__unknown_file (
+
+%4java.lang.String*
+64*é
+21
+‚ ‚(#∆
+√
+
+‚ ‚(/
+%141boolean"
+__arrayAdd*>
+
+__unknown_file ("
+ 
+duplicatedRulesjava.util.Set*
+
+__unknown_file (: *8
+
+__unknown_file (
+
+rulingjava.lang.Stringëé
+
+„ „(:
+%142java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+rulejava.lang.StringBuilder*7
+
+__unknown_file (
+<p style='margin: 2px'>2append(Ljava/lang/String;)∞≠
+
+„] „(t
+%143java.lang.String"7mage.view.CardView#getLeftSplitName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getLeftSplitName()–
+Õ
+
+„B „(u
+%144java.lang.String"nmage.client.util.gui.GuiDisplayUtil#replaceNamesInRule(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*C
+
+__unknown_file ('"%
+#mage.client.util.gui.GuiDisplayUtil*8
+
+__unknown_file (
+
+rulingjava.lang.String*6
+
+__unknown_file (
+
+%143java.lang.Stringêç
+
+„ „(v
+%145java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%142java.lang.StringBuilder*6
+
+__unknown_file (
+
+%144java.lang.String2append(Ljava/lang/String;)ˇ¸
+„ „(Ö
+%146java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*=
+
+__unknown_file (!
+
+%145java.lang.StringBuilder*$
+
+__unknown_file (
+</p>2append(Ljava/lang/String;)*
+20*Ù
+22
+‡' ‡(-øº
+
+‡' ‡(>
+%138java.lang.String"\java.lang.String#replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Ljava/lang/String;*8
+
+__unknown_file (
+
+rulingjava.lang.String*!
+
+__unknown_file (
+.*
+
+__unknown_file ( 29replace(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)îë
+
+‡' ‡(E
+%139java.lang.String")java.lang.String#trim()Ljava/lang/String;*6
+
+__unknown_file (
+
+%138java.lang.String2trim()}
+
+‡' ‡(O
+%140boolean"java.lang.String#isEmpty()Z*6
+
+__unknown_file (
+
+%139java.lang.String2	isEmpty()*
+20
+21:(
+
+Ê5 Ê(C
+cardmage.view.CardView:H
+
+ÊD Ê(W:
+	textLines-mage.client.util.gui.GuiDisplayUtil$TextLinesB'"%
+#mage.client.util.gui.GuiDisplayUtilH

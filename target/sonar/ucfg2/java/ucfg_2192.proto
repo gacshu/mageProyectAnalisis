@@ -1,0 +1,101 @@
+
+umage.game.GameTinyLeadersImpl#findCommander(Lmage/game/Game;Lmage/players/Player;Ljava/lang/String;)Lmage/cards/Card;`
+VD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameTinyLeadersImpl.java[ [("1*ó
+1\ \(^
+\
+\: \(O&
+%0 mage.constants.CommanderCardType"__id*"
+
+__unknown_file (
+""Q
+O
+\Q \(Y
+%1mage.constants.Zone"__id*"
+
+__unknown_file (
+""èå
+\ \(Z
+%2java.util.Set"ämage.game.Game#getCommanderCardsFromAnyZones(Lmage/players/Player;Lmage/constants/CommanderCardType;[Lmage/constants/Zone;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*;
+
+__unknown_file (
+
+playermage.players.Player*D
+
+__unknown_file ((
+&
+%0 mage.constants.CommanderCardType*7
+
+__unknown_file (
+
+%1mage.constants.Zone2lgetCommanderCardsFromAnyZones(Lmage/players/Player;Lmage/constants/CommanderCardType;[Lmage/constants/Zone;)°û
+\ ](
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%2java.util.Set2stream()ï
+í
+^ ^(K"
+%4java.util.function.Predicate"__declareFunction*O
+
+__unknown_file (31
+/__sonar_lambda_34$mage.game.GameTinyLeadersImplõ
+ò
+
+__unknown_file (5
+"
+%4java.util.function.Predicate"
+commanderName"__id*?
+
+__unknown_file (#
+!
+commanderNamejava.lang.Stringá
+Ñ
+
+__unknown_file (,
+"
+%4java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¨©
+\ ^(L
+%6java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%4java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)™ß
+\ _(
+%7java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream2findFirst()›⁄
+\ `(
+%8mage.cards.Card"?java.util.Optional#orElse(Ljava/lang/Object;)Ljava/lang/Object;*6
+
+__unknown_file (
+
+%7java.util.Optional*"
+
+__unknown_file (
+""2orElse(Ljava/lang/Object;)"#
+\ `(
+
+%8mage.cards.Card:"
+[ [()
+gamemage.game.Game:)
+[* [(8
+playermage.players.Player:-
+[9 [(M!
+commanderNamejava.lang.StringB!
+mage.game.GameTinyLeadersImpl

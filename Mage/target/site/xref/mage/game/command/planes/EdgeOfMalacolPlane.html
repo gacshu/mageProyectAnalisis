@@ -1,0 +1,127 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>EdgeOfMalacolPlane xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../apidocs/mage/game/command/planes/EdgeOfMalacolPlane.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.game.command.planes;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.abilities.Ability;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.ActivateIfConditionActivatedAbility;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.abilities.common.SimpleStaticAbility;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.condition.common.MainPhaseStackEmptyCondition;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.abilities.costs.mana.GenericManaCost;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.ContinuousRuleModifyingEffectImpl;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.Effect;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.RollPlanarDieEffect;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.UntapAllControllerEffect;
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.cost.PlanarDieRollCostIncreasingEffect;
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <strong class="jxr_keyword">import</strong> mage.abilities.effects.common.counter.AddCountersTargetEffect;
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">import</strong> mage.constants.*;
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">import</strong> mage.counters.CounterType;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  <strong class="jxr_keyword">import</strong> mage.filter.common.FilterControlledCreaturePermanent;
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <strong class="jxr_keyword">import</strong> mage.filter.common.FilterCreaturePermanent;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <strong class="jxr_keyword">import</strong> mage.game.Game;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <strong class="jxr_keyword">import</strong> mage.game.command.Plane;
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <strong class="jxr_keyword">import</strong> mage.game.events.GameEvent;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <strong class="jxr_keyword">import</strong> mage.game.events.GameEvent.EventType;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.Permanent;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>  <strong class="jxr_keyword">import</strong> mage.target.Target;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>  <strong class="jxr_keyword">import</strong> mage.target.targetpointer.FixedTarget;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  <strong class="jxr_keyword">import</strong> mage.watchers.common.PlanarRollWatcher;
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>  <strong class="jxr_keyword">import</strong> java.util.ArrayList;
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>  <strong class="jxr_keyword">import</strong> java.util.List;
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>  <strong class="jxr_keyword">import</strong> java.util.Objects;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>  <strong class="jxr_keyword">import</strong> java.util.UUID;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>  <em class="jxr_javadoccomment"> * @author spjspj</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="EdgeOfMalacolPlane" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolPlane">EdgeOfMalacolPlane</a> <strong class="jxr_keyword">extends</strong> <a name="Plane" href="../../../../mage/game/command/Plane.html#Plane">Plane</a> {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>      <strong class="jxr_keyword">public</strong> <a name="EdgeOfMalacolPlane" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolPlane">EdgeOfMalacolPlane</a>() {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          <strong class="jxr_keyword">this</strong>.setPlaneType(Planes.PLANE_EDGE_OF_MALACOL);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          <strong class="jxr_keyword">this</strong>.setExpansionSetCodeForImage(<span class="jxr_string">"PCA"</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>  
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          <em class="jxr_comment">// If a creature you control would untap during your untap step, put two +1/+1 counters on it instead.</em>
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a> ability = <strong class="jxr_keyword">new</strong> <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a>(Zone.COMMAND, <strong class="jxr_keyword">new</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a>());
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(ability);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>  
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          <em class="jxr_comment">// Active player can roll the planar die: Whenever you roll {CHAOS}, untap each creature you control</em>
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          <a name="Effect" href="../../../../mage/abilities/effects/Effect.html#Effect">Effect</a> chaosEffect = <strong class="jxr_keyword">new</strong> <a name="UntapAllControllerEffect" href="../../../../mage/abilities/effects/common/UntapAllControllerEffect.html#UntapAllControllerEffect">UntapAllControllerEffect</a>(<strong class="jxr_keyword">new</strong> <a name="FilterControlledCreaturePermanent" href="../../../../mage/filter/common/FilterControlledCreaturePermanent.html#FilterControlledCreaturePermanent">FilterControlledCreaturePermanent</a>(), <span class="jxr_string">"untap each creature you control"</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          <a name="Target" href="../../../../mage/target/Target.html#Target">Target</a> chaosTarget = <strong class="jxr_keyword">null</strong>;
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          List&lt;Effect&gt; chaosEffects = <strong class="jxr_keyword">new</strong> ArrayList&lt;Effect&gt;();
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          chaosEffects.add(chaosEffect);
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          List&lt;Target&gt; chaosTargets = <strong class="jxr_keyword">new</strong> ArrayList&lt;Target&gt;();
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          chaosTargets.add(chaosTarget);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>          <a name="ActivateIfConditionActivatedAbility" href="../../../../mage/abilities/common/ActivateIfConditionActivatedAbility.html#ActivateIfConditionActivatedAbility">ActivateIfConditionActivatedAbility</a> chaosAbility = <strong class="jxr_keyword">new</strong> <a name="ActivateIfConditionActivatedAbility" href="../../../../mage/abilities/common/ActivateIfConditionActivatedAbility.html#ActivateIfConditionActivatedAbility">ActivateIfConditionActivatedAbility</a>(Zone.COMMAND, <strong class="jxr_keyword">new</strong> <a name="RollPlanarDieEffect" href="../../../../mage/abilities/effects/common/RollPlanarDieEffect.html#RollPlanarDieEffect">RollPlanarDieEffect</a>(chaosEffects, chaosTargets), <strong class="jxr_keyword">new</strong> <a name="GenericManaCost" href="../../../../mage/abilities/costs/mana/GenericManaCost.html#GenericManaCost">GenericManaCost</a>(0), MainPhaseStackEmptyCondition.instance);
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          chaosAbility.addWatcher(<strong class="jxr_keyword">new</strong> <a name="PlanarRollWatcher" href="../../../../mage/watchers/common/PlanarRollWatcher.html#PlanarRollWatcher">PlanarRollWatcher</a>());
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(chaosAbility);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>          chaosAbility.setMayActivate(TargetController.ANY);
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          <strong class="jxr_keyword">this</strong>.getAbilities().add(<strong class="jxr_keyword">new</strong> <a name="SimpleStaticAbility" href="../../../../mage/abilities/common/SimpleStaticAbility.html#SimpleStaticAbility">SimpleStaticAbility</a>(Zone.ALL, <strong class="jxr_keyword">new</strong> <a name="PlanarDieRollCostIncreasingEffect" href="../../../../mage/abilities/effects/common/cost/PlanarDieRollCostIncreasingEffect.html#PlanarDieRollCostIncreasingEffect">PlanarDieRollCostIncreasingEffect</a>(chaosAbility.getOriginalId())));
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      }
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  }
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>  
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>  <strong class="jxr_keyword">class</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a> <strong class="jxr_keyword">extends</strong> <a name="ContinuousRuleModifyingEffectImpl" href="../../../../mage/abilities/effects/ContinuousRuleModifyingEffectImpl.html#ContinuousRuleModifyingEffectImpl">ContinuousRuleModifyingEffectImpl</a> {
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>  
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a> filter = <strong class="jxr_keyword">new</strong> <a name="FilterCreaturePermanent" href="../../../../mage/filter/common/FilterCreaturePermanent.html#FilterCreaturePermanent">FilterCreaturePermanent</a>();
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>      <strong class="jxr_keyword">public</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a>() {
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>          <strong class="jxr_keyword">super</strong>(Duration.Custom, Outcome.Detriment);
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <strong class="jxr_keyword">this</strong>.staticText = <span class="jxr_string">"If a creature you control would untap during your untap step, put two +1/+1 counters on it instead"</span>;
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>      }
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>  
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>      <strong class="jxr_keyword">public</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a>(<strong class="jxr_keyword">final</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a> effect) {
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          <strong class="jxr_keyword">super</strong>(effect);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>      }
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>  
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>      @Override
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>      <strong class="jxr_keyword">public</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a> copy() {
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="EdgeOfMalacolEffect" href="../../../../mage/game/command/planes/EdgeOfMalacolPlane.html#EdgeOfMalacolEffect">EdgeOfMalacolEffect</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>      }
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>      @Override
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> apply(<a name="Game" href="../../../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>          <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>      }
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>  
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>      @Override
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> checksEventType(<a name="GameEvent" href="../../../../mage/game/events/GameEvent.html#GameEvent">GameEvent</a> event, <a name="Game" href="../../../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>          <strong class="jxr_keyword">return</strong> event.getType() == GameEvent.EventType.UNTAP;
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>      }
+<a class="jxr_linenumber" name="L89" href="#L89">89</a>  
+<a class="jxr_linenumber" name="L90" href="#L90">90</a>      @Override
+<a class="jxr_linenumber" name="L91" href="#L91">91</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> applies(<a name="GameEvent" href="../../../../mage/game/events/GameEvent.html#GameEvent">GameEvent</a> event, <a name="Ability" href="../../../../mage/abilities/Ability.html#Ability">Ability</a> source, <a name="Game" href="../../../../mage/game/Game.html#Game">Game</a> game) {
+<a class="jxr_linenumber" name="L92" href="#L92">92</a>          <em class="jxr_comment">// Prevent untap event of creatures of target player</em>
+<a class="jxr_linenumber" name="L93" href="#L93">93</a>          <strong class="jxr_keyword">if</strong> (game.getTurnStepType() == PhaseStep.UNTAP) {
+<a class="jxr_linenumber" name="L94" href="#L94">94</a>              <a name="Plane" href="../../../../mage/game/command/Plane.html#Plane">Plane</a> cPlane = game.getState().getCurrentPlane();
+<a class="jxr_linenumber" name="L95" href="#L95">95</a>              <strong class="jxr_keyword">if</strong> (cPlane == <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L96" href="#L96">96</a>                  <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L97" href="#L97">97</a>              }
+<a class="jxr_linenumber" name="L98" href="#L98">98</a>              <strong class="jxr_keyword">if</strong> (!cPlane.getPlaneType().equals(Planes.PLANE_EDGE_OF_MALACOL)) {
+<a class="jxr_linenumber" name="L99" href="#L99">99</a>                  <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L100" href="#L100">100</a>             }
+<a class="jxr_linenumber" name="L101" href="#L101">101</a>             <a name="Permanent" href="../../../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> permanent = game.getPermanent(event.getTargetId());
+<a class="jxr_linenumber" name="L102" href="#L102">102</a>             <strong class="jxr_keyword">if</strong> (filter.match(permanent, game) &amp;&amp; Objects.equals(permanent.getControllerId(), game.getActivePlayerId())) {
+<a class="jxr_linenumber" name="L103" href="#L103">103</a>                 UUID oldController = source.getControllerId();
+<a class="jxr_linenumber" name="L104" href="#L104">104</a>                 source.setControllerId(game.getActivePlayerId());
+<a class="jxr_linenumber" name="L105" href="#L105">105</a>                 <a name="Effect" href="../../../../mage/abilities/effects/Effect.html#Effect">Effect</a> effect = <strong class="jxr_keyword">new</strong> <a name="AddCountersTargetEffect" href="../../../../mage/abilities/effects/common/counter/AddCountersTargetEffect.html#AddCountersTargetEffect">AddCountersTargetEffect</a>(CounterType.P1P1.createInstance(2));
+<a class="jxr_linenumber" name="L106" href="#L106">106</a>                 effect.setTargetPointer(<strong class="jxr_keyword">new</strong> <a name="FixedTarget" href="../../../../mage/target/targetpointer/FixedTarget.html#FixedTarget">FixedTarget</a>(permanent, game));
+<a class="jxr_linenumber" name="L107" href="#L107">107</a>                 effect.apply(game, source);
+<a class="jxr_linenumber" name="L108" href="#L108">108</a>                 source.setControllerId(oldController);
+<a class="jxr_linenumber" name="L109" href="#L109">109</a>                 <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L110" href="#L110">110</a>             }
+<a class="jxr_linenumber" name="L111" href="#L111">111</a>         }
+<a class="jxr_linenumber" name="L112" href="#L112">112</a>         <strong class="jxr_keyword">return</strong> false;
+<a class="jxr_linenumber" name="L113" href="#L113">113</a>     }
+<a class="jxr_linenumber" name="L114" href="#L114">114</a> }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

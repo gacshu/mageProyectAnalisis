@@ -1,0 +1,383 @@
+
+smage.abilities.effects.common.LookLibraryTopCardTargetPlayerEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z…
+{D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/LookLibraryTopCardTargetPlayerEffect.javaC C("startingBlock*€
+13L! L(&êç
+L! L(5
+%12java.util.Set":mage.cards.Cards#getCards(Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)*
+9*Ž
+14H H()><
+H H('
+%5mage.cards.CardsImpl"mage.cards.CardsImpll
+j
+H H()
+%6"mage.cards.CardsImpl#<init>()V*8
+
+__unknown_file (
+
+%5mage.cards.CardsImplg
+e
+H H(*
+cardsmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%5mage.cards.CardsImpl²¯
+I I(2
+%7mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*A
+
+__unknown_file (%
+#
+targetPlayermage.players.Player2getLibrary()š—
+I I(L
+%8java.util.Set"Bmage.players.Library#getTopCards(Lmage/game/Game;I)Ljava/util/Set;*8
+
+__unknown_file (
+
+%7mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2getTopCards(Lmage/game/Game;I)ÉÆ
+I I(M
+
+%9void")mage.cards.Cards#addAll(Ljava/util/Set;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*1
+
+__unknown_file (
+
+%8java.util.Set2addAll(Ljava/util/Set;)¡ž
+J J(7
+%10java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName()˜•
+J J(E
+%11void"Vmage.players.Player#lookAtCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+playermage.players.Player*5
+
+__unknown_file (
+
+%10java.lang.String*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game2AlookAtCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)*
+
+13
+2
+7*°
+17D D(°­
+D' D(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+D D(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+D D(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player®«
+E- E(D
+%2java.util.UUID"7mage.abilities.Ability#getFirstTarget()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getFirstTarget()ðí
+E E(E
+%3mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+E E(F#
+targetPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%3mage.players.Player„
+F" F(8
+%4mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)h
+f
+F F(9
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%4mage.MageObject*
+14
+1*!
+1[ [("
+[ [(
+""*!
+2Y Y("
+Y Y(
+""*ñ
+3V V( ÜÙ
+V V(=
+%25void"Mmage.players.Player#shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)V*A
+
+__unknown_file (%
+#
+targetPlayermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game28shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)*
+2*ÿ
+startingBlockC C(3Š
+‡
+B B(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+C C("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%26”
+‘
+B B(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+C, C(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%27*
+17*²
+4
+UŽ U(”˜•
+	U U(›
+%24boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%20mage.constants.Outcome*5
+
+__unknown_file (
+
+%21java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+3*x
+5	Uj U(‹c
+a
+	Uj U(‹
+%21java.lang.String"__id*5
+
+__unknown_file (
+
+%23java.lang.String*
+4*v
+6UP U(gb
+`
+UP U(g
+%21java.lang.String"__id*5
+
+__unknown_file (
+
+%22java.lang.String*
+4*l
+7U U(U
+S
+U% U(4
+%20mage.constants.Outcome"__id*"
+
+__unknown_file (
+""*
+5
+6*÷
+9L L(O
+M
+L L(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""Š
+‡
+L L(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%12java.util.Set*"
+
+__unknown_file (
+""*
+
+2
+7
+12*±
+10P P(¥¢
+P+ P(>
+%17java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*;
+
+__unknown_file (
+
+playermage.players.Player2getLogName()“
+
+P+ P(m
+%18java.lang.String"__concat*%
+P+ P(>
+
+%17java.lang.String*:
+PA P(m.,
+* puts the card back on top of the library.ÝÚ
+P P(n
+%19void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%18java.lang.String2!informPlayers(Ljava/lang/String;)*
+9*›
+11N N(R
+P
+NO N([
+%15mage.constants.Zone"__id*"
+
+__unknown_file (
+""±®
+N N(\
+%16boolean"€mage.players.Player#moveCardToGraveyardWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+%15mage.constants.Zone2kmoveCardToGraveyardWithInfo(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;)*
+9*ì
+12M M(£
+ 
+M) M(0
+%13mage.constants.Outcome"__id*o
+
+__unknown_file (S*QD
+Bmage.abilities.effects.common.LookLibraryTopCardTargetPlayerEffect"	
+outcome«¨
+M M(l
+%14boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%13mage.constants.Outcome*I
+
+__unknown_file (-+
+)Put that card into its owner's graveyard?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+10
+11:"
+C C(#
+gamemage.game.Game:,
+C$ C(2 
+sourcemage.abilities.AbilityBFD
+Bmage.abilities.effects.common.LookLibraryTopCardTargetPlayerEffectHP

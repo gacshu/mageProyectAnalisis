@@ -1,0 +1,74 @@
+
+}mage.watchers.common.CardsPutIntoGraveyardWatcher#getCardsPutIntoGraveyardNotFromBattlefield(Lmage/game/Game;)Ljava/util/Set;t
+jD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/watchers/common/CardsPutIntoGraveyardWatcher.javaR R(?"1*¸
+1S S(6¨
+¥
+S S(6
+%0java.util.Set"__id*~
+
+__unknown_file (b*`3
+1mage.watchers.common.CardsPutIntoGraveyardWatcher")
+'cardsPutIntoGraveyardFromEverywhereElse¡ž
+S S(?
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%0java.util.Set2stream()©
+¦
+SD S(\!
+%2java.util.function.Function"__declareFunction*d
+
+__unknown_file (HF
+D__sonar_lambda_314$mage.watchers.common.CardsPutIntoGraveyardWatcher†
+ƒ
+
+__unknown_file (+
+!
+%2java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game£ 
+S S(]
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%2java.util.function.Function2"map(Ljava/util/function/Function;)Ž‹
+S S(v
+%5java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)®
+«
+	S S(‘ 
+%6java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors˜•
+	S S(’
+%7java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%6java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)""
+	S S(“
+
+%7java.util.Set:"
+R@ R(I
+gamemage.game.GameB53
+1mage.watchers.common.CardsPutIntoGraveyardWatcherH

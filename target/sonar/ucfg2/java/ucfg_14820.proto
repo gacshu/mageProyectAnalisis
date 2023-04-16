@@ -1,0 +1,328 @@
+
+smage.abilities.effects.common.counter.AddCounterChoiceSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z…
+{D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/counter/AddCounterChoiceSourceEffect.java9 9("startingBlock*!
+2O O("
+O O(
+""*£
+3N& N(* 
+
+N& N(7
+%22java.util.List"__id*t
+
+__unknown_file (X*VD
+Bmage.abilities.effects.common.counter.AddCounterChoiceSourceEffect"
+counterTypesèå
+N& N(O
+%23boolean",java.util.List#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%22java.util.List*H
+
+__unknown_file (,
+*
+counterChosenmage.counters.CounterType2contains(Ljava/lang/Object;)*
+2
+1*þ
+startingBlock9 9(3Š
+‡
+8 8(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+9 9("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%27”
+‘
+8 8(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+9, 9(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28*
+9*ˆ
+4M$ M(/ª§
+M; M(T
+%18java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*B
+
+__unknown_file (&
+$
+counterChoicemage.choices.Choice2getChoice()O
+M
+Ma M(o
+%19java.util.Locale"__id*"
+
+__unknown_file (
+""ùö
+M; M(p
+%20java.lang.String"Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%18java.lang.String*5
+
+__unknown_file (
+
+%19java.util.Locale2toLowerCase(Ljava/util/Locale;)ö
+ó
+M$ M(q 
+%21mage.counters.CounterType"Smage.counters.CounterType#findByName(Ljava/lang/String;)Lmage/counters/CounterType;*9
+
+__unknown_file ("
+mage.counters.CounterType*5
+
+__unknown_file (
+
+%20java.lang.String~
+|
+M M(r*
+counterChosenmage.counters.CounterType"__id*>
+
+__unknown_file ("
+ 
+%21mage.counters.CounterType*
+2
+3*!
+5J J("
+J J(
+""*‰
+6@ @(/DB
+@# @(-
+%4mage.choices.ChoiceImpl"mage.choices.ChoiceImplr
+p
+@ @(/
+%5"!mage.choices.ChoiceImpl#<init>()V*;
+
+__unknown_file (
+
+%4mage.choices.ChoiceImplu
+s
+@ @(0$
+counterChoicemage.choices.Choice"__id*;
+
+__unknown_file (
+
+%4mage.choices.ChoiceImplçä
+A A(7
+
+%6void"3mage.choices.Choice#setMessage(Ljava/lang/String;)V*B
+
+__unknown_file (&
+$
+counterChoicemage.choices.Choice*3
+
+__unknown_file (
+Choose counter type2setMessage(Ljava/lang/String;)Ÿ
+œ
+C C(!
+%7java.util.List"__id*t
+
+__unknown_file (X*VD
+Bmage.abilities.effects.common.counter.AddCounterChoiceSourceEffect"
+counterTypes¢Ÿ
+C D(!
+%8java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%7java.util.List2stream()º
+·
+E E(j!
+%9java.util.function.Function"__declareFunction*u
+
+__unknown_file (YW
+U__sonar_lambda_300$mage.abilities.effects.common.counter.AddCounterChoiceSourceEffectë
+è
+
+__unknown_file (C
+!
+%9java.util.function.Function"
+AddCounterChoiceSourceEffect"__id*€
+
+__unknown_file (d
+b
+AddCounterChoiceSourceEffectBmage.abilities.effects.common.counter.AddCounterChoiceSourceEffect¤¡
+C E(k
+%12java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%9java.util.function.Function2"map(Ljava/util/function/Function;)®
+«
+F! F(3!
+%13java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+C F(4
+%14java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%13java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)áÞ
+B G(	
+%15void"0mage.choices.Choice#setChoices(Ljava/util/Set;)V*B
+
+__unknown_file (&
+$
+counterChoicemage.choices.Choice*2
+
+__unknown_file (
+
+%14java.util.Set2setChoices(Ljava/util/Set;)U
+S
+I I(*
+%16mage.constants.Outcome"__id*"
+
+__unknown_file (
+""´±
+I I(@
+%17boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*;
+
+__unknown_file (
+
+%16mage.constants.Outcome*B
+
+__unknown_file (&
+$
+counterChoicemage.choices.Choice*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+4
+5*!
+7= =("
+= =(
+""*ó
+9: :(°­
+:' :(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+: :(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+: :(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player¨¥
+;8 ;(L
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()š—
+; ;(M#
+%3mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)
+
+; ;(N*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+6
+7*¶
+1Q Q('ÊÇ
+Q Q(8
+%24mage.counters.Counter"Amage.counters.CounterType#createInstance()Lmage/counters/Counter;*H
+
+__unknown_file (,
+*
+counterChosenmage.counters.CounterType2createInstance()p
+n
+Q Q(9 
+countermage.counters.Counter"__id*:
+
+__unknown_file (
+
+%24mage.counters.Counter±®
+S. S(F
+%25java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ÿœ
+S S(U
+%26boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+countermage.counters.Counter*3
+
+__unknown_file (
+
+%25java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)"
+S S(V
+"":"
+9 9(#
+gamemage.game.Game:,
+9$ 9(2 
+sourcemage.abilities.AbilityBFD
+Bmage.abilities.effects.common.counter.AddCounterChoiceSourceEffectHP

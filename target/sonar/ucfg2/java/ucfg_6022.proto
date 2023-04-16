@@ -1,0 +1,266 @@
+
+Åmage.target.common.TargetPermanentAmount#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;k
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetPermanentAmount.javaa a($"startingBlock*“
+2c c(∞≠
+c c(
+%4java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.target.common.TargetPermanentAmount2getTargets()¢ü
+c d(
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%4java.util.List2stream()≠
+™
+e e(/ 
+%6java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsóî
+c e(0
+%7java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%6java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"!
+c e(1
+
+%7java.util.Set*‰
+3b+ b(5∞≠
+b+ b(7
+%1java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.target.common.TargetPermanentAmount2getTargets()ki
+b+ b(>	
+%2int"java.util.List#size()I*2
+
+__unknown_file (
+
+%1java.util.List2size()¨©
+bB b(Y	
+%3int"/mage.target.TargetImpl#getMaxNumberOfTargets()I*H
+
+__unknown_file (,*
+(mage.target.common.TargetPermanentAmount2getMaxNumberOfTargets()*
+2
+1*Ä
+startingBlocka$ a(Xò
+ï
+` `(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDe
+c
+a* a(<$
+sourceControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%20î
+ë
+` `(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+aF a(L 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21ä
+á
+` `(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+aS a(W
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22*
+4*ƒ
+4b b(!¨©
+b b(#	
+%0int"/mage.target.TargetImpl#getMaxNumberOfTargets()I*H
+
+__unknown_file (,*
+(mage.target.common.TargetPermanentAmount2getMaxNumberOfTargets()*
+3
+1*ú
+1g" g(&ÑÅ
+g" g(8
+%8mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)h
+f
+g g(9
+targetSourcemage.MageObject"__id*3
+
+__unknown_file (
+
+%8mage.MageObjectæª
+h i(!%
+%9mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ç
+ä
+j% j(+"
+%10mage.filter.FilterPermanent"__id*T
+
+__unknown_file (8*6*
+(mage.target.common.TargetPermanentAmount"
+filterÓÎ
+h j(N
+%11java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%9mage.game.permanent.Battlefield*@
+
+__unknown_file ($
+"
+%10mage.filter.FilterPermanent*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)§°
+h k(
+%12java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*3
+
+__unknown_file (
+
+%11java.util.List2stream()êç
+h l()
+%13java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)¢
+ü
+m m(f#
+%14java.util.function.Predicate"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_102$mage.target.common.TargetPermanentAmountô
+ñ
+
+__unknown_file (5
+#
+%14java.util.function.Predicate"
+targetSource"__id*=
+
+__unknown_file (!
+
+targetSourcemage.MageObject§
+°
+
+__unknown_file (;
+#
+%14java.util.function.Predicate"
+sourceControllerId"__id*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDà
+Ö
+
+__unknown_file (-
+#
+%14java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.GameØ¨
+h m(g
+%16java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%13java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%14java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)àÖ
+h n(&
+%17java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Æ
+´
+o o(+!
+%18java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsöó
+h o(,
+%19java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%17java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%18java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)""
+h o(-
+
+%19java.util.Set:0
+a% a(=$
+sourceControllerIdjava.util.UUID:,
+a> a(M 
+sourcemage.abilities.Ability:"
+aN a(W
+gamemage.game.GameB,*
+(mage.target.common.TargetPermanentAmountH

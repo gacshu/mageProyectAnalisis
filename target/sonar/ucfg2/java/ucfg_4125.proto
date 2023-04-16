@@ -1,0 +1,167 @@
+
+xmage.abilities.common.AttacksAloneControlledTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z
+uD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/AttacksAloneControlledTriggeredAbility.java: :("startingBlock*æ
+2C C(èå
+C C($
+%7mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*\
+
+__unknown_file (@>
+<mage.abilities.common.AttacksAloneControlledTriggeredAbility2getEffects()`^
+C3 C(>+
+%8%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¾
+»
+C/ C(O
+%9"^mage.target.targetpointer.FixedTarget#<init>(Lmage/game/permanent/Permanent;Lmage/game/Game;)V*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameÃÀ
+C C(P
+%10void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%7mage.abilities.effects.Effects*I
+
+__unknown_file (-
++
+%8%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)*
+1*„
+startingBlock: :(;—
+”
+9 9(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+:* :(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%11Š
+‡
+9 9(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+:6 :(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12*
+8*!
+4@ @("
+@ @(
+""*ß
+5?" ?(( 
+
+?" ?((!
+%4mage.filter.FilterPermanent"__id*h
+
+__unknown_file (L*J>
+<mage.abilities.common.AttacksAloneControlledTriggeredAbility"
+filterÒÏ
+?: ?(K
+%5java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*\
+
+__unknown_file (@>
+<mage.abilities.common.AttacksAloneControlledTriggeredAbility2getControllerId()ÌÉ
+?" ?(X
+%6boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+%4mage.filter.FilterPermanent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%5java.util.UUID*\
+
+__unknown_file (@>
+<mage.abilities.common.AttacksAloneControlledTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*	
+2
+4
+1*Ø
+6> >("¯¬
+>0 >(C
+%2java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()Š‡
+> >(D#
+%3mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+> >(E*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+4
+5*!
+7< <("
+< <(
+""*Ñ
+8; ;(¤¡
+; ;(
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()’
+; ;(,
+%1boolean"'mage.game.combat.Combat#attacksAlone()Z*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2attacksAlone()*
+6
+7*!
+1E E("
+E E(
+"":/
+:  :(0#
+eventmage.game.events.GameEvent:"
+:1 :(:
+gamemage.game.GameB@>
+<mage.abilities.common.AttacksAloneControlledTriggeredAbilityHP

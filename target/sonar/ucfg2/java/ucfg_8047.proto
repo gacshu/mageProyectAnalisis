@@ -1,0 +1,112 @@
+
+}mage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z„
+zD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/AttacksOpponentWithMostLifeTriggeredAbility.java   ("startingBlock*ÿ
+2" "(¤¡
+"" "(2
+%4mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()ÏÌ
+"A "(S
+%5java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*a
+
+__unknown_file (EC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility2getSourceId()þû
+"" "(T
+%6java.util.UUID"Gmage.game.combat.Combat#getDefenderId(Ljava/util/UUID;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%4mage.game.combat.Combat*2
+
+__unknown_file (
+
+%5java.util.UUID2getDefenderId(Ljava/util/UUID;)ðí
+" "(U
+%7mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%6java.util.UUID2getPlayer(Ljava/util/UUID;)*
+1*ˆ
+3! !(¤¡
+! !(
+%0mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¦£
+! !(.
+%1java.util.Set"5mage.game.combat.Combat#getAttackers()Ljava/util/Set;*;
+
+__unknown_file (
+
+%0mage.game.combat.Combat2getAttackers()ÏÌ
+!8 !(J
+%2java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*a
+
+__unknown_file (EC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbility2getSourceId()ÎË
+! !(K
+%3boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%1java.util.Set*2
+
+__unknown_file (
+
+%2java.util.UUID2contains(Ljava/lang/Object;)*
+2
+1*€
+startingBlock   (;–
+“
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+ *  (/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%8‰
+†
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ 6  (:
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%9*
+3*!
+1! "(^"
+! "(^
+"":/
+    (0#
+eventmage.game.events.GameEvent:"
+ 1  (:
+gamemage.game.GameBEC
+Amage.abilities.common.AttacksOpponentWithMostLifeTriggeredAbilityHP

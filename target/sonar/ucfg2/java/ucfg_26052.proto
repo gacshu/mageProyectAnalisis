@@ -1,0 +1,120 @@
+
+Qmage.server.UserManagerImpl#getUserByName(Ljava/lang/String;)Ljava/util/Optional;e
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/UserManagerImpl.javaQ Q('"startingBlock*6
+2U V(!"'
+U V(!
+
+%10java.util.Optional*¿
+3U V( ´®
+U V( 
+%10java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream2findFirst()*
+2*ê
+startingBlockQ' Q(8ê
+ç
+P P(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+userNamejava.lang.String]
+[
+Q/ Q(7
+userNamejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%12*
+7*Ï
+4U2 U(Yî
+ë
+U2 U(Y"
+%6java.util.function.Predicate"__declareFunction*N
+
+__unknown_file (20
+.__sonar_lambda_866$mage.server.UserManagerImplë
+é
+
+__unknown_file (0
+"
+%6java.util.function.Predicate"
+
+userName"__id*:
+
+__unknown_file (
+
+userNamejava.lang.String¨©
+U U(Z
+%9java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%6java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)*
+3*Ω
+5U U(*®•
+U U(*
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%4java.util.Collection2stream()*
+4*Á
+6U U(â
+Ü
+U U(,
+%3&java.util.concurrent.ConcurrentHashMap"__id*F
+
+__unknown_file (**(
+mage.server.UserManagerImpl"
+users∆√
+U U(!
+%4java.util.Collection"Ejava.util.concurrent.ConcurrentHashMap#values()Ljava/util/Collection;*J
+
+__unknown_file (.
+,
+%3&java.util.concurrent.ConcurrentHashMap2values()*
+5*ñ
+7R R(ä
+á
+R R(.
+%0(java.util.concurrent.locks.ReadWriteLock"__id*E
+
+__unknown_file ()*'
+mage.server.UserManagerImpl"
+lock‰·
+R R(&%
+%1java.util.concurrent.locks.Lock"Tjava.util.concurrent.locks.ReadWriteLock#readLock()Ljava/util/concurrent/locks/Lock;*L
+
+__unknown_file (0
+.
+%0(java.util.concurrent.locks.ReadWriteLock2
+readLock()}
+{
+R R('$
+rjava.util.concurrent.locks.Lock"__id*C
+
+__unknown_file ('
+%
+%1java.util.concurrent.locks.Lockéã
+S S(
+
+%2void"'java.util.concurrent.locks.Lock#lock()V*B
+
+__unknown_file (&
+$
+rjava.util.concurrent.locks.Lock2lock()*
+6:(
+Q( Q(7
+userNamejava.lang.StringB
+mage.server.UserManagerImplH

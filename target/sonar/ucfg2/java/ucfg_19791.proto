@@ -1,0 +1,1303 @@
+
+umage.game.ZonesHandler#maybeRemoveFromSourceZone(Lmage/game/ZoneChangeInfo;Lmage/game/Game;Lmage/abilities/Ability;)Z[
+OD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/ZonesHandler.java® ®(4"51*ù
+46
+≥ ≥("ã
+à
+
+≥* ≥(7&
+%9 mage.game.events.ZoneChangeEvent"__id*L
+
+__unknown_file (0*.
+#
+subInfomage.game.ZoneChangeInfo"
+eventµ≤
+
+≥* ≥(E
+%10java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+%9 mage.game.events.ZoneChangeEvent2getTargetId()´®
+
+≥G ≥(\
+%11mage.cards.Card"5mage.cards.MeldCard#getTopHalfCard()Lmage/cards/Card;*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard2getTopHalfCard()åâ
+
+≥G ≥(d
+%12java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%11mage.cards.Card2getId()˝
+˙
+
+≥ ≥(e
+%13boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%10java.util.UUID*3
+
+__unknown_file (
+
+%12java.util.UUID*
+44
+45*ì
+47
+≤ ≤({y
+
+≤ ≤( 
+
+%8void"java.util.Iterator#remove()V*7
+
+__unknown_file (
+
+itrjava.util.Iterator2remove()*
+49*Í
+25
+ﬂ4 ﬂ(tWU
+
+ﬂ ﬂ(3&
+%56java.lang.IllegalStateException"java.lang.IllegalStateException˘
+ˆ
+
+ﬂ ﬂ(u
+%57";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*D
+
+__unknown_file ((
+&
+%56java.lang.IllegalStateException*^
+
+__unknown_file (B@
+>Unexpected trying of move mdf card to battlefield instead half*
+0*º
+48
+∞) ∞(,ùö
+
+∞) ∞(3
+%6mage.game.ZoneChangeInfo"+java.util.Iterator#next()Ljava/lang/Object;*7
+
+__unknown_file (
+
+itrjava.util.Iterator2next()w
+u
+
+∞ ∞(4#
+subInfomage.game.ZoneChangeInfo"__id*<
+
+__unknown_file ( 
+
+%6mage.game.ZoneChangeInfoÜ
+É
+
+± ±(E
+%7boolean"umage.game.ZonesHandler#maybeRemoveFromSourceZone(Lmage/game/ZoneChangeInfo;Lmage/game/Game;Lmage/abilities/Ability;)Z*6
+
+__unknown_file ("
+mage.game.ZonesHandler*A
+
+__unknown_file (%
+#
+subInfomage.game.ZoneChangeInfo*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*
+46
+47*ù
+49
+ØM Ø(PÄ~
+
+ØM Ø(Z
+%5boolean"java.util.Iterator#hasNext()Z*7
+
+__unknown_file (
+
+itrjava.util.Iterator2	hasNext()*
+48
+42*õ
+27
+‹2 ‹(6∏µ
+
+‹8 ‹(K
+%53java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getPlayerId()[Y
+
+‹$ ‹(1(
+%54!mage.game.permanent.PermanentMeld"!mage.game.permanent.PermanentMeldﬁ
+€
+
+‹  ‹(R
+%55"\mage.game.permanent.PermanentMeld#<init>(Lmage/cards/Card;Ljava/util/UUID;Lmage/game/Game;)V*F
+
+__unknown_file (*
+(
+%54!mage.game.permanent.PermanentMeld*5
+
+__unknown_file (
+
+cardmage.cards.Card*3
+
+__unknown_file (
+
+%53java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gameâ
+Ü
+
+‹ ‹(R*
+	permanentmage.game.permanent.Permanent"__id*F
+
+__unknown_file (*
+(
+%54!mage.game.permanent.PermanentMeld*
+21*å
+28
+ÿ ÿ(.ú
+ô
+
+ÿ ÿ(A
+%52mage.cards.Card"Ñmage.game.ZonesHandler#takeAttributesFromSpell(Lmage/cards/Card;Lmage/game/events/ZoneChangeEvent;Lmage/game/Game;)Lmage/cards/Card;*6
+
+__unknown_file ("
+mage.game.ZonesHandler*5
+
+__unknown_file (
+
+cardmage.cards.Card*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent*4
+
+__unknown_file (
+
+gamemage.game.Gamec
+a
+
+ÿ ÿ(A
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%52mage.cards.Cardd
+b
+
+⁄ ⁄($*
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""*
+25
+27
+22
+23*Û
+29
+‘ ‘(!»≈
+
+‘ ‘(/
+%49mage.constants.Zone"Cmage.game.events.ZoneChangeEvent#getFromZone()Lmage/constants/Zone;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getFromZone()o
+m
+
+‘ ‘(0
+fromZonemage.constants.Zone"__id*8
+
+__unknown_file (
+
+%49mage.constants.Zoneƒ¡
+
+’ ’(!
+%50mage.constants.Zone"Amage.game.events.ZoneChangeEvent#getToZone()Lmage/constants/Zone;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getToZone()T
+R
+
+’% ’(5
+%51mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+28
+12*»
+50
+≠I ≠(MÑ
+Å
+
+≠ ≠(N-
+unmelded!mage.game.ZoneChangeInfo$Unmelded"__id*>
+
+__unknown_file ("
+ 
+infomage.game.ZoneChangeInfo∑¥
+
+Æ- Æ(@
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTargetId()ˆÛ
+
+Æ Æ(A
+%2mage.cards.MeldCard"Amage.game.Game#getMeldCard(Ljava/util/UUID;)Lmage/cards/MeldCard;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getMeldCard(Ljava/util/UUID;)j
+h
+
+Æ Æ(B
+meldmage.cards.MeldCard"__id*7
+
+__unknown_file (
+
+%2mage.cards.MeldCardÖ
+Ç
+
+Ø0 Ø(@
+%3java.util.List"__id*X
+
+__unknown_file (<*:
+-
+unmelded!mage.game.ZoneChangeInfo$Unmelded"	
+subInfoòï
+
+Ø0 Ø(K
+%4java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%3java.util.List2
+iterator()g
+e
+
+Ø Ø(K
+itrjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%4java.util.Iterator*
+49*Æ
+51
+©  ©($à
+Ö
+
+©  ©(*&
+%0 mage.game.events.ZoneChangeEvent"__id*I
+
+__unknown_file (-*+
+ 
+infomage.game.ZoneChangeInfo"
+eventÜ
+É
+
+© ©(+)
+event mage.game.events.ZoneChangeEvent"__id*D
+
+__unknown_file ((
+&
+%0 mage.game.events.ZoneChangeEvent*
+39
+50*•
+30
+” ”(ÜÉ
+
+” ”(%
+%48boolean":mage.game.Game#replaceEvent(Lmage/game/events/GameEvent;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2*replaceEvent(Lmage/game/events/GameEvent;)*
+
+6
+29
+1*&
+31
+œ œ("
+
+œ œ(
+""*∫
+10
+Ç Ç(∫∑
+
+Ç* Ç(B
+%90java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent2getControllerId()ÙÒ
+
+Ç Ç(C
+%91mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%90java.util.UUID2getPlayer(Ljava/util/UUID;)ÎË
+
+Ç Ç(o
+%92boolean"smage.players.Player#removeFromBattlefield(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z*8
+
+__unknown_file (
+
+%91mage.players.Player*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^removeFromBattlefield(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)*
+6
+1*Á
+32
+Õ3 Õ(:R
+P
+
+Õ3 Õ(@
+%41java.lang.Boolean"__id*"
+
+__unknown_file (
+""ùö
+
+ÕH Õ(W
+%42mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()`
+^
+Õa Õ(ç
+%43java.lang.String"__id*0
+
+__unknown_file (
+EnterTransformedèå
+Õê Õ(ú
+%44java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()Ü
+É
+Õa Õ(ú
+%45java.lang.String"__concat*(
+Õa Õ(ç
+
+%43java.lang.String*'
+Õê Õ(ú
+
+%44java.util.UUID¸˘
+ÕH Õ(ù
+%46java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*8
+
+__unknown_file (
+
+%42mage.game.GameState*5
+
+__unknown_file (
+
+%45java.lang.String2getValue(Ljava/lang/String;)⁄◊
+Õ3 Õ(û
+%47boolean"-java.lang.Boolean#equals(Ljava/lang/Object;)Z*6
+
+__unknown_file (
+
+%41java.lang.Boolean*5
+
+__unknown_file (
+
+%46java.lang.Object2equals(Ljava/lang/Object;)*
+30
+31*…
+11
+ˇ ˇ(˛˚
+
+ˇ ˇ(5
+%87void"/mage.cards.Card#setFaceDown(ZLmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2setFaceDown(ZLmage/game/Game;)ÿ’
+
+Ä# Ä(4$
+%88mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTarget()Å
+
+
+Ä Ä(5'
+targetmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%88mage.game.permanent.Permanent «
+
+Å Å(G
+%89boolean"^mage.cards.Card#removeFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)Z*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2MremoveFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)*
+
+6
+10
+1*™
+33
+Õ Õ(çä
+
+Õ Õ(/
+%40boolean""mage.cards.Card#isTransformable()Z*5
+
+__unknown_file (
+
+cardmage.cards.Card2isTransformable()*
+31
+32*¯
+34
+Ã Ã(€ÿ
+
+Ã Ã('
+%39boolean".mage.MageObject#isPermanent(Lmage/game/Game;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2isPermanent(Lmage/game/Game;)*
+30
+33*Ù
+12
+˛ ˛(ÿ’
+
+˛ ˛(($
+%86mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTarget()*
+8
+11*ï
+35
+À À(ƒ¡
+
+À À($
+%36mage.constants.Zone"Amage.game.events.ZoneChangeEvent#getToZone()Lmage/constants/Zone;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getToZone()T
+R
+
+À, À(<
+%37mage.constants.Zone"__id*"
+
+__unknown_file (
+""€ÿ
+
+À À(=
+%38boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+%36mage.constants.Zone*8
+
+__unknown_file (
+
+%37mage.constants.Zone2equals(Ljava/lang/Object;)*
+30
+34*«
+13
+˝ ˝(¨©
+
+˝ ˝(,
+%85void"#mage.game.Game#setScopeRelevant(Z)V*4
+
+__unknown_file (
+
+gamemage.game.Game*
+
+__unknown_file (2 2setScopeRelevant(Z)*
+6
+1*ï
+36
+   (¸˘
+
+   ((
+%35void"/mage.cards.Card#setFaceDown(ZLmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card* 
+
+__unknown_file (2*4
+
+__unknown_file (
+
+gamemage.game.Game2setFaceDown(ZLmage/game/Game;)*
+30*ø
+14
+˙ ˙(ﬂ‹
+
+˙ ˙(//
+%78(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()©¶
+
+˙> ˙(O
+%79java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()¨©
+
+˙Q ˙(g
+%80java.util.UUID",mage.cards.Card#getOwnerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getOwnerId()·ﬁ
+
+˙ ˙(h
+%81void"Ymage.abilities.effects.ContinuousEffects#setController(Ljava/util/UUID;Ljava/util/UUID;)V*M
+
+__unknown_file (1
+/
+%78(mage.abilities.effects.ContinuousEffects*3
+
+__unknown_file (
+
+%79java.util.UUID*3
+
+__unknown_file (
+
+%80java.util.UUID2/setController(Ljava/util/UUID;Ljava/util/UUID;)´®
+
+˚ ˚(0
+%82java.util.Map"5mage.game.Game#getPermanentsEntering()Ljava/util/Map;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanentsEntering()©¶
+
+˚8 ˚(I
+%83java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()´
+®
+
+˚ ˚(J$
+%84mage.game.permanent.Permanent"__mapRemove*2
+
+__unknown_file (
+
+%82java.util.Map*3
+
+__unknown_file (
+
+%83java.util.UUID*
+13*¬
+15
+ˆ ˆ("©¶
+
+˜ ˜(.
+%77void"Lmage.game.events.ZoneChangeEvent#setTarget(Lmage/game/permanent/Permanent;)V*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2*setTarget(Lmage/game/permanent/Permanent;)*
+13*&
+38
+≈ ≈("
+
+≈ ≈(
+""*◊
+16
+ı ı(∫∑
+
+ı ı(F
+%76boolean"^mage.cards.Card#removeFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2MremoveFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)*
+14
+15*‰
+39
+¬ ¬(!∏µ
+
+¬( ¬(;
+%33java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTargetId()£
+†
+
+¬ ¬(<
+%34mage.cards.Card"Wmage.game.ZonesHandler#getTargetCard(Lmage/game/Game;Ljava/util/UUID;)Lmage/cards/Card;*6
+
+__unknown_file ("
+mage.game.ZonesHandler*4
+
+__unknown_file (
+
+gamemage.game.Game*3
+
+__unknown_file (
+
+%33java.util.UUIDc
+a
+
+¬ ¬(=
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%34mage.cards.Card*
+35
+36
+38*Ö
+17
+Ú Ú(Æ´
+
+Ú Ú(+
+%70void"#mage.game.Game#setScopeRelevant(Z)V*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22setScopeRelevant(Z)ﬂ‹
+
+Û Û(+/
+%71(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()©¶
+
+Û: Û(K
+%72java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Ω∫
+
+ÛM Û(h
+%73java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()·ﬁ
+
+Û Û(i
+%74void"Ymage.abilities.effects.ContinuousEffects#setController(Ljava/util/UUID;Ljava/util/UUID;)V*M
+
+__unknown_file (1
+/
+%71(mage.abilities.effects.ContinuousEffects*3
+
+__unknown_file (
+
+%72java.util.UUID*3
+
+__unknown_file (
+
+%73java.util.UUID2/setController(Ljava/util/UUID;Ljava/util/UUID;)ÖÇ
+
+Ù Ù(M
+%75boolean"pmage.game.permanent.Permanent#entersBattlefield(Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone* 
+
+__unknown_file (22QentersBattlefield(Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)*
+14
+16*ì
+18
+Ó Ó(˙˜
+
+Ó Ó(1
+%69void"/mage.cards.Card#setFaceDown(ZLmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*
+
+__unknown_file (2 *4
+
+__unknown_file (
+
+gamemage.game.Game2setFaceDown(ZLmage/game/Game;)*
+17*ˆ
+19
+È Í(F≈¬
+
+È Í(F
+%67void"+mage.game.permanent.Permanent#setTapped(Z)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""2setTapped(Z)ëé
+
+Ï Ï(:
+%68void"/mage.cards.Card#setFaceDown(ZLmage/game/Game;)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2setFaceDown(ZLmage/game/Game;)*
+17
+18*(
+0 "!
+
+ï ï(
+implicit return*%
+1
+î î("
+
+î î(
+""*ï
+2
+ë ë(˛˚
+
+ë ë(9
+%100void"\mage.MageObject#updateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2KupdateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)*
+1*¸
+4
+è è(ÿ’
+
+è è(!$
+%98mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTarget()äá
+
+è è(F
+%99void"\mage.MageObject#updateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)V*B
+
+__unknown_file (&
+$
+%98mage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2KupdateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)*
+1*ı
+5
+é9 é(>ÿ’
+
+é9 é(J$
+%97mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getTarget()*	
+2
+4
+1*∑
+6
+é é(ƒ¡
+
+é é(!
+%95mage.constants.Zone"Amage.game.events.ZoneChangeEvent#getToZone()Lmage/constants/Zone;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getToZone()T
+R
+
+é% é(5
+%96mage.constants.Zone"__id*"
+
+__unknown_file (
+""*	
+2
+5
+1*’
+8
+Ñ Ñ(˛˚
+
+Ñ Ñ(5
+%93void"/mage.cards.Card#setFaceDown(ZLmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2setFaceDown(ZLmage/game/Game;)∫∑
+
+Ö Ö(E
+%94boolean"^mage.cards.Card#removeFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game*=
+
+__unknown_file (!
+
+fromZonemage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2MremoveFromZone(Lmage/game/Game;Lmage/constants/Zone;Lmage/abilities/Ability;)*
+6
+1*“
+40
+Ω Ω(Ü
+É
+
+Ω/ Ω(?
+%27java.util.List"__id*X
+
+__unknown_file (<*:
+-
+unmelded!mage.game.ZoneChangeInfo$Unmelded"	
+subInfoÜ
+É
+
+ΩD Ω(T
+%28java.util.List"__id*X
+
+__unknown_file (<*:
+-
+unmelded!mage.game.ZoneChangeInfo$Unmelded"	
+subInfoom
+
+ΩD Ω([
+
+%29int"java.util.List#size()I*3
+
+__unknown_file (
+
+%28java.util.List2size()ï
+í
+
+Ω/ Ω(`
+%30mage.game.ZoneChangeInfo"
+__arrayGet*3
+
+__unknown_file (
+
+%27java.util.List*"
+
+__unknown_file (
+""à
+Ö
+
+Ω/ Ω(f'
+%31 mage.game.events.ZoneChangeEvent"__id*H
+
+__unknown_file (,**
+
+%30mage.game.ZoneChangeInfo"
+eventÉÄ
+
+Ω Ω(g
+%32void"`mage.cards.MeldCard#updateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)V*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard*4
+
+__unknown_file (
+
+gamemage.game.Game*E
+
+__unknown_file ()
+'
+%31 mage.game.events.ZoneChangeEvent2KupdateZoneChangeCounter(Lmage/game/Game;Lmage/game/events/ZoneChangeEvent;)"
+
+æ æ(
+""*&
+41
+∫ ∫("
+
+∫ ∫(
+""*û
+42
+π π(Ü
+É
+
+π π( 
+%25java.util.List"__id*X
+
+__unknown_file (<*:
+-
+unmelded!mage.game.ZoneChangeInfo$Unmelded"	
+subInfoyw
+
+π π(*
+%26boolean"java.util.List#isEmpty()Z*3
+
+__unknown_file (
+
+%25java.util.List2	isEmpty()*
+40
+41*î
+43
+∂ ∂(±Æ
+
+∂8 ∂(P
+%22mage.cards.Card"8mage.cards.MeldCard#getBottomHalfCard()Lmage/cards/Card;*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard2getBottomHalfCard()ËÂ
+
+∂8 ∂(k
+
+%23int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*4
+
+__unknown_file (
+
+%22mage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)‹Ÿ
+
+∂ ∂(l
+%24void"6mage.cards.MeldCard#setBottomLastZoneChangeCounter(I)V*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard*(
+
+__unknown_file (
+
+
+%23int2!setBottomLastZoneChangeCounter(I)*
+49*Ã
+21
+Á Á(´®
+
+Á Á(,
+%63java.util.Map"5mage.game.Game#getPermanentsEntering()Ljava/util/Map;*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanentsEntering()©¶
+
+Á1 Á(B
+%64java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()Ú
+Ô
+
+Á Á(N$
+%65mage.game.permanent.Permanent"__mapSet*2
+
+__unknown_file (
+
+%63java.util.Map*3
+
+__unknown_file (
+
+%64java.util.UUID*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent‰·
+
+Ë Ë(C
+%66void"omage.cards.Card#checkForCountersToAdd(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^checkForCountersToAdd(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)*
+19*•
+44
+µ µ("å
+â
+
+µ* µ(7'
+%17 mage.game.events.ZoneChangeEvent"__id*L
+
+__unknown_file (0*.
+#
+subInfomage.game.ZoneChangeInfo"
+event∂≥
+
+µ* µ(E
+%18java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+%17 mage.game.events.ZoneChangeEvent2getTargetId()±Æ
+
+µG µ(_
+%19mage.cards.Card"8mage.cards.MeldCard#getBottomHalfCard()Lmage/cards/Card;*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard2getBottomHalfCard()åâ
+
+µG µ(g
+%20java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%19mage.cards.Card2getId()˝
+˙
+
+µ µ(h
+%21boolean"?java.util.Objects#equals(Ljava/lang/Object;Ljava/lang/Object;)Z*1
+
+__unknown_file ("
+java.util.Objects*3
+
+__unknown_file (
+
+%18java.util.UUID*3
+
+__unknown_file (
+
+%20java.util.UUID*
+49
+43*õ
+22
+„2 „(6∏µ
+
+„8 „(K
+%60java.util.UUID"8mage.game.events.GameEvent#getPlayerId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+event mage.game.events.ZoneChangeEvent2getPlayerId()[Y
+
+„$ „(1(
+%61!mage.game.permanent.PermanentCard"!mage.game.permanent.PermanentCardﬁ
+€
+
+„  „(R
+%62"\mage.game.permanent.PermanentCard#<init>(Lmage/cards/Card;Ljava/util/UUID;Lmage/game/Game;)V*F
+
+__unknown_file (*
+(
+%61!mage.game.permanent.PermanentCard*5
+
+__unknown_file (
+
+cardmage.cards.Card*3
+
+__unknown_file (
+
+%60java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gameâ
+Ü
+
+„ „(R*
+	permanentmage.game.permanent.Permanent"__id*F
+
+__unknown_file (*
+(
+%61!mage.game.permanent.PermanentCard*
+21*à
+45
+¥ ¥(´®
+
+¥5 ¥(J
+%14mage.cards.Card"5mage.cards.MeldCard#getTopHalfCard()Lmage/cards/Card;*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard2getTopHalfCard()ËÂ
+
+¥5 ¥(e
+
+%15int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*4
+
+__unknown_file (
+
+%14mage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)÷”
+
+¥ ¥(f
+%16void"3mage.cards.MeldCard#setTopLastZoneChangeCounter(I)V*9
+
+__unknown_file (
+
+meldmage.cards.MeldCard*(
+
+__unknown_file (
+
+
+%15int2setTopLastZoneChangeCounter(I)*
+49*Î
+23
+·4 ·(uWU
+
+· ·(3&
+%58java.lang.IllegalStateException"java.lang.IllegalStateException˙
+˜
+
+· ·(v
+%59";java.lang.IllegalStateException#<init>(Ljava/lang/String;)V*D
+
+__unknown_file ((
+&
+%58java.lang.IllegalStateException*_
+
+__unknown_file (CA
+?Unexpected trying of move permanent to battlefield instead card*
+0:.
+
+®5 ®(I 
+infomage.game.ZoneChangeInfo:$
+
+®J ®(T
+gamemage.game.Game:.
+
+®U ®(c 
+sourcemage.abilities.AbilityB"
+mage.game.ZonesHandlerP

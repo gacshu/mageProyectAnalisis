@@ -1,0 +1,291 @@
+
+mage.player.human.HumanPlayer#chooseBlockerOrder(Ljava/util/List;Lmage/game/combat/CombatGroup;Ljava/util/List;Lmage/game/Game;)Ljava/util/UUID;y
+mD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.Human/src/mage/player/human/HumanPlayer.javaú ú(""startingBlock*›
+2
+‰ ‰(#_
+]
+
+‰ ‰(#%
+permmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+"" 
+
+
+‰ ‰(#%
+permmage.game.permanent.Permanent"
+__arrayGet*8
+
+__unknown_file (
+
+blockersjava.util.List*"
+
+__unknown_file (
+""*
+4
+9*İ
+3
+‹ ‹(#¤¡
+
+‹ ‹(+
+%11java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getId()"%
+
+‹ ‹(,
+
+%11java.util.UUID*
+startingBlockú" ú(
+
+
+ù ù(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+blockersjava.util.List]
+[
+
+ú= ú(E
+blockersjava.util.List"__annotation*#
+
+__unknown_file (
+
+%12¡
+
+
+ù ù(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*I
+
+__unknown_file (-
++
+combatGroupmage.game.combat.CombatGroupn
+l
+
+úS ú(^+
+combatGroupmage.game.combat.CombatGroup"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+
+ù ù(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+blockerOrderjava.util.Listb
+`
+úu ú(
+blockerOrderjava.util.List"__annotation*#
+
+__unknown_file (
+
+%14Œ
+‰
+
+ù ù(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.Game[
+Y
+úˆ ú(Œ
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+11*—
+4
+Š Š(£ 
+
+Š Š($
+%9java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+permmage.game.permanent.Permanent2getId()×Ô
+
+Š Š(7
+%10boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%9java.util.UUID*:
+
+__unknown_file (
+
+
+responseIdjava.util.UUID2equals(Ljava/lang/Object;)*
+2
+3*ê
+6
+… …(õò
+
+… …(!
+
+%7void"@mage.player.human.HumanPlayer#waitForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2!waitForResponse(Lmage/game/Game;)ğ
+í
+
+‡ ‡(8
+%8java.util.UUID"Tmage.player.human.HumanPlayer#getFixedResponseUUID(Lmage/game/Game;)Ljava/util/UUID;*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Gamef
+d
+
+‡ ‡(9
+
+responseIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%8java.util.UUID*
+2
+9*Ç
+7
+ƒ ƒ(w
+u
+
+ƒ+ ƒ(3
+%5java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.human.HumanPlayer"
+
+playerId·´
+
+ƒ ƒ(T
+
+%6void"Zmage.game.Game#fireSelectTargetEvent(Ljava/util/UUID;Ljava/lang/String;Ljava/util/List;Z)V*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID*,
+
+__unknown_file (
+Pick blocker*8
+
+__unknown_file (
+
+blockersjava.util.List* 
+
+__unknown_file (22JfireSelectTargetEvent(Ljava/util/UUID;Ljava/lang/String;Ljava/util/List;Z)*
+6*œ
+8
+€ €(#İÚ
+
+€ €(?
+
+%2void"Zmage.player.human.HumanPlayer#updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*2
+
+__unknown_file (
+chooseBlockerOrder*4
+
+__unknown_file (
+
+gamemage.game.Game2;updateGameStatePriority(Ljava/lang/String;Lmage/game/Game;)ûø
+
+ ($
+
+%3void"Cmage.player.human.HumanPlayer#prepareForResponse(Lmage/game/Game;)V*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game2$prepareForResponse(Lmage/game/Game;)¤¡
+
+‚ ‚(#
+%4boolean"1mage.player.human.HumanPlayer#isExecutingMacro()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2isExecutingMacro()*
+6
+7*¬
+9
+ÿ ÿ(’
+
+ÿ ÿ(
+%1boolean"%mage.players.PlayerImpl#canRespond()Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer2canRespond()*
+8
+1*&
+10
+ü ü("
+
+ü ü(
+""*ú
+11
+û û($Ş
+Û
+
+û û(*
+%0boolean"Image.player.human.HumanPlayer#gameInCheckPlayableState(Lmage/game/Game;)Z*=
+
+__unknown_file (!
+mage.player.human.HumanPlayer*4
+
+__unknown_file (
+
+gamemage.game.Game*
+9
+10*%
+1
+ ("
+
+ (
+"":(
+
+ú# ú(F
+blockersjava.util.List:9
+
+úG ú(_+
+combatGroupmage.game.combat.CombatGroup:-
+ú` ú(‚
+blockerOrderjava.util.List:&
+úƒ ú(Œ
+gamemage.game.GameB!
+mage.player.human.HumanPlayerH

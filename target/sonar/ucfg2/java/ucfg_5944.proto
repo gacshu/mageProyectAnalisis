@@ -1,0 +1,186 @@
+
+}mage.abilities.effects.common.ShuffleHandIntoLibraryDrawThatManySourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+…D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ShuffleHandIntoLibraryDrawThatManySourceEffect.java   ("startingBlock*!
+2* *("
+* *(
+""*ï
+3% %(¢Ÿ
+%% %(9
+%4mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getHand()Q
+O
+%; %(G
+%5mage.constants.Zone"__id*"
+
+__unknown_file (
+""Œ
+% %(V
+%6boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*4
+
+__unknown_file (
+
+%4mage.cards.Cards*7
+
+__unknown_file (
+
+%5mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)ÙÖ
+& &(7
+
+%7void"Mmage.players.Player#shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game28shuffleLibrary(Lmage/abilities/Ability;Lmage/game/Game;)š—
+' '(
+%8mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ßÜ
+' '(3
+
+%9void"4mage.game.GameState#processAction(Lmage/game/Game;)V*7
+
+__unknown_file (
+
+%8mage.game.GameState*4
+
+__unknown_file (
+
+gamemage.game.Game2processAction(Lmage/game/Game;)õò
+( ((=
+
+%10int"Image.players.Player#drawCards(ILmage/abilities/Ability;Lmage/game/Game;)I*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*"
+
+__unknown_file (
+""*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game24drawCards(ILmage/abilities/Ability;Lmage/game/Game;)*
+2*þ
+startingBlock   (3Š
+‡
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11”
+‘
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+ ,  (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12*
+5*¨
+4# #(&¢Ÿ
+# #(0
+%2mage.cards.Cards"/mage.players.Player#getHand()Lmage/cards/Cards;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getHand()lj
+# #(7	
+%3int"java.util.Set#size()I*4
+
+__unknown_file (
+
+%2mage.cards.Cards2size()*
+2
+3*«
+5! !( °­
+!+ !(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+! !(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+! !(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+4
+1*!
+1, ,("
+, ,(
+"":"
+   (#
+gamemage.game.Game:,
+ $  (2 
+sourcemage.abilities.AbilityBPN
+Lmage.abilities.effects.common.ShuffleHandIntoLibraryDrawThatManySourceEffectHP

@@ -1,0 +1,182 @@
+
+šmage.abilities.costs.common.PayLifeCost#pay(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/Ability;Ljava/util/UUID;ZLmage/abilities/costs/Cost;)Zj
+`D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/common/PayLifeCost.java3 3("startingBlock*!
+26 6("
+6 6(
+""*‚
+34 4( ú÷
+4 4(8
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+4 4(9!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Player*
+2
+1*ì	
+startingBlock3 3(u”
+‘
+2 2(
+%4"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilitya
+_
+3 3(&!
+abilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%4‰
+†
+2 2(
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+3- 3(1
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%5“
+
+2 2(
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+3; 3(A 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%6‘
+Ž
+2 2(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID^
+\
+3H 3(T
+controllerIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%7™
+–
+2 2(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+	costToPaymage.abilities.costs.Costf
+d
+3k 3(t&
+	costToPaymage.abilities.costs.Cost"__annotation*"
+
+__unknown_file (
+
+%8*
+3* 
+18 8($˜
+•
+8 8($.
+%1(mage.abilities.dynamicvalue.DynamicValue"__id*S
+
+__unknown_file (7*5)
+'mage.abilities.costs.common.PayLifeCost"
+amountÓÐ
+8 8(C	
+%2int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%1(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*"
+
+__unknown_file (
+""2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)‹
+ˆ
+9 9(R
+%3boolean"^mage.util.CardUtil#tryPayLife(ILmage/players/Player;Lmage/abilities/Ability;Lmage/game/Game;)Z*2
+
+__unknown_file ("
+mage.util.CardUtil*"
+
+__unknown_file (
+""*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game"
+; ;(
+"":-
+3 3('!
+abilitymage.abilities.Ability:"
+3( 3(2
+gamemage.game.Game:,
+33 3(B 
+sourcemage.abilities.Ability:*
+3C 3(U
+controllerIdjava.util.UUID: 
+
+__unknown_file (
+"":2
+3f 3(t&
+	costToPaymage.abilities.costs.CostB+)
+'mage.abilities.costs.common.PayLifeCostHP

@@ -1,0 +1,118 @@
+
+lmage.abilities.condition.common.TargetHasSuperTypeCondition#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z~
+tD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/condition/common/TargetHasSuperTypeCondition.java ("startingBlock*¿
+2 (!ž›
+ (0
+%4java.util.Set"-mage.MageObject#getSuperType()Ljava/util/Set;*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject2getSuperType()Ÿ
+œ
+: (C
+%5mage.constants.SuperType"__id*j
+
+__unknown_file (N*L=
+;mage.abilities.condition.common.TargetHasSuperTypeCondition"
+	superTypeØÕ
+ (D
+%6boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%4java.util.Set*<
+
+__unknown_file ( 
+
+%5mage.constants.SuperType2contains(Ljava/lang/Object;)"
+ (E
+""*™
+3$ ((®«
+3 (J
+%2java.util.UUID"7mage.abilities.Ability#getFirstTarget()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getFirstTarget()èå
+$ (K
+%3mage.MageObject";mage.game.Game#getObject(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getObject(Ljava/util/UUID;)f
+d
+ (L
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%3mage.MageObject*
+2
+1*ú
+startingBlock (3‰
+†
+ (
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+ ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%7“
+
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+, (2 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%8*
+4*É
+4 (°­
+ ( 
+%0mage.target.Targets"8mage.abilities.Ability#getTargets()Lmage/target/Targets;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getTargets()}
+ (*
+%1boolean"java.util.ArrayList#isEmpty()Z*7
+
+__unknown_file (
+
+%0mage.target.Targets2	isEmpty()*
+3
+1*!
+1 ("
+ (
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB?=
+;mage.abilities.condition.common.TargetHasSuperTypeConditionHP

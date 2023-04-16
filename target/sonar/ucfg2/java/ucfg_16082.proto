@@ -1,0 +1,436 @@
+
+[mage.players.PlayerImpl#canBeTargetedBy(Lmage/MageObject;Ljava/util/UUID;Lmage/game/Game;)Z\
+PD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/players/PlayerImpl.javaÙ Ù(""startingBlock*&
+14
+ˆ ˆ("
+
+ˆ ˆ(
+""*¶
+15
+ı ı("ÜÉ
+
+ı ı(,
+%1boolean""mage.players.PlayerImpl#hasLeft()Z*7
+
+__unknown_file (
+mage.players.PlayerImpl2	hasLeft()*
+14
+1
+12*£
+16
+ı ı(ÜÉ
+
+ı ı(
+%0boolean""mage.players.PlayerImpl#hasLost()Z*7
+
+__unknown_file (
+mage.players.PlayerImpl2	hasLost()*
+14
+15*%
+1
+î î("
+
+î î(
+""*˙
+
+2
+ç ç(ﬂ‹
+
+ç ç(//
+%23(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()èå
+
+é* é(8
+%24java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+
+sourcemage.MageObject2getId()QO
+
+é é(##
+%25mage.game.events.TargetEvent"mage.game.events.TargetEventË
+Â
+
+é é(M
+%26"[mage.game.events.TargetEvent#<init>(Lmage/players/Player;Ljava/util/UUID;Ljava/util/UUID;)V*A
+
+__unknown_file (%
+#
+%25mage.game.events.TargetEvent*7
+
+__unknown_file (
+mage.players.PlayerImpl*3
+
+__unknown_file (
+
+%24java.util.UUID*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID†ù
+
+ç í(
+%27boolean"åmage.abilities.effects.ContinuousEffects#preventedByRuleModification(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;Z)Z*M
+
+__unknown_file (1
+/
+%23(mage.abilities.effects.ContinuousEffects*A
+
+__unknown_file (%
+#
+%25mage.game.events.TargetEvent*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (22bpreventedByRuleModification(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;Z)"
+
+ç í(
+""*%
+3
+â â("
+
+â â(
+""*Å
+startingBlock
+Ù" Ù(Yè
+å
+
+Û Û(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+sourcemage.MageObject\
+Z
+
+Ù. Ù(4
+sourcemage.MageObject"__annotation*#
+
+__unknown_file (
+
+%28ö
+ó
+
+Û Û(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDg
+e
+
+Ù; Ù(M$
+sourceControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%29å
+â
+
+Û Û(
+%30"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ÙT Ù(X
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%30*
+16*Ê
+4
+à à(!Ã…
+
+à à(/
+%22boolean"Mmage.players.PlayerImpl#hasProtectionFrom(Lmage/MageObject;Lmage/game/Game;)Z*7
+
+__unknown_file (
+mage.players.PlayerImpl*7
+
+__unknown_file (
+
+sourcemage.MageObject*4
+
+__unknown_file (
+
+gamemage.game.Game24hasProtectionFrom(Lmage/MageObject;Lmage/game/Game;)*
+2
+3*%
+5
+Ö Ö("
+
+Ö Ö(
+""*¨
+6
+Å Å( }
+{
+
+Å Å( 
+%15mage.abilities.Abilities"__id*F
+
+__unknown_file (**(
+mage.players.PlayerImpl"
+	abilities∞≠
+
+Å Å()
+%16java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*=
+
+__unknown_file (!
+
+%15mage.abilities.Abilities2stream()íè
+
+Å Ç(B
+%17java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)äá
+
+Å É(9
+%18java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%17java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ì
+ê
+
+Ñ Ñ(J#
+%19java.util.function.Predicate"__declareFunction*J
+
+__unknown_file (.,
+*__sonar_lambda_317$mage.players.PlayerImplç
+ä
+
+__unknown_file (/
+#
+%19java.util.function.Predicate"
+source"__id*7
+
+__unknown_file (
+
+sourcemage.MageObjectà
+Ö
+
+__unknown_file (-
+#
+%19java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameçä
+
+Å Ñ(K
+%21boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%19java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)*
+4
+5*¡	
+7
+Ä Ä(ﬂ‹
+
+Ä Ä(:/
+%11(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()ôñ
+
+ÄD Ä(P
+%12java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()b
+`
+
+ÄR Ä(m(
+%13!mage.constants.AsThoughEffectType"__id*"
+
+__unknown_file (
+""≈¬
+Ä Ä(é
+%14mage.ApprovingObject"¥mage.abilities.effects.ContinuousEffects#asThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/ApprovingObject;*M
+
+__unknown_file (1
+/
+%11(mage.abilities.effects.ContinuousEffects*3
+
+__unknown_file (
+
+%12java.util.UUID*F
+
+__unknown_file (*
+(
+%13!mage.constants.AsThoughEffectType*"
+
+__unknown_file (
+""*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2uasThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+4
+6*„
+8
+ˇ ˇ(…∆
+
+ˇ ˇ(A
+%10boolean"Fmage.players.PlayerImpl#hasOpponent(Ljava/util/UUID;Lmage/game/Game;)Z*7
+
+__unknown_file (
+mage.players.PlayerImpl*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2-hasOpponent(Ljava/util/UUID;Lmage/game/Game;)*
+4
+7*&
+10
+˚ ˚("
+
+˚ ˚(
+""*ø	
+11
+˙ ˙(ﬁ€
+
+˙ ˙(:.
+%6(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()òï
+
+˙D ˙(P
+%7java.util.UUID"/mage.players.PlayerImpl#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+mage.players.PlayerImpl2getId()a
+_
+
+˙R ˙(k'
+%8!mage.constants.AsThoughEffectType"__id*"
+
+__unknown_file (
+""¡æ
+˙ ˙(å
+%9mage.ApprovingObject"¥mage.abilities.effects.ContinuousEffects#asThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/ApprovingObject;*L
+
+__unknown_file (0
+.
+%6(mage.abilities.effects.ContinuousEffects*2
+
+__unknown_file (
+
+%7java.util.UUID*E
+
+__unknown_file ()
+'
+%8!mage.constants.AsThoughEffectType*"
+
+__unknown_file (
+""*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2uasThough(Ljava/util/UUID;Lmage/constants/AsThoughEffectType;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+
+4
+8
+10*í
+12
+˘ ˘(|
+z
+
+˘ ˘(
+%2mage.abilities.Abilities"__id*F
+
+__unknown_file (**(
+mage.players.PlayerImpl"
+	abilities€
+ÿ
+
+˘& ˘(A*
+%3$mage.abilities.keyword.ShroudAbility"Xmage.abilities.keyword.ShroudAbility#getInstance()Lmage/abilities/keyword/ShroudAbility;*D
+
+__unknown_file (("&
+$mage.abilities.keyword.ShroudAbility¨©
+
+˘& ˘(I
+%4java.util.UUID"2mage.abilities.AbilityImpl#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+%3$mage.abilities.keyword.ShroudAbility2getId()ËÂ
+
+˘ ˘(J
+%5boolean"7mage.abilities.Abilities#containsKey(Ljava/util/UUID;)Z*<
+
+__unknown_file ( 
+
+%2mage.abilities.Abilities*2
+
+__unknown_file (
+
+%4java.util.UUID2containsKey(Ljava/util/UUID;)*
+
+4
+8
+11:'
+
+Ù# Ù(5
+sourcemage.MageObject:2
+
+Ù6 Ù(N$
+sourceControllerIdjava.util.UUID:$
+
+ÙO Ù(X
+gamemage.game.GameB
+mage.players.PlayerImplHP

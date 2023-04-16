@@ -1,0 +1,413 @@
+
+¿mage.player.ai.ComputerPlayer#canUseAsThoughManaToPayManaCost(Lmage/abilities/costs/mana/ManaCost;Lmage/abilities/Ability;Lmage/Mana;Lmage/abilities/Ability;Lmage/MageObject;Lmage/game/Game;)ZÄ
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.java´ ´(+"16*Ø
+13∂~ ∂(â¥±
+∂~ ∂(ô
+%4java.util.UUID"6mage.abilities.Ability#getOriginalId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+manaAbilitymage.abilities.Ability2getOriginalId()_
+]
+∂~ ∂(ô
+%2java.util.UUID"__id*2
+
+__unknown_file (
+
+%4java.util.UUID*
+12*«
+14
+∂M ∂(_ŒÀ
+
+∂M ∂({
+%3java.util.UUID"@mage.ConditionalMana#getManaProducerOriginalId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+conditionalNetManamage.ConditionalMana2getManaProducerOriginalId()^
+\
+
+∂M ∂({
+%2java.util.UUID"__id*2
+
+__unknown_file (
+
+%3java.util.UUID*
+12*ˆ
+15
+≤C ≤(Mw
+u
+
+≤ ≤(N*
+conditionalNetManamage.ConditionalMana"__id*5
+
+__unknown_file (
+
+
+manaOption	mage.Manaèå
+
+µ µ(5
+%0mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*C
+
+__unknown_file ('
+%
+manaAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)ŒÀ
+
+∂ ∂(B
+%1java.util.UUID"@mage.ConditionalMana#getManaProducerOriginalId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+conditionalNetManamage.ConditionalMana2getManaProducerOriginalId()*
+13
+14*É
+16
+∞ ∞(&g
+e
+
+∞ ∞(&-
+possiblePoolItemmage.players.ManaPoolItem"__id*"
+
+__unknown_file (
+""*
+15
+11*%
+1
+⁄ ⁄("
+
+⁄ ⁄(
+""*î
+2
+« «(^
+\
+
+« «($
+	checkTypemage.constants.ManaType"__id*"
+
+__unknown_file (
+""ö
+ó
+
+« «($
+	checkTypemage.constants.ManaType"
+__arrayGet*3
+
+__unknown_file (
+
+%18java.util.List*"
+
+__unknown_file (
+""*
+9
+1*%
+3
+÷ ÷("
+
+÷ ÷(
+""*¥
+5
+” ”()öó
+
+” ”(K
+
+%25int"9mage.players.ManaPoolItem#get(Lmage/constants/ManaType;)I*K
+
+__unknown_file (/
+-
+possiblePoolItemmage.players.ManaPoolItem*U
+
+__unknown_file (9
+7
+possibleAsThoughPoolManaTypemage.constants.ManaType2get(Lmage/constants/ManaType;)*
+2
+3*Ø
+6
+– –()ïí
+
+– –(1
+
+%24int""mage.players.ManaPoolItem#count()I*K
+
+__unknown_file (/
+-
+possiblePoolItemmage.players.ManaPoolItem2count()*
+2
+3*q
+7
+Õ Õ(X
+V
+
+Œ0 Œ(B
+%23mage.constants.ManaType"__id*"
+
+__unknown_file (
+""*
+5
+6*—
+9
+…4 …(8ﬂ‹
+
+…4 …(O/
+%19(mage.abilities.effects.ContinuousEffects"Omage.game.Game#getContinuousEffects()Lmage/abilities/effects/ContinuousEffects;*4
+
+__unknown_file (
+
+gamemage.game.Game2getContinuousEffects()≤Ø
+…z …(î
+%20java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilityToPaymage.abilities.Ability2getSourceId()ª∏
+…§ …(¬
+%21java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((
+&
+abilityToPaymage.abilities.Ability2getControllerId()“œ
+…4 …(…
+%22mage.constants.ManaType"Ãmage.abilities.effects.ContinuousEffects#asThoughMana(Lmage/constants/ManaType;Lmage/players/ManaPoolItem;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Lmage/constants/ManaType;*M
+
+__unknown_file (1
+/
+%19(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+	checkTypemage.constants.ManaType*K
+
+__unknown_file (/
+-
+possiblePoolItemmage.players.ManaPoolItem*3
+
+__unknown_file (
+
+%20java.util.UUID*D
+
+__unknown_file ((
+&
+abilityToPaymage.abilities.Ability*3
+
+__unknown_file (
+
+%21java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2äasThoughMana(Lmage/constants/ManaType;Lmage/players/ManaPoolItem;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)ç
+ä
+… …( 7
+possibleAsThoughPoolManaTypemage.constants.ManaType"__id*<
+
+__unknown_file ( 
+
+%22mage.constants.ManaType*
+2
+7*û
+10
+«" «(*Ü
+É
+
+«" «(H
+%18java.util.List"[mage.util.ManaUtil#getManaTypesInCost(Lmage/abilities/costs/mana/ManaCost;)Ljava/util/List;*2
+
+__unknown_file ("
+mage.util.ManaUtil*M
+
+__unknown_file (1
+/
+	checkCost"mage.abilities.costs.mana.ManaCost*
+2*ë
+11
+∫ ∫(om
+
+∫ ∫('	
+%7int"mage.Mana#getRed()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2getRed()sq
+
+ª ª()	
+%8int"mage.Mana#getGreen()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2
+getGreen()qo
+
+º º((	
+%9int"mage.Mana#getBlue()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2	getBlue()tr
+
+Ω Ω()
+
+%10int"mage.Mana#getWhite()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2
+getWhite()tr
+
+æ æ()
+
+%11int"mage.Mana#getBlack()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2
+getBlack()xv
+
+ø ø(+
+
+%12int"mage.Mana#getGeneric()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2getGeneric()|z
+
+ø. ø(G
+
+%13int"mage.Mana#getColorless()I*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2getColorless()¥±
+
+¡ ¡(/
+%14java.util.UUID"6mage.abilities.Ability#getOriginalId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+manaAbilitymage.abilities.Ability2getOriginalId()vt
+
+¬ ¬((
+%15boolean"mage.Mana#getFlag()Z*5
+
+__unknown_file (
+
+
+manaOption	mage.Mana2	getFlag()KI
+
+π# π(/ 
+%16mage.players.ManaPoolItem"mage.players.ManaPoolItem∏
+µ
+
+π √(
+%17"Kmage.players.ManaPoolItem#<init>(IIIIIILmage/MageObject;Ljava/util/UUID;Z)V*>
+
+__unknown_file ("
+ 
+%16mage.players.ManaPoolItem*'
+
+__unknown_file (
+	
+%7int*'
+
+__unknown_file (
+	
+%8int*'
+
+__unknown_file (
+	
+%9int*(
+
+__unknown_file (
+
+
+%10int*(
+
+__unknown_file (
+
+
+%11int*"
+
+__unknown_file (
+""*=
+
+__unknown_file (!
+
+manaProducermage.MageObject*3
+
+__unknown_file (
+
+%14java.util.UUID*,
+
+__unknown_file (
+
+%15booleanÑ
+Å
+
+π √(-
+possiblePoolItemmage.players.ManaPoolItem"__id*>
+
+__unknown_file ("
+ 
+%16mage.players.ManaPoolItem*
+10*Œ
+12
+≥ ∑(JH
+
+≥# ≥(/
+%5mage.players.ManaPoolItem"mage.players.ManaPoolItem„
+‡
+
+≥ ∑(
+%6"Zmage.players.ManaPoolItem#<init>(Lmage/ConditionalMana;Lmage/MageObject;Ljava/util/UUID;)V*=
+
+__unknown_file (!
+
+%5mage.players.ManaPoolItem*H
+
+__unknown_file (,
+*
+conditionalNetManamage.ConditionalMana*3
+
+__unknown_file (
+
+%0mage.MageObject*2
+
+__unknown_file (
+
+%2java.util.UUIDÉ
+Ä
+
+≥ ∑(-
+possiblePoolItemmage.players.ManaPoolItem"__id*=
+
+__unknown_file (!
+
+%5mage.players.ManaPoolItem*
+10:=
+
+´, ´(?/
+	checkCost"mage.abilities.costs.mana.ManaCost:4
+
+´@ ´(U&
+abilityToPaymage.abilities.Ability:%
+
+´V ´(f
+
+manaOption	mage.Mana:3
+
+´g ´({%
+manaAbilitymage.abilities.Ability:.
+´| ´(î
+manaProducermage.MageObject:&
+´ï ´(û
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerP

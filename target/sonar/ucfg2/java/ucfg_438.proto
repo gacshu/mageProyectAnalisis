@@ -1,0 +1,251 @@
+
+Mmage.player.ai.SimulatedPlayer2#addBlockers(Lmage/game/Game;)Ljava/util/List;{
+oD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI.MA/src/mage/player/ai/SimulatedPlayer2.javaÂ Â(#"3*«
+2
+È È(è
+å
+
+È È(*
+%5java.util.List"1java.util.Collections#emptyList()Ljava/util/List;*5
+
+__unknown_file ("
+java.util.Collections"$
+
+È È(+
+
+%5java.util.List*Á
+3
+Ê+ Ê(::8
+
+Ê/ Ê(8
+%0java.util.HashMap"java.util.HashMaph
+f
+
+Ê+ Ê(:
+%1"java.util.HashMap#<init>()V*5
+
+__unknown_file (
+
+%0java.util.HashMapi
+g
+
+Ê Ê(;
+engagementsjava.util.Map"__id*5
+
+__unknown_file (
+
+%0java.util.HashMap¶£
+
+Á Á((
+%2mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()§°
+
+Á Á(4
+%3java.util.List"3mage.game.combat.Combat#getGroups()Ljava/util/List;*;
+
+__unknown_file (
+
+%2mage.game.combat.Combat2getGroups()mk
+
+Á Á(;	
+%4int"java.util.List#size()I*2
+
+__unknown_file (
+
+%3java.util.List2size()*
+2
+1*Ω
+1
+Ì Ì(êç
+
+Ì Ì(
+%6mage.game.Game"+mage.util.Copyable#copy()Ljava/lang/Object;*4
+
+__unknown_file (
+
+gamemage.game.Game2copy()_
+]
+
+Ì Ì(
+simmage.game.Game"__id*2
+
+__unknown_file (
+
+%6mage.game.Game•¢
+
+Ó Ó('
+%7mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*3
+
+__unknown_file (
+
+simmage.game.Game2getCombat()¶£
+
+Ó Ó(2
+%8java.lang.String"4mage.game.combat.Combat#getValue()Ljava/lang/String;*;
+
+__unknown_file (
+
+%7mage.game.combat.Combat2
+getValue()yw
+
+Ó Ó(=	
+%9int"java.lang.String#hashCode()I*4
+
+__unknown_file (
+
+%8java.lang.String2
+hashCode()¶£
+
+Ó? Ó(N
+%10mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*3
+
+__unknown_file (
+
+simmage.game.Game2getCombat()‹
+Ÿ
+
+Ó Ó(O
+%11mage.game.combat.Combat"__mapSet*:
+
+__unknown_file (
+
+engagementsjava.util.Map*'
+
+__unknown_file (
+	
+%9int*<
+
+__unknown_file ( 
+
+%10mage.game.combat.Combate
+c
+
+Ô) Ô(<+
+%12$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""e
+c
+
+Ô) Ô(N+
+%13$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""z
+x
+
+ÔP Ô(X
+%14java.util.UUID"__id*M
+
+__unknown_file (1*/!
+mage.player.ai.SimulatedPlayer2"
+
+playerIdz
+x
+
+ÔZ Ô(b
+%15java.util.UUID"__id*M
+
+__unknown_file (1*/!
+mage.player.ai.SimulatedPlayer2"
+
+playerId≠
+™
+
+Ô Ô(c!
+%16mage.game.events.GameEvent"ámage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Ljava/util/UUID;)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%13$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%14java.util.UUID*3
+
+__unknown_file (
+
+%15java.util.UUIDÙÒ
+
+Ô Ô(d
+%17void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*3
+
+__unknown_file (
+
+simmage.game.Game*?
+
+__unknown_file (#
+!
+%16mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)ïí
+
+Ò# Ò(=
+%18java.util.List"Nmage.players.PlayerImpl#getAvailableBlockers(Lmage/game/Game;)Ljava/util/List;*?
+
+__unknown_file (#!
+mage.player.ai.SimulatedPlayer2*4
+
+__unknown_file (
+
+gamemage.game.Game2&getAvailableBlockers(Lmage/game/Game;)e
+c
+
+Ò Ò(>
+blockersjava.util.List"__id*3
+
+__unknown_file (
+
+%18java.util.List§°
+
+Ú Ú(/
+%19void"\mage.player.ai.SimulatedPlayer2#addBlocker(Lmage/game/Game;Ljava/util/List;Ljava/util/Map;)V*?
+
+__unknown_file (#!
+mage.player.ai.SimulatedPlayer2*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+blockersjava.util.List*:
+
+__unknown_file (
+
+engagementsjava.util.Map2;addBlocker(Lmage/game/Game;Ljava/util/List;Ljava/util/Map;)†ù
+
+Ù Ù(3
+%20java.util.Collection",java.util.Map#values()Ljava/util/Collection;*:
+
+__unknown_file (
+
+engagementsjava.util.Map2values()?=
+
+Ù Ù(
+%21java.util.ArrayList"java.util.ArrayList¿
+Ω
+
+Ù Ù(4
+%22"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%21java.util.ArrayList*9
+
+__unknown_file (
+
+%20java.util.Collection"*
+
+Ù Ù(5
+
+%21java.util.ArrayList:$
+
+Â$ Â(-
+gamemage.game.GameB#!
+mage.player.ai.SimulatedPlayer2H

@@ -1,0 +1,108 @@
+
+\mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility#isInactive(Lmage/game/Game;)ZÅ
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/delayed/ManaSpentDelayedTriggeredAbility.javaA A("startingBlock*â
+2I I(∞≠
+I J(
+%3mage.players.ManaPool"8mage.players.Player#getManaPool()Lmage/players/ManaPool;*;
+
+__unknown_file (
+
+playermage.players.Player2getManaPool()§°
+I K(
+%4java.util.List"4mage.players.ManaPool#getManaItems()Ljava/util/List;*9
+
+__unknown_file (
+
+%3mage.players.ManaPool2getManaItems()¢ü
+I L(
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%4java.util.List2stream()ÜÉ
+I M(/
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ÏÈ
+I N(1
+%7boolean"Bjava.util.stream.Stream#noneMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2)noneMatch(Ljava/util/function/Predicate;)*
+1*À
+3G G(‘—
+G' G(=
+%1java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*^
+
+__unknown_file (B@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility2getControllerId()Ì
+G G(>
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+G G(?
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+2
+1*Ç
+startingBlockA A((â
+Ü
+@ @(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+A# A('
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+5*!
+4C C("
+C C(
+""*‘
+5B B(º
+π
+B B("
+%0boolean"Dmage.abilities.DelayedTriggeredAbility#isInactive(Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game*
+3
+4*!
+1H N(2"
+H N(2
+"":"
+A A('
+gamemage.game.GameBB@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbilityHP

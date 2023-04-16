@@ -1,0 +1,313 @@
+
+Image.game.GameImpl#restoreState(ILjava/lang/String;)Lmage/game/GameState;W
+KD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/GameImpl.javaë ë(!"startingBlock*”	
+2
+ø ø(o
+m
+
+ø ø(
+%20mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+stateéæ
+
+ø ø(.
+%21void"3mage.game.GameState#restore(Lmage/game/GameState;)V*8
+
+__unknown_file (
+
+%20mage.game.GameState*<
+
+__unknown_file ( 
+
+restoremage.game.GameState2restore(Lmage/game/GameState;)x
+v
+
+ù ù("
+%22mage.players.PlayerList"__id*B
+
+__unknown_file (&*$
+mage.game.GameImpl"
+
+playerListo
+m
+
+ù. ù(3
+%23mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state°­
+
+ù. ù(H
+%24java.util.UUID"8mage.game.GameState#getPlayerByOrderId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+%23mage.game.GameState2getPlayerByOrderId()êç
+
+ù ù(I
+%25boolean"6mage.util.CircularList#setCurrent(Ljava/lang/Object;)Z*<
+
+__unknown_file ( 
+
+%22mage.players.PlayerList*3
+
+__unknown_file (
+
+%24java.util.UUID2setCurrent(Ljava/lang/Object;)o
+m
+
+ú ú($
+%26mage.game.GameState"__id*=
+
+__unknown_file (!*
+mage.game.GameImpl"
+state"*
+
+ú ú(%
+
+%26mage.game.GameState*…
+3
+ô# ô(.q
+o
+
+ô# ô(.
+%15java.util.Stack"__id*C
+
+__unknown_file ('*%
+mage.game.GameImpl"
+savedStates
+Œ
+
+ô# ô(@
+%16java.lang.Integer"
+__arrayGet*4
+
+__unknown_file (
+
+%15java.util.Stack*"
+
+__unknown_file (
+""®«
+
+õ õ(,
+%17void"%mage.game.GameImpl#removeBookmark(I)V*2
+
+__unknown_file (
+mage.game.GameImpl*"
+
+__unknown_file (
+""2removeBookmark(I)u
+s
+
+ö( ö(2
+%18mage.game.GameStates"__id*B
+
+__unknown_file (&*$
+mage.game.GameImpl"
+
+gameStatesÎË
+
+ö( ö(E
+%19mage.game.GameState"5mage.game.GameStates#rollback(I)Lmage/game/GameState;*9
+
+__unknown_file (
+
+%18mage.game.GameStates*"
+
+__unknown_file (
+""2rollback(I)n
+l
+
+ö ö(F
+restoremage.game.GameState"__id*8
+
+__unknown_file (
+
+%19mage.game.GameState*
+2
+1*—
+startingBlock
+ë! ë(?‘
+Ž
+
+ê ê(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*9
+
+__unknown_file (
+
+contextjava.lang.String^
+\
+
+ë7 ë(>
+contextjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%27*
+8
+1*Ò
+4
+ð ð(W
+U
+
+ð ð(
+%5org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""œ
+™
+
+ð% ð(y
+%6java.lang.String"__concat*S
+
+ð% ð(hEC
+AIt was not possible to do the requested undo operation (bookmark *
+
+ðk ð(y
+""‰
+†
+ð% ð(˜
+%7java.lang.String"__concat*&
+
+ð% ð(y
+
+%6java.lang.String*-
+ð| ð(˜
+ does not exist) context: Š
+‡
+ð% ð(¢
+%8java.lang.String"__concat*'
+ð% ð(˜
+
+%7java.lang.String*-
+ð› ð(¢
+
+contextjava.lang.StringàÝ
+ð ð(£
+
+%9void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%5org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%8java.lang.String2error(Ljava/lang/Object;)X
+V
+
+ñ ñ(
+%10org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""q
+o
+
+ñ7 ñ(B
+%11java.util.Stack"__id*C
+
+__unknown_file ('*%
+mage.game.GameImpl"
+savedStates™–
+
+ñ7 ñ(M
+%12java.lang.String"-java.util.Vector#toString()Ljava/lang/String;*4
+
+__unknown_file (
+
+%11java.util.Stack2
+toString()|
+z
+
+ñ$ ñ(M
+%13java.lang.String"__concat* 
+
+ñ$ ñ(4
+Saved states: *'
+
+ñ7 ñ(M
+
+%12java.lang.StringàÝ
+
+ñ ñ(N
+%14void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%10org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%13java.lang.String2info(Ljava/lang/Object;)*
+1*…
+5
+ï ï($p
+n
+
+ï ï($
+%3java.util.Stack"__id*C
+
+__unknown_file ('*%
+mage.game.GameImpl"
+savedStateszx
+
+ï ï(.
+%4boolean"java.util.Vector#isEmpty()Z*3
+
+__unknown_file (
+
+%3java.util.Stack2	isEmpty()*
+4
+1*Ñ
+6
+î î( p
+n
+
+î î( 
+%1java.util.Stack"__id*C
+
+__unknown_file ('*%
+mage.game.GameImpl"
+savedStatesÅÂ
+
+î î(7
+%2boolean".java.util.Vector#contains(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%1java.util.Stack*"
+
+__unknown_file (
+""2contains(Ljava/lang/Object;)*
+3
+5*–
+8
+ì ì( }{
+
+ì ì(+
+%0boolean"mage.game.GameImpl#hasEnded()Z*2
+
+__unknown_file (
+mage.game.GameImpl2
+hasEnded()*
+6
+1*%
+1
+ÿ ÿ("
+
+ÿ ÿ(
+"": 
+
+__unknown_file (
+"":)
+
+ë0 ë(>
+contextjava.lang.StringB
+mage.game.GameImplH

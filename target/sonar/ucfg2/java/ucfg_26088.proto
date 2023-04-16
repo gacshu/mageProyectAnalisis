@@ -1,0 +1,205 @@
+
+8mage.server.game.GameController#watch(Ljava/util/UUID;)Zk
+_D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/game/GameController.java« «("7*ø	
+2
+¶ ¶(•
+’
+
+¶ ¶()
+%5#mage.server.managers.ManagerFactory"__id*S
+
+__unknown_file (7*5!
+mage.server.game.GameController"
+managerFactoryäá
+
+¶ ¶((&
+%6 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%5#mage.server.managers.ManagerFactory2userManager()’
+
+¶ ¶(8
+%7java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%6 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2getUser(Ljava/util/UUID;)™
+–
+
+¶C ¹(!
+%8java.util.function.Consumer"__declareFunction*R
+
+__unknown_file (64
+2__sonar_lambda_876$mage.server.game.GameController 
+
+
+__unknown_file (:
+!
+%8java.util.function.Consumer"
+GameController.this"__id*?
+
+__unknown_file (#!
+mage.server.game.GameControllerıú
+
+¶ ¹(
+%20void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*6
+
+__unknown_file (
+
+%7java.util.Optional*?
+
+__unknown_file (#
+!
+%8java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)"
+
+º º(
+""*š
+3
+´ ´(€ı
+
+´ ´(%
+%4boolean"Cmage.server.game.GameController#isAllowedToWatch(Ljava/util/UUID;)Z*?
+
+__unknown_file (#!
+mage.server.game.GameController*6
+
+__unknown_file (
+
+userIdjava.util.UUID2"isAllowedToWatch(Ljava/util/UUID;)*
+2
+1*%
+4
+² ²("
+
+² ²(
+""*š
+5
+° °(
+‹
+
+° °((
+%2"java.util.concurrent.ConcurrentMap"__id*M
+
+__unknown_file (1*/!
+mage.server.game.GameController"
+
+watchersïì
+
+° °((
+%3boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*F
+
+__unknown_file (*
+(
+%2"java.util.concurrent.ConcurrentMap*6
+
+__unknown_file (
+
+userIdjava.util.UUID2containsKey(Ljava/lang/Object;)*
+3
+4*%
+6
+® ®("
+
+® ®(
+""*Ÿ
+7
+¬ ¬(“
+
+
+¬ ¬((
+%0"java.util.concurrent.ConcurrentMap"__id*R
+
+__unknown_file (6*4!
+mage.server.game.GameController"
+userPlayerMapïì
+
+¬ ¬(-
+%1boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*F
+
+__unknown_file (*
+(
+%0"java.util.concurrent.ConcurrentMap*6
+
+__unknown_file (
+
+userIdjava.util.UUID2containsKey(Ljava/lang/Object;)*
+5
+6*
+1
+¼ ¼(–
+“
+
+¼ ¼(*
+%21#mage.server.managers.ManagerFactory"__id*S
+
+__unknown_file (7*5!
+mage.server.game.GameController"
+managerFactoryæã
+
+¼ ¼($'
+%22 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*H
+
+__unknown_file (,
+*
+%21#mage.server.managers.ManagerFactory2userManager()”‘
+
+¼ ¼(4
+%23java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%22 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2getUser(Ljava/util/UUID;)š
+—
+
+¼? È(	"
+%24java.util.function.Consumer"__declareFunction*R
+
+__unknown_file (64
+2__sonar_lambda_877$mage.server.game.GameController‹
+ˆ
+
+__unknown_file (.
+"
+%24java.util.function.Consumer"
+userId"__id*6
+
+__unknown_file (
+
+userIdjava.util.UUID¡
+
+
+__unknown_file (;
+"
+%24java.util.function.Consumer"
+GameController.this"__id*?
+
+__unknown_file (#!
+mage.server.game.GameControllerÿü
+
+¼ È(
+
+%50void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*7
+
+__unknown_file (
+
+%23java.util.Optional*@
+
+__unknown_file ($
+"
+%24java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)"
+
+É É(
+"":&
+
+« «($
+userIdjava.util.UUIDB#!
+mage.server.game.GameControllerHP

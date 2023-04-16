@@ -1,0 +1,390 @@
+
+mage.target.common.TargetCardInLibrary#choose(Lmage/constants/Outcome;Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zi
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetCardInLibrary.java: :("startingBlock*"
+13B B("
+B B(
+""*Ž
+15> >(!t
+r
+> >(!#
+targetPlayermage.players.Player"__id*;
+
+__unknown_file (
+
+playermage.players.Player*
+13
+12*ò
+16; ;(öó
+; ;(0
+%0mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+; ;(1
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%0mage.players.Playerüù
+< <(<
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+targetPlayerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+< <(=#
+targetPlayermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+13
+15
+12*!
+1Y Y("
+Y Y(
+""*µ
+2X! X(-š
+X! X(/
+%23boolean"&mage.target.TargetImpl#doneChoosing()Z*F
+
+__unknown_file (*(
+&mage.target.common.TargetCardInLibrary2doneChoosing()*
+8
+1*­
+3X X(•’
+X X(
+%22boolean""mage.target.TargetImpl#isChosen()Z*F
+
+__unknown_file (*(
+&mage.target.common.TargetCardInLibrary2
+isChosen()*
+2
+1*ã	
+startingBlock: :(i•
+’
+9 9(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcomeb
+`
+:" :()!
+outcomemage.constants.Outcome"__annotation*#
+
+__unknown_file (
+
+%24Ž
+‹
+9 9(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUID[
+Y
+:0 :(8
+playerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%25”
+‘
+9 9(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+targetPlayerIdjava.util.UUIDa
+_
+:? :(M 
+targetPlayerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%26”
+‘
+9 9(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+:W :(] 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%27Š
+‡
+9 9(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+:d :(h
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%28*
+16*¬
+4W W(}
+{
+W W(
+%19java.util.Map"__id*S
+
+__unknown_file (7*5(
+&mage.target.common.TargetCardInLibrary"	
+targetski
+W W(#
+
+%20int"java.util.Map#size()I*2
+
+__unknown_file (
+
+%19java.util.Map2size()«¨
+W' W(>
+
+%21int"/mage.target.TargetImpl#getMinNumberOfTargets()I*F
+
+__unknown_file (*(
+&mage.target.common.TargetCardInLibrary2getMinNumberOfTargets()*
+3*!
+5U U("
+U U(
+""*¶
+6T T(ž›
+T T(J
+%18boolean"mage.players.Player#chooseTarget(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*9
+
+__unknown_file (
+
+cardsIdmage.cards.Cards*F
+
+__unknown_file (*(
+&mage.target.common.TargetCardInLibrary*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2xchooseTarget(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/abilities/Ability;Lmage/game/Game;)*
+4
+5*!
+7R R("
+R R(
+""*£
+8Q Q(‹ˆ
+Q Q($
+%17boolean"!mage.players.Player#canRespond()Z*;
+
+__unknown_file (
+
+playermage.players.Player2canRespond()*
+6
+7*Ú
+
+9K K(Ø
+Õ
+K K(<
+%9java.util.Comparator"Sjava.util.Comparator#comparing(Ljava/util/function/Function;)Ljava/util/Comparator;*4
+
+__unknown_file ("
+java.util.Comparator*"
+
+__unknown_file (
+""×Ô
+K K(=
+%10void",java.util.List#sort(Ljava/util/Comparator;)V*5
+
+__unknown_file (
+
+cardsjava.util.List*8
+
+__unknown_file (
+
+%9java.util.Comparator2sort(Ljava/util/Comparator;)?=
+L L(%
+%11mage.cards.CardsImpl"mage.cards.CardsImpln
+l
+L L('
+%12"mage.cards.CardsImpl#<init>()V*9
+
+__unknown_file (
+
+%11mage.cards.CardsImplj
+h
+L L((
+cardsIdmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%11mage.cards.CardsImplÙÖ
+M M(#
+%13void":java.lang.Iterable#forEach(Ljava/util/function/Consumer;)V*5
+
+__unknown_file (
+
+cardsjava.util.List*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)}
+{
+O O(
+%14java.util.Map"__id*S
+
+__unknown_file (7*5(
+&mage.target.common.TargetCardInLibrary"	
+targetski
+O O(
+
+%15int"java.util.Map#size()I*2
+
+__unknown_file (
+
+%14java.util.Map2size()«¨
+O# O(:
+
+%16int"/mage.target.TargetImpl#getMinNumberOfTargets()I*F
+
+__unknown_file (*(
+&mage.target.common.TargetCardInLibrary2getMinNumberOfTargets()*
+8*À
+10I$ I(0²¯
+I$ I(=
+%5mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*A
+
+__unknown_file (%
+#
+targetPlayermage.players.Player2getLibrary()š—
+I$ I(c
+%6java.util.Set"Bmage.players.Library#getTopCards(Lmage/game/Game;I)Ljava/util/Set;*8
+
+__unknown_file (
+
+%5mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2getTopCards(Lmage/game/Game;I)<:
+I I(#
+%7java.util.ArrayList"java.util.ArrayList´
+±
+I I(d
+%8"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*7
+
+__unknown_file (
+
+%7java.util.ArrayList*1
+
+__unknown_file (
+
+%6java.util.Setd
+b
+I I(d
+cardsjava.util.List"__id*7
+
+__unknown_file (
+
+%7java.util.ArrayList*
+9*œ
+11G G( ²¯
+G G(-
+%3mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*A
+
+__unknown_file (%
+#
+targetPlayermage.players.Player2getLibrary()ðí
+G G(<
+%4java.util.List"?mage.players.Library#getCards(Lmage/game/Game;)Ljava/util/List;*8
+
+__unknown_file (
+
+%3mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)_
+]
+G G(<
+cardsjava.util.List"__id*2
+
+__unknown_file (
+
+%4java.util.List*
+9*¬
+12E E(O
+M
+E E(
+cardsjava.util.List"__id*"
+
+__unknown_file (
+""A
+?
+F" F(3	
+%2int"__id*"
+
+__unknown_file (
+""*
+10
+11:-
+: :(*!
+outcomemage.constants.Outcome:&
+:+ :(9
+playerIdjava.util.UUID:,
+:: :(N 
+targetPlayerIdjava.util.UUID:,
+:O :(^ 
+sourcemage.abilities.Ability:"
+:_ :(h
+gamemage.game.GameB*(
+&mage.target.common.TargetCardInLibraryHP

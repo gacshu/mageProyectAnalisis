@@ -1,0 +1,270 @@
+
+Jmage.cards.repository.CardRepository#getNotBasicLandNames()Ljava/util/Set;i
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/repository/CardRepository.java¶ ¶(+"18*Ó
+13
+» »(º·
+
+» »(!
+%7com.j256.ormlite.stmt.Where">com.j256.ormlite.stmt.Where#not()Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%6com.j256.ormlite.stmt.Where2not()*
+12*é
+14
+» »(ÐÍ
+
+» »(!
+%6com.j256.ormlite.stmt.Where"Kcom.j256.ormlite.stmt.StatementBuilder#where()Lcom/j256/ormlite/stmt/Where;*F
+
+__unknown_file (*
+(
+qb"com.j256.ormlite.stmt.QueryBuilder2where()*
+13*í
+15
+º( º(.ÔÑ
+
+º º(s(
+%5"com.j256.ormlite.stmt.QueryBuilder"icom.j256.ormlite.stmt.QueryBuilder#selectColumns([Ljava/lang/String;)Lcom/j256/ormlite/stmt/QueryBuilder;*F
+
+__unknown_file (*
+(
+%4"com.j256.ormlite.stmt.QueryBuilder*$
+
+__unknown_file (
+name*>
+
+__unknown_file (" 
+modalDoubleFacesSecondSideName*.
+
+__unknown_file (
+secondSideName*,
+
+__unknown_file (
+flipCardName2"selectColumns([Ljava/lang/String;)*
+14*ƒ
+16
+¹ ¹(G‡
+„
+
+¹ ¹(G(
+qb"com.j256.ormlite.stmt.QueryBuilder"__id*F
+
+__unknown_file (*
+(
+%3"com.j256.ormlite.stmt.QueryBuilderàÝ
+
+º º((
+%4"com.j256.ormlite.stmt.QueryBuilder"Qcom.j256.ormlite.stmt.QueryBuilder#distinct()Lcom/j256/ormlite/stmt/QueryBuilder;*F
+
+__unknown_file (*
+(
+qb"com.j256.ormlite.stmt.QueryBuilder2
+distinct()*
+15*ø
+17
+¹0 ¹(7ˆ
+…
+
+¹0 ¹(7
+%2com.j256.ormlite.dao.Dao"__id*Q
+
+__unknown_file (5*3&
+$mage.cards.repository.CardRepository"	
+cardDaoÔÑ
+
+¹0 ¹(F(
+%3"com.j256.ormlite.stmt.QueryBuilder"Kcom.j256.ormlite.dao.Dao#queryBuilder()Lcom/j256/ormlite/stmt/QueryBuilder;*<
+
+__unknown_file ( 
+
+%2com.j256.ormlite.dao.Dao2queryBuilder()*
+16*¡
+18
+· ·(+:8
+
+·  ·()
+%0java.util.TreeSet"java.util.TreeSeth
+f
+
+· ·(+
+%1"java.util.TreeSet#<init>()V*5
+
+__unknown_file (
+
+%0java.util.TreeSetc
+a
+
+· ·(,
+namesjava.util.Set"__id*5
+
+__unknown_file (
+
+%0java.util.TreeSet*
+17*7
+1
+Ä Ä("&
+
+Ä Ä(
+
+namesjava.util.Set*œ
+4
+½ ½(`
+^
+
+½ ½(&
+cardmage.cards.repository.CardInfo"__id*"
+
+__unknown_file (
+"" 
+
+
+½ ½(&
+cardmage.cards.repository.CardInfo"
+__arrayGet*7
+
+__unknown_file (
+
+resultsjava.util.List*"
+
+__unknown_file (
+""*
+5
+1*Ù
+5
+¾ ¾(Â
+¿
+
+¾ ¾((
+%18void"bmage.cards.repository.CardRepository#addNewNames(Lmage/cards/repository/CardInfo;Ljava/util/Set;)V*D
+
+__unknown_file ((&
+$mage.cards.repository.CardRepository*D
+
+__unknown_file ((
+&
+cardmage.cards.repository.CardInfo*4
+
+__unknown_file (
+
+namesjava.util.Set*
+4*z
+7
+¼ ¼(Ad
+b
+
+¼ ¼(A
+resultsjava.util.List"__id*3
+
+__unknown_file (
+
+%17java.util.List*
+4*Ë
+8
+¼% ¼(@´±
+
+¼% ¼(@
+%17java.util.List"Ucom.j256.ormlite.dao.Dao#query(Lcom/j256/ormlite/stmt/PreparedQuery;)Ljava/util/List;*=
+
+__unknown_file (!
+
+%15com.j256.ormlite.dao.Dao*H
+
+__unknown_file (,
+*
+%16#com.j256.ormlite.stmt.PreparedQuery2,query(Lcom/j256/ormlite/stmt/PreparedQuery;)*
+7*„
+9
+¼% ¼(,‰
+†
+
+¼% ¼(,
+%15com.j256.ormlite.dao.Dao"__id*Q
+
+__unknown_file (5*3&
+$mage.cards.repository.CardRepository"	
+cardDaoáÞ
+
+¼3 ¼(?*
+%16#com.j256.ormlite.stmt.PreparedQuery"Qcom.j256.ormlite.stmt.QueryBuilder#prepare()Lcom/j256/ormlite/stmt/PreparedQuery;*F
+
+__unknown_file (*
+(
+qb"com.j256.ormlite.stmt.QueryBuilder2	prepare()*
+8*
+10
+» »(b÷ô
+
+» »(b"
+%14com.j256.ormlite.stmt.Where"ccom.j256.ormlite.stmt.Where#like(Ljava/lang/String;Ljava/lang/Object;)Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%7com.j256.ormlite.stmt.Where**
+
+__unknown_file (
+
+supertypes*D
+
+__unknown_file ((
+&
+%12com.j256.ormlite.stmt.SelectArg2*like(Ljava/lang/String;Ljava/lang/Object;)*
+9*£
+11
+»> »(Zn
+l
+
+»> »(Z
+%10java.lang.String"__concat*
+
+»> »(A
+%*&
+
+»D »(Z
+
+%9java.lang.Stringo
+m
+
+»> »(`
+%11java.lang.String"__concat*'
+
+»> »(Z
+
+%10java.lang.String*
+
+»] »(`
+%WU
+
+»4 »(=&
+%12com.j256.ormlite.stmt.SelectArg"com.j256.ormlite.stmt.SelectArgÐ
+Í
+
+»0 »(a
+%13";com.j256.ormlite.stmt.SelectArg#<init>(Ljava/lang/Object;)V*D
+
+__unknown_file ((
+&
+%12com.j256.ormlite.stmt.SelectArg*5
+
+__unknown_file (
+
+%11java.lang.String*
+10*‰
+12
+»" »(.X
+V
+
+»D »(S
+%8mage.constants.SuperType"__id*"
+
+__unknown_file (
+""–“
+
+»D »(Z
+%9java.lang.String"'java.lang.Enum#name()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%8mage.constants.SuperType2name()*
+11B(&
+$mage.cards.repository.CardRepositoryH

@@ -1,0 +1,248 @@
+
+uorg.mage.plugins.card.images.ImageCache#getImage(Lmage/view/CardView;II)Lorg/mage/plugins/card/images/ImageCacheData;s
+gD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/org/mage/plugins/card/images/ImageCache.java¶! ¶()"5*T
+2
+∞ ∞("C
+
+∞ ∞(5
+3
+data+org.mage.plugins.card.images.ImageCacheData*Ã
+3
+Æ Æ(ËÂ
+
+Æ1 Æ(@"
+%7java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()íè
+
+Æ1 Æ(K	
+%8int"(java.awt.image.BufferedImage#getWidth()I*@
+
+__unknown_file ($
+"
+%7java.awt.image.BufferedImage2
+getWidth()ËÂ
+
+Æ_ Æ(n"
+%9java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()ïí
+
+Æ_ Æ(z
+
+%10int")java.awt.image.BufferedImage#getHeight()I*@
+
+__unknown_file ($
+"
+%9java.awt.image.BufferedImage2getHeight()Ø
+¨
+
+Æ Æ({
+%11double"java.lang.Math#min(DD)D*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*
+2
+1*£
+4
+™ ™(W
+U
+
+™ ™(
+%4org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ë
+é
+
+™ ™(D
+%5java.lang.String"__concat*5
+
+™ ™(>'%
+#Image doesn't exists in the cache: *'
+
+™A ™(D
+
+keyjava.lang.Stringﬂ‹
+
+™ ™(E
+
+%6void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%4org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%5java.lang.String2debug(Ljava/lang/Object;)"C
+
+´ ´(5
+3
+data+org.mage.plugins.card.images.ImageCacheData*Œ
+
+5
+ß ß(úô
+
+ß" ß(0
+%0java.lang.String".mage.view.CardView#getName()Ljava/lang/String;*8
+
+__unknown_file (
+
+cardmage.view.CardView2	getName()Ô
+Ï
+
+ß ß(8
+%1java.lang.String"iorg.mage.plugins.card.images.ImageCache#getKey(Lmage/view/CardView;Ljava/lang/String;I)Ljava/lang/String;*G
+
+__unknown_file (+")
+'org.mage.plugins.card.images.ImageCache*8
+
+__unknown_file (
+
+cardmage.view.CardView*4
+
+__unknown_file (
+
+%0java.lang.String*"
+
+__unknown_file (
+""c
+a
+
+ß ß(9
+keyjava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.Stringµ
+≤
+
+® ®(+1
+%2+org.mage.plugins.card.images.ImageCacheData"qorg.mage.plugins.card.images.ImageCache#getImage(Ljava/lang/String;)Lorg/mage/plugins/card/images/ImageCacheData;*G
+
+__unknown_file (+")
+'org.mage.plugins.card.images.ImageCache*5
+
+__unknown_file (
+
+keyjava.lang.Stringõ
+ò
+
+® ®(,3
+data+org.mage.plugins.card.images.ImageCacheData"__id*O
+
+__unknown_file (3
+1
+%2+org.mage.plugins.card.images.ImageCacheDataËÂ
+
+© ©("
+%3java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()*
+3
+4*ê
+1
+≥! ≥(6ÈÊ
+
+≥G ≥(V#
+%12java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()ÈÊ
+
+≥_ ≥(n#
+%13java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()îë
+
+≥_ ≥(y
+
+%14int"(java.awt.image.BufferedImage#getWidth()I*A
+
+__unknown_file (%
+#
+%13java.awt.image.BufferedImage2
+getWidth()ÎË
+≥ã ≥(ö#
+%15java.awt.image.BufferedImage"Torg.mage.plugins.card.images.ImageCacheData#getImage()Ljava/awt/image/BufferedImage;*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData2
+getImage()òï
+≥ã ≥(¶
+
+%16int")java.awt.image.BufferedImage#getHeight()I*A
+
+__unknown_file (%
+#
+%15java.awt.image.BufferedImage2getHeight()Ä
+˝
+≥! ≥(∞#
+%17java.awt.image.BufferedImage"vmage.client.util.TransformedImageCache#getResizedImage(Ljava/awt/image/BufferedImage;II)Ljava/awt/image/BufferedImage;*F
+
+__unknown_file (*"(
+&mage.client.util.TransformedImageCache*A
+
+__unknown_file (%
+#
+%12java.awt.image.BufferedImage*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""É
+Ä
+≥ ≥(±(
+newImagejava.awt.image.BufferedImage"__id*A
+
+__unknown_file (%
+#
+%17java.awt.image.BufferedImage∏µ
+
+¥ ¥(
+%18void"Uorg.mage.plugins.card.images.ImageCacheData#setImage(Ljava/awt/image/BufferedImage;)V*Q
+
+__unknown_file (5
+3
+data+org.mage.plugins.card.images.ImageCacheData*F
+
+__unknown_file (*
+(
+newImagejava.awt.image.BufferedImage2(setImage(Ljava/awt/image/BufferedImage;)"C
+
+µ µ(5
+3
+data+org.mage.plugins.card.images.ImageCacheData:(
+
+¶* ¶(8
+cardmage.view.CardView: 
+
+__unknown_file (
+"": 
+
+__unknown_file (
+""B+")
+'org.mage.plugins.card.images.ImageCacheH

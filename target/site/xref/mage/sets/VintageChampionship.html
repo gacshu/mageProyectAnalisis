@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>VintageChampionship xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/VintageChampionship.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * <a href="https://scryfall.com/sets/ovnt" target="alexandria_uri">https://scryfall.com/sets/ovnt</a></em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="VintageChampionship" href="../../mage/sets/VintageChampionship.html#VintageChampionship">VintageChampionship</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="VintageChampionship" href="../../mage/sets/VintageChampionship.html#VintageChampionship">VintageChampionship</a> instance = <strong class="jxr_keyword">new</strong> <a name="VintageChampionship" href="../../mage/sets/VintageChampionship.html#VintageChampionship">VintageChampionship</a>();
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="VintageChampionship" href="../../mage/sets/VintageChampionship.html#VintageChampionship">VintageChampionship</a> getInstance() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      }
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <a name="VintageChampionship" href="../../mage/sets/VintageChampionship.html#VintageChampionship">VintageChampionship</a>() {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Vintage Championship"</span>, <span class="jxr_string">"OVNT"</span>, ExpansionSet.buildDate(2019, 11, 3), SetType.PROMOTIONAL);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = false;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ancestral Recall"</span>, 2005, Rarity.RARE, mage.cards.a.AncestralRecall.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ancestral Recall"</span>, 2013, Rarity.RARE, mage.cards.a.AncestralRecall.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Ancestral Recall"</span>, 2018, Rarity.MYTHIC, mage.cards.a.AncestralRecall.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Black Lotus"</span>, 2003, Rarity.RARE, mage.cards.b.BlackLotus.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Black Lotus"</span>, <span class="jxr_string">"2017NA"</span>, Rarity.MYTHIC, mage.cards.b.BlackLotus.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Emerald"</span>, 2009, Rarity.RARE, mage.cards.m.MoxEmerald.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Emerald"</span>, 2015, Rarity.MYTHIC, mage.cards.m.MoxEmerald.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Jet"</span>, 2007, Rarity.RARE, mage.cards.m.MoxJet.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Jet"</span>, <span class="jxr_string">"2016EU"</span>, Rarity.MYTHIC, mage.cards.m.MoxJet.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Jet"</span>, <span class="jxr_string">"2019NA"</span>, Rarity.MYTHIC, mage.cards.m.MoxJet.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Pearl"</span>, 2006, Rarity.RARE, mage.cards.m.MoxPearl.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Pearl"</span>, 2014, Rarity.MYTHIC, mage.cards.m.MoxPearl.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Ruby"</span>, 2008, Rarity.RARE, mage.cards.m.MoxRuby.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Ruby"</span>, <span class="jxr_string">"2017EU"</span>, Rarity.MYTHIC, mage.cards.m.MoxRuby.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Sapphire"</span>, 2010, Rarity.RARE, mage.cards.m.MoxSapphire.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Sapphire"</span>, <span class="jxr_string">"2016NA"</span>, Rarity.MYTHIC, mage.cards.m.MoxSapphire.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mox Sapphire"</span>, <span class="jxr_string">"2019A"</span>, Rarity.MYTHIC, mage.cards.m.MoxSapphire.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Time Walk"</span>, 2011, Rarity.RARE, mage.cards.t.TimeWalk.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Time Walk"</span>, <span class="jxr_string">"2018NA"</span>, Rarity.MYTHIC, mage.cards.t.TimeWalk.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Timetwister"</span>, 2004, Rarity.RARE, mage.cards.t.Timetwister.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Timetwister"</span>, 2012, Rarity.RARE, mage.cards.t.Timetwister.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Timetwister"</span>, <span class="jxr_string">"2018A"</span>, Rarity.MYTHIC, mage.cards.t.Timetwister.<strong class="jxr_keyword">class</strong>, NON_FULL_USE_VARIOUS));
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>       }
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

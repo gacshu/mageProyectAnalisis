@@ -1,0 +1,416 @@
+
+pmage.client.combat.CombatManager#drawBlockers(Lmage/view/CombatGroupView;Lmage/cards/MageCard;Ljava/util/UUID;)Vj
+`D:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/combat/CombatManager.javap p("6*ì
+2r r(!\
+Z
+r r(!$
+pamage.client.game.PlayAreaPanel"__id*"
+
+__unknown_file (
+""ù
+ö
+r r(!$
+pamage.client.game.PlayAreaPanel"
+__arrayGet*8
+
+__unknown_file (
+
+%3java.util.Collection*"
+
+__unknown_file (
+""*
+4
+1*≈3
+3u" u(0ˇ
+¸
+u" u(=
+%8java.awt.Point"Vmage.client.combat.CombatManager#getParentPoint(Lmage/cards/MageCard;)Ljava/awt/Point;*@
+
+__unknown_file ($"
+ mage.client.combat.CombatManager*@
+
+__unknown_file ($
+"
+blockerCardmage.cards.MageCard{
+y
+u u(=3"
+ mage.client.combat.CombatManager"
+parentPoint"__id*2
+
+__unknown_file (
+
+%8java.awt.PointŸ÷
+v) v(N!
+%9mage.cards.MageCardLocation"Jmage.cards.MageCard#getCardLocationOnScreen()Lmage/cards/MageCardLocation;*@
+
+__unknown_file ($
+"
+blockerCardmage.cards.MageCard2getCardLocationOnScreen()±Æ
+v) v(]
+%10java.awt.Point":mage.cards.MageCardLocation#getCardPoint()Ljava/awt/Point;*?
+
+__unknown_file (#
+!
+%9mage.cards.MageCardLocation2getCardPoint()g
+e
+v v(^
+blockerPointjava.awt.Point"__id*3
+
+__unknown_file (
+
+%10java.awt.Point|
+z
+w, w(7
+%11java.awt.Point"__id*Q
+
+__unknown_file (5*3"
+ mage.client.combat.CombatManager"
+parentPoint|
+z
+w< w(G
+%12java.awt.Point"__id*Q
+
+__unknown_file (5*3"
+ mage.client.combat.CombatManager"
+parentPointŒÀ
+w w(J
+%13void"java.awt.Point#translate(II)V*<
+
+__unknown_file ( 
+
+blockerPointjava.awt.Point*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2translate(II)€ÿ
+x* x(P"
+%14mage.cards.MageCardLocation"Jmage.cards.MageCard#getCardLocationOnScreen()Lmage/cards/MageCardLocation;*A
+
+__unknown_file (%
+#
+attackerCardmage.cards.MageCard2getCardLocationOnScreen()≤Ø
+x* x(_
+%15java.awt.Point":mage.cards.MageCardLocation#getCardPoint()Ljava/awt/Point;*@
+
+__unknown_file ($
+"
+%14mage.cards.MageCardLocation2getCardPoint()h
+f
+x x(`
+attackerPointjava.awt.Point"__id*3
+
+__unknown_file (
+
+%15java.awt.Point|
+z
+y- y(8
+%16java.awt.Point"__id*Q
+
+__unknown_file (5*3"
+ mage.client.combat.CombatManager"
+parentPoint|
+z
+y= y(H
+%17java.awt.Point"__id*Q
+
+__unknown_file (5*3"
+ mage.client.combat.CombatManager"
+parentPointœÃ
+y y(K
+%18void"java.awt.Point#translate(II)V*=
+
+__unknown_file (!
+
+attackerPointjava.awt.Point*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2translate(II)À»
+z% z(C"
+%19mage.cards.MageCardLocation"Bmage.cards.MageCard#getCardLocation()Lmage/cards/MageCardLocation;*A
+
+__unknown_file (%
+#
+attackerCardmage.cards.MageCard2getCardLocation()öó
+z% z(S
+
+%20int",mage.cards.MageCardLocation#getCardHeight()I*@
+
+__unknown_file ($
+"
+%19mage.cards.MageCardLocation2getCardHeight()_
+]
+zV z(n'
+%21 mage.client.util.SettingsManager"__id*"
+
+__unknown_file (
+""¬ø
+zV z(|
+%22java.awt.Rectangle"Bmage.client.util.SettingsManager#getCardSize()Ljava/awt/Rectangle;*E
+
+__unknown_file ()
+'
+%21 mage.client.util.SettingsManager2getCardSize()À»
+{% {(C"
+%23mage.cards.MageCardLocation"Bmage.cards.MageCard#getCardLocation()Lmage/cards/MageCardLocation;*A
+
+__unknown_file (%
+#
+attackerCardmage.cards.MageCard2getCardLocation()òï
+{% {(R
+
+%24int"+mage.cards.MageCardLocation#getCardWidth()I*@
+
+__unknown_file ($
+"
+%23mage.cards.MageCardLocation2getCardWidth()_
+]
+{U {(m'
+%25 mage.client.util.SettingsManager"__id*"
+
+__unknown_file (
+""¬ø
+{U {({
+%26java.awt.Rectangle"Bmage.client.util.SettingsManager#getCardSize()Ljava/awt/Rectangle;*E
+
+__unknown_file ()
+'
+%25 mage.client.util.SettingsManager2getCardSize() «
+|% |(B"
+%27mage.cards.MageCardLocation"Bmage.cards.MageCard#getCardLocation()Lmage/cards/MageCardLocation;*@
+
+__unknown_file ($
+"
+blockerCardmage.cards.MageCard2getCardLocation()öó
+|% |(R
+
+%28int",mage.cards.MageCardLocation#getCardHeight()I*@
+
+__unknown_file ($
+"
+%27mage.cards.MageCardLocation2getCardHeight()_
+]
+|U |(m'
+%29 mage.client.util.SettingsManager"__id*"
+
+__unknown_file (
+""¬ø
+|U |({
+%30java.awt.Rectangle"Bmage.client.util.SettingsManager#getCardSize()Ljava/awt/Rectangle;*E
+
+__unknown_file ()
+'
+%29 mage.client.util.SettingsManager2getCardSize() «
+}% }(B"
+%31mage.cards.MageCardLocation"Bmage.cards.MageCard#getCardLocation()Lmage/cards/MageCardLocation;*@
+
+__unknown_file ($
+"
+blockerCardmage.cards.MageCard2getCardLocation()òï
+}% }(Q
+
+%32int"+mage.cards.MageCardLocation#getCardWidth()I*@
+
+__unknown_file ($
+"
+%31mage.cards.MageCardLocation2getCardWidth()_
+]
+}T }(l'
+%33 mage.client.util.SettingsManager"__id*"
+
+__unknown_file (
+""¬ø
+}T }(z
+%34java.awt.Rectangle"Bmage.client.util.SettingsManager#getCardSize()Ljava/awt/Rectangle;*E
+
+__unknown_file ()
+'
+%33 mage.client.util.SettingsManager2getCardSize()Õ
+ 
+~ ~(-(
+%35!mage.client.util.gui.ArrowBuilder"Qmage.client.util.gui.ArrowBuilder#getBuilder()Lmage/client/util/gui/ArrowBuilder;*A
+
+__unknown_file (%"#
+!mage.client.util.gui.ArrowBuilderyw
+~E ~(X
+%36double"java.awt.Point#getX()D*<
+
+__unknown_file ( 
+
+blockerPointjava.awt.Point2getX()zx
+	~v ~(â
+%37double"java.awt.Point#getY()D*<
+
+__unknown_file ( 
+
+blockerPointjava.awt.Point2getY()zx
+" (6
+%38double"java.awt.Point#getX()D*=
+
+__unknown_file (!
+
+attackerPointjava.awt.Point2getX()zx
+T (h
+%39double"java.awt.Point#getY()D*=
+
+__unknown_file (!
+
+attackerPointjava.awt.Point2getY()O
+M
+
+Ä (ä
+%40java.awt.Color"__id*"
+
+__unknown_file (
+""g
+e
+
+å (ù-
+%41&mage.client.util.gui.ArrowBuilder$Type"__id*"
+
+__unknown_file (
+""g
+e
+
+å (§-
+%42&mage.client.util.gui.ArrowBuilder$Type"__id*"
+
+__unknown_file (
+""Ä˝
+	~ (•
+%43void"ymage.client.util.gui.ArrowBuilder#addArrow(Ljava/util/UUID;IIIILjava/awt/Color;Lmage/client/util/gui/ArrowBuilder$Type;)V*F
+
+__unknown_file (*
+(
+%35!mage.client.util.gui.ArrowBuilder*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*3
+
+__unknown_file (
+
+%40java.awt.Color*K
+
+__unknown_file (/
+-
+%42&mage.client.util.gui.ArrowBuilder$Type2VaddArrow(Ljava/util/UUID;IIIILjava/awt/Color;Lmage/client/util/gui/ArrowBuilder$Type;)*
+2*
+4s' s()ÍÁ
+s' s(?'
+%4!mage.client.game.BattlefieldPanel"Wmage.client.game.PlayAreaPanel#getBattlefieldPanel()Lmage/client/game/BattlefieldPanel;*B
+
+__unknown_file (&
+$
+pamage.client.game.PlayAreaPanel2getBattlefieldPanel()∆√
+s' s(T
+%5java.util.Map"Emage.client.game.BattlefieldPanel#getPermanentPanels()Ljava/util/Map;*E
+
+__unknown_file ()
+'
+%4!mage.client.game.BattlefieldPanel2getPermanentPanels()ïí
+sY s(h
+%6java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+blockermage.view.CardView2getId()ô
+ñ
+s' s(i
+%7mage.cards.MageCard"__mapGet*1
+
+__unknown_file (
+
+%5java.util.Map*2
+
+__unknown_file (
+
+%6java.util.UUIDo
+m
+s s(j"
+blockerCardmage.cards.MageCard"__id*7
+
+__unknown_file (
+
+%7mage.cards.MageCard*
+2
+3*Ñ
+5r$ r(-ÿ
+’
+r$ r(D
+%2java.util.Map"Emage.client.MageFrame#getGamePlayers(Ljava/util/UUID;)Ljava/util/Map;*5
+
+__unknown_file ("
+mage.client.MageFrame*6
+
+__unknown_file (
+
+gameIdjava.util.UUIDîë
+r$ r(M
+%3java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%2java.util.Map2values()*
+2*Û
+6q  q(%∑¥
+q  q(3
+%0mage.view.CardsView"<mage.view.CombatGroupView#getBlockers()Lmage/view/CardsView;*@
+
+__unknown_file ($
+"
+groupmage.view.CombatGroupView2getBlockers()§°
+q  q(<
+%1java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*7
+
+__unknown_file (
+
+%0mage.view.CardsView2values()*
+1*(
+0 "!
+
+Ñ Ñ(
+implicit return*Ö
+1q q(U
+S
+q q(
+blockermage.view.CardView"__id*"
+
+__unknown_file (
+""ñ
+ì
+q q(
+blockermage.view.CardView"
+__arrayGet*8
+
+__unknown_file (
+
+%1java.util.Collection*"
+
+__unknown_file (
+""*
+5
+0:.
+p p(4"
+groupmage.view.CombatGroupView:/
+p5 p(K#
+attackerCardmage.cards.MageCard:$
+pL p(W
+gameIdjava.util.UUIDB$"
+ mage.client.combat.CombatManager

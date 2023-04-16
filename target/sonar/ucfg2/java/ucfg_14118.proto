@@ -1,0 +1,130 @@
+
+ˆmage.abilities.effects.common.CantBeCounteredSourceEffect#applies(Lmage/game/events/GameEvent;Lmage/abilities/Ability;Lmage/game/Game;)Z|
+rD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CantBeCounteredSourceEffect.java9 9("startingBlock*!
+2= =("
+= =(
+""*·
+3< <(¥¢
+< <(#
+%3java.util.UUID"3mage.game.stack.Spell#getSourceId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getSourceId()¨¥
+<+ <(?
+%4java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ÌÉ
+< <(@
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%3java.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+2
+1*ø
+startingBlock9 9(F–
+“
+8 8(
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+9% 9(*#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%6“
+
+8 8(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+94 9(: 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%7‰
+†
+8 8(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+9A 9(E
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+4*ì
+4: :(¨¥
+: :(% 
+%0mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()¯¬
+:/ :(B
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()ˆ…
+: :(C
+%2mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%0mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%1java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+: :(D
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%2mage.game.stack.Spell*
+3
+1*!
+1@ @("
+@ @(
+"":/
+9 9(+#
+eventmage.game.events.GameEvent:,
+9, 9(; 
+sourcemage.abilities.Ability:"
+9< 9(E
+gamemage.game.GameB=;
+9mage.abilities.effects.common.CantBeCounteredSourceEffectHP

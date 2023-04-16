@@ -1,0 +1,216 @@
+
+xmage.cards.repository.RepositoryUtil#isDatabaseObsolete(Lcom/j256/ormlite/support/ConnectionSource;Ljava/lang/String;J)Zg
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/cards/repository/RepositoryUtil.java (,"3*Ø	
+2)( )(=a_
+), )(;,
+%14%mage.cards.repository.DatabaseVersion"%mage.cards.repository.DatabaseVersionë
+é
+)( )(=
+%15"/mage.cards.repository.DatabaseVersion#<init>()V*J
+
+__unknown_file (.
+,
+%14%mage.cards.repository.DatabaseVersionì
+ê
+) )(>2
+	dbVersion%mage.cards.repository.DatabaseVersion"__id*J
+
+__unknown_file (.
+,
+%14%mage.cards.repository.DatabaseVersionèå
+* *(+
+%16void"Dmage.cards.repository.DatabaseVersion#setEntity(Ljava/lang/String;)V*P
+
+__unknown_file (4
+2
+	dbVersion%mage.cards.repository.DatabaseVersion*<
+
+__unknown_file ( 
+
+
+entityNamejava.lang.String2setEntity(Ljava/lang/String;)Û
++ +()
+%17void"Cmage.cards.repository.DatabaseVersion#setVersion(Ljava/lang/Long;)V*P
+
+__unknown_file (4
+2
+	dbVersion%mage.cards.repository.DatabaseVersion*"
+
+__unknown_file (
+""2setVersion(Ljava/lang/Long;)ÖÇ
+, ,(*
+
+%18int"4com.j256.ormlite.dao.Dao#create(Ljava/lang/Object;)I*F
+
+__unknown_file (*
+(
+dbVersionDaocom.j256.ormlite.dao.Dao*P
+
+__unknown_file (4
+2
+	dbVersion%mage.cards.repository.DatabaseVersion2create(Ljava/lang/Object;)*
+1*ì
+3   (’
+“
+   (R	
+%0int"wcom.j256.ormlite.table.TableUtils#createTableIfNotExists(Lcom/j256/ormlite/support/ConnectionSource;Ljava/lang/Class;)I*A
+
+__unknown_file (%"#
+!com.j256.ormlite.table.TableUtils*[
+
+__unknown_file (?
+=
+connectionSource)com.j256.ormlite.support.ConnectionSource*"
+
+__unknown_file (
+""Û
+
+!4 !(q
+%1com.j256.ormlite.dao.Dao"Åcom.j256.ormlite.dao.DaoManager#createDao(Lcom/j256/ormlite/support/ConnectionSource;Ljava/lang/Class;)Lcom/j256/ormlite/dao/Dao;*?
+
+__unknown_file (#"!
+com.j256.ormlite.dao.DaoManager*[
+
+__unknown_file (?
+=
+connectionSource)com.j256.ormlite.support.ConnectionSource*"
+
+__unknown_file (
+""z
+x
+! !(r(
+dbVersionDaocom.j256.ormlite.dao.Dao"__id*<
+
+__unknown_file ( 
+
+%1com.j256.ormlite.dao.Dao‹Ÿ
+#= #(X(
+%2"com.j256.ormlite.stmt.QueryBuilder"Kcom.j256.ormlite.dao.Dao#queryBuilder()Lcom/j256/ormlite/stmt/QueryBuilder;*F
+
+__unknown_file (*
+(
+dbVersionDaocom.j256.ormlite.dao.Dao2queryBuilder()è
+å
+# #(Y2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder"__id*F
+
+__unknown_file (*
+(
+%2"com.j256.ormlite.stmt.QueryBuilderÿ’
+$ $(!
+%3com.j256.ormlite.stmt.Where"Kcom.j256.ormlite.stmt.StatementBuilder#where()Lcom/j256/ormlite/stmt/Where;*P
+
+__unknown_file (4
+2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder2where()TR
+$. $(7%
+%4com.j256.ormlite.stmt.SelectArg"com.j256.ormlite.stmt.SelectArg”
+–
+$* $(C
+%5";com.j256.ormlite.stmt.SelectArg#<init>(Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%4com.j256.ormlite.stmt.SelectArg*<
+
+__unknown_file ( 
+
+
+entityNamejava.lang.StringÎË
+$ $(D!
+%6com.j256.ormlite.stmt.Where"acom.j256.ormlite.stmt.Where#eq(Ljava/lang/String;Ljava/lang/Object;)Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%3com.j256.ormlite.stmt.Where*&
+
+__unknown_file (
+
+entity*C
+
+__unknown_file ('
+%
+%4com.j256.ormlite.stmt.SelectArg2(eq(Ljava/lang/String;Ljava/lang/Object;)∏µ
+$ %(!
+%7com.j256.ormlite.stmt.Where">com.j256.ormlite.stmt.Where#and()Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%6com.j256.ormlite.stmt.Where2and()TR
+%) %(2%
+%8com.j256.ormlite.stmt.SelectArg"com.j256.ormlite.stmt.SelectArgπ
+∂
+%% %(;
+%9";com.j256.ormlite.stmt.SelectArg#<init>(Ljava/lang/Object;)V*C
+
+__unknown_file ('
+%
+%8com.j256.ormlite.stmt.SelectArg*"
+
+__unknown_file (
+""ÌÍ
+$ %(<"
+%10com.j256.ormlite.stmt.Where"acom.j256.ormlite.stmt.Where#eq(Ljava/lang/String;Ljava/lang/Object;)Lcom/j256/ormlite/stmt/Where;*?
+
+__unknown_file (#
+!
+%7com.j256.ormlite.stmt.Where*'
+
+__unknown_file (	
+version*C
+
+__unknown_file ('
+%
+%8com.j256.ormlite.stmt.SelectArg2(eq(Ljava/lang/String;Ljava/lang/Object;)ÈÊ
+&> &(T*
+%11#com.j256.ormlite.stmt.PreparedQuery"Qcom.j256.ormlite.stmt.QueryBuilder#prepare()Lcom/j256/ormlite/stmt/PreparedQuery;*P
+
+__unknown_file (4
+2
+queryBuilder"com.j256.ormlite.stmt.QueryBuilder2	prepare()ª∏
+&+ &(U
+%12java.util.List"Ucom.j256.ormlite.dao.Dao#query(Lcom/j256/ormlite/stmt/PreparedQuery;)Ljava/util/List;*F
+
+__unknown_file (*
+(
+dbVersionDaocom.j256.ormlite.dao.Dao*H
+
+__unknown_file (,
+*
+%11#com.j256.ormlite.stmt.PreparedQuery2,query(Lcom/j256/ormlite/stmt/PreparedQuery;)e
+c
+& &(V
+
+dbVersionsjava.util.List"__id*3
+
+__unknown_file (
+
+%12java.util.List~|
+( (( 
+%13boolean"java.util.List#isEmpty()Z*:
+
+__unknown_file (
+
+
+dbVersionsjava.util.List2	isEmpty()*
+2
+1*°
+1. .(~|
+. .(#
+%19boolean"java.util.List#isEmpty()Z*:
+
+__unknown_file (
+
+
+dbVersionsjava.util.List2	isEmpty()"
+. .($
+"":I
+- (O=
+connectionSource)com.j256.ormlite.support.ConnectionSource:*
+P (b
+
+entityNamejava.lang.String: 
+
+__unknown_file (
+""B("&
+$mage.cards.repository.RepositoryUtilHP

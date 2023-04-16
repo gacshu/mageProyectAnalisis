@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>DecDeckImporter xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../apidocs/mage/cards/decks/importer/DecDeckImporter.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.cards.decks.importer;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckCardInfo;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.cards.decks.DeckCardLists;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.cards.repository.CardInfo;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> java.util.Optional;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment"> * @author BetaSteward_at_googlemail.com</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="DecDeckImporter" href="../../../../mage/cards/decks/importer/DecDeckImporter.html#DecDeckImporter">DecDeckImporter</a> <strong class="jxr_keyword">extends</strong> <a name="PlainTextDeckImporter" href="../../../../mage/cards/decks/importer/PlainTextDeckImporter.html#PlainTextDeckImporter">PlainTextDeckImporter</a> {
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      @Override
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>      <strong class="jxr_keyword">protected</strong> <strong class="jxr_keyword">void</strong> readLine(String line, <a name="DeckCardLists" href="../../../../mage/cards/decks/DeckCardLists.html#DeckCardLists">DeckCardLists</a> deckList, FixedInfo fixedInfo) {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>          <strong class="jxr_keyword">if</strong> (line.isEmpty() || line.startsWith(<span class="jxr_string">"//"</span>)) {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>              <strong class="jxr_keyword">return</strong>;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          }
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">boolean</strong> sideboard = false;
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">if</strong> (line.startsWith(<span class="jxr_string">"SB:"</span>)) {
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>              line = line.substring(3).trim();
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>              sideboard = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          }
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <strong class="jxr_keyword">int</strong> delim = line.indexOf(' ');
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          String lineNum = line.substring(0, delim).trim();
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          String lineName = line.substring(delim).trim();
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">try</strong> {
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>              <strong class="jxr_keyword">int</strong> num = Integer.parseInt(lineNum);
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>              Optional&lt;CardInfo&gt; cardLookup = getCardLookup().lookupCardInfo(lineName);
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>              <strong class="jxr_keyword">if</strong> (!cardLookup.isPresent()) {
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>                  sbMessage.append(<span class="jxr_string">"Could not find card: '"</span>).append(lineName).append(<span class="jxr_string">"' at line "</span>).append(lineCount).append('\n');
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>              } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>                  <a name="CardInfo" href="../../../../mage/cards/repository/CardInfo.html#CardInfo">CardInfo</a> cardInfo = cardLookup.get();
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>                  <strong class="jxr_keyword">for</strong> (<strong class="jxr_keyword">int</strong> i = 0; i &lt; num; i++) {
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>                      <strong class="jxr_keyword">if</strong> (!sideboard) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                          deckList.getCards().add(<strong class="jxr_keyword">new</strong> <a name="DeckCardInfo" href="../../../../mage/cards/decks/DeckCardInfo.html#DeckCardInfo">DeckCardInfo</a>(cardInfo.getName(), cardInfo.getCardNumber(), cardInfo.getSetCode()));
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                      } <strong class="jxr_keyword">else</strong> {
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                          deckList.getSideboard().add(<strong class="jxr_keyword">new</strong> <a name="DeckCardInfo" href="../../../../mage/cards/decks/DeckCardInfo.html#DeckCardInfo">DeckCardInfo</a>(cardInfo.getName(), cardInfo.getCardNumber(), cardInfo.getSetCode()));
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>                      }
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  }
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>              }
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          } <strong class="jxr_keyword">catch</strong> (NumberFormatException nfe) {
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>              sbMessage.append(<span class="jxr_string">"Invalid number: "</span>).append(lineNum).append(<span class="jxr_string">" at line "</span>).append(lineCount).append('\n');
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          }
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>      }
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>  
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

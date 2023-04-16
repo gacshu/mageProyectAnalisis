@@ -1,0 +1,221 @@
+
+‰mage.target.common.TargetControlledCreatureEachColor#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetControlledCreatureEachColor.java8 8("startingBlock*!
+2A A("
+A A(
+""*Ë
+3@ @(¼¹
+@ @(
+%2java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*T
+
+__unknown_file (86
+4mage.target.common.TargetControlledCreatureEachColor2getTargets()us
+@ @('
+%3boolean"java.util.List#isEmpty()Z*2
+
+__unknown_file (
+
+%2java.util.List2	isEmpty()*
+2
+1*Î
+startingBlock8 8(OŽ
+‹
+7 7(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUID[
+Y
+8" 8(*
+playerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%11ˆ
+…
+7 7(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDU
+S
+81 8(3
+idjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+7 7(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+8= 8(C 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+7 7(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+8J 8(N
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+7*!
+4> >("
+> >(
+""*¦
+5< <("Š‡
+< <(3#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+idjava.util.UUID2getPermanent(Ljava/util/UUID;)
+
+< <(4*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+3
+4*!
+6: :("
+: :(
+""*®
+79 9(–
+“
+9 9(8
+%0boolean"pmage.target.TargetPermanent#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+5
+6*Á
+1C$ C((¼¹
+C$ C(5
+%4java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*T
+
+__unknown_file (86
+4mage.target.common.TargetControlledCreatureEachColor2getTargets()><
+C C(#
+%5mage.cards.CardsImpl"mage.cards.CardsImpl·
+´
+C C(6
+%6"4mage.cards.CardsImpl#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%5mage.cards.CardsImpl*2
+
+__unknown_file (
+
+%4java.util.Listg
+e
+C C(7
+cardsmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%5mage.cards.CardsImplÞÛ
+D D(
+
+%7void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2add(Lmage/cards/Card;)¶
+³
+E E(8
+%82mage.abilities.dynamicvalue.common.ColorAssignment"__id*g
+
+__unknown_file (K*I6
+4mage.target.common.TargetControlledCreatureEachColor"
+colorAssignerïì
+E E(6	
+%9int"\mage.abilities.dynamicvalue.RoleAssignment#getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)I*V
+
+__unknown_file (:
+8
+%82mage.abilities.dynamicvalue.common.ColorAssignment*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game20getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)pn
+E: E(F
+
+%10int"java.util.Set#size()I*7
+
+__unknown_file (
+
+cardsmage.cards.Cards2size()"
+E E(G
+"":&
+8 8(+
+playerIdjava.util.UUID: 
+8, 8(4
+idjava.util.UUID:,
+85 8(D 
+sourcemage.abilities.Ability:"
+8E 8(N
+gamemage.game.GameB86
+4mage.target.common.TargetControlledCreatureEachColorHP

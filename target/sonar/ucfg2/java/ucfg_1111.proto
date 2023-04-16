@@ -1,0 +1,117 @@
+
+lmage.abilities.common.DiesSourceTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zs
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/DiesSourceTriggeredAbility.java" "("startingBlock*!
+2% %("
+% %(
+""*◊
+3$& $(+Ø¨
+$& $(9
+%1java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()æª
+$A $(N
+%2java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*P
+
+__unknown_file (42
+0mage.abilities.common.DiesSourceTriggeredAbility2getSourceId()Ã…
+$& $(O
+%3boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%1java.util.UUID*2
+
+__unknown_file (
+
+%2java.util.UUID2equals(Ljava/lang/Object;)*
+2
+1*Ä
+startingBlock" "(;ñ
+ì
+! !(
+%7"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventc
+a
+"* "(/#
+eventmage.game.events.GameEvent"__annotation*"
+
+__unknown_file (
+
+%7â
+Ü
+! !(
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+"6 "(:
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8*
+4*¬
+4#3 #(8Å
+
+# #(9*
+zEvent mage.game.events.ZoneChangeEvent"__id*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent¶£
+$ $(!
+%0boolean"/mage.game.events.ZoneChangeEvent#isDiesEvent()Z*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2isDiesEvent()*
+2
+3*∂
+1' '(‹Ÿ
+' '($
+%4mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*P
+
+__unknown_file (42
+0mage.abilities.common.DiesSourceTriggeredAbility2getEffects()÷”
+': '(L#
+%5mage.game.permanent.Permanent"Kmage.game.events.ZoneChangeEvent#getTarget()Lmage/game/permanent/Permanent;*H
+
+__unknown_file (,
+*
+zEvent mage.game.events.ZoneChangeEvent2getTarget()⁄◊
+' '(M
+
+%6void"Nmage.abilities.effects.Effects#setValue(Ljava/lang/String;Ljava/lang/Object;)V*B
+
+__unknown_file (&
+$
+%4mage.abilities.effects.Effects*8
+
+__unknown_file (
+permanentLeftBattlefield*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent2.setValue(Ljava/lang/String;Ljava/lang/Object;)"
+( ((
+"":/
+"  "(0#
+eventmage.game.events.GameEvent:"
+"1 "(:
+gamemage.game.GameB42
+0mage.abilities.common.DiesSourceTriggeredAbilityHP

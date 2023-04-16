@@ -1,0 +1,50 @@
+
+Cmage.client.cards.DragCardGrid#dragCardList()Ljava/util/Collection;h
+^D:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/cards/DragCardGrid.java5  5(,"1*ü
+16 6(v
+t
+6 6(
+%0java.util.List"__id*L
+
+__unknown_file (0*. 
+mage.client.cards.DragCardGrid"
+
+allCards¢Ÿ
+6 6( 
+%1java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%0java.util.List2stream()Ž‹
+6 6(=
+%2java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%1java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)õ
+ò
+6F 6(m 
+%3java.util.stream.Collector"cjava.util.stream.Collectors#toCollection(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors*"
+
+__unknown_file (
+""š
+6 6(n
+%4java.util.ArrayList"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%3java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"'
+6 6(o
+
+%4java.util.ArrayListB" 
+mage.client.cards.DragCardGridH

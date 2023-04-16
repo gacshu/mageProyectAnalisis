@@ -1,0 +1,177 @@
+
+~mage.abilities.costs.UseAttachedCost#canPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Zg
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/costs/UseAttachedCost.java ("startingBlock*ÿ
+2$ $(øº
+$ %(!
+%3java.util.List">mage.game.permanent.Permanent#getAttachments()Ljava/util/List;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getAttachments()¢ü
+$ &(
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%3java.util.List2stream()ù
+ö
+' '(J"
+%5java.util.function.Predicate"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_117$mage.abilities.costs.UseAttachedCostá
+Ñ
+
+__unknown_file (,
+"
+%5java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameß
+§
+
+__unknown_file (<
+"
+%5java.util.function.Predicate"
+UseAttachedCost.this"__id*D
+
+__unknown_file ((&
+$mage.abilities.costs.UseAttachedCostàÖ
+$ '(K
+%8boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%5java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)*
+1*—
+3" "("®•
+"0 "(D
+%1java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()äá
+" "(E#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)Å
+
+" "(F*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+2
+1*Ó
+startingBlock (Xî
+ë
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilitya
+_
+" ()!
+abilitymage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9î
+ë
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+3 (9 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%10í
+è
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*<
+
+__unknown_file ( 
+
+controllerIdjava.util.UUID_
+]
+@ (L
+controllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%11ä
+á
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+S (W
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12*
+5*!
+4   ("
+   (
+""*™
+5 (í
+è
+ (
+%0mage.MageObjectReference"__id*]
+
+__unknown_file (A*?&
+$mage.abilities.costs.UseAttachedCost"
+mageObjectReference*
+3
+4*!
+1# '(L"
+# '(L
+"":-
+ (*!
+abilitymage.abilities.Ability:,
++ (: 
+sourcemage.abilities.Ability:*
+; (M
+controllerIdjava.util.UUID:"
+N (W
+gamemage.game.GameB(&
+$mage.abilities.costs.UseAttachedCostHP

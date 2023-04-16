@@ -1,0 +1,455 @@
+
+ómage.player.ai.ComputerPlayer#chooseTarget(Lmage/constants/Outcome;Lmage/cards/Cards;Lmage/target/TargetCard;Lmage/abilities/Ability;Lmage/game/Game;)ZÄ
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.java“ “("startingBlock*´
+13
+‘ ‘(Çˇ
+
+‘ ‘(,
+%1boolean"<mage.target.TargetImpl#isRequired(Lmage/abilities/Ability;)Z*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2$isRequired(Lmage/abilities/Ability;)"
+
+‘ ‘(-
+""*ó
+14
+” ”("{y
+
+” ”(,
+%0boolean"java.util.Set#isEmpty()Z*7
+
+__unknown_file (
+
+cardsmage.cards.Cards2	isEmpty()*
+13
+12*%
+1
+Ì Ì("
+
+Ì Ì(
+""*%
+2
+Í Í("
+
+Í Í(
+""*£
+3
+È. È(4©¶
+
+È. È(A
+%20java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getTargets()om
+
+È. È(H
+
+%21int"java.util.List#size()I*3
+
+__unknown_file (
+
+%20java.util.List2size()üú
+
+ÈK È(f
+
+%22int",mage.target.TargetImpl#getNumberOfTargets()I*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getNumberOfTargets()¶£
+Èj È(à
+
+%23int"/mage.target.TargetImpl#getMaxNumberOfTargets()I*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getMaxNumberOfTargets()°û
+Èã È(¶
+
+%24int",mage.target.TargetImpl#getNumberOfTargets()I*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getNumberOfTargets()*
+2
+8*˚	
+startingBlock
+“ “(kó
+î
+
+— —(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcomed
+b
+
+“( “(/!
+outcomemage.constants.Outcome"__annotation*#
+
+__unknown_file (
+
+%25è
+å
+
+— —(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+cardsmage.cards.Cards\
+Z
+
+“7 “(<
+cardsmage.cards.Cards"__annotation*#
+
+__unknown_file (
+
+%26ñ
+ì
+
+— —(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCardc
+a
+
+“I “(O 
+targetmage.target.TargetCard"__annotation*#
+
+__unknown_file (
+
+%27ñ
+ì
+
+— —(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+“Y “(_ 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28å
+â
+
+— —(
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+“f “(j
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%29*
+13
+14*p
+4
+È È(W
+U
+
+È È(*
+%19mage.constants.Outcome"__id*"
+
+__unknown_file (
+""*
+3
+8*‰
+5
+Á Á(©¶
+
+Á Á(*
+%16java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getTargets()om
+
+Á Á(1
+
+%17int"java.util.List#size()I*3
+
+__unknown_file (
+
+%16java.util.List2size()üú
+
+Á5 Á(P
+
+%18int",mage.target.TargetImpl#getNumberOfTargets()I*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getNumberOfTargets()"
+
+Á Á(Q
+""*Æ
+6
+„ „(çä
+
+„! „(-
+%13java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()©¶
+
+„ „(<
+%14void"[mage.target.TargetImpl#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard*3
+
+__unknown_file (
+
+%13java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)€ÿ
+
+‰ ‰((
+%15boolean"*java.util.List#remove(Ljava/lang/Object;)Z*;
+
+__unknown_file (
+
+cardChoicesjava.util.List*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Ljava/lang/Object;)*
+4*ì
+7
+· ·("îë
+
+· ·(c
+%12mage.cards.Card"Ømage.player.ai.ComputerPlayer#pickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)Lmage/cards/Card;*=
+
+__unknown_file (!
+mage.player.ai.ComputerPlayer*C
+
+__unknown_file ('
+%
+abilityControllerIdjava.util.UUID*;
+
+__unknown_file (
+
+cardChoicesjava.util.List*?
+
+__unknown_file (#
+!
+outcomemage.constants.Outcome*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ÄpickTarget(Ljava/util/UUID;Ljava/util/List;Lmage/constants/Outcome;Lmage/target/Target;Lmage/abilities/Ability;Lmage/game/Game;)c
+a
+
+· ·(d
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%12mage.cards.Card*
+5
+6*±
+8
+‡ ‡(óî
+
+‡ ‡(%
+%11boolean"&mage.target.TargetImpl#doneChoosing()Z*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2doneChoosing()*
+7
+1*Ã	
+9
+ﬂ1 ﬂ(6∂≥
+
+ﬂ@ ﬂ(R
+%6mage.filter.FilterCard":mage.target.TargetCard#getFilter()Lmage/filter/FilterCard;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getFilter()w
+u
+
+ﬂT ﬂ(\
+%7java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerIdõò
+
+ﬂ1 ﬂ(k
+%8java.util.Set"zmage.cards.Cards#getCards(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*:
+
+__unknown_file (
+
+%6mage.filter.FilterCard*2
+
+__unknown_file (
+
+%7java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZgetCards(Lmage/filter/FilterCard;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)><
+
+ﬂ% ﬂ(0
+%9java.util.ArrayList"java.util.ArrayList∑
+¥
+
+ﬂ! ﬂ(l
+%10"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*7
+
+__unknown_file (
+
+%9java.util.ArrayList*1
+
+__unknown_file (
+
+%8java.util.Setl
+j
+
+ﬂ ﬂ(m
+cardChoicesjava.util.List"__id*7
+
+__unknown_file (
+
+%9java.util.ArrayList*
+8*≈
+10
+€" €((ºπ
+
+€" €(?
+%5java.util.UUID"=mage.target.TargetImpl#getAbilityController()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getAbilityController()o
+m
+
+€ €(?%
+abilityControllerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID*
+9*ÿ
+11
+⁄ ⁄(ºπ
+
+⁄ ⁄(0
+%4java.util.UUID"=mage.target.TargetImpl#getAbilityController()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getAbilityController()*
+9
+10*¿
+12
+ÿ# ÿ(+w
+u
+
+ÿ# ÿ(+
+%2java.util.UUID"__id*K
+
+__unknown_file (/*-
+mage.player.ai.ComputerPlayer"
+
+playerIdo
+m
+
+ÿ ÿ(,%
+abilityControllerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%2java.util.UUID∫∑
+
+Ÿ Ÿ((
+%3java.util.UUID"<mage.target.TargetImpl#getTargetController()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+targetmage.target.TargetCard2getTargetController()*
+9
+11:/
+
+“  “(0!
+outcomemage.constants.Outcome:'
+
+“1 “(=
+cardsmage.cards.Cards:.
+
+“> “(P 
+targetmage.target.TargetCard:.
+
+“Q “(` 
+sourcemage.abilities.Ability:$
+
+“a “(j
+gamemage.game.GameB!
+mage.player.ai.ComputerPlayerHP

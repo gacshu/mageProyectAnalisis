@@ -1,0 +1,211 @@
+
+2mage.deck.Standard#makeLegalSets()Ljava/util/List;p
+fD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Deck.Constructed/src/mage/deck/Standard.java$ $(%"1*…)
+1%$ %(;LJ
+%( %(9!
+%0java.util.GregorianCalendar"java.util.GregorianCalendarz
+x
+%$ %(;
+%1"%java.util.GregorianCalendar#<init>()V*?
+
+__unknown_file (#
+!
+%0java.util.GregorianCalendar{
+y
+% %(<&
+currentjava.util.GregorianCalendar"__id*?
+
+__unknown_file (#
+!
+%0java.util.GregorianCalendar…
+‚
+' ((
+%2mage.cards.Sets".mage.cards.Sets#getInstance()Lmage/cards/Sets;*/
+
+__unknown_file ("
+mage.cards.Setsš—
+' )(
+%3java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*3
+
+__unknown_file (
+
+%2mage.cards.Sets2values()¨¥
+' *(
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%3java.util.Collection2stream()v
+t
++ +(M"
+%5java.util.function.Predicate"__declareFunction*1
+
+__unknown_file (
+__sonar_lambda_1$š
+—
+
+__unknown_file (/
+"
+%5java.util.function.Predicate"	
+current"__id*D
+
+__unknown_file ((
+&
+currentjava.util.GregorianCalendar¬©
+' +(N
+%9java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%5java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Œ
+' ,(,
+%10java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)Ö
+Ó
+- -(45
+%11.mage.cards.ExpansionSet$ExpansionSetComparator"Wmage.cards.ExpansionSet#getComparator()Lmage/cards/ExpansionSet$ExpansionSetComparator;*7
+
+__unknown_file ("
+mage.cards.ExpansionSet±®
+' -(5
+%12java.util.stream.Stream"Ojava.util.stream.Stream#sorted(Ljava/util/Comparator;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%10java.util.stream.Stream*S
+
+__unknown_file (7
+5
+%11.mage.cards.ExpansionSet$ExpansionSetComparator2sorted(Ljava/util/Comparator;)ÐÍ
+' .(
+%13java.util.stream.Stream"8java.util.stream.Stream#skip(J)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%12java.util.stream.Stream* 
+
+__unknown_file (22skip(J)¬©
+' /(
+%14java.util.Optional"7java.util.stream.Stream#findFirst()Ljava/util/Optional;*<
+
+__unknown_file ( 
+
+%13java.util.stream.Stream2findFirst()™–
+' 0(
+%15mage.cards.ExpansionSet"*java.util.Optional#get()Ljava/lang/Object;*7
+
+__unknown_file (
+
+%14java.util.Optional2get()®«
+' 1(!
+%16java.util.Date"8mage.cards.ExpansionSet#getReleaseDate()Ljava/util/Date;*<
+
+__unknown_file ( 
+
+%15mage.cards.ExpansionSet2getReleaseDate()g
+e
+' 1("
+earliestDatejava.util.Date"__id*3
+
+__unknown_file (
+
+%16java.util.Date†
+ƒ
+2 2(!
+%17mage.cards.Sets".mage.cards.Sets#getInstance()Lmage/cards/Sets;*/
+
+__unknown_file ("
+mage.cards.Setsœ™
+2 3(
+%18java.util.Collection"0java.util.HashMap#values()Ljava/util/Collection;*4
+
+__unknown_file (
+
+%17mage.cards.Sets2values()ª§
+2 4(
+%19java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*9
+
+__unknown_file (
+
+%18java.util.Collection2stream()w
+u
+5 5(A#
+%20java.util.function.Predicate"__declareFunction*1
+
+__unknown_file (
+__sonar_lambda_2$¯¬
+2 5(B
+%23java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%19java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%20java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)w
+u
+6 6(I#
+%24java.util.function.Predicate"__declareFunction*1
+
+__unknown_file (
+__sonar_lambda_3$˜
+•
+
+__unknown_file (5
+#
+%24java.util.function.Predicate"
+earliestDate"__id*<
+
+__unknown_file ( 
+
+earliestDatejava.util.Date¯¬
+2 6(J
+%27java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%23java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%24java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)ˆ…
+2 8(+
+%28java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%27java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)¯
+¬
+9 9(,!
+%29java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors›˜
+2 9(-
+%30java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+%28java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%29java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"#
+2 9(.
+
+%30java.util.ListB"
+mage.deck.Standard

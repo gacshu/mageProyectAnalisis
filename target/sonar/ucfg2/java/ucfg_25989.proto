@@ -1,0 +1,319 @@
+
+vmage.server.SessionManagerImpl#registerUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Zh
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/SessionManagerImpl.java3 3("startingBlock*à
+2; ;(U
+S
+; ;(
+%6org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""}
+{
+; ;(7
+%7java.lang.String"__concat**
+; ;(!
+
+userNamejava.lang.String*!
+;$ ;(7
+ not registered: †
+ƒ
+; ;(G
+%8java.lang.String"__concat*$
+; ;(7
+
+%7java.lang.String*/
+;: ;(G#
+!
+returnMessagejava.lang.StringÝÚ
+; ;(H
+
+%9void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%6org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%8java.lang.String2debug(Ljava/lang/Object;)"
+< <(
+""*Ë
+39 9(&ÆÃ
+9 9(N
+%5java.lang.String"jmage.server.Session#registerUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*<
+
+__unknown_file ( 
+
+sessionmage.server.Session*:
+
+__unknown_file (
+
+userNamejava.lang.String*:
+
+__unknown_file (
+
+passwordjava.lang.String*7
+
+__unknown_file (
+
+emailjava.lang.String2DregisterUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)k
+i
+9 9(O!
+returnMessagejava.lang.String"__id*4
+
+__unknown_file (
+
+%5java.lang.String*
+2
+1*â
+startingBlock3 3(a‘
+Ž
+2 2(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*;
+
+__unknown_file (
+
+	sessionIdjava.lang.String^
+\
+3' 3(0
+	sessionIdjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%24
+
+2 2(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+userNamejava.lang.String]
+[
+39 3(A
+userNamejava.lang.String"__annotation*#
+
+__unknown_file (
+
+%25
+
+2 2(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*:
+
+__unknown_file (
+
+passwordjava.lang.String]
+[
+3J 3(R
+passwordjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%26
+Š
+2 2(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*7
+
+__unknown_file (
+
+emailjava.lang.StringZ
+X
+3[ 3(`
+emailjava.lang.String"__annotation*#
+
+__unknown_file (
+
+%27*
+5*ì
+46 6(U
+S
+6 6(
+%2org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‘
+Ž
+6 6(J
+%3java.lang.String"__concat**
+6 6(!
+
+userNamejava.lang.String*4
+6$ 6(J(&
+$ tried to register with no sessionIdÝÚ
+6 6(K
+
+%4void"4org.apache.log4j.Category#error(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%2org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%3java.lang.String2error(Ljava/lang/Object;)"
+7 7(
+""*Ò
+54 4("
+Œ
+4 4(",
+%0&java.util.concurrent.ConcurrentHashMap"__id*L
+
+__unknown_file (0*. 
+mage.server.SessionManagerImpl"
+
+sessions»
+¸
+4 4(1
+%1mage.server.Session"__mapGet*J
+
+__unknown_file (.
+,
+%0&java.util.concurrent.ConcurrentHashMap*;
+
+__unknown_file (
+
+	sessionIdjava.lang.Stringk
+i
+4 4(2
+sessionmage.server.Session"__id*7
+
+__unknown_file (
+
+%1mage.server.Session*
+3
+4*´
+1> >(V
+T
+> >(
+%10org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""x
+v
+> >(,
+%11java.lang.String"__concat**
+> >(
+
+userNamejava.lang.String*
+> >(,
+ registeredÞÛ
+> >(-
+%12void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%10org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%11java.lang.String2info(Ljava/lang/Object;)V
+T
+? ?(
+%13org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+"" 
+?' ?(:
+%14java.util.UUID"/mage.server.Session#getUserId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+sessionmage.server.Session2getUserId()s
+q
+? ?(:
+%15java.lang.String"__concat*
+? ?($
+- userId:    *#
+?' ?(:
+
+%14java.util.UUIDàÝ
+? ?(;
+%16void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%13org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%15java.lang.String2debug(Ljava/lang/Object;)V
+T
+@ @(
+%17org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""{
+y
+@ @(0
+%18java.lang.String"__concat*
+@ @($
+- sessionId: *+
+@' @(0
+
+	sessionIdjava.lang.StringàÝ
+@ @(1
+%19void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%17org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%18java.lang.String2debug(Ljava/lang/Object;)V
+T
+A A(
+%20org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+"" 
+A' A(8
+%21java.lang.String"/mage.server.Session#getHost()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+sessionmage.server.Session2	getHost()u
+s
+A A(8
+%22java.lang.String"__concat*
+A A($
+- host:      *%
+A' A(8
+
+%21java.lang.StringàÝ
+A A(9
+%23void"4org.apache.log4j.Category#debug(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%20org.apache.log4j.Logger*5
+
+__unknown_file (
+
+%22java.lang.String2debug(Ljava/lang/Object;)"
+B B(
+"":)
+3  3(1
+	sessionIdjava.lang.String:(
+32 3(B
+userNamejava.lang.String:(
+3C 3(S
+passwordjava.lang.String:%
+3T 3(`
+emailjava.lang.StringB" 
+mage.server.SessionManagerImplHP

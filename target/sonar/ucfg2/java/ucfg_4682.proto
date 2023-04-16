@@ -1,0 +1,177 @@
+
+omage.abilities.effects.common.TapAllTargetPlayerControlsEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/TapAllTargetPlayerControlsEffect.java   ("startingBlock*!
+2' '("
+' '(
+""*‘
+3$ $(Z
+X
+$ $("
+pmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""
+š
+$ $("
+pmage.game.permanent.Permanent"
+__arrayGet*:
+
+__unknown_file (
+
+
+permanentsjava.util.List*"
+
+__unknown_file (
+""*
+2
+4*ú
+startingBlock   (3‰
+†
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+   ("
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%8“
+
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+ ,  (2 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9*
+7*æ
+4% %(ÑÎ
+% %(#
+%7boolean"Lmage.game.permanent.Permanent#tap(Lmage/abilities/Ability;Lmage/game/Game;)Z*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2-tap(Lmage/abilities/Ability;Lmage/game/Game;)*
+3*æ
+6#) #(-¾»
+#) #(>%
+%3mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()¢
+Ÿ
+#V #(\!
+%4mage.filter.FilterPermanent"__id*j
+
+__unknown_file (N*L@
+>mage.abilities.effects.common.TapAllTargetPlayerControlsEffect"
+filter
+#^ #(l
+%5java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()òï
+#) #(s
+%6java.util.List"…mage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%3mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%4mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%5java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)d
+b
+# #(t
+
+permanentsjava.util.List"__id*2
+
+__unknown_file (
+
+%6java.util.List*
+3*µ
+7! !(µ
+²
+!' !(4-
+%0'mage.target.targetpointer.TargetPointer"__id*q
+
+__unknown_file (U*S@
+>mage.abilities.effects.common.TapAllTargetPlayerControlsEffect"
+targetPointer†ƒ
+!' !(K
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ðí
+! !(L
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+! !(M
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+6
+1*!
+1) )("
+) )(
+"":"
+   (#
+gamemage.game.Game:,
+ $  (2 
+sourcemage.abilities.AbilityBB@
+>mage.abilities.effects.common.TapAllTargetPlayerControlsEffectHP

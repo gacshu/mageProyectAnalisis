@@ -1,0 +1,227 @@
+
+£mage.abilities.keyword.ConvokeAbility#getManaOptions(Lmage/abilities/Ability;Lmage/game/Game;Lmage/abilities/costs/mana/ManaCost;)Lmage/abilities/mana/ManaOptions;j
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ConvokeAbility.javaí í(%"startingBlock*û
+startingBlock
+í% í(Qñ
+ì
+
+ë ë(
+%36"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+í. í(4 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%36å
+â
+
+ë ë(
+%37"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+í; í(?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%37¢
+ü
+
+ë ë(
+%38"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*J
+
+__unknown_file (.
+,
+unpaid"mage.abilities.costs.mana.ManaCosto
+m
+
+íJ í(P,
+unpaid"mage.abilities.costs.mana.ManaCost"__annotation*#
+
+__unknown_file (
+
+%38*
+1*π
+1
+ì ì(/VT
+
+ì" ì(-%
+%0mage.abilities.mana.ManaOptions"mage.abilities.mana.ManaOptionsÖ
+Ç
+
+ì ì(/
+%1")mage.abilities.mana.ManaOptions#<init>()V*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptionsÜ
+É
+
+ì ì(0*
+optionsmage.abilities.mana.ManaOptions"__id*C
+
+__unknown_file ('
+%
+%0mage.abilities.mana.ManaOptionsÄ~
+
+î< î(]:
+%24mage.filter.common.FilterControlledCreaturePermanent"4mage.filter.common.FilterControlledCreaturePermanentØ
+¨
+
+î8 î(_
+%3">mage.filter.common.FilterControlledCreaturePermanent#<init>()V*X
+
+__unknown_file (<
+:
+%24mage.filter.common.FilterControlledCreaturePermanent¥
+±
+
+î î(`C
+filterBasic4mage.filter.common.FilterControlledCreaturePermanent"__id*X
+
+__unknown_file (<
+:
+%24mage.filter.common.FilterControlledCreaturePermanent¿Ω
+
+ó ó(%
+%4mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()≤Ø
+
+ó? ó(W
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ä˝
+
+ó ó(f
+%6java.util.List"ömage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%4mage.game.permanent.Battlefield*a
+
+__unknown_file (E
+C
+filterBasic4mage.filter.common.FilterControlledCreaturePermanent*2
+
+__unknown_file (
+
+%5java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)§°
+
+ó ò(
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%6java.util.List2stream()†
+ù
+
+ô ô(:"
+%8java.util.function.Predicate"__declareFunction*X
+
+__unknown_file (<:
+8__sonar_lambda_108$mage.abilities.keyword.ConvokeAbilityØ¨
+
+ó ô(;
+%10java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)†
+ù
+
+ö •("
+%11java.util.function.Consumer"__declareFunction*X
+
+__unknown_file (<:
+8__sonar_lambda_109$mage.abilities.keyword.ConvokeAbilityá
+Ñ
+
+__unknown_file (,
+"
+%11java.util.function.Consumer"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameû
+õ
+
+__unknown_file (/
+"
+%11java.util.function.Consumer"	
+options"__id*H
+
+__unknown_file (,
+*
+optionsmage.abilities.mana.ManaOptionsÖÇ
+
+ó •(
+%34void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%10java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%11java.util.function.Consumer2&forEach(Ljava/util/function/Consumer;)…∆
+
+ß ß(/
+%35void"@mage.abilities.mana.ManaOptions#removeFullyIncludedVariations()V*H
+
+__unknown_file (,
+*
+optionsmage.abilities.mana.ManaOptions2removeFullyIncludedVariations()":
+
+® ®(,
+*
+optionsmage.abilities.mana.ManaOptions:.
+
+í& í(5 
+sourcemage.abilities.Ability:$
+
+í6 í(@
+gamemage.game.Game::
+
+íA í(P,
+unpaid"mage.abilities.costs.mana.ManaCostB)'
+%mage.abilities.keyword.ConvokeAbilityH

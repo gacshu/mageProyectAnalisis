@@ -1,0 +1,257 @@
+
+mage.game.command.dungeons.OublietteTarget#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zy
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/dungeons/TombOfAnnihilationDungeon.javaÀ À("startingBlock*%
+2
+É É("
+
+É É(
+""*Ç
+3
+È È(´±
+
+È È(
+%2java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*J
+
+__unknown_file (.,
+*mage.game.command.dungeons.OublietteTarget2getTargets()wu
+
+È È('
+%3boolean"java.util.List#isEmpty()Z*2
+
+__unknown_file (
+
+%2java.util.List2	isEmpty()*
+2
+1*â
+startingBlock
+À À(P
+
+
+¿ ¿(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUID]
+[
+
+À" À(*
+playerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%11Š
+‡
+
+¿ ¿(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*2
+
+__unknown_file (
+
+idjava.util.UUIDW
+U
+
+À1 À(3
+idjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12—
+”
+
+¿ ¿(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Abilityd
+b
+
+À= À(D!
+abilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13Œ
+‰
+
+¿ ¿(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+ÀK À(O
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+7*%
+4
+Æ Æ("
+
+Æ Æ(
+""*­
+5
+Ä Ä("Œ‰
+
+Ä Ä(3#
+%1mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+idjava.util.UUID2getPermanent(Ljava/util/UUID;)„
+
+
+Ä Ä(4*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*
+3
+4*%
+6
+Â Â("
+
+Â Â(
+""*³
+7
+Á Á(™
+–
+
+Á Á(9
+%0boolean"pmage.target.TargetPermanent#canTarget(Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*2
+
+__unknown_file (
+
+idjava.util.UUID*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+5
+6*Š
+1
+Ë$ Ë((´±
+
+Ë$ Ë(5
+%4java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*J
+
+__unknown_file (.,
+*mage.game.command.dungeons.OublietteTarget2getTargets()@>
+
+Ë Ë(#
+%5mage.cards.CardsImpl"mage.cards.CardsImpl¹
+¶
+
+Ë Ë(6
+%6"4mage.cards.CardsImpl#<init>(Ljava/util/Collection;)V*8
+
+__unknown_file (
+
+%5mage.cards.CardsImpl*2
+
+__unknown_file (
+
+%4java.util.Listi
+g
+
+Ë Ë(7
+cardsmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%5mage.cards.CardsImplàÝ
+
+Ì Ì(
+
+%7void"(mage.cards.Cards#add(Lmage/cards/Card;)V*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2add(Lmage/cards/Card;)u
+s
+
+Í Í(;
+%85mage.abilities.dynamicvalue.common.CardTypeAssignment"__id*"
+
+__unknown_file (
+""ôñ
+
+Í Í(9	
+%9int"\mage.abilities.dynamicvalue.RoleAssignment#getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)I*Y
+
+__unknown_file (=
+;
+%85mage.abilities.dynamicvalue.common.CardTypeAssignment*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game20getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)rp
+
+Í= Í(I
+
+%10int"java.util.Set#size()I*7
+
+__unknown_file (
+
+cardsmage.cards.Cards2size()"
+
+Í Í(J
+"":(
+
+À À(+
+playerIdjava.util.UUID:"
+
+À, À(4
+idjava.util.UUID:/
+
+À5 À(E!
+abilitymage.abilities.Ability:$
+
+ÀF À(O
+gamemage.game.GameB.,
+*mage.game.command.dungeons.OublietteTargetHP

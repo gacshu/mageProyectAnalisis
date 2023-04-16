@@ -1,0 +1,195 @@
+
+Émage.server.tournament.TournamentController#checkToReplaceDraftPlayerByAi(Ljava/util/UUID;Lmage/game/tournament/TournamentPlayer;)Zw
+kD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/tournament/TournamentController.javaô ô(1"7*à
+2
+¢" ¢(0°
+û
+
+¢" ¢(0)
+%4#mage.server.managers.ManagerFactory"__id*_
+
+__unknown_file (C*A-
++mage.server.tournament.TournamentController"
+managerFactory‰·
+
+¢" ¢(>&
+%5 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%4#mage.server.managers.ManagerFactory2userManager()íè
+
+¢" ¢(N
+%6java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%5 mage.server.managers.UserManager*6
+
+__unknown_file (
+
+userIdjava.util.UUID2getUser(Ljava/util/UUID;)h
+f
+
+¢ ¢(O
+userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%6java.util.Optional°
+û
+
+£ £()
+%7#mage.server.managers.ManagerFactory"__id*_
+
+__unknown_file (C*A-
++mage.server.tournament.TournamentController"
+managerFactoryËÂ
+
+£ £()'
+%8!mage.server.managers.TableManager"Umage.server.managers.ManagerFactory#tableManager()Lmage/server/managers/TableManager;*G
+
+__unknown_file (+
+)
+%7#mage.server.managers.ManagerFactory2tableManager()Ö
+Ç
+
+£8 £(?
+%9java.util.UUID"__id*X
+
+__unknown_file (<*:-
++mage.server.tournament.TournamentController"	
+tableIdùö
+
+£ £(@
+%10java.util.Optional"Umage.server.managers.TableManager#getController(Ljava/util/UUID;)Ljava/util/Optional;*E
+
+__unknown_file ()
+'
+%8!mage.server.managers.TableManager*2
+
+__unknown_file (
+
+%9java.util.UUID2getController(Ljava/util/UUID;)¶
+£
+
+£K ∞("
+%11java.util.function.Consumer"__declareFunction*^
+
+__unknown_file (B@
+>__sonar_lambda_755$mage.server.tournament.TournamentControllerã
+à
+
+__unknown_file (,
+"
+%11java.util.function.Consumer"
+user"__id*8
+
+__unknown_file (
+
+userjava.util.Optional∞
+≠
+
+__unknown_file (5
+"
+%11java.util.function.Consumer"
+leavingPlayer"__id*T
+
+__unknown_file (8
+6
+leavingPlayer%mage.game.tournament.TournamentPlayer≥
+∞
+
+__unknown_file (A
+"
+%11java.util.function.Consumer"
+TournamentController.this"__id*K
+
+__unknown_file (/-
++mage.server.tournament.TournamentControllerˇ¸
+
+£ ∞(
+%44void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*7
+
+__unknown_file (
+
+%10java.util.Optional*@
+
+__unknown_file ($
+"
+%11java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)"
+
+± ±(
+""*¥
+4
+õ õ(%j
+h
+
+õ õ(%0
+tPlayer%mage.game.tournament.TournamentPlayer"__id*"
+
+__unknown_file (
+""´
+®
+
+õ õ(%0
+tPlayer%mage.game.tournament.TournamentPlayer"
+__arrayGet*8
+
+__unknown_file (
+
+%1java.util.Collection*"
+
+__unknown_file (
+""*	
+2
+6
+1*Í
+6
+ú ú(œÃ
+
+ú ú(#
+%2mage.players.Player"Fmage.game.tournament.TournamentPlayer#getPlayer()Lmage/players/Player;*N
+
+__unknown_file (2
+0
+tPlayer%mage.game.tournament.TournamentPlayer2getPlayer()Å
+
+ú ú(-
+%3boolean"mage.players.Player#isHuman()Z*7
+
+__unknown_file (
+
+%2mage.players.Player2	isHuman()*
+4*ı
+7
+õ( õ(2ô
+ñ
+
+õ( õ(2%
+%0mage.game.tournament.Tournament"__id*[
+
+__unknown_file (?*=-
++mage.server.tournament.TournamentController"
+
+tournament¬ø
+
+õ( õ(?
+%1java.util.Collection"Bmage.game.tournament.Tournament#getPlayers()Ljava/util/Collection;*C
+
+__unknown_file ('
+%
+%0mage.game.tournament.Tournament2getPlayers()*
+4*%
+1
+≥ ≥("
+
+≥ ≥(
+"":&
+
+ô2 ô(>
+userIdjava.util.UUID:D
+
+ô? ô(]6
+leavingPlayer%mage.game.tournament.TournamentPlayerB/-
++mage.server.tournament.TournamentControllerP

@@ -1,0 +1,354 @@
+
+gmage.abilities.effects.common.ChooseCreatureTypeEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zy
+oD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ChooseCreatureTypeEffect.java   ("startingBlock*!
+20 0("
+0 0(
+""*ú
+3.! .(+®•
+	.r .(à
+%24java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+typeChoicemage.choices.Choice2getChoice()w
+u
+	.` .(à
+%25java.lang.String"__concat*
+.` .(o
+Chosen type: *&
+	.r .(à
+
+%24java.lang.Stringﬂ
+‹
+	.D .(â
+%26java.lang.String"Kmage.util.CardUtil#addToolTipMarkTags(Ljava/lang/String;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*5
+
+__unknown_file (
+
+%25java.lang.StringÅ˛
+	. .(ê
+%27void"Nmage.cards.Card#addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)V*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject*+
+
+__unknown_file (
+chosen type*5
+
+__unknown_file (
+
+%26java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Game2=addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)*
+2*ˇ
+startingBlock   (3ä
+á
+ (
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+   ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%28î
+ë
+ (
+%29"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+ ,  (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%29*
+11*¶	
+4, ,(õò
+, ,(
+%18mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()©¶
+,) ,(=
+%19java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()k
+i
+,) ,(G
+%20java.lang.String"__concat*#
+,) ,(=
+
+%19java.util.UUID*
+,@ ,(G	
+_typeß§
+,_ ,(u
+%21java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+typeChoicemage.choices.Choice2getChoice()Ì
+Í
+,I ,(v
+%22mage.constants.SubType"Pmage.constants.SubType#byDescription(Ljava/lang/String;)Lmage/constants/SubType;*6
+
+__unknown_file ("
+mage.constants.SubType*5
+
+__unknown_file (
+
+%21java.lang.StringΩ∫
+, ,(w
+%23void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%18mage.game.GameState*5
+
+__unknown_file (
+
+%20java.lang.String*;
+
+__unknown_file (
+
+%22mage.constants.SubType2.setValue(Ljava/lang/String;Ljava/lang/Object;)*
+2
+3* 	
+5* *(õò
+*' *(;
+%10java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObject2	getName()j
+h
+*' *(B
+%11java.lang.String"__concat*%
+*' *(;
+
+%10java.lang.String*
+*> *(B
+: ©¶
+*E *(\
+%12java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()}
+{
+*' *(\
+%13java.lang.String"__concat*%
+*' *(B
+
+%11java.lang.String*%
+*E *(\
+
+%12java.lang.Stringt
+r
+*' *(m
+%14java.lang.String"__concat*%
+*' *(\
+
+%13java.lang.String*
+*_ *(m
+ has chosen ®•
+	*p *(Ü
+%15java.lang.String"1mage.choices.Choice#getChoice()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+typeChoicemage.choices.Choice2getChoice()
+}
+	*' *(Ü
+%16java.lang.String"__concat*%
+*' *(m
+
+%14java.lang.String*&
+	*p *(Ü
+
+%15java.lang.Stringﬁ€
+	* *(á
+%17void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%16java.lang.String2!informPlayers(Ljava/lang/String;)*
+4*ô
+6) )(Å
+) )((
+%9boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+4
+5*ä
+7'7 '(ATR
+'$ '(6%
+%5mage.choices.ChoiceCreatureType"mage.choices.ChoiceCreatureType—
+Œ
+'  '(B
+%6":mage.choices.ChoiceCreatureType#<init>(Lmage/MageObject;)V*C
+
+__unknown_file ('
+%
+%5mage.choices.ChoiceCreatureType*;
+
+__unknown_file (
+
+
+mageObjectmage.MageObjectz
+x
+' '(C!
+
+typeChoicemage.choices.Choice"__id*C
+
+__unknown_file ('
+%
+%5mage.choices.ChoiceCreatureTypeñ
+ì
+(" (()
+%7mage.constants.Outcome"__id*c
+
+__unknown_file (G*E8
+6mage.abilities.effects.common.ChooseCreatureTypeEffect"	
+outcome≥∞
+( ((<
+%8boolean"Zmage.players.Player#choose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*:
+
+__unknown_file (
+
+%7mage.constants.Outcome*?
+
+__unknown_file (#
+!
+
+typeChoicemage.choices.Choice*4
+
+__unknown_file (
+
+gamemage.game.Game2Echoose(Lmage/constants/Outcome;Lmage/choices/Choice;Lmage/game/Game;)*
+6
+1*Ö
+10$ $(ÑÅ
+$ $(/
+%4mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)f
+d
+$ $(/
+
+mageObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%4mage.MageObject*
+7
+1*Ó
+11! !( ∞≠
+!+ !(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()Ì
+! !(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+! !(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player®•
+": "(N
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()öó
+"  "(O#
+%3mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)t
+r
+" "(P
+
+mageObjectmage.MageObject"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+
+7
+10
+1*!
+13 3("
+3 3(
+"":"
+   (#
+gamemage.game.Game:,
+ $  (2 
+sourcemage.abilities.AbilityB:8
+6mage.abilities.effects.common.ChooseCreatureTypeEffectHP

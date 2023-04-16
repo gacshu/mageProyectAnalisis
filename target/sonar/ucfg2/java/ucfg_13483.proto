@@ -1,0 +1,214 @@
+
+wmage.abilities.effects.common.continuous.SwitchPowerToughnessAllEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z‰
+D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/continuous/SwitchPowerToughnessAllEffect.java5 5("startingBlock*Ç
+2D D(²¯
+D D(/
+%14void"5mage.game.permanent.Permanent#switchPowerToughness()V*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2switchPowerToughness()*
+5*
+3A A(yw
+A A(
+%13void"java.util.Iterator#remove()V*6
+
+__unknown_file (
+
+itjava.util.Iterator2remove()*
+5*ÿ
+startingBlock5 5(3Š
+‡
+4 4(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+5 5("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15”
+‘
+4 4(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+5, 5(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%16*
+10*Ú
+4?% ?('›˜
+?% ?(.
+%11mage.MageObjectReference"+java.util.Iterator#next()Ljava/lang/Object;*6
+
+__unknown_file (
+
+itjava.util.Iterator2next() 
+?% ?(A$
+%12mage.game.permanent.Permanent"Vmage.MageObjectReference#getPermanent(Lmage/game/Game;)Lmage/game/permanent/Permanent;*=
+
+__unknown_file (!
+
+%11mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getPermanent(Lmage/game/Game;)
+
+? ?(B)
+creaturemage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%12mage.game.permanent.Permanent*
+2
+3*•
+5>S >(U~|
+>S >(_
+%10boolean"java.util.Iterator#hasNext()Z*6
+
+__unknown_file (
+
+itjava.util.Iterator2	hasNext()*
+4
+1*½
+6>4 >(F©
+¦
+>4 >(F
+%8java.util.List"__id*~
+
+__unknown_file (b*`H
+Fmage.abilities.effects.common.continuous.SwitchPowerToughnessAllEffect"
+affectedObjectList–“
+>4 >(Q
+%9java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%8java.util.List2
+iterator()d
+b
+> >(Q
+itjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%9java.util.Iterator*
+5*®
+7< <(š—
+< <(
+%2mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÆÃ
+< <(,%
+%3mage.game.permanent.Battlefield"Emage.game.GameState#getBattlefield()Lmage/game/permanent/Battlefield;*7
+
+__unknown_file (
+
+%2mage.game.GameState2getBattlefield()¹
+¶
+<A <(G0
+%4*mage.filter.common.FilterCreaturePermanent"__id*r
+
+__unknown_file (V*TH
+Fmage.abilities.effects.common.continuous.SwitchPowerToughnessAllEffect"
+filter°­
+<I <(a
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ëè
+< <(p
+%6java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%3mage.game.permanent.Battlefield*N
+
+__unknown_file (2
+0
+%4*mage.filter.common.FilterCreaturePermanent*2
+
+__unknown_file (
+
+%5java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÖÓ
+	< <(™
+
+%7void":java.lang.Iterable#forEach(Ljava/util/function/Consumer;)V*2
+
+__unknown_file (
+
+%6java.util.List*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+1*!
+98 8("
+8 8(
+""*¯
+106 6( °­
+6+ 6(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+6 6(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+6 6(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*	
+6
+7
+9*!
+1G G("
+G G(
+"":"
+5 5(#
+gamemage.game.Game:,
+5$ 5(2 
+sourcemage.abilities.AbilityBJH
+Fmage.abilities.effects.common.continuous.SwitchPowerToughnessAllEffectHP

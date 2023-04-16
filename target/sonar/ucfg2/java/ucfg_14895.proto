@@ -1,0 +1,225 @@
+
+„mage.abilities.dynamicvalue.common.DevotionCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Is
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/DevotionCount.javaC C("startingBlock*”
+startingBlockC C(IŠ
+‡
+B B(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+C C("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20›
+˜
+B B(
+%21"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+C, C(9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%21›
+˜
+B B(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+CB C(H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%22*
+1*ð"
+1D D(¾»
+D D(,%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()·´
+E( E(G
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId() 
+D E(H
+%2java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*2
+
+__unknown_file (
+
+%1java.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)¢Ÿ
+D F(
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%2java.util.List2stream()†ƒ
+D G(-
+%4java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)Ž‹
+D H(,
+%5java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;) 
+D I(* 
+%6java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2,mapToInt(Ljava/util/function/ToIntFunction;)
+D J(	
+%7int"!java.util.stream.IntStream#sum()I*>
+
+__unknown_file ("
+ 
+%6java.util.stream.IntStream2sum()¾»
+K K(1%
+%8mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()·´
+L( L(G
+%9java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()¡ž
+K L(H
+%10java.util.List"Xmage.game.permanent.Battlefield#getAllActivePermanents(Ljava/util/UUID;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%8mage.game.permanent.Battlefield*2
+
+__unknown_file (
+
+%9java.util.UUID2(getAllActivePermanents(Ljava/util/UUID;)¤¡
+K M(
+%11java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*3
+
+__unknown_file (
+
+%10java.util.List2stream()©
+¦
+N N(>"
+%12java.util.function.Function"__declareFunction*c
+
+__unknown_file (GE
+C__sonar_lambda_302$mage.abilities.dynamicvalue.common.DevotionCount‡
+„
+
+__unknown_file (,
+"
+%12java.util.function.Function"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game¦£
+K N(?
+%14java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%11java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%12java.util.function.Function2"map(Ljava/util/function/Function;)
+K O(,
+%15java.util.stream.Stream"Wjava.util.stream.Stream#flatMap(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%14java.util.stream.Stream*"
+
+__unknown_file (
+""2&flatMap(Ljava/util/function/Function;)
+K P(B
+%16java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%15java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)®
+«
+Q Q( '
+%17 java.util.function.ToIntFunction"__declareFunction*c
+
+__unknown_file (GE
+C__sonar_lambda_303$mage.abilities.dynamicvalue.common.DevotionCountÅÂ
+K Q(!!
+%18java.util.stream.IntStream"`java.util.stream.Stream#mapToInt(Ljava/util/function/ToIntFunction;)Ljava/util/stream/IntStream;*<
+
+__unknown_file ( 
+
+%16java.util.stream.Stream*E
+
+__unknown_file ()
+'
+%17 java.util.function.ToIntFunction2,mapToInt(Ljava/util/function/ToIntFunction;)„
+K R(
+
+%19int"!java.util.stream.IntStream#sum()I*?
+
+__unknown_file (#
+!
+%18java.util.stream.IntStream2sum()"
+S S((
+"":"
+C C(#
+gamemage.game.Game:3
+C$ C(:'
+sourceAbilitymage.abilities.Ability:3
+C; C(H'
+effectmage.abilities.effects.EffectB42
+0mage.abilities.dynamicvalue.common.DevotionCountHP

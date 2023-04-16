@@ -1,0 +1,70 @@
+
+_mage.server.util.ConfigFactory#loadFromFile(Ljava/lang/String;)Lmage/server/util/config/Config;h
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/util/ConfigFactory.java (%"7*3
+3 (F"$
+ (G
+
+%4java.lang.Object*›
+4 (F†ƒ
+ (F
+%4java.lang.Object"Gjavax.xml.bind.Unmarshaller#unmarshal(Ljava/io/File;)Ljava/lang/Object;*I
+
+__unknown_file (-
++
+unmarshallerjavax.xml.bind.Unmarshaller*0
+
+__unknown_file (
+
+%2java.io.File2unmarshal(Ljava/io/File;)*
+3*ó
+5 (O€
+~
+ (O+
+unmarshallerjavax.xml.bind.Unmarshaller"__id*?
+
+__unknown_file (#
+!
+%1javax.xml.bind.Unmarshaller.,
+7 (;
+%2java.io.File"java.io.File«
+¨
+3 (E
+%3"(java.io.File#<init>(Ljava/lang/String;)V*0
+
+__unknown_file (
+
+%2java.io.File*:
+
+__unknown_file (
+
+filePathjava.lang.String*
+4*ñ
+6 (_}
+{
+ (_)
+jaxbContextjavax.xml.bind.JAXBContext"__id*>
+
+__unknown_file ("
+ 
+%0javax.xml.bind.JAXBContextÝÚ
+. (N!
+%1javax.xml.bind.Unmarshaller"Ljavax.xml.bind.JAXBContext#createUnmarshaller()Ljavax/xml/bind/Unmarshaller;*G
+
+__unknown_file (+
+)
+jaxbContextjavax.xml.bind.JAXBContext2createUnmarshaller()*
+5*‘
+7, (7ü
+ù
+, (^ 
+%0javax.xml.bind.JAXBContext"Vjavax.xml.bind.JAXBContext#newInstance(Ljava/lang/String;)Ljavax/xml/bind/JAXBContext;*:
+
+__unknown_file ("
+javax.xml.bind.JAXBContext*7
+
+__unknown_file (
+mage.server.util.config*
+6:(
+& (;
+filePathjava.lang.StringB"" 
+mage.server.util.ConfigFactoryH

@@ -1,0 +1,490 @@
+
+_mage.abilities.effects.common.UntapLandsEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zq
+gD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/UntapLandsEffect.java9 9("startingBlock*«
+14Bk B(qž
+›
+Bs B(y-
+%14&mage.filter.common.FilterLandPermanent"__id*Z
+
+__unknown_file (>*<0
+.mage.abilities.effects.common.UntapLandsEffect"
+filterca
+B- B(@-
+%15&mage.target.common.TargetLandPermanent"&mage.target.common.TargetLandPermanentü
+ù
+	B) B(€
+%16"[mage.target.common.TargetLandPermanent#<init>(IILmage/filter/common/FilterLandPermanent;Z)V*K
+
+__unknown_file (/
+-
+%15&mage.target.common.TargetLandPermanent*(
+
+__unknown_file (
+
+
+%11int*"
+
+__unknown_file (
+""*K
+
+__unknown_file (/
+-
+%14&mage.filter.common.FilterLandPermanent* 
+
+__unknown_file (2“
+
+	B B(0
+target&mage.target.common.TargetLandPermanent"__id*K
+
+__unknown_file (/
+-
+%15&mage.target.common.TargetLandPermanent±®
+C! C(9
+%17java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¿¼
+C C(H
+%18boolean"`mage.target.TargetPermanent#canChoose(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetLandPermanent*3
+
+__unknown_file (
+
+%17java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CcanChoose(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+
+2
+7
+11*‹
+15BL B(Pª
+§
+BL B(i
+
+%13int"java.lang.Math#min(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""H
+F
+BL B(i
+
+%11int"__id*(
+
+__unknown_file (
+
+
+%13int*
+14*^
+16BH B(IH
+F
+BH B(I
+
+%11int"__id*(
+
+__unknown_file (
+
+
+%12int*
+14*’
+18@ @("¾»
+@ @(3%
+%7mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()
+š
+@K @(Q,
+%8&mage.filter.common.FilterLandPermanent"__id*Z
+
+__unknown_file (>*<0
+.mage.abilities.effects.common.UntapLandsEffect"
+filter¨¥
+@ @(X
+%9java.util.List"umage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%7mage.game.permanent.Battlefield*J
+
+__unknown_file (.
+,
+%8&mage.filter.common.FilterLandPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game2EgetAllActivePermanents(Lmage/filter/FilterPermanent;Lmage/game/Game;)lj
+@ @(_
+
+%10int"java.util.List#size()I*2
+
+__unknown_file (
+
+%9java.util.List2size()*
+15
+16*ý
+19> >("¾»
+> >(3%
+%2mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()
+š
+>K >(Q,
+%3&mage.filter.common.FilterLandPermanent"__id*Z
+
+__unknown_file (>*<0
+.mage.abilities.effects.common.UntapLandsEffect"
+filter”‘
+>S >(e
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()ýú
+> >(l
+%5java.util.List"…mage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%2mage.game.permanent.Battlefield*J
+
+__unknown_file (.
+,
+%3&mage.filter.common.FilterLandPermanent*2
+
+__unknown_file (
+
+%4java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)ki
+> >(s	
+%6int"java.util.List#size()I*2
+
+__unknown_file (
+
+%5java.util.List2size()*
+15
+16*!
+1X X("
+X X(
+""*!
+2V V("
+V V(
+""*ú
+3N N(&R
+P
+N N(&
+targetIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Ž
+‹
+N N(&
+targetIdjava.util.UUID"
+__arrayGet*3
+
+__unknown_file (
+
+%31java.util.List*"
+
+__unknown_file (
+""*
+2
+5*ÿ
+startingBlock9 9(3Š
+‡
+8 8(
+%34"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+9 9("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%34”
+‘
+8 8(
+%35"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+9, 9(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%35*
+21*û
+4Q Q(æã
+Q Q()
+%33boolean"6mage.game.permanent.Permanent#untap(Lmage/game/Game;)Z*@
+
+__unknown_file ($
+"
+pmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2untap(Lmage/game/Game;)*
+3*¥
+5O& O(*‘Ž
+O& O(A$
+%32mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+targetIdjava.util.UUID2getPermanent(Ljava/util/UUID;)z
+x
+O O(B"
+pmage.game.permanent.Permanent"__id*B
+
+__unknown_file (&
+$
+%32mage.game.permanent.Permanent*
+3
+4*Ì
+6N) N(/·´
+N) N(<
+%31java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetLandPermanent2getTargets()*
+3*Æ
+7M M(U
+S
+M" M(/
+%27mage.constants.Outcome"__id*"
+
+__unknown_file (
+""±®
+M1 M(I
+%28java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()©¦
+MK M(_
+%29java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()÷ô
+M M(n
+%30boolean"€mage.target.TargetImpl#choose(Lmage/constants/Outcome;Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetLandPermanent*;
+
+__unknown_file (
+
+%27mage.constants.Outcome*3
+
+__unknown_file (
+
+%28java.util.UUID*3
+
+__unknown_file (
+
+%29java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2hchoose(Lmage/constants/Outcome;Ljava/util/UUID;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+6*
+8H H(+]
+[
+H H(+%
+landmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""™
+–
+H H(+%
+landmage.game.permanent.Permanent"
+__arrayGet*3
+
+__unknown_file (
+
+%24java.util.List*"
+
+__unknown_file (
+""*
+7
+9*ñ
+9I I("¢Ÿ
+I- I(9
+%25java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+landmage.game.permanent.Permanent2getId()·´
+I I(H
+%26void"[mage.target.TargetImpl#addTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)V*N
+
+__unknown_file (2
+0
+target&mage.target.common.TargetLandPermanent*3
+
+__unknown_file (
+
+%25java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2CaddTarget(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+8*±
+21: :( °­
+:+ :(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+: :(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+: :(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+18
+19
+1*’
+10H. H(2¿¼
+H. H(C&
+%21mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ž
+›
+H[ H(a-
+%22&mage.filter.common.FilterLandPermanent"__id*Z
+
+__unknown_file (>*<0
+.mage.abilities.effects.common.UntapLandsEffect"
+filter•’
+Hc H(u
+%23java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()þ
+H. H(|
+%24java.util.List"…mage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*D
+
+__unknown_file ((
+&
+%21mage.game.permanent.Battlefield*K
+
+__unknown_file (/
+-
+%22&mage.filter.common.FilterLandPermanent*3
+
+__unknown_file (
+
+%23java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2UgetAllActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)*
+8*Õ
+11G G("
+Œ
+G- G(4
+%19mage.constants.Outcome"__id*[
+
+__unknown_file (?*=0
+.mage.abilities.effects.common.UntapLandsEffect"	
+outcome©¦
+G G(j
+%20boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+%19mage.constants.Outcome*C
+
+__unknown_file ('%
+#Include your tapped lands to untap?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+7
+10:"
+9 9(#
+gamemage.game.Game:,
+9$ 9(2 
+sourcemage.abilities.AbilityB20
+.mage.abilities.effects.common.UntapLandsEffectHP

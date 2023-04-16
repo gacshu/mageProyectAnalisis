@@ -1,0 +1,214 @@
+
+hmage.abilities.effects.common.MayTapOrUntapTargetEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zz
+pD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/MayTapOrUntapTargetEffect.java ("startingBlock*!
+2$ $("
+$ $(
+""*ì
+3" "(×Ô
+" "((
+%11boolean"Lmage.game.permanent.Permanent#tap(Lmage/abilities/Ability;Lmage/game/Game;)Z*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2-tap(Lmage/abilities/Ability;Lmage/game/Game;)*
+2*þ
+startingBlock (3Š
+‡
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+9*‚
+4! !(T
+R
+!( !(3
+%9mage.constants.Outcome"__id*"
+
+__unknown_file (
+""”‘
+! !(Y
+%10boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*:
+
+__unknown_file (
+
+%9mage.constants.Outcome*3
+
+__unknown_file (
+Tap that permanent?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+3*ÿ
+5 (êç
+ (&
+%8boolean"6mage.game.permanent.Permanent#untap(Lmage/game/Game;)Z*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2untap(Lmage/game/Game;)*
+2*ƒ
+6 (T
+R
+% (2
+%6mage.constants.Outcome"__id*"
+
+__unknown_file (
+""•’
+ (Z
+%7boolean"rmage.players.Player#chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*:
+
+__unknown_file (
+
+%6mage.constants.Outcome*5
+
+__unknown_file (
+Untap that permanent?*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2]chooseUse(Lmage/constants/Outcome;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+5*²
+7 (š—
+ (!
+%5boolean")mage.game.permanent.Permanent#isTapped()Z*E
+
+__unknown_file ()
+'
+targetmage.game.permanent.Permanent2
+isTapped()*
+4
+6*î
+9 (®
+«
+- (:-
+%0'mage.target.targetpointer.TargetPointer"__id*j
+
+__unknown_file (N*L9
+7mage.abilities.effects.common.MayTapOrUntapTargetEffect"
+targetPointer†ƒ
+- (Q
+%1java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%0'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Š‡
+ (R#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)~
+|
+ (S'
+targetmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent°­
+' (?
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+ (@
+%4mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+ (A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%4mage.players.Player*
+7
+1*!
+1& &("
+& &(
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB;9
+7mage.abilities.effects.common.MayTapOrUntapTargetEffectHP

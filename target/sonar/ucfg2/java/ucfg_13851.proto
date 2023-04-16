@@ -1,0 +1,1277 @@
+
+mmage.abilities.keyword.ForetellAbility$ForetellAddCostEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zk
+_D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/ForetellAbility.java— —("startingBlock*Å
+13
+V (béã
+
+B (UA
+%45:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbility∑
+¥
+
+> (c
+%46"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%45:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*>
+
+__unknown_file ("
+ 
+foretellCostjava.lang.StringΩ
+∫
+
+  (dE
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%45:mage.abilities.keyword.ForetellAbility$ForetellCostAbility©¶
+
+Ò4 Ò(H
+%47java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*Q
+
+__unknown_file (5
+3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf2getId()êç
+
+Ò  Ò(I
+%48void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%47java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+Ú8 Ú(P
+%49java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+Ú  Ú(Q
+%50void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%49java.util.UUID2!setControllerId(Ljava/util/UUID;)Ÿ÷
+
+Û< Û(Z"
+%51mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*Q
+
+__unknown_file (5
+3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf2getSpellAbility()‰·
+
+Û< Û(p&
+%52mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%51mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+Û  Û(q
+%53void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%52mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)≥∞
+
+Ù7 Ù(M
+%54java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*Q
+
+__unknown_file (5
+3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf2	getName()ºπ
+
+Ù  Ù(N
+%55void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%54java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+ı  ı(/
+%56mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()õò
+
+ı  ı(V
+%57void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%56mage.game.GameState*Q
+
+__unknown_file (5
+3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2
+11*Ñ
+14
+Ì\ Ì(`›⁄
+
+ÌD Ì(s*
+%43#mage.cards.ModalDoubleFacesCardHalf"Vmage.cards.ModalDoubleFacesCard#getLeftHalfCard()Lmage/cards/ModalDoubleFacesCardHalf;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getLeftHalfCard()î
+ë
+
+Ì Ì(t3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf"__id*H
+
+__unknown_file (,
+*
+%43#mage.cards.ModalDoubleFacesCardHalfÌÍ
+
+Ô! Ô(:
+%44boolean")mage.MageObject#isLand(Lmage/game/Game;)Z*Q
+
+__unknown_file (5
+3
+leftHalfCard#mage.cards.ModalDoubleFacesCardHalf*4
+
+__unknown_file (
+
+gamemage.game.Game2isLand(Lmage/game/Game;)*
+13
+2
+11*õ
+17
+„G „(Kæª
+
+„: „(_
+%29mage.cards.SplitCardHalf"Amage.cards.SplitCard#getRightHalfCard()Lmage/cards/SplitCardHalf;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getRightHalfCard()~
+|
+
+„ „(`)
+rightHalfCardmage.cards.SplitCardHalf"__id*=
+
+__unknown_file (!
+
+%29mage.cards.SplitCardHalféã
+
+‰> ‰(QA
+%30:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbilityº
+π
+
+‰: ‰(d
+%31"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%30:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*C
+
+__unknown_file ('
+%
+foretellSplitCostjava.lang.StringΩ
+∫
+
+‰ ‰(eE
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%30:mage.abilities.keyword.ForetellAbility$ForetellCostAbilityüú
+
+Â0 Â(E
+%32java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*G
+
+__unknown_file (+
+)
+rightHalfCardmage.cards.SplitCardHalf2getId()êç
+
+Â Â(F
+%33void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%32java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+Ê4 Ê(L
+%34java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+Ê Ê(M
+%35void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%34java.util.UUID2!setControllerId(Ljava/util/UUID;)œÃ
+
+Á8 Á(W"
+%36mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*G
+
+__unknown_file (+
+)
+rightHalfCardmage.cards.SplitCardHalf2getSpellAbility()‰·
+
+Á8 Á(m&
+%37mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%36mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+Á Á(n
+%38void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%37mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)©¶
+
+Ë3 Ë(J
+%39java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*G
+
+__unknown_file (+
+)
+rightHalfCardmage.cards.SplitCardHalf2	getName()ºπ
+
+Ë Ë(K
+%40void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%39java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+È È(+
+%41mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ëé
+
+È È(S
+%42void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%41mage.game.GameState*G
+
+__unknown_file (+
+)
+rightHalfCardmage.cards.SplitCardHalf*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2*ì
+19
+⁄F ⁄(Jºπ
+
+⁄9 ⁄(]
+%15mage.cards.SplitCardHalf"@mage.cards.SplitCard#getLeftHalfCard()Lmage/cards/SplitCardHalf;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getLeftHalfCard()}
+{
+
+⁄ ⁄(^(
+leftHalfCardmage.cards.SplitCardHalf"__id*=
+
+__unknown_file (!
+
+%15mage.cards.SplitCardHalféã
+
+€> €(QA
+%16:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbility∑
+¥
+
+€: €(_
+%17"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%16:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*>
+
+__unknown_file ("
+ 
+foretellCostjava.lang.StringΩ
+∫
+
+€ €(`E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%16:mage.abilities.keyword.ForetellAbility$ForetellCostAbilityûõ
+
+‹0 ‹(D
+%18java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*F
+
+__unknown_file (*
+(
+leftHalfCardmage.cards.SplitCardHalf2getId()êç
+
+‹ ‹(E
+%19void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%18java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+›4 ›(L
+%20java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+› ›(M
+%21void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%20java.util.UUID2!setControllerId(Ljava/util/UUID;)ŒÀ
+
+ﬁ8 ﬁ(V"
+%22mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*F
+
+__unknown_file (*
+(
+leftHalfCardmage.cards.SplitCardHalf2getSpellAbility()‰·
+
+ﬁ8 ﬁ(l&
+%23mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%22mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+ﬁ ﬁ(m
+%24void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%23mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)®•
+
+ﬂ3 ﬂ(I
+%25java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*F
+
+__unknown_file (*
+(
+leftHalfCardmage.cards.SplitCardHalf2	getName()ºπ
+
+ﬂ ﬂ(J
+%26void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%25java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+‡ ‡(+
+%27mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()êç
+
+‡ ‡(R
+%28void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%27mage.game.GameState*F
+
+__unknown_file (*
+(
+leftHalfCardmage.cards.SplitCardHalf*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2
+17*Ê
+1
+¢ ¢(æª
+
+¢ ¢(
+%114void"6mage.abilities.effects.ContinuousEffectImpl#discard()V*\
+
+__unknown_file (@>
+<mage.abilities.keyword.ForetellAbility$ForetellAddCostEffect2	discard()"
+
+£ £(
+""*%
+2
+ü ü("
+
+ü ü( 
+""*°
+3
+òN ò(Zèå
+
+ò: ò(MB
+%101:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbilityπ
+∂
+
+ò6 ò([
+%102"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*`
+
+__unknown_file (D
+B
+%101:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*>
+
+__unknown_file ("
+ 
+foretellCostjava.lang.Stringæ
+ª
+
+ò ò(\E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*`
+
+__unknown_file (D
+B
+%101:mage.abilities.keyword.ForetellAbility$ForetellCostAbilityéã
+
+ô, ô(8
+%103java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getId()íè
+
+ô ô(9
+%104void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*4
+
+__unknown_file (
+
+%103java.util.UUID2setSourceId(Ljava/util/UUID;)¥±
+
+ö0 ö(H
+%105java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()öó
+
+ö ö(I
+%106void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*4
+
+__unknown_file (
+
+%105java.util.UUID2!setControllerId(Ljava/util/UUID;)æª
+
+õ4 õ(J#
+%107mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getSpellAbility()Ê„
+
+õ4 õ(`'
+%108mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*A
+
+__unknown_file (%
+#
+%107mage.abilities.SpellAbility2getSpellAbilityType()÷”
+
+õ õ(a
+%109void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*E
+
+__unknown_file ()
+'
+%108mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)òï
+
+ú/ ú(=
+%110java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()æª
+
+ú ú(>
+%111void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*6
+
+__unknown_file (
+
+%110java.lang.String2"setAbilityName(Ljava/lang/String;)ûõ
+
+ù ù('
+%112mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()Å˛
+
+ù ù(F
+%113void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*9
+
+__unknown_file (
+
+%112mage.game.GameState*5
+
+__unknown_file (
+
+cardmage.cards.Card*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2*ç
+startingBlock
+— —(7ç
+ä
+
+– –(
+%115"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameZ
+X
+
+—" —(&
+gamemage.game.Game"__annotation*$
+
+__unknown_file (
+
+%115ó
+î
+
+– –(
+%116"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityd
+b
+
+—0 —(6 
+sourcemage.abilities.Ability"__annotation*$
+
+__unknown_file (
+
+%116*
+23*Â
+5
+è> è(Bƒ¡
+
+è- è(R$
+%87mage.cards.AdventureCardSpell"Fmage.cards.AdventureCard#getSpellCard()Lmage/cards/AdventureCardSpell;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getSpellCard()v
+t
+
+è è(S
+	spellCardmage.cards.Card"__id*B
+
+__unknown_file (&
+$
+%87mage.cards.AdventureCardSpelléã
+
+ê> ê(QA
+%88:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbilityº
+π
+
+ê: ê(d
+%89"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%88:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*C
+
+__unknown_file ('
+%
+foretellSplitCostjava.lang.StringΩ
+∫
+
+ê ê(eE
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%88:mage.abilities.keyword.ForetellAbility$ForetellCostAbilityíè
+
+ë0 ë(A
+%90java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+	spellCardmage.cards.Card2getId()êç
+
+ë ë(B
+%91void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%90java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+í4 í(L
+%92java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+í í(M
+%93void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%92java.util.UUID2!setControllerId(Ljava/util/UUID;)¬ø
+
+ì8 ì(S"
+%94mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*:
+
+__unknown_file (
+
+	spellCardmage.cards.Card2getSpellAbility()‰·
+
+ì8 ì(i&
+%95mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%94mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+ì ì(j
+%96void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%95mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)úô
+
+î3 î(F
+%97java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*:
+
+__unknown_file (
+
+	spellCardmage.cards.Card2	getName()ºπ
+
+î î(G
+%98void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%97java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+ï ï(+
+%99mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ÖÇ
+
+ï ï(O
+%100void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%99mage.game.GameState*:
+
+__unknown_file (
+
+	spellCardmage.cards.Card*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2*º
+7
+Ü0 Ü(4ùö
+
+Ü0 Ü(B
+%73mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getMainCard()k
+i
+
+Ü Ü(C
+creatureCardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%73mage.cards.Cardéã
+
+á> á(QA
+%74:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbility∑
+¥
+
+á: á(_
+%75"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%74:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*>
+
+__unknown_file ("
+ 
+foretellCostjava.lang.StringΩ
+∫
+
+á á(`E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%74:mage.abilities.keyword.ForetellAbility$ForetellCostAbilityïí
+
+à0 à(D
+%76java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*=
+
+__unknown_file (!
+
+creatureCardmage.cards.Card2getId()êç
+
+à à(E
+%77void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%76java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+â4 â(L
+%78java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+â â(M
+%79void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%78java.util.UUID2!setControllerId(Ljava/util/UUID;)≈¬
+
+ä8 ä(V"
+%80mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*=
+
+__unknown_file (!
+
+creatureCardmage.cards.Card2getSpellAbility()‰·
+
+ä8 ä(l&
+%81mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%80mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+ä ä(m
+%82void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%81mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)üú
+
+ã3 ã(I
+%83java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+creatureCardmage.cards.Card2	getName()ºπ
+
+ã ã(J
+%84void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%83java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+å å(+
+%85mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()áÑ
+
+å å(R
+%86void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%85mage.game.GameState*=
+
+__unknown_file (!
+
+creatureCardmage.cards.Card*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2
+5*â
+21
+÷3 ÷(7úô
+
+÷3 ÷(B
+%7mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()úô
+
+÷L ÷(a
+%8java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2
+toString()y
+w
+
+÷L ÷(s
+%9java.lang.String"__concat*&
+
+÷L ÷(a
+
+%8java.lang.String*
+
+÷d ÷(s
+Foretell Cost˘ˆ
+
+÷3 ÷(t
+%10java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*7
+
+__unknown_file (
+
+%7mage.game.GameState*4
+
+__unknown_file (
+
+%9java.lang.String2getValue(Ljava/lang/String;)m
+k
+
+÷ ÷(u 
+foretellCostjava.lang.String"__id*5
+
+__unknown_file (
+
+%10java.lang.Objectùö
+
+◊8 ◊(G
+%11mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ùö
+
+◊Q ◊(f
+%12java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2
+toString()Å
+
+
+◊Q ◊(~
+%13java.lang.String"__concat*'
+
+◊Q ◊(f
+
+%12java.lang.String*%
+
+◊i ◊(~
+Foretell Split Cost˚¯
+
+◊8 ◊(
+%14java.lang.Object"Bmage.game.GameState#getValue(Ljava/lang/String;)Ljava/lang/Object;*8
+
+__unknown_file (
+
+%11mage.game.GameState*5
+
+__unknown_file (
+
+%13java.lang.String2getValue(Ljava/lang/String;)s
+q
+◊ ◊(Ä%
+foretellSplitCostjava.lang.String"__id*5
+
+__unknown_file (
+
+%14java.lang.Object*
+2
+14
+3
+5
+17
+7
+19
+11*Ü
+10
+¸V ¸(géã
+
+¸B ¸(UA
+%60:mage.abilities.keyword.ForetellAbility$ForetellCostAbility":mage.abilities.keyword.ForetellAbility$ForetellCostAbilityº
+π
+
+¸> ¸(h
+%61"~mage.abilities.keyword.ForetellAbility$ForetellCostAbility#<init>(Lmage/abilities/keyword/ForetellAbility;Ljava/lang/String;)V*_
+
+__unknown_file (C
+A
+%60:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*C
+
+__unknown_file ('
+%
+foretellSplitCostjava.lang.StringΩ
+∫
+
+¸  ¸(iE
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility"__id*_
+
+__unknown_file (C
+A
+%60:mage.abilities.keyword.ForetellAbility$ForetellCostAbility™ß
+
+˝4 ˝(I
+%62java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*R
+
+__unknown_file (6
+4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf2getId()êç
+
+˝  ˝(J
+%63void"9mage.abilities.AbilityImpl#setSourceId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%62java.util.UUID2setSourceId(Ljava/util/UUID;)≥∞
+
+˛8 ˛(P
+%64java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+˛  ˛(Q
+%65void"=mage.abilities.AbilityImpl#setControllerId(Ljava/util/UUID;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*3
+
+__unknown_file (
+
+%64java.util.UUID2!setControllerId(Ljava/util/UUID;)⁄◊
+
+ˇ< ˇ(["
+%66mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*R
+
+__unknown_file (6
+4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf2getSpellAbility()‰·
+
+ˇ< ˇ(q&
+%67mage.constants.SpellAbilityType"Rmage.abilities.SpellAbility#getSpellAbilityType()Lmage/constants/SpellAbilityType;*@
+
+__unknown_file ($
+"
+%66mage.abilities.SpellAbility2getSpellAbilityType()‘—
+
+ˇ  ˇ(r
+%68void"Smage.abilities.SpellAbility#setSpellAbilityType(Lmage/constants/SpellAbilityType;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*D
+
+__unknown_file ((
+&
+%67mage.constants.SpellAbilityType26setSpellAbilityType(Lmage/constants/SpellAbilityType;)¥±
+
+Ä7 Ä(N
+%69java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*R
+
+__unknown_file (6
+4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf2	getName()ºπ
+
+Ä  Ä(O
+%70void"^mage.abilities.keyword.ForetellAbility$ForetellCostAbility#setAbilityName(Ljava/lang/String;)V*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility*5
+
+__unknown_file (
+
+%69java.lang.String2"setAbilityName(Ljava/lang/String;)ùö
+
+Å  Å(/
+%71mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()úô
+
+Å  Å(W
+%72void"Omage.game.GameState#addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)V*8
+
+__unknown_file (
+
+%71mage.game.GameState*R
+
+__unknown_file (6
+4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf*c
+
+__unknown_file (G
+E
+ability:mage.abilities.keyword.ForetellAbility$ForetellCostAbility2:addOtherAbility(Lmage/cards/Card;Lmage/abilities/Ability;)*
+2*¢
+22
+‘" ‘(&úô
+
+‘" ‘(4
+%2mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getMainCard()äá
+
+‘" ‘(<
+%3java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*3
+
+__unknown_file (
+
+%2mage.cards.Card2getId()f
+d
+
+‘ ‘(=
+
+mainCardIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%3java.util.UUIDúô
+
+’ ’(#
+%4mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()˛˚
+
+’ ’(7
+%5mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*7
+
+__unknown_file (
+
+%4mage.game.GameState*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2getZone(Ljava/util/UUID;)S
+Q
+
+’; ’(F
+%6mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+21
+1*Ñ
+11
+˘] ˘(aﬂ‹
+
+˘E ˘(u*
+%58#mage.cards.ModalDoubleFacesCardHalf"Wmage.cards.ModalDoubleFacesCard#getRightHalfCard()Lmage/cards/ModalDoubleFacesCardHalf;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getRightHalfCard()ï
+í
+
+˘ ˘(v4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf"__id*H
+
+__unknown_file (,
+*
+%58#mage.cards.ModalDoubleFacesCardHalfÓÎ
+
+˚! ˚(;
+%59boolean")mage.MageObject#isLand(Lmage/game/Game;)Z*R
+
+__unknown_file (6
+4
+rightHalfCard#mage.cards.ModalDoubleFacesCardHalf*4
+
+__unknown_file (
+
+gamemage.game.Game2isLand(Lmage/game/Game;)*
+2
+10*ô
+23
+“ “(ú
+ô
+
+“ “(
+%0mage.MageObjectReference"__id*e
+
+__unknown_file (I*G>
+<mage.abilities.keyword.ForetellAbility$ForetellAddCostEffect"
+mor˙˜
+
+“ “()
+%1mage.cards.Card"Cmage.MageObjectReference#getCard(Lmage/game/Game;)Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+%0mage.MageObjectReference*4
+
+__unknown_file (
+
+gamemage.game.Game2getCard(Lmage/game/Game;)b
+`
+
+“ “(*
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%1mage.cards.Card*
+22
+1:$
+
+— —('
+gamemage.game.Game:.
+
+—( —(6 
+sourcemage.abilities.AbilityB@>
+<mage.abilities.keyword.ForetellAbility$ForetellAddCostEffectHP

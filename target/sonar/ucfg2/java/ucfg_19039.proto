@@ -1,0 +1,202 @@
+
+`mage.abilities.effects.common.CipherStoreEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zm
+cD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/CipherEffect.javar r("startingBlock*ý
+2v v( ”‘
+v> v(P
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()µ²
+v v(Q
+%5mage.cards.Card"cmage.game.Game#copyCard(Lmage/cards/Card;Lmage/abilities/Ability;Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*;
+
+__unknown_file (
+
+
+cipherCardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*2
+
+__unknown_file (
+
+%4java.util.UUID2CcopyCard(Lmage/cards/Card;Lmage/abilities/Ability;Ljava/util/UUID;)d
+b
+v v(R
+copyCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%5mage.cards.Card¾»
+w# w(=!
+%6mage.abilities.SpellAbility">mage.cards.Card#getSpellAbility()Lmage/abilities/SpellAbility;*9
+
+__unknown_file (
+
+copyCardmage.cards.Card2getSpellAbility(){
+y
+w w(>&
+abilitymage.abilities.SpellAbility"__id*?
+
+__unknown_file (#
+!
+%6mage.abilities.SpellAbilityÐÍ
+y y( $
+%7mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility2getEffects()íê
+y y(I
+%8boolean"=java.util.ArrayList#removeIf(Ljava/util/function/Predicate;)Z*B
+
+__unknown_file (&
+$
+%7mage.abilities.effects.Effects*"
+
+__unknown_file (
+""2(removeIf(Ljava/util/function/Predicate;)><
+z5 z(D
+%9mage.ApprovingObject"mage.ApprovingObjectŒ
+‰
+z1 z(R
+%10"Fmage.ApprovingObject#<init>(Lmage/abilities/Ability;Lmage/game/Game;)V*8
+
+__unknown_file (
+
+%9mage.ApprovingObject*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Gameãà
+z z(S
+%11boolean"_mage.players.Player#cast(Lmage/abilities/SpellAbility;Lmage/game/Game;ZLmage/ApprovingObject;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*D
+
+__unknown_file ((
+&
+abilitymage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2*8
+
+__unknown_file (
+
+%9mage.ApprovingObject2Jcast(Lmage/abilities/SpellAbility;Lmage/game/Game;ZLmage/ApprovingObject;)*
+1*þ
+startingBlockr r(3Š
+‡
+q q(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+r r("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+q q(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+r, r(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+4*‰
+4s s( °­
+s+ s(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+s s(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+s s(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.PlayerŒ
+‰
+t' t(3
+%2java.util.UUID"__id*a
+
+__unknown_file (E*C1
+/mage.abilities.effects.common.CipherStoreEffect"
+cipherCardIdäá
+t t(4
+%3mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getCard(Ljava/util/UUID;)f
+d
+t t(5
+
+cipherCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+2
+1*!
+1~ ~("
+~ ~(
+"":"
+r r(#
+gamemage.game.Game:,
+r$ r(2 
+sourcemage.abilities.AbilityB31
+/mage.abilities.effects.common.CipherStoreEffectHP

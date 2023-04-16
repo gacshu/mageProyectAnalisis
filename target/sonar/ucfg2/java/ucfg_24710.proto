@@ -1,0 +1,650 @@
+
+!mage.remote.SessionImpl$4#work()Zc
+WD:/eclipse-workspace/mage-master/Mage.Common/src/main/java/mage/remote/SessionImpl.javaõ õ("10*Ç
+2
+ (X
+V
+
+ (
+%53org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ØÕ
+
+ (0
+%54void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%53org.apache.log4j.Logger*-
+
+__unknown_file (
+Logging: DONE2info(Ljava/lang/Object;)~
+|
+
+ (!
+%55mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client«¨
+
+% (2
+%56java.lang.String"7mage.remote.SessionImpl#getUserName()Ljava/lang/String;*9
+
+__unknown_file (
+mage.remote.SessionImpl$42getUserName()o
+m
+
+% (8
+%57java.lang.String"__concat*'
+
+% (2
+
+%56java.lang.String*
+
+5 (8
+@‹ˆ
+
+; (O
+%58java.lang.String"2mage.remote.Connection#getHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2	getHost()„
+
+
+% (O
+%59java.lang.String"__concat*'
+
+% (8
+
+%57java.lang.String*'
+
+; (O
+
+%58java.lang.Stringo
+m
+
+% (U
+%60java.lang.String"__concat*'
+
+% (O
+
+%59java.lang.String*
+
+R (U
+:lj
+
+X (l
+
+%61int"!mage.remote.Connection#getPort()I*"
+
+__unknown_file (
+""2	getPort()v
+t
+
+% (l
+%62java.lang.String"__concat*'
+
+% (U
+
+%60java.lang.String*
+
+X (l
+
+
+%61into
+m
+
+% (r
+%63java.lang.String"__concat*'
+
+% (l
+
+%62java.lang.String*
+
+o (r
+ îë
+
+ (s
+%64void"9mage.interfaces.MageClient#connected(Ljava/lang/String;)V*?
+
+__unknown_file (#
+!
+%55mage.interfaces.MageClient*5
+
+__unknown_file (
+
+%63java.lang.String2connected(Ljava/lang/String;)"
+
+ ( 
+""*ø
+3
+Š Š(~
+|
+
+Š Š(!
+%41mage.interfaces.MageServer"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+server“
+
+Š+ Š(C
+%42java.lang.String"6mage.remote.Connection#getUsername()Ljava/lang/String;*"
+
+__unknown_file (
+""2getUsername()w
+u
+
+ŠE Š(N
+%43java.lang.String"__id*H
+
+__unknown_file (,**
+mage.remote.SessionImpl$4"
+	sessionId¥¢
+
+ŠP Š(h 
+%44mage.players.net.UserData"?mage.remote.Connection#getUserData()Lmage/players/net/UserData;*"
+
+__unknown_file (
+""2getUserData()~
+|
+
+Šj Š(p!
+%45mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client¾»
+
+Šj Š(}
+%46mage.utils.MageVersion"?mage.interfaces.MageClient#getVersion()Lmage/utils/MageVersion;*?
+
+__unknown_file (#
+!
+%45mage.interfaces.MageClient2getVersion()§¤
+Šj Š(ˆ
+%47java.lang.String"3mage.utils.MageVersion#toString()Ljava/lang/String;*;
+
+__unknown_file (
+
+%46mage.utils.MageVersion2
+toString()—”
+ŠŠ Š(£
+%48java.lang.String"7mage.remote.Connection#getUserIdStr()Ljava/lang/String;*"
+
+__unknown_file (
+""2getUserIdStr()şû
+Š Š(¤
+%49boolean"Œmage.interfaces.MageServer#setUserData(Ljava/lang/String;Ljava/lang/String;Lmage/players/net/UserData;Ljava/lang/String;Ljava/lang/String;)Z*?
+
+__unknown_file (#
+!
+%41mage.interfaces.MageServer*5
+
+__unknown_file (
+
+%42java.lang.String*5
+
+__unknown_file (
+
+%43java.lang.String*>
+
+__unknown_file ("
+ 
+%44mage.players.net.UserData*5
+
+__unknown_file (
+
+%47java.lang.String*5
+
+__unknown_file (
+
+%48java.lang.String2psetUserData(Ljava/lang/String;Ljava/lang/String;Lmage/players/net/UserData;Ljava/lang/String;Ljava/lang/String;)‰†
+
+‹' ‹(G
+%50boolean"-mage.remote.Connection#isForceDBComparison()Z*"
+
+__unknown_file (
+""2isForceDBComparison()…
+‚
+
+‹I ‹(T"
+%51mage.interfaces.ServerState"__id*J
+
+__unknown_file (.*,
+mage.remote.SessionImpl$4"
+serverState
+
+
+‹ ‹(U
+%52void"Gmage.remote.SessionImpl#updateDatabase(ZLmage/interfaces/ServerState;)V*9
+
+__unknown_file (
+mage.remote.SessionImpl$4*,
+
+__unknown_file (
+
+%50boolean*@
+
+__unknown_file ($
+"
+%51mage.interfaces.ServerState*
+2*÷
+4
+‰ ‰(#“
+
+‰ ‰(1
+%39java.lang.String"6mage.remote.Connection#getUsername()Ljava/lang/String;*"
+
+__unknown_file (
+""2getUsername()ÇÄ
+
+‰ ‰(A
+%40boolean",java.lang.String#equals(Ljava/lang/Object;)Z*5
+
+__unknown_file (
+
+%39java.lang.String*%
+
+__unknown_file (	
+Admin2equals(Ljava/lang/Object;)*
+2
+3*±
+5
+†7 †(=~
+|
+
+†7 †(=!
+%33mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client¾»
+
+†7 †(J
+%34mage.utils.MageVersion"?mage.interfaces.MageClient#getVersion()Lmage/utils/MageVersion;*?
+
+__unknown_file (#
+!
+%33mage.interfaces.MageClient2getVersion()…
+‚
+
+†L †(W"
+%35mage.interfaces.ServerState"__id*J
+
+__unknown_file (.*,
+mage.remote.SessionImpl$4"
+serverStateÀ½
+
+†L †(d
+%36mage.utils.MageVersion"@mage.interfaces.ServerState#getVersion()Lmage/utils/MageVersion;*@
+
+__unknown_file ($
+"
+%35mage.interfaces.ServerState2getVersion()YW
+
+†" †(6'
+%37 mage.remote.MageVersionException" mage.remote.MageVersionException³
+°
+
+† †(e
+%38"Zmage.remote.MageVersionException#<init>(Lmage/utils/MageVersion;Lmage/utils/MageVersion;)V*E
+
+__unknown_file ()
+'
+%37 mage.remote.MageVersionException*;
+
+__unknown_file (
+
+%34mage.utils.MageVersion*;
+
+__unknown_file (
+
+%36mage.utils.MageVersion*
+0*ø
+
+6
+‚" ‚((~
+|
+
+‚" ‚((!
+%26mage.interfaces.MageServer"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+serverĞÍ
+
+‚" ‚(9"
+%27mage.interfaces.ServerState"Hmage.interfaces.MageServer#getServerState()Lmage/interfaces/ServerState;*?
+
+__unknown_file (#
+!
+%26mage.interfaces.MageServer2getServerState()…
+‚
+
+‚ ‚(9,
+mage.remote.SessionImpl$4"
+serverState"__id*@
+
+__unknown_file ($
+"
+%27mage.interfaces.ServerState~
+|
+
+… …(!
+%28mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client¾»
+
+… …(+
+%29mage.utils.MageVersion"?mage.interfaces.MageClient#getVersion()Lmage/utils/MageVersion;*?
+
+__unknown_file (#
+!
+%28mage.interfaces.MageClient2getVersion()…
+‚
+
+…6 …(A"
+%30mage.interfaces.ServerState"__id*J
+
+__unknown_file (.*,
+mage.remote.SessionImpl$4"
+serverStateÀ½
+
+…6 …(N
+%31mage.utils.MageVersion"@mage.interfaces.ServerState#getVersion()Lmage/utils/MageVersion;*@
+
+__unknown_file ($
+"
+%30mage.interfaces.ServerState2getVersion()÷ô
+
+… …(O
+
+%32int";mage.utils.MageVersion#compareTo(Lmage/utils/MageVersion;)I*;
+
+__unknown_file (
+
+%29mage.utils.MageVersion*;
+
+__unknown_file (
+
+%31mage.utils.MageVersion2#compareTo(Lmage/utils/MageVersion;)*
+4
+5*³	
+8
+ş ş(#~
+|
+
+ş ş(#!
+%20mage.interfaces.MageServer"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+serverš
+
+ş1 ş(N
+%21java.lang.String";mage.remote.Connection#getAdminPassword()Ljava/lang/String;*"
+
+__unknown_file (
+""2getAdminPassword()w
+u
+
+şP ş(Y
+%22java.lang.String"__id*H
+
+__unknown_file (,**
+mage.remote.SessionImpl$4"
+	sessionId~
+|
+
+ş[ ş(a!
+%23mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client¾»
+
+ş[ ş(n
+%24mage.utils.MageVersion"?mage.interfaces.MageClient#getVersion()Lmage/utils/MageVersion;*?
+
+__unknown_file (#
+!
+%23mage.interfaces.MageClient2getVersion()¿¼
+
+ş ş(o
+%25boolean"fmage.interfaces.MageServer#connectAdmin(Ljava/lang/String;Ljava/lang/String;Lmage/utils/MageVersion;)Z*?
+
+__unknown_file (#
+!
+%20mage.interfaces.MageServer*5
+
+__unknown_file (
+
+%21java.lang.String*5
+
+__unknown_file (
+
+%22java.lang.String*;
+
+__unknown_file (
+
+%24mage.utils.MageVersion2JconnectAdmin(Ljava/lang/String;Ljava/lang/String;Lmage/utils/MageVersion;)*
+6
+1*
+9
+ü ü(#~
+|
+
+ü ü(#!
+%12mage.interfaces.MageServer"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+server“
+
+ü0 ü(H
+%13java.lang.String"6mage.remote.Connection#getUsername()Ljava/lang/String;*"
+
+__unknown_file (
+""2getUsername()“
+
+üJ ü(b
+%14java.lang.String"6mage.remote.Connection#getPassword()Ljava/lang/String;*"
+
+__unknown_file (
+""2getPassword()w
+u
+
+üd ü(m
+%15java.lang.String"__id*H
+
+__unknown_file (,**
+mage.remote.SessionImpl$4"
+	sessionId~
+|
+
+üo ü(u!
+%16mage.interfaces.MageClient"__id*E
+
+__unknown_file ()*'
+mage.remote.SessionImpl$4"
+client¿¼
+üo ü(‚
+%17mage.utils.MageVersion"?mage.interfaces.MageClient#getVersion()Lmage/utils/MageVersion;*?
+
+__unknown_file (#
+!
+%16mage.interfaces.MageClient2getVersion()—”
+ü„ ü(
+%18java.lang.String"7mage.remote.Connection#getUserIdStr()Ljava/lang/String;*"
+
+__unknown_file (
+""2getUserIdStr()õò
+ü ü(
+%19boolean"‰mage.interfaces.MageServer#connectUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/utils/MageVersion;Ljava/lang/String;)Z*?
+
+__unknown_file (#
+!
+%12mage.interfaces.MageServer*5
+
+__unknown_file (
+
+%13java.lang.String*5
+
+__unknown_file (
+
+%14java.lang.String*5
+
+__unknown_file (
+
+%15java.lang.String*;
+
+__unknown_file (
+
+%17mage.utils.MageVersion*5
+
+__unknown_file (
+
+%18java.lang.String2mconnectUser(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Lmage/utils/MageVersion;Ljava/lang/String;)*
+6
+1*µ
+10
+ö ö(±
+®
+
+ö ö( 
+
+%0void"9mage.remote.SessionImpl#setLastError(Ljava/lang/String;)V*9
+
+__unknown_file (
+mage.remote.SessionImpl$4*
+
+__unknown_file ( W
+U
+
+÷ ÷(
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ª§
+
+÷6 ÷(C
+%2java.lang.String"7mage.remote.SessionImpl#getUserName()Ljava/lang/String;*9
+
+__unknown_file (
+mage.remote.SessionImpl$42getUserName()
+
+
+÷ ÷(C
+%3java.lang.String"__concat*'
+
+÷ ÷(3
+Logging: as username *&
+
+÷6 ÷(C
+
+%2java.lang.Stringw
+u
+
+÷ ÷(S
+%4java.lang.String"__concat*&
+
+÷ ÷(C
+
+%3java.lang.String*
+
+÷F ÷(S
+ to server Š‡
+
+÷V ÷(j
+%5java.lang.String"2mage.remote.Connection#getHost()Ljava/lang/String;*"
+
+__unknown_file (
+""2	getHost()€
+~
+
+÷ ÷(j
+%6java.lang.String"__concat*&
+
+÷ ÷(S
+
+%4java.lang.String*&
+
+÷V ÷(j
+
+%5java.lang.Stringm
+k
+
+÷ ÷(p
+%7java.lang.String"__concat*&
+
+÷ ÷(j
+
+%6java.lang.String*
+
+÷m ÷(p
+:lj
+÷s ÷(‡	
+%8int"!mage.remote.Connection#getPort()I*"
+
+__unknown_file (
+""2	getPort()u
+s
+÷ ÷(‡
+%9java.lang.String"__concat*&
+
+÷ ÷(p
+
+%7java.lang.String*
+÷s ÷(‡
+	
+%8intßÜ
+÷ ÷(ˆ
+%10void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%9java.lang.String2info(Ljava/lang/Object;)š
+
+ú ú(1
+%11java.lang.String";mage.remote.Connection#getAdminPassword()Ljava/lang/String;*"
+
+__unknown_file (
+""2getAdminPassword()*
+8
+9*(
+0 "!
+
+• •(
+implicit return*Ú
+1
+“ “(X
+V
+
+“ “(
+%65org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""ØÕ
+
+“ “(,
+%66void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%65org.apache.log4j.Logger*-
+
+__unknown_file (
+Logging: FAIL2info(Ljava/lang/Object;)"
+
+” ”(
+""B
+mage.remote.SessionImpl$4HP

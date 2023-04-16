@@ -1,0 +1,135 @@
+
+Šmage.target.common.TargetTappedPermanentAsYouCast#possibleTargets(Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/Set;t
+jD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetTappedPermanentAsYouCast.java   ($"startingBlock*ü
+startingBlock $  (X—
+”
+ (
+%8"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDd
+b
+ *  (<$
+sourceControllerIdjava.util.UUID"__annotation*"
+
+__unknown_file (
+
+%8“
+
+ (
+%9"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability`
+^
+ F  (L 
+sourcemage.abilities.Ability"__annotation*"
+
+__unknown_file (
+
+%9Š
+‡
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ S  (W
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10*
+1*ó
+1! !(¾»
+! !($%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()ÖÓ
+!< !(G!
+%1mage.filter.FilterPermanent"Dmage.target.TargetPermanent#getFilter()Lmage/filter/FilterPermanent;*Q
+
+__unknown_file (53
+1mage.target.common.TargetTappedPermanentAsYouCast2getFilter()š
+! !(N
+%2java.util.List"umage.game.permanent.Battlefield#getAllActivePermanents(Lmage/filter/FilterPermanent;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%1mage.filter.FilterPermanent*4
+
+__unknown_file (
+
+gamemage.game.Game2EgetAllActivePermanents(Lmage/filter/FilterPermanent;Lmage/game/Game;)¢Ÿ
+! !(W
+%3java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%2java.util.List2stream()Ž‹
+! "(,
+%4java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%3java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)†ƒ
+! #(&
+%5java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)­
+ª
+$ $(+ 
+%6java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors—”
+! $(,
+%7java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%6java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"!
+! $(-
+
+%7java.util.Set:0
+ %  (=$
+sourceControllerIdjava.util.UUID:,
+ >  (M 
+sourcemage.abilities.Ability:"
+ N  (W
+gamemage.game.GameB53
+1mage.target.common.TargetTappedPermanentAsYouCastH

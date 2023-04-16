@@ -1,0 +1,571 @@
+
+/mage.client.components.tray.MageTray#install()Vn
+dD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/components/tray/MageTray.java ("35*Í
+24/ /(Bk
+i
+/ /(B
+
+imagesItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%23java.awt.MenuItem97
+0% 0(-
+%25java.awt.MenuItem"java.awt.MenuItem´
+®
+0! 0(?
+%26"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%25java.awt.MenuItem*.
+
+__unknown_file (
+Download icons*
+23*Ë
+25- -(4h
+f
+- -(4
+popupjava.awt.PopupMenu"__id*7
+
+__unknown_file (
+
+%21java.awt.PopupMenu97
+/& /(.
+%23java.awt.MenuItem"java.awt.MenuItem¨
+©
+/" /(A
+%24"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%23java.awt.MenuItem*/
+
+__unknown_file (
+Download images*
+24*®
+26+ +(?i
+g
++ +(?
+trayjava.awt.SystemTray"__id*8
+
+__unknown_file (
+
+%20java.awt.SystemTray;9
+-( -(1
+%21java.awt.PopupMenu"java.awt.PopupMenuj
+h
+-$ -(3
+%22"java.awt.PopupMenu#<init>()V*7
+
+__unknown_file (
+
+%21java.awt.PopupMenu*
+25*Ø
+27+$ +(.ò
+ï
++$ +(>
+%20java.awt.SystemTray"8java.awt.SystemTray#getSystemTray()Ljava/awt/SystemTray;*3
+
+__unknown_file ("
+java.awt.SystemTray*
+26*Ú
+28$ $(Ä
+~
+$ $(
+%12java.awt.TrayIcon"__id*R
+
+__unknown_file (6*4&
+$mage.client.components.tray.MageTray"
+
+trayIconü
+ú
+$' )($
+%13java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_437$mage.client.components.tray.MageTray¢
+ü
+
+__unknown_file (7
+$
+%13java.awt.event.ActionListener"
+MageTray.this"__id*D
+
+__unknown_file ((&
+$mage.client.components.tray.MageTrayëé
+$ )(
+%19void"Ejava.awt.TrayIcon#addActionListener(Ljava/awt/event/ActionListener;)V*6
+
+__unknown_file (
+
+%12java.awt.TrayIcon*B
+
+__unknown_file (&
+$
+%13java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+27*Ã
+29! !(.
+}
+! !(.4&
+$mage.client.components.tray.MageTray"
+
+trayIcon"__id*5
+
+__unknown_file (
+
+%8java.awt.TrayIconÄ
+~
+" "(
+%10java.awt.TrayIcon"__id*R
+
+__unknown_file (6*4&
+$mage.client.components.tray.MageTray"
+
+trayIcon±Æ
+" "(+
+%11void"&java.awt.TrayIcon#setImageAutoSize(Z)V*6
+
+__unknown_file (
+
+%10java.awt.TrayIcon* 
+
+__unknown_file (22setImageAutoSize(Z)*
+28*˛
+30   (IÄ
+~
+   (I8&
+$mage.client.components.tray.MageTray"
+flashedImage"__id*2
+
+__unknown_file (
+
+%6java.awt.Image}
+{
+!$ !(-
+%7java.awt.Image"__id*S
+
+__unknown_file (7*5&
+$mage.client.components.tray.MageTray"
+	mainImage86
+! !(#
+%8java.awt.TrayIcon"java.awt.TrayIcon´
+®
+! !(.
+%9"+java.awt.TrayIcon#<init>(Ljava/awt/Image;)V*5
+
+__unknown_file (
+
+%8java.awt.TrayIcon*2
+
+__unknown_file (
+
+%7java.awt.Image*
+29*Ô
+31 (D}
+{
+ (D5&
+$mage.client.components.tray.MageTray"
+	mainImage"__id*2
+
+__unknown_file (
+
+%4java.awt.Imageo
+m
+   (47
+%51org.mage.plugins.card.utils.impl.ImageManagerImpl"__id*"
+
+__unknown_file (
+""ËÂ
+   (I
+%6java.awt.Image"Vorg.mage.plugins.card.utils.impl.ImageManagerImpl#getAppFlashedImage()Ljava/awt/Image;*U
+
+__unknown_file (9
+7
+%51org.mage.plugins.card.utils.impl.ImageManagerImpl2getAppFlashedImage()*
+30*Ï
+32 ((o
+m
+ (17
+%31org.mage.plugins.card.utils.impl.ImageManagerImpl"__id*"
+
+__unknown_file (
+""‰·
+ (D
+%4java.awt.Image"Torg.mage.plugins.card.utils.impl.ImageManagerImpl#getAppSmallImage()Ljava/awt/Image;*U
+
+__unknown_file (9
+7
+%31org.mage.plugins.card.utils.impl.ImageManagerImpl2getAppSmallImage()*
+31*ë
+10E E(˚¯
+E E(&
+%61java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*B
+
+__unknown_file (&
+$
+preferencesItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+9*ê
+11D D(˘ˆ
+D D($
+%60java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*@
+
+__unknown_file ($
+"
+stopBlinkItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+10*ﬁ
+34 (U
+S
+ (
+%1org.apache.log4j.Logger"__id*"
+
+__unknown_file (
+""‚ﬂ
+ (3
+
+%2void"3org.apache.log4j.Category#warn(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%1org.apache.log4j.Logger*;
+
+__unknown_file (
+SystemTray is not supported2warn(Ljava/lang/Object;)"
+ (
+""*å
+12C C(ıÚ
+C C( 
+%59java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*<
+
+__unknown_file ( 
+
+	iconsItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+11*é
+35 (t
+r
+ (%
+%0boolean""java.awt.SystemTray#isSupported()Z*3
+
+__unknown_file ("
+java.awt.SystemTray*
+32
+34*ç
+13B B(ˆÛ
+B B(!
+%58java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*=
+
+__unknown_file (!
+
+
+imagesItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+12*œ
+14@ @(ü
+ú
+@' @(M$
+%54java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_443$mage.client.components.tray.MageTrayñì
+@ @(N
+%57void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*;
+
+__unknown_file (
+
+exitItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%54java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+13*–
+15> >(ü
+ú
+>( >(b$
+%50java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_442$mage.client.components.tray.MageTrayóî
+> >(c
+%53void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*<
+
+__unknown_file ( 
+
+	aboutItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%50java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+14*÷
+16< <(ü
+ú
+<. <(n$
+%46java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_441$mage.client.components.tray.MageTrayùö
+< <(o
+%49void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*B
+
+__unknown_file (&
+$
+preferencesItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%46java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+15*˘
+17: :(ü
+ú
+:, :(<$
+%43java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_440$mage.client.components.tray.MageTray¢
+ü
+
+__unknown_file (7
+$
+%43java.awt.event.ActionListener"
+MageTray.this"__id*D
+
+__unknown_file ((&
+$mage.client.components.tray.MageTrayõò
+: :(=
+%45void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*@
+
+__unknown_file ($
+"
+stopBlinkItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%43java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+16*–
+188 8(ü
+ú
+8( 8(b$
+%39java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_439$mage.client.components.tray.MageTrayóî
+8 8(c
+%42void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*<
+
+__unknown_file ( 
+
+	iconsItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%39java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+17*º
+194 4(5i
+g
+4 4(5
+exitItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%33java.awt.MenuItemü
+ú
+6) 6(V$
+%35java.awt.event.ActionListener"__declareFunction*W
+
+__unknown_file (;9
+7__sonar_lambda_438$mage.client.components.tray.MageTrayòï
+6 6(W
+%38void"Ejava.awt.MenuItem#addActionListener(Ljava/awt/event/ActionListener;)V*=
+
+__unknown_file (!
+
+
+imagesItemjava.awt.MenuItem*B
+
+__unknown_file (&
+$
+%35java.awt.event.ActionListener22addActionListener(Ljava/awt/event/ActionListener;)*
+18*&
+0 "
+V V(
+implicit return*Ó
+3N N(Ä
+~
+N N(!
+%68java.awt.TrayIcon"__id*R
+
+__unknown_file (6*4&
+$mage.client.components.tray.MageTray"
+
+trayIcon÷”
+N N("
+%69void"-java.awt.SystemTray#add(Ljava/awt/TrayIcon;)V*9
+
+__unknown_file (
+
+trayjava.awt.SystemTray*6
+
+__unknown_file (
+
+%68java.awt.TrayIcon2add(Ljava/awt/TrayIcon;)*
+0*Ä
+5K K(Ä
+~
+K K(
+%66java.awt.TrayIcon"__id*R
+
+__unknown_file (6*4&
+$mage.client.components.tray.MageTray"
+
+trayIconËÂ
+K K((
+%67void"5java.awt.TrayIcon#setPopupMenu(Ljava/awt/PopupMenu;)V*6
+
+__unknown_file (
+
+%66java.awt.TrayIcon*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu2"setPopupMenu(Ljava/awt/PopupMenu;)*
+3*â
+6I I(ÙÒ
+I I(
+%65java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*;
+
+__unknown_file (
+
+exitItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+5*ô
+7H H(ÑÅ
+H H( 
+%64void"java.awt.Menu#addSeparator()V*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu2addSeparator()*
+6*ä
+8G G(ıÚ
+G G( 
+%63java.awt.MenuItem"9java.awt.Menu#add(Ljava/awt/MenuItem;)Ljava/awt/MenuItem;*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu*<
+
+__unknown_file ( 
+
+	aboutItemjava.awt.MenuItem2add(Ljava/awt/MenuItem;)*
+7*ô
+9F F(ÑÅ
+F F( 
+%62void"java.awt.Menu#addSeparator()V*9
+
+__unknown_file (
+
+popupjava.awt.PopupMenu2addSeparator()*
+8*ﬂ
+203 3(<j
+h
+3 3(<
+	aboutItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%31java.awt.MenuItem97
+4$ 4(,
+%33java.awt.MenuItem"java.awt.MenuItem°
+û
+4  4(4
+%34"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%33java.awt.MenuItem*$
+
+__unknown_file (
+Exit*
+19*Î
+212 2(Fp
+n
+2 2(F$
+preferencesItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%29java.awt.MenuItem97
+3% 3(-
+%31java.awt.MenuItem"java.awt.MenuItemß
+§
+3! 3(;
+%32"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%31java.awt.MenuItem**
+
+__unknown_file (
+
+About Mage*
+20*Ì
+221 1(Cn
+l
+1 1(C"
+stopBlinkItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%27java.awt.MenuItem97
+2+ 2(3
+%29java.awt.MenuItem"java.awt.MenuItem´
+®
+2' 2(E
+%30"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%29java.awt.MenuItem*.
+
+__unknown_file (
+Preferences...*
+21*Ë
+230 0(@j
+h
+0 0(@
+	iconsItemjava.awt.MenuItem"__id*6
+
+__unknown_file (
+
+%25java.awt.MenuItem97
+1) 1(1
+%27java.awt.MenuItem"java.awt.MenuItem™
+ß
+1% 1(B
+%28"-java.awt.MenuItem#<init>(Ljava/lang/String;)V*6
+
+__unknown_file (
+
+%27java.awt.MenuItem*-
+
+__unknown_file (
+Stop blinking*
+22B(&
+$mage.client.components.tray.MageTrayH

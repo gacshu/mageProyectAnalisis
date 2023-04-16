@@ -1,0 +1,296 @@
+
+dmage.server.util.SystemUtil#putPlaneToGame(Lmage/game/Game;Lmage/players/Player;Ljava/lang/String;)Zg
+[D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/util/SystemUtil.javaö ö(("14*—
+2
+± ±(ìê
+
+±" ±(0
+%14java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()Ì
+
+± ±(1
+%15void":mage.game.command.Plane#setControllerId(Ljava/util/UUID;)V*>
+
+__unknown_file ("
+ 
+planemage.game.command.Plane*3
+
+__unknown_file (
+
+%14java.util.UUID2!setControllerId(Ljava/util/UUID;)ìê
+
+≤' ≤(5
+%16java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*;
+
+__unknown_file (
+
+playermage.players.Player2getId()äá
+
+≤ ≤(6
+%17boolean"Tmage.game.Game#addPlane(Lmage/game/command/Plane;Lmage/MageObject;Ljava/util/UUID;)Z*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+planemage.game.command.Plane*"
+
+__unknown_file (
+""*3
+
+__unknown_file (
+
+%16java.util.UUID2DaddPlane(Lmage/game/command/Plane;Lmage/MageObject;Ljava/util/UUID;)"
+
+≥ ≥(
+""*Î
+14
+ú' ú(+úô
+
+ú' ú(6
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()¥±
+
+ú' ú(C
+%1mage.game.command.Command";mage.game.GameState#getCommand()Lmage/game/command/Command;*7
+
+__unknown_file (
+
+%0mage.game.GameState2getCommand()*
+4*Ä
+3
+Æ Æ(!ˆ
+Û
+
+Æ Æ(?
+%12mage.constants.Planes"Nmage.constants.Planes#fromClassName(Ljava/lang/String;)Lmage/constants/Planes;*5
+
+__unknown_file ("
+mage.constants.Planes*@
+
+__unknown_file ($
+"
+planeClassNamejava.lang.Stringt
+r
+
+Æ Æ(@"
+	planeTypemage.constants.Planes"__id*:
+
+__unknown_file (
+
+%12mage.constants.PlanesÅ
+˛
+
+Ø Ø(2
+%13mage.game.command.Plane"Umage.game.command.Plane#createPlane(Lmage/constants/Planes;)Lmage/game/command/Plane;*7
+
+__unknown_file ("
+mage.game.command.Plane*@
+
+__unknown_file ($
+"
+	planeTypemage.constants.Planest
+r
+
+Ø Ø(3 
+planemage.game.command.Plane"__id*<
+
+__unknown_file ( 
+
+%13mage.game.command.Plane*
+2
+1*≤
+4
+ú ú($f
+d
+
+ú ú($,
+	comObjectmage.game.command.CommandObject"__id*"
+
+__unknown_file (
+""¨
+©
+
+ú ú($,
+	comObjectmage.game.command.CommandObject"
+__arrayGet*=
+
+__unknown_file (!
+
+%1mage.game.command.Command*"
+
+__unknown_file (
+""*
+
+3
+4
+12*™	
+5
+ß ß(úô
+
+ß ß(
+%6mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()™ß
+
+ß9 ß(J
+%7java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+	comObjectmage.game.command.CommandObject2getId()ıÚ
+
+ß ß(K
+
+%8void"?mage.game.GameState#removeTriggersOfSourceId(Ljava/util/UUID;)V*7
+
+__unknown_file (
+
+%6mage.game.GameState*2
+
+__unknown_file (
+
+%7java.util.UUID2*removeTriggersOfSourceId(Ljava/util/UUID;)úô
+
+® ®(
+%9mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()µ≤
+
+® ®(, 
+%10mage.game.command.Command";mage.game.GameState#getCommand()Lmage/game/command/Command;*7
+
+__unknown_file (
+
+%9mage.game.GameState2getCommand()¯ı
+
+® ®(>
+%11boolean"/java.util.ArrayList#remove(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+%10mage.game.command.Command*J
+
+__unknown_file (.
+,
+	comObjectmage.game.command.CommandObject2remove(Ljava/lang/Object;)*
+3*ò
+6
+ü ü(([
+Y
+
+ü ü((!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""†
+ù
+
+ü ü((!
+abilitymage.abilities.Ability"
+__arrayGet*<
+
+__unknown_file ( 
+
+%3mage.abilities.Abilities*"
+
+__unknown_file (
+""*
+5
+10*¨
+7
+† †(*a
+_
+
+† †(*'
+effectmage.abilities.effects.Effect"__id*"
+
+__unknown_file (
+""¨
+©
+
+† †(*'
+effectmage.abilities.effects.Effect"
+__arrayGet*B
+
+__unknown_file (&
+$
+%4mage.abilities.effects.Effects*"
+
+__unknown_file (
+""*	
+6
+7
+8*∏
+8
+¢4 ¢(:°û
+
+¢  ¢(E
+
+%5void"2mage.abilities.effects.ContinuousEffect#discard()V*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effect2	discard()*
+7*·
+10
+†- †(4…∆
+
+†- †(A$
+%4mage.abilities.effects.Effects"Cmage.abilities.Ability#getEffects()Lmage/abilities/effects/Effects;*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2getEffects()*
+7*›
+11
+ü+ ü(4≈¬
+
+ü+ ü(C
+%3mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*J
+
+__unknown_file (.
+,
+	comObjectmage.game.command.CommandObject2getAbilities()*
+6*·
+12
+û û(≈¬
+
+û û(,
+%2mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*J
+
+__unknown_file (.
+,
+	comObjectmage.game.command.CommandObject2getAbilities()*
+5
+11*%
+1
+µ µ("
+
+µ µ(
+"":$
+
+ö) ö(3
+gamemage.game.Game:+
+
+ö4 ö(B
+playermage.players.Player:0
+
+öC ö(X"
+planeClassNamejava.lang.StringB"
+mage.server.util.SystemUtilHP

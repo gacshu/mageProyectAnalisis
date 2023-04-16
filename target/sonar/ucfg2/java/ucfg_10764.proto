@@ -1,0 +1,198 @@
+
+†mage.abilities.dynamicvalue.common.PermanentsYouOwnThatOpponentsControlCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Iê
+ÖD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/PermanentsYouOwnThatOpponentsControlCount.java ("startingBlock*ô
+2 ( b
+`
+ ( *
+	permanentmage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""ù
+ö
+ ( *
+	permanentmage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%4java.util.List*"
+
+__unknown_file (
+""*
+6
+1*î
+startingBlock (Iä
+á
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11õ
+ò
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+, (9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12õ
+ò
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+B (H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%13*
+8*™
+4 (∫∑
+) (D
+%9java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()ÿ’
+ (E
+%10boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*:
+
+__unknown_file (
+
+opponentIdsjava.util.Set*2
+
+__unknown_file (
+
+%9java.util.UUID2contains(Ljava/lang/Object;)*
+2*∑
+5E (N∑¥
+Y (x
+%7java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()Â‚
+E (y
+%8boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%7java.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+2
+4*∫
+6 (∫∑
+% (@
+%5java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getControllerId()Â‚
+ (A
+%6boolean",mage.cards.Card#isOwnedBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%5java.util.UUID2isOwnedBy(Ljava/util/UUID;)*
+2
+5*Ä
+7# ('æª
+# (8%
+%2mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()∑¥
+M (l
+%3java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()Ì
+# (s
+%4java.util.List"emage.game.permanent.Battlefield#getActivePermanents(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%2mage.game.permanent.Battlefield*2
+
+__unknown_file (
+
+%3java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game25getActivePermanents(Ljava/util/UUID;Lmage/game/Game;)*
+2*û
+8  ($∑¥
+2 (Q
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()ÍÁ
+  (R
+%1java.util.Set"<mage.game.Game#getOpponents(Ljava/util/UUID;)Ljava/util/Set;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getOpponents(Ljava/util/UUID;)c
+a
+ (S
+opponentIdsjava.util.Set"__id*1
+
+__unknown_file (
+
+%1java.util.Set*
+7*!
+1 ("
+ (
+"":"
+ (#
+gamemage.game.Game:3
+$ (:'
+sourceAbilitymage.abilities.Ability:3
+; (H'
+effectmage.abilities.effects.EffectBPN
+Lmage.abilities.dynamicvalue.common.PermanentsYouOwnThatOpponentsControlCountHP

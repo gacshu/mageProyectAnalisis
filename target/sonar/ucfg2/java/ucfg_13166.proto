@@ -1,0 +1,214 @@
+
+]mage.target.common.TargetPermanentOrPlayerAmount#canChoose(Ljava/util/UUID;Lmage/game/Game;)Zs
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetPermanentOrPlayerAmount.java| |("startingBlock*µ
+2
+â â( ò
+ï
+
+â â( #
+%9mage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%8java.util.List*"
+
+__unknown_file (
+""*	
+2
+3
+1*%
+3
+å å("
+
+å å(
+""*á
+startingBlock| |(@ò
+ï
+{ {(
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUIDe
+c
+|" |(4$
+sourceControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%10ä
+á
+{ {(
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+|; |(?
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11*
+12*˙
+5
+â# â('¿Ω
+
+â# â(8%
+%5mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()•
+¢
+
+âM â(S0
+%6*mage.filter.common.FilterPermanentOrPlayer"__id*\
+
+__unknown_file (@*>2
+0mage.target.common.TargetPermanentOrPlayerAmount"
+filterˆÛ
+
+âM â(h!
+%7mage.filter.FilterPermanent"\mage.filter.common.FilterPermanentOrPlayer#getPermanentFilter()Lmage/filter/FilterPermanent;*N
+
+__unknown_file (2
+0
+%6*mage.filter.common.FilterPermanentOrPlayer2getPermanentFilter()ˇ¸
+â# â(É
+%8java.util.List"Çmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%5mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%7mage.filter.FilterPermanent*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2RgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/game/Game;)*
+2*É
+6 (R
+P
+ (
+playerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""ñ
+ì
+ (
+playerIdjava.util.UUID"
+__arrayGet*;
+
+__unknown_file (
+
+%1mage.players.PlayerList*"
+
+__unknown_file (
+""*
+5
+11*%
+7
+Ü Ü("
+
+Ü Ü(
+""*†
+10
+Å# Å()•
+¢
+
+Å# Å()0
+%3*mage.filter.common.FilterPermanentOrPlayer"__id*\
+
+__unknown_file (@*>2
+0mage.target.common.TargetPermanentOrPlayerAmount"
+filter›⁄
+
+Å# Å(=
+%4boolean"Rmage.filter.common.FilterPermanentOrPlayer#match(Lmage/MageItem;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%3*mage.filter.common.FilterPermanentOrPlayer*;
+
+__unknown_file (
+
+playermage.players.Player*4
+
+__unknown_file (
+
+gamemage.game.Game2&match(Lmage/MageItem;Lmage/game/Game;)*
+6
+7*Ç
+11
+Ä Ä( ¯ı
+
+Ä Ä(4
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+playerIdjava.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+Ä Ä(5
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+6
+10*©
+12 (!öó
+ (,
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ˆÛ
+ (X
+%1mage.players.PlayerList"`mage.game.GameState#getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)Lmage/players/PlayerList;*7
+
+__unknown_file (
+
+%0mage.game.GameState*B
+
+__unknown_file (&
+$
+sourceControllerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game23getPlayersInRange(Ljava/util/UUID;Lmage/game/Game;)*
+6*%
+1
+è è("
+
+è è(
+"":0
+| |(5$
+sourceControllerIdjava.util.UUID:"
+|6 |(?
+gamemage.game.GameB42
+0mage.target.common.TargetPermanentOrPlayerAmountHP

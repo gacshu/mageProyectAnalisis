@@ -1,0 +1,195 @@
+
+&mage.server.draft.DraftSession#init()Zh
+^D:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/draft/DraftSession.java0 0("6"1*!
+29 9("
+9 9(
+""*É
+35* 5(7í
+è
+5* 5(7*
+%8$java.util.concurrent.ScheduledFuture"__id*Q
+
+__unknown_file (5*3 
+mage.server.draft.DraftSession"
+futureTimeout[
+Y
+5A 5(Q#
+%9java.util.concurrent.TimeUnit"__id*"
+
+__unknown_file (
+""õò
+5* 5(R
+%10long"Gjava.util.concurrent.Delayed#getDelay(Ljava/util/concurrent/TimeUnit;)J*H
+
+__unknown_file (,
+*
+%8$java.util.concurrent.ScheduledFuture*A
+
+__unknown_file (%
+#
+%9java.util.concurrent.TimeUnit2)getDelay(Ljava/util/concurrent/TimeUnit;)ìê
+6 6(
+%11mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()l
+j
+6? 6(^4
+%12-mage.interfaces.callback.ClientCallbackMethod"__id*"
+
+__unknown_file (
+""{
+y
+6` 6(e
+%13mage.game.draft.Draft"__id*I
+
+__unknown_file (-*+ 
+mage.server.draft.DraftSession"
+draftêç
+6` 6(m
+%14java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*:
+
+__unknown_file (
+
+%13mage.game.draft.Draft2getId()≠
+™
+73 7(A
+%15mage.view.DraftView"Bmage.server.draft.DraftSession#getDraftView()Lmage/view/DraftView;*>
+
+__unknown_file (" 
+mage.server.draft.DraftSessionﬁ
+€
+7C 7(^
+%16mage.view.DraftPickView"Kmage.server.draft.DraftSession#getDraftPickView(I)Lmage/view/DraftPickView;*>
+
+__unknown_file (" 
+mage.server.draft.DraftSession*"
+
+__unknown_file (
+""OM
+7  7(2#
+%17mage.view.DraftClientMessage"mage.view.DraftClientMessage•
+¢
+7 7(_
+%18"Tmage.view.DraftClientMessage#<init>(Lmage/view/DraftView;Lmage/view/DraftPickView;)V*A
+
+__unknown_file (%
+#
+%17mage.view.DraftClientMessage*8
+
+__unknown_file (
+
+%15mage.view.DraftView*<
+
+__unknown_file ( 
+
+%16mage.view.DraftPickViewec
+60 6(>.
+%19'mage.interfaces.callback.ClientCallback"'mage.interfaces.callback.ClientCallback≥
+∞
+6, 7(`
+%20"Çmage.interfaces.callback.ClientCallback#<init>(Lmage/interfaces/callback/ClientCallbackMethod;Ljava/util/UUID;Ljava/lang/Object;)V*L
+
+__unknown_file (0
+.
+%19'mage.interfaces.callback.ClientCallback*R
+
+__unknown_file (6
+4
+%12-mage.interfaces.callback.ClientCallbackMethod*3
+
+__unknown_file (
+
+%14java.util.UUID*A
+
+__unknown_file (%
+#
+%17mage.view.DraftClientMessage£†
+6 7(a
+%21void"Image.server.User#fireCallback(Lmage/interfaces/callback/ClientCallback;)V*5
+
+__unknown_file (
+
+%11mage.server.User*L
+
+__unknown_file (0
+.
+%19'mage.interfaces.callback.ClientCallback27fireCallback(Lmage/interfaces/callback/ClientCallback;)*
+2*ƒ
+44. 4(;í
+è
+4. 4(;*
+%6$java.util.concurrent.ScheduledFuture"__id*Q
+
+__unknown_file (5*3 
+mage.server.draft.DraftSession"
+futureTimeoutóî
+4. 4(D
+%7boolean"%java.util.concurrent.Future#isDone()Z*H
+
+__unknown_file (,
+*
+%6$java.util.concurrent.ScheduledFuture2isDone()*
+2
+3*™
+54 4(!í
+è
+4 4(!*
+%5$java.util.concurrent.ScheduledFuture"__id*Q
+
+__unknown_file (5*3 
+mage.server.draft.DraftSession"
+futureTimeout*
+2
+4*É
+62" 2(0í
+è
+2" 2(0)
+%0#mage.server.managers.ManagerFactory"__id*R
+
+__unknown_file (6*4 
+mage.server.draft.DraftSession"
+managerFactory‚ﬂ
+2" 2(>&
+%1 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2userManager()t
+r
+2G 2(M
+%2java.util.UUID"__id*J
+
+__unknown_file (.*, 
+mage.server.draft.DraftSession"
+userIdåâ
+2" 2(N
+%3java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%1 mage.server.managers.UserManager*2
+
+__unknown_file (
+
+%2java.util.UUID2getUser(Ljava/util/UUID;)f
+d
+2 2(O
+userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%3java.util.OptionalÑÅ
+3 3( 
+%4boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+5
+1*!
+1< <("
+< <(
+""B" 
+mage.server.draft.DraftSessionHP

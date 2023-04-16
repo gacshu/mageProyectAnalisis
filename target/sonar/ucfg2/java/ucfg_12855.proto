@@ -1,0 +1,385 @@
+
+îmage.game.command.emblems.TibaltCosmicImpostorPlayFromExileEffect#applies(Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/command/emblems/TibaltCosmicImpostorEmblem.java6 6("startingBlock*±
+13< <($≤Ø
+< <(2
+%2java.util.UUID"6mage.game.command.Emblem#getSourceId()Ljava/util/UUID;*F
+
+__unknown_file (*
+(
+tibaltEmblemmage.game.command.Emblem2getSourceId()b
+`
+< <(3
+sourceIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%2java.util.UUID*
+11
+12*"
+149 9("
+9 9(
+""*°
+157' 7(+®•
+76 7(J
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()ËÂ
+7' 7(K
+%1mage.MageObject";mage.game.Game#getEmblem(Ljava/util/UUID;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getEmblem(Ljava/util/UUID;)q
+o
+7 7(L(
+tibaltEmblemmage.game.command.Emblem"__id*3
+
+__unknown_file (
+
+%1mage.MageObject*
+13
+14*!
+1O O("
+O O(
+""*Ÿ
+2L L(V
+T
+LA L(P
+%22mage.constants.Duration"__id*"
+
+__unknown_file (
+""›
+⁄
+L L(W
+%23void"ymage.util.CardUtil#makeCardPlayable(Lmage/game/Game;Lmage/abilities/Ability;Lmage/cards/Card;Lmage/constants/Duration;Z)V*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*<
+
+__unknown_file ( 
+
+cardInExilemage.cards.Card*<
+
+__unknown_file ( 
+
+%22mage.constants.Duration* 
+
+__unknown_file (2"
+M M(
+""*‰
+3K K(õò
+K K("
+%18mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()˛˚
+K K(6
+%19mage.constants.Zone"Bmage.game.GameState#getZone(Ljava/util/UUID;)Lmage/constants/Zone;*8
+
+__unknown_file (
+
+%18mage.game.GameState*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2getZone(Ljava/util/UUID;)R
+P
+K> K(I
+%20mage.constants.Zone"__id*"
+
+__unknown_file (
+""Ÿ÷
+K K(J
+%21boolean"*java.lang.Enum#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+%19mage.constants.Zone*8
+
+__unknown_file (
+
+%20mage.constants.Zone2equals(Ljava/lang/Object;)*
+2
+1*Û
+startingBlock6 6(_é
+ã
+5 5(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+objectIdjava.util.UUID[
+Y
+6  6((
+objectIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%24î
+ë
+5 5(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+62 6(8 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%25ö
+ó
+5 5(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUIDg
+e
+6? 6(S&
+affectedControllerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%26ä
+á
+5 5(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+6Z 6(^
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%27*
+15*¨
+4J J('±Æ
+J/ J(G
+%16java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()‡›
+J J(H
+%17boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*D
+
+__unknown_file ((
+&
+affectedControllerIdjava.util.UUID*3
+
+__unknown_file (
+
+%16java.util.UUID2equals(Ljava/lang/Object;)*
+3
+1*ô
+5H H(%¢ü
+H H(3
+%13mage.cards.Card".mage.cards.Card#getMainCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+cardInExilemage.cards.Card2getMainCard()äá
+H H(;
+%14java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*4
+
+__unknown_file (
+
+%13mage.cards.Card2getId()e
+c
+H H(<
+
+mainCardIdjava.util.UUID"__id*3
+
+__unknown_file (
+
+%14java.util.UUIDËÂ
+I I(*
+%15boolean"/java.util.HashSet#contains(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+	exileZonemage.game.ExileZone*:
+
+__unknown_file (
+
+
+mainCardIdjava.util.UUID2contains(Ljava/lang/Object;)*
+4
+1*!
+6E E("
+E E(
+""*Ì
+7C C(ÎË
+C C(1
+%12mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getCard(Ljava/util/UUID;)h
+f
+C C(2
+cardInExilemage.cards.Card"__id*4
+
+__unknown_file (
+
+%12mage.cards.Card*
+5
+6*!
+8@ @("
+@ @(
+""*û
+9?! ?(*ÜÉ
+?! ?(4
+%11boolean"java.util.HashSet#isEmpty()Z*>
+
+__unknown_file ("
+ 
+	exileZonemage.game.ExileZone2	isEmpty()*
+7
+8*ø
+10=y =(}ö
+ó
+= =(~
+%7java.util.UUID"Umage.util.CardUtil#getExileZoneId(Ljava/lang/String;Lmage/game/Game;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+%3java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Gamea
+_
+= =(
+exileIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%7java.util.UUIDöó
+> >(-
+%8mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()öó
+> >(8
+%9mage.game.Exile"/mage.game.GameState#getExile()Lmage/game/Exile;*7
+
+__unknown_file (
+
+%8mage.game.GameState2
+getExile()¸˘
+> >(N
+%10mage.game.ExileZone"Cmage.game.Exile#getExileZone(Ljava/util/UUID;)Lmage/game/ExileZone;*3
+
+__unknown_file (
+
+%9mage.game.Exile*7
+
+__unknown_file (
+
+exileIdjava.util.UUID2getExileZone(Ljava/util/UUID;)n
+l
+> >(O 
+	exileZonemage.game.ExileZone"__id*8
+
+__unknown_file (
+
+%10mage.game.ExileZone*
+8
+9*∂
+11=X =(^®•
+=X =(l
+%6java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()íè
+=X =(w
+%5java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*2
+
+__unknown_file (
+
+%6java.util.UUID2
+toString()`
+^
+=X =(w
+%3java.lang.String"__id*4
+
+__unknown_file (
+
+%5java.lang.String*
+10*ë
+12=B =(Jòï
+=B =(U
+%4java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*8
+
+__unknown_file (
+
+sourceIdjava.util.UUID2
+toString()`
+^
+=B =(U
+%3java.lang.String"__id*4
+
+__unknown_file (
+
+%4java.lang.String*
+10:&
+6 6()
+objectIdjava.util.UUID:,
+6* 6(9 
+sourcemage.abilities.Ability:2
+6: 6(T&
+affectedControllerIdjava.util.UUID:"
+6U 6(^
+gamemage.game.GameBEC
+Amage.game.command.emblems.TibaltCosmicImpostorPlayFromExileEffectHP

@@ -1,0 +1,239 @@
+
+]mage.abilities.common.SagaLoreCountersEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zf
+ZD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/SagaAbility.java¬ ¬("startingBlock*%
+2
+¶ ¶("
+
+¶ ¶(
+""*¯
+3
+´ ´(²¯
+
+´' ´(?
+%5java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+´ ´(@
+%6mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+´ ´(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%6mage.players.Player*
+2
+1*ˆ
+startingBlock
+¬ ¬(3Œ
+‰
+
+« «(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+¬ ¬("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13–
+“
+
+« «(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+¬, ¬(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14*
+7*Œ
+4
+² ²(Y
+W
+
+²) ²(9
+%2mage.counters.CounterType"__id*"
+
+__unknown_file (
+""À½
+
+²) ²(J
+%3mage.counters.Counter"Amage.counters.CounterType#createInstance()Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%2mage.counters.CounterType2createInstance()ÆÃ
+
+² ²(Y
+%4boolean"]mage.cards.Card#addCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%3mage.counters.Counter*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2LaddCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)"
+
+² ²(Z
+""*%
+6
+¯ ¯("
+
+¯ ¯(
+""*í
+7
+­ ­("ª§
+
+­8 ­(L
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()œ™
+
+­ ­(M#
+%1mage.game.permanent.Permanent"Tmage.game.Game#getPermanentEntering(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2&getPermanentEntering(Ljava/util/UUID;)„
+
+
+­ ­(N*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent*	
+3
+4
+6*†
+1
+¸ ¸(•
+’
+
+¹ ¹( 
+%7mage.constants.SagaChapter"__id*\
+
+__unknown_file (@*>.
+,mage.abilities.common.SagaLoreCountersEffect"
+
+maxChapter
+
+¹ ¹()	
+%8int"'mage.constants.SagaChapter#getNumber()I*>
+
+__unknown_file ("
+ 
+%7mage.constants.SagaChapter2getNumber()¡ž
+
+¸ »(		
+%9int"Dmage.players.Player#getAmount(IILjava/lang/String;Lmage/game/Game;)I*;
+
+__unknown_file (
+
+playermage.players.Player* 
+
+__unknown_file (2*'
+
+__unknown_file (
+	
+%8int*P
+
+__unknown_file (42
+0Choose the number of lore counters to enter with*4
+
+__unknown_file (
+
+gamemage.game.Game2/getAmount(IILjava/lang/String;Lmage/game/Game;)Z
+X
+
+¼% ¼(5 
+%10mage.counters.CounterType"__id*"
+
+__unknown_file (
+""èå
+
+¼% ¼(N
+%11mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%10mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)ÈÅ
+
+¼ ¼(]
+%12boolean"]mage.cards.Card#addCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*:
+
+__unknown_file (
+
+%11mage.counters.Counter*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2LaddCounters(Lmage/counters/Counter;Lmage/abilities/Ability;Lmage/game/Game;)"
+
+¼ ¼(^
+"":$
+
+¬ ¬(#
+gamemage.game.Game:.
+
+¬$ ¬(2 
+sourcemage.abilities.AbilityB0.
+,mage.abilities.common.SagaLoreCountersEffectHP

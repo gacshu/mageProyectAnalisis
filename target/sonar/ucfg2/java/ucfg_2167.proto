@@ -1,0 +1,837 @@
+
+ämage.game.Game#getCommanderCardsFromAnyZones(Lmage/players/Player;Lmage/constants/CommanderCardType;[Lmage/constants/Zone;)Ljava/util/Set;S
+GD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/Game.java– –(3"26*†
+24
+’& ’(*æª
+
+’& ’(\
+%6java.util.Set"hmage.game.Game#getCommandersIds(Lmage/players/Player;Lmage/constants/CommanderCardType;Z)Ljava/util/Set;*.
+
+__unknown_file (
+mage.game.Game*;
+
+__unknown_file (
+
+playermage.players.Player*S
+
+__unknown_file (7
+5
+commanderCardType mage.constants.CommanderCardType* 
+
+__unknown_file (22JgetCommandersIds(Lmage/players/Player;Lmage/constants/CommanderCardType;Z)k
+i
+
+’ ’(]"
+needCommandersIdsjava.util.Set"__id*1
+
+__unknown_file (
+
+%6java.util.Set≤Ø
+
+÷( ÷(B
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*@
+
+__unknown_file ($
+"
+needCommandersIdsjava.util.Set2stream()àÖ
+
+÷( ◊(#
+%8java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)êç
+
+÷( ÿ()
+%9java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%8java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)∞
+≠
+
+Ÿ Ÿ(+!
+%10java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsõò
+
+÷( Ÿ(,
+%11java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%9java.util.stream.Stream*?
+
+__unknown_file (#
+!
+%10java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)n
+l
+
+÷ Ÿ(-$
+needCommandersCardsjava.util.Set"__id*2
+
+__unknown_file (
+
+%11java.util.Set;9
+
+⁄ ⁄(%
+%12java.util.HashSet"java.util.HashSetj
+h
+
+⁄ ⁄('
+%13"java.util.HashSet#<init>()V*6
+
+__unknown_file (
+
+%12java.util.HashSetb
+`
+
+⁄ ⁄((
+resjava.util.Set"__id*6
+
+__unknown_file (
+
+%12java.util.HashSetT
+R
+
+› ›('
+%14mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+› ›((
+%15boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%14mage.constants.Zone2contains(Ljava/lang/Object;)*
+22
+23*›
+25
+”/ ”(Y\Z
+
+” ”(.(
+%4"java.lang.IllegalArgumentException""java.lang.IllegalArgumentExceptionÁ
+‰
+
+” ”(Z
+%5">java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V*F
+
+__unknown_file (*
+(
+%4"java.lang.IllegalArgumentException*H
+
+__unknown_file (,*
+(Empty zones list in searching commanders*
+0*π
+26
+— —($Î
+Ë
+
+— —(8
+%0java.util.stream.Stream"Ejava.util.Arrays#stream([Ljava/lang/Object;)Ljava/util/stream/Stream;*0
+
+__unknown_file ("
+java.util.Arrays*B
+
+__unknown_file (&
+$
+searchZonesmage.constants.Zone[]Ø
+¨
+
+—A —(S 
+%1java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsôñ
+
+— —(T
+%2java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%0java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%1java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)c
+a
+
+— —(U
+	needZonesjava.util.Set"__id*1
+
+__unknown_file (
+
+%2java.util.Set|z
+
+“ “(
+%3boolean"java.util.Set#isEmpty()Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set2	isEmpty()*
+24
+25*Å
+10
+˚ ˚(µ≤
+
+˚ ˚((
+%65java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+needCommandersCardsjava.util.Set2stream()â
+Ü
+
+¸ ¸(\#
+%66java.util.function.Predicate"__declareFunction*@
+
+__unknown_file ($"
+ __sonar_lambda_32$mage.game.Gameá
+Ñ
+
+__unknown_file (2
+#
+%66java.util.function.Predicate"
+	Game.this"__id*.
+
+__unknown_file (
+mage.game.Game±Æ
+
+˚ ¸(]
+%72java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%65java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%66java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+˚ ˝(&
+%73void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%72java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+9*–
+11
+˙, ˙(5T
+R
+
+˙? ˙(I
+%63mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+˙, ˙(J
+%64boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%63mage.constants.Zone2contains(Ljava/lang/Object;)*
+9
+10*—
+12
+˙ ˙(T
+R
+
+˙ ˙('
+%61mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+˙ ˙((
+%62boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%61mage.constants.Zone2contains(Ljava/lang/Object;)*
+10
+11*ÿ
+13
+Û Û(≥∞
+
+Û Û(&
+%57java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*@
+
+__unknown_file ($
+"
+needCommandersIdsjava.util.Set2stream()äá
+
+Û Ù(,
+%58java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%57java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)íè
+
+Û ı(-
+%59java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%58java.util.stream.Stream*"
+
+__unknown_file (
+""2&filter(Ljava/util/function/Predicate;)Á‰
+
+Û ˆ(&
+%60void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%59java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+12*—
+14
+Ú, Ú(5T
+R
+
+Ú? Ú(O
+%55mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Ú, Ú(P
+%56boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%55mage.constants.Zone2contains(Ljava/lang/Object;)*
+13
+12*—
+15
+Ú Ú(T
+R
+
+Ú Ú('
+%53mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Ú Ú((
+%54boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%53mage.constants.Zone2contains(Ljava/lang/Object;)*
+13
+14*Ç
+16
+Ï Ï(µ≤
+
+Ï Ï((
+%44java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+needCommandersCardsjava.util.Set2stream()â
+Ü
+
+Ì Ì(^#
+%45java.util.function.Predicate"__declareFunction*@
+
+__unknown_file ($"
+ __sonar_lambda_31$mage.game.Gameá
+Ñ
+
+__unknown_file (2
+#
+%45java.util.function.Predicate"
+	Game.this"__id*.
+
+__unknown_file (
+mage.game.Game±Æ
+
+Ï Ì(_
+%51java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%44java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%45java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+Ï Ó(&
+%52void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%51java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+15*—
+17
+Î, Î(5T
+R
+
+Î? Î(K
+%42mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Î, Î(L
+%43boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%42mage.constants.Zone2contains(Ljava/lang/Object;)*
+15
+16*—
+18
+Î Î(T
+R
+
+Î Î('
+%40mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Î Î((
+%41boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%40mage.constants.Zone2contains(Ljava/lang/Object;)*
+16
+17*Ç
+19
+Â Â(µ≤
+
+Â Â((
+%31java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+needCommandersCardsjava.util.Set2stream()â
+Ü
+
+Ê Ê(`#
+%32java.util.function.Predicate"__declareFunction*@
+
+__unknown_file ($"
+ __sonar_lambda_30$mage.game.Gameá
+Ñ
+
+__unknown_file (2
+#
+%32java.util.function.Predicate"
+	Game.this"__id*.
+
+__unknown_file (
+mage.game.Game±Æ
+
+Â Ê(a
+%38java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%31java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%32java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+Â Á(&
+%39void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%38java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+18*(
+0 "!
+
+í í(
+implicit return*5
+1
+ë ë("$
+
+ë ë(
+
+resjava.util.Set*Ì
+2
+é/ é(g][
+
+é é(.)
+%95"java.lang.IllegalArgumentException""java.lang.IllegalArgumentException˜
+Ù
+
+é é(h
+%96">java.lang.IllegalArgumentException#<init>(Ljava/lang/String;)V*G
+
+__unknown_file (+
+)
+%95"java.lang.IllegalArgumentException*V
+
+__unknown_file (:8
+6Outside zone doesn't supported in searching commanders*
+0*Œ
+3
+ç ç(T
+R
+
+ç ç(+
+%93mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+ç ç(,
+%94boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%93mage.constants.Zone2contains(Ljava/lang/Object;)*
+2
+1*ã
+4
+â â(ª∏
+
+â â(R
+%91java.util.Set"wmage.game.Game#getCommanderCardsFromCommandZone(Lmage/players/Player;Lmage/constants/CommanderCardType;)Ljava/util/Set;*.
+
+__unknown_file (
+mage.game.Game*;
+
+__unknown_file (
+
+playermage.players.Player*S
+
+__unknown_file (7
+5
+commanderCardType mage.constants.CommanderCardType2YgetCommanderCardsFromCommandZone(Lmage/players/Player;Lmage/constants/CommanderCardType;)∂
+≥
+
+â â(S
+%92boolean"__arrayAddAll*2
+
+__unknown_file (
+
+resjava.util.Set*
+
+__unknown_file (: *2
+
+__unknown_file (
+
+%91java.util.Set*
+3*Œ
+5
+à, à(5T
+R
+
+à? à(K
+%89mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+à, à(L
+%90boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%89mage.constants.Zone2contains(Ljava/lang/Object;)*
+3
+4*Œ
+6
+à à(T
+R
+
+à à('
+%87mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+à à((
+%88boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%87mage.constants.Zone2contains(Ljava/lang/Object;)*
+4
+5*Ä
+7
+Ç Ç(µ≤
+
+Ç Ç((
+%78java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+needCommandersCardsjava.util.Set2stream()â
+Ü
+
+É É(]#
+%79java.util.function.Predicate"__declareFunction*@
+
+__unknown_file ($"
+ __sonar_lambda_33$mage.game.Gameá
+Ñ
+
+__unknown_file (2
+#
+%79java.util.function.Predicate"
+	Game.this"__id*.
+
+__unknown_file (
+mage.game.Game±Æ
+
+Ç É(^
+%85java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%78java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%79java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+Ç Ñ(&
+%86void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%85java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+6*Œ
+8
+Å, Å(5T
+R
+
+Å? Å(J
+%76mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Å, Å(K
+%77boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%76mage.constants.Zone2contains(Ljava/lang/Object;)*
+6
+7*Œ
+9
+Å Å(T
+R
+
+Å Å('
+%74mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+Å Å((
+%75boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%74mage.constants.Zone2contains(Ljava/lang/Object;)*
+7
+8*—
+20
+‰, ‰(5T
+R
+
+‰? ‰(M
+%29mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+‰, ‰(N
+%30boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%29mage.constants.Zone2contains(Ljava/lang/Object;)*
+18
+19*—
+21
+‰ ‰(T
+R
+
+‰ ‰('
+%27mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+‰ ‰((
+%28boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%27mage.constants.Zone2contains(Ljava/lang/Object;)*
+19
+20*Ç
+22
+ﬁ ﬁ(µ≤
+
+ﬁ ﬁ((
+%18java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*B
+
+__unknown_file (&
+$
+needCommandersCardsjava.util.Set2stream()â
+Ü
+
+ﬂ ﬂ([#
+%19java.util.function.Predicate"__declareFunction*@
+
+__unknown_file ($"
+ __sonar_lambda_29$mage.game.Gameá
+Ñ
+
+__unknown_file (2
+#
+%19java.util.function.Predicate"
+	Game.this"__id*.
+
+__unknown_file (
+mage.game.Game±Æ
+
+ﬁ ﬂ(\
+%25java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%18java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%19java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)Á‰
+
+ﬁ ‡(&
+%26void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%25java.util.stream.Stream*"
+
+__unknown_file (
+""2&forEach(Ljava/util/function/Consumer;)*
+21*—
+23
+›, ›(5T
+R
+
+›? ›(H
+%16mage.constants.Zone"__id*"
+
+__unknown_file (
+""ﬁ€
+
+›, ›(I
+%17boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+	needZonesjava.util.Set*8
+
+__unknown_file (
+
+%16mage.constants.Zone2contains(Ljava/lang/Object;)*
+21
+22:+
+
+–4 –(B
+playermage.players.Player:C
+
+–C –(g5
+commanderCardType mage.constants.CommanderCardType:2
+
+–h –({$
+searchZonesmage.constants.Zone[]B
+mage.game.GameH

@@ -1,0 +1,229 @@
+
+7mage.server.AuthorizedUserRepository#migrateFrom1To2()Zp
+dD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/AuthorizedUserRepository.java‘ ‘(#"14*è
+13
+“B “(M]
+[
+
+“P “(c
+%1java.lang.String"__id*/
+
+__unknown_file (
+authorized_useru
+s
+
+“B “(c
+%2java.lang.String"__concat*
+
+“B “(M
+	Starting *&
+
+“P “(c
+
+%1java.lang.String˜
+•
+“B “(‘
+%3java.lang.String"__concat*&
+
+“B “(c
+
+%2java.lang.String*<
+“f “(‘-+
+) DB migration from version 1 to version 2ÞÛ
+“ “(’
+
+%4void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*;
+
+__unknown_file (
+
+%0org.apache.log4j.Logger*4
+
+__unknown_file (
+
+%3java.lang.String2info(Ljava/lang/Object;)*
+12*ó
+14
+“ “(Ú
+×
+
+“ “(<
+%0org.apache.log4j.Logger"Morg.apache.log4j.Logger#getLogger(Ljava/lang/Class;)Lorg/apache/log4j/Logger;*7
+
+__unknown_file ("
+org.apache.log4j.Logger*"
+
+__unknown_file (
+""*
+13*%
+4
+š š("
+
+š š(
+""*õ
+5
+™B ™(WÞÛ
+
+™ ™(X
+%19void"3org.apache.log4j.Category#info(Ljava/lang/Object;)V*<
+
+__unknown_file ( 
+
+%18org.apache.log4j.Logger*3
+
+__unknown_file (
+Migration finished.2info(Ljava/lang/Object;)*
+4*ò
+6
+™ ™(Û
+Ø
+
+™ ™(<
+%18org.apache.log4j.Logger"Morg.apache.log4j.Logger#getLogger(Ljava/lang/Class;)Lorg/apache/log4j/Logger;*7
+
+__unknown_file ("
+org.apache.log4j.Logger*"
+
+__unknown_file (
+""*
+5*Ç
+7
+˜D ˜(W^
+\
+
+˜D ˜(W
+%15java.lang.String"__id*/
+
+__unknown_file (
+authorized_userE
+C
+
+˜Y ˜(c
+%16long"__id*"
+
+__unknown_file (
+""‰
+†
+
+˜ ˜(d
+%17void"smage.cards.repository.RepositoryUtil#updateVersion(Lcom/j256/ormlite/support/ConnectionSource;Ljava/lang/String;J)V*D
+
+__unknown_file (("&
+$mage.cards.repository.RepositoryUtil*N
+
+__unknown_file (2
+0
+%14)com.j256.ormlite.support.ConnectionSource*5
+
+__unknown_file (
+
+%15java.lang.String*)
+
+__unknown_file (
+
+%16long*
+6*‘
+8
+˜ ˜(…
+‚
+
+˜) ˜(,
+%13com.j256.ormlite.dao.Dao"__id*M
+
+__unknown_file (1*/&
+$mage.server.AuthorizedUserRepository"
+daoòï
+
+˜) ˜(B0
+%14)com.j256.ormlite.support.ConnectionSource"Ycom.j256.ormlite.dao.Dao#getConnectionSource()Lcom/j256/ormlite/support/ConnectionSource;*=
+
+__unknown_file (!
+
+%13com.j256.ormlite.dao.Dao2getConnectionSource()*
+7*Ú
+9
+— —(…
+‚
+
+— —(
+%11com.j256.ormlite.dao.Dao"__id*M
+
+__unknown_file (1*/&
+$mage.server.AuthorizedUserRepository"
+dao»¸
+
+— —(]
+
+%12int"Kcom.j256.ormlite.dao.Dao#executeRaw(Ljava/lang/String;[Ljava/lang/String;)I*=
+
+__unknown_file (!
+
+%11com.j256.ormlite.dao.Dao*_
+
+__unknown_file (CA
+?ALTER TABLE authorized_user ADD COLUMN lastConnection DATETIME;21executeRaw(Ljava/lang/String;[Ljava/lang/String;)*
+8*Ú
+10
+– –(„
+
+
+– –(
+%9com.j256.ormlite.dao.Dao"__id*M
+
+__unknown_file (1*/&
+$mage.server.AuthorizedUserRepository"
+dao»¸
+
+– –(^
+
+%10int"Kcom.j256.ormlite.dao.Dao#executeRaw(Ljava/lang/String;[Ljava/lang/String;)I*<
+
+__unknown_file ( 
+
+%9com.j256.ormlite.dao.Dao*`
+
+__unknown_file (DB
+@ALTER TABLE authorized_user ADD COLUMN chatLockedUntil DATETIME;21executeRaw(Ljava/lang/String;[Ljava/lang/String;)*
+9*Ö
+11
+• •(„
+
+
+• •(
+%7com.j256.ormlite.dao.Dao"__id*M
+
+__unknown_file (1*/&
+$mage.server.AuthorizedUserRepository"
+dao¶³
+
+• •(Z	
+%8int"Kcom.j256.ormlite.dao.Dao#executeRaw(Ljava/lang/String;[Ljava/lang/String;)I*<
+
+__unknown_file ( 
+
+%7com.j256.ormlite.dao.Dao*\
+
+__unknown_file (@>
+<ALTER TABLE authorized_user ADD COLUMN lockedUntil DATETIME;21executeRaw(Ljava/lang/String;[Ljava/lang/String;)*
+10*Ý
+12
+” ”(„
+
+
+” ”(
+%5com.j256.ormlite.dao.Dao"__id*M
+
+__unknown_file (1*/&
+$mage.server.AuthorizedUserRepository"
+dao½º
+
+” ”(a	
+%6int"Kcom.j256.ormlite.dao.Dao#executeRaw(Ljava/lang/String;[Ljava/lang/String;)I*<
+
+__unknown_file ( 
+
+%5com.j256.ormlite.dao.Dao*c
+
+__unknown_file (GE
+CALTER TABLE authorized_user ADD COLUMN active BOOLEAN DEFAULT true;21executeRaw(Ljava/lang/String;[Ljava/lang/String;)*
+11B(&
+$mage.server.AuthorizedUserRepositoryP

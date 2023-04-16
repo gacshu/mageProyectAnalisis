@@ -1,0 +1,169 @@
+
+pmage.abilities.common.BlocksCreatureTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Zw
+mD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/BlocksCreatureTriggeredAbility.java- -("startingBlock*!
+22 2("
+2 2(
+""*š
+31 1(§
+¤
+1 1(0
+%3*mage.filter.common.FilterCreaturePermanent"__id*`
+
+__unknown_file (D*B6
+4mage.abilities.common.BlocksCreatureTriggeredAbility"
+filter¯¬
+1, 1(?
+%4java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()Š‡
+1 1(@#
+%5mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%4java.util.UUID2getPermanent(Ljava/util/UUID;)ÊÇ
+1B 1(S
+%6java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*T
+
+__unknown_file (86
+4mage.abilities.common.BlocksCreatureTriggeredAbility2getControllerId()ÌÉ
+1 1(`
+%7boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%3*mage.filter.common.FilterCreaturePermanent*A
+
+__unknown_file (%
+#
+%5mage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%6java.util.UUID*T
+
+__unknown_file (86
+4mage.abilities.common.BlocksCreatureTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2^match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*„
+startingBlock- -(;—
+”
+, ,(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+-* -(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%13Š
+‡
+, ,(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+-6 -(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%14*
+5*!
+4/ /("
+/ /(
+""*Û
+5. .(¯¬
+. .( 
+%0java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()Â¿
+.( .(:
+%1java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*T
+
+__unknown_file (86
+4mage.abilities.common.BlocksCreatureTriggeredAbility2getSourceId()ÌÉ
+. .(;
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+3
+4*þ
+14 4(àÝ
+4 4($
+%8mage.abilities.effects.Effects"Gmage.abilities.AbilityImpl#getEffects()Lmage/abilities/effects/Effects;*T
+
+__unknown_file (86
+4mage.abilities.common.BlocksCreatureTriggeredAbility2getEffects()¯¬
+46 4(I
+%9java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()a_
+4* 4(5,
+%10%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget›
+˜
+4& 4(P
+%11"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget*2
+
+__unknown_file (
+
+%9java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÄÁ
+4 4(Q
+%12void"[mage.abilities.effects.Effects#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)V*B
+
+__unknown_file (&
+$
+%8mage.abilities.effects.Effects*J
+
+__unknown_file (.
+,
+%10%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)"
+5 5(
+"":/
+-  -(0#
+eventmage.game.events.GameEvent:"
+-1 -(:
+gamemage.game.GameB86
+4mage.abilities.common.BlocksCreatureTriggeredAbilityHP

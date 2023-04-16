@@ -1,0 +1,213 @@
+
+zmage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility#checkTrigger(Lmage/game/events/GameEvent;Lmage/game/Game;)Z
+wD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/common/delayed/ManaSpentDelayedTriggeredAbility.java. .("startingBlock*¡
+2=  =(&Ÿ
+œ
+=  =(&
+%12mage.filter.FilterSpell"__id*j
+
+__unknown_file (N*L@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility"
+filter®«
+=4 =(K
+%13java.util.UUID"7mage.game.stack.Spell#getControllerId()Ljava/util/UUID;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2getControllerId()¹¶
+=  =(X
+%14boolean"umage.filter.FilterSpell#match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*<
+
+__unknown_file ( 
+
+%12mage.filter.FilterSpell*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell*3
+
+__unknown_file (
+
+%13java.util.UUID*^
+
+__unknown_file (B@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2\match(Lmage/game/stack/StackObject;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ð
+3< <(¨¥
+< <(% 
+%9mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()°­
+</ <(B
+%10java.util.UUID"8mage.game.events.GameEvent#getTargetId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getTargetId()Š‡
+< <(C
+%11mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%9mage.game.stack.SpellStack*3
+
+__unknown_file (
+
+%10java.util.UUID2getSpell(Ljava/util/UUID;)n
+l
+< <(D
+spellmage.game.stack.Spell"__id*:
+
+__unknown_file (
+
+%11mage.game.stack.Spell*
+2
+1*„
+startingBlock. .(;—
+”
+- -(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEventd
+b
+.* .(/#
+eventmage.game.events.GameEvent"__annotation*#
+
+__unknown_file (
+
+%15Š
+‡
+- -(
+%16"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+.6 .(:
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%16*
+8*!
+4: :("
+: :(
+""*å	
+54 4("š
+4 5(#
+%4mage.abilities.Abilities"Hmage.cards.Card#getAbilities(Lmage/game/Game;)Lmage/abilities/Abilities;*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getAbilities(Lmage/game/Game;)¬©
+4 6(
+%5java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%4mage.abilities.Abilities2stream()†ƒ
+4 7(,
+%6java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%5java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)†ƒ
+4 8($
+%7java.util.stream.Stream"Sjava.util.stream.Stream#map(Ljava/util/function/Function;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%6java.util.stream.Stream*"
+
+__unknown_file (
+""2"map(Ljava/util/function/Function;)ìé
+4 9(3
+%8boolean"Bjava.util.stream.Stream#noneMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*"
+
+__unknown_file (
+""2)noneMatch(Ljava/util/function/Predicate;)*
+3
+4*û
+62$ 2(;ØÕ
+2$ 2(A#
+%3mage.game.permanent.Permanent"cmage.abilities.AbilityImpl#getSourcePermanentOrLKI(Lmage/game/Game;)Lmage/game/permanent/Permanent;*^
+
+__unknown_file (B@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2)getSourcePermanentOrLKI(Lmage/game/Game;)ˆ
+…
+2 2(B0
+sourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%3mage.game.permanent.Permanent*
+4
+5*!
+70 0("
+0 0(
+""*å
+8/ /(ÌÉ
+/ /(
+%0java.util.UUID"8mage.abilities.AbilityImpl#getSourceId()Ljava/util/UUID;*^
+
+__unknown_file (B@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbility2getSourceId()¯¬
+/" /(5
+%1java.util.UUID"8mage.game.events.GameEvent#getSourceId()Ljava/util/UUID;*A
+
+__unknown_file (%
+#
+eventmage.game.events.GameEvent2getSourceId()ÌÉ
+/ /(6
+%2boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%0java.util.UUID*2
+
+__unknown_file (
+
+%1java.util.UUID2equals(Ljava/lang/Object;)*
+6
+7*!
+1= =(Y"
+= =(Y
+"":/
+.  .(0#
+eventmage.game.events.GameEvent:"
+.1 .(:
+gamemage.game.GameBB@
+>mage.abilities.common.delayed.ManaSpentDelayedTriggeredAbilityHP

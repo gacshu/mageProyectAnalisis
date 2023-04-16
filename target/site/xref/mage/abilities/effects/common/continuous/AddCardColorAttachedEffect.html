@@ -1,0 +1,78 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>AddCardColorAttachedEffect xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../apidocs/mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">package</strong> mage.abilities.effects.common.continuous;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.ObjectColor;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.abilities.Ability;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> mage.abilities.effects.ContinuousEffectImpl;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> mage.constants.*;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <strong class="jxr_keyword">import</strong> mage.game.Game;
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">import</strong> mage.game.permanent.Permanent;
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> * @author noxx</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a> <strong class="jxr_keyword">extends</strong> <a name="ContinuousEffectImpl" href="../../../../../mage/abilities/effects/ContinuousEffectImpl.html#ContinuousEffectImpl">ContinuousEffectImpl</a> {
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>  
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">private</strong> <a name="ObjectColor" href="../../../../../mage/ObjectColor.html#ObjectColor">ObjectColor</a> addedColor;
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <a name="AttachmentType" href="../../../../../mage/constants/AttachmentType.html#AttachmentType">AttachmentType</a> attachmentType;
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>      <strong class="jxr_keyword">public</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a>(<a name="ObjectColor" href="../../../../../mage/ObjectColor.html#ObjectColor">ObjectColor</a> addedColor, <a name="Duration" href="../../../../../mage/constants/Duration.html#Duration">Duration</a> duration, <a name="AttachmentType" href="../../../../../mage/constants/AttachmentType.html#AttachmentType">AttachmentType</a> attachmentType) {
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">super</strong>(duration, Layer.TypeChangingEffects_4, SubLayer.NA, Outcome.Benefit);
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <strong class="jxr_keyword">this</strong>.addedColor = addedColor;
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          <strong class="jxr_keyword">this</strong>.attachmentType = attachmentType;
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          setText();
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>      }
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>  
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>      <strong class="jxr_keyword">public</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a>(<strong class="jxr_keyword">final</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a> effect) {
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <strong class="jxr_keyword">super</strong>(effect);
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <strong class="jxr_keyword">this</strong>.addedColor = effect.addedColor;
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <strong class="jxr_keyword">this</strong>.attachmentType = effect.attachmentType;
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>      }
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>  
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>      @Override
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">boolean</strong> apply(<a name="Game" href="../../../../../mage/game/Game.html#Game">Game</a> game, <a name="Ability" href="../../../../../mage/abilities/Ability.html#Ability">Ability</a> source) {
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          <a name="Permanent" href="../../../../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> equipment = game.getPermanent(source.getSourceId());
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          <strong class="jxr_keyword">if</strong> (equipment != <strong class="jxr_keyword">null</strong> &amp;&amp; equipment.getAttachedTo() != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>              <a name="Permanent" href="../../../../../mage/game/permanent/Permanent.html#Permanent">Permanent</a> target = game.getPermanent(equipment.getAttachedTo());
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>              <strong class="jxr_keyword">if</strong> (target != <strong class="jxr_keyword">null</strong>) {
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>                  <strong class="jxr_keyword">if</strong> (addedColor.isBlack())
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>                      target.getColor(game).setBlack(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>                  <strong class="jxr_keyword">if</strong> (addedColor.isBlue())
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>                      target.getColor(game).setBlue(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>                  <strong class="jxr_keyword">if</strong> (addedColor.isWhite())
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>                      target.getColor(game).setWhite(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>                  <strong class="jxr_keyword">if</strong> (addedColor.isGreen())
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>                      target.getColor(game).setGreen(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>                  <strong class="jxr_keyword">if</strong> (addedColor.isRed())
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>                      target.getColor(game).setRed(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>              }
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          }
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>      }
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>  
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      @Override
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <strong class="jxr_keyword">public</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a> copy() {
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          <strong class="jxr_keyword">return</strong> <strong class="jxr_keyword">new</strong> <a name="AddCardColorAttachedEffect" href="../../../../../mage/abilities/effects/common/continuous/AddCardColorAttachedEffect.html#AddCardColorAttachedEffect">AddCardColorAttachedEffect</a>(<strong class="jxr_keyword">this</strong>);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>      }
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">void</strong> setText() {
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>          StringBuilder sb = <strong class="jxr_keyword">new</strong> StringBuilder();
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          sb.append(attachmentType.verb());
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          sb.append(<span class="jxr_string">" creature is a "</span>).append(addedColor.getDescription()).append(<span class="jxr_string">" in addition to its colors"</span>);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          staticText = sb.toString();
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>      }
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

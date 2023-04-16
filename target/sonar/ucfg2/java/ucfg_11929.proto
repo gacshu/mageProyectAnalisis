@@ -1,0 +1,284 @@
+
+smage.abilities.effects.common.ExileTopXMayPlayUntilEndOfTurnEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z…
+{D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileTopXMayPlayUntilEndOfTurnEffect.java4 4("startingBlock*£
+2A A(R
+P
+AB A(M
+%16mage.constants.Zone"__id*"
+
+__unknown_file (
+""¥
+¢
+AO A(W
+%17mage.constants.Duration"__id*p
+
+__unknown_file (T*RD
+Bmage.abilities.effects.common.ExileTopXMayPlayUntilEndOfTurnEffect"
+
+duration¬©
+A A(AQ
+%18Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect"Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect‚
+ÿ
+A A(X
+%19"‚mage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect#<init>(Lmage/constants/Zone;Lmage/constants/Duration;)V*o
+
+__unknown_file (S
+Q
+%18Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect*8
+
+__unknown_file (
+
+%16mage.constants.Zone*<
+
+__unknown_file ( 
+
+%17mage.constants.Durationca
+B* B(6-
+%20&mage.target.targetpointer.FixedTargets"&mage.target.targetpointer.FixedTargetsž
+›
+B& B(C
+%21"Omage.target.targetpointer.FixedTargets#<init>(Ljava/util/Set;Lmage/game/Game;)V*K
+
+__unknown_file (/
+-
+%20&mage.target.targetpointer.FixedTargets*4
+
+__unknown_file (
+
+cardsjava.util.Set*4
+
+__unknown_file (
+
+gamemage.game.GameËÈ
+A B(D.
+%22'mage.abilities.effects.ContinuousEffect"mage.abilities.effects.ContinuousEffectImpl#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*o
+
+__unknown_file (S
+Q
+%18Jmage.abilities.effects.common.asthought.PlayFromNotOwnHandZoneTargetEffect*K
+
+__unknown_file (/
+-
+%20&mage.target.targetpointer.FixedTargets2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Š‡
+A B(M
+%23void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*L
+
+__unknown_file (0
+.
+%22'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+1*Á
+3= =(ª
+§
+=? =(d
+%5java.util.UUID"[mage.util.CardUtil#getExileZoneId(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability®
+«
+	=f =(Š
+%6java.lang.String"\mage.util.CardUtil#getSourceName(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/lang/String;*2
+
+__unknown_file ("
+mage.util.CardUtil*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityˆ…
+	= =(‹
+%7boolean"mage.players.Player#moveCardsToExile(Ljava/util/Set;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*4
+
+__unknown_file (
+
+cardsjava.util.Set*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2*2
+
+__unknown_file (
+
+%5java.util.UUID*4
+
+__unknown_file (
+
+%6java.lang.String2lmoveCardsToExile(Ljava/util/Set;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)»
+¸
+? ?(Y"
+%8java.util.function.Predicate"__declareFunction*u
+
+__unknown_file (YW
+U__sonar_lambda_245$mage.abilities.effects.common.ExileTopXMayPlayUntilEndOfTurnEffect‡
+„
+
+__unknown_file (,
+"
+%8java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Gameÿü
+? ?(Z
+%14boolean">java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z*4
+
+__unknown_file (
+
+cardsjava.util.Set*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2(removeIf(Ljava/util/function/Predicate;)wu
+@ @(
+%15boolean"java.util.Set#isEmpty()Z*4
+
+__unknown_file (
+
+cardsjava.util.Set2	isEmpty()*
+2
+1*þ
+startingBlock4 4(3Š
+‡
+3 3(
+%24"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+4 4("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%24”
+‘
+3 3(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+4, 4(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%25*
+7*!
+4; ;("
+; ;(
+""*¼
+59 9($°­
+9 9(1
+%2mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLibrary()š—
+9 9(K
+%3java.util.Set"Bmage.players.Library#getTopCards(Lmage/game/Game;I)Ljava/util/Set;*8
+
+__unknown_file (
+
+%2mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game*"
+
+__unknown_file (
+""2getTopCards(Lmage/game/Game;I)]
+[
+9 9(L
+cardsjava.util.Set"__id*1
+
+__unknown_file (
+
+%3java.util.Setvt
+: :(
+%4boolean"java.util.Set#isEmpty()Z*4
+
+__unknown_file (
+
+cardsjava.util.Set2	isEmpty()*
+3
+4*!
+67 7("
+7 7(
+""*«
+75 5( °­
+5+ 5(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+5 5(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+5 5(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+5
+6*!
+1D D("
+D D(
+"":"
+4 4(#
+gamemage.game.Game:,
+4$ 4(2 
+sourcemage.abilities.AbilityBFD
+Bmage.abilities.effects.common.ExileTopXMayPlayUntilEndOfTurnEffectHP

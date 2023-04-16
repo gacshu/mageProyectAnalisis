@@ -1,0 +1,377 @@
+
+Zmage.abilities.keyword.SuspendExileEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zj
+^D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/SuspendAbility.javaÑ Ñ("startingBlock*%
+2
+ì ì("
+
+ì ì(
+""*™
+3
+ê ê(´®
+
+ê' ê(>
+%18java.lang.String"2mage.players.Player#getLogName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLogName()y
+w
+
+ê' ë(+
+%19java.lang.String"__concat*'
+
+ê' ê(>
+
+%18java.lang.String*
+
+ë ë(+
+ suspends (p
+n
+
+ê' ë(5
+%20java.lang.String"__concat*'
+
+ê' ë(+
+
+%19java.lang.String*
+
+ë. ë(5
+""p
+n
+
+ê' ë(<
+%21java.lang.String"__concat*'
+
+ê' ë(5
+
+%20java.lang.String*
+
+ë8 ë(<
+) ùö
+
+ë? ë(P
+%22java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getLogName()Ñ
+Å
+
+ê' ë(P
+%23java.lang.String"__concat*'
+
+ê' ë(<
+
+%21java.lang.String*'
+
+ë? ë(P
+
+%22java.lang.Stringﬂ‹
+
+ê ë(Q
+%24void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%23java.lang.String2!informPlayers(Ljava/lang/String;)*
+2*à
+startingBlock
+Ñ Ñ(3å
+â
+
+É É(
+%25"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+Ñ Ñ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%25ñ
+ì
+
+É É(
+%26"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+Ñ, Ñ(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%26*
+9*©	
+4
+é é(Z
+X
+
+é! é(1 
+%13mage.counters.CounterType"__id*"
+
+__unknown_file (
+""ËÂ
+
+é! é(I
+%14mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*>
+
+__unknown_file ("
+ 
+%13mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)≥∞
+
+éK é(c
+%15java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()äá
+
+é é(r
+%16boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*5
+
+__unknown_file (
+
+cardmage.cards.Card*:
+
+__unknown_file (
+
+%14mage.counters.Counter*3
+
+__unknown_file (
+
+%15java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÖÇ
+
+è è((
+%17boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+2
+3*ï
+5
+å å($·ﬁ
+
+å å(8*
+%11#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()öó
+
+å å(?
+
+%12int"+mage.abilities.costs.mana.ManaCosts#getX()I*H
+
+__unknown_file (,
+*
+%11#mage.abilities.costs.mana.ManaCosts2getX()*
+4*]
+6
+ã ã(D
+B
+
+ã ã(0
+
+%10int"__id*"
+
+__unknown_file (
+""*
+4
+5*ﬁ
+7
+à à()ñì
+
+à< à(N
+%4java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()¡
+æ
+
+à à(U
+%5java.util.UUID"image.abilities.keyword.SuspendAbility#getSuspendExileId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*E
+
+__unknown_file ()"'
+%mage.abilities.keyword.SuspendAbility*2
+
+__unknown_file (
+
+%4java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gamec
+a
+
+à à(V
+exileIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUID§°
+
+ä ä(*
+%6java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()
+}
+
+âB ä(*
+%7java.lang.String"__concat*%
+
+âB â(W
+Suspended cards of *&
+
+ä ä(*
+
+%6java.lang.StringS
+Q
+
+ä: ä(C
+%8mage.constants.Zone"__id*"
+
+__unknown_file (
+""ÖÇ
+
+â ä(J
+%9boolean"ümage.players.Player#moveCardToExileWithInfo(Lmage/cards/Card;Ljava/util/UUID;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*7
+
+__unknown_file (
+
+exileIdjava.util.UUID*4
+
+__unknown_file (
+
+%7java.lang.String*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*7
+
+__unknown_file (
+
+%8mage.constants.Zone* 
+
+__unknown_file (22ämoveCardToExileWithInfo(Lmage/cards/Card;Ljava/util/UUID;Ljava/lang/String;Lmage/abilities/Ability;Lmage/game/Game;Lmage/constants/Zone;Z)*
+6
+1*≠
+9
+Ö Ö(™ß
+
+Ö! Ö(5
+%0java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()Ê„
+
+Ö Ö(6
+%1mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getCard(Ljava/util/UUID;)b
+`
+
+Ö Ö(7
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%1mage.cards.Card≤Ø
+
+Ü+ Ü(C
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ÚÔ
+
+Ü Ü(D
+%3mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPlayer(Ljava/util/UUID;)p
+n
+
+Ü Ü(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%3mage.players.Player*
+7
+1*%
+1
+ñ ñ("
+
+ñ ñ(
+"":$
+
+Ñ Ñ(#
+gamemage.game.Game:.
+
+Ñ$ Ñ(2 
+sourcemage.abilities.AbilityB-+
+)mage.abilities.keyword.SuspendExileEffectHP

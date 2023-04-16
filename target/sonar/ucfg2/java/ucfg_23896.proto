@@ -1,0 +1,1058 @@
+
+ômage.client.deckeditor.table.TableModel#loadCards(Lmage/view/CardsView;Lmage/client/deckeditor/SortSetting;Lmage/client/cards/BigCard;Ljava/util/UUID;Z)Vq
+gD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/deckeditor/table/TableModel.java\ \("startingBlock*Æ
+46` `(è
+å
+` `(6)
+'mage.client.deckeditor.table.TableModel"	
+bigCard"__id*B
+
+__unknown_file (&
+$
+bigCardmage.client.cards.BigCardÅ
+
+a a(5)
+'mage.client.deckeditor.table.TableModel"
+gameId"__id*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*
+41
+45*™
+24
+â5 â(:~
+|
+
+â5 â(:
+%16java.util.Map"__id*R
+
+__unknown_file (6*4)
+'mage.client.deckeditor.table.TableModel"
+cardséã
+
+â5 â(E
+%17java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*2
+
+__unknown_file (
+
+%16java.util.Map2
+entrySet()òï
+
+â5 â(P
+%18java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%17java.util.Set2
+iterator()f
+d
+
+â â(P
+ijava.util.Iterator"__id*7
+
+__unknown_file (
+
+%18java.util.Iterator*
+23*∑
+47^ ^(*†
+ù
+^ ^(*:)
+'mage.client.deckeditor.table.TableModel"
+sortSetting"__id*O
+
+__unknown_file (3
+1
+sortSetting"mage.client.deckeditor.SortSetting*
+46*Ç
+25n n(R
+P
+n n(
+cardmage.view.CardView"__id*"
+
+__unknown_file (
+""ì
+ê
+n n(
+cardmage.view.CardView"
+__arrayGet*8
+
+__unknown_file (
+
+%4java.util.Collection*"
+
+__unknown_file (
+""*
+24
+40*≤
+48] ](ó
+î
+] ]((
+%0"mage.client.deckeditor.SortSetting"__id*X
+
+__unknown_file (<*:)
+'mage.client.deckeditor.table.TableModel"
+sortSetting*
+46
+47*¢
+27
+Ç Ç(âÜ
+
+Ç Ç()
+%15boolean" mage.view.CardView#isArtifact()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isArtifact()*
+25*§
+29 (çä
+ (,
+%14boolean"#mage.view.CardView#isEnchantment()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isEnchantment()*
+27*ú
+31| |(ÖÇ
+| |((
+%13boolean"mage.view.CardView#isSorcery()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isSorcery()*
+29*˝
+10
+û: û(B°û
+
+û: û(L
+%55java.lang.String".mage.view.CardView#getName()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+cardViewmage.view.CardView2	getName()π∂
+
+ûO û(m
+%56java.lang.String":mage.view.CardView#getExpansionSetCode()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+cardViewmage.view.CardView2getExpansionSetCode()Ñ
+Å
+
+û: û(m
+%57java.lang.String"__concat*'
+
+û: û(L
+
+%55java.lang.String*'
+
+ûO û(m
+
+%56java.lang.StringÆ´
+ûp û(à
+%58java.lang.String"4mage.view.CardView#getCardNumber()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+cardViewmage.view.CardView2getCardNumber()Ü
+É
+û: û(à
+%59java.lang.String"__concat*'
+
+û: û(m
+
+%57java.lang.String*(
+ûp û(à
+
+%58java.lang.Stringf
+d
+û, û(â
+key2java.lang.String"__id*5
+
+__unknown_file (
+
+%59java.lang.StringŸ÷
+
+ü0 ü(A
+%60boolean",java.lang.String#equals(Ljava/lang/Object;)Z*6
+
+__unknown_file (
+
+key1java.lang.String*6
+
+__unknown_file (
+
+key2java.lang.String2equals(Ljava/lang/Object;)*
+8
+9*∞
+11
+ùA ù(F~
+|
+
+ùA ù(F
+%53java.util.Map"__id*R
+
+__unknown_file (6*4)
+'mage.client.deckeditor.table.TableModel"
+cardsòï
+
+ùA ù(O
+%54java.util.Collection",java.util.Map#values()Ljava/util/Collection;*2
+
+__unknown_file (
+
+%53java.util.Map2values()*
+8*ú
+33y y(ÖÇ
+y y((
+%12boolean"mage.view.CardView#isInstant()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isInstant()*
+31*â
+12
+ú6 ú(8õò
+
+ú6 ú(B
+%48java.lang.String".mage.view.CardView#getName()Ljava/lang/String;*6
+
+__unknown_file (
+
+cvmage.view.CardView2	getName()≥∞
+
+úE ú(]
+%49java.lang.String":mage.view.CardView#getExpansionSetCode()Ljava/lang/String;*6
+
+__unknown_file (
+
+cvmage.view.CardView2getExpansionSetCode()Ñ
+Å
+
+ú6 ú(]
+%50java.lang.String"__concat*'
+
+ú6 ú(B
+
+%48java.lang.String*'
+
+úE ú(]
+
+%49java.lang.Stringß§
+
+ú` ú(r
+%51java.lang.String"4mage.view.CardView#getCardNumber()Ljava/lang/String;*6
+
+__unknown_file (
+
+cvmage.view.CardView2getCardNumber()Ñ
+Å
+
+ú6 ú(r
+%52java.lang.String"__concat*'
+
+ú6 ú(]
+
+%50java.lang.String*'
+
+ú` ú(r
+
+%51java.lang.Stringe
+c
+
+ú( ú(s
+key1java.lang.String"__id*5
+
+__unknown_file (
+
+%52java.lang.String*
+11*û
+35v v(áÑ
+v v()
+%11boolean" mage.view.CardView#isCreature()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isCreature()*
+33*¿
+14
+ò. ò(2~
+|
+
+ò. ò(2
+%42java.util.List"__id*Q
+
+__unknown_file (5*3)
+'mage.client.deckeditor.table.TableModel"
+viewè
+å
+
+ò. ò(9
+%43mage.view.CardView"
+__arrayGet*3
+
+__unknown_file (
+
+%42java.util.List*"
+
+__unknown_file (
+""g
+e
+
+ò  ò(:
+cvmage.view.CardView"__id*7
+
+__unknown_file (
+
+%43mage.view.CardViewìê
+
+ô$ ô(.
+%44java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*6
+
+__unknown_file (
+
+cvmage.view.CardView2getId()§°
+
+ô6 ô(F
+%45mage.view.CardView"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()îë
+
+ô6 ô(N
+%46java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*7
+
+__unknown_file (
+
+%45mage.view.CardView2getId()—Œ
+
+ô$ ô(O
+%47boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*3
+
+__unknown_file (
+
+%44java.util.UUID*3
+
+__unknown_file (
+
+%46java.util.UUID2equals(Ljava/lang/Object;)*
+15
+7
+12*î
+37s s(~|
+s s(%
+%10boolean"mage.view.CardView#isLand()Z*8
+
+__unknown_file (
+
+cardmage.view.CardView2isLand()*
+35*ã
+15
+ó, ó(-~
+|
+
+ó0 ó(4
+%40java.util.List"__id*Q
+
+__unknown_file (5*3)
+'mage.client.deckeditor.table.TableModel"
+viewom
+
+ó0 ó(;
+
+%41int"java.util.List#size()I*3
+
+__unknown_file (
+
+%40java.util.List2size()*
+14
+23* 
+38r r((Ø
+¨
+r r((7
+%91mage.client.deckeditor.table.UpdateCountsCallback"__id*a
+
+__unknown_file (E*C)
+'mage.client.deckeditor.table.TableModel"
+updateCountsCallback*
+25
+37*¢
+39p p(ã
+à
+p p(2
+
+%8void"qmage.client.deckeditor.table.TableModel#addCard(Lmage/view/CardView;Lmage/client/cards/BigCard;Ljava/util/UUID;)V*G
+
+__unknown_file (+)
+'mage.client.deckeditor.table.TableModel*8
+
+__unknown_file (
+
+cardmage.view.CardView*B
+
+__unknown_file (&
+$
+bigCardmage.client.cards.BigCard*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*
+38*ƒ
+17
+ï  ï(-á
+Ñ
+
+ï  ï(-
+%38java.util.Map"__id*Z
+
+__unknown_file (>*<)
+'mage.client.deckeditor.table.TableModel"
+cardsNoCopies°
+û
+
+ï  ï(9
+%39java.lang.Integer"__mapRemove*2
+
+__unknown_file (
+
+%38java.util.Map*5
+
+__unknown_file (
+
+keyjava.lang.String*
+15*˚
+18
+ì  ì(-á
+Ñ
+
+ì  ì(-
+%36java.util.Map"__id*Z
+
+__unknown_file (>*<)
+'mage.client.deckeditor.table.TableModel"
+cardsNoCopiesÿ
+’
+
+ì  ì(=
+%37java.lang.Integer"__mapSet*2
+
+__unknown_file (
+
+%36java.util.Map*5
+
+__unknown_file (
+
+keyjava.lang.String*8
+
+__unknown_file (
+
+countjava.lang.Integer*
+15*Ø
+19
+ê, ê(9á
+Ñ
+
+ê, ê(9
+%34java.util.Map"__id*Z
+
+__unknown_file (>*<)
+'mage.client.deckeditor.table.TableModel"
+cardsNoCopiesû
+õ
+
+ê, ê(B
+%35java.lang.Integer"__mapGet*2
+
+__unknown_file (
+
+%34java.util.Map*5
+
+__unknown_file (
+
+keyjava.lang.Stringh
+f
+
+ê ê(C
+countjava.lang.Integer"__id*6
+
+__unknown_file (
+
+%35java.lang.Integer*
+17
+18*(
+0 "!
+
+∏ ∏(
+implicit return*Í	
+1
+∂ ∂(ö
+ó
+
+∂ ∂()
+%76"mage.client.deckeditor.SortSetting"__id*X
+
+__unknown_file (<*:)
+'mage.client.deckeditor.table.TableModel"
+sortSetting®•
+
+∂ ∂(,
+
+%77int"2mage.client.deckeditor.SortSetting#getSortIndex()I*G
+
+__unknown_file (+
+)
+%76"mage.client.deckeditor.SortSetting2getSortIndex()ö
+ó
+
+∂. ∂(>)
+%78"mage.client.deckeditor.SortSetting"__id*X
+
+__unknown_file (<*:)
+'mage.client.deckeditor.table.TableModel"
+sortSetting™ß
+
+∂. ∂(L
+%79boolean"1mage.client.deckeditor.SortSetting#isAscending()Z*G
+
+__unknown_file (+
+)
+%78"mage.client.deckeditor.SortSetting2isAscending()˝˙
+
+∂ ∂(M
+%80boolean"1mage.client.deckeditor.table.TableModel#sort(IZ)Z*G
+
+__unknown_file (+)
+'mage.client.deckeditor.table.TableModel*(
+
+__unknown_file (
+
+
+%77int*,
+
+__unknown_file (
+
+%79boolean2sort(IZ)¡æ
+
+∑ ∑(
+%81void"Xmage.client.deckeditor.table.TableModel#drawCards(Lmage/client/deckeditor/SortSetting;)V*G
+
+__unknown_file (+)
+'mage.client.deckeditor.table.TableModel*O
+
+__unknown_file (3
+1
+sortSetting"mage.client.deckeditor.SortSetting2/drawCards(Lmage/client/deckeditor/SortSetting;)*
+0*á
+2
+≤ ≤($≤
+Ø
+
+≤ ≤($8
+%721mage.client.deckeditor.table.UpdateCountsCallback"__id*a
+
+__unknown_file (E*C)
+'mage.client.deckeditor.table.TableModel"
+updateCountsCallback~
+|
+
+≤, ≤(1
+%73java.util.Map"__id*R
+
+__unknown_file (6*4)
+'mage.client.deckeditor.table.TableModel"
+cardsmk
+
+≤, ≤(8
+
+%74int"java.util.Map#size()I*2
+
+__unknown_file (
+
+%73java.util.Map2size()Ã…
+≤ ≤(ê
+%75void"Bmage.client.deckeditor.table.UpdateCountsCallback#update(IIIIIII)V*V
+
+__unknown_file (:
+8
+%721mage.client.deckeditor.table.UpdateCountsCallback*(
+
+__unknown_file (
+
+
+%74int*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""*"
+
+__unknown_file (
+""2update(IIIIIII)*
+1*Ã
+3
+± ±($≤
+Ø
+
+± ±($8
+%711mage.client.deckeditor.table.UpdateCountsCallback"__id*a
+
+__unknown_file (E*C)
+'mage.client.deckeditor.table.TableModel"
+updateCountsCallback*
+2
+1*°
+startingBlock\ \(tî
+ë
+[ [(
+%82"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+	showCardsmage.view.CardsViewa
+_
+\$ \(- 
+	showCardsmage.view.CardsView"__annotation*#
+
+__unknown_file (
+
+%82•
+¢
+[ [(
+%83"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+sortSetting"mage.client.deckeditor.SortSettingr
+p
+\; \(F1
+sortSetting"mage.client.deckeditor.SortSetting"__annotation*#
+
+__unknown_file (
+
+%83ò
+ï
+[ [(
+%84"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*B
+
+__unknown_file (&
+$
+bigCardmage.client.cards.BigCarde
+c
+\P \(W$
+bigCardmage.client.cards.BigCard"__annotation*#
+
+__unknown_file (
+
+%84å
+â
+[ [(
+%85"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*6
+
+__unknown_file (
+
+gameIdjava.util.UUIDY
+W
+\^ \(d
+gameIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%85*
+48*—
+4
+¨ ¨(~
+|
+
+¨ ¨(
+%65java.util.List"__id*Q
+
+__unknown_file (5*3)
+'mage.client.deckeditor.table.TableModel"
+view£
+†
+
+¨& ¨(Y#
+%66java.util.function.Predicate"__declareFunction*Z
+
+__unknown_file (><
+:__sonar_lambda_650$mage.client.deckeditor.table.TableModelè
+å
+
+__unknown_file (.
+#
+%66java.util.function.Predicate"
+entry"__id*:
+
+__unknown_file (
+
+entryjava.util.Map$EntryÅ˛
+
+¨ ¨(Z
+%70boolean">java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z*3
+
+__unknown_file (
+
+%65java.util.List*A
+
+__unknown_file (%
+#
+%66java.util.function.Predicate2(removeIf(Ljava/util/function/Predicate;)*
+23*™
+7
+•( •(,~
+|
+
+•( •(,
+%63java.util.List"__id*Q
+
+__unknown_file (5*3)
+'mage.client.deckeditor.table.TableModel"
+viewí
+è
+
+•( •(6
+%64mage.view.CardView"__arrayRemove*3
+
+__unknown_file (
+
+%63java.util.List*"
+
+__unknown_file (
+""*
+23*ê
+8
+ù- ù(>X
+V
+
+ù- ù(>
+cardViewmage.view.CardView"__id*"
+
+__unknown_file (
+""ö
+ó
+
+ù- ù(>
+cardViewmage.view.CardView"
+__arrayGet*9
+
+__unknown_file (
+
+%54java.util.Collection*"
+
+__unknown_file (
+""*
+10
+23*Â
+9
+†0 †(4~
+|
+
+†0 †(4
+%61java.util.List"__id*Q
+
+__unknown_file (5*3)
+'mage.client.deckeditor.table.TableModel"
+viewÕ
+ 
+
+†0 †(E
+%62mage.view.CardView"
+__arraySet*3
+
+__unknown_file (
+
+%61java.util.List*"
+
+__unknown_file (
+""*<
+
+__unknown_file ( 
+
+cardViewmage.view.CardView*
+23*Å
+40o o({
+y
+o o(
+%5java.util.Map"__id*R
+
+__unknown_file (6*4)
+'mage.client.deckeditor.table.TableModel"
+cardsíè
+o' o(3
+%6java.util.UUID"*mage.view.CardView#getId()Ljava/util/UUID;*8
+
+__unknown_file (
+
+cardmage.view.CardView2getId()‘—
+o o(4
+%7boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%5java.util.Map*2
+
+__unknown_file (
+
+%6java.util.UUID2containsKey(Ljava/lang/Object;)*
+38
+39*¬
+41n! n(*´®
+n! n(3
+%4java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*>
+
+__unknown_file ("
+ 
+	showCardsmage.view.CardsView2values()*
+25*Å
+42j j(R
+P
+j j(
+cardmage.view.CardView"__id*"
+
+__unknown_file (
+""ì
+ê
+j j(
+cardmage.view.CardView"
+__arrayGet*8
+
+__unknown_file (
+
+%2java.util.Collection*"
+
+__unknown_file (
+""*
+43
+1*
+20
+é% é(*§°
+
+é% é(5
+%24mage.view.CardView"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()úô
+
+é% é(?
+%25java.lang.String".mage.view.CardView#getName()Ljava/lang/String;*7
+
+__unknown_file (
+
+%24mage.view.CardView2	getName()§°
+
+éB é(R
+%26mage.view.CardView"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()¥±
+
+éB é(h
+%27java.lang.String":mage.view.CardView#getExpansionSetCode()Ljava/lang/String;*7
+
+__unknown_file (
+
+%26mage.view.CardView2getExpansionSetCode()Ñ
+Å
+
+é% é(h
+%28java.lang.String"__concat*'
+
+é% é(?
+
+%25java.lang.String*'
+
+éB é(h
+
+%27java.lang.String§°
+
+ék é({
+%29mage.view.CardView"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()©¶
+ék é(ã
+%30java.lang.String"4mage.view.CardView#getCardNumber()Ljava/lang/String;*7
+
+__unknown_file (
+
+%29mage.view.CardView2getCardNumber()Ü
+É
+é% é(ã
+%31java.lang.String"__concat*'
+
+é% é(h
+
+%28java.lang.String*(
+ék é(ã
+
+%30java.lang.Stringe
+c
+é é(å
+keyjava.lang.String"__id*5
+
+__unknown_file (
+
+%31java.lang.Stringá
+Ñ
+
+è è()
+%32java.util.Map"__id*Z
+
+__unknown_file (>*<)
+'mage.client.deckeditor.table.TableModel"
+cardsNoCopies€ÿ
+
+è è(:
+%33boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%32java.util.Map*5
+
+__unknown_file (
+
+keyjava.lang.String2containsKey(Ljava/lang/Object;)*
+19
+23*¢
+43k k(ã
+à
+k k(.
+
+%3void"qmage.client.deckeditor.table.TableModel#addCard(Lmage/view/CardView;Lmage/client/cards/BigCard;Ljava/util/UUID;)V*G
+
+__unknown_file (+)
+'mage.client.deckeditor.table.TableModel*8
+
+__unknown_file (
+
+cardmage.view.CardView*B
+
+__unknown_file (&
+$
+bigCardmage.client.cards.BigCard*6
+
+__unknown_file (
+
+gameIdjava.util.UUID*
+42*ï
+21
+å å(zx
+
+å å(
+%23void"java.util.Iterator#remove()V*5
+
+__unknown_file (
+
+ijava.util.Iterator2remove()*
+4
+20*¬
+44j! j(*´®
+j! j(3
+%2java.util.Collection"6java.util.LinkedHashMap#values()Ljava/util/Collection;*>
+
+__unknown_file ("
+ 
+	showCardsmage.view.CardsView2values()*
+42*≠
+22
+ä. ä(/óî
+
+ä. ä(6
+%20java.util.Map$Entry"+java.util.Iterator#next()Ljava/lang/Object;*5
+
+__unknown_file (
+
+ijava.util.Iterator2next()l
+j
+
+ä ä(7
+entryjava.util.Map$Entry"__id*8
+
+__unknown_file (
+
+%20java.util.Map$Entryúô
+
+ã+ ã(9
+%21java.util.UUID".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()ÈÊ
+
+ã ã(:
+%22boolean"2java.util.HashMap#containsKey(Ljava/lang/Object;)Z*>
+
+__unknown_file ("
+ 
+	showCardsmage.view.CardsView*3
+
+__unknown_file (
+
+%21java.util.UUID2containsKey(Ljava/lang/Object;)*
+21
+23*æ
+45i i(ß§
+i i(
+
+%1void"5mage.client.deckeditor.table.TableModel#clearCards()V*G
+
+__unknown_file (+)
+'mage.client.deckeditor.table.TableModel2clearCards()*
+44*ö
+23
+âR â(S}
+
+âR â(]
+%19boolean"java.util.Iterator#hasNext()Z*5
+
+__unknown_file (
+
+ijava.util.Iterator2	hasNext()*
+3
+22:,
+\ \(. 
+	showCardsmage.view.CardsView:=
+\/ \(G1
+sortSetting"mage.client.deckeditor.SortSetting:0
+\H \(X$
+bigCardmage.client.cards.BigCard:$
+\Y \(e
+gameIdjava.util.UUID: 
+
+__unknown_file (
+""B+)
+'mage.client.deckeditor.table.TableModelH

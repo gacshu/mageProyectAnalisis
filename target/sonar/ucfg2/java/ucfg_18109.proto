@@ -1,0 +1,269 @@
+
+„mage.abilities.keyword.EmergeAbility#canActivate(Ljava/util/UUID;Lmage/game/Game;)Lmage/abilities/ActivatedAbility$ActivationStatus;g
+]D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/EmergeAbility.java2 2('"startingBlock*—
+26 6('a
+_
+6 6(')
+creaturemage.game.permanent.Permanent"__id*"
+
+__unknown_file (
+""œ
+™
+6 6(')
+creaturemage.game.permanent.Permanent"
+__arrayGet*2
+
+__unknown_file (
+
+%8java.util.List*"
+
+__unknown_file (
+""*
+4
+1*ó
+3: :(/o
+m
+: :(/7
+%150mage.abilities.ActivatedAbility$ActivationStatus"__id*"
+
+__unknown_file (
+""«
+¨
+: :(C7
+%160mage.abilities.ActivatedAbility$ActivationStatus"”mage.abilities.ActivatedAbility$ActivationStatus#getTrue(Lmage/abilities/Ability;Lmage/game/Game;)Lmage/abilities/ActivatedAbility$ActivationStatus;*P
+
+__unknown_file (4"2
+0mage.abilities.ActivatedAbility$ActivationStatus*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility*4
+
+__unknown_file (
+
+gamemage.game.Game"E
+: :(D9
+7
+%160mage.abilities.ActivatedAbility$ActivationStatus*ò
+startingBlock2' 2(AŽ
+‹
+1 1(
+%19"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUID[
+Y
+2- 2(5
+playerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%19Š
+‡
+1 1(
+%20"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+2< 2(@
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%20*
+7*ô
+48) 8(1”
+‘
+8= 8(G)
+%9#mage.abilities.costs.mana.ManaCosts"__id*T
+
+__unknown_file (8*6&
+$mage.abilities.keyword.EmergeAbility"
+
+emergeCostÛØ
+8= 8(N*
+%10#mage.abilities.costs.mana.ManaCosts"Omage.abilities.costs.mana.ManaCosts#copy()Lmage/abilities/costs/mana/ManaCosts;*G
+
+__unknown_file (+
+)
+%9#mage.abilities.costs.mana.ManaCosts2copy()“
+8P 8(g
+
+%11int"mage.MageObject#getManaValue()I*G
+
+__unknown_file (+
+)
+creaturemage.game.permanent.Permanent2getManaValue()Í
+Ê
+8) 8(h*
+%12#mage.abilities.costs.mana.ManaCosts"jmage.util.CardUtil#reduceCost(Lmage/abilities/costs/mana/ManaCosts;I)Lmage/abilities/costs/mana/ManaCosts;*2
+
+__unknown_file ("
+mage.util.CardUtil*H
+
+__unknown_file (,
+*
+%10#mage.abilities.costs.mana.ManaCosts*(
+
+__unknown_file (
+
+
+%11intŽ
+‹
+8 8(i/
+	costToPay"mage.abilities.costs.mana.ManaCost"__id*H
+
+__unknown_file (,
+*
+%12#mage.abilities.costs.mana.ManaCosts»¸
+95 9(K
+%13java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility2getControllerId()²¯
+9 9(R
+%14boolean"smage.abilities.costs.Cost#canPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)Z*M
+
+__unknown_file (1
+/
+	costToPay"mage.abilities.costs.mana.ManaCost*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility*3
+
+__unknown_file (
+
+%13java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game2XcanPay(Lmage/abilities/Ability;Lmage/abilities/Ability;Ljava/util/UUID;Lmage/game/Game;)*
+2
+3*¾
+
+56* 6(.¾»
+6* 6(?%
+%4mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()~|
+7 7(=:
+%54mage.filter.common.FilterControlledCreaturePermanent"4mage.filter.common.FilterControlledCreaturePermanent­
+ª
+7 7(?
+%6">mage.filter.common.FilterControlledCreaturePermanent#<init>()V*X
+
+__unknown_file (<
+:
+%54mage.filter.common.FilterControlledCreaturePermanentº·
+7A 7(W
+%7java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility2getControllerId()ûø
+6* 7(d
+%8java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%4mage.game.permanent.Battlefield*X
+
+__unknown_file (<
+:
+%54mage.filter.common.FilterControlledCreaturePermanent*2
+
+__unknown_file (
+
+%7java.util.UUID*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*µ
+64  4($º·
+4/ 4(E
+%2java.util.UUID"<mage.abilities.AbilityImpl#getControllerId()Ljava/util/UUID;*D
+
+__unknown_file ((&
+$mage.abilities.keyword.EmergeAbility2getControllerId()ðí
+4  4(F
+%3mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+4 4(G!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%3mage.players.Player*
+5
+1*³
+73 3(Ö
+Ó
+3 3(-6
+%00mage.abilities.ActivatedAbility$ActivationStatus"{mage.abilities.SpellAbility#canActivate(Ljava/util/UUID;Lmage/game/Game;)Lmage/abilities/ActivatedAbility$ActivationStatus;*"
+
+__unknown_file (
+""*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÂ¿
+3 3(;
+%1boolean"?mage.abilities.ActivatedAbility$ActivationStatus#canActivate()Z*T
+
+__unknown_file (8
+6
+%00mage.abilities.ActivatedAbility$ActivationStatus2canActivate()*
+6
+1*Ï
+1? ?(o
+m
+? ?(7
+%170mage.abilities.ActivatedAbility$ActivationStatus"__id*"
+
+__unknown_file (
+""‡
+„
+? ?(*7
+%180mage.abilities.ActivatedAbility$ActivationStatus"mmage.abilities.ActivatedAbility$ActivationStatus#getFalse()Lmage/abilities/ActivatedAbility$ActivationStatus;*P
+
+__unknown_file (4"2
+0mage.abilities.ActivatedAbility$ActivationStatus"E
+? ?(+9
+7
+%180mage.abilities.ActivatedAbility$ActivationStatus:&
+2( 2(6
+playerIdjava.util.UUID:"
+27 2(@
+gamemage.game.GameB(&
+$mage.abilities.keyword.EmergeAbilityH

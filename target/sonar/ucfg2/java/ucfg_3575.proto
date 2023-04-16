@@ -1,0 +1,94 @@
+
+qmage.game.permanent.Battlefield#getAllActivePermanents(Lmage/constants/CardType;Lmage/game/Game;)Ljava/util/List;d
+XD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/permanent/Battlefield.javaê ê(1"1*¬
+1
+ë ë(u
+s
+
+ë ë(
+%0java.util.Map"__id*J
+
+__unknown_file (.*,!
+mage.game.permanent.Battlefield"
+field–“
+
+ë ë(
+%1java.util.Collection",java.util.Map#values()Ljava/util/Collection;*1
+
+__unknown_file (
+
+%0java.util.Map2values()ª§
+
+ë ì(
+%2java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*8
+
+__unknown_file (
+
+%1java.util.Collection2stream()™
+–
+
+í í(Z"
+%3java.util.function.Predicate"__declareFunction*Q
+
+__unknown_file (53
+1__sonar_lambda_60$mage.game.permanent.Battlefield‡
+„
+
+__unknown_file (,
+"
+%3java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game
+
+
+__unknown_file (,
+"
+%3java.util.function.Predicate"
+type"__id*=
+
+__unknown_file (!
+
+typemage.constants.CardType®«
+
+ë í([
+%7java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*;
+
+__unknown_file (
+
+%2java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%3java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)°
+­
+
+î î(, 
+%8java.util.stream.Collector"@java.util.stream.Collectors#toList()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectorsš—
+
+ë î(-
+%9java.util.List"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%8java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)"$
+
+ë î(.
+
+%9java.util.List:-
+
+ê2 ê(@
+typemage.constants.CardType:$
+
+êA ê(J
+gamemage.game.GameB#!
+mage.game.permanent.BattlefieldH

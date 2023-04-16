@@ -1,0 +1,225 @@
+
+\mage.player.ai.PermanentEvaluator#evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)IÇ
+xD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/PermanentEvaluator.java ("7*î
+2 (¬ø
+ (-
+%10mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getAbilities()R
+P
+H (X
+%11mage.constants.Zone"__id*"
+
+__unknown_file (
+""æª
+ (Y
+%12mage.abilities.Abilities"cmage.abilities.Abilities#getActivatedManaAbilities(Lmage/constants/Zone;)Lmage/abilities/Abilities;*=
+
+__unknown_file (!
+
+%10mage.abilities.Abilities*8
+
+__unknown_file (
+
+%11mage.constants.Zone20getActivatedManaAbilities(Lmage/constants/Zone;)wu
+ (`
+
+%13int"java.util.List#size()I*=
+
+__unknown_file (!
+
+%12mage.abilities.Abilities2size()¬ø
+ (-
+%14mage.abilities.Abilities"8mage.MageObject#getAbilities()Lmage/abilities/Abilities;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getAbilities()R
+P
+D (T
+%15mage.constants.Zone"__id*"
+
+__unknown_file (
+""∂≥
+ (U
+%16mage.abilities.Abilities"_mage.abilities.Abilities#getActivatedAbilities(Lmage/constants/Zone;)Lmage/abilities/Abilities;*=
+
+__unknown_file (!
+
+%14mage.abilities.Abilities*8
+
+__unknown_file (
+
+%15mage.constants.Zone2,getActivatedAbilities(Lmage/constants/Zone;)wu
+ (\
+
+%17int"java.util.List#size()I*=
+
+__unknown_file (!
+
+%16mage.abilities.Abilities2size()w
+u
+   (
+%18java.util.Map"__id*M
+
+__unknown_file (1*/#
+!mage.player.ai.PermanentEvaluator"
+valuesß§
+   ((
+%19java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()æ
+ª
+   (0
+%20java.lang.Integer"__mapSet*2
+
+__unknown_file (
+
+%18java.util.Map*3
+
+__unknown_file (
+
+%19java.util.UUID*"
+
+__unknown_file (
+""*
+1*˚
+3 (ëé
+ (8
+%7mage.counters.Counters"Emage.cards.Card#getCounters(Lmage/game/Game;)Lmage/counters/Counters;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2getCounters(Lmage/game/Game;)W
+U
+B (U
+%8mage.counters.CounterType"__id*"
+
+__unknown_file (
+""˘ˆ
+ (V	
+%9int"=mage.counters.Counters#getCount(Lmage/counters/CounterType;)I*:
+
+__unknown_file (
+
+%7mage.counters.Counters*=
+
+__unknown_file (!
+
+%8mage.counters.CounterType2%getCount(Lmage/counters/CounterType;)*
+2*â
+4 (ÒÓ
+ (.
+%6boolean"1mage.MageObject#isPlaneswalker(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2 isPlaneswalker(Lmage/game/Game;)*
+2
+3*í
+5 (à
+Ö
+ ($
+%4mage.player.ai.CombatEvaluator"__id*M
+
+__unknown_file (1*/#
+!mage.player.ai.PermanentEvaluator"
+combatÚÔ
+ (9	
+%5int"Ymage.player.ai.CombatEvaluator#evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)I*B
+
+__unknown_file (&
+$
+%4mage.player.ai.CombatEvaluator*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game29evaluate(Lmage/game/permanent/Permanent;Lmage/game/Game;)*
+4*Å
+6 (ÈÊ
+ (*
+%3boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+4
+5*ç
+7 (v
+t
+ (
+%0java.util.Map"__id*M
+
+__unknown_file (1*/#
+!mage.player.ai.PermanentEvaluator"
+values¶£
+  (1
+%1java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()‘—
+ (2
+%2boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*1
+
+__unknown_file (
+
+%0java.util.Map*2
+
+__unknown_file (
+
+%1java.util.UUID2containsKey(Ljava/lang/Object;)*
+6
+1*·
+1" "(w
+u
+" "(
+%21java.util.Map"__id*M
+
+__unknown_file (1*/#
+!mage.player.ai.PermanentEvaluator"
+valuesß§
+" "(+
+%22java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ö
+ó
+" "(,
+%23java.lang.Integer"__mapGet*2
+
+__unknown_file (
+
+%21java.util.Map*3
+
+__unknown_file (
+
+%22java.util.UUID"
+" "(-
+"":6
+ (,*
+	permanentmage.game.permanent.Permanent:"
+- (6
+gamemage.game.GameB%#
+!mage.player.ai.PermanentEvaluatorHP

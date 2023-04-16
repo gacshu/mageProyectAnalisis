@@ -1,0 +1,113 @@
+
+‰mage.filter.predicate.permanent.AttachedToControlledPermanentPredicate#apply(Lmage/filter/predicate/ObjectSourcePlayer;Lmage/game/Game;)Z‰
+D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/predicate/permanent/AttachedToControlledPermanentPredicate.java ("startingBlock*!
+2 ("
+ (
+""*Ü
+3% (.ËÈ
+> (Q
+%3java.util.UUID"Fmage.filter.predicate.ObjectSourcePlayer#getPlayerId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getPlayerId()öó
+% (R
+%4boolean"8mage.game.Controllable#isControlledBy(Ljava/util/UUID;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*2
+
+__unknown_file (
+
+%3java.util.UUID2 isControlledBy(Ljava/util/UUID;)*
+2
+1*œ
+startingBlock (H¤
+¡
+ (
+%5"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayerq
+o
+7 (<1
+input(mage.filter.predicate.ObjectSourcePlayer"__annotation*"
+
+__unknown_file (
+
+%5‰
+†
+ (
+%6"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameV
+T
+C (G
+gamemage.game.Game"__annotation*"
+
+__unknown_file (
+
+%6*
+5*è
+4" (&¿¼
+4 (O
+%1java.util.UUID"=mage.game.permanent.Permanent#getAttachedTo()Ljava/util/UUID;*J
+
+__unknown_file (.
+,
+attachementmage.game.permanent.Permanent2getAttachedTo()Š‡
+" (P#
+%2mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+ (Q*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%2mage.game.permanent.Permanent*
+3
+1*÷
+5  (%ØÕ
+  (1#
+%0mage.game.permanent.Permanent"Fmage.filter.predicate.ObjectSourcePlayer#getObject()Ljava/lang/Object;*O
+
+__unknown_file (3
+1
+input(mage.filter.predicate.ObjectSourcePlayer2getObject()„
+
+ (2,
+attachementmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*
+4
+1*!
+1 ("
+ (
+"":=
+ (=1
+input(mage.filter.predicate.ObjectSourcePlayer:"
+> (G
+gamemage.game.GameBJH
+Fmage.filter.predicate.permanent.AttachedToControlledPermanentPredicateHP

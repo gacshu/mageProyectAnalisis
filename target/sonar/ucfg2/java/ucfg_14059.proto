@@ -1,0 +1,114 @@
+
+„mage.watchers.common.BlockingOrBlockedWatcher#check(Lmage/game/permanent/Permanent;Lmage/game/permanent/Permanent;Lmage/game/Game;)Zp
+fD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/watchers/common/BlockingOrBlockedWatcher.java3 3("1*·
+14 4(š—
+4 4(
+%0mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()ˆ…
+4 5(;3
+%1-mage.watchers.common.BlockingOrBlockedWatcher"Hmage.game.GameState#getWatcher(Ljava/lang/Class;)Lmage/watchers/Watcher;*7
+
+__unknown_file (
+
+%0mage.game.GameState*"
+
+__unknown_file (
+""2getWatcher(Ljava/lang/Class;)‹
+ˆ
+4 6(
+%2java.util.Map"__id*a
+
+__unknown_file (E*C
+3
+%1-mage.watchers.common.BlockingOrBlockedWatcher"
+
+blockerMapFD
+7" 7(5
+%3mage.MageObjectReference"mage.MageObjectReference•
+’
+7 7(E
+%4"Cmage.MageObjectReference#<init>(Lmage/MageObject;Lmage/game/Game;)V*<
+
+__unknown_file ( 
+
+%3mage.MageObjectReference*G
+
+__unknown_file (+
+)
+attackermage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.GameŠ
+‡
+7G 7(]
+%5java.util.Set"/java.util.Collections#emptySet()Ljava/util/Set;*5
+
+__unknown_file ("
+java.util.Collections
+š
+4 7(^
+%6java.util.Set"__mapGet*1
+
+__unknown_file (
+
+%2java.util.Map*<
+
+__unknown_file ( 
+
+%3mage.MageObjectReference¡ž
+4 8(
+%7java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*1
+
+__unknown_file (
+
+%6java.util.Set2stream()x
+v
+9 9(<"
+%8java.util.function.Predicate"__declareFunction*3
+
+__unknown_file (
+__sonar_lambda_287$œ
+™
+
+__unknown_file (/
+"
+%8java.util.function.Predicate"	
+blocker"__id*F
+
+__unknown_file (*
+(
+blockermage.game.permanent.Permanent‡
+„
+
+__unknown_file (,
+"
+%8java.util.function.Predicate"
+game"__id*4
+
+__unknown_file (
+
+gamemage.game.Game‰†
+4 9(=
+%10boolean"Ajava.util.stream.Stream#anyMatch(Ljava/util/function/Predicate;)Z*;
+
+__unknown_file (
+
+%7java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%8java.util.function.Predicate2(anyMatch(Ljava/util/function/Predicate;)"
+4 9(>
+"":5
+3  3(3)
+attackermage.game.permanent.Permanent:4
+34 3(F(
+blockermage.game.permanent.Permanent:"
+3G 3(P
+gamemage.game.GameB1"/
+-mage.watchers.common.BlockingOrBlockedWatcherHP

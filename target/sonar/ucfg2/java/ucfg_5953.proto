@@ -1,0 +1,172 @@
+
+mage.abilities.dynamicvalue.common.PartyCount#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Ip
+fD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/dynamicvalue/common/PartyCount.java) )("startingBlock*”
+startingBlock) )(IŠ
+‡
+( ((
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+) )("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%11›
+˜
+( ((
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Abilityh
+f
+), )(9'
+sourceAbilitymage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%12›
+˜
+( ((
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*E
+
+__unknown_file ()
+'
+effectmage.abilities.effects.Effecth
+f
+)B )(H'
+effectmage.abilities.effects.Effect"__annotation*#
+
+__unknown_file (
+
+%13*
+1*
+1*$ *((¾»
+*$ *(9%
+%0mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()Y
+W
++ +(!
+%1mage.filter.FilterPermanent"__id*"
+
+__unknown_file (
+""·´
++ +(7
+%2java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability2getControllerId()ãà
+*$ ,(	
+%3java.util.List"šmage.game.permanent.Battlefield#getActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Ljava/util/List;*C
+
+__unknown_file ('
+%
+%0mage.game.permanent.Battlefield*?
+
+__unknown_file (#
+!
+%1mage.filter.FilterPermanent*2
+
+__unknown_file (
+
+%2java.util.UUID*E
+
+__unknown_file ()
+'
+sourceAbilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2jgetActivePermanents(Lmage/filter/FilterPermanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)¢Ÿ
+*$ ,(
+%4java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%3java.util.List2stream()­
+ª
+, ,(- 
+%5java.util.stream.Collector"?java.util.stream.Collectors#toSet()Ljava/util/stream/Collector;*;
+
+__unknown_file ("
+java.util.stream.Collectors—”
+*$ ,(.
+%6java.util.Set"Ojava.util.stream.Stream#collect(Ljava/util/stream/Collector;)Ljava/lang/Object;*;
+
+__unknown_file (
+
+%4java.util.stream.Stream*>
+
+__unknown_file ("
+ 
+%5java.util.stream.Collector2%collect(Ljava/util/stream/Collector;)><
+* *(#
+%7mage.cards.CardsImpl"mage.cards.CardsImpl¯
+¬
+* ,(/
+%8"-mage.cards.CardsImpl#<init>(Ljava/util/Set;)V*8
+
+__unknown_file (
+
+%7mage.cards.CardsImpl*1
+
+__unknown_file (
+
+%6java.util.Setg
+e
+* ,(0
+cardsmage.cards.Cards"__id*8
+
+__unknown_file (
+
+%7mage.cards.CardsImplr
+p
+- -(:
+%94mage.abilities.dynamicvalue.common.SubTypeAssignment"__id*"
+
+__unknown_file (
+""òï
+- -(8
+
+%10int"\mage.abilities.dynamicvalue.RoleAssignment#getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)I*X
+
+__unknown_file (<
+:
+%94mage.abilities.dynamicvalue.common.SubTypeAssignment*7
+
+__unknown_file (
+
+cardsmage.cards.Cards*4
+
+__unknown_file (
+
+gamemage.game.Game20getRoleCount(Lmage/cards/Cards;Lmage/game/Game;)"
+- -(9
+"":"
+) )(#
+gamemage.game.Game:3
+)$ )(:'
+sourceAbilitymage.abilities.Ability:3
+); )(H'
+effectmage.abilities.effects.EffectB1/
+-mage.abilities.dynamicvalue.common.PartyCountHP

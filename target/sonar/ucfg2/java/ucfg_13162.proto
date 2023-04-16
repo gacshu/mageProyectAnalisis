@@ -1,0 +1,176 @@
+
+]mage.target.common.TargetPermanentOrPlayerAmount#canTarget(Ljava/util/UUID;Lmage/game/Game;)Zs
+iD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/target/common/TargetPermanentOrPlayerAmount.java- -("startingBlock*²
+26 6(£
+ 
+6 6(0
+%7*mage.filter.common.FilterPermanentOrPlayer"__id*\
+
+__unknown_file (@*>2
+0mage.target.common.TargetPermanentOrPlayerAmount"
+filterèå
+6 6(0
+%8boolean"Rmage.filter.common.FilterPermanentOrPlayer#match(Lmage/MageItem;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+%7*mage.filter.common.FilterPermanentOrPlayer*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2&match(Lmage/MageItem;Lmage/game/Game;)"
+6 6(1
+""*¬
+34 4("
+4 4(9#
+%6mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getPermanent(Ljava/util/UUID;)
+
+4 4(:*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+2
+1*ò
+startingBlock- -(6Ž
+‹
+, ,(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+objectIdjava.util.UUID[
+Y
+-" -(*
+objectIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%12Š
+‡
+, ,(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+-1 -(5
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%13*
+6*µ
+41 1(¸µ
+1 1(
+%4java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*P
+
+__unknown_file (42
+0mage.target.common.TargetPermanentOrPlayerAmount2getTargets()ÖÓ
+1 1(2
+%5boolean",java.util.List#contains(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%4java.util.List*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2contains(Ljava/lang/Object;)"
+1 1(3
+""*ô
+50+ 0(5¸µ
+0+ 0(7
+%1java.util.List"3mage.target.TargetImpl#getTargets()Ljava/util/List;*P
+
+__unknown_file (42
+0mage.target.common.TargetPermanentOrPlayerAmount2getTargets()ki
+0+ 0(>	
+%2int"java.util.List#size()I*2
+
+__unknown_file (
+
+%1java.util.List2size()´±
+0B 0(Y	
+%3int"/mage.target.TargetImpl#getMaxNumberOfTargets()I*P
+
+__unknown_file (42
+0mage.target.common.TargetPermanentOrPlayerAmount2getMaxNumberOfTargets()*
+3
+4*Ì
+60 0(!´±
+0 0(#	
+%0int"/mage.target.TargetImpl#getMaxNumberOfTargets()I*P
+
+__unknown_file (42
+0mage.target.common.TargetPermanentOrPlayerAmount2getMaxNumberOfTargets()*
+3
+5*
+18 8(öó
+8 8(0
+%9mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*8
+
+__unknown_file (
+
+objectIdjava.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+8 8(1
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%9mage.players.Player¤
+¡
+9 9(1
+%10*mage.filter.common.FilterPermanentOrPlayer"__id*\
+
+__unknown_file (@*>2
+0mage.target.common.TargetPermanentOrPlayerAmount"
+filterÝÚ
+9 9()
+%11boolean"Rmage.filter.common.FilterPermanentOrPlayer#match(Lmage/MageItem;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+%10*mage.filter.common.FilterPermanentOrPlayer*;
+
+__unknown_file (
+
+playermage.players.Player*4
+
+__unknown_file (
+
+gamemage.game.Game2&match(Lmage/MageItem;Lmage/game/Game;)"
+9 9(*
+"":&
+- -(+
+objectIdjava.util.UUID:"
+-, -(5
+gamemage.game.GameB42
+0mage.target.common.TargetPermanentOrPlayerAmountHP

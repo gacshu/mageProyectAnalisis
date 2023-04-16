@@ -1,0 +1,221 @@
+
+cmage.abilities.keyword.BecomeMonstrousSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zl
+bD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/MonstrosityAbility.java[ [("startingBlock*Œ
+2c c(%ÞÛ
+c c(9)
+%4#mage.abilities.costs.mana.ManaCosts"Omage.abilities.Ability#getManaCostsToPay()Lmage/abilities/costs/mana/ManaCosts;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getManaCostsToPay()–“
+c c(@	
+%5int"+mage.abilities.costs.mana.ManaCosts#getX()I*G
+
+__unknown_file (+
+)
+%4#mage.abilities.costs.mana.ManaCosts2getX()*
+1*Œ
+3`5 `(;±®
+` `(R	
+%2int"@mage.abilities.keyword.MonstrosityAbility#getMonstrosityValue()I*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getMonstrosityValue()A
+?
+b  b(1	
+%3int"__id*"
+
+__unknown_file (
+""*
+2
+1*þ
+startingBlock[ [(3Š
+‡
+Z Z(
+%17"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+[ [("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%17”
+‘
+Z Z(
+%18"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+[, [(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%18*
+6*!
+4^ ^("
+^ ^(
+""*»
+5]! ](*£ 
+]! ](8
+%1boolean",mage.game.permanent.Permanent#isMonstrous()Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2isMonstrous()*
+3
+4*ä
+6\ \($ÈÅ
+\ \(L#
+%0mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)
+
+\ \(M*
+	permanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%0mage.game.permanent.Permanent*
+4
+5*Ä
+1e e(W
+U
+f f( 
+%6mage.counters.CounterType"__id*"
+
+__unknown_file (
+""äá
+f f(A
+%7mage.counters.Counter"Bmage.counters.CounterType#createInstance(I)Lmage/counters/Counter;*=
+
+__unknown_file (!
+
+%6mage.counters.CounterType*"
+
+__unknown_file (
+""2createInstance(I)°­
+g g((
+%8java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()˜•
+e h(	
+%9boolean"mmage.cards.Card#addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*9
+
+__unknown_file (
+
+%7mage.counters.Counter*2
+
+__unknown_file (
+
+%8java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2\addCounters(Lmage/counters/Counter;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)ÇÄ
+i i($
+%10void".mage.game.permanent.Permanent#setMonstrous(Z)V*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent* 
+
+__unknown_file (22setMonstrous(Z)c
+a
+k k(#+
+%11$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""c
+a
+k k(5+
+%12$mage.game.events.GameEvent$EventType"__id*"
+
+__unknown_file (
+""©¦
+k7 k(K
+%13java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()±®
+l l(0
+%14java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()¨
+¥
+j m(	!
+%15mage.game.events.GameEvent" mage.game.events.GameEvent#getEvent(Lmage/game/events/GameEvent$EventType;Ljava/util/UUID;Lmage/abilities/Ability;Ljava/util/UUID;I)Lmage/game/events/GameEvent;*:
+
+__unknown_file ("
+mage.game.events.GameEvent*I
+
+__unknown_file (-
++
+%12$mage.game.events.GameEvent$EventType*3
+
+__unknown_file (
+
+%13java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*3
+
+__unknown_file (
+
+%14java.util.UUID*"
+
+__unknown_file (
+""óð
+j m(
+
+%16void"7mage.game.Game#fireEvent(Lmage/game/events/GameEvent;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*?
+
+__unknown_file (#
+!
+%15mage.game.events.GameEvent2'fireEvent(Lmage/game/events/GameEvent;)"
+n n(
+"":"
+[ [(#
+gamemage.game.Game:,
+[$ [(2 
+sourcemage.abilities.AbilityB64
+2mage.abilities.keyword.BecomeMonstrousSourceEffectHP

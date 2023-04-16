@@ -1,0 +1,121 @@
+
+smage.server.Session#setUserData(Ljava/lang/String;Lmage/players/net/UserData;Ljava/lang/String;Ljava/lang/String;)Z_
+SD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/Session.java∞ ∞("1*®
+1
+± ±(-â
+Ü
+
+± ±(-)
+%0#mage.server.managers.ManagerFactory"__id*G
+
+__unknown_file (+*)
+mage.server.Session"
+managerFactory‰·
+
+± ±(;&
+%1 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2userManager()¶£
+
+± ±(S
+%2java.util.Optional"Vmage.server.managers.UserManager#getUserByName(Ljava/lang/String;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%1 mage.server.managers.UserManager*:
+
+__unknown_file (
+
+userNamejava.lang.String2!getUserByName(Ljava/lang/String;)i
+g
+
+± ±(T
+_userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%2java.util.Optionalç
+ä
+
+≤ √(	!
+%3java.util.function.Consumer"__declareFunction*F
+
+__unknown_file (*(
+&__sonar_lambda_911$mage.server.Sessionö
+ó
+
+__unknown_file (4
+!
+%3java.util.function.Consumer"
+clientVersion"__id*?
+
+__unknown_file (#
+!
+clientVersionjava.lang.Stringí
+è
+
+__unknown_file (0
+!
+%3java.util.function.Consumer"
+	userIdStr"__id*;
+
+__unknown_file (
+
+	userIdStrjava.lang.Stringô
+ñ
+
+__unknown_file (/
+!
+%3java.util.function.Consumer"
+
+userData"__id*C
+
+__unknown_file ('
+%
+userDatamage.players.net.UserDataç
+ä
+
+__unknown_file (3
+!
+%3java.util.function.Consumer"
+Session.this"__id*3
+
+__unknown_file (
+mage.server.SessionÄ˝
+
+≤ √(
+
+%29void"<java.util.Optional#ifPresent(Ljava/util/function/Consumer;)V*9
+
+__unknown_file (
+
+_userjava.util.Optional*?
+
+__unknown_file (#
+!
+%3java.util.function.Consumer2(ifPresent(Ljava/util/function/Consumer;)àÖ
+
+ƒ ƒ( 
+%30boolean"java.util.Optional#isPresent()Z*9
+
+__unknown_file (
+
+_userjava.util.Optional2isPresent()"
+
+ƒ ƒ(!
+"":*
+
+∞ ∞(/
+userNamejava.lang.String:3
+
+∞0 ∞(B%
+userDatamage.players.net.UserData:/
+
+∞C ∞(X!
+clientVersionjava.lang.String:+
+
+∞Y ∞(i
+	userIdStrjava.lang.StringB
+mage.server.SessionHP

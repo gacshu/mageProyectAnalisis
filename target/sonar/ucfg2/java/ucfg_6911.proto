@@ -1,0 +1,226 @@
+
+}mage.abilities.effects.common.ExileTargetAndSearchGraveyardHandLibraryEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+…D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileTargetAndSearchGraveyardHandLibraryEffect.java ("startingBlock*‡
+2/ /(-Á¾
+/ /(?
+%5java.util.UUID"8mage.game.Controllable#getControllerId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+permanentToExilemage.game.permanent.Permanent2getControllerId()h
+f
+/ /(? 
+targetPlayerIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%5java.util.UUIDQ
+O
+08 0(C
+%6mage.constants.Zone"__id*"
+
+__unknown_file (
+""¤¡
+0 0(R
+%7boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*O
+
+__unknown_file (3
+1
+permanentToExilemage.game.permanent.Permanent*7
+
+__unknown_file (
+
+%6mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)®«
+13 1(M
+%8java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*O
+
+__unknown_file (3
+1
+permanentToExilemage.game.permanent.Permanent2	getName()™–
+1 1(^
+%9boolean"¿mage.abilities.effects.common.search.SearchTargetGraveyardHandLibraryForCardNameAndExileEffect#applySearchAndExile(Lmage/game/Game;Lmage/abilities/Ability;Ljava/lang/String;Ljava/util/UUID;)Z*l
+
+__unknown_file (PN
+Lmage.abilities.effects.common.ExileTargetAndSearchGraveyardHandLibraryEffect*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+%8java.lang.String*>
+
+__unknown_file ("
+ 
+targetPlayerIdjava.util.UUID2_applySearchAndExile(Lmage/game/Game;Lmage/abilities/Ability;Ljava/lang/String;Ljava/util/UUID;)*
+1*Ü
+3-% -()«¨
+-7 -(S
+%3java.util.UUID"3mage.target.Target#getFirstTarget()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+exileTargetmage.target.Target2getFirstTarget()Š‡
+-% -(T#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)‰
+†
+- -(U1
+permanentToExilemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+2
+1*ÿ
+startingBlock (3Š
+‡
+ (
+%10"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%10”
+‘
+ (
+%11"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%11*
+11*!
+4+ +("
++ +(
+""*§
+6) )(°­
+)' )(?
+%1java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+) )(@
+%2mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%1java.util.UUID2getPlayer(Ljava/util/UUID;)j
+h
+) )(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%2mage.players.Player*
+3
+4*…
+7# #(T
+R
+# #(
+targetmage.target.Target"__id*"
+
+__unknown_file (
+""”
+‘
+# #(
+targetmage.target.Target"
+__arrayGet*7
+
+__unknown_file (
+
+%0mage.target.Targets*"
+
+__unknown_file (
+""*	
+6
+7
+8*…
+8% %($q
+o
+% %($!
+exileTargetmage.target.Target"__id*:
+
+__unknown_file (
+
+targetmage.target.Target*
+6*Æ
+10# #(#°­
+# #(0
+%0mage.target.Targets"8mage.abilities.Ability#getTargets()Lmage/target/Targets;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getTargets()*
+7*É
+11 (X
+V
+   (# 
+targetPlayerIdjava.util.UUID"__id*"
+
+__unknown_file (
+""Y
+W
+" "("!
+exileTargetmage.target.Target"__id*"
+
+__unknown_file (
+""*
+10*!
+14 4("
+4 4(
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityBPN
+Lmage.abilities.effects.common.ExileTargetAndSearchGraveyardHandLibraryEffectHP

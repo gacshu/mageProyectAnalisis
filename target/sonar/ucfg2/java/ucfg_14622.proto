@@ -1,0 +1,2619 @@
+
+Amage.abilities.effects.ContinuousEffects#apply(Lmage/game/Game;)Vm
+aD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/ContinuousEffects.java◊ ◊(""104*ô
+24
+¯ ¯(V
+T
+
+¯ ¯(6
+%145mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+¯8 ¯(L
+%146mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+¯ ¯(\
+%147boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%145mage.constants.Layer*=
+
+__unknown_file (!
+
+%146mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+23*î
+68
+± ±(&˚
+¯
+
+± ±(?
+%83java.util.Set"__mapSet*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+dependentTojava.util.Set*
+42*ù
+69
+Ø3 Ø(AÄ˝
+
+Ø3 Ø(U
+%82boolean".java.util.Map#containsKey(Ljava/lang/Object;)Z*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2containsKey(Ljava/lang/Object;)*
+68
+67*è
+26
+ˆ% ˆ(3©
+¶
+
+ˆ% ˆ(34
+%142,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+ˆ? ˆ(M
+%143java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+ˆ% ˆ(N
+%144java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%142,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%143java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+ˆ ˆ(O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%144java.util.Set*
+23*≥
+28
+Ô Ô($k
+i
+
+Ô Ô($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+Ô Ô($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+32
+22*ñ
+29
+Ò Ò( [
+Y
+
+Ò Ò( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+Ò Ò( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+28
+30*¨
+70
+• •("ôñ
+
+• ¶('
+%57java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map2
+entrySet()•¢
+
+• ß(%
+%58java.util.stream.Stream"6java.util.Collection#stream()Ljava/util/stream/Stream;*2
+
+__unknown_file (
+
+%57java.util.Set2stream()§
+°
+
+®$ ©(P#
+%59java.util.function.Predicate"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_293$mage.abilities.effects.ContinuousEffectsï
+í
+
+__unknown_file (4
+#
+%59java.util.function.Predicate"
+dependentTo"__id*:
+
+__unknown_file (
+
+dependentTojava.util.Set•
+¢
+
+__unknown_file (/
+#
+%59java.util.function.Predicate"
+effect"__id*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect±Æ
+
+• ©(Q
+%66java.util.stream.Stream"Wjava.util.stream.Stream#filter(Ljava/util/function/Predicate;)Ljava/util/stream/Stream;*<
+
+__unknown_file ( 
+
+%58java.util.stream.Stream*A
+
+__unknown_file (%
+#
+%59java.util.function.Predicate2&filter(Ljava/util/function/Predicate;)£
+†
+
+™% ≠("
+%67java.util.function.Consumer"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_294$mage.abilities.effects.ContinuousEffects§
+°
+
+__unknown_file (.
+"
+%67java.util.function.Consumer"
+effect"__id*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffectî
+ë
+
+__unknown_file (3
+"
+%67java.util.function.Consumer"
+dependentTo"__id*:
+
+__unknown_file (
+
+dependentTojava.util.SetÖÇ
+
+• ≠(
+%74void"?java.util.stream.Stream#forEach(Ljava/util/function/Consumer;)V*<
+
+__unknown_file ( 
+
+%66java.util.stream.Stream*@
+
+__unknown_file ($
+"
+%67java.util.function.Consumer2&forEach(Ljava/util/function/Consumer;)ôñ
+
+Æ Æ(-
+%75java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map2
+entrySet()§
+°
+
+Æ7 Æ(j#
+%76java.util.function.Predicate"__declareFunction*[
+
+__unknown_file (?=
+;__sonar_lambda_295$mage.abilities.effects.ContinuousEffectsÄ˝
+
+Æ Æ(k
+%80boolean">java.util.Collection#removeIf(Ljava/util/function/Predicate;)Z*2
+
+__unknown_file (
+
+%75java.util.Set*A
+
+__unknown_file (%
+#
+%76java.util.function.Predicate2(removeIf(Ljava/util/function/Predicate;)}
+
+Ø Ø(.
+%81boolean"java.util.Set#isEmpty()Z*:
+
+__unknown_file (
+
+dependentTojava.util.Set2	isEmpty()*
+69
+67*°
+71
+£( £(.¶£
+
+£( £(C
+%55java.util.Set"Vmage.abilities.effects.ContinuousEffect#isDependentTo(Ljava/util/List;)Ljava/util/Set;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*5
+
+__unknown_file (
+
+layerjava.util.List2isDependentTo(Ljava/util/List;)f
+d
+
+£ £(D
+dependentTojava.util.Set"__id*2
+
+__unknown_file (
+
+%55java.util.SetÛ
+
+§ §(<
+%56boolean"2java.util.Set#containsAll(Ljava/util/Collection;)Z*=
+
+__unknown_file (!
+
+appliedEffectsjava.util.Set*:
+
+__unknown_file (
+
+dependentTojava.util.Set2#containsAll(Ljava/util/Collection;)*
+70
+67*µ
+73
+†< †(J∑¥
+
+†T †(b
+%53java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()ﬁ€
+
+†< †(c
+%54boolean"+java.util.Set#contains(Ljava/lang/Object;)Z*=
+
+__unknown_file (!
+
+appliedEffectsjava.util.Set*3
+
+__unknown_file (
+
+%53java.util.UUID2contains(Ljava/lang/Object;)*
+71
+42*ô
+30
+Ú Ú(V
+T
+
+Ú Ú(6
+%139mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+Ú8 Ú(I
+%140mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+Ú Ú(Y
+%141boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%139mage.constants.Layer*=
+
+__unknown_file (!
+
+%140mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+29*ù
+74
+† †('Ä˝
+
+† †(8
+%52boolean",java.util.List#contains(Ljava/lang/Object;)Z*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2contains(Ljava/lang/Object;)*
+73
+42*è
+32
+% (3©
+¶
+
+% (34
+%136,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+? (M
+%137java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+% (N
+%138java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%136,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%137java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+ (O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%138java.util.Set*
+29*∫
+76
+è è(U
+S
+
+ê= ê(a
+%50mage.constants.Layer"__id*"
+
+__unknown_file (
+""Ê
+„
+
+ê ê(b
+%51java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*9
+
+__unknown_file (
+
+%50mage.constants.Layerb
+`
+
+ê ê(b
+layerjava.util.List"__id*3
+
+__unknown_file (
+
+%51java.util.List*
+42*ñ*
+78
+Ä Ä(U
+S
+
+Ä' Ä(B
+%30mage.constants.Layer"__id*"
+
+__unknown_file (
+""ƒ
+¡
+
+Ä Ä(T
+%31void"~mage.abilities.effects.ContinuousEffects#applyLayer(Ljava/util/List;Lmage/constants/Layer;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*9
+
+__unknown_file (
+
+%30mage.constants.Layer*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_3ˆÛ
+
+Å Å(?
+%32java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_325getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+Å Å(?$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%32java.util.ListU
+S
+
+Ç' Ç(B
+%33mage.constants.Layer"__id*"
+
+__unknown_file (
+""ƒ
+¡
+
+Ç Ç(T
+%34void"~mage.abilities.effects.ContinuousEffects#applyLayer(Ljava/util/List;Lmage/constants/Layer;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*9
+
+__unknown_file (
+
+%33mage.constants.Layer*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_4ˆÛ
+
+É É(?
+%35java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_425getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+É É(?$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%35java.util.ListU
+S
+
+Ñ' Ñ(C
+%36mage.constants.Layer"__id*"
+
+__unknown_file (
+""ƒ
+¡
+
+Ñ Ñ(U
+%37void"~mage.abilities.effects.ContinuousEffects#applyLayer(Ljava/util/List;Lmage/constants/Layer;Lmage/game/Game;Ljava/lang/String;)V*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*9
+
+__unknown_file (
+
+%36mage.constants.Layer*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_5ˆÛ
+
+Ö Ö(?
+%38java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_525getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+Ö Ö(?$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%38java.util.List;9
+
+áJ á(S
+%39java.util.HashMap"java.util.HashMapj
+h
+
+áF á(U
+%40"java.util.HashMap#<init>()V*6
+
+__unknown_file (
+
+%39java.util.HashMapu
+s
+
+á á(V'
+appliedEffectAbilitiesjava.util.Map"__id*6
+
+__unknown_file (
+
+%39java.util.HashMapGE
+
+â> â(M
+%41java.util.LinkedHashMap"java.util.LinkedHashMapv
+t
+
+â: â(O
+%42"!java.util.LinkedHashMap#<init>()V*<
+
+__unknown_file ( 
+
+%41java.util.LinkedHashMaps
+q
+
+â â(P
+waitingEffectsjava.util.Map"__id*<
+
+__unknown_file ( 
+
+%41java.util.LinkedHashMap;9
+
+ä' ä(0
+%43java.util.HashSet"java.util.HashSetj
+h
+
+ä# ä(2
+%44"java.util.HashSet#<init>()V*6
+
+__unknown_file (
+
+%43java.util.HashSetm
+k
+
+ä ä(3
+appliedEffectsjava.util.Set"__id*6
+
+__unknown_file (
+
+%43java.util.HashSet•
+¢
+
+ã ã(1
+%45*mage.abilities.effects.ApplyCountersEffect"__id*[
+
+__unknown_file (?*=*
+(mage.abilities.effects.ContinuousEffects"
+applyCountersU
+S
+
+ã ã(@
+%46mage.constants.Layer"__id*"
+
+__unknown_file (
+""X
+V
+
+ãB ã(M
+%47mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""∞≠
+
+ã ã(Z
+%48boolean"ämage.abilities.effects.ApplyCountersEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+%45*mage.abilities.effects.ApplyCountersEffect*9
+
+__unknown_file (
+
+%46mage.constants.Layer*<
+
+__unknown_file ( 
+
+%47mage.constants.SubLayer*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)ˆÛ
+
+å å(?
+%49java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_625getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+å å(?$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%49java.util.List*
+41
+76*≥
+34
+Á Á($k
+i
+
+Á Á($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+Á Á($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+39
+28*ò
+79
+˝ ˝(¡æ
+
+˝ ˝(!&
+%28mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()∑¥
+
+˝ ˝(:
+%29void"9mage.game.permanent.Battlefield#resetPermanentsControl()V*D
+
+__unknown_file ((
+&
+%28mage.game.permanent.Battlefield2resetPermanentsControl()*
+82
+78*ñ
+35
+È È( [
+Y
+
+È È( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+È È( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+37
+34*ô
+36
+Î Î(V
+T
+
+Î! Î(:
+%133mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+Î< Î(^
+%134mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+Î Î(n
+%135boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%133mage.constants.Layer*=
+
+__unknown_file (!
+
+%134mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+35*·
+37
+Í Í(!ƒ
+¡
+
+Í Í(0
+%132boolean"amage.abilities.effects.ContinuousEffects#abilityActive(Lmage/abilities/Ability;Lmage/game/Game;)Z*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*
+35
+36*è
+39
+Ë% Ë(3©
+¶
+
+Ë% Ë(34
+%129,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+Ë? Ë(M
+%130java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+Ë% Ë(N
+%131java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%129,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%130java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+Ë Ë(O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%131java.util.Set*
+35*ê
+100
+ﬂ ﬂ(T
+R
+
+ﬂ ﬂ(0
+%7mage.constants.Layer"__id*"
+
+__unknown_file (
+""W
+U
+
+ﬂ2 ﬂ(I
+%8mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""«ƒ
+
+ﬂ ﬂ(Y
+%9boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*8
+
+__unknown_file (
+
+%7mage.constants.Layer*;
+
+__unknown_file (
+
+%8mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+99*Ñ
+102
+›% ›(3ß
+§
+
+›% ›(32
+%4,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∂≥
+
+›? ›(M
+%5java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()¢ü
+
+›% ›(N
+%6java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*P
+
+__unknown_file (4
+2
+%4,mage.abilities.effects.ContinuousEffectsList*2
+
+__unknown_file (
+
+%5java.util.UUID2getAbility(Ljava/util/UUID;)c
+a
+
+› ›(O
+	abilitiesjava.util.Set"__id*1
+
+__unknown_file (
+
+%6java.util.Set*
+99*Ï	
+104
+ÿ ÿ(óî
+
+ÿ ÿ(#
+
+%0void"Qmage.abilities.effects.ContinuousEffects#removeInactiveEffects(Lmage/game/Game;)V*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game2'removeInactiveEffects(Lmage/game/Game;)®•
+
+Ÿ4 Ÿ(K
+%1java.util.List"\mage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game2#getLayeredEffects(Lmage/game/Game;)n
+l
+
+Ÿ Ÿ(L$
+activeLayerEffectsjava.util.List"__id*2
+
+__unknown_file (
+
+%1java.util.ListT
+R
+
+€P €(c
+%2mage.constants.Layer"__id*"
+
+__unknown_file (
+""‰
+·
+
+€' €(d
+%3java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*8
+
+__unknown_file (
+
+%2mage.constants.Layera
+_
+
+€ €(e
+layerjava.util.List"__id*2
+
+__unknown_file (
+
+%3java.util.List*
+98*Û
+81
+˘ ˘(¡æ
+
+˘ ˘(&&
+%26mage.game.permanent.Battlefield"@mage.game.Game#getBattlefield()Lmage/game/permanent/Battlefield;*4
+
+__unknown_file (
+
+gamemage.game.Game2getBattlefield()íè
+
+˘ ˘(D
+%27boolean"Jmage.game.permanent.Battlefield#fireControlChangeEvents(Lmage/game/Game;)Z*D
+
+__unknown_file ((
+&
+%26mage.game.permanent.Battlefield*4
+
+__unknown_file (
+
+gamemage.game.Game2)fireControlChangeEvents(Lmage/game/Game;)*
+79
+78*≥
+82
+Ú Ú((k
+i
+
+Ú Ú((1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+Ú Ú((1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+81
+86*ñ
+83
+Ù Ù($[
+Y
+
+Ù Ù($!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+Ù Ù($!
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+82
+84*î
+84
+ı ı(U
+S
+
+ı! ı(?
+%23mage.constants.Layer"__id*"
+
+__unknown_file (
+""X
+V
+
+ıA ı(L
+%24mage.constants.SubLayer"__id*"
+
+__unknown_file (
+"" «
+
+ı ı(\
+%25boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*9
+
+__unknown_file (
+
+%23mage.constants.Layer*<
+
+__unknown_file ( 
+
+%24mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+83*æ
+41
+Ê Ê($V
+T
+
+Ê9 Ê(R
+%127mage.constants.Layer"__id*"
+
+__unknown_file (
+""Ë
+Â
+
+Ê Ê(S
+%128java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*:
+
+__unknown_file (
+
+%127mage.constants.Layerc
+a
+
+Ê Ê(S
+layerjava.util.List"__id*4
+
+__unknown_file (
+
+%128java.util.List*
+34*â
+86
+Û) Û(7®
+•
+
+Û) Û(73
+%20,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∑¥
+
+ÛC Û(Q
+%21java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()•¢
+
+Û) Û(R
+%22java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*Q
+
+__unknown_file (5
+3
+%20,mage.abilities.effects.ContinuousEffectsList*3
+
+__unknown_file (
+
+%21java.util.UUID2getAbility(Ljava/util/UUID;)d
+b
+
+Û Û(S
+	abilitiesjava.util.Set"__id*2
+
+__unknown_file (
+
+%22java.util.Set*
+83*∑
+42
+ü ü((k
+i
+
+ü ü((1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+ü ü((1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+74
+41
+76*“
+43
+‡ ‡("∂≥
+
+‡' ‡(5/
+%123'mage.abilities.effects.ContinuousEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()∂≥
+
+‡' ‡(=
+%124java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*M
+
+__unknown_file (1
+/
+%123'mage.abilities.effects.ContinuousEffect2getId()¡
+æ
+
+‡ ‡(>
+%125boolean"
+__arrayAdd*=
+
+__unknown_file (!
+
+appliedEffectsjava.util.Set*
+
+__unknown_file (: *4
+
+__unknown_file (
+
+%124java.util.UUIDÉÄ
+
+· ·(%
+%126void"java.util.Iterator#remove()V*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2remove()*
+55*û
+44
+“ “(([
+Y
+
+“ “((!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+“ “((!
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+46
+49
+43
+45*æ
+89
+Ì Ì($U
+S
+
+Ì9 Ì(W
+%18mage.constants.Layer"__id*"
+
+__unknown_file (
+""Ê
+„
+
+Ì Ì(X
+%19java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*9
+
+__unknown_file (
+
+%18mage.constants.Layerb
+`
+
+Ì Ì(X
+layerjava.util.List"__id*3
+
+__unknown_file (
+
+%19java.util.List*
+82
+78*å
+45
+⁄ ⁄((œ
+Ã
+
+⁄ ⁄(5
+%117boolean"
+__arrayAdd*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*
+
+__unknown_file (: *?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability∂≥
+
+€ €(&/
+%118'mage.abilities.effects.ContinuousEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()V
+T
+
+€- €(Q
+%119mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+€S €(^
+%120mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""À»
+
+€ €(n
+%121boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*M
+
+__unknown_file (1
+/
+%118'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%119mage.constants.Layer*=
+
+__unknown_file (!
+
+%120mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)ıÚ
+
+ﬁ- ﬁ(M
+%122java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*%
+
+__unknown_file (	
+apply25getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)p
+n
+
+ﬁ ﬁ(M$
+activeLayerEffectsjava.util.List"__id*4
+
+__unknown_file (
+
+%122java.util.List*
+44*Ñ
+46
+◊/ ◊(@@>
+
+◊3 ◊(>
+%113java.util.ArrayList"java.util.ArrayListp
+n
+
+◊/ ◊(@
+%114"java.util.ArrayList#<init>()V*9
+
+__unknown_file (
+
+%113java.util.ArrayLists
+q
+
+◊ ◊(@"
+appliedAbilitiesjava.util.List"__id*9
+
+__unknown_file (
+
+%113java.util.ArrayList∂≥
+
+ÿ7 ÿ(E/
+%115'mage.abilities.effects.ContinuousEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()â
+Ü
+
+ÿ ÿ(X
+%116java.util.List"__mapSet*E
+
+__unknown_file ()
+'
+appliedEffectAbilitiesjava.util.Map*M
+
+__unknown_file (1
+/
+%115'mage.abilities.effects.ContinuousEffect*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*
+45*ê
+49
+”8 ”(HÔÏ
+
+”8 ”(Z
+%112boolean",java.util.List#contains(Ljava/lang/Object;)Z*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2contains(Ljava/lang/Object;)*
+46
+44
+45*Ä
+90
+Í! Í(2ˆÛ
+
+Í! Í(C
+%17java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (	
+layer_125getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+Í Í(C$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%17java.util.List*
+89*ó
+91
+È È({y
+
+È È(
+%16boolean"java.util.List#isEmpty()Z*5
+
+__unknown_file (
+
+layerjava.util.List2	isEmpty()*
+90
+89*≥
+92
+‚ ‚($k
+i
+
+‚ ‚($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+‚ ‚($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+91
+96*ñ
+93
+‰ ‰( [
+Y
+
+‰ ‰( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+‰ ‰( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+92
+94*î
+94
+Â Â(U
+S
+
+Â Â(0
+%13mage.constants.Layer"__id*"
+
+__unknown_file (
+""X
+V
+
+Â2 Â(M
+%14mage.constants.SubLayer"__id*"
+
+__unknown_file (
+"" «
+
+Â Â(]
+%15boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*9
+
+__unknown_file (
+
+%13mage.constants.Layer*<
+
+__unknown_file ( 
+
+%14mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+93*â
+96
+„% „(3®
+•
+
+„% „(33
+%10,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∑¥
+
+„? „(M
+%11java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()•¢
+
+„% „(N
+%12java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*Q
+
+__unknown_file (5
+3
+%10,mage.abilities.effects.ContinuousEffectsList*3
+
+__unknown_file (
+
+%11java.util.UUID2getAbility(Ljava/util/UUID;)d
+b
+
+„ „(O
+	abilitiesjava.util.Set"__id*2
+
+__unknown_file (
+
+%12java.util.Set*
+93*π
+52
+–' –(=∂≥
+
+–B –(P/
+%106'mage.abilities.effects.ContinuousEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()«
+ƒ
+
+–' –(Q
+%107java.util.List"__mapGet*E
+
+__unknown_file ()
+'
+appliedEffectAbilitiesjava.util.Map*M
+
+__unknown_file (1
+/
+%106'mage.abilities.effects.ContinuousEffectn
+l
+
+– –(Q"
+appliedAbilitiesjava.util.List"__id*4
+
+__unknown_file (
+
+%107java.util.List©
+¶
+
+—  —(.4
+%108,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∂≥
+
+—: —(H/
+%109'mage.abilities.effects.ContinuousEffect".java.util.Map$Entry#getKey()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2getKey()∂≥
+
+—: —(P
+%110java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*M
+
+__unknown_file (1
+/
+%109'mage.abilities.effects.ContinuousEffect2getId()®•
+
+—  —(Q
+%111java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%108,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%110java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+— —(Q
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%111java.util.Set*
+44*¥
+98
+‹ ‹($k
+i
+
+‹ ‹($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+‹ ‹($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*	
+102
+92*ò
+10
+à	 à	(V
+T
+
+à	 à	(0
+%163mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+à	2 à	(=
+%164mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+à	 à	(M
+%165boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%163mage.constants.Layer*=
+
+__unknown_file (!
+
+%164mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+9*æ
+54
+ÃC Ã(Küú
+
+ÃC Ã(R
+%103java.util.Map$Entry"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()m
+k
+
+Ã Ã(S
+entryjava.util.Map$Entry"__id*9
+
+__unknown_file (
+
+%103java.util.Map$Entry†ù
+
+Õ4 Õ(D
+%104java.util.Set"0java.util.Map$Entry#getValue()Ljava/lang/Object;*:
+
+__unknown_file (
+
+entryjava.util.Map$Entry2
+getValue()ÌÍ
+
+Õ Õ(E
+%105boolean"2java.util.Set#containsAll(Ljava/util/Collection;)Z*=
+
+__unknown_file (!
+
+appliedEffectsjava.util.Set*3
+
+__unknown_file (
+
+%104java.util.Set2#containsAll(Ljava/util/Collection;)*
+52
+55*ó
+99
+ﬁ ﬁ( [
+Y
+
+ﬁ ﬁ( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+ﬁ ﬁ( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*	
+98
+100*¶
+55
+Àw À(âÜ
+Àw À(â
+%102boolean"java.util.Iterator#hasNext()Z*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2	hasNext()*
+42
+54*é
+12
+Ü	% Ü	(3©
+¶
+
+Ü	% Ü	(34
+%160,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+Ü	? Ü	(M
+%161java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+Ü	% Ü	(N
+%162java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%160,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%161java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+Ü	 Ü	(O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%162java.util.Set*
+9*¿
+56
+ÀQ À(_öó
+
+ÀQ À(j
+%100java.util.Set"'java.util.Map#entrySet()Ljava/util/Set;*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map2
+entrySet()öó
+
+ÀQ À(u
+%101java.util.Iterator",java.util.Set#iterator()Ljava/util/Iterator;*3
+
+__unknown_file (
+
+%100java.util.Set2
+iterator()n
+l
+
+À À(u
+iteratorjava.util.Iterator"__id*8
+
+__unknown_file (
+
+%101java.util.Iterator*
+55*Ω
+14
+Ñ	 Ñ	($V
+T
+
+Ñ	9 Ñ	(L
+%158mage.constants.Layer"__id*"
+
+__unknown_file (
+""Ë
+Â
+
+Ñ	 Ñ	(M
+%159java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*:
+
+__unknown_file (
+
+%158mage.constants.Layerc
+a
+
+Ñ	 Ñ	(M
+layerjava.util.List"__id*4
+
+__unknown_file (
+
+%159java.util.List*
+8*ú
+58
+≈ ≈(∑¥
+
+≈# ≈(1
+%97java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()ø
+º
+
+≈ ≈(2
+%98boolean"
+__arrayAdd*=
+
+__unknown_file (!
+
+appliedEffectsjava.util.Set*
+
+__unknown_file (: *3
+
+__unknown_file (
+
+%97java.util.UUIDÉÄ
+
+« «(,
+%99boolean"java.util.Map#isEmpty()Z*=
+
+__unknown_file (!
+
+waitingEffectsjava.util.Map2	isEmpty()*
+42
+56*≥
+15
+˛ ˛($k
+i
+
+˛ ˛($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+˛ ˛($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+14
+19*û
+59
+∑ ∑($[
+Y
+
+∑ ∑($!
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+∑ ∑($!
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+58
+60
+61
+64*ñ
+16
+Ä	 Ä	( [
+Y
+
+Ä	 Ä	( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+Ä	 Ä	( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+15
+17*ô
+17
+Å	 Å	(V
+T
+
+Å	 Å	(6
+%155mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+Å	8 Å	(K
+%156mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+Å	 Å	([
+%157boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%155mage.constants.Layer*=
+
+__unknown_file (!
+
+%156mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+16*è
+19
+ˇ% ˇ(3©
+¶
+
+ˇ% ˇ(34
+%152,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+ˇ? ˇ(M
+%153java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+ˇ% ˇ(N
+%154java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%152,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%153java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+ˇ ˇ(O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%154java.util.Set*
+16*(
+0 "!
+
+í	 í	(
+implicit return*∞
+1
+å	 å	($k
+i
+
+å	 å	($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+å	 å	($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+5
+0*ì
+2
+é	 é	( [
+Y
+
+é	 é	( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+é	 é	( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+3
+1*ó
+3
+è	 è	(V
+T
+
+è	 è	(/
+%171mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+è	1 è	(<
+%172mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""Õ 
+
+è	 è	(L
+%173boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*:
+
+__unknown_file (
+
+%171mage.constants.Layer*=
+
+__unknown_file (!
+
+%172mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+2*ç
+5
+ç	% ç	(3©
+¶
+
+ç	% ç	(34
+%168,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∏µ
+
+ç	? ç	(M
+%169java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()®•
+
+ç	% ç	(N
+%170java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*R
+
+__unknown_file (6
+4
+%168,mage.abilities.effects.ContinuousEffectsList*4
+
+__unknown_file (
+
+%169java.util.UUID2getAbility(Ljava/util/UUID;)e
+c
+
+ç	 ç	(O
+	abilitiesjava.util.Set"__id*3
+
+__unknown_file (
+
+%170java.util.Set*
+2*º
+7
+ã	 ã	($V
+T
+
+ã	9 ã	(K
+%166mage.constants.Layer"__id*"
+
+__unknown_file (
+""Ë
+Â
+
+ã	 ã	(L
+%167java.util.List"umage.abilities.effects.ContinuousEffects#filterLayeredEffects(Ljava/util/List;Lmage/constants/Layer;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*B
+
+__unknown_file (&
+$
+activeLayerEffectsjava.util.List*:
+
+__unknown_file (
+
+%166mage.constants.Layerc
+a
+
+ã	 ã	(L
+layerjava.util.List"__id*4
+
+__unknown_file (
+
+%167java.util.List*
+1*±
+8
+Ö	 Ö	($k
+i
+
+Ö	 Ö	($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+Ö	 Ö	($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+7
+12*î
+9
+á	 á	( [
+Y
+
+á	 á	( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+á	 á	( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+8
+10*Õ
+60
+ø ø($Œ
+À
+
+ø ø(1
+%92boolean"
+__arrayAdd*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*
+
+__unknown_file (: *?
+
+__unknown_file (#
+!
+abilitymage.abilities.AbilityU
+S
+
+¿! ¿(E
+%93mage.constants.Layer"__id*"
+
+__unknown_file (
+""X
+V
+
+¿G ¿(R
+%94mage.constants.SubLayer"__id*"
+
+__unknown_file (
+"" «
+
+¿ ¿(b
+%95boolean"ámage.abilities.effects.ContinuousEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*9
+
+__unknown_file (
+
+%93mage.constants.Layer*<
+
+__unknown_file ( 
+
+%94mage.constants.SubLayer*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)ÙÒ
+
+√) √(I
+%96java.util.List"nmage.abilities.effects.ContinuousEffects#getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)Ljava/util/List;*H
+
+__unknown_file (,*
+(mage.abilities.effects.ContinuousEffects*4
+
+__unknown_file (
+
+gamemage.game.Game*%
+
+__unknown_file (	
+apply25getLayeredEffects(Lmage/game/Game;Ljava/lang/String;)o
+m
+
+√ √(I$
+activeLayerEffectsjava.util.List"__id*3
+
+__unknown_file (
+
+%96java.util.List*
+59*»
+61
+º+ º(<?=
+
+º/ º(:
+%89java.util.ArrayList"java.util.ArrayListn
+l
+
+º+ º(<
+%90"java.util.ArrayList#<init>()V*8
+
+__unknown_file (
+
+%89java.util.ArrayListr
+p
+
+º º(<"
+appliedAbilitiesjava.util.List"__id*8
+
+__unknown_file (
+
+%89java.util.ArrayListä
+á
+
+Ω Ω(L
+%91java.util.List"__mapSet*E
+
+__unknown_file ()
+'
+appliedEffectAbilitiesjava.util.Map*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*
+60*è
+64
+∏4 ∏(DÓÎ
+
+∏4 ∏(V
+%88boolean",java.util.List#contains(Ljava/lang/Object;)Z*@
+
+__unknown_file ($
+"
+appliedAbilitiesjava.util.List*?
+
+__unknown_file (#
+!
+abilitymage.abilities.Ability2contains(Ljava/lang/Object;)*
+59
+60
+61*©
+21
+¸ ¸(¶
+£
+
+¸ ¸(2
+%148*mage.abilities.effects.ApplyCountersEffect"__id*[
+
+__unknown_file (?*=*
+(mage.abilities.effects.ContinuousEffects"
+applyCountersV
+T
+
+¸ ¸(5
+%149mage.constants.Layer"__id*"
+
+__unknown_file (
+""Y
+W
+
+¸7 ¸(K
+%150mage.constants.SubLayer"__id*"
+
+__unknown_file (
+""¥±
+
+¸ ¸(X
+%151boolean"ämage.abilities.effects.ApplyCountersEffect#apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)Z*P
+
+__unknown_file (4
+2
+%148*mage.abilities.effects.ApplyCountersEffect*:
+
+__unknown_file (
+
+%149mage.constants.Layer*=
+
+__unknown_file (!
+
+%150mage.constants.SubLayer*"
+
+__unknown_file (
+""*4
+
+__unknown_file (
+
+gamemage.game.Game2^apply(Lmage/constants/Layer;Lmage/constants/SubLayer;Lmage/abilities/Ability;Lmage/game/Game;)*
+15*≥
+22
+ı ı($k
+i
+
+ı ı($1
+effect'mage.abilities.effects.ContinuousEffect"__id*"
+
+__unknown_file (
+""©
+¶
+
+ı ı($1
+effect'mage.abilities.effects.ContinuousEffect"
+__arrayGet*5
+
+__unknown_file (
+
+layerjava.util.List*"
+
+__unknown_file (
+""*
+26
+21*ñ
+23
+˜ ˜( [
+Y
+
+˜ ˜( !
+abilitymage.abilities.Ability"__id*"
+
+__unknown_file (
+""ú
+ô
+
+˜ ˜( !
+abilitymage.abilities.Ability"
+__arrayGet*8
+
+__unknown_file (
+
+	abilitiesjava.util.Set*"
+
+__unknown_file (
+""*
+24
+22*√
+67
+µ1 µ(G»
+≈
+
+µ1 µ(S
+%84java.util.List"__mapGet*E
+
+__unknown_file ()
+'
+appliedEffectAbilitiesjava.util.Map*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffectm
+k
+
+µ µ(T"
+appliedAbilitiesjava.util.List"__id*3
+
+__unknown_file (
+
+%84java.util.List®
+•
+
+∂) ∂(73
+%85,mage.abilities.effects.ContinuousEffectsList"__id*\
+
+__unknown_file (@*>*
+(mage.abilities.effects.ContinuousEffects"
+layeredEffects∑¥
+
+∂C ∂(Q
+%86java.util.UUID"5mage.abilities.effects.Effect#getId()Ljava/util/UUID;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect2getId()•¢
+
+∂) ∂(R
+%87java.util.Set"Xmage.abilities.effects.ContinuousEffectsList#getAbility(Ljava/util/UUID;)Ljava/util/Set;*Q
+
+__unknown_file (5
+3
+%85,mage.abilities.effects.ContinuousEffectsList*3
+
+__unknown_file (
+
+%86java.util.UUID2getAbility(Ljava/util/UUID;)d
+b
+
+∂ ∂(S
+	abilitiesjava.util.Set"__id*2
+
+__unknown_file (
+
+%87java.util.Set*
+59:$
+
+◊# ◊(,
+gamemage.game.GameB,*
+(mage.abilities.effects.ContinuousEffectsH

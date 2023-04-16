@@ -1,0 +1,712 @@
+
+pmage.player.ai.ComputerPlayer#buildDeckWithNormalCards(ILjava/util/List;Ljava/util/List;)Lmage/cards/decks/Deck;Ä
+tD:/eclipse-workspace/mage-master/Mage.Server.Plugins/Mage.Player.AI/src/main/java/mage/player/ai/ComputerPlayer.javaﬁ ﬁ(/"28*´
+24
+Ú Ú(üú
+
+Ú Ú(
+%11java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()mk
+
+Ú Ú(%
+
+%12int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%11java.util.Set2size()*
+19
+23*°
+25
+· ·(BÆ
+´
+
+‚% ‚(H	
+%5int"java.lang.Math#floorDiv(II)I*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""* 
+
+__unknown_file (2(><
+
+Ê% Ê(0
+%6java.util.ArrayList"java.util.ArrayListΩ
+∫
+
+Ê! Ê(:
+%7"3java.util.ArrayList#<init>(Ljava/util/Collection;)V*7
+
+__unknown_file (
+
+%6java.util.ArrayList*8
+
+__unknown_file (
+
+cardPooljava.util.Listl
+j
+
+Ê Ê(;
+sortedCardsjava.util.List"__id*7
+
+__unknown_file (
+
+%6java.util.ArrayListVT
+
+Á* Á(:%
+%8mage.player.ai.ComputerPlayer$3"mage.player.ai.ComputerPlayer$3u
+s
+
+Á& Ó(	
+%9"java.lang.Object#<init>()V*C
+
+__unknown_file ('
+%
+%8mage.player.ai.ComputerPlayer$3ö
+ó
+
+Á Ó(
+
+%10void"Cjava.util.Collections#sort(Ljava/util/List;Ljava/util/Comparator;)V*5
+
+__unknown_file ("
+java.util.Collections*;
+
+__unknown_file (
+
+sortedCardsjava.util.List*C
+
+__unknown_file ('
+%
+%8mage.player.ai.ComputerPlayer$3*
+24*`
+26
+·? ·(AH
+F
+
+·? ·(A	
+%2int"__id*'
+
+__unknown_file (
+	
+%4int*
+25*`
+27
+·1 ·(<H
+F
+
+·1 ·(<	
+%2int"__id*'
+
+__unknown_file (
+	
+%3int*
+25*¿
+28
+‡ ‡(B@
+
+‡ ‡(
+%0mage.cards.decks.Deck"mage.cards.decks.Deckp
+n
+
+‡ ‡(
+%1"mage.cards.decks.Deck#<init>()V*9
+
+__unknown_file (
+
+%0mage.cards.decks.Deckn
+l
+
+‡ ‡(
+deckmage.cards.decks.Deck"__id*9
+
+__unknown_file (
+
+%0mage.cards.decks.Deck*
+26
+27*Ü
+10
+ï ï(lj
+
+ï ï(
+
+%39int"mage.Mana#getBlue()I*/
+
+__unknown_file (
+
+mana	mage.Mana2	getBlue()*
+7
+9*u
+11
+ê ê(!]
+[
+
+ë ë(& 
+mostLandNamejava.lang.String"__id*%
+
+__unknown_file (	
+Swamp*
+10*◊
+12
+ç ç(#nl
+
+ç* ç(9
+
+%36int"mage.Mana#getBlack()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getBlack()ä
+á
+
+ç ç(U
+%37long"java.lang.Math#round(D)J*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""Ω
+∫
+
+é é(0
+%38void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*%
+
+__unknown_file (	
+Swamp*"
+
+__unknown_file (
+""*
+10
+11*ä
+13
+å å(nl
+
+å å(
+
+%35int"mage.Mana#getBlack()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getBlack()*
+10
+12*‘
+14
+á á(#nl
+
+á* á(9
+
+%32int"mage.Mana#getGreen()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getGreen()ä
+á
+
+á á(U
+%33long"java.lang.Math#round(D)J*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""æ
+ª
+
+à à(1
+%34void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*&
+
+__unknown_file (
+
+Forest*"
+
+__unknown_file (
+""*
+13*î
+15
+Å Å(nl
+
+Å Å(&
+
+%26int"mage.Mana#getBlack()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getBlack()lj
+
+Å) Å(7
+
+%27int"mage.Mana#getBlue()I*/
+
+__unknown_file (
+
+mana	mage.Mana2	getBlue()nl
+
+Å: Å(I
+
+%28int"mage.Mana#getGreen()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getGreen()jh
+
+ÅL Å(Y
+
+%29int"mage.Mana#getRed()I*/
+
+__unknown_file (
+
+mana	mage.Mana2getRed()nl
+
+Å\ Å(k
+
+%30int"mage.Mana#getWhite()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getWhite()^
+\
+
+Ö Ö(' 
+mostLandNamejava.lang.String"__id*&
+
+__unknown_file (
+
+Forestnl
+
+Ü Ü(
+
+%31int"mage.Mana#getGreen()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getGreen()*
+13
+14*¸
+16
+˛ ˛(Q
+O
+
+˛ ˛(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""å
+â
+
+˛ ˛(
+cardmage.cards.Card"
+__arrayGet*2
+
+__unknown_file (
+
+%22java.util.Set*"
+
+__unknown_file (
+""*
+15
+17*¿
+17
+ˇ ˇ(≈¬
+
+ˇ ˇ('*
+%23#mage.abilities.costs.mana.ManaCosts"Bmage.MageObject#getManaCost()Lmage/abilities/costs/mana/ManaCosts;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getManaCost()∞≠
+
+ˇ ˇ(1
+%24	mage.Mana"8mage.abilities.costs.mana.ManaCosts#getMana()Lmage/Mana;*H
+
+__unknown_file (,
+*
+%23#mage.abilities.costs.mana.ManaCosts2	getMana()¨©
+
+ˇ ˇ(2
+%25void"mage.Mana#add(Lmage/Mana;)V*/
+
+__unknown_file (
+
+mana	mage.Mana*.
+
+__unknown_file (
+
+%24	mage.Mana2add(Lmage/Mana;)*
+16*∏
+18
+˛ ˛(üú
+
+˛ ˛((
+%22java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()*
+16*¯
+19
+˝ ˝(+)
+
+˝ ˝(
+%20	mage.Mana"	mage.ManaZ
+X
+
+˝ ˝(
+%21"mage.Mana#<init>()V*.
+
+__unknown_file (
+
+%20	mage.ManaW
+U
+
+˝ ˝(
+mana	mage.Mana"__id*.
+
+__unknown_file (
+
+%20	mage.Mana*
+18*®
+1
+∞ ∞(üú
+
+∞6 ∞(E
+%51java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()mk
+
+∞6 ∞(L
+
+%52int"java.util.Set#size()I*2
+
+__unknown_file (
+
+%51java.util.Set2size()÷
+”
+
+∞ ∞(M
+%53void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*>
+
+__unknown_file ("
+ 
+mostLandNamejava.lang.String*"
+
+__unknown_file (
+"""-
+
+≤ ≤(
+
+deckmage.cards.decks.Deck*t
+2
+´ ´('^
+\
+
+´ ´(' 
+mostLandNamejava.lang.String"__id*&
+
+__unknown_file (
+
+Plains*
+1*”
+3
+® ®(#jh
+
+®* ®(7
+
+%48int"mage.Mana#getRed()I*/
+
+__unknown_file (
+
+mana	mage.Mana2getRed()ä
+á
+
+® ®(S
+%49long"java.lang.Math#round(D)J*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""¿
+Ω
+
+© ©(3
+%50void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*(
+
+__unknown_file (
+
+Mountain*"
+
+__unknown_file (
+""*
+2
+1*É
+4
+ß ß(jh
+
+ß ß(
+
+%47int"mage.Mana#getRed()I*/
+
+__unknown_file (
+
+mana	mage.Mana2getRed()*
+3
+1*t
+5
+¢ ¢(!^
+\
+
+£ £(' 
+mostLandNamejava.lang.String"__id*&
+
+__unknown_file (
+
+Plains*
+4*’
+6
+ü ü(#nl
+
+ü* ü(9
+
+%44int"mage.Mana#getWhite()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getWhite()ä
+á
+
+ü ü(U
+%45long"java.lang.Math#round(D)J*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""æ
+ª
+
+† †(1
+%46void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*&
+
+__unknown_file (
+
+Plains*"
+
+__unknown_file (
+""*
+4
+5*á
+7
+û û(nl
+
+û û(
+
+%43int"mage.Mana#getWhite()I*/
+
+__unknown_file (
+
+mana	mage.Mana2
+getWhite()*
+4
+6*t
+8
+ô ô(!^
+\
+
+ö ö(' 
+mostLandNamejava.lang.String"__id*&
+
+__unknown_file (
+
+Island*
+7*”
+9
+ñ ñ(#lj
+
+ñ* ñ(8
+
+%40int"mage.Mana#getBlue()I*/
+
+__unknown_file (
+
+mana	mage.Mana2	getBlue()ä
+á
+
+ñ ñ(T
+%41long"java.lang.Math#round(D)J*.
+
+__unknown_file ("
+java.lang.Math*"
+
+__unknown_file (
+""æ
+ª
+
+ó ó(1
+%42void"Xmage.player.ai.ComputerPlayer#addBasicLands(Lmage/cards/decks/Deck;Ljava/lang/String;I)V*=
+
+__unknown_file (!"
+mage.player.ai.ComputerPlayer*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck*&
+
+__unknown_file (
+
+Island*"
+
+__unknown_file (
+""*
+7
+8*Ô
+21
+ı ı(üú
+
+ı ı(
+%16java.util.Set"/mage.cards.decks.Deck#getCards()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2
+getCards()∂
+≥
+
+ı ı()
+%17boolean"
+__arrayAdd*2
+
+__unknown_file (
+
+%16java.util.Set*
+
+__unknown_file (: *5
+
+__unknown_file (
+
+cardmage.cards.Cardß§
+
+ˆ ˆ(#
+%18java.util.Set"3mage.cards.decks.Deck#getSideboard()Ljava/util/Set;*;
+
+__unknown_file (
+
+deckmage.cards.decks.Deck2getSideboard()—Œ
+
+ˆ ˆ(0
+%19boolean")java.util.Set#remove(Ljava/lang/Object;)Z*2
+
+__unknown_file (
+
+%18java.util.Set*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Ljava/lang/Object;)*
+24*î
+22
+Û Û(#î
+ë
+
+Û Û(0
+%14mage.cards.Card"
+__arrayGet*;
+
+__unknown_file (
+
+sortedCardsjava.util.List*"
+
+__unknown_file (
+""c
+a
+
+Û Û(1
+cardmage.cards.Card"__id*4
+
+__unknown_file (
+
+%14mage.cards.Card|z
+
+Ù Ù(
+%15boolean"mage.MageObject#isBasic()Z*5
+
+__unknown_file (
+
+cardmage.cards.Card2	isBasic()*
+24
+21*ì
+23
+Ú< Ú(Gwu
+
+Ú< Ú(N
+
+%13int"java.util.List#size()I*;
+
+__unknown_file (
+
+sortedCardsjava.util.List2size()*
+19
+22: 
+
+__unknown_file (
+"":(
+
+ﬁA ﬁ(U
+cardPooljava.util.List:&
+
+ﬁV ﬁ(z
+colorsjava.util.ListB!"
+mage.player.ai.ComputerPlayerH

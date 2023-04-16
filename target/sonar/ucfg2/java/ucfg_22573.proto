@@ -1,0 +1,621 @@
+
+omage.client.deck.generator.DeckGenerator#generateDeck(ILjava/util/List;Ljava/util/List;)Lmage/cards/decks/Deck;r
+hD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/deck/generator/DeckGenerator.java ($"5*’
+2
+ñ ñ(X
+V
+
+ñ) ñ(:
+%39mage.constants.CardType"__id*"
+
+__unknown_file (
+""‰·
+
+ñ ñ(;)
+%40"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*W
+
+__unknown_file (;
+9
+nonCreatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%39mage.constants.CardType2$notTypes([Lmage/constants/CardType;)*
+1*Ë
+3
+ë1 ë(C][
+
+ë5 ë(A)
+%30"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaç
+ä
+
+ë1 ë(C
+%31",mage.cards.repository.CardCriteria#<init>()V*G
+
+__unknown_file (+
+)
+%30"mage.cards.repository.CardCriteriaô
+ñ
+
+ë ë(D9
+nonCreatureCriteria"mage.cards.repository.CardCriteria"__id*G
+
+__unknown_file (+
+)
+%30"mage.cards.repository.CardCriteria“œ
+
+í í(*)
+%32"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*W
+
+__unknown_file (;
+9
+nonCreatureCriteria"mage.cards.repository.CardCriteria*8
+
+__unknown_file (
+
+setsjava.lang.String[]2setCodes([Ljava/lang/String;)X
+V
+
+ì% ì(2
+%33mage.constants.CardType"__id*"
+
+__unknown_file (
+""‰·
+
+ì ì(3)
+%34"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*W
+
+__unknown_file (;
+9
+nonCreatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%33mage.constants.CardType2$notTypes([Lmage/constants/CardType;)X
+V
+
+î% î(6
+%35mage.constants.CardType"__id*"
+
+__unknown_file (
+""‰·
+
+î î(7)
+%36"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*W
+
+__unknown_file (;
+9
+nonCreatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%35mage.constants.CardType2$notTypes([Lmage/constants/CardType;)•
+¢
+
+ï ï(5
+%37.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialogƒ¡
+
+ï ï(&
+%38boolean">mage.client.deck.generator.DeckGeneratorDialog#useArtifacts()Z*S
+
+__unknown_file (7
+5
+%37.mage.client.deck.generator.DeckGeneratorDialog2useArtifacts()*
+2
+1*“
+4
+ç ç(X
+V
+
+ç& ç(7
+%28mage.constants.CardType"__id*"
+
+__unknown_file (
+""·ﬁ
+
+ç ç(8)
+%29"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*T
+
+__unknown_file (8
+6
+creatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%28mage.constants.CardType2$notTypes([Lmage/constants/CardType;)*
+3*•0
+5
+Å( Å(0§
+°
+
+Å2 Å(;4
+%0.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog–Õ
+
+Å2 Å(S	
+%1int"Gmage.client.deck.generator.DeckGeneratorDialog#getCreaturePercentage()I*R
+
+__unknown_file (6
+4
+%0.mage.client.deck.generator.DeckGeneratorDialog2getCreaturePercentage()§
+°
+
+ÅU Å(^4
+%2.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog÷”
+
+ÅU Å(y	
+%3int"Jmage.client.deck.generator.DeckGeneratorDialog#getNonCreaturePercentage()I*R
+
+__unknown_file (6
+4
+%2.mage.client.deck.generator.DeckGeneratorDialog2getNonCreaturePercentage()§
+°
+
+Ç Ç(4
+%4.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog»≈
+
+Ç Ç(-	
+%5int"Cmage.client.deck.generator.DeckGeneratorDialog#getLandPercentage()I*R
+
+__unknown_file (6
+4
+%4.mage.client.deck.generator.DeckGeneratorDialog2getLandPercentage()§
+°
+
+Ç> Ç(G4
+%6.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog¿Ω
+
+Ç> Ç(U
+%7boolean"=mage.client.deck.generator.DeckGeneratorDialog#isSingleton()Z*R
+
+__unknown_file (6
+4
+%6.mage.client.deck.generator.DeckGeneratorDialog2isSingleton()§
+°
+
+ÇW Ç(`4
+%8.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog¿Ω
+
+ÇW Ç(n
+%9boolean"=mage.client.deck.generator.DeckGeneratorDialog#isColorless()Z*R
+
+__unknown_file (6
+4
+%8.mage.client.deck.generator.DeckGeneratorDialog2isColorless()•
+¢
+
+É É(5
+%10.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog¿Ω
+
+É É(&
+%11boolean"<mage.client.deck.generator.DeckGeneratorDialog#isAdvanced()Z*S
+
+__unknown_file (7
+5
+%10.mage.client.deck.generator.DeckGeneratorDialog2isAdvanced()•
+¢
+
+É( É(15
+%12.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialog¢ü
+
+É( É(G2
+%13+mage.client.deck.generator.DeckGeneratorCMC"qmage.client.deck.generator.DeckGeneratorDialog#getDeckGeneratorCMC()Lmage/client/deck/generator/DeckGeneratorCMC;*S
+
+__unknown_file (7
+5
+%12.mage.client.deck.generator.DeckGeneratorDialog2getDeckGeneratorCMC()qo
+
+Å Å('3
+%14,mage.client.deck.generator.DeckGeneratorPool",mage.client.deck.generator.DeckGeneratorPoolù
+ö
+
+Å É(H
+%15"zmage.client.deck.generator.DeckGeneratorPool#<init>(IIIILjava/util/List;ZZZLmage/client/deck/generator/DeckGeneratorCMC;)V*Q
+
+__unknown_file (5
+3
+%14,mage.client.deck.generator.DeckGeneratorPool*"
+
+__unknown_file (
+""*'
+
+__unknown_file (
+	
+%1int*'
+
+__unknown_file (
+	
+%3int*'
+
+__unknown_file (
+	
+%5int*=
+
+__unknown_file (!
+
+allowedColorsjava.util.List*+
+
+__unknown_file (
+
+%7boolean*+
+
+__unknown_file (
+
+%9boolean*,
+
+__unknown_file (
+
+%11boolean*P
+
+__unknown_file (4
+2
+%13+mage.client.deck.generator.DeckGeneratorCMC°
+û
+
+Å É(H7*
+(mage.client.deck.generator.DeckGenerator"	
+genPool"__id*Q
+
+__unknown_file (5
+3
+%14,mage.client.deck.generator.DeckGeneratorPoolus
+
+Ö; Ö(K
+
+%16int"java.util.List#size()I*9
+
+__unknown_file (
+
+	setsToUsejava.util.List2size()=;
+
+Ö0 Ö(L
+%17java.lang.String[]"java.lang.String[]¸˘
+
+Ö Ö(M
+%18java.lang.String[]">java.util.List#toArray([Ljava/lang/Object;)[Ljava/lang/Object;*9
+
+__unknown_file (
+
+	setsToUsejava.util.List*7
+
+__unknown_file (
+
+%17java.lang.String[]2toArray([Ljava/lang/Object;)i
+g
+
+Ö Ö(N
+setsjava.lang.String[]"__id*7
+
+__unknown_file (
+
+%18java.lang.String[]][
+
+à2 à(>)
+%19"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaç
+ä
+
+à. à(@
+%20",mage.cards.repository.CardCriteria#<init>()V*G
+
+__unknown_file (+
+)
+%19"mage.cards.repository.CardCriteriañ
+ì
+
+à à(A6
+creatureCriteria"mage.cards.repository.CardCriteria"__id*G
+
+__unknown_file (+
+)
+%19"mage.cards.repository.CardCriteriaœÃ
+
+â â(')
+%21"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*T
+
+__unknown_file (8
+6
+creatureCriteria"mage.cards.repository.CardCriteria*8
+
+__unknown_file (
+
+setsjava.lang.String[]2setCodes([Ljava/lang/String;)X
+V
+
+ä" ä(/
+%22mage.constants.CardType"__id*"
+
+__unknown_file (
+""·ﬁ
+
+ä ä(0)
+%23"mage.cards.repository.CardCriteria"kmage.cards.repository.CardCriteria#notTypes([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*T
+
+__unknown_file (8
+6
+creatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%22mage.constants.CardType2$notTypes([Lmage/constants/CardType;)X
+V
+
+ã ã(0
+%24mage.constants.CardType"__id*"
+
+__unknown_file (
+""€ÿ
+
+ã ã(1)
+%25"mage.cards.repository.CardCriteria"hmage.cards.repository.CardCriteria#types([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*T
+
+__unknown_file (8
+6
+creatureCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%24mage.constants.CardType2!types([Lmage/constants/CardType;)•
+¢
+
+å å(5
+%26.mage.client.deck.generator.DeckGeneratorDialog"__id*W
+
+__unknown_file (;*9*
+(mage.client.deck.generator.DeckGenerator"
+	genDialogƒ¡
+
+å å(&
+%27boolean">mage.client.deck.generator.DeckGeneratorDialog#useArtifacts()Z*S
+
+__unknown_file (7
+5
+%26.mage.client.deck.generator.DeckGeneratorDialog2useArtifacts()*
+3
+4*ã$
+1
+ö2 ö(D][
+
+ö6 ö(B)
+%41"mage.cards.repository.CardCriteria""mage.cards.repository.CardCriteriaç
+ä
+
+ö2 ö(D
+%42",mage.cards.repository.CardCriteria#<init>()V*G
+
+__unknown_file (+
+)
+%41"mage.cards.repository.CardCriteriaö
+ó
+
+ö ö(E:
+nonBasicLandCriteria"mage.cards.repository.CardCriteria"__id*G
+
+__unknown_file (+
+)
+%41"mage.cards.repository.CardCriteria”–
+
+õ õ(+)
+%43"mage.cards.repository.CardCriteria"dmage.cards.repository.CardCriteria#setCodes([Ljava/lang/String;)Lmage/cards/repository/CardCriteria;*X
+
+__unknown_file (<
+:
+nonBasicLandCriteria"mage.cards.repository.CardCriteria*8
+
+__unknown_file (
+
+setsjava.lang.String[]2setCodes([Ljava/lang/String;)X
+V
+
+ú# ú(0
+%44mage.constants.CardType"__id*"
+
+__unknown_file (
+""ﬂ‹
+
+ú ú(1)
+%45"mage.cards.repository.CardCriteria"hmage.cards.repository.CardCriteria#types([Lmage/constants/CardType;)Lmage/cards/repository/CardCriteria;*X
+
+__unknown_file (<
+:
+nonBasicLandCriteria"mage.cards.repository.CardCriteria*<
+
+__unknown_file ( 
+
+%44mage.constants.CardType2!types([Lmage/constants/CardType;)Y
+W
+
+ù+ ù(:
+%46mage.constants.SuperType"__id*"
+
+__unknown_file (
+""ÚÔ
+
+ù ù(;)
+%47"mage.cards.repository.CardCriteria"qmage.cards.repository.CardCriteria#notSupertypes([Lmage/constants/SuperType;)Lmage/cards/repository/CardCriteria;*X
+
+__unknown_file (<
+:
+nonBasicLandCriteria"mage.cards.repository.CardCriteria*=
+
+__unknown_file (!
+
+%46mage.constants.SuperType2*notSupertypes([Lmage/constants/SuperType;)à
+Ö
+
+†1 †(N
+%48java.util.Map"\mage.client.deck.generator.DeckGenerator#generateBasicLands(Ljava/util/List;)Ljava/util/Map;*H
+
+__unknown_file (,"*
+(mage.client.deck.generator.DeckGenerator*9
+
+__unknown_file (
+
+	setsToUsejava.util.Liste
+c
+
+† †(O
+
+basicLandsjava.util.Map"__id*2
+
+__unknown_file (
+
+%48java.util.Map°
+û
+
+¢) ¢(03
+%49,mage.client.deck.generator.DeckGeneratorPool"__id*U
+
+__unknown_file (9*7*
+(mage.client.deck.generator.DeckGenerator"	
+genPoolƒ¡
+
+¢) ¢(C
+
+%50int"@mage.client.deck.generator.DeckGeneratorPool#getCreatureCount()I*Q
+
+__unknown_file (5
+3
+%49,mage.client.deck.generator.DeckGeneratorPool2getCreatureCount()«
+ƒ
+
+¢ ¢(D
+%51void"_mage.client.deck.generator.DeckGenerator#generateSpells(Lmage/cards/repository/CardCriteria;I)V*H
+
+__unknown_file (,"*
+(mage.client.deck.generator.DeckGenerator*T
+
+__unknown_file (8
+6
+creatureCriteria"mage.cards.repository.CardCriteria*(
+
+__unknown_file (
+
+
+%50int°
+û
+
+£, £(33
+%52,mage.client.deck.generator.DeckGeneratorPool"__id*U
+
+__unknown_file (9*7*
+(mage.client.deck.generator.DeckGenerator"	
+genPool «
+
+£, £(I
+
+%53int"Cmage.client.deck.generator.DeckGeneratorPool#getNonCreatureCount()I*Q
+
+__unknown_file (5
+3
+%52,mage.client.deck.generator.DeckGeneratorPool2getNonCreatureCount() 
+«
+
+£ £(J
+%54void"_mage.client.deck.generator.DeckGenerator#generateSpells(Lmage/cards/repository/CardCriteria;I)V*H
+
+__unknown_file (,"*
+(mage.client.deck.generator.DeckGenerator*W
+
+__unknown_file (;
+9
+nonCreatureCriteria"mage.cards.repository.CardCriteria*(
+
+__unknown_file (
+
+
+%53int°
+û
+
+§, §(33
+%55,mage.client.deck.generator.DeckGeneratorPool"__id*U
+
+__unknown_file (9*7*
+(mage.client.deck.generator.DeckGenerator"	
+genPoolºπ
+
+§, §(B
+
+%56int"<mage.client.deck.generator.DeckGeneratorPool#getLandCount()I*Q
+
+__unknown_file (5
+3
+%55,mage.client.deck.generator.DeckGeneratorPool2getLandCount()î
+ë
+
+§ §(O
+%57void"mmage.client.deck.generator.DeckGenerator#generateLands(Lmage/cards/repository/CardCriteria;ILjava/util/Map;)V*H
+
+__unknown_file (,"*
+(mage.client.deck.generator.DeckGenerator*X
+
+__unknown_file (<
+:
+nonBasicLandCriteria"mage.cards.repository.CardCriteria*(
+
+__unknown_file (
+
+
+%56int*9
+
+__unknown_file (
+
+
+basicLandsjava.util.Map°
+û
+
+ß ß(3
+%58,mage.client.deck.generator.DeckGeneratorPool"__id*U
+
+__unknown_file (9*7*
+(mage.client.deck.generator.DeckGenerator"	
+genPool⁄◊
+
+ß ß( 
+%59mage.cards.decks.Deck"Mmage.client.deck.generator.DeckGeneratorPool#getDeck()Lmage/cards/decks/Deck;*Q
+
+__unknown_file (5
+3
+%58,mage.client.deck.generator.DeckGeneratorPool2	getDeck()",
+
+ß ß(!
+
+%59mage.cards.decks.Deck: 
+
+__unknown_file (
+"":+
+3 (Y
+allowedColorsjava.util.List:'
+Z (p
+	setsToUsejava.util.ListB,"*
+(mage.client.deck.generator.DeckGenerator

@@ -1,0 +1,75 @@
+
+oorg.mage.plugins.card.utils.Transparency#makeColorTransparent(Ljava/awt/Image;Ljava/awt/Color;)Ljava/awt/Image;r
+hD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/org/mage/plugins/card/utils/Transparency.java (,"1*∫
+1 (	jh
+! (/0
+%0*org.mage.plugins.card.utils.Transparency$1"*org.mage.plugins.card.utils.Transparency$1å
+â
+ (	
+%1"'java.awt.image.RGBImageFilter#<init>()V*N
+
+__unknown_file (2
+0
+%0*org.mage.plugins.card.utils.Transparency$1â
+Ü
+ (
+$
+filterjava.awt.image.ImageFilter"__id*N
+
+__unknown_file (2
+0
+%0*org.mage.plugins.card.utils.Transparency$1¨©
+ 3  (A"
+%2java.awt.image.ImageProducer"8java.awt.Image#getSource()Ljava/awt/image/ImageProducer;*2
+
+__unknown_file (
+
+imjava.awt.Image2getSource()ZX
+   (2(
+%3"java.awt.image.FilteredImageSource""java.awt.image.FilteredImageSource…
+∆
+   (J
+%4"fjava.awt.image.FilteredImageSource#<init>(Ljava/awt/image/ImageProducer;Ljava/awt/image/ImageFilter;)V*F
+
+__unknown_file (*
+(
+%3"java.awt.image.FilteredImageSource*@
+
+__unknown_file ($
+"
+%2java.awt.image.ImageProducer*B
+
+__unknown_file (&
+$
+filterjava.awt.image.ImageFilter~
+|
+   (K"
+ipjava.awt.image.ImageProducer"__id*F
+
+__unknown_file (*
+(
+%3"java.awt.image.FilteredImageSourceè
+å
+! !(*
+%5java.awt.Toolkit"6java.awt.Toolkit#getDefaultToolkit()Ljava/awt/Toolkit;*0
+
+__unknown_file ("
+java.awt.Toolkitñì
+! !(:
+%6java.awt.Image"Ljava.awt.Toolkit#createImage(Ljava/awt/image/ImageProducer;)Ljava/awt/Image;*4
+
+__unknown_file (
+
+%5java.awt.Toolkit*@
+
+__unknown_file ($
+"
+ipjava.awt.image.ImageProducer2+createImage(Ljava/awt/image/ImageProducer;)""
+! !(;
+
+%6java.awt.Image: 
+- (6
+imjava.awt.Image:#
+7 (H
+colorjava.awt.ColorB,"*
+(org.mage.plugins.card.utils.TransparencyH

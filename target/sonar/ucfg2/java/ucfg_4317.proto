@@ -1,0 +1,410 @@
+
+mmage.abilities.effects.common.RevealLibraryPutIntoHandEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Z
+uD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/RevealLibraryPutIntoHandEffect.java= =("startingBlock*ý
+2P P(R
+P
+P* P(3
+%23mage.constants.Zone"__id*"
+
+__unknown_file (
+""š—
+P P(B
+%24boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*=
+
+__unknown_file (!
+
+cardsToHandmage.cards.Cards*8
+
+__unknown_file (
+
+%23mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;) 
+
+Q Q(
+%25mage.constants.Zone"__id*o
+
+__unknown_file (S*Q>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffect"
+zoneToPutRestR
+P
+R R(
+%26mage.constants.Zone"__id*"
+
+__unknown_file (
+""*
+3
+4*Ð
+3V W(I 
+
+W, W(9
+%21mage.constants.Zone"__id*o
+
+__unknown_file (S*Q>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffect"
+zoneToPutRest˜•
+W W(H
+%22boolean"omage.players.Player#moveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*8
+
+__unknown_file (
+
+%21mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2ZmoveCards(Lmage/cards/Cards;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+1*ÿ
+startingBlock= =(3Š
+‡
+< <(
+%27"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+= =("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%27”
+‘
+< <(
+%28"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+=, =(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%28*
+12*
+4R U(ú÷
+S S(S
+%20boolean"kmage.players.Player#putCardsOnBottomOfLibrary(Lmage/cards/Cards;Lmage/game/Game;Lmage/abilities/Ability;Z)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*"
+
+__unknown_file (
+""2VputCardsOnBottomOfLibrary(Lmage/cards/Cards;Lmage/game/Game;Lmage/abilities/Ability;Z)*
+1*ù
+5J J(O
+M
+J J(
+cardmage.cards.Card"__id*"
+
+__unknown_file (
+""
+
+J J(
+cardmage.cards.Card"
+__arrayGet*8
+
+__unknown_file (
+
+	cardsListjava.util.Set*"
+
+__unknown_file (
+""*
+2
+7*Ç
+6L L(ÒÏ
+L L(%
+%18void"(mage.cards.Cards#add(Lmage/cards/Card;)V*=
+
+__unknown_file (!
+
+cardsToHandmage.cards.Cards*5
+
+__unknown_file (
+
+cardmage.cards.Card2add(Lmage/cards/Card;)ÝÚ
+M M("
+%19boolean"/mage.cards.CardsImpl#remove(Lmage/cards/Card;)Z*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*5
+
+__unknown_file (
+
+cardmage.cards.Card2remove(Lmage/cards/Card;)*
+5*Ç
+7K K(œ
+™
+K K(
+%15mage.filter.FilterCard"__id*h
+
+__unknown_file (L*J>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffect"
+filter•’
+K# K(5
+%16java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()øõ
+K K(D
+%17boolean"hmage.filter.FilterCard#match(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+%15mage.filter.FilterCard*5
+
+__unknown_file (
+
+cardmage.cards.Card*3
+
+__unknown_file (
+
+%16java.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Pmatch(Lmage/cards/Card;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)*
+5
+6*Û
+9D D()><
+D D('
+%3mage.cards.CardsImpl"mage.cards.CardsImpll
+j
+D D()
+%4"mage.cards.CardsImpl#<init>()V*8
+
+__unknown_file (
+
+%3mage.cards.CardsImplk
+i
+D D(*
+cardsmage.cards.CardsImpl"__id*8
+
+__unknown_file (
+
+%3mage.cards.CardsImpl°­
+E E(,
+%5mage.players.Library"6mage.players.Player#getLibrary()Lmage/players/Library;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getLibrary()²
+¯
+E? E(J.
+%6(mage.abilities.dynamicvalue.DynamicValue"__id*m
+
+__unknown_file (Q*O>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffect"
+amountCardsŒ‰
+E? E(h	
+%7int"|mage.abilities.dynamicvalue.DynamicValue#calculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)I*L
+
+__unknown_file (0
+.
+%6(mage.abilities.dynamicvalue.DynamicValue*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*\
+
+__unknown_file (@>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffect2Rcalculate(Lmage/game/Game;Lmage/abilities/Ability;Lmage/abilities/effects/Effect;)Ÿœ
+E E(i
+%8java.util.Set"Bmage.players.Library#getTopCards(Lmage/game/Game;I)Ljava/util/Set;*8
+
+__unknown_file (
+
+%5mage.players.Library*4
+
+__unknown_file (
+
+gamemage.game.Game*'
+
+__unknown_file (
+	
+%7int2getTopCards(Lmage/game/Game;I)ÑÎ
+E E(j
+
+%9void"-mage.cards.CardsImpl#addAll(Ljava/util/Set;)V*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*1
+
+__unknown_file (
+
+%8java.util.Set2addAll(Ljava/util/Set;)¡ž
+F F(7
+%10java.lang.String"-mage.MageObject#getIdName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getIdName() 
+F F(E
+%11void"Vmage.players.Player#revealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)V*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*5
+
+__unknown_file (
+
+%10java.lang.String*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2ArevealCards(Ljava/lang/String;Lmage/cards/Cards;Lmage/game/Game;)òï
+H H(2
+%12java.util.Set">mage.cards.CardsImpl#getCards(Lmage/game/Game;)Ljava/util/Set;*;
+
+__unknown_file (
+
+cardsmage.cards.CardsImpl*4
+
+__unknown_file (
+
+gamemage.game.Game2getCards(Lmage/game/Game;)b
+`
+H H(3
+	cardsListjava.util.Set"__id*2
+
+__unknown_file (
+
+%12java.util.Set?=
+I  I()
+%13mage.cards.CardsImpl"mage.cards.CardsImpln
+l
+I I(+
+%14"mage.cards.CardsImpl#<init>()V*9
+
+__unknown_file (
+
+%13mage.cards.CardsImpln
+l
+I I(,
+cardsToHandmage.cards.Cards"__id*9
+
+__unknown_file (
+
+%13mage.cards.CardsImpl*
+5*"
+10A A("
+A A(
+""*ž
+12> >( °­
+>+ >(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+> >(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+> >(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player„
+?" ?(8
+%2mage.MageObject"Cmage.game.Game#getObject(Lmage/abilities/Ability;)Lmage/MageObject;*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2#getObject(Lmage/abilities/Ability;)h
+f
+? ?(9
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%2mage.MageObject*
+9
+10*!
+1Y Y("
+Y Y(
+"":"
+= =(#
+gamemage.game.Game:,
+=$ =(2 
+sourcemage.abilities.AbilityB@>
+<mage.abilities.effects.common.RevealLibraryPutIntoHandEffectHP

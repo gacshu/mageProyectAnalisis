@@ -1,0 +1,183 @@
+
+pmage.game.stack.Spell#spellAbilityCheckTargetsAndDeactivateModes(Lmage/abilities/SpellAbility;Lmage/game/Game;)ZZ
+ND:/eclipse-workspace/mage-master/Mage/src/main/java/mage/game/stack/Spell.java÷ ÷(>"7*æ
+3
+ş ş( À½
+
+ş ş(+
+%11mage.abilities.Modes";mage.abilities.AbilityImpl#getModes()Lmage/abilities/Modes;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2
+getModes()—”
+
+ş? ş(K
+%12java.util.UUID"+mage.abilities.Mode#getId()Ljava/util/UUID;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getId()îë
+
+ş ş(L
+%13void":mage.abilities.Modes#removeSelectedMode(Ljava/util/UUID;)V*9
+
+__unknown_file (
+
+%11mage.abilities.Modes*3
+
+__unknown_file (
+
+%12java.util.UUID2$removeSelectedMode(Ljava/util/UUID;)
+
+ÿ ÿ(%
+%14void"java.util.Iterator#remove()V*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2remove()*
+6*¡
+4
+ı ı(ª§
+
+ı ı(&
+%9mage.target.Targets"5mage.abilities.Mode#getTargets()Lmage/target/Targets;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getTargets()Ú×
+
+ı ı(E
+%10boolean"Image.target.Targets#stillLegal(Lmage/abilities/Ability;Lmage/game/Game;)Z*7
+
+__unknown_file (
+
+%9mage.target.Targets*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility*4
+
+__unknown_file (
+
+gamemage.game.Game24stillLegal(Lmage/abilities/Ability;Lmage/game/Game;)*
+3
+6*¶
+5
+ú& ú(.˜•
+
+ú& ú(5
+%4java.util.UUID"+java.util.Iterator#next()Ljava/lang/Object;*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2next()n
+l
+
+ú ú(6$
+nextSelectedModeIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%4java.util.UUID¿¼
+
+û û(/
+%5mage.abilities.Modes";mage.abilities.AbilityImpl#getModes()Lmage/abilities/Modes;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2
+getModes()²
+¯
+
+û û(G
+%6mage.abilities.Mode"__mapGet*8
+
+__unknown_file (
+
+%5mage.abilities.Modes*B
+
+__unknown_file (&
+$
+nextSelectedModeIdjava.util.UUIDj
+h
+
+û û(H
+modemage.abilities.Mode"__id*7
+
+__unknown_file (
+
+%6mage.abilities.Modeª§
+
+ü ü("
+%7mage.target.Targets"5mage.abilities.Mode#getTargets()Lmage/target/Targets;*9
+
+__unknown_file (
+
+modemage.abilities.Mode2getTargets()
+
+ü ü(,
+%8boolean"java.util.ArrayList#isEmpty()Z*7
+
+__unknown_file (
+
+%7mage.target.Targets2	isEmpty()*
+4
+6* 
+6
+ù^ ù(f†ƒ
+
+ù^ ù(p
+%3boolean"java.util.Iterator#hasNext()Z*<
+
+__unknown_file ( 
+
+iteratorjava.util.Iterator2	hasNext()*
+5
+1*
+7
+ø ø("¿¼
+
+ù' ù(>
+%0mage.abilities.Modes";mage.abilities.AbilityImpl#getModes()Lmage/abilities/Modes;*I
+
+__unknown_file (-
++
+spellAbilitymage.abilities.SpellAbility2
+getModes()¬©
+
+ù' ù(Q
+%1java.util.List"7mage.abilities.Modes#getSelectedModes()Ljava/util/List;*8
+
+__unknown_file (
+
+%0mage.abilities.Modes2getSelectedModes()˜•
+
+ù' ù(\
+%2java.util.Iterator"-java.util.List#iterator()Ljava/util/Iterator;*2
+
+__unknown_file (
+
+%1java.util.List2
+iterator()l
+j
+
+ù ù(\
+iteratorjava.util.Iterator"__id*6
+
+__unknown_file (
+
+%2java.util.Iterator*
+6*%
+1
+… …("
+
+… …(
+"":9
+
+÷? ÷(Y+
+spellAbilitymage.abilities.SpellAbility:$
+
+÷Z ÷(c
+gamemage.game.GameB
+mage.game.stack.SpellP

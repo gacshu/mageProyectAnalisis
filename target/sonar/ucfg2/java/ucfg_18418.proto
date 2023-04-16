@@ -1,0 +1,548 @@
+
+Smage.abilities.keyword.HauntEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zh
+\D:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/keyword/HauntAbility.java² ²("startingBlock*%
+2
+¾ ¾("
+
+¾ ¾(
+""*û
+3
+½ ½(S
+Q
+
+½$ ½(/
+%7mage.constants.Zone"__id*"
+
+__unknown_file (
+""Œ‰
+
+½ ½(>
+%8boolean"nmage.players.Player#moveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)Z*;
+
+__unknown_file (
+
+playermage.players.Player*5
+
+__unknown_file (
+
+cardmage.cards.Card*7
+
+__unknown_file (
+
+%7mage.constants.Zone*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2YmoveCards(Lmage/cards/Card;Lmage/constants/Zone;Lmage/abilities/Ability;Lmage/game/Game;)*
+2
+1*ˆ
+startingBlock
+² ²(3Œ
+‰
+
+± ±(
+%44"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameY
+W
+
+² ²("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%44–
+“
+
+± ±(
+%45"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilityc
+a
+
+², ²(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%45*
+8*%
+4
+» »("
+
+» »(
+""*Ü
+5
+¸$ ¸((›
+˜
+
+¸6 ¸(C-
+%4'mage.target.targetpointer.TargetPointer"__id*U
+
+__unknown_file (9*7$
+"mage.abilities.keyword.HauntEffect"
+targetPointerˆ…
+
+¸6 ¸(Z
+%5java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%4'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Œ‰
+
+¸$ ¸([#
+%6mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%5java.util.UUID2getPermanent(Ljava/util/UUID;)Š
+‡
+
+¸ ¸(\0
+hauntedCreaturemage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%6mage.game.permanent.Permanent*
+3
+4*%
+6
+¶ ¶("
+
+¶ ¶(
+""*©
+8
+³ ³(²¯
+
+³' ³(?
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()òï
+
+³ ³(@
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)l
+j
+
+³ ³(A
+playermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Playerª§
+
+´! ´(5
+%2java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()æã
+
+´ ´(6
+%3mage.cards.Card"9mage.game.Game#getCard(Ljava/util/UUID;)Lmage/cards/Card;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%2java.util.UUID2getCard(Ljava/util/UUID;)b
+`
+
+´ ´(7
+cardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%3mage.cards.Card*
+5
+6*à9
+1
+Á' Á(2FD
+
+Á Á(&
+%9java.lang.StringBuilder"java.lang.StringBuilder³
+°
+
+Á Á(3
+%10"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*;
+
+__unknown_file (
+
+%9java.lang.StringBuilder*)
+
+__unknown_file (
+	Haunting_«¨
+
+Â Â(,
+%11java.util.UUID"4mage.abilities.Ability#getSourceId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getSourceId()–“
+
+Â Â(7
+%12java.lang.String"+java.util.UUID#toString()Ljava/lang/String;*3
+
+__unknown_file (
+
+%11java.util.UUID2
+toString()Œ‰
+
+Á Â(8
+%13java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*;
+
+__unknown_file (
+
+%9java.lang.StringBuilder*5
+
+__unknown_file (
+
+%12java.lang.String2append(Ljava/lang/String;)éæ
+
+Ã Ã(7
+
+%14int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*5
+
+__unknown_file (
+
+cardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)‚ÿ
+
+Ä Ä(D
+
+%15int"7mage.MageObject#getZoneChangeCounter(Lmage/game/Game;)I*N
+
+__unknown_file (2
+0
+hauntedCreaturemage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2&getZoneChangeCounter(Lmage/game/Game;)ØÕ
+
+Á Ä(E
+%16java.lang.StringBuilder":java.lang.StringBuilder#append(I)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%13java.lang.StringBuilder*"
+
+__unknown_file (
+""2	append(I)¨¥
+
+Á Ä(P
+%17java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%16java.lang.StringBuilder2
+toString()d
+b
+
+Á Ä(Q
+keyjava.lang.String"__id*5
+
+__unknown_file (
+
+%17java.lang.Stringš
+
+Å Å(
+%18mage.game.GameState".mage.game.Game#getState()Lmage/game/GameState;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getState()œ
+™
+
+Å6 Å(C.
+%19'mage.target.targetpointer.TargetPointer"__id*U
+
+__unknown_file (9*7$
+"mage.abilities.keyword.HauntEffect"
+targetPointerŠ‡
+
+Å6 Å(Z
+%20java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*L
+
+__unknown_file (0
+.
+%19'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)ca
+
+Å* Å(5,
+%21%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTargetž
+›
+
+Å& Å(a
+%22"Omage.target.targetpointer.FixedTarget#<init>(Ljava/util/UUID;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget*3
+
+__unknown_file (
+
+%20java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.GameÎË
+
+Å Å(b
+%23void"Cmage.game.GameState#setValue(Ljava/lang/String;Ljava/lang/Object;)V*8
+
+__unknown_file (
+
+%18mage.game.GameState*5
+
+__unknown_file (
+
+keyjava.lang.String*J
+
+__unknown_file (.
+,
+%21%mage.target.targetpointer.FixedTarget2.setValue(Ljava/lang/String;Ljava/lang/Object;)GE
+
+Æ& Æ(3
+%24java.lang.StringBuilder"java.lang.StringBuilder´
+±
+
+Æ" Æ(@
+%25"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%24java.lang.StringBuilder*)
+
+__unknown_file (
+	Haunting ¶³
+
+ÆH Æ(d
+%26java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*N
+
+__unknown_file (2
+0
+hauntedCreaturemage.game.permanent.Permanent2getLogName()Š
+
+Æ" Æ(e
+%27java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%24java.lang.StringBuilder*5
+
+__unknown_file (
+
+%26java.lang.String2append(Ljava/lang/String;)¨¥
+
+Æ" Æ(p
+%28java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%27java.lang.StringBuilder2
+toString()ú÷
+
+Æ Æ(w
+%29void"Nmage.cards.Card#addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)V*5
+
+__unknown_file (
+
+cardmage.cards.Card*)
+
+__unknown_file (
+	hauntinfo*5
+
+__unknown_file (
+
+%28java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Game2=addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)GE
+
+Ç1 Ç(>
+%30java.lang.StringBuilder"java.lang.StringBuilder¶
+³
+
+Ç- Ç(M
+%31"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%30java.lang.StringBuilder*+
+
+__unknown_file (
+Haunted by š
+
+ÇU Ç(f
+%32java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2getLogName()Š
+
+Ç- Ç(g
+%33java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%30java.lang.StringBuilder*5
+
+__unknown_file (
+
+%32java.lang.String2append(Ljava/lang/String;)¨¥
+
+Ç- Ç(r
+%34java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%33java.lang.StringBuilder2
+toString()“
+
+Ç Ç(y
+%35void"Nmage.cards.Card#addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)V*N
+
+__unknown_file (2
+0
+hauntedCreaturemage.game.permanent.Permanent*)
+
+__unknown_file (
+	hauntinfo*5
+
+__unknown_file (
+
+%34java.lang.String*4
+
+__unknown_file (
+
+gamemage.game.Game2=addInfo(Ljava/lang/String;Ljava/lang/String;Lmage/game/Game;)—”
+
+È- È(;
+%36java.lang.String"+mage.MageObject#getName()Ljava/lang/String;*5
+
+__unknown_file (
+
+cardmage.cards.Card2	getName()GE
+
+È È(,
+%37java.lang.StringBuilder"java.lang.StringBuilderÀ
+½
+
+È È(<
+%38"3java.lang.StringBuilder#<init>(Ljava/lang/String;)V*<
+
+__unknown_file ( 
+
+%37java.lang.StringBuilder*5
+
+__unknown_file (
+
+%36java.lang.String‚ÿ
+
+È È(Q
+%39java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%37java.lang.StringBuilder**
+
+__unknown_file (
+
+ haunting 2append(Ljava/lang/String;)¶³
+
+ÈY È(u
+%40java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*N
+
+__unknown_file (2
+0
+hauntedCreaturemage.game.permanent.Permanent2getLogName()Š
+
+È È(v
+%41java.lang.StringBuilder"Kjava.lang.StringBuilder#append(Ljava/lang/String;)Ljava/lang/StringBuilder;*<
+
+__unknown_file ( 
+
+%39java.lang.StringBuilder*5
+
+__unknown_file (
+
+%40java.lang.String2append(Ljava/lang/String;)©¦
+È È(
+%42java.lang.String"4java.lang.StringBuilder#toString()Ljava/lang/String;*<
+
+__unknown_file ( 
+
+%41java.lang.StringBuilder2
+toString()àÝ
+È È(‚
+%43void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%42java.lang.String2!informPlayers(Ljava/lang/String;)"
+
+É É(
+"":$
+
+² ²(#
+gamemage.game.Game:.
+
+²$ ²(2 
+sourcemage.abilities.AbilityB&$
+"mage.abilities.keyword.HauntEffectHP

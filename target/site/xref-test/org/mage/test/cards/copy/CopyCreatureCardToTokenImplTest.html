@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>CopyCreatureCardToTokenImplTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/cards/copy/CopyCreatureCardToTokenImplTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.copy;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.constants.CardType;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> org.junit.Ignore;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="CopyCreatureCardToTokenImplTest" href="../../../../../org/mage/test/cards/copy/CopyCreatureCardToTokenImplTest.html#CopyCreatureCardToTokenImplTest">CopyCreatureCardToTokenImplTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  <em class="jxr_javadoccomment">     * Unesh, Criosphinx Sovereign did not have his ETB effect trigger when he</em>
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>  <em class="jxr_javadoccomment">     * had a token copy of himself made through casting Hour of Eternity. I</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>  <em class="jxr_javadoccomment">     * think there was another creature too that didn't get the ETB effect</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>  <em class="jxr_javadoccomment">     * either.</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>  <em class="jxr_javadoccomment">     */</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>      @Test
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>      @Ignore
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testTokenTriggeresETBEffect() {
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          <em class="jxr_comment">// Sphinx spells you cast cost {2} less to cast.</em>
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          <em class="jxr_comment">// Whenever Unesh, Criosphinx Sovereign or another Sphinx enters the battlefield</em>
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <em class="jxr_comment">// under your control, reveal the top four cards of your library. An opponent seperates</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <em class="jxr_comment">// those cards into two piles. Put one pile into your hand and the other into your graveyard.</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          addCard(Zone.GRAVEYARD, playerA, <span class="jxr_string">"Unesh, Criosphinx Sovereign"</span>, 1); <em class="jxr_comment">// Sphinx 4/4</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>  
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <em class="jxr_comment">// Exile X target creature cards from your graveyard. For each card exiled this way,</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          <em class="jxr_comment">// create a token that's a copy of that card, except it's a 4/4 black Zombie.</em>
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          addCard(Zone.HAND, playerA, <span class="jxr_string">"Hour of Eternity"</span>); <em class="jxr_comment">// Sorcery {X}{X}{U}{U}{U}</em>
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Island"</span>, 5);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>  
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          castSpell(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"Hour of Eternity"</span>, <span class="jxr_string">"Unesh, Criosphinx Sovereign"</span>);
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          setChoice(playerA, <span class="jxr_string">"X=1"</span>);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>  
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          setStopAt(1, PhaseStep.BEGIN_COMBAT);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          execute();
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          assertLife(playerA, 20);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          assertLife(playerB, 20);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          assertGraveyardCount(playerA, <span class="jxr_string">"Hour of Eternity"</span>, 1);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          assertPermanentCount(playerA, <span class="jxr_string">"Unesh, Criosphinx Sovereign"</span>, 1);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          assertGraveyardCount(playerA, <span class="jxr_string">"Unesh, Criosphinx Sovereign"</span>, 0);
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          assertExileCount(playerA, <span class="jxr_string">"Unesh, Criosphinx Sovereign"</span>, 1);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>  
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          assertHandCount(playerA, 3);
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          assertGraveyardCount(playerA, 2);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>      }
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>      <em class="jxr_comment">/* https:</em><em class="jxr_comment">//github.com/magefree/mage/issues/5904</em>
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>  <em class="jxr_comment">    I had a Faerie Artisans on the battlefield. My opponent played a Thrashing Brontodon.</em>
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  <em class="jxr_comment">    In response to the Faerie Artisans ability, my opponent sacrificed the Brontodon to destroy an artifact.</em>
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>  <em class="jxr_comment">    When the Faerie Artisans trigger resolved, no token was created. */</em>
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>      @Test
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testFaerieArtisans() {
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          <em class="jxr_comment">// Flying</em>
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          <em class="jxr_comment">// Whenever a nontoken creature enters the battlefield under an opponent's control,</em>
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>          <em class="jxr_comment">// create a token that's a copy of that creature except it's an artifact in addition to its other types.</em>
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>          <em class="jxr_comment">// Then exile all other tokens created with Faerie Artisans.</em>
+<a class="jxr_linenumber" name="L65" href="#L65">65</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Faerie Artisans"</span>, 1); <em class="jxr_comment">// Creature {3}{U}</em>
+<a class="jxr_linenumber" name="L66" href="#L66">66</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Alpha Myr"</span>, 1); <em class="jxr_comment">// Artifact creature 2/1</em>
+<a class="jxr_linenumber" name="L67" href="#L67">67</a>  
+<a class="jxr_linenumber" name="L68" href="#L68">68</a>          <em class="jxr_comment">// {1}, Sacrifice Thrashing Brontodon: Destroy target artifact or enchantment.</em>
+<a class="jxr_linenumber" name="L69" href="#L69">69</a>          addCard(Zone.HAND, playerB, <span class="jxr_string">"Thrashing Brontodon"</span>); <em class="jxr_comment">// Creature {1}{G}{G}</em>
+<a class="jxr_linenumber" name="L70" href="#L70">70</a>          addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Forest"</span>, 4);
+<a class="jxr_linenumber" name="L71" href="#L71">71</a>  
+<a class="jxr_linenumber" name="L72" href="#L72">72</a>          setStrictChooseMode(<strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L73" href="#L73">73</a>  
+<a class="jxr_linenumber" name="L74" href="#L74">74</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Thrashing Brontodon"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L75" href="#L75">75</a>          activateAbility(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"{1}, Sacrifice"</span>, <span class="jxr_string">"Alpha Myr"</span>);
+<a class="jxr_linenumber" name="L76" href="#L76">76</a>  
+<a class="jxr_linenumber" name="L77" href="#L77">77</a>          setStopAt(2, PhaseStep.BEGIN_COMBAT);
+<a class="jxr_linenumber" name="L78" href="#L78">78</a>          execute();
+<a class="jxr_linenumber" name="L79" href="#L79">79</a>  
+<a class="jxr_linenumber" name="L80" href="#L80">80</a>          assertLife(playerA, 20);
+<a class="jxr_linenumber" name="L81" href="#L81">81</a>          assertLife(playerB, 20);
+<a class="jxr_linenumber" name="L82" href="#L82">82</a>  
+<a class="jxr_linenumber" name="L83" href="#L83">83</a>          assertGraveyardCount(playerB, <span class="jxr_string">"Thrashing Brontodon"</span>, 1);
+<a class="jxr_linenumber" name="L84" href="#L84">84</a>          assertGraveyardCount(playerA, <span class="jxr_string">"Alpha Myr"</span>, 1);
+<a class="jxr_linenumber" name="L85" href="#L85">85</a>          assertPermanentCount(playerA, <span class="jxr_string">"Thrashing Brontodon"</span>, 1);
+<a class="jxr_linenumber" name="L86" href="#L86">86</a>          assertType(<span class="jxr_string">"Thrashing Brontodon"</span>, CardType.ARTIFACT, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L87" href="#L87">87</a>      }
+<a class="jxr_linenumber" name="L88" href="#L88">88</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

@@ -1,0 +1,235 @@
+
+mage.filter.common.FilterCreatureAttackingYou#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Zp
+fD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/filter/common/FilterCreatureAttackingYou.java. .("startingBlock*»
+26 6(¤¡
+6' 6(7
+%8mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¦£
+6F 6(W
+%9java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()ÿü
+6' 6(X
+%10java.util.UUID"Gmage.game.combat.Combat#getDefenderId(Ljava/util/UUID;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%8mage.game.combat.Combat*2
+
+__unknown_file (
+
+%9java.util.UUID2getDefenderId(Ljava/util/UUID;)ÔÑ
+6 6(Y
+%11boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*3
+
+__unknown_file (
+
+%10java.util.UUID2equals(Ljava/lang/Object;)*
+1*þ
+startingBlock. .(Wž
+›
+- -(
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanentk
+i
+.# .(,*
+	permanentmage.game.permanent.Permanent"__annotation*#
+
+__unknown_file (
+
+%12Ž
+‹
+- -(
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*8
+
+__unknown_file (
+
+playerIdjava.util.UUID[
+Y
+.3 .(;
+playerIdjava.util.UUID"__annotation*#
+
+__unknown_file (
+
+%13”
+‘
+- -(
+%14"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+.E .(K 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%14Š
+‡
+- -(
+%15"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+.R .(V
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%15*
+5
+10*»
+45 5( £ 
+5 5(.
+%7boolean",mage.game.permanent.Permanent#isAttacking()Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2isAttacking()*
+2
+1*Ò
+54 4(·
+´
+4 4(A
+%6boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*	
+2
+4
+1*!
+60 2(g"
+0 2(g
+""*œ
+72 2(¤¡
+2' 2(7
+%2mage.game.combat.Combat"3mage.game.Game#getCombat()Lmage/game/combat/Combat;*4
+
+__unknown_file (
+
+gamemage.game.Game2getCombat()¦£
+2M 2(^
+%3java.util.UUID".mage.game.Controllable#getId()Ljava/util/UUID;*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2getId()âß
+2' 2(e
+%4java.util.UUID"^mage.game.combat.Combat#getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*;
+
+__unknown_file (
+
+%2mage.game.combat.Combat*2
+
+__unknown_file (
+
+%3java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Game26getDefendingPlayerId(Ljava/util/UUID;Lmage/game/Game;)ÒÏ
+2 2(f
+%5boolean"*java.util.UUID#equals(Ljava/lang/Object;)Z*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*2
+
+__unknown_file (
+
+%4java.util.UUID2equals(Ljava/lang/Object;)*
+6*»
+91 1( £ 
+1 1(.
+%1boolean",mage.game.permanent.Permanent#isAttacking()Z*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent2isAttacking()*
+6
+7*Ó
+100 0(·
+´
+0 0(A
+%0boolean"{mage.filter.FilterPermanent#match(Lmage/game/permanent/Permanent;Ljava/util/UUID;Lmage/abilities/Ability;Lmage/game/Game;)Z*"
+
+__unknown_file (
+""*H
+
+__unknown_file (,
+*
+	permanentmage.game.permanent.Permanent*8
+
+__unknown_file (
+
+playerIdjava.util.UUID*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game*	
+6
+7
+9*!
+14 6(Z"
+4 6(Z
+"":6
+. .(-*
+	permanentmage.game.permanent.Permanent:&
+.. .(<
+playerIdjava.util.UUID:,
+.= .(L 
+sourcemage.abilities.Ability:"
+.M .(V
+gamemage.game.GameB1/
+-mage.filter.common.FilterCreatureAttackingYouHP

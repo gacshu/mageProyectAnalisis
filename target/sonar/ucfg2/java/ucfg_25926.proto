@@ -1,0 +1,119 @@
+
+0mage.server.tournament.TournamentSession#init()Zr
+hD:/eclipse-workspace/mage-master/Mage.Server/src/main/java/mage/server/tournament/TournamentSession.java, ,("3"1*˜
+20 0(íè
+0 0(
+%5mage.server.User"*java.util.Optional#get()Ljava/lang/Object;*8
+
+__unknown_file (
+
+userjava.util.Optional2get()k
+i
+0; 0(_3
+%6-mage.interfaces.callback.ClientCallbackMethod"__id*"
+
+__unknown_file (
+""î
+ë
+0a 0(k%
+%7mage.game.tournament.Tournament"__id*X
+
+__unknown_file (<*:*
+(mage.server.tournament.TournamentSession"
+
+tournament™ß
+0a 0(s
+%8java.util.UUID"7mage.game.tournament.Tournament#getId()Ljava/util/UUID;*C
+
+__unknown_file ('
+%
+%7mage.game.tournament.Tournament2getId()–
+Õ
+	0u 0(à
+%9mage.view.TournamentView"Vmage.server.tournament.TournamentSession#getTournamentView()Lmage/view/TournamentView;*H
+
+__unknown_file (,*
+(mage.server.tournament.TournamentSessionec
+0, 0(:.
+%10'mage.interfaces.callback.ClientCallback"'mage.interfaces.callback.ClientCallback≠
+™
+	0( 0(â
+%11"Çmage.interfaces.callback.ClientCallback#<init>(Lmage/interfaces/callback/ClientCallbackMethod;Ljava/util/UUID;Ljava/lang/Object;)V*L
+
+__unknown_file (0
+.
+%10'mage.interfaces.callback.ClientCallback*Q
+
+__unknown_file (5
+3
+%6-mage.interfaces.callback.ClientCallbackMethod*2
+
+__unknown_file (
+
+%8java.util.UUID*<
+
+__unknown_file ( 
+
+%9mage.view.TournamentView£†
+	0 0(ä
+%12void"Image.server.User#fireCallback(Lmage/interfaces/callback/ClientCallback;)V*4
+
+__unknown_file (
+
+%5mage.server.User*L
+
+__unknown_file (0
+.
+%10'mage.interfaces.callback.ClientCallback27fireCallback(Lmage/interfaces/callback/ClientCallback;)"
+1 1(
+""*ó
+3." .(0ú
+ô
+." .(0)
+%0#mage.server.managers.ManagerFactory"__id*\
+
+__unknown_file (@*>*
+(mage.server.tournament.TournamentSession"
+managerFactory‚ﬂ
+." .(>&
+%1 mage.server.managers.UserManager"Smage.server.managers.ManagerFactory#userManager()Lmage/server/managers/UserManager;*G
+
+__unknown_file (+
+)
+%0#mage.server.managers.ManagerFactory2userManager()~
+|
+.G .(M
+%2java.util.UUID"__id*T
+
+__unknown_file (8*6*
+(mage.server.tournament.TournamentSession"
+userIdåâ
+." .(N
+%3java.util.Optional"Nmage.server.managers.UserManager#getUser(Ljava/util/UUID;)Ljava/util/Optional;*D
+
+__unknown_file ((
+&
+%1 mage.server.managers.UserManager*2
+
+__unknown_file (
+
+%2java.util.UUID2getUser(Ljava/util/UUID;)f
+d
+. .(O
+userjava.util.Optional"__id*6
+
+__unknown_file (
+
+%3java.util.OptionalÑÅ
+/ /( 
+%4boolean"java.util.Optional#isPresent()Z*8
+
+__unknown_file (
+
+userjava.util.Optional2isPresent()*
+2
+1*!
+14 4("
+4 4(
+""B,*
+(mage.server.tournament.TournamentSessionHP

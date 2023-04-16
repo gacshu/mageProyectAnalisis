@@ -1,0 +1,77 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>UginTest xref</title>
+<link type="text/css" rel="stylesheet" href="../../../../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../../../../testapidocs/org/mage/test/cards/planeswalker/UginTest.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   <strong class="jxr_keyword">package</strong> org.mage.test.cards.planeswalker;
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.PhaseStep;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.Zone;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   <strong class="jxr_keyword">import</strong> mage.counters.CounterType;
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <strong class="jxr_keyword">import</strong> org.junit.Test;
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <strong class="jxr_keyword">import</strong> org.mage.test.serverside.base.CardTestPlayerBase;
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  <em class="jxr_javadoccomment"> *</em>
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>  <em class="jxr_javadoccomment"> * @author LevelX2</em>
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">class</strong> <a name="UginTest" href="../../../../../org/mage/test/cards/planeswalker/UginTest.html#UginTest">UginTest</a> <strong class="jxr_keyword">extends</strong> <a name="CardTestPlayerBase" href="../../../../../org/mage/test/serverside/base/CardTestPlayerBase.html#CardTestPlayerBase">CardTestPlayerBase</a> {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>  
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      @Test
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">void</strong> testCard() {
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>          <em class="jxr_comment">// +2: Ugin, the Spirit Dragon deals 3 damage to any target.</em>
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <em class="jxr_comment">// -X: Exile each permanent with converted mana cost X or less that's one or more colors.</em>
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <em class="jxr_comment">// -10: You gain 7 life, draw 7 cards, then put up to seven permanent cards from your hand onto the battlefield.</em>
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Ugin, the Spirit Dragon"</span>); <em class="jxr_comment">// starts with 7 Loyality counters</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>          <em class="jxr_comment">// Whenever a creature dies, you may put a quest counter on Quest for the Gravelord.</em>
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Quest for the Gravelord"</span>);
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          addCard(Zone.BATTLEFIELD, playerA, <span class="jxr_string">"Silvercoat Lion"</span>);
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>  
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          addCard(Zone.LIBRARY, playerB, <span class="jxr_string">"Forest"</span>, 2);
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          addCard(Zone.BATTLEFIELD, playerB, <span class="jxr_string">"Forest"</span>, 6);
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          <em class="jxr_comment">// When Nissa, Vastwood Seer enters the battlefield, you may search your library for a basic Forest card, reveal it, put it into your hand, then shuffle your library.</em>
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          <em class="jxr_comment">// Whenever a land enters the battlefield under your control, if you control seven or more lands, exile Nissa, then return her to the battlefield transformed under her owner's control.</em>
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          <em class="jxr_comment">// +1: Reveal the top card of your library. If it's a land card, put it onto the battlefield. Otherwise, put it into your hand.</em>
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          <em class="jxr_comment">// -2: Create a legendary 4/4 green Elemental creature token named Ashaya, the Awoken World.</em>
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          <em class="jxr_comment">// -7: Untap up to six target lands. They become 6/6 Elemental creatures. They're still lands.</em>
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          addCard(Zone.HAND, playerB, <span class="jxr_string">"Nissa, Vastwood Seer"</span>);
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>  
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          activateAbility(1, PhaseStep.PRECOMBAT_MAIN, playerA, <span class="jxr_string">"+2: {this} deals 3 damage"</span>, playerB);
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          waitStackResolved(1, PhaseStep.PRECOMBAT_MAIN);
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>  
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          castSpell(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Nissa, Vastwood Seer"</span>, <strong class="jxr_keyword">true</strong>);
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          setChoice(playerB, <span class="jxr_string">"Yes"</span>);
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          playLand(2, PhaseStep.PRECOMBAT_MAIN, playerB, <span class="jxr_string">"Forest"</span>);
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          activateAbility(2, PhaseStep.POSTCOMBAT_MAIN, playerB, <span class="jxr_string">"-2: Create Ashaya, the Awoken World, a legendary 4/4 green Elemental creature token."</span>);
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>  
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          attack(3, playerA, <span class="jxr_string">"Silvercoat Lion"</span>);
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          block(3, playerB, <span class="jxr_string">"Ashaya, the Awoken World"</span>, <span class="jxr_string">"Silvercoat Lion"</span>);
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>  
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          activateAbility(3, PhaseStep.POSTCOMBAT_MAIN, playerA, <span class="jxr_string">"-X: Exile each permanent with mana value X or less that's one or more colors"</span>);
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          setChoice(playerA, <span class="jxr_string">"X=3"</span>);
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>  
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          setStopAt(3, PhaseStep.END_TURN);
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          execute();
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>  
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          assertPermanentCount(playerA, <span class="jxr_string">"Ugin, the Spirit Dragon"</span>, 1);
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          assertCounterCount(<span class="jxr_string">"Ugin, the Spirit Dragon"</span>, CounterType.LOYALTY, 6);  <em class="jxr_comment">// 7 + 2 - 3</em>
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>  
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>          assertGraveyardCount(playerA, <span class="jxr_string">"Silvercoat Lion"</span>, 1);
+<a class="jxr_linenumber" name="L56" href="#L56">56</a>          assertPermanentCount(playerB, <span class="jxr_string">"Ashaya, the Awoken World"</span>, 0);
+<a class="jxr_linenumber" name="L57" href="#L57">57</a>  
+<a class="jxr_linenumber" name="L58" href="#L58">58</a>          assertExileCount(<span class="jxr_string">"Nissa, Vastwood Seer"</span>, 1);
+<a class="jxr_linenumber" name="L59" href="#L59">59</a>          assertExileCount(<span class="jxr_string">"Quest for the Gravelord"</span>, 1);
+<a class="jxr_linenumber" name="L60" href="#L60">60</a>  
+<a class="jxr_linenumber" name="L61" href="#L61">61</a>          assertLife(playerA, 20);
+<a class="jxr_linenumber" name="L62" href="#L62">62</a>          assertLife(playerB, 17);
+<a class="jxr_linenumber" name="L63" href="#L63">63</a>      }
+<a class="jxr_linenumber" name="L64" href="#L64">64</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

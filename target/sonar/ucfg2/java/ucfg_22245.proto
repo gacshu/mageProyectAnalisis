@@ -1,0 +1,265 @@
+
+*mage.client.util.audio.MusicPlayer#open()Zl
+bD:/eclipse-workspace/mage-master/Mage.Client/src/main/java/mage/client/util/audio/MusicPlayer.java ("15*º
+13 (y
+w
+ (
+%5java.awt.List"__id*P
+
+__unknown_file (4*2$
+"mage.client.util.audio.MusicPlayer"
+
+filelisttr
+ (
+
+%6void"java.awt.List#removeAll()V*1
+
+__unknown_file (
+
+%5java.awt.List2removeAll()|
+z
+    ((
+%7java.lang.String"__id*P
+
+__unknown_file (4*2$
+"mage.client.util.audio.MusicPlayer"
+
+filepath.,
+   (
+%8java.io.File"java.io.File¥
+¢
+   ()
+%9"(java.io.File#<init>(Ljava/lang/String;)V*0
+
+__unknown_file (
+
+%8java.io.File*4
+
+__unknown_file (
+
+%7java.lang.String]
+[
+   (*
+filedirjava.io.File"__id*0
+
+__unknown_file (
+
+%8java.io.File‘Ž
+! !(-
+%10java.io.File[]"'java.io.File#listFiles()[Ljava/io/File;*5
+
+__unknown_file (
+
+filedirjava.io.File2listFiles()c
+a
+! !(.
+filereadjava.io.File[]"__id*3
+
+__unknown_file (
+
+%10java.io.File[]*
+9
+10
+12*â
+14 ( N
+L
+ (1
+%4java.lang.String"__id*"
+
+__unknown_file (
+""|
+z
+ (12$
+"mage.client.util.audio.MusicPlayer"
+
+filepath"__id*4
+
+__unknown_file (
+
+%4java.lang.String*
+13*á
+15 ('`
+^
+7 (d
+%0java.lang.String"__id*4
+
+__unknown_file (
+soundsMatchMusicPath´
+±
+ (m
+%1java.lang.String"kmage.client.dialog.PreferencesDialog#getCachedValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;*D
+
+__unknown_file (("&
+$mage.client.dialog.PreferencesDialog*4
+
+__unknown_file (
+
+%0java.lang.String*$
+
+__unknown_file (
+trueb
+`
+ (n
+pathjava.lang.String"__id*4
+
+__unknown_file (
+
+%1java.lang.StringN
+L
+ ((
+%2java.lang.String"__id*"
+
+__unknown_file (
+""|
+z
+ ((
+%3java.lang.String"__concat*&
+ (
+
+pathjava.lang.String*$
+ ((
+
+%2java.lang.String|
+z
+ ((2$
+"mage.client.util.audio.MusicPlayer"
+
+filepath"__id*4
+
+__unknown_file (
+
+%3java.lang.String*
+13
+14*!
+12 2("
+2 2(
+""*!
+20 0("
+0 0(
+""*Ž
+3/ /(z
+x
+/ /(
+%18java.awt.List"__id*P
+
+__unknown_file (4*2$
+"mage.client.util.audio.MusicPlayer"
+
+filelist{y
+/ /(#
+
+%19int"java.awt.List#getItemCount()I*2
+
+__unknown_file (
+
+%18java.awt.List2getItemCount()*
+2
+1*í
+4) )(I
+G
+) )(
+fjava.io.File"__id*"
+
+__unknown_file (
+""Š
+‡
+) )(
+fjava.io.File"
+__arrayGet*8
+
+__unknown_file (
+
+filereadjava.io.File[]*"
+
+__unknown_file (
+""*
+3
+7*Ü
+5, ,(z
+x
+, ,(
+%16java.awt.List"__id*P
+
+__unknown_file (4*2$
+"mage.client.util.audio.MusicPlayer"
+
+filelistËÈ
+, ,(&
+%17void"&java.awt.List#add(Ljava/lang/String;)V*2
+
+__unknown_file (
+
+%16java.awt.List*:
+
+__unknown_file (
+
+filenamejava.lang.String2add(Ljava/lang/String;)*
+4*å
+6+- +(5ÍÊ
++- +(F
+%15boolean".java.lang.String#endsWith(Ljava/lang/String;)Z*:
+
+__unknown_file (
+
+filenamejava.lang.String*$
+
+__unknown_file (
+.wav2endsWith(Ljava/lang/String;)*
+4
+5*ª
+7* *(Œ‰
+* *("
+%11java.lang.String"(java.io.File#getName()Ljava/lang/String;*/
+
+__unknown_file (
+
+fjava.io.File2	getName()O
+M
+*/ *(=
+%12java.util.Locale"__id*"
+
+__unknown_file (
+""ùö
+* *(>
+%13java.lang.String"Bjava.lang.String#toLowerCase(Ljava/util/Locale;)Ljava/lang/String;*5
+
+__unknown_file (
+
+%11java.lang.String*5
+
+__unknown_file (
+
+%12java.util.Locale2toLowerCase(Ljava/util/Locale;)g
+e
+* *(>
+filenamejava.lang.String"__id*5
+
+__unknown_file (
+
+%13java.lang.StringÍÊ
++ +()
+%14boolean".java.lang.String#endsWith(Ljava/lang/String;)Z*:
+
+__unknown_file (
+
+filenamejava.lang.String*$
+
+__unknown_file (
+.mp32endsWith(Ljava/lang/String;)*
+5
+6*h
+9( ((T
+R
+( ((
+filenamejava.lang.String"__id*"
+
+__unknown_file (
+""*
+4*"
+10& &("
+& &(
+""*"
+12# #("
+# #(
+""B&$
+"mage.client.util.audio.MusicPlayerP

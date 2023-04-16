@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+<title>Unfinity xref</title>
+<link type="text/css" rel="stylesheet" href="../../stylesheet.css" />
+</head>
+<body>
+<div id="overview"><a href="../../../apidocs/mage/sets/Unfinity.html">View Javadoc</a></div><pre>
+<a class="jxr_linenumber" name="L1" href="#L1">1</a>   <strong class="jxr_keyword">package</strong> mage.sets;
+<a class="jxr_linenumber" name="L2" href="#L2">2</a>   
+<a class="jxr_linenumber" name="L3" href="#L3">3</a>   <strong class="jxr_keyword">import</strong> mage.cards.ExpansionSet;
+<a class="jxr_linenumber" name="L4" href="#L4">4</a>   <strong class="jxr_keyword">import</strong> mage.constants.Rarity;
+<a class="jxr_linenumber" name="L5" href="#L5">5</a>   <strong class="jxr_keyword">import</strong> mage.constants.SetType;
+<a class="jxr_linenumber" name="L6" href="#L6">6</a>   
+<a class="jxr_linenumber" name="L7" href="#L7">7</a>   <em class="jxr_javadoccomment">/**</em>
+<a class="jxr_linenumber" name="L8" href="#L8">8</a>   <em class="jxr_javadoccomment"> * @author TheElk801</em>
+<a class="jxr_linenumber" name="L9" href="#L9">9</a>   <em class="jxr_javadoccomment"> */</em>
+<a class="jxr_linenumber" name="L10" href="#L10">10</a>  <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">final</strong> <strong class="jxr_keyword">class</strong> <a name="Unfinity" href="../../mage/sets/Unfinity.html#Unfinity">Unfinity</a> <strong class="jxr_keyword">extends</strong> <a name="ExpansionSet" href="../../mage/cards/ExpansionSet.html#ExpansionSet">ExpansionSet</a> {
+<a class="jxr_linenumber" name="L11" href="#L11">11</a>  
+<a class="jxr_linenumber" name="L12" href="#L12">12</a>      <strong class="jxr_keyword">private</strong> <strong class="jxr_keyword">static</strong> <strong class="jxr_keyword">final</strong> <a name="Unfinity" href="../../mage/sets/Unfinity.html#Unfinity">Unfinity</a> instance = <strong class="jxr_keyword">new</strong> <a name="Unfinity" href="../../mage/sets/Unfinity.html#Unfinity">Unfinity</a>();
+<a class="jxr_linenumber" name="L13" href="#L13">13</a>  
+<a class="jxr_linenumber" name="L14" href="#L14">14</a>      <strong class="jxr_keyword">public</strong> <strong class="jxr_keyword">static</strong> <a name="Unfinity" href="../../mage/sets/Unfinity.html#Unfinity">Unfinity</a> getInstance() {
+<a class="jxr_linenumber" name="L15" href="#L15">15</a>          <strong class="jxr_keyword">return</strong> instance;
+<a class="jxr_linenumber" name="L16" href="#L16">16</a>      }
+<a class="jxr_linenumber" name="L17" href="#L17">17</a>  
+<a class="jxr_linenumber" name="L18" href="#L18">18</a>      <strong class="jxr_keyword">private</strong> <a name="Unfinity" href="../../mage/sets/Unfinity.html#Unfinity">Unfinity</a>() {
+<a class="jxr_linenumber" name="L19" href="#L19">19</a>          <strong class="jxr_keyword">super</strong>(<span class="jxr_string">"Unfinity"</span>, <span class="jxr_string">"UNF"</span>, ExpansionSet.buildDate(2022, 4, 1), SetType.SUPPLEMENTAL);
+<a class="jxr_linenumber" name="L20" href="#L20">20</a>          <strong class="jxr_keyword">this</strong>.hasBasicLands = <strong class="jxr_keyword">true</strong>;
+<a class="jxr_linenumber" name="L21" href="#L21">21</a>          <strong class="jxr_keyword">this</strong>.hasBoosters = false; <em class="jxr_comment">// not likely to be able to drafts at any point</em>
+<a class="jxr_linenumber" name="L22" href="#L22">22</a>  
+<a class="jxr_linenumber" name="L23" href="#L23">23</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Attempted Murder"</span>, 66, Rarity.UNCOMMON, mage.cards.a.AttemptedMurder.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L24" href="#L24">24</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Blood Crypt"</span>, 279, Rarity.RARE, mage.cards.b.BloodCrypt.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L25" href="#L25">25</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Boing!"</span>, 40, Rarity.COMMON, mage.cards.b.Boing.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L26" href="#L26">26</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Breeding Pool"</span>, 286, Rarity.RARE, mage.cards.b.BreedingPool.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L27" href="#L27">27</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Circuits Act"</span>, 103, Rarity.COMMON, mage.cards.c.CircuitsAct.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L28" href="#L28">28</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Clown Car"</span>, 186, Rarity.RARE, mage.cards.c.ClownCar.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L29" href="#L29">29</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Clowning Around"</span>, 6, Rarity.COMMON, mage.cards.c.ClowningAround.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L30" href="#L30">30</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Dissatisfied Customer"</span>, 72, Rarity.COMMON, mage.cards.d.DissatisfiedCustomer.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L31" href="#L31">31</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Embiggen"</span>, 137, Rarity.COMMON, mage.cards.e.Embiggen.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L32" href="#L32">32</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Forest"</span>, 239, Rarity.LAND, mage.cards.basiclands.Forest.<strong class="jxr_keyword">class</strong>, FULL_ART_BFZ_VARIOUS));
+<a class="jxr_linenumber" name="L33" href="#L33">33</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Godless Shrine"</span>, 282, Rarity.RARE, mage.cards.g.GodlessShrine.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L34" href="#L34">34</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Hallowed Fountain"</span>, 277, Rarity.RARE, mage.cards.h.HallowedFountain.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L35" href="#L35">35</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Island"</span>, 236, Rarity.LAND, mage.cards.basiclands.Island.<strong class="jxr_keyword">class</strong>, FULL_ART_BFZ_VARIOUS));
+<a class="jxr_linenumber" name="L36" href="#L36">36</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Lila, Hospitality Hostess"</span>, 170, Rarity.MYTHIC, mage.cards.l.LilaHospitalityHostess.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L37" href="#L37">37</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Monoxa, Midway Manager"</span>, 173, Rarity.UNCOMMON, mage.cards.m.MonoxaMidwayManager.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L38" href="#L38">38</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Mountain"</span>, 238, Rarity.LAND, mage.cards.basiclands.Mountain.<strong class="jxr_keyword">class</strong>, FULL_ART_BFZ_VARIOUS));
+<a class="jxr_linenumber" name="L39" href="#L39">39</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Non-Human Cannonball"</span>, 115, Rarity.COMMON, mage.cards.n.NonHumanCannonball.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L40" href="#L40">40</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"One-Clown Band"</span>, 117, Rarity.COMMON, mage.cards.o.OneClownBand.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L41" href="#L41">41</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Overgrown Tomb"</span>, 284, Rarity.RARE, mage.cards.o.OvergrownTomb.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L42" href="#L42">42</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Pair o' Dice Lost"</span>, 149, Rarity.UNCOMMON, mage.cards.p.PairODiceLost.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L43" href="#L43">43</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Plains"</span>, 235, Rarity.LAND, mage.cards.basiclands.Plains.<strong class="jxr_keyword">class</strong>, FULL_ART_BFZ_VARIOUS));
+<a class="jxr_linenumber" name="L44" href="#L44">44</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Sacred Foundry"</span>, 285, Rarity.RARE, mage.cards.s.SacredFoundry.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L45" href="#L45">45</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Saw in Half"</span>, 88, Rarity.RARE, mage.cards.s.SawInHalf.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L46" href="#L46">46</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Slight Malfunction"</span>, 123, Rarity.COMMON, mage.cards.s.SlightMalfunction.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L47" href="#L47">47</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Steam Vents"</span>, 283, Rarity.RARE, mage.cards.s.SteamVents.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L48" href="#L48">48</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Stomping Ground"</span>, 280, Rarity.RARE, mage.cards.s.StompingGround.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L49" href="#L49">49</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Swamp"</span>, 237, Rarity.LAND, mage.cards.basiclands.Swamp.<strong class="jxr_keyword">class</strong>, FULL_ART_BFZ_VARIOUS));
+<a class="jxr_linenumber" name="L50" href="#L50">50</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Temple Garden"</span>, 281, Rarity.RARE, mage.cards.t.TempleGarden.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L51" href="#L51">51</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"The Space Family Goblinson"</span>, 179, Rarity.UNCOMMON, mage.cards.t.TheSpaceFamilyGoblinson.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L52" href="#L52">52</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Vegetation Abomination"</span>, 160, Rarity.COMMON, mage.cards.v.VegetationAbomination.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L53" href="#L53">53</a>          cards.add(<strong class="jxr_keyword">new</strong> SetCardInfo(<span class="jxr_string">"Watery Grave"</span>, 278, Rarity.RARE, mage.cards.w.WateryGrave.<strong class="jxr_keyword">class</strong>));
+<a class="jxr_linenumber" name="L54" href="#L54">54</a>      }
+<a class="jxr_linenumber" name="L55" href="#L55">55</a>  }
+</pre>
+<hr/>
+<div id="footer">Copyright &#169; 2023. All rights reserved.</div>
+</body>
+</html>

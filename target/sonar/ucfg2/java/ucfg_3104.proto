@@ -1,0 +1,207 @@
+
+fmage.abilities.effects.common.FightTargetSourceEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zx
+nD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/FightTargetSourceEffect.java ("startingBlock*¥
+2& &(¢Ÿ
+&# &(<
+%9java.lang.String".mage.MageObject#getLogName()Ljava/lang/String;*=
+
+__unknown_file (!
+
+sourceObjectmage.MageObject2getLogName()‹
+ˆ
+&# &(d
+%10java.lang.String"__concat*$
+&# &(<
+
+%9java.lang.String*3
+&? &(d'%
+#: Fighting effect has been fizzled.ÝÚ
+& &(e
+%11void"1mage.game.Game#informPlayers(Ljava/lang/String;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*5
+
+__unknown_file (
+
+%10java.lang.String2!informPlayers(Ljava/lang/String;)*
+1*™
+3% %(
+% %($
+%8boolean"mage.game.Game#isSimulation()Z*4
+
+__unknown_file (
+
+gamemage.game.Game2isSimulation()*
+2
+1*þ
+startingBlock (3Š
+‡
+ (
+%12"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+ ("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%12”
+‘
+ (
+%13"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+, (2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%13*
+9*
+4" "(*ëè
+" "(I
+%7boolean"mmage.game.permanent.Permanent#fight(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*H
+
+__unknown_file (,
+*
+	creature1mage.game.permanent.Permanent*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2Nfight(Lmage/game/permanent/Permanent;Lmage/abilities/Ability;Lmage/game/Game;)"
+" "(J
+""*‡
+5!2 !(Aïì
+!2 !(R
+%6boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*N
+
+__unknown_file (2
+0
+sourcePermanentmage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+3
+4*
+6! !(éæ
+! !(.
+%5boolean"-mage.MageObject#isCreature(Lmage/game/Game;)Z*H
+
+__unknown_file (,
+*
+	creature1mage.game.permanent.Permanent*4
+
+__unknown_file (
+
+gamemage.game.Game2isCreature(Lmage/game/Game;)*
+3
+5*Ž
+8( (.ÈÅ
+( (V#
+%1mage.game.permanent.Permanent"image.abilities.Ability#getSourcePermanentIfItStillExists(Lmage/game/Game;)Lmage/game/permanent/Permanent;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game23getSourcePermanentIfItStillExists(Lmage/game/Game;)ˆ
+…
+ (W0
+sourcePermanentmage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%1mage.game.permanent.Permanent†ƒ
+4 (F-
+%2'mage.target.targetpointer.TargetPointer"]mage.abilities.effects.EffectImpl#getTargetPointer()Lmage/target/targetpointer/TargetPointer;*U
+
+__unknown_file (97
+5mage.abilities.effects.common.FightTargetSourceEffect2getTargetPointer()†ƒ
+4 (]
+%3java.util.UUID"jmage.target.targetpointer.TargetPointer#getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Ljava/util/UUID;*K
+
+__unknown_file (/
+-
+%2'mage.target.targetpointer.TargetPointer*4
+
+__unknown_file (
+
+gamemage.game.Game*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability22getFirst(Lmage/game/Game;Lmage/abilities/Ability;)Š‡
+" (^#
+%4mage.game.permanent.Permanent"Lmage.game.Game#getPermanent(Ljava/util/UUID;)Lmage/game/permanent/Permanent;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%3java.util.UUID2getPermanent(Ljava/util/UUID;)
+
+ (_*
+	creature1mage.game.permanent.Permanent"__id*A
+
+__unknown_file (%
+#
+%4mage.game.permanent.Permanent*
+3
+6*Š
+9" ((ˆ…
+" (>
+%0mage.MageObject"Image.abilities.Ability#getSourceObject(Lmage/game/Game;)Lmage/MageObject;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game2!getSourceObject(Lmage/game/Game;)h
+f
+ (?
+sourceObjectmage.MageObject"__id*3
+
+__unknown_file (
+
+%0mage.MageObject*
+8
+1*!
+1) )("
+) )(
+"":"
+ (#
+gamemage.game.Game:,
+$ (2 
+sourcemage.abilities.AbilityB97
+5mage.abilities.effects.common.FightTargetSourceEffectHP

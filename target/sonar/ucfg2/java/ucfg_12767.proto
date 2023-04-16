@@ -1,0 +1,321 @@
+
+hmage.abilities.effects.common.ExileAdventureSpellEffect#apply(Lmage/game/Game;Lmage/abilities/Ability;)Zz
+pD:/eclipse-workspace/mage-master/Mage/src/main/java/mage/abilities/effects/common/ExileAdventureSpellEffect.java0 0("startingBlock*!
+2B B("
+B B(
+""*Í
+3<2 <(TŒ‰
+<6 <(RA
+%16:mage.abilities.effects.common.AdventureCastFromExileEffect":mage.abilities.effects.common.AdventureCastFromExileEffect»
+¸
+<2 <(T
+%17"Dmage.abilities.effects.common.AdventureCastFromExileEffect#<init>()V*_
+
+__unknown_file (C
+A
+%16:mage.abilities.effects.common.AdventureCastFromExileEffect§
+¤
+< <(U1
+effect'mage.abilities.effects.ContinuousEffect"__id*_
+
+__unknown_file (C
+A
+%16:mage.abilities.effects.common.AdventureCastFromExileEffecta_
+=4 =(?,
+%18%mage.target.targetpointer.FixedTarget"%mage.target.targetpointer.FixedTarget¥
+¢
+=0 =(Q
+%19"Pmage.target.targetpointer.FixedTarget#<init>(Lmage/cards/Card;Lmage/game/Game;)V*J
+
+__unknown_file (.
+,
+%18%mage.target.targetpointer.FixedTarget*;
+
+__unknown_file (
+
+
+parentCardmage.cards.Card*4
+
+__unknown_file (
+
+gamemage.game.Game¦£
+= =(R.
+%20'mage.abilities.effects.ContinuousEffect"Œmage.abilities.effects.ContinuousEffect#setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Lmage/abilities/effects/ContinuousEffect;*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*J
+
+__unknown_file (.
+,
+%18%mage.target.targetpointer.FixedTarget2;setTargetPointer(Lmage/target/targetpointer/TargetPointer;)Š
+> >(6
+%21void"\mage.game.Game#addEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)V*4
+
+__unknown_file (
+
+gamemage.game.Game*O
+
+__unknown_file (3
+1
+effect'mage.abilities.effects.ContinuousEffect*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2LaddEffect(Lmage/abilities/effects/ContinuousEffect;Lmage/abilities/Ability;)*
+2*þ
+startingBlock0 0(3Š
+‡
+/ /(
+%22"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*4
+
+__unknown_file (
+
+gamemage.game.GameW
+U
+0 0("
+gamemage.game.Game"__annotation*#
+
+__unknown_file (
+
+%22”
+‘
+/ /(
+%23"
+__annotate*2
+
+__unknown_file (
+java.lang.Override*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Abilitya
+_
+0, 0(2 
+sourcemage.abilities.Ability"__annotation*#
+
+__unknown_file (
+
+%23*
+7*Š
+47# 7(3”‘
+74 7(F
+%6java.util.UUID"%mage.MageItem#getId()Ljava/util/UUID;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2getId()â
+ß
+7# 7(M
+%7java.util.UUID"zmage.abilities.effects.common.ExileAdventureSpellEffect#adventureExileId(Ljava/util/UUID;Lmage/game/Game;)Ljava/util/UUID;*W
+
+__unknown_file (;"9
+7mage.abilities.effects.common.ExileAdventureSpellEffect*2
+
+__unknown_file (
+
+%6java.util.UUID*4
+
+__unknown_file (
+
+gamemage.game.Gamea
+_
+7 7(N
+exileIdjava.util.UUID"__id*2
+
+__unknown_file (
+
+%7java.util.UUID’
+8 8(#
+%8mage.game.Exile"*mage.game.Game#getExile()Lmage/game/Exile;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getExile()¢Ÿ
+8R 8(f
+%9java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()|
+z
+88 8(f
+%10java.lang.String"__concat*%
+88 8(O
+On an Adventure from *$
+8R 8(f
+
+%9java.lang.StringÓÐ
+8 8(g
+%11mage.game.ExileZone"Smage.game.Exile#createZone(Ljava/util/UUID;Ljava/lang/String;)Lmage/game/ExileZone;*3
+
+__unknown_file (
+
+%8mage.game.Exile*7
+
+__unknown_file (
+
+exileIdjava.util.UUID*5
+
+__unknown_file (
+
+%10java.lang.String2.createZone(Ljava/util/UUID;Ljava/lang/String;)„
+
+9 9([3
+adventureSpellCardmage.cards.AdventureCardSpell"__id*:
+
+__unknown_file (
+
+	spellCardmage.cards.CardÇÄ
+:& :(H
+%12mage.cards.AdventureCard"3mage.cards.SubCard#getParentCard()Lmage/cards/Card;*Q
+
+__unknown_file (5
+3
+adventureSpellCardmage.cards.AdventureCardSpell2getParentCard()p
+n
+: :(I
+
+parentCardmage.cards.Card"__id*=
+
+__unknown_file (!
+
+%12mage.cards.AdventureCard¤¡
+	;w ;(‹
+%13java.lang.String"/mage.players.Player#getName()Ljava/lang/String;*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player2	getName()
+}
+	;] ;(‹
+%14java.lang.String"__concat*%
+;] ;(t
+On an Adventure from *&
+	;w ;(‹
+
+%13java.lang.Stringš—
+	; ;(Œ
+%15boolean"ƒmage.players.Player#moveCardsToExile(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)Z*?
+
+__unknown_file (#
+!
+
+controllermage.players.Player*;
+
+__unknown_file (
+
+
+parentCardmage.cards.Card*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability*4
+
+__unknown_file (
+
+gamemage.game.Game* 
+
+__unknown_file (2*7
+
+__unknown_file (
+
+exileIdjava.util.UUID*5
+
+__unknown_file (
+
+%14java.lang.String2nmoveCardsToExile(Lmage/cards/Card;Lmage/abilities/Ability;Lmage/game/Game;ZLjava/util/UUID;Ljava/lang/String;)*
+2
+3*ž
+55! 5(&Ÿœ
+5! 5(0
+%5mage.cards.Card"0mage.game.stack.Spell#getCard()Lmage/cards/Card;*<
+
+__unknown_file ( 
+
+spellmage.game.stack.Spell2	getCard()e
+c
+5 5(1
+	spellCardmage.cards.Card"__id*3
+
+__unknown_file (
+
+%5mage.cards.Card*
+2
+4*Ù
+63 3(¨¥
+3 3() 
+%2mage.game.stack.SpellStack"5mage.game.Game#getStack()Lmage/game/stack/SpellStack;*4
+
+__unknown_file (
+
+gamemage.game.Game2
+getStack()œ™
+33 3(A
+%3java.util.UUID".mage.abilities.Ability#getId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getId()ˆ…
+3 3(B
+%4mage.game.stack.Spell"Lmage.game.stack.SpellStack#getSpell(Ljava/util/UUID;)Lmage/game/stack/Spell;*>
+
+__unknown_file ("
+ 
+%2mage.game.stack.SpellStack*2
+
+__unknown_file (
+
+%3java.util.UUID2getSpell(Ljava/util/UUID;)m
+k
+3 3(C
+spellmage.game.stack.Spell"__id*9
+
+__unknown_file (
+
+%4mage.game.stack.Spell*
+2
+5*«
+71 1( °­
+1+ 1(C
+%0java.util.UUID"8mage.abilities.Ability#getControllerId()Ljava/util/UUID;*>
+
+__unknown_file ("
+ 
+sourcemage.abilities.Ability2getControllerId()ðí
+1 1(D
+%1mage.players.Player"?mage.game.Game#getPlayer(Ljava/util/UUID;)Lmage/players/Player;*4
+
+__unknown_file (
+
+gamemage.game.Game*2
+
+__unknown_file (
+
+%0java.util.UUID2getPlayer(Ljava/util/UUID;)n
+l
+1 1(E!
+
+controllermage.players.Player"__id*7
+
+__unknown_file (
+
+%1mage.players.Player*
+6
+1*!
+1D D("
+D D(
+"":"
+0 0(#
+gamemage.game.Game:,
+0$ 0(2 
+sourcemage.abilities.AbilityB;9
+7mage.abilities.effects.common.ExileAdventureSpellEffectHP
