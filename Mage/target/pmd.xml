@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.53.0" timestamp="2023-04-16T11:20:59.866">
+<pmd xmlns="http://pmd.sourceforge.net/report/2.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://pmd.sourceforge.net/report/2.0.0 http://pmd.sourceforge.net/report_2_0_0.xsd" version="6.53.0" timestamp="2023-04-16T21:35:09.443">
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\ConditionalMana.java">
 <violation beginline="82" endline="82" begincolumn="32" endcolumn="65" rule="UselessParentheses" ruleset="Code Style" package="mage" class="ConditionalMana" method="apply" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
@@ -575,14 +575,6 @@ Avoid unused constructor parameters such as 'noText'.
 Unnecessary modifier 'final' on method 'makeText': private methods cannot be overridden
 </violation>
 </file>
-<file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\costs\mana\ManaCostImpl.java">
-<violation beginline="157" endline="157" begincolumn="13" endcolumn="18" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.costs.mana" class="ManaCostImpl" method="assignColorless" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
-<violation beginline="216" endline="216" begincolumn="13" endcolumn="18" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.costs.mana" class="ManaCostImpl" method="assignGeneric" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
-</file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\costs\mana\ManaCostsImpl.java">
 <violation beginline="354" endline="363" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Design" package="mage.abilities.costs.mana" class="ManaCostsImpl" method="assignPayment" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
@@ -640,9 +632,6 @@ Avoid unused constructor parameters such as 'copy'.
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\dynamicvalue\common\BlockingCreatureCount.java">
 <violation beginline="27" endline="27" begincolumn="28" endcolumn="129" rule="UselessParentheses" ruleset="Code Style" package="mage.abilities.dynamicvalue.common" class="BlockingCreatureCount" method="calculate" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
-</violation>
-<violation beginline="36" endline="36" begincolumn="13" endcolumn="28" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.dynamicvalue.common" class="BlockingCreatureCount" method="calculate" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
 </violation>
 </file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\dynamicvalue\common\CardTypesInGraveyardCount.java">
@@ -937,11 +926,6 @@ Unused import 'mage.game.events.GameEvent.EventType'
 </violation>
 <violation beginline="62" endline="64" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Design" package="mage.abilities.effects.common" class="DiscardOntoBattlefieldEffect" method="replaceEvent" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
-</violation>
-</file>
-<file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\effects\common\DoIfAnyNumberCostPaid.java">
-<violation beginline="52" endline="52" begincolumn="13" endcolumn="18" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.effects.common" class="DoIfAnyNumberCostPaid" method="apply" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
 </violation>
 </file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\effects\common\DoIfClashWonEffect.java">
@@ -1451,9 +1435,6 @@ These nested if statements could be combined
 <violation beginline="36" endline="38" begincolumn="13" endcolumn="13" rule="CollapsibleIfStatements" ruleset="Design" package="mage.abilities.effects.common.continuous" class="LoseArtifactTypeTargetEffect" method="init" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="54" endline="54" begincolumn="13" endcolumn="24" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.effects.common.continuous" class="LoseArtifactTypeTargetEffect" method="apply" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 </file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\abilities\effects\common\continuous\LoseCreatureTypeSourceEffect.java">
 <violation beginline="49" endline="51" begincolumn="13" endcolumn="13" rule="CollapsibleIfStatements" ruleset="Design" package="mage.abilities.effects.common.continuous" class="LoseCreatureTypeSourceEffect" method="init" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
@@ -1937,9 +1918,6 @@ Overriding method merely calls super
 <violation beginline="94" endline="94" begincolumn="26" endcolumn="43" rule="UselessParentheses" ruleset="Code Style" package="mage.abilities.keyword" class="ReplicateAbility" method="addOptionalAdditionalCosts" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="174" endline="174" begincolumn="13" endcolumn="24" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.abilities.keyword" class="ReplicateTriggeredAbility" method="checkTrigger" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 <violation beginline="212" endline="212" begincolumn="18" endcolumn="52" rule="UselessParentheses" ruleset="Code Style" package="mage.abilities.keyword" class="ReplicateCopyEffect" method="apply" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -2316,11 +2294,6 @@ Unused import 'mage.cards.SplitCardHalf'
 Unused import 'mage.constants.Zone'
 </violation>
 </file>
-<file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\filter\predicate\mageobject\TargetsPlayerPredicate.java">
-<violation beginline="31" endline="31" begincolumn="25" endcolumn="46" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.filter.predicate.mageobject" class="TargetsPlayerPredicate" method="apply" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
-</file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\filter\predicate\permanent\BlockingOrBlockedBySourcePredicate.java">
 <violation beginline="9" endline="9" begincolumn="1" endcolumn="22" rule="UnnecessaryImport" ruleset="Code Style" package="mage.filter.predicate.permanent" class="BlockingOrBlockedBySourcePredicate" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
 Unused import 'java.util.UUID'
@@ -2442,9 +2415,6 @@ These nested if statements could be combined
 <violation beginline="2552" endline="2555" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Design" package="mage.game" class="GameImpl" method="checkStateBasedActions" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="2611" endline="2611" begincolumn="17" endcolumn="28" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.game" class="GameImpl" method="checkStateBasedActions" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 <violation beginline="2654" endline="2654" begincolumn="22" endcolumn="108" rule="UselessParentheses" ruleset="Code Style" package="mage.game" class="GameImpl" method="checkStateBasedActions" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -2496,15 +2466,6 @@ These nested if statements could be combined
 <violation beginline="358" endline="358" begincolumn="25" endcolumn="53" rule="UselessParentheses" ruleset="Code Style" package="mage.game.combat" class="Combat" method="handleBanding" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
-<violation beginline="463" endline="463" begincolumn="25" endcolumn="30" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.game.combat" class="Combat" method="checkAttackRequirements" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
-<violation beginline="497" endline="497" begincolumn="21" endcolumn="26" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.game.combat" class="Combat" method="checkAttackRequirements" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
-<violation beginline="573" endline="573" begincolumn="25" endcolumn="39" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.game.combat" class="Combat" method="checkAttackRestrictions" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 <violation beginline="621" endline="623" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Design" package="mage.game.combat" class="Combat" method="selectBlockers" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
 </violation>
@@ -2522,9 +2483,6 @@ These nested if statements could be combined
 </violation>
 <violation beginline="1162" endline="1191" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Design" package="mage.game.combat" class="Combat" method="isCreatureDoingARequiredBlock" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
-</violation>
-<violation beginline="1188" endline="1188" begincolumn="29" endcolumn="158" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.game.combat" class="Combat" method="isCreatureDoingARequiredBlock" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
 </violation>
 <violation beginline="1441" endline="1449" begincolumn="25" endcolumn="25" rule="CollapsibleIfStatements" ruleset="Design" package="mage.game.combat" class="Combat" method="addBlockingGroup" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
@@ -3435,9 +3393,6 @@ Useless parentheses.
 <violation beginline="2694" endline="2698" begincolumn="17" endcolumn="17" rule="CollapsibleIfStatements" ruleset="Design" package="mage.players" class="PlayerImpl" method="searchLibrary" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="2718" endline="2718" begincolumn="13" endcolumn="18" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.players" class="PlayerImpl" method="searchLibrary" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 <violation beginline="2831" endline="2831" begincolumn="26" endcolumn="97" rule="UselessParentheses" ruleset="Code Style" package="mage.players" class="PlayerImpl" method="flipCoin" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#uselessparentheses" priority="4">
 Useless parentheses.
 </violation>
@@ -3555,9 +3510,6 @@ These nested if statements could be combined
 <violation beginline="702" endline="707" begincolumn="21" endcolumn="21" rule="CollapsibleIfStatements" ruleset="Design" package="mage.target" class="TargetImpl" method="tryToAutoChoose" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
 These nested if statements could be combined
 </violation>
-<violation beginline="712" endline="712" begincolumn="17" endcolumn="40" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.target" class="TargetImpl" method="tryToAutoChoose" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
-</violation>
 </file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\target\TargetPermanent.java">
 <violation beginline="69" endline="74" begincolumn="13" endcolumn="13" rule="CollapsibleIfStatements" ruleset="Design" package="mage.target" class="TargetPermanent" method="canTarget" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_design.html#collapsibleifstatements" priority="3">
@@ -3584,11 +3536,6 @@ These nested if statements could be combined
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\target\Targets.java">
 <violation beginline="7" endline="7" begincolumn="1" endcolumn="35" rule="UnnecessaryImport" ruleset="Code Style" package="mage.target" class="Targets" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_codestyle.html#unnecessaryimport" priority="4">
 Unused import 'mage.target.targetpointer.*'
-</violation>
-</file>
-<file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\target\common\TargetCardInASingleGraveyard.java">
-<violation beginline="72" endline="72" begincolumn="17" endcolumn="22" rule="AvoidBranchingStatementAsLastInLoop" ruleset="Error Prone" package="mage.target.common" class="TargetCardInASingleGraveyard" method="possibleTargets" externalInfoUrl="https://pmd.github.io/pmd-6.53.0/pmd_rules_java_errorprone.html#avoidbranchingstatementaslastinloop" priority="2">
-Avoid using a branching statement as the last in a loop.
 </violation>
 </file>
 <file name="D:\eclipse-workspace\mage-master\mageProyectAnalisis\Mage\src\main\java\mage\target\common\TargetCardInExile.java">

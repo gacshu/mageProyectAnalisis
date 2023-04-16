@@ -28,8 +28,6 @@
 			</plugin>
 
 
-			
-
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>findbugs-maven-plugin</artifactId>
@@ -176,6 +174,9 @@
 				<artifactId>maven-pmd-plugin</artifactId>
 				<configuration>
 					<skipEmptyReport>false</skipEmptyReport>
+					<rulesets>
+						<ruleset>maven-pmd-plugin-config.xml</ruleset>
+					</rulesets>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -189,9 +190,9 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-checkstyle-plugin</artifactId>
-				<configuration>					
+				<configuration>
 					<skipEmptyReport>false</skipEmptyReport>
-				</configuration>	
+				</configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
@@ -233,7 +234,7 @@
 
 	<properties>
 
-    <checkstyle.config.location>checkstyle-configuration.xml</checkstyle.config.location>
+		<checkstyle.config.location>checkstyle-configuration.xml</checkstyle.config.location>
 
 		<sonar.organization>gacshu</sonar.organization>
 		<sonar.host.url>https://sonarcloud.io</sonar.host.url>
