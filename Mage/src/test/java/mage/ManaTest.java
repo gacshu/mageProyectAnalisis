@@ -175,7 +175,7 @@ public class ManaTest {
     @Test
     public void shouldCreateRedMana() {
         // when
-        Mana mana = Mana.RedMana(1);
+        Mana mana = Mana.redMana(1);
 
         // then
         assertEquals(1, mana.getRed());
@@ -184,7 +184,7 @@ public class ManaTest {
     @Test
     public void shouldCreateGreenMana() {
         // when
-        Mana mana = Mana.GreenMana(1);
+        Mana mana = Mana.greenMana(1);
 
         // then
         assertEquals(1, mana.getGreen());
@@ -193,7 +193,7 @@ public class ManaTest {
     @Test
     public void shouldCreateBlueMana() {
         // when
-        Mana mana = Mana.BlueMana(1);
+        Mana mana = Mana.blueMana(1);
 
         // then
         assertEquals(1, mana.getBlue());
@@ -202,7 +202,7 @@ public class ManaTest {
     @Test
     public void shouldCreateWhiteMana() {
         // when
-        Mana mana = Mana.WhiteMana(1);
+        Mana mana = Mana.whiteMana(1);
 
         // then
         assertEquals(1, mana.getWhite());
@@ -211,7 +211,7 @@ public class ManaTest {
     @Test
     public void shouldCreateBlackMana() {
         // when
-        Mana mana = Mana.BlackMana(1);
+        Mana mana = Mana.blackMana(1);
 
         // then
         assertEquals(1, mana.getBlack());
@@ -220,7 +220,7 @@ public class ManaTest {
     @Test
     public void shouldCreateGenericMana() {
         // when
-        Mana mana = Mana.GenericMana(1);
+        Mana mana = Mana.genericMana(1);
 
         // then
         assertEquals(1, mana.getGeneric());
@@ -238,7 +238,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeRedMana() {
         // when
-        Mana mana = Mana.RedMana(-1);
+        Mana mana = Mana.redMana(-1);
 
         // then
         assertEquals(0, mana.getRed());
@@ -247,7 +247,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeGreenMana() {
         // when
-        Mana mana = Mana.GreenMana(-1);
+        Mana mana = Mana.greenMana(-1);
 
         //then
         assertEquals(0, mana.getGreen());
@@ -256,7 +256,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeBlueMana() {
         // when
-        Mana mana = Mana.BlueMana(-1);
+        Mana mana = Mana.blueMana(-1);
 
         //then
         assertEquals(0, mana.getBlue());
@@ -265,7 +265,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeWhiteMana() {
         // when
-        Mana mana = Mana.WhiteMana(-1);
+        Mana mana = Mana.whiteMana(-1);
 
         //then
         assertEquals(0, mana.getWhite());
@@ -274,7 +274,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeBlackMana() {
         // when
-        Mana mana = Mana.BlackMana(-1);
+        Mana mana = Mana.blackMana(-1);
 
         // then
         assertEquals(0, mana.getBlack());
@@ -283,7 +283,7 @@ public class ManaTest {
     @Test
     public void shouldNotAllowNegativeColorlessMana() {
         // when
-        Mana mana = Mana.GenericMana(-1);
+        Mana mana = Mana.genericMana(-1);
 
         // then
         assertEquals(0, mana.getGeneric());
@@ -783,15 +783,15 @@ public class ManaTest {
      */
     @Test
     public void moreValuableManaTest() {
-        final Mana anyMana        = Mana.AnyMana(1);
-        final Mana genericMana    = Mana.GenericMana(1);
+        final Mana anyMana        = Mana.anyMana(1);
+        final Mana genericMana    = Mana.genericMana(1);
         final Mana colorlessMana  = Mana.ColorlessMana(1);
 
-        final Mana whiteMana      = Mana.WhiteMana(1);
-        final Mana blueMana       = Mana.BlueMana(1);
-        final Mana blackMana      = Mana.BlackMana(1);
-        final Mana redMana        = Mana.RedMana(1);
-        final Mana greenMana      = Mana.GreenMana(1);
+        final Mana whiteMana      = Mana.whiteMana(1);
+        final Mana blueMana       = Mana.blueMana(1);
+        final Mana blackMana      = Mana.blackMana(1);
+        final Mana redMana        = Mana.redMana(1);
+        final Mana greenMana      = Mana.greenMana(1);
 
         final List<Mana> coloredManas = Arrays.asList(whiteMana, blueMana, blackMana, redMana, greenMana);
 

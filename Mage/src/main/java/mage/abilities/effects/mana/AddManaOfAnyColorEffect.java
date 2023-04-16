@@ -36,7 +36,7 @@ public class AddManaOfAnyColorEffect extends BasicManaEffect {
         super(new Mana(0, 0, 0, 0, 0, 0, amount, 0));
         this.amount = amount;
         this.netAmount = netAmount;
-        netMana.add(Mana.AnyMana(amount));
+        netMana.add(Mana.anyMana(amount));
         this.staticText = "add " + CardUtil.numberToText(amount) + " mana of any " + (amount > 1 ? "one " : "") + "color";
         this.setFlag = setFlag;
     }
@@ -101,6 +101,6 @@ public class AddManaOfAnyColorEffect extends BasicManaEffect {
 
     @Override
     public Mana getManaTemplate() {
-        return Mana.AnyMana(amount);
+        return Mana.anyMana(amount);
     }
 }

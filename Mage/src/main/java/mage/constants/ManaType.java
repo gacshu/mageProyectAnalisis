@@ -62,22 +62,22 @@ public enum ManaType {
     public static List<Mana> getManaListFromManaTypes(Set<ManaType> manaTypes, boolean onlyColors) {
         List<Mana> netManas = new ArrayList<>();
         if ((manaTypes.size() == 5 && !manaTypes.contains(ManaType.COLORLESS)) || manaTypes.size() == 6) { // GENERIC should never be returned from getManaTypes
-            netManas.add(Mana.AnyMana(1));
+            netManas.add(Mana.anyMana(1));
         } else {
             if (manaTypes.contains(ManaType.BLACK)) {
-                netManas.add(Mana.BlackMana(1));
+                netManas.add(Mana.blackMana(1));
             }
             if (manaTypes.contains(ManaType.RED)) {
-                netManas.add(Mana.RedMana(1));
+                netManas.add(Mana.redMana(1));
             }
             if (manaTypes.contains(ManaType.BLUE)) {
-                netManas.add(Mana.BlueMana(1));
+                netManas.add(Mana.blueMana(1));
             }
             if (manaTypes.contains(ManaType.GREEN)) {
-                netManas.add(Mana.GreenMana(1));
+                netManas.add(Mana.greenMana(1));
             }
             if (manaTypes.contains(ManaType.WHITE)) {
-                netManas.add(Mana.WhiteMana(1));
+                netManas.add(Mana.whiteMana(1));
             }
         }
         if (!onlyColors && manaTypes.contains(ManaType.COLORLESS)) {

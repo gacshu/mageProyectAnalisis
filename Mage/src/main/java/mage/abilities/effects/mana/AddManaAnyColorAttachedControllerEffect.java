@@ -44,7 +44,7 @@ public class AddManaAnyColorAttachedControllerEffect extends ManaEffect {
     @Override
     public List<Mana> getNetMana(Game game, Ability source) {
         List<Mana> netMana = new ArrayList<>();
-        netMana.add(Mana.AnyMana(1));
+        netMana.add(Mana.anyMana(1));
         return netMana;
     }
 

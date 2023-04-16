@@ -104,7 +104,7 @@ public class ImproviseAbility extends SimpleStaticAbility implements AlternateMa
         Player controller = game.getPlayer(source.getControllerId());
         int canPayCount = untappedCount.calculate(game, source, null);
         if (controller != null && canPayCount > 0) {
-            options.addMana(Mana.GenericMana(Math.min(unpaid.getMana().getGeneric(), canPayCount)));
+            options.addMana(Mana.genericMana(Math.min(unpaid.getMana().getGeneric(), canPayCount)));
         }
         return options;
     }

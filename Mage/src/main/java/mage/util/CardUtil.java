@@ -333,7 +333,7 @@ public final class CardUtil {
         Mana reduceMana = new Mana();
         for (ManaCost manaCost : manaCostsToReduce) {
             if (manaCost instanceof MonoHybridManaCost) {
-                reduceMana.add(Mana.GenericMana(2));
+                reduceMana.add(Mana.genericMana(2));
             } else {
                 reduceMana.add(manaCost.getMana());
             }

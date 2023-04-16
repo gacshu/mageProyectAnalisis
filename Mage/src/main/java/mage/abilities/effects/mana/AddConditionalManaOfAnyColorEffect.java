@@ -71,12 +71,12 @@ public class AddConditionalManaOfAnyColorEffect extends ManaEffect {
             if (game.inCheckPlayableState()) {
                 int amountAvailableMana = netAmount.calculate(game, source, this);
                 if (amountAvailableMana > 0) {
-                    netMana.add(manaBuilder.setMana(Mana.AnyMana(amountAvailableMana), source, game).build());
+                    netMana.add(manaBuilder.setMana(Mana.anyMana(amountAvailableMana), source, game).build());
                 }
             } else {
                 int amountOfManaLeft = amount.calculate(game, source, this);
                 if (amountOfManaLeft > 0) {
-                    netMana.add(Mana.AnyMana(amountOfManaLeft));
+                    netMana.add(Mana.anyMana(amountOfManaLeft));
                 }
             }
         }

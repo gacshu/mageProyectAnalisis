@@ -153,13 +153,13 @@ public class ConvokeAbility extends SimpleStaticAbility implements AlternateMana
                 .filter(permanent -> !permanent.isTapped())
                 .forEach(permanent -> {
                     ManaOptions permMana = new ManaOptions();
-                    permMana.add(Mana.GenericMana(1));
+                    permMana.add(Mana.genericMana(1));
                     for (ObjectColor color : permanent.getColor(game).getColors()) {
-                        if (color.isBlack()) permMana.add(Mana.BlackMana(1));
-                        if (color.isBlue()) permMana.add(Mana.BlueMana(1));
-                        if (color.isGreen()) permMana.add(Mana.GreenMana(1));
-                        if (color.isRed()) permMana.add(Mana.RedMana(1));
-                        if (color.isWhite()) permMana.add(Mana.WhiteMana(1));
+                        if (color.isBlack()) permMana.add(Mana.blackMana(1));
+                        if (color.isBlue()) permMana.add(Mana.blueMana(1));
+                        if (color.isGreen()) permMana.add(Mana.greenMana(1));
+                        if (color.isRed()) permMana.add(Mana.redMana(1));
+                        if (color.isWhite()) permMana.add(Mana.whiteMana(1));
                     }
                     options.addMana(permMana);
                 });
@@ -233,23 +233,23 @@ class ConvokeEffect extends OneShotEffect {
                             chooseManaType.setChoice(chooseManaType.getChoices().iterator().next());
                         }
                         if (chooseManaType.getChoice().equals("Black")) {
-                            manaPool.addMana(Mana.BlackMana(1), game, source);
+                            manaPool.addMana(Mana.blackMana(1), game, source);
                             manaPool.unlockManaType(ManaType.BLACK);
                         }
                         if (chooseManaType.getChoice().equals("Blue")) {
-                            manaPool.addMana(Mana.BlueMana(1), game, source);
+                            manaPool.addMana(Mana.blueMana(1), game, source);
                             manaPool.unlockManaType(ManaType.BLUE);
                         }
                         if (chooseManaType.getChoice().equals("Green")) {
-                            manaPool.addMana(Mana.GreenMana(1), game, source);
+                            manaPool.addMana(Mana.greenMana(1), game, source);
                             manaPool.unlockManaType(ManaType.GREEN);
                         }
                         if (chooseManaType.getChoice().equals("White")) {
-                            manaPool.addMana(Mana.WhiteMana(1), game, source);
+                            manaPool.addMana(Mana.whiteMana(1), game, source);
                             manaPool.unlockManaType(ManaType.WHITE);
                         }
                         if (chooseManaType.getChoice().equals("Red")) {
-                            manaPool.addMana(Mana.RedMana(1), game, source);
+                            manaPool.addMana(Mana.redMana(1), game, source);
                             manaPool.unlockManaType(ManaType.RED);
                         }
                         if (chooseManaType.getChoice().equals("Colorless")) {

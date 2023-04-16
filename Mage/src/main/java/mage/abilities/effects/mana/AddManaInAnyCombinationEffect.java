@@ -110,7 +110,7 @@ public class AddManaInAnyCombinationEffect extends ManaEffect {
         } else {
             int amountOfManaLeft = amount.calculate(game, source, this);
             if (amountOfManaLeft > 0) {
-                netMana.add(Mana.AnyMana(amountOfManaLeft));
+                netMana.add(Mana.anyMana(amountOfManaLeft));
             }
             return netMana;
         }

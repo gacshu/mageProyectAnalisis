@@ -116,7 +116,7 @@ public class DelveAbility extends SimpleStaticAbility implements AlternateManaPa
         Player controller = game.getPlayer(source.getControllerId());
         int graveCount = cardsInGraveyard.calculate(game, source, null);
         if (controller != null && graveCount > 0) {
-            options.addMana(Mana.GenericMana(Math.min(unpaid.getMana().getGeneric(), graveCount)));
+            options.addMana(Mana.genericMana(Math.min(unpaid.getMana().getGeneric(), graveCount)));
         }
         return options;
     }

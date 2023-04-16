@@ -280,19 +280,19 @@ public abstract class ManaCostImpl extends CostImpl implements ManaCost {
     protected void addColoredOption(ColoredManaSymbol symbol) {
         switch (symbol) {
             case B:
-                this.options.add(Mana.BlackMana(1));
+                this.options.add(Mana.blackMana(1));
                 break;
             case U:
-                this.options.add(Mana.BlueMana(1));
+                this.options.add(Mana.blueMana(1));
                 break;
             case W:
-                this.options.add(Mana.WhiteMana(1));
+                this.options.add(Mana.whiteMana(1));
                 break;
             case R:
-                this.options.add(Mana.RedMana(1));
+                this.options.add(Mana.redMana(1));
                 break;
             case G:
-                this.options.add(Mana.GreenMana(1));
+                this.options.add(Mana.greenMana(1));
                 break;
         }
     }
@@ -310,7 +310,7 @@ public abstract class ManaCostImpl extends CostImpl implements ManaCost {
     @Override
     public void setPhyrexian(boolean phyrexian) {
         if (phyrexian) {
-            this.options.add(Mana.GenericMana(0));
+            this.options.add(Mana.genericMana(0));
         }
         this.phyrexian = phyrexian;
     }

@@ -117,7 +117,7 @@ public class AssistAbility extends SimpleStaticAbility implements AlternateManaP
         }
 
         if (opponentCanPayMax > 0) {
-            options.addMana(Mana.GenericMana(Math.min(unpaid.getMana().getGeneric(), opponentCanPayMax)));
+            options.addMana(Mana.genericMana(Math.min(unpaid.getMana().getGeneric(), opponentCanPayMax)));
         }
 
         return options;

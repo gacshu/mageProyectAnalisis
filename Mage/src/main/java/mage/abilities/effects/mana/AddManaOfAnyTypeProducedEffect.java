@@ -42,19 +42,19 @@ public class AddManaOfAnyTypeProducedEffect extends ManaEffect {
             return netMana;
         }
         if (types.getBlack() > 0) {
-            netMana.add(Mana.BlackMana(1));
+            netMana.add(Mana.blackMana(1));
         }
         if (types.getRed() > 0) {
-            netMana.add(Mana.RedMana(1));
+            netMana.add(Mana.redMana(1));
         }
         if (types.getBlue() > 0) {
-            netMana.add(Mana.BlueMana(1));
+            netMana.add(Mana.blueMana(1));
         }
         if (types.getGreen() > 0) {
-            netMana.add(Mana.GreenMana(1));
+            netMana.add(Mana.greenMana(1));
         }
         if (types.getWhite() > 0) {
-            netMana.add(Mana.WhiteMana(1));
+            netMana.add(Mana.whiteMana(1));
         }
         if (types.getColorless() > 0) {
             netMana.add(Mana.ColorlessMana(1));

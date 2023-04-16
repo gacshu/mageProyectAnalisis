@@ -199,9 +199,9 @@ public abstract class AbilityImpl implements Ability {
             if (effect instanceof OneShotEffect) {
                 boolean effectResult = effect.apply(game, this);
                 result &= effectResult;
-                if (logger.isDebugEnabled()) {
-                    if (this.getAbilityType() != AbilityType.MANA) {
-                        if (!effectResult) {
+                if (logger.isDebugEnabled() && this.getAbilityType() != AbilityType.MANA && !effectResult) {
+                   
+                        
                             if (this.getSourceId() != null) {
                                 MageObject mageObject = game.getObject(this.getSourceId());
                                 if (mageObject != null) {
@@ -209,8 +209,8 @@ public abstract class AbilityImpl implements Ability {
                                 }
                             }
                             logger.debug("AbilityImpl.resolve: effect returned false -" + effect.getText(this.getModes().getMode()));
-                        }
-                    }
+                        
+                    
                 }
             } else {
                 game.addEffect((ContinuousEffect) effect, this);
@@ -285,11 +285,11 @@ public abstract class AbilityImpl implements Ability {
         // as buyback, kicker, or convoke costs (see rules 117.8 and 117.9), the player announces his
         // or her intentions to pay any or all of those costs (see rule 601.2e).
         // A player can't apply two alternative methods of casting or two alternative costs to a single spell.
-        if (isMainPartAbility && !activateAlternateOrAdditionalCosts(sourceObject, noMana, controller, game)) {
-            if (getAbilityType() == AbilityType.SPELL
+        if (isMainPartAbility && !activateAlternateOrAdditionalCosts(sourceObject, noMana, controller, game) 
+        		&& getAbilityType() == AbilityType.SPELL
                     && ((SpellAbility) this).getSpellAbilityType() == SpellAbilityType.FACE_DOWN_CREATURE) {
                 return false;
-            }
+            
         }
 
         // 117.6. Some mana costs contain no mana symbols. This represents an unpayable cost. An ability can
@@ -328,10 +328,9 @@ public abstract class AbilityImpl implements Ability {
         // unit tests only: it allows to add targets/choices by two ways:
         // 1. From cast/activate command params (process it here)
         // 2. From single addTarget/setChoice, it's a preffered method for tests (process it in normal choose dialogs like human player)
-        if (controller.isTestsMode()) {
-            if (!controller.addTargets(this, game)) {
+        if (controller.isTestsMode() && !controller.addTargets(this, game)) {
                 return false;
-            }
+            
         }
 
         for (UUID modeId : this.getModes().getSelectedModes()) {
@@ -465,31 +464,31 @@ public abstract class AbilityImpl implements Ability {
                 // if cast for noMana no Alternative costs are allowed
                 if (canUseAlternativeCost && !noMana && ability instanceof AlternativeSourceCosts) {
                     AlternativeSourceCosts alternativeSpellCosts = (AlternativeSourceCosts) ability;
-                    if (alternativeSpellCosts.isAvailable(this, game)) {
-                        if (alternativeSpellCosts.askToActivateAlternativeCosts(this, game)) {
+                    if (alternativeSpellCosts.isAvailable(this, game) 
+                    		&& alternativeSpellCosts.askToActivateAlternativeCosts(this, game)) {
                             // only one alternative costs may be activated
                             alternativeCostUsed = true;
                             break;
-                        }
+                        
                     }
                 }
             }
             // controller specific alternate spell costs
-            if (canUseAlternativeCost && !noMana && !alternativeCostUsed) {
-                if (this.getAbilityType() == AbilityType.SPELL
+            if (canUseAlternativeCost && !noMana && !alternativeCostUsed
+            		&& this.getAbilityType() == AbilityType.SPELL
                         // 117.9a Only one alternative cost can be applied to any one spell as it's being cast.
                         // So an alternate spell ability can't be paid with Omniscience
                         && ((SpellAbility) this).getSpellAbilityType() != SpellAbilityType.BASE_ALTERNATE) {
                     for (AlternativeSourceCosts alternativeSourceCosts : controller.getAlternativeSourceCosts()) {
-                        if (alternativeSourceCosts.isAvailable(this, game)) {
-                            if (alternativeSourceCosts.askToActivateAlternativeCosts(this, game)) {
+                        if (alternativeSourceCosts.isAvailable(this, game) &&
+                        		alternativeSourceCosts.askToActivateAlternativeCosts(this, game)) {
                                 // only one alternative costs may be activated
                                 alternativeCostUsed = true;
                                 break;
-                            }
+                            
                         }
                     }
-                }
+                
             }
 
             // 2. ADDITIONAL COST
@@ -593,8 +592,7 @@ public abstract class AbilityImpl implements Ability {
                 }
             }
         }
-        if (variableManaCost != null) {
-            if (!variableManaCost.isPaid()) { // should only happen for human players
+        if (variableManaCost != null && !variableManaCost.isPaid()) { // should only happen for human players
                 int xValue;
                 int xValueMultiplier = handleManaXMultiplier(game, 1);
                 if (!noMana || variableManaCost.getCostType().canUseAnnounceOnFreeCast()) {
@@ -632,7 +630,7 @@ public abstract class AbilityImpl implements Ability {
                     manaCostsToPay.setX(xValue * xValueMultiplier, amountMana);
                 }
                 variableManaCost.setPaid();
-            }
+            
         }
 
         return variableManaCost;

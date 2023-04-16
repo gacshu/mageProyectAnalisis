@@ -208,7 +208,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @return a {@link Mana} object with the passed in {@code num} of White
      * mana.
      */
-    public static Mana WhiteMana(int num) {
+    public static Mana whiteMana(int num) {
         return new Mana(notNegative(num, "White"), 0, 0, 0, 0, 0, 0, 0);
     }
 
@@ -221,7 +221,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @return a {@link Mana} object with the passed in {@code num} of Blue
      * mana.
      */
-    public static Mana BlueMana(int num) {
+    public static Mana blueMana(int num) {
         return new Mana(0, notNegative(num, "Blue"), 0, 0, 0, 0, 0, 0);
     }
 
@@ -234,7 +234,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @return a {@link Mana} object with the passed in {@code num} of Black
      * mana.
      */
-    public static Mana BlackMana(int num) {
+    public static Mana blackMana(int num) {
         return new Mana(0, 0, notNegative(num, "Black"), 0, 0, 0, 0, 0);
     }
 
@@ -246,7 +246,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @param num value of Red mana to create.
      * @return a {@link Mana} object with the passed in {@code num} of Red mana.
      */
-    public static Mana RedMana(int num) {
+    public static Mana redMana(int num) {
         return new Mana(0, 0, 0, notNegative(num, "Red"), 0, 0, 0, 0);
     }
 
@@ -259,7 +259,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @return a {@link Mana} object with the passed in {@code num} of Green
      * mana.
      */
-    public static Mana GreenMana(int num) {
+    public static Mana greenMana(int num) {
         return new Mana(0, 0, 0, 0, notNegative(num, "Green"), 0, 0, 0);
     }
 
@@ -272,7 +272,7 @@ public class Mana implements Comparable<Mana>, Serializable, Copyable<Mana> {
      * @return a {@link Mana} object with the passed in {@code num} of Generic
      * mana.
      */
-    public static Mana GenericMana(int num) {
+    public static Mana genericMana(int num) {
         return new Mana(0, 0, 0, 0, 0, notNegative(num, "Generic"), 0, 0);
     }
 

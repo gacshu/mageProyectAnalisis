@@ -48,7 +48,7 @@ public class ConditionalAnyColorManaAbility extends ActivatedManaAbilityImpl {
         this.netMana.clear();
         int count = amount.calculate(game, this, null);
         if (count > 0) {
-            this.netMana.add(Mana.AnyMana(count));
+            this.netMana.add(Mana.anyMana(count));
         }
         return super.getNetMana(game);
     }

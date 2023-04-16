@@ -94,15 +94,15 @@ public class ChoiceColor extends ChoiceImpl {
     public Mana getMana(int amount) {
         Mana mana;
         if (getColor().isBlack()) {
-            mana = Mana.BlackMana(amount);
+            mana = Mana.blackMana(amount);
         } else if (getColor().isBlue()) {
-            mana = Mana.BlueMana(amount);
+            mana = Mana.blueMana(amount);
         } else if (getColor().isRed()) {
-            mana = Mana.RedMana(amount);
+            mana = Mana.redMana(amount);
         } else if (getColor().isGreen()) {
-            mana = Mana.GreenMana(amount);
+            mana = Mana.greenMana(amount);
         } else if (getColor().isWhite()) {
-            mana = Mana.WhiteMana(amount);
+            mana = Mana.whiteMana(amount);
         } else {
             mana = Mana.ColorlessMana(amount);
         }
